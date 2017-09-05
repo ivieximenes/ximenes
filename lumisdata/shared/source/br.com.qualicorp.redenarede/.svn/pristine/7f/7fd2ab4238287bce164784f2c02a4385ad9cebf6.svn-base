@@ -1,0 +1,21 @@
+<jaxb:bindings version="2.0" 
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+    <jaxb:bindings > 
+        <jaxb:globalBindings generateElementProperty="false"/> 
+    </jaxb:bindings> 
+   <jaxb:bindings  schemaLocation="Common.xsd" node="//xs:schema">
+            <jaxb:schemaBindings>
+                 <jaxb:package name="br.com.qualicorp.redenarede.webservice.stub.beneficiario.common"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings  schemaLocation="Beneficiario.xsd" node="//xs:schema">
+            <jaxb:schemaBindings>
+                 <jaxb:package name="br.com.qualicorp.redenarede.webservice.stub.beneficiario.beneficiario"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>
+
+
+

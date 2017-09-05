@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>8A489E1F50D260F50150D8BE507B22B7</id>
+  <name>Login</name>
+  <position>10</position>
+  <default-page-template-id>0000000050A1A02C0150A1ACC6861342</default-page-template-id>
+  <inherit-page-template>false</inherit-page-template>
+</channel>

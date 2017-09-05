@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service  name="STR_SERVICE_NAME" type="lum_doui">
+		<description>STR_SERVICE_DESCRIPTION</description>
+		<permissions>
+			<permission name="STR_VISAO_BENEFICIARIO" id="visaoBeneficiario"/>
+			<permission name="STR_VISAO_PRESTADOR" id="visaoPrestador"/>
+		</permissions>
+	</service>
+	
+	<interfaces>
+		<interface id="login" name="STR_LOGIN" type="lum_doui" className="br.com.qualicorp.redenarede.service.login.interfaces.LoginInterface">
+			<styles>
+				<style id="login" name="STR_LOGIN" path="br/com/qualicorp/redenarede/service/login/style/login.xsl" isDefault="true"></style>
+				<style id="loginInterno" name="STR_LOGIN_INTERNO" path="br/com/qualicorp/redenarede/service/login/style/login-interno.xsl"></style>
+				<style id="loginInternoSmart" name="STR_LOGIN_INTERNO_SMART" path="br/com/qualicorp/redenarede/service/login/style/login-interno-smart.xsl"></style>
+				<style id="loginPrestador" name="STR_LOGIN_PRESTADOR" path="br/com/qualicorp/redenarede/service/login/style/login-prestador.xsl"></style>
+				<style id="loginBeneficiario" name="STR_LOGIN_BENEFICIARIO" path="br/com/qualicorp/redenarede/service/login/style/login-beneficiario.xsl"></style>
+				<style id="loginHibrido" name="STR_LOGIN_HIBRIDO" path="br/com/qualicorp/redenarede/service/login/style/login-hibrido.xsl"></style>
+				<style id="loginSmart" name="STR_LOGIN_SMART" path="br/com/qualicorp/redenarede/service/login/style/login-smart.xsl"></style>
+			</styles>
+		</interface>
+		<interface id="logout" name="STR_LOGOUT" type="lum_doui" className="br.com.qualicorp.redenarede.service.login.interfaces.LogoutInterface">
+			<styles>
+				<style id="logout" name="STR_LOGOUT" path="br/com/qualicorp/redenarede/service/login/style/logout.xsl"></style>
+			</styles>
+		</interface>
+		<interface id="esqueciSenhaBeneficiario" name="STR_ESQUECI_SENHA_BENEFICIARIO" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles>
+				<style id="esqueciSenhaBeneficiario" name="STR_ESQUECI_SENHA_BENEFICIARIO" path="br/com/qualicorp/redenarede/service/login/style/esqueciSenhaBeneficiario.xsl"/>
+				<style id="esqueciSenhaBeneficiarioSmart" name="STR_ESQUECI_SENHA_BENEFICIARIO_SMART" path="br/com/qualicorp/redenarede/service/login/style/esqueciSenhaBeneficiarioSmart.xsl"/>
+			</styles>
+		</interface>
+		<interface id="esqueciSenhaPrestador" name="STR_ESQUECI_SENHA_PRESTADOR" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles>
+				<style id="esqueciSenhaPrestador" name="STR_ESQUECI_SENHA_PRESTADOR" path="br/com/qualicorp/redenarede/service/login/style/esqueciSenhaPrestador.xsl"/>
+				<style id="esqueciSenhaPrestadorSmart" name="STR_ESQUECI_SENHA_PRESTADOR_SMART" path="br/com/qualicorp/redenarede/service/login/style/esqueciSenhaPrestadorSmart.xsl"/>
+			</styles>
+		</interface>
+		
+		<interface id="alterarSenhaBeneficiario" name="STR_ALTERAR_SENHA_BENEFICIARIO" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles>
+				<style id="alterarSenhaBeneficiario" name="STR_ALTERAR_SENHA_BENEFICIARIO" path="br/com/qualicorp/redenarede/service/login/style/alterarSenhaBeneficiario.xsl"/>
+				<style id="alterarSenhaBeneficiarioSmart" name="STR_ALTERAR_SENHA_BENEFICIARIO_SMART" path="br/com/qualicorp/redenarede/service/login/style/alterarSenhaBeneficiarioSmart.xsl"/>
+			</styles>
+			<permissions>
+				<permission id="visaoBeneficiario"/>
+			</permissions>
+		</interface>
+		<interface id="alterarSenhaPrestador" name="STR_ALTERAR_SENHA_PRESTADOR" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles>
+				<style id="alterarSenhaPrestador" name="STR_ALTERAR_SENHA_PRESTADOR" path="br/com/qualicorp/redenarede/service/login/style/alterarSenhaPrestador.xsl"/>
+				<style id="alterarSenhaPrestadorsmart" name="STR_ALTERAR_SENHA_PRESTADOR_SMART" path="br/com/qualicorp/redenarede/service/login/style/alterarSenhaPrestadorSmart.xsl"/>
+			</styles>
+			<permissions>
+				<permission id="visaoPrestador"/>
+			</permissions>
+		</interface>
+		
+		<interface name="STR_BENEFICIARIO"  id="beneficiario" type="lum_doui">
+			<styles>
+				<style id="link" name="STR_BENEFICIARIO" path="br/com/qualicorp/redenarede/service/login/style/linkHome.xsl"/>
+			</styles>
+		</interface>
+		<interface name="STR_PRESTADOR" 	id="prestador"    type="lum_doui">
+			<styles>
+				<style id="link" name="STR_PRESTADOR" path="br/com/qualicorp/redenarede/service/login/style/linkHome.xsl"/>
+			</styles>
+		</interface> 
+		
+		
+		<interface name="STR_HOME_PRESTADOR" id="homeCredenciado" type="lum_serviceInterface"/>
+		<interface name="STR_HOME_BENEFICIARIO" id="homeBeneficiario" type="lum_serviceInterface"/> 
+		<interface id="uservalidation" name="uservalidation" type="lum_doui" className="br.com.qualicorp.redenarede.service.login.interfaces.UserValidationInterface" />
+		
+		<interface name="Âncora Login Hibrido" id="ancora_login_hibrido" type="lum_doui">
+		</interface>
+		</interfaces> 
+</serviceDefinition>

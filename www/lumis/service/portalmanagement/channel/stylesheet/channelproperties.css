@@ -1,0 +1,43 @@
+/* $Revision: 15694 $ $Date: 2013-08-04 04:31:22 -0300 (Sun, 04 Aug 2013) $ */
+.lum-form-field-id-inheritStylesheet ul.lum-list, 
+.lum-form-field-id-inheritThemes ul.lum-list, 
+.lum-form-field-id-inheritMetaTags ul.lum-list, 
+.lum-form-field-id-inheritAreaTags ul.lum-list{
+	list-style:inherit;
+	padding-left:20px;
+	margin-left:10px;
+	line-height:4px;
+	padding-bottom:5px;
+}
+
+.lum-form-field-id-inheritStylesheet .lum-list-item:after, 
+.lum-form-field-id-inheritThemes .lum-list-item:after, 
+.lum-form-field-id-inheritMetaTags .lum-list-item:after,
+.lum-form-field-id-inheritAreaTags .lum-list-item:after{
+	border-bottom: 0px;
+}
+
+#pop div{
+	padding:3px;
+}
+
+.lum-admin-inherited-property-list{
+	padding-left:2px;
+}
+
+.lum-admin-inherited-property-list th{
+	font-weight:normal;
+}
+
+.lum-admin-inherited-property-list th:after {
+	content: ": ";
+}
+
+.lum-admin-inherited-property-list th, .lum-admin-inherited-property-list td{
+	font-size: 12px;
+	min-width: 160px;
+	text-align: left;
+}
+.lum-admin-inherited-property-list td{
+	padding-bottom:10px;
+}

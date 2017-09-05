@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service name="STR_SERVICE_NAME" type="lum_doui">
+		<description>STR_SERVICE_DESCRIPTION</description>
+			
+	</service>
+
+	<interfaces>
+		<interface id="addprestador" name="Cadastro Prestador" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles>
+				<style name="Cadastro Prestador" path="br/com/qualicorp/redenarede/service/useraccount/style/addprestador.xsl" id="default" />
+				<style name="Cadastro Prestador Smart" path="br/com/qualicorp/redenarede/service/useraccount/style/addprestadorsmart.xsl" id="addprestadorsmart" />
+			</styles>
+			<isAdministration>false</isAdministration>
+		</interface>
+		<interface id="addbeneficiario" name="Cadastro Beneficiario" type="lum_douiAdministrationEmbeddedAddPropertyPage">
+			<styles> 
+ 				<style name="Cadastro Beneficiario" path="br/com/qualicorp/redenarede/service/useraccount/style/addbeneficiario.xsl" id="default" /> 
+ 				<style name="Cadastro Beneficiario Smart" path="br/com/qualicorp/redenarede/service/useraccount/style/addbeneficiariosmart.xsl" id="addbeneficiariosmart" /> 
+			</styles> 
+			<isAdministration>false</isAdministration>
+		</interface>
+		<interface name="Âncora Beneficiario" id="ancora" type="lum_doui">
+		</interface>	
+		
+		<interface name="Âncora Prestador" id="ancora_prestador" type="lum_doui">
+		</interface>
+		
+		<interface name="Executa Script" id="rotina" type="lum_doui">
+		</interface>	
+	</interfaces>
+
+</serviceDefinition>

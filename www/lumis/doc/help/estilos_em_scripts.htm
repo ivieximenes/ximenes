@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Estilos em Scripts</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?estilos_em_scripts.htm"; }
+  else { parent.quicksync('a5.5.1.3.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Estilos em Scripts</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="editor_de_estilo.htm">Previous</a>&nbsp;
+     <a href="variaveis_disponives_para_esti.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">O Lumis Portal permite o desenvolvimento de estilos através de scripts JavaScript e Groovy.<br>
+Em arquivos de script para estilo utiliza-se como linguagem principal o HTML, e o código do script é identificado pelos delimitadores a seguir:</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-weight: bold;">&lt;% ... %&gt;</span>, usado para definir uma área de código.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Exemplo:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.15; padding: 0px 0px 0px 0px; margin: 0px 0px 13px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+<p><span style="color: #bf5f3f;"> &nbsp; &nbsp;&lt;%</span></p>
+<p><span style="font-weight: bold; color: #7f0055;"> &nbsp; &nbsp;var</span> date = <span style="font-weight: bold; color: #7f0055;">new</span> Date();</p>
+<p> &nbsp; &nbsp;print(date.toLocaleString());</p>
+<p><span style="color: #bf5f3f;"> &nbsp; &nbsp;%&gt;</span></p>
+<p style="text-align: left;"><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-weight: bold;">&lt;%= ... %&gt;</span>, usado para escrever no HTML o retorno de um código. O<span style="font-style: italic;"> valor é escapado para o formato HTML.</span></p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Exemplo:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.15; padding: 0px 0px 0px 0px; margin: 0px 0px 13px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span><span style="color: #bf5f3f;">&lt;%=</span><span style="font-weight: bold; color: #7f0055;">new</span> Date().toLocaleString()<span style="color: #bf5f3f;">%&gt;</span><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">O código adicionado aos delimitadores não está contido pelo mesmo, ao processar o estilo todos os delimitadores se juntam como se fosse um único arquivo.<br>
+Por exemplo uma variável declarada em um delimitador pode ser usada em outros delimitadores posteriormente, caso o escopo da mesma permita.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Exemplo:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.15; padding: 0px 0px 0px 0px; margin: 0px 0px 13px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;"><span style="color: #bf5f3f;">&lt;%</span></p>
+<p style="text-align: left;"><span style="font-weight: bold; color: #7f0055;">var</span> date = <span style="font-weight: bold; color: #7f0055;">new</span> Date();</p>
+<p style="text-align: left;"><span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="color: #008080;"> &nbsp; &nbsp;&lt;</span><span style="color: #3f7f7f;">time</span> <span style="color: #7f007f;">datetime</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>date.toISOString()<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp;  <span style="color: #bf5f3f;">&lt;%=</span>date.toLocaleString()<span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"> &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">time</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;">No script estão disponíveis vários objetos e métodos para facilitar o seu desenvolvimento. Veja o tópico <a href="variaveis_disponives_para_esti.htm">Variáveis Disponíves Para Estilos em Script</a></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p>Para maiores informações e exemplos sobre estilos usando script, veja o tópico da linguagem desejada: <a href="estilo_em_groovy.htm">Groovy</a>, <a href="estilo_em_javascript.htm">JavaScript</a></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Caso seja necessário utilizar recursos EL, as mesmas podem ser acessadas utilizando o delimitador <span style="font-weight: bold;">${ ... }</span> no HTML ou <span style="font-weight: bold;">lum_el.evaluate("lum_localize('STR_TITLE')")</span><span style="font-style: italic;"> </span>quando no script. Note que não é possível misturar a tag EL HTML com código do script.<br>
+Para maiores informações sobre EL, veja o tópico <a href="recursos_disponiveis_em_el.htm">Recursos disponíveis em EL</a>. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="568" style="width:568px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="568" style="width:568px; border: solid 1px #000000;"><p style="text-align: left;">Para se editar um estilo em script é necessário ter a permissão de <span style="font-style: italic;">editar scripts,</span> uma permissão global que permite ao usuário rodar qualquer script Java, JavaScript ou Groovy no servidor.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,317 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Exemplos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?desenv_componente_exemplos.htm"; }
+  else { parent.quicksync('a8.11.1.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Exemplos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="mover_um_componente_de_um_modu.htm">Previous</a>&nbsp;
+     <a href="desenv_modulos.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>A seguir alguns exemplos são apresentados em alguns cenários específicos.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Criação de um componente</span></p>
+<p>Suponha a criação de um componente <span class="f_CodeExample">br.com.lumis.intranet</span>. Note que, nesse caso, o componente está localizado em <span class="f_CodeExample">br/com/lumis/intranet</span> e, consequentemente, seu arquivo de definição é <span class="f_CodeExample">br/com/lumis/intranet/componentdefinition.xml</span>. Nesse componente existirão:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 9px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>dois serviços:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br.com.lumis.service.service1</span>: presente na pasta <span class="f_CodeExample">br/com/lumis/intranet/services/service1</span>.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">lumis.service.service2</span>: presente na pasta <span class="f_CodeExample">br/com/lumis/intranet/services/service2</span>.</td></tr></table></div><p style="margin: 0px 0px 0px 29px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 9px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>um tema:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br.com.lumis.intranet.theme.theme1</span>: presente na pasta <span class="f_CodeExample">br/com/lumis/intranet/theme/theme1</span>.</td></tr></table></div><p style="margin: 0px 0px 0px 30px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 9px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>arquivos públicos:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br/com/lumis/intranet/www/js/jquery.js</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br/com/lumis/intranet/www/img/img_arrow_left.png</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br/com/lumis/intranet/www/css/main.css</span></td></tr></table></div><p style="margin: 0px 0px 0px 29px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 9px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>estrutura:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 28px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span class="f_CodeExample">br/com/lumis/intranet/structure/</span></td></tr></table></div><p style="margin: 0px 0px 0px 9px;">&nbsp;</p>
+<p>Os serviços podem estar em qualquer pasta dentro da pasta do componente, uma vez que seu identificador é definido em seu <a href="portalarquivodefinicao.htm">arquivo de definição</a>.</p>
+<p>Os temas, por sua vez, devem estar localizados na sua pasta específica, já que seu identificador é inferido a partir dessa pasta. Veja mais em <a href="temas_do_portal.htm">Temas do Portal</a>.</p>
+<p>Os arquivos públicos podem estar em qualquer pasta dentro da pasta <span class="f_CodeExample">www</span> pertencente à pasta do componente.</p>
+<p>Os arquivos da estrutura devem estar dentro da pasta <span class="f_CodeExample">structure</span> dentro da pasta do componente.</p>
+<p>&nbsp;</p>
+<p>O <a href="definicao_de_componente.htm">arquivo de definição</a> deve ser desenvolvido de acordo, incluindo sua versão. Suponhamos, para exemplificação que essa versão é "1.0.0.0".</p>
+<p>Caso necessite, <a href="desenv_componente_scripts.htm">scripts de instalação, atualização e desinstalação</a> podem ser adicionados ao componente, dentro da pasta <span class="f_CourierFixed">scripts</span>.</p>
+<p>&nbsp;</p>
+<p>Após o desenvolvimento da definição do componente, de seus scripts (caso existam) e dos objetos do componente, a pasta do componente pode ser empacotada em um módulo para que possa ser implantado em algum ambiente.</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Atualização de um componente</span></p>
+<p>Suponha que o componente criado anteriormente deve ser atualizado por algum motivo. O desenvolvedor faz as alterações necessárias nos serviços, temas etc. O componente deve ter sua versão atualizada, digamos para "1.1.0.0". As alterações necessárias nos scripts do componente devem ser realizadas.</p>
+<p>O componente está pronto para ser empacotado em um módulo para que o mesmo seja implantado.</p>
+<p>Ao ser implantado em um ambiente que já contenha a versão "1.0.0.0" esta será atualizada para a "1.1.0.0". Ao ser implantado em um ambiente que não possua o componente instalado, ele será instalado.</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - versão 1.0.0.0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - versão 1.1.0.0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.1.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Renomear um componente</span></p>
+<p>Caso um componente necessite ser renomeado, a instrução de <a href="desenv_componente_substituicao_de_componentes.htm">substituição de componente</a> no arquivo de definição do mesmo. Ou seja, renomear o componente é o mesmo que criar um componente que substitua outro componente. Como exemplo, suponha que o componente <span class="f_CourierFixed">br.com.empresa.service.news</span> seja renomeado para <span class="f_CourierFixed">br.com.empresa.projeto1.service.news</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.empresa.service.news</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.empresa.projeto1.service.news</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.empresa.service.news"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Dividir um componente em vários</span></p>
+<p>Suponha agora que o componente <span class="f_CodeExample">br.com.lumis.intranet</span> será dividido em <span class="f_CodeExample">br.com.lumis.intranet.rj </span>e <span class="f_CodeExample">br.com.lumis.intranet.sp</span>. Essa divisão requer que uma <a href="desenv_componente_substituicao_de_componentes.htm">substituição do componente</a> <span class="f_CodeExample">br.com.lumis.intranet</span> pelo componente <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e outra substituição do componente <span class="f_CodeExample">br.com.lumis.intranet</span> pelo componente <span class="f_CodeExample">br.com.lumis.intranet.sp</span> seja realizada.</p>
+<p>&nbsp;</p>
+<p>Ou seja, deve-se declarar na definição do componente <span class="f_CodeExample">br.com.lumis.intranet.rj</span> que o mesmo substitui o componente <span class="f_CodeExample">br.com.lumis.intranet</span> e, também, deve-se declarar no componente <span class="f_CodeExample">br.com.lumis.intranet.sp</span> que o mesmo substitui o componente <span class="f_CodeExample">br.com.lumis.intranet</span>. </p>
+<p>&nbsp;</p>
+<p>Contudo, isso não é suficiente. Nesse caso, ambos os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span> devem ser instalados ao mesmo tempo, para que ambos substituam o componente <span class="f_CodeExample">br.com.lumis.intranet</span> e, a partir dessa instalação, ambos sejam mantidos como componentes distintos. Nesse caso, o componente <span class="f_CodeExample">br.com.lumis.intranet.rj </span>deve declarar que substitui o componente <span class="f_CodeExample">br.com.lumis.intranet </span>em conjunto com o componente <span class="f_CodeExample">br.com.lumis.intranet.sp </span>e o componente <span class="f_CodeExample">br.com.lumis.intranet.sp </span>deve declarar que substitui o componente <span class="f_CodeExample">br.com.lumis.intranet </span>em conjunto com o componente <span class="f_CodeExample">br.com.lumis.intranet.rj</span>. Feito isso, os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span> somente serão implantados de forma conjunta, caso o componente <span class="f_CodeExample">br.com.lumis.intranet</span> já tenha sido implantado previamente. Caso o componente <span class="f_CodeExample">br.com.lumis.intranet</span> ainda não tenha sido implantado, os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span> podem ser implantados de forma separada.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 0px;"><span style="font-weight: bold;">Importante</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p style="border-color: #000000; border-style: solid; border-width: 0px; margin: 0px 2px 0px 0px;">É de extrema importância que a substituição conjunta seja definida em todos os componentes nos quais o componente original foi dividido. Generalizando, se um componente <span style="font-style: italic;">C</span> é dividido em <span style="font-style: italic;">n</span> componentes <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">1</span>, <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">2</span>, <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">3</span>, ..., <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">n</span>, então em cada um dos componentes <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">1</span> até <span style="font-style: italic;">C</span><span style="font-size: 7pt; font-style: italic; vertical-align: sub;">n</span> deve-se declarar a substituição conjunta com os outros <span style="font-style: italic;">n-1</span> componentes. Caso essa configuração não seja realizada, uma implantação errônea pode ser realizada. No caso geral, a configuração adequada exige que todos os componentes que substituiram o componente original sejam instalados no mesmo deploy.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p style="border-color: #000000; border-style: solid; border-width: 0px; margin: 0px 2px 0px 0px;">No exemplo, os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span> substituiriam o componente <span class="f_CodeExample">br.com.lumis.intranet</span> e seriam atualizados a partir do passo de upgrade atual do componente <span class="f_CodeExample">br.com.lumis.intranet</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet.rj</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">joint-with</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet.sp"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">joint-with</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet.sp</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">joint-with</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet.rj"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">joint-with</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Juntar vários componentes em um</span></p>
+<p>Suponha que os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span> necessitem ser unidos em um único componente <span class="f_CodeExample">br.com.lumis.intranet</span>. Essa operação requer que o componente <span class="f_CodeExample">br.com.lumis.intranet</span> <a href="desenv_componente_substituicao_de_componentes.htm">substitua</a> os componentes <span class="f_CodeExample">br.com.lumis.intranet.rj</span> e <span class="f_CodeExample">br.com.lumis.intranet.sp</span>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet.rj</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet.sp</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de componentdefinition.xml - br.com.lumis.intranet</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/component"</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">1.0.0.0</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">version</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet.rj"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">component</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0.0.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"br.com.lumis.intranet.sp"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">replace</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-component</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

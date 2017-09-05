@@ -1,0 +1,155 @@
+/* $Revision: 15349 $ $Date: 2013-05-20 12:54:36 -0300 (Mon, 20 May 2013) $ */
+
+/* 
+	- Styles for CSS-only menu, can be used for menus with only ONE SubMenu-level.
+   	- CSS-only menus load much faster because they barely use any JavaScript.
+   	- Beware though, take care when editing this styles as custom styles for
+   	your portal, some changes can alter the functionality of the CSS-only menu.
+	- WARNING: dont change the name of the class "over".
+*/
+
+/* Vertical CSS Menu */
+
+#LumMenuCSS
+{
+	width:160px; /* width MUST be fixed */
+	border:8px solid #EFEFD0;
+}
+#LumMenuCSS ul 
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:160px; /* width MUST be fixed */
+}
+#LumMenuCSS ul li 
+{
+	position:relative;
+}
+#LumMenuCSS li ul 
+{
+	position:absolute;
+	left:159px; /* left MUST be fixed, its (menu width -1) */
+	top:0;
+	display:none;
+}
+#LumMenuCSS ul li a 
+{
+	display:block;
+	text-decoration:none;
+	padding:6px 12px;
+	color:#343434;
+	background:#EFEFD0;
+	border-bottom:1px solid #D3D3C2;
+	outline:none;
+}
+#LumMenuCSS ul li a:hover, #LumMenuCSS ul li a.selected
+{
+	background:white;
+	color:inherit;
+}
+#LumMenuCSS ul li a img 
+{
+	margin:0 8px 0 0;
+	width:6px;
+	height:7px;
+}
+/* Hover Trick (NOT a hack) */
+#LumMenuCSS li:hover ul, #LumMenuCSS li.over ul 
+{ 
+	display:block; 
+}
+/* SubMenu */
+#LumMenuCSS li ul.subnav
+{
+	margin:-1px 0 0 1px;
+	border-bottom:1px solid #D3D3C2;
+}
+#LumMenuCSS ul.subnav li a 
+{
+	padding:6px;
+	border-top:1px solid #D3D3C2;
+	border-left:1px solid #D3D3C2;
+	border-right:1px solid #D3D3C2;
+	border-bottom:0;
+}
+
+
+/* Horozintal CSS Menu */
+
+#LumMenuHorCSS
+{
+	width:auto;
+	background:#EFEFD0;
+	color:inherit;
+}
+#LumMenuHorCSS ul 
+{
+	margin:0;
+	padding:6px 8px;
+	list-style:none;
+	float:left; /* fix IE7 bug */
+	background:#EFEFD0;
+	color:inherit;
+}
+#LumMenuHorCSS ul li 
+{
+	float:left;
+	position:relative;
+	min-width:1px;
+}
+#LumMenuHorCSS li ul 
+{
+	position:absolute;
+	left:0;
+	top:18px; /* sets SubMenu distance from top of menu, MUST be fixed */
+	display:none;
+}
+/* Hor Menu Trick (NOT a hack) */
+#LumMenuHorCSS li > ul 
+{
+	top:auto;
+	left:auto;
+}
+#LumMenuHorCSS ul li a 
+{
+	display:block;
+	white-space:nowrap;
+	text-decoration:none;
+	padding:2px 8px;
+	color:#343434;
+	background:#EFEFD0;
+	outline:none;
+}
+#LumMenuHorCSS ul li a:hover, #LumMenuHorCSS ul li a.selected
+{
+	background:white;
+	color:inherit;
+}
+/* Hover Trick (NOT a hack) */
+#LumMenuHorCSS li:hover ul, #LumMenuHorCSS li.over ul 
+{ 
+	display:block; 
+	padding:0;
+	z-index:99; /* fix 2+ lines menu on FF */
+}
+/* SubMenu */
+#LumMenuHorCSS li ul.subnav
+{
+	padding:0;
+	border-bottom:1px solid #D3D3C2;
+}
+#LumMenuHorCSS ul.subnav li a 
+{
+	width:120px; /* width MUST be fixed */
+	white-space:normal;
+	padding:6px;
+	border-top:1px solid #D3D3C2;
+	border-left:1px solid #D3D3C2;
+	border-right:1px solid #D3D3C2;
+	border-bottom:0;
+}
+#LumMenuHorCSS ul.subnav li a:hover
+{
+	border-top:1px solid #D3D3C2;
+}

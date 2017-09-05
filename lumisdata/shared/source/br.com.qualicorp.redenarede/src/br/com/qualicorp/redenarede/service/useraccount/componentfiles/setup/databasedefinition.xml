@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd">
+	
+	<table name="QC_BENEFICIARIO">
+		<fields>
+			<field name="id" 					type="guid" 	isNotNull="true" />
+			<field name="user_id" 				type="guid" 	isNotNull="true" />
+			<field name="cpf" 					type="string" />
+			<field name="rg" 					type="string" />
+			<field name="orgao_emissor" 		type="string" />
+			<field name="nome_mae" 				type="string" 	isNotNull="true" />
+			<field name="numero_carteira" 		type="string" 	isNotNull="true" />
+			<field name="data_nascimento" 		type="date"  	isNotNull="true" />
+			<field name="telefone" 				type="string" />
+			<field name="estipulante" 			type="string" size="250" />
+			<field name="plano" 				type="string" size="250" />
+			<field name="data_alteracao" 		type="dateTime" />
+		</fields>
+		<constraints>
+			<constraint name="QC_BENEFICIARIO_PK" type="primaryKey">
+				<fields>
+					<field name="id"/>
+				</fields>
+			</constraint>
+			<constraint name="QC_BENEFICIARIO_CARTEIRA_UNIQ" type="unique">
+				<fields>
+					<field name="numero_carteira" />
+				</fields>
+			</constraint>
+			<constraint name="QC_BENEFICIARIO_USERID_UNIQ" type="unique">
+				<fields>
+					<field name="user_id" />
+				</fields>
+			</constraint>
+			<constraint name="QC_BENEFICIARIO_FK" type="foreignKey" onDeleteCascade="true">
+				<fields>
+					<field name="user_id"/>
+				</fields>
+				<references table="lum_User">
+					<fields>
+						<field name="userId"></field>
+					</fields>
+				</references>
+			</constraint>
+		</constraints>
+	</table>
+	
+	<table name="QC_PRESTADOR">
+		<fields>
+			<field name="id" 					type="guid" 	isNotNull="true" />
+			<field name="user_id" 				type="guid" 	isNotNull="true" />
+			<field name="cpf_cnpj" 				type="string" 	isNotNull="true" />
+			<field name="razao_social" 			type="string" />
+			<field name="telefone" 				type="string" />
+		</fields>
+		<constraints>
+			<constraint name="QC_PRESTADOR_PK" type="primaryKey">
+				<fields>
+					<field name="id"/>
+				</fields>
+			</constraint>
+			<constraint name="QC_PRESTADOR_FK" type="foreignKey" onDeleteCascade="true">
+				<fields>
+					<field name="user_id"/>
+				</fields>
+				<references table="lum_User">
+					<fields>
+						<field name="userId"></field>
+					</fields>
+				</references>
+			</constraint>
+		</constraints>
+	</table>
+	
+</databaseDefinition>

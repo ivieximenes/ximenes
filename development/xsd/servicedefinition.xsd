@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17579 $ $Date: 2015-07-15 15:09:03 -0300 (Wed, 15 Jul 2015) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+	<xsd:complexType name="service">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="contextPath" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation> Contains the context path where this
+						service is deployed into. If not specified, 
+						the service must be deployed in the
+						same context as the portal framework. The context path
+						must start with a slash, and contain only ascii letters
+						and digits.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isSocialProfile" type="xsd:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> 
+						Specifies that this service is a Social Profile Service. If this configuration is set to true,
+						this service may be selected as the social profile on the configuration of Private Social Network, 
+						on the Configuration module of the Lumis Portal.
+						The default value is false.  
+					 </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="image" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="smallImage" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation> Specifies the small image for this service. Its
+						value should be the href for the image to be used as the small image
+						for this service. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="permissions" type="permissions" minOccurs="0"/>
+			<xsd:element name="clocks" type="clocks" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Defines clocks (scheduled tasks) for this service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="resource" type="resource" minOccurs="0"/>
+			<xsd:element name="workflow" type="workflow" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="className" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The class name of the IService implementation used for this service.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional" >
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining the java class that implements IService used for this service.
+				This attribute cannot be defined if the "className" attribute is defined.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="serviceType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>This attribute defines the type of service, like native
+					portal, content manager and doui.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isInstantiable" type="xsd:boolean" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="workflow">
+		<xsd:attribute name="enabled" type="xsd:boolean" use="required"/>
+		<xsd:attribute name="id" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="resource">
+		<xsd:sequence maxOccurs="1">
+			<xsd:element name="stringsUrlPrefixes" type="stringsUrlPrefixes"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="stringsUrlPrefixes">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="stringsUrlPrefix" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="clocks">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="clock" type="clock"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="clock">
+		<xsd:sequence>
+			<xsd:element name="startTime" type="xsd:time" minOccurs="0"/>
+			<xsd:element name="maxRunTime" type="xsd:positiveInteger" minOccurs="0" default="1800">
+				<xsd:annotation>
+					<xsd:documentation>Maximum execution time for a clock, in seconds. After this time has passed since the clock execution has started, it is considered that is died and it can be executed again by the portal.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tickInterval" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The interval for executing this clock. The value of this element is the interval, and the time unit is specified in the interval attribute.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="type" default="minutes">
+								<xsd:annotation>
+									<xsd:documentation>The time unit for the specified interval.</xsd:documentation>
+								</xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="seconds"/>
+										<xsd:enumeration value="minutes"/>
+										<xsd:enumeration value="hours"/>
+										<xsd:enumeration value="days"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>The identifier for the clock. The clock's full identifier is "[serviceId].[id]".</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="className" use="optional" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+						The class name of the implementation used for this clock execution.
+						This attribute cannot be defined if the "scriptPath" attribute is defined.
+						<em>Either this attribute or 'scriptPath' must be defined.</em>
+					]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional" >
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+				Path of a script defining the java class of the implementation used for this clock execution.
+				This attribute cannot be defined if the "className" attribute is defined.
+				<em>Either this attribute or 'className' must be defined.</em>
+				]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+		
+	<xsd:complexType name="permissions">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="permission">
+				<xsd:complexType>
+					<xsd:attribute name="id" type="xsd:string" use="required"/>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="implies" type="xsd:string" use="optional"/>
+					<xsd:attribute name="requiredForWorkflowRole" type="xsd:boolean" use="optional" default="false"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="styles" >
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="style">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="description" type="xsd:string" minOccurs="0" />
+					</xsd:sequence>
+					<xsd:attribute name="id" type="xsd:string" use="required"/>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="path" type="xsd:string" use="required"/>
+					<xsd:attribute name="isDefault" type="xsd:boolean" use="optional" default="false"/>
+					<xsd:attribute name="isWidgetDefault" type="xsd:boolean" use="optional" default="false">
+						<xsd:annotation>
+							<xsd:documentation>Indicates whether this style is the default style to be used
+							when the interface is rendered as a widget in a personalized page.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="cache" >
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="level" type="cacheLevelTypes" minOccurs="0" />
+			<xsd:element name="personalization" type="cachePersonalizationTypes" minOccurs="0" />
+			<xsd:element name="serverSideInclude" type="xsd:boolean" minOccurs="0" default="false" />
+			<xsd:element name="default" type="cacheConfigurationOptions" maxOccurs="1" minOccurs="0" />
+		</xsd:sequence>
+		<xsd:attribute name="enable" type="xsd:boolean" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="menu" >
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="item" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="interfaceId" minOccurs="0" />
+					</xsd:sequence>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="type" type="xsd:string" use="optional"/>
+					<xsd:attribute name="className" type="xsd:string" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>The class name of the IServiceInterfaceMenuItem implementation used for this menu item.
+							This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="scriptPath" type="xsd:string" use="optional" >
+						<xsd:annotation>
+							<xsd:documentation>Path of a script defining the java class that implements IServiceInterfaceMenuItem used for this menu item.
+							This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="separator" minOccurs="0"/>
+			<xsd:element name="itemGroup" minOccurs="0">
+				<xsd:complexType>
+					<xsd:attribute name="type" type="xsd:string" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="interface">
+		<xsd:all>
+			<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="title" type="xsd:string" minOccurs="0" />
+			<xsd:element name="isRuntimeOnly" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="usesSocialProfileInformation" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							Indicates whether this intefaces uses information about users' social profile.
+							If this configuration is set to true, the renderization of DOUI LumisPrincipal type fields will contain 
+							the corresponding social profile information.
+							The default value is false. 
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceInstanceRequired" type="xsd:boolean" minOccurs="0" default="true">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							If this configuration is set to true, the portal will require a service instance of the same service of the 
+							interface to render it.
+							If this configuration is set to false, the portal will not require a service instance to render it.
+							In this case, the portal will not validate the user permissions in a service instance. If some validation
+							should be made, the interface should do it itself.
+							The default value is true.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isAdministration" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="isPrintable" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="isOpenerWindowRequired" type="xsd:boolean" minOccurs="0" default="true">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							This configuration indicates whether an opener window is expected to exist for the correct working of this interface.
+							When this configuration is set to <i>true</i> the portal will try to open this interface, when requested to, in such way that the opener window remain active.
+							Otherwise, the portal may choose to open this interface in such way the opener window may not remain active.
+							By default, this configuration is set to <i>true</i>.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="renderAs" type="renderAsTypes" minOccurs="0" />
+			<xsd:element name="width" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="height" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="paddingLeft" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="paddingRight" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="paddingTop" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="paddingBottom" type="xsd:nonNegativeInteger" minOccurs="0" />
+			<xsd:element name="popupWindowProperties" type="xsd:string" minOccurs="0" />
+			<xsd:element name="styles" type="styles" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+					<![CDATA[
+						Indicates whether this interface's will have one or more styles pre-registered.
+						If this tag is not inserted, the system will try to resolve the default interface style based
+						on interface identifier, it will search inside service folders for a 'style' folder, 
+						then will search for style archives (*.xsl, *.js, *.groovy) named by interface identifier, 
+						if any were found, will use it as interface default style.
+						<p>Example:</p>
+<pre>
+<interface id="list" name="STR_LIST" type="lum_douiList">
+  <styles>
+    <style id="list" name="STR_LIST" path="style/List.js"/>
+  </styles>
+</interface>
+Default style will be "List.js".
+
+<interface id="list" name="STR_LIST" type="lum_douiList">
+  <styles/>
+</interface>
+Default style will be the Lumis Portal generic style.
+
+<interface id="list" name="STR_LIST" type="lum_douiList">
+</interface>
+Default style, if found in "style" folder inside service folder, will be "list.xsl", "list.js" or "list.groovy".
+If no such file exists, the Lumis Portal generic style will be used as default.
+</pre>							
+					]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cache" type="cache" minOccurs="0" />
+			<xsd:element name="menu" type="menu" minOccurs="0" />
+			<xsd:element name="isDetails" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="isList" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="isSummary" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether this interface's main purpose is to display a summary 
+					of the data related to it. By default, it is true for quick lists and false for other interface types.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="previewSupported" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="permissions" type="interfacePermissions" minOccurs="0" />
+			<xsd:element name="modes" type="interfaceModes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Lists the modes this interface supports.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isWidget" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether this interface may be used as a widget in a personalized page. 
+					By default, it is true for quick lists and false for other interface types.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isRestEnabled" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates that will be generated automatically a rest interface for the interface. 
+					By default, it is true for lists and details interfaces and false for other interface types.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="inContextEditSupported" type="xsd:boolean" minOccurs="0" default="true">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether this interface supports the in-context edit feature. This attribute is to be
+					set to false if this interface is not compatible with portal the in-context edit feature.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="automaticAdministration" type="xsd:boolean"
+				minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Indicates whether the current service interface
+						is displayed by the auto administration service. If an interface
+						is considered relevant to the auto administration service, it will
+						be created at runtime when there is an area with the auto
+						administration service instantiated. If this node is not present,
+						the default behavior will be to consider it true if the interface
+						is not runtime and is an administration list interface, false otherwise.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="className" type="xsd:string" use="optional" >
+			<xsd:annotation>
+				<xsd:documentation>The class name of the IServiceInterface implementation used for this service.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional" >
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining the java class that implements IServiceInterface used for this service interface.
+				This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="serviceInterfaceType" use="optional" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="interfacePermissions">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="permission">
+				<xsd:complexType>
+					<xsd:attribute name="id" type="xsd:string" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:complexType name="interfaceModes">
+		<xsd:annotation>
+			<xsd:documentation>Contains the modes an interface supports.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mode" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						A mode an interface supports. The standard mode values 
+						are	VIEW, EDIT and HELP. The modes are case insensitive
+						and are converted to lower case.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:element name="serviceDefinition">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="service" type="service"/>
+				<xsd:element name="interfaces" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+							<xsd:element name="interface" type="interface" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:simpleType name="renderAsTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="inline"/>
+			<xsd:enumeration value="clientSideScript"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="cacheLevelTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="local"/>
+			<xsd:enumeration value="pageTemplate"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="cachePersonalizationTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="guestOnly"/>
+			<xsd:enumeration value="perUser"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="serviceType">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="lum_content"/>
+					<xsd:enumeration value="lum_doui"/>
+					<xsd:enumeration value="lum_service"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string"/>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="serviceInterfaceType">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="lum_serviceInterface" />
+					<xsd:enumeration value="lum_styled" />
+					<xsd:enumeration value="lum_doui" />
+					<xsd:enumeration value="lum_douiList" />
+					<xsd:enumeration value="lum_douiQuickList" />
+					<xsd:enumeration value="lum_douiDetails" />
+					<xsd:enumeration value="lum_douiAdministrationList" />
+					<xsd:enumeration value="lum_douiAdministrationPropertyPage" />
+					<xsd:enumeration value="lum_douiAdministrationAddPropertyPage" />
+					<xsd:enumeration value="lum_douiAdministrationEmbeddedAddPropertyPage" />
+					<xsd:enumeration value="lum_douiAdministrationEditPropertyPage" />
+					<xsd:enumeration value="lum_content" />
+					<xsd:enumeration value="lum_contentList" />
+					<xsd:enumeration value="lum_contentQuickList" />
+					<xsd:enumeration value="lum_contentDetails" />
+					<xsd:enumeration value="lum_contentAdministrationList" />
+					<xsd:enumeration value="lum_contentAdministrationPropertyPage" />
+					<xsd:enumeration value="lum_contentAdministrationAddPropertyPage" />
+					<xsd:enumeration value="lum_contentAdministrationEmbeddedAddPropertyPage" />
+					<xsd:enumeration value="lum_contentAdministrationEditPropertyPage" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string"/>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+
+	<xsd:complexType name="cacheConfigurationOptions">
+		<xsd:annotation>
+			<xsd:documentation>
+				This represents the Cache tab in the service
+				interface instance edit interface. With this node you can configure
+				the advanced cache options for the service interface.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="expiration" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Informs how often the cache should be expired.
+						The number expresses the amount of seconds that the portal will
+						wait since the html was stored in cache before it expires. The
+						absence of this node or setting its value to 0 (zero) will be
+						interpreted as non-expiring cache.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="className" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="false">
+					<xsd:annotation>
+						<xsd:documentation>
+							Defines the fully qualified name of the class
+							that implements the
+							lumis.portal.serviceinterfaceinstance.IInterfaceInstanceCacheKeyProvider
+							that will be used to generate a custom cache key.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="scriptPath" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="false">
+					<xsd:annotation>
+						<xsd:documentation>Path of a script defining the java class that implements the lumis.portal.serviceinterfaceinstance.IInterfaceInstanceCacheKeyProvider that will be used to generate a custom cache key.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="businessContext" type="businessContextType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							This node indicates that the cache should be created by using keys
+							present in the business context.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="businessContextType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Agregates a list of BusinessContext keys to be
+				used in interface caching.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="businessContextProperty" type="xsd:string" minOccurs="1" maxOccurs="unbounded" nillable="false">
+				<xsd:annotation>
+					<xsd:documentation>
+						The value should be the id of the
+						BusinessContext property. This value will not be checked when
+						registering the service and will be expected to exist during
+						runtime.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

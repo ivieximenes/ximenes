@@ -1,0 +1,275 @@
+/*
+ * $Revision: 15728 $ $Date: 2013-08-08 09:49:43 -0300 (Thu, 08 Aug 2013) $
+ */
+
+.lum-interactiveprocess-details-title
+{
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:15px;
+	font-weight:normal;
+	margin:0;
+	color:#464646;
+}
+.lum-interactiveprocess-details-progressbar
+{
+	border: 1px solid #C0C0C0;
+	width:94%;
+	height:10px;
+	margin-bottom:10px;
+	border-radius:3px;
+	position:relative;
+}
+.lum-interactiveprocess-details-bar
+{
+	position:relative; 
+	width:0%; 
+	height:10px; 
+	background-color: #FF9600; 
+	border-radius:3px;
+}
+.lum-interactiveprocess-details-percentage
+{
+	position:relative;
+	float:right;
+	top:-25px;
+}
+.lum-form-field-label .lum-interactiveprocess-details-subsection
+{
+	display:block;
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px !important;
+	font-weight:bold !important;
+	color:#909090 !important;
+	border-bottom:1px solid #d3d3d3;
+	width:100%;
+	margin-bottom:10px !important;
+	padding-bottom:5px !important;
+}
+.lum-interactiveprocess-details-statusactions
+{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	color:#909090;
+	font-size:12px;
+}
+.lum-interactiveprocess-details-statusactions a
+{
+	color:#ff9600;
+	font-weight:bold;
+	text-decoration:none;
+}
+.lum-interactiveprocess-details-statusactions a:hover
+{
+	text-decoration:none;
+}
+.lum-interactiveprocess-details-statusactions span
+{
+	color:#444444;
+}
+.lum-interactiveprocess-details-statusactions .lum-interactiveprocess-details-statusactions-ignored
+{
+	background: url("../../../../service/portalmanagement/interactiveprocess/image/ignored.gif") no-repeat scroll 0px 2px transparent;
+	padding-left: 18px;
+	height: 18px;
+}
+
+.lum-interactiveprocess-details-statusactions .lum-interactiveprocess-details-statusactions-success
+{
+	background: url("../../../../service/portalmanagement/interactiveprocess/image/success.gif") no-repeat scroll 0px 2px transparent;
+	padding-left: 18px;
+	height: 18px;
+}
+
+.lum-interactiveprocess-details-statusactions .lum-interactiveprocess-details-statusactions-error
+{
+	background: url("../../../../service/portalmanagement/interactiveprocess/image/error.gif") no-repeat scroll 0px 2px transparent;
+	padding-left: 18px;
+	height: 18px;
+}
+
+.lum-interactiveprocess-details-statusactions-executing
+{
+	background: url("../../../../service/portalmanagement/interactiveprocess/image/executingstep.gif") no-repeat scroll 0px 2px transparent;
+	padding-left: 18px;
+	height: 18px;
+}
+
+.marginbottom-half
+{
+	margin-bottom:5px;
+}
+
+.marginbottom-10
+{
+	margin-bottom:10px !important;
+}
+
+.marginbottom
+{
+	margin-bottom:20px !important;
+}
+
+.process-details
+{
+	margin-top:10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	margin-left:5px;
+	border:1px solid #909090;
+	width:600px;
+	padding:5px 15px 15px 15px;
+	border-radius:3px;
+}
+
+.process-details:before
+{
+	 content:"";
+	 display:block;
+	 width:13px;
+	 height:15px;
+	 top:-20px;
+	 position:relative;
+	 background:url(../../../../service/portalmanagement/interactiveprocess/image/ponta.gif) no-repeat center bottom;
+}
+
+.process-details textarea
+{
+	width:542px;
+}
+
+.process-details .goback 
+{
+	bottom:5px;
+	float: right;
+	position: relative;
+	top: -50px;
+	height: 1px;
+}
+
+.import-item{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	padding:5px 40px 5px 10px;
+	border-radius:3px;
+	background-color:#ffffff;
+	color:#464646;
+	border:1px solid #d3d3d3;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	margin-bottom:5px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	width:420px;
+}
+
+.process-item{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	padding:5px 10px 5px 5px;
+	border-radius:3px;
+	background-color:#ffffff;
+	color:#464646;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	margin-bottom:5px;
+	width:620px;
+}
+
+.process-item span{
+	display:inline-block;
+	max-width:320px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.process-controls{
+	font-weight:normal;
+	color:#909090;
+	position:relative;
+	display:none;
+	left:10px;
+}
+
+.process-item.active-item .process-controls .ignore.actionButton, .process-item.active-item .process-controls .execute.actionButton
+{
+	display:inline-block;
+}
+
+.process-item .process-controls .ignore.actionButton, .process-item .process-controls .execute.actionButton, .process-item .process-controls .ignore.actionButton.lum-disabled, .process-item .process-controls .execute.actionButton.lum-disabled, .process-item .process-controls .ignore.actionButton.isMandatory
+{
+	display:none;
+}
+
+.process-controls a{
+	text-decoration:none;
+	color:#f58500;
+}
+
+.process-controls a.primary-action{
+	font-weight:bold;
+}
+
+.active-item .process-controls{
+	display:inline-block !important;
+}
+
+.import-executing{
+	padding-left:30px;
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/executingstep.gif) no-repeat left 5px center;
+}
+
+.noexecuted{
+	background-image:none;
+}
+
+.import-ignored{
+	padding-left:30px;
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/ignored.gif) no-repeat left 5px center;
+}
+
+.executed-errors{
+	padding-left:30px;	
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/error.gif) no-repeat left 5px center;
+}
+
+.import-ok{
+	padding-left:30px;
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/success.gif) no-repeat left 5px center;
+}
+
+.import-sucess{
+	padding:5px 10px 5px 35px;
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/success.gif) no-repeat left 10px center;
+	border:1px solid #6da114;
+	font-weight:bold;
+	color: #6da114;
+}
+
+.active-item{
+	font-weight:bold;
+}
+
+.import-error{
+	padding:5px 10px 5px 35px;
+	border:1px solid #9e2e2e;
+	background:url(../../../../service/portalmanagement/interactiveprocess/image/error.gif) no-repeat left 10px center;
+	font-weight:bold;
+	color: #9e2e2e;
+}
+.container-passos{
+	overflow:auto;
+	position:absolute;
+	width:657px;
+	top:140px;
+	bottom:5px;
+	margin-top: 2px;
+}
+
+.container-passos .lum-list .lum-list-item:after
+{
+	border-bottom-style:none;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17046 $ $Date: 2015-03-03 11:04:42 -0300 (Tue, 03 Mar 2015) $ -->
+<module xmlns="urn:jboss:module:1.0" name="lumis.jdbc.driver.mysql">
+	<resources>
+		<resource-root path="mysql-connector-java-5.1.34-bin.jar" />
+	</resources>
+	<dependencies>
+		<module name="javax.api"/>
+	</dependencies>
+</module>

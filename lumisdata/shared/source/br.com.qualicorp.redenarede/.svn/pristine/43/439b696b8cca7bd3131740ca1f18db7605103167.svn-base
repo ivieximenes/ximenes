@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!-- $Revision: 4787 $ $Date: 2013-10-23 18:53:05 -0200 (qua, 23 out 2013) $ -->
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service id="br.com.qualicorp.redenarede.service.auditoria" name="Gerenciador de Auditoria" type="lum_doui">
+		<workflow enabled="true"/>
+	</service>
+
+	<interfaces>		
+		<interface id="administracao" name="Administração de Auditoria" className="br.com.qualicorp.redenarede.service.auditoria.service.AuditoriaAdminListInterface">
+			<styles>
+				<style name="auditList" path="br/com/qualicorp/redenarede/service/auditoria/style/auditList.xsl" id="auditList"/>
+			</styles>
+			<serviceInstanceRequired>false</serviceInstanceRequired>
+		</interface>
+		
+		<interface id="details" name="Detalhe de Auditoria" type="lum_douiDetails">
+			<styles>
+				<style name="details" path="br/com/qualicorp/redenarede/service/auditoria/style/audit.xsl" id="details"/>
+			</styles>
+			<serviceInstanceRequired>false</serviceInstanceRequired>
+		</interface>		
+	</interfaces>
+</serviceDefinition>

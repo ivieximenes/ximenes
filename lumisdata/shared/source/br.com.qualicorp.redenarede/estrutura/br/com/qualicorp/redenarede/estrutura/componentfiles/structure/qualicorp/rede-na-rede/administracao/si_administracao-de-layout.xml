@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>2C96A668577D930C01577D96525F0064</id>
+  <name>Administração de Layout</name>
+  <service-id>br.com.qualicorp.redenarede.service.administracaodelayout</service-id>
+</service-instance>

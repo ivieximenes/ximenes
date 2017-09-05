@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>0000000050A1A02C0150A1ACC6861341</id>
+  <name>Templates</name>
+  <position>3</position>
+  <default-page-template-id>8A489E1F50AE95AA0150B9CE9BDA71E5</default-page-template-id>
+  <inherit-page-template>false</inherit-page-template>
+</channel>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>URL da Interface</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalurlinterface.htm"; }
+  else { parent.quicksync('a8.2.1.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">URL da Interface</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="diagramassequenciainterfaceservico.htm">Previous</a>&nbsp;
+     <a href="portalarquivodefinicao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Quando uma interface de serviço está gerando seu conteúdo, que será retornado para o navegador cliente em uma página, às vezes, ela precisa gerar um <span style="font-style: italic;">link</span> para uma outra página do portal ou ela pode gerar, ainda, um formulário cujos dados deverão ser submetidos de volta para serem processados. &nbsp;Nestas situações, o destino da navegação será uma página do portal. &nbsp;Neste caso, é necessário que o <span style="font-style: italic;">framework</span> calcule <span style="font-style: italic;">URLs</span> para o portal, quando necessário.</p>
+<p style="margin: 8px 0px 0px 0px;">Se uma interface precisa gerar <span style="font-style: italic;">link</span> para uma outra interface, é necessário saber em qual página a outra interface está. Para isso, a interface do serviço deve requisitar <span style="font-style: italic;">URLs</span> do <span style="font-style: italic;">framework</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">A interface <span style="font-style: italic;">Java</span> <span style="font-style: italic;"><a href="../api/lumis/portal/serviceinterface/IServiceInterfaceUrl.html" target="_blank" class="weblink">IServiceInterfaceUrl</a></span> resolve o problema do cálculo de <span style="font-style: italic;">URLs</span>. Interfaces de serviços que precisam de <span style="font-style: italic;">URLs</span> do portal, podem obter uma implementação de <span style="font-style: italic;">IServiceInterfaceUrl</span> no objeto <span style="font-style: italic; font-weight: bold;">response</span>. É preciso especificar se a <span style="font-style: italic;">URL</span> é para uma chamada de renderização (através do método <span style="font-style: italic;">render</span>) ou para processar uma ação (através do método <span style="font-style: italic;">processAction</span>).</p>
+<p style="margin: 8px 0px 0px 0px;">A interface <span style="font-style: italic;">Java</span> <span style="font-style: italic;">IServiceInterfaceUrl</span> possui métodos para adicionar parâmetros, especificar o destino do <span style="font-style: italic;">link</span>, etc. Por fim, há o método <span style="font-style: italic;">toString()</span> que retorna a <span style="font-style: italic;">URL</span> do portal solicitada.</p>
+<p style="margin: 8px 0px 0px 0px;">Exemplo de interface de serviço que usa <span style="font-style: italic;">IServiceInterfaceUrl</span>:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;public&nbsp;class&nbsp;SimpleForm&nbsp;extends&nbsp;GenericServiceInterface</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;render(IServiceInterfaceRenderRequest&nbsp;request,&nbsp;IServiceInterfaceRenderResponse&nbsp;response)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IServiceInterfaceUrl&nbsp;serviceInterfaceUrl=response.createActionURL();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;content&nbsp;=&nbsp;"&lt;form&nbsp;method=\"post\"&nbsp;action=\""&nbsp;+&nbsp;serviceInterfaceUrl.toString()&nbsp;+&nbsp;"\"&gt;"+"&lt;input&nbsp;name=\"name\"&nbsp;/&gt;"+"&lt;input&nbsp;type=\"submit\"&gt;"+"&lt;/form&gt;";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PortalPrintWriter&nbsp;printWriter=response.getWriter();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printWriter.print(content);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(request.getParameter("comment")!=&nbsp;null)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printWriter.print(request.getParameter("comment"));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;processAction(IServiceInterfaceActionRequest&nbsp;request,IServiceInterfaceActionResponse&nbsp;response)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;name&nbsp;=&nbsp;request.getParameter("name");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;+="&nbsp;is&nbsp;a&nbsp;nice&nbsp;name";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.setRenderParameter("comment",&nbsp;name);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">No exemplo acima, a interface do serviço implementa tanto o método <span style="font-style: italic; font-weight: bold;">render</span> quanto o <span style="font-style: italic; font-weight: bold;">processAction</span>, para renderizar e processar a página, respectivamente. </p>
+<p style="margin: 8px 0px 0px 0px;">Na etapa de renderização é criado via código um <span style="font-style: italic;">HTML</span> contendo um <span style="font-style: italic;">&lt;form&gt; </span>e dois controles: um <span style="font-style: italic;">&lt;input type="text"&gt;</span> e um <span style="font-style: italic;">&lt;input type="submit"&gt;. </span> &nbsp;O atributo <span style="font-style: italic;">action</span> do formulário será gerado utilizando o &nbsp;método <span style="font-style: italic; font-weight: bold;">serviceInterfaceUrl.toString()</span>. Caso haja um parâmetro de renderização chamado <span style="font-style: italic;">comment</span>, ele será impresso nesta etapa. Na primeira apresentação da interface, este parâmetro não existe, pois será definido na etapa de <span style="font-style: italic;">process action</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">O usuário visualiza o formulário no <span style="font-style: italic;">browser</span> e preenche um nome na caixa de texto. Ao clicar no botão, o formulário é submetido de volta ao <span style="font-style: italic;">Portal Server</span>, que detecta a ação do usuário e dispara o <span style="font-style: italic;">process action</span>. Nele é verificado se foi recebido o parâmetro <span style="font-style: italic;">name</span>, preenchido pelo usuário no formulário. Caso este parâmetro exista, o <span style="font-style: italic;">process action</span> define um parâmetro de renderização (<span style="font-style: italic;">render parameter</span>) chamado <span style="font-style: italic;">comment </span>contendo uma mensagem. Assim, termina o<span style="font-style: italic;">process action</span> e começa novamente a etapa de renderização, onde, desta vez, é detectado o valor do parâmetro <span style="font-style: italic;">comment</span> e este é renderizado na interface.<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="525" style="width:525px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Para customizar a resolução do  <span style="font-style: italic;">hyperlink</span> padrão para as interfaces, consultar o <span style="font-style: italic;"><a href="../api/lumis/portal/hyperlink/package-summary.html" target="_blank" class="weblink">lumis.portal.hyperlink</a></span>.</p>
+<p style="margin: 8px 0px 8px 0px;">Informações sobre os métodos utilizados no exemplo acima, consultar o <span style="font-style: italic;">javadoc</span> disponibilizados com a instalação do Produto.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Server Side Include</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?serversideinclude.htm"; }
+  else { parent.quicksync('a7.5.4.1.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Server Side Include</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="urls_amigaveis.htm">Previous</a>&nbsp;
+     <a href="filas_de_cache.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Exemplo de Cenário de utilização do </span><span style="font-style: italic; font-weight: bold;">SSI</span></p>
+<p style="margin: 14px 0px 0px 0px;">Suponha uma página detalhes de notícias configurada para ser <span style="font-style: italic;">cacheada</span> (acessar página com extensão .<span style="font-style: italic;">HTM</span>). Na página de detalhes, além da interface de detalhes, há também a interface de <span style="font-style: italic;">Lista Rápida</span>, com as três últimas notícias publicadas. </p>
+<p style="margin: 14px 0px 0px 0px;">Sem a tecnologia <span style="font-style: italic;">SSI</span>, se cada vez que uma notícia for publicada ou editada, precisar gerar novamente todos os <span style="font-style: italic;">HTML</span> da página de detalhes, o processo pode se tornar ineficiente, haja visto a quantidade de notícias publicadas.</p>
+<p>&nbsp;</p>
+<p>Para tornar, portanto, este processo eficiente, é necessário colocar aquela interface de <span style="font-style: italic;">Lista Rápida</span> como <span style="font-style: italic;">server-side-include</span>. Desta forma, a lista de notícias vai ser salva em um arquivo <span style="font-style: italic;">HTML</span> diferente de cada página de detalhes. Os arquivos <span style="font-style: italic;">HTM</span> de detalhes, por sua vez, terão simplesmente um #include para o <span style="font-style: italic;">HTM</span> gerado para a interface <span style="font-style: italic;">Lista Rápida</span> .</p>
+<p style="margin: 14px 0px 0px 0px;">Todos os detalhes vão compartilhar o mesmo <span style="font-style: italic;">&lt;locale&gt;.HTM</span>, e atualizando só esse arquivo, todos os <span style="font-style: italic;">HTMs</span> de detalhes vão ter a nova lista de notícias, sem precisar gerá-los novamente.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Outro exemplo</span></p>
+<p style="margin: 14px 0px 0px 0px;">Suponha que todas as páginas <span style="font-style: italic;">cacheadas</span> do portal precisam conter informações que são atualizadas constantemente. Para isso, deve-se utilizar a interface <span style="font-style: italic;">Exibir HTML</span> do serviço <span style="font-style: italic;">HTML</span> em cada uma das páginas do portal, com um #include para um arquivo.html, que contém todas as tais informações que são atualizadas constantemente.</p>
+<p style="margin: 14px 0px 0px 0px;">Portanto, alterando somente o arquivo.html, todas as páginas <span style="font-style: italic;">cacheadas</span> apresentarão as informações atualizadas, porém, sem que seja necessário gerá-las novamente.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configurações no Lumis Portal</span></p>
+<p style="margin: 14px 0px 0px 0px;">No <span style="font-style: italic;">Lumis Portal</span>, qualquer interface pode ser configurada com <span style="font-style: italic;">SSI</span>. Essa configuração deve ser realizada nas <a href="edicaopropriedadesinstanciasservicos.htm">propriedades de uma instância de interface</a>, mais precisamente na seção referente a aba <span style="font-style: italic;">Desempenho </span>das propriedades. Verificar também nas <a href="paginaavancado.htm">propriedades avançadas da página</a>, configurada para ser <span style="font-style: italic;">cacheada</span>, está com server side include habilitado. Isso significa que quando o arquivo <span style="font-style: italic;">HTML</span> da página estiver sendo gerada, porém com extensão <span style="font-style: italic;">SHTML </span>(extensão default para arquivos que têm SSI), também será gerado um arquivo <span style="font-style: italic;">HTML</span> contendo o conteúdo da instância da interface configurada com <span style="font-style: italic;">SSI</span> , no diretório <span style="font-style: italic;">data/pages/interfaces/&lt;guid da instancia da interface&gt;/&lt;locale&gt;.htm</span>). Cada página <span style="font-style: italic;">cacheada</span> apresentará um <span style="font-style: italic;">#include</span> para o arquivo <span style="font-style: italic;">HTM</span> da interface.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>Para cada idioma do portal, será gerado um arquivo <span style="font-style: italic;">HTM</span> com o conteúdo da interface configurada para <span style="font-style: italic;">SSI</span> .</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">No arquivo de configuração do portal, na seção de configuração de <span style="font-style: italic;">cache</span>, devem estar especificadas as extensões a serem utilizadas, como exemplicado nas configurações de <span style="font-style: italic;">cache</span> abaixo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table width="423" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;enable&nbsp;customized&nbsp;HTML&nbsp;Generation.&nbsp;&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;htmlGeneration&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;connectTimeout&gt;30000&lt;/connectTimeout&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;pageRequestTimeout&gt;50000&lt;/pageRequestTimeout&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;frameworkUrl&gt;http://localhost:8080/portal&lt;/frameworkUrl&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;htmlCacheLogNavigation&gt;1&lt;/htmlCacheLogNavigation&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;htmlFileExtension&gt;.htm&lt;/htmlFileExtension&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;shtmlFileExtension&gt;.shtml&lt;/shtmlFileExtension&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;ssi&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;sendRedirectOnPageNotFound&gt;true&lt;/sendRedirectOnPageNotFound&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;waitBeforeSendRedirect&gt;500&lt;/waitBeforeSendRedirect&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;/ssi&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/htmlGeneration&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">É possível habilitar processamento <span style="font-style: italic;">SSI</span> no <span style="font-style: italic;">Tomcat</span>, editando o arquivo <span style="font-style: italic;">Tomcat/conf/web.xml</span>, retirando os comentários dos seguintes blocos:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;filter&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-name&gt;ssi&lt;/filter-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-class&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;org.apache.catalina.ssi.SSIFilter</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/filter-class&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-name&gt;contentType&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-value&gt;text/x-server-parsed-html(;.*)?&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-name&gt;debug&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-value&gt;0&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-name&gt;isVirtualWebappRelative&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-value&gt;0&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/filter&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-mapping&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-name&gt;ssi&lt;/filter-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;url-pattern&gt;*.shtml&lt;/url-pattern&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/filter-mapping&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;mime-mapping&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;extension&gt;shtml&lt;/extension&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mime-type&gt;text/x-server-parsed-html&lt;/mime-type&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mime-mapping&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Após as devidas alterações no arquivo de configuração do <span style="font-style: italic;">Lumis</span> e do servidor de aplicação, reiniciar este último.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>É necessário que o servidor web ou de aplicação configurado para processar <span style="font-style: italic;">SSI</span> esteja configurado para processar os arquivos com a extensão <span style="font-style: italic;">SHTML</span> configurada. Cada servidor web ou de aplicação possui suas próprias configurações relacionadas ao funcionamento do <span style="font-style: italic;">SSI</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

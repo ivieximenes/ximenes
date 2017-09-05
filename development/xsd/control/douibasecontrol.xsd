@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17315 $ $Date: 2015-05-25 14:16:49 -0300 (Mon, 25 May 2015) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" xmlns:control="http://www.lumis.com.br/douicontrols" elementFormDefault="unqualified">
+
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="douicontrolsdefinition.xsd" />
+
+	<xsd:complexType name="lum_control" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Defines a base control. This is the root definition of all controls.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="control:lum_controlBase">
+				<xsd:sequence>
+					<xsd:element name="strings" type="controlStrings" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Represents a collection of strings that will be translated for use within an xsl.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="permissions" type="controlPermissions" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Represents a collection of permissions that the current user must have to see/use this control. If the permissions are not granted, this control and its children are removed from the interface layout.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="id" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>identifier for the control. If specified must be unique among all controls within the interface. If not specified an identifier is generated runtime.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="name" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>name for the control. </xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="style" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>css style that may be applied on the control</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="className" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>java className for the control. When specified this value takes precedence over the class associated with the control type.
+						This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="scriptPath" type="xsd:string" use="optional" >
+					<xsd:annotation>
+						<xsd:documentation>Path of a script defining a java class for the control. When specified the java class defined by this script takes precedence over the class associated with the control type.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_dataControl" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Defines a data control. Data controls may extend this control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence>
+					<xsd:element name="value" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Value for the control. Refer to field defaultValue attribute for more information about specifying values.  Value may be specified either as an attribute or an element.  Attribute has higher priority.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="defaultValue" type="control:controlDefaultValueType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Default value for the control. Refer to field defaultValue attribute for more information about specifying values. 
+							Default value may be specified either as an attribute or an element. Attribute has higher priority.
+							The following special default values are converted during execution to the value they represent:
+							lum_currentChannel, lum_currentPage, lum_currentServiceInstanceId, lum_currentServiceInstanceChannelId, lum_currentUser, lum_currentUserLocale, lum_currentUserName, lum_callerInterfaceInstanceId, lum_callerInterfaceId, lum_currentDateTime, lum_currentMonth, lum_currentYear, lum_newGuid.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="setSourceParameter" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>If this control affects data of other sources during render time this element should be specified.  When the value of this control is set, the source specified in this tag will be notified and re-loaded.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:attribute name="sourceId" type="xsd:string" use="required">
+								<xsd:annotation>
+									<xsd:documentation>this is the identifier of the destination source that will receive the new parameter value</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="parameterName" type="xsd:string" use="optional">
+								<xsd:annotation>
+									<xsd:documentation>the value of the control will be passed to the detination source as this given parameter.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="processActionIds" type="processActionIds" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Represents a collection of process action identifiers that the control will pass its value to.  If not specified all process actions will receive this control value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="value" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>value for the control. Refer to field defaultValue attribute for more information about specifying values.  Value may be specified either as an attribute or a node.  Attribute has higher priority.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="defaultValue" type="control:controlDefaultValueType" use="optional">
+					<xsd:annotation>
+							<xsd:documentation>Default value for the control. Refer to field defaultValue attribute for more information about specifying values. 
+							Default value may be specified either as an attribute or an element. Attribute has higher priority.
+							The following special default values are converted during execution to the value they represent:
+							lum_currentChannel, lum_currentPage, lum_currentServiceInstanceId, lum_currentServiceInstanceChannelId, lum_currentUser, lum_currentUserLocale, lum_currentUserName, lum_callerInterfaceInstanceId, lum_callerInterfaceId, lum_currentDateTime, lum_currentMonth, lum_currentYear, lum_newGuid.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="forceCase" type="caseType" use="optional" default="none">
+					<xsd:annotation>
+						<xsd:documentation>If the value of this control is of type CharSequence or String the value will be converted to the given case server side.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="trim" type="xsd:boolean" use="optional" default="false">
+					<xsd:annotation>
+						<xsd:documentation>If the value of this control is of type CharSequence or String, it will be trimmed on server side.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="requestParameterName" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>When rendering for the first time, the control may read its value from the given request parameter value</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="fieldName" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Validators, to display messages realted to this control will use this attribute if provided.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="dataType" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Defines the dataType for a control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="pattern" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Defines the pattern for formatting a value for a control. It is used only by some data types.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="processActionParameterName" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>The process action parameter name set by the control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_dataBoundControl" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Defines a data bound control. Data bound controls may extend this control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataControl">
+				<xsd:attribute name="sourceId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifies the source for the control. If not specified the first source in the source list will be used.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="dataId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Data id related to this control. If not specified the id attribute is considered as the dataId.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="dataRow" type="xsd:integer" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Row from the source data set that the value should be read/set. If not specified the data is read/set from the first row.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_validatorControl" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Defines a validator control. Validator controls may extend this control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:attribute name="enableClientSideValidation" type="xsd:boolean" use="optional" default="true">
+					<xsd:annotation>
+						<xsd:documentation>Enable client side validation for the given validator</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="controlToValidateId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						Control that needs to be validated.
+						If not specified the immediate parent control is considered as the target control to be validated.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="value" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If validation fails this is the value that will displayed in the location of the control. If neither value nor errorMessage attributes are specified, STR_DEFAULT_VALIDATOR_VALUE will be used for value.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="errorMessage" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If validation fails this is the error message that will sent to in the error summay control for display.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="validateOnlyIfVisible" type="xsd:boolean" use="optional" default="false">
+					<xsd:annotation>
+						<xsd:documentation>Validate this control olny if is visible, this control will be validated only client side.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="controlStrings">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="string">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="id" type="xsd:string" use="required" />
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="controlPermissions">
+		<xsd:annotation>
+			<xsd:documentation>Represents a collection of permissions that the current user must have to see/use this control. If the permissions are not granted, this control and its children are removed from the interface layout.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="permission" fixed="">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="id" type="xsd:string" use="required">
+								<xsd:annotation>
+									<xsd:documentation>A permission id specified in the service definition file.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="processActionIds">
+		<xsd:annotation>
+			<xsd:documentation>Represents a collection of process action Ids to which the data control will pass on its value.  If this tag is omitted all process actions will receive the control value.  If this tag is specified with no children, no process action will receive the control value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="processActionId" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A process action Id.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="onClientEvent">
+		<xsd:all maxOccurs="1">
+			<xsd:element name="validators" type="controlClientEventValidators" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Before executing the client side event these validators may be tested.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="addParameters" type="addControlParameters" minOccurs="0" />
+			<xsd:element name="pageId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "popupRunTimeInterface". If not specified the current page is used as default. A common value used here is "LumisBlankPage".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="interfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "popupRunTimeInterface". If specified, the popup window will instantiate this interface runtime and render it.  The interfaceId may be relative to the serviceId or a complete id (i.e. serviceid.interfaceid).  Interface ids may no contain the dot(.) character.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="method" type="actionMethod" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "renderAction".  Specifies how the request will be sent to the server.  Via "post" or "get".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="url" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "link".  Specifies an absolute or relative url.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="hyperLink" type="hyperLink" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "link".  Requests the portal for a url given an interfaceId.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="script" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "script".  The entire script that must be rendered client side.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="target" type="linkTarget" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the event type is "link".  The target of the link by default is the current window.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="clientSideUpdateControlId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Applies only when the type is renderAction.  Specifies what control must be updated.  No other control is changed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+		<xsd:attribute name="type" type="onClientEventType" />
+		<xsd:attribute name="processActionId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Used when the event type is "processAction".  Specifies the identifier of the process action that needs to be executed.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="renderActionId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Used when the event type is "renderAction".  Specifies the identifier of the render action that needs to be executed.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="popupRuntimeInterfaceIfNoLinkFound" type="xsd:boolean">
+			<xsd:annotation>
+				<xsd:documentation>Used when the event type is "link".  If the link is not found the event is processed exactly as type "popupRunTimeInterface".</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="openRuntimeInterfaceBehavior" type="openRuntimeInterfaceBehavior">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+					Used when the event type is "popupRunTimeInterface". Specifies the open runtime interface behavior.
+					<p>
+					The possible values are:
+					<ul>
+						<li><b>popup</b>: When this open behavior is set, the runtime interface will be shown in a browser popup. This choice keeps the parent interface active.</li>
+						<li><b>replace</b>: When this open behavior is set, the runtime interface will replace the parent interface with the runtime one. This choice does not keep the parent interface active.</li>
+						<li><b>lightbox</b>: When this open behavior is set, the runtime interface will be shown in a lightbox style element. This choice keeps the parent interface active.</li>
+					</ul>
+					</p>]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="keepParentActive" type="xsd:boolean" default="true">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+					Used when the event type is "popupRunTimeInterface". Specifies whether the parent interface must be kept active. If the attribute "openRuntimeInterfaceBehavior" is provided, 
+					this configuration does nothing, since the open runtime interface behavior is forced. When the attribute "openRuntimeInterfaceBehavior" is not set, then this configuration is
+					a hint to the portal to calculate the correct open interface behavior. If this configuration is not set, it is considered to be "true".
+					<p>
+					If the portal is going to calculate the correct behavior, it will read the configuration from the applied themes.<br />
+					The applied themes to be considered are the nearest themes applied from the current element to the portal's root channel.<br />
+					]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="popupSize" type="popupSize" default="normal">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+					Used when the event type is "popupRunTimeInterface". Specifies the size of the popup. 
+					]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="popupSize">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="normal" />
+			<xsd:enumeration value="max" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="controlClientEventValidators">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="validator" type="controlClientEventValidator" />
+		</xsd:sequence>
+		<xsd:attribute name="type" type="onClientEventType" />
+	</xsd:complexType>
+
+	<xsd:complexType name="linkTarget">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="name" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Name of the target window. This may also be one of the standard values like:_blank,_parent,_self,_top</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="windowFeatures" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="hyperLink">
+		<xsd:annotation>
+			<xsd:documentation>Requests the portal for a url given an interfaceId.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="target" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the target of the hyperlink.  This could be an interface instance, service instance or service.  If not specified the dest is considered the same as the interfaceId specified in the previous element</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="type" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="interface" />
+								<xsd:enumeration value="interfaceInstance" />
+								<xsd:enumeration value="serviceInstance" />
+								<xsd:enumeration value="service" />
+								<xsd:enumeration value="page" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="id" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>
+							Depending on the dest type this value is either an interfaceInstanceId, serviceInstanceId or serviceId.  If not specified, this value may be calculated automatically based on the current interface instance.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="interfaceId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Interface Id may be relative (without a dot) or absolute (serviceId.interfaceId).  This id is used to calculate the destination page of the hyperlink</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="controlClientEventValidator">
+		<xsd:sequence>
+			<xsd:element name="noItemSelectedMessage" type="xsd:string" default="STR_NO_ITEM_SELECTED" minOccurs="0" />
+			<xsd:element name="moreThanOneItemSelectedMessage" type="xsd:string" default="STR_MORE_THAN_ONE_ITEM_SELECTED" minOccurs="0" />
+		</xsd:sequence>
+		<xsd:attribute name="type" type="onClientEventValidatorType" />
+		<xsd:attribute name="controlId" type="xsd:string" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="onClientEventValidatorType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="selectedOne" />
+			<xsd:enumeration value="selectedMany" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="onClientEventType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="processAction" />
+			<xsd:enumeration value="renderAction" />
+			<xsd:enumeration value="popupRunTimeInterface" />
+			<xsd:enumeration value="closeWindow" />
+			<xsd:enumeration value="link" />
+			<xsd:enumeration value="script" />
+			<xsd:enumeration value="validate" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="caseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none" />
+			<xsd:enumeration value="upper" />
+			<xsd:enumeration value="lower" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="addControlParameters">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="parameter" type="controlParameter" />
+		</xsd:sequence>
+		<xsd:attribute name="type" type="onClientEventType" />
+	</xsd:complexType>
+
+	<xsd:complexType name="controlParameter">
+		<xsd:sequence>
+			<xsd:element name="value" minOccurs="0">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="type" type="controlParameterType"/>
+							<xsd:attribute name="controlId" type="xsd:string"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="controlParameterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="firstSelected" />
+			<xsd:enumeration value="getValue" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="actionMethod">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="get" />
+			<xsd:enumeration value="post" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="openRuntimeInterfaceBehavior">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="popup">
+				<xsd:annotation>
+					<xsd:documentation>
+						When this open behavior is set, the runtime interface will be shown in a browser popup. This choice keeps the parent interface active.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="replace">
+				<xsd:annotation>
+					<xsd:documentation>
+						When this open behavior is set, the runtime interface will replace the parent interface with the runtime one. This choice does not keep the parent interface active.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lightbox">
+				<xsd:annotation>
+					<xsd:documentation>
+						When this open behavior is set, the runtime interface will be shown in a lightbox style element. This choice keeps the parent interface active.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

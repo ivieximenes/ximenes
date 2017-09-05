@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>source</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?contentsource2.htm"; }
+  else { parent.quicksync('a8.4.5.1.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">source</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="contentdouidefinitionxml.htm">Previous</a>&nbsp;
+     <a href="contenthyperlinks.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Para utilizá-lo, na definição do <span style="font-style: italic;">source</span> coloque o atributo t<span style="font-style: italic;">ype=“contentTable”</span>. Isso significa que além da fonte de dados ser tabular, inclui também informações de metadados.</p>
+<p style="margin: 14px 0px 0px 0px;">Na definição de um <span style="font-style: italic;">ContentTableSource</span>, no elemento <span style="font-style: italic;">&lt;source&gt;</span>, pode-se colocar o elemento <span style="font-style: italic;">&lt;metaData&gt; </span>e dentro dele definir elementos referentes aos metadados que estarão disponíveis para esse <span style="font-style: italic;">source.</span></p>
+<p style="margin: 14px 0px 0px 0px;">Os metadados especificados definem a existência ou não de algumas funcionalidades de <span style="font-style: italic;">content</span> para esse <span style="font-style: italic;">source</span>, e podem criar implicitamente campos dentro do <span style="font-style: italic;">source. </span> </p>
+<p style="margin: 14px 0px 0px 0px;">Exemplo de trecho de código do <span style="font-style: italic;">douidefinition.xml</span> de um serviço <span style="font-style: italic;">content</span>, com <span style="font-style: italic;">source</span> do tipo “<span style="font-style: italic;">contentTable”</span> e metadados especificados para o <span style="font-style: italic;">source</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 8px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="645" style="width:645px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;service&nbsp;id="lumis.service.news"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;sources&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;id="default"&nbsp;type="contentTable"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&gt;lum_News&lt;/table&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;fields&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="id"&nbsp;display="false"&nbsp;name="STR_ID"&nbsp;dataType="string"&nbsp;isPrimaryKey="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="title"&nbsp;name="STR_TITLE"&nbsp;dataType="string"&nbsp;isPrimaryName="true"&nbsp;isSearchable="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="introduction"&nbsp;name="STR_INTRODUCTION"&nbsp;dataType="text"&nbsp;isIntroduction="true"&nbsp;isSearchable="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="introductionImage"&nbsp;name="STR_INTRODUCTION_IMAGE"&nbsp;isIntroductionImage="true"&nbsp;dataType="image"&nbsp;doLookup="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="content"&nbsp;name="STR_CONTENT"&nbsp;dataType="html"&nbsp;isSearchable="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="contentImage"&nbsp;name="STR_CONTENT_IMAGE"&nbsp;dataType="image"&nbsp;doLookup="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fields&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;metaData&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishToServiceInstances/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishToPrincipals/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishStartDate/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishEndDate/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;highlight/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;highlightEndDate/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;comments/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;versioning/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;multiLanguage/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;workflow/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;association/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/metaData&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/source&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/sources&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/service&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 14px 0px 0px 8px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="456" style="width:456px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="565" style="width:565px; border: solid 1px #000000;"><p>Como variante do tipo "<span style="font-style: italic;">table</span>" existe o tipo "<span style="font-style: italic;">contentTable</span>" específico para serviços do tipo "<span style="font-style: italic;">lum_content</span>". Portanto, não é permitido utilizar o <span style="font-style: italic;">source</span> do tipo <span style="font-style: italic;">"contentTable</span>" em serviços do tipo "<span style="font-style: italic;">lum_doui</span>". </p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

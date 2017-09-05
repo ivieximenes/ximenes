@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 6396 $ $Date: 2007-04-11 15:46:46 -0300 (Wed, 11 Apr 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_genericControl"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_genericControl"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_genericControl">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence minOccurs="0">
+					<xsd:any maxOccurs="unbounded" processContents="skip"/>
+				</xsd:sequence>
+				<xsd:attribute name="type" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Type of the control.  If type is specified and no className is specified, the type must be a registered control type.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:anyAttribute processContents="skip" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_simpleControl">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_simpleDataControl">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataControl" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_simpleDataBoundControl">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

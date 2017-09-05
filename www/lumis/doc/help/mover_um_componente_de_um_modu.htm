@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Mover um componente de um módulo para outro</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?mover_um_componente_de_um_modu.htm"; }
+  else { parent.quicksync('a8.11.1.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Mover um componente de um módulo para outro</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="desenv_componente_substituicao_de_componentes.htm">Previous</a>&nbsp;
+     <a href="desenv_componente_exemplos.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Para que um componente possa ser movido de um módulo <span style="font-style: italic;">A </span>para um módulo <span style="font-style: italic;">B </span>sem que o componente seja desinstalado e novamente instalado, é preciso que seja realizado um deploy de um <a href="desenv_pacotes.htm">pacote</a> contendo ambos os módulos <span style="font-style: italic;">A </span>e <span style="font-style: italic;">B</span>, com o dado componente presente somente em <span style="font-style: italic;">B</span>.</p>
+<p>&nbsp;</p>
+<p>Ou seja, se em um dado momento a instalação existente contém um módulo <span style="font-style: italic;">A</span>, contendo um componente <span style="font-style: italic;">K </span>e deseja-se que o componente <span style="font-style: italic;">K </span>passe a pertencer a um módulo <span style="font-style: italic;">B</span>, deve-se realizar um deploy de um pacote contendo tanto <span style="font-style: italic;">A </span>quanto <span style="font-style: italic;">B </span>sendo que o componente <span style="font-style: italic;">K </span>deve estar presente somente em <span style="font-style: italic;">B</span>.</p>
+<p>&nbsp;</p>
+<p>Para evitar perda de dados, deve-se realizar esse procedimento ao invés de realizar dois deploys, um removendo o componente do módulo <span style="font-style: italic;">A </span>e outro deploy adicionando o componente ao módulo <span style="font-style: italic;">B</span>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

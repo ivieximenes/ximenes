@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"  xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service>
+		<sources>
+			<source id="configuration">
+				<dataProviderClassName>lumis.service.doui.customproperties.ServiceInstanceCustomPropertiesDataProvider</dataProviderClassName>
+				<fields>
+					<field id="src" name="STR_SRC" dataType="string"/>
+				</fields>
+			</source>
+		</sources>
+	</service>
+	
+	<interfaces>
+		<interface id="configuration">
+			<sources>
+				<source id="configuration" readData="always"/>
+			</sources>
+			<processActions>
+				<processAction id="commit" className="lumis.service.doui.customproperties.ServiceInstanceCustomPropertiesProcessActionHandler">
+					<customProperties>
+						<customProperty name="src" />
+					</customProperties>
+					<response type="doui_standardPopup"/>
+				</processAction>
+			</processActions>
+		</interface>
+	</interfaces>
+	
+	
+</doui:douiDefinition>

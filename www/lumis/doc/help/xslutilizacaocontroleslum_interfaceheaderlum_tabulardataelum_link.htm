@@ -1,0 +1,247 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Utilização dos controles lum_interfaceHeader, lum_tabularData e lum_link</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?xslutilizacaocontroleslum_interfaceheaderlum_tabulardataelum_link.htm"; }
+  else { parent.quicksync('a8.5.3.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Utilização dos controles lum_interfaceHeader, lum_tabularData e lum_link</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="xslutilizacaocontrolelum_navigationlist.htm">Previous</a>&nbsp;
+     <a href="xslutilizacaocontrolesdainterfacelista.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Nesta seção serão tratados os controles mais genéricos (<span style="font-style: italic;">lum_interfaceHeader, lum_tabularData e lum_link</span>), que aparecem em praticamente todas as interfaces <span style="font-style: italic;">Lista Rápida</span> e <span style="font-style: italic;">Lista</span> dos serviços que as possuem. Para exemplificar, será utilizada a interface <span style="font-style: italic;">Lista Rápida</span> do serviço de <span style="font-style: italic;">Notícias</span>, cujo <span style="font-style: italic;">XML</span> exibe todos os 3 controles citados acima.</p>
+<p style="margin: 8px 0px 0px 0px;">Para obter este <span style="font-style: italic;">XML</span>, instancie o serviço de Notícias e cadastre alguns conteúdos através da interface administrativa do serviço. Verifique o <span style="font-style: italic;">XML</span> exibido pela interface <span style="font-style: italic;">Lista Rápida</span>, no <span style="font-style: italic;">right-click</span> da interface, opção <span style="font-style: italic;">Estilo</span>, aba <span style="font-style: italic;">XML</span> do editor. (Abaixo estão somente os trechos do XML que serão customizados):<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;renderData&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_form"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;control&nbsp;type="lum_interfaceHeader"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lista&nbsp;rápida&nbsp;(Notícias)&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_tabularData"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;row&nbsp;href="main.jsp"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lumis&nbsp;expande&nbsp;operação&nbsp;no&nbsp;Brasil&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;06/09/06&nbsp;11:16&lt;/value&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;img_logoLumis.gif&lt;/name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;href&gt;data/files/img_logoLumis.gif&lt;/href&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;imageLegend&gt;Logo&nbsp;da&nbsp;Lumis&lt;/imageLegend&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introduction&gt;A&nbsp;Lumis&nbsp;(www.lumis.com.br),&nbsp;desenvolvedora&nbsp;da&nbsp;plataforma&nbsp;de&nbsp;software&nbsp;para&nbsp;portais&nbsp;corporativos,&nbsp;Lumis&nbsp;Portal&nbsp;Suíte,&nbsp;estende&nbsp;operações&nbsp;para&nbsp;o&nbsp;Sul&nbsp;do&nbsp;Brasil,&nbsp;com&nbsp;uma&nbsp;unidade&nbsp;de&nbsp;negócios&nbsp;recém-instalada&nbsp;em&nbsp;Curitiba.&lt;/introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/row&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;row&nbsp;href="main.jsp"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Magazine&nbsp;Luiza&nbsp;implanta&nbsp;nova&nbsp;plataforma&nbsp;de&nbsp;intranet&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;06/09/06&nbsp;11:12&lt;/value&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;img_logoLumis.gif&lt;/name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;href&gt;data/files/img_logoLumis.gif&lt;/href&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;imageLegend&gt;Logo&nbsp;da&nbsp;Lumis&lt;/imageLegend&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introduction&gt;Depois&nbsp;de&nbsp;utilizar,&nbsp;por&nbsp;um&nbsp;ano,&nbsp;solução&nbsp;própria&nbsp;para&nbsp;gerenciar&nbsp;o&nbsp;Portal&nbsp;Luiza,&nbsp;a&nbsp;rede&nbsp;de&nbsp;varejo&nbsp;migra&nbsp;para&nbsp;ferramenta&nbsp;da&nbsp;Lumis.&nbsp;A&nbsp;intranet&nbsp;atende&nbsp;a&nbsp;10&nbsp;mil&nbsp;funcionários.&lt;/introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/row&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_link"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;href&gt;main.jsp&lt;/href&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;mais&lt;/text&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/renderData&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>O controle de <span style="font-style: italic; font-weight: bold;">lum_interfaceHeader</span> traz apenas o título da interface, o que pode ser modificado também através da opção Propriedades no <span style="font-style: italic;">right-click</span> da interface.</p>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span> O controle de <span style="font-style: italic; font-weight: bold;">lum_tabularData </span>traz todo o conteúdo cadastrado na interface administrativa do serviço. Se assemelha ao controle <span style="font-style: italic;">lum_navigationList</span>, porém ao invés de receber apenas <span style="font-style: italic;">links</span>, no serviço de <span style="font-style: italic;">Notícias</span>, o <span style="font-style: italic;">lum_tabularData</span> estará recebendo no <span style="font-style: italic;">XML</span> os campos título e introdução de cada notícia cadastrada, além da data e imagem de introdução;</p>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span> O controle de <span style="font-style: italic; font-weight: bold;">lum_link</span> traz o link para a interface <span style="font-style: italic;">Lista</span> do mesmo serviço. Como a interface <span style="font-style: italic;">Lista Rápida</span>, que por padrão traz somente as últimas notícias cadastradas, o <span style="font-style: italic;">XML</span> traz automaticamente esse link para a interface <span style="font-style: italic;">Lista</span>, que exibe todas as notícias cadastradas.</p>
+<p style="margin: 8px 0px 0px 0px;">Com essas informações, pode-se codificar um <span style="font-style: italic;">XSL</span> a partir do zero, como no exemplo de <span style="font-style: italic;">lum_navigationList</span>. O objetivo é trazer os controles na seguinte ordem:</p>
+<p style="margin: 8px 0px 0px 0px;">1. Cabeçalho (<span style="font-style: italic;">lum_interfaceHeader</span>)</p>
+<p style="margin: 8px 0px 0px 0px;">2. Últimas notícias cadastradas (<span style="font-style: italic;">lum_tabularData</span>)</p>
+<p style="margin: 8px 0px 0px 0px;">3. <span style="font-style: italic;">Link</span> para todas as notícias cadastradas exibidas na interface <span style="font-style: italic;">Lista</span> (<span style="font-style: italic;">lum_link</span>)</p>
+<p style="margin: 8px 0px 0px 0px;">Para iniciar a customização dos controles da interface <span style="font-style: italic;">Lista Rápida</span>, crie<span style="font-style: italic;"> </span>um novo <span style="font-style: italic;">XSL</span> em um diretório para customização (ex: <span style="font-style: italic;">lumisdata/def/yyyy/service/xxxx/style/ListaRapida.xsl</span>, onde <span style="font-style: italic;">YYYY </span>é o diretório do projeto e <span style="font-style: italic;">XXXX </span>é o diretório do serviço<span style="font-style: italic;"> </span>) e inclua o seguinte código <span style="font-style: italic;">XSL</span>:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:stylesheet&nbsp;xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&nbsp;version="1.0"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:import&nbsp;href="../../../../lumis/doui/style/DouiControls.xsl"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:output&nbsp;omit-xml-declaration&nbsp;=&nbsp;"yes"&nbsp;method="html"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:template&nbsp;match="/"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">//control[@type='lum_interfaceHeader']</span><span class="f_CodeExample" style="font-size: 10pt;">/data/title"&nbsp;/&gt;&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:for-each&nbsp;select="</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">//control[@type='lum_tabularData']</span><span class="f_CodeExample" style="font-size: 10pt;">/data/row"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="title"&nbsp;/&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;xsl:value-of&nbsp;select="publishStartDate/value"&nbsp;/&gt;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;disable-output-escaping="yes"&nbsp;select="introduction"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;align="right"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;#187;&nbsp;&lt;a&nbsp;href="{</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">//control[@type='lum_link']</span><span class="f_CodeExample" style="font-size: 10pt;">/data/href}"&gt;&lt;xsl:value-of&nbsp;select="</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">//control[@type='lum_link']</span><span class="f_CodeExample" style="font-size: 10pt;">/data/text"&nbsp;/&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>O controle <span style="font-style: italic;">lum_link</span> é chamado mais de uma vez porque ele é usado em dois campos, um para montar o <span style="font-style: italic;">href</span> do <span style="font-style: italic;">link</span> e outro para inserir o texto “mais” do <span style="font-style: italic;">link</span>. No caso do <span style="font-style: italic;">lum_tabularData</span>, como está sendo chamado para formar o <span style="font-style: italic;">loop</span> &lt;xsl:for-each /&gt;, não é necessário chamá-lo mais de uma vez, já que todos os campos dentro do &lt;xsl:for-each /&gt; já partem da hierarquia <span style="font-family: 'Courier New';">//control[@type='lum_tabularData']/data/row</span> ;</p>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span> O campo Introdução possui o atributo <span style="font-style: italic;">disable-output-escaping=”yes”</span>. Este atributo é necessário para todos os &lt;xsl:value-of /&gt; que chamem campos que possuem cadastro <span style="font-style: italic;">HTML</span>. Isso evita que, na visualização final, um cadastro do tipo “&lt;strong&gt;Esse texto em negrito&lt;/strong&gt;” chegue exatamente como “&lt;strong&gt;Esse texto em negrito&lt;/strong&gt;”, ao invés de “<span style="font-weight: bold;">Esse texto em negrito</span>”;</p>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>O caracter <span style="font-style: italic;">&amp;#187;</span> serve para inserir um caractere ( » ) antes do texto do <span style="font-style: italic;">link</span>. No <span style="font-style: italic;">XSL</span> só pode ser usada formatação do tipo (&amp;#<span style="font-style: italic;">XXXX</span>;) para inserir caracteres especiais, onde <span style="font-style: italic;">XXXX</span> é sempre um valor numérico específico para cada caractere. (Mais informações sobre caracteres especiais podem ser encontradas em: <a href="http://www.cssplay.co.uk/menu/code.html" target="_blank" class="weblink">http://www.cssplay.co.uk/menu/code.html</a>)</p>
+<p style="text-indent: -12px; margin: 8px 0px 0px 12px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span> Os <span style="font-family: 'Courier New';">&lt;div&gt;</span> vazios no código serão utilizados mais a frente para facilitar a implementação do <span style="font-style: italic;">layout</span> por <span style="font-style: italic;">CSS</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Portanto, com o <span style="font-style: italic;">XSL</span> acima tem-se o seguinte <span style="font-style: italic;">layout</span> para a interface <span style="font-style: italic;">Lista Rápida</span>:</p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;"><img src="xsl009.jpg" width="527" height="260" border="0" alt="xsl009" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 8px 0px 0px 0px;">Continuando o XSL, para incluir imagens de introdução, deve-se fazer um teste para saber se existe uma imagem cadastrada, pois casa não exista, a <span style="font-style: italic;">tag</span> &lt;img&gt; não pode estar vazia no código. O mesmo é necessário para a legenda da imagem. Esta apenas será inserida caso exista legenda cadastrada. Segue o restante do código <span style="font-style: italic;">XSL</span>, agora para exibir imagem e legenda. O código deve estar depois do <span style="font-style: italic;">XSL</span> da data de publicação e antes do <span style="font-style: italic;">XSL</span> da introdução:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="height:266px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:for-eachselect="//control[@type='lum_tabularData']/data/row"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="title"&nbsp;/&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;xsl:value-of&nbsp;select="publishStartDate/value"&nbsp;/&gt;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&lt;xsl:if&nbsp;test="introductionImage/name&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src="{introductionImage/href}"&nbsp;border="0"&nbsp;alt=""&nbsp;style="float:left;margin:0&nbsp;6px&nbsp;6px&nbsp;0;"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/imageLegend&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="alt"&gt;&lt;xsl:value-of&nbsp;select="introductionImage/imageLegend"&nbsp;/&gt;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;disable-output-escaping="yes"&nbsp;select="introduction"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:for-each&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Após o término da codificação <span style="font-style: italic;">XSL</span> para a interface <span style="font-style: italic;">Lista Rápida</span>, pode-se customizar seu <span style="font-style: italic;">layout</span> adicionando classes <span style="font-style: italic;">CSS</span> aos &lt;div&gt; vazios.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;div&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">id="listaRapida"</span><span class="f_CodeExample" style="font-size: 10pt;">&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">class="tit"</span><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&gt;&lt;strong&gt;&lt;xsl:value-ofselect="//control[@type='lum_interfaceHeader']/data/title"&nbsp;/&gt;&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:for-eachselect="//control[@type='lum_tabularData']/data/row"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;div&nbsp;class="rowtit"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="title"&nbsp;/&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;xsl:value-of&nbsp;select="publishStartDate/value"&nbsp;/&gt;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/name&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src="{introductionImage/href}"&nbsp;border="0"&nbsp;alt=""&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">class="dataImage"</span><span class="f_CodeExample" style="font-size: 10pt;">&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/imageLegend&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="alt"&gt;&lt;xsl:value-of&nbsp;select="introductionImage/imageLegend"&nbsp;/&gt;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;disable-output-escaping="yes"&nbsp;select="introduction"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&nbsp;align="right"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;#187;&nbsp;&lt;ahref="{//control[@type=&nbsp;'lum_link']/data/href}"&gt;&lt;xsl:value-ofselect="//control[@type='lum_link']/data/text"&nbsp;/&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/div&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">As classes <span style="font-style: italic;">CSS</span> podem estar localizadas em <span style="font-style: italic;">tags</span> <span style="font-family: 'Courier New';">&lt;style/&gt;</span> antes de um <span style="font-family: 'Courier New';">&lt;/xsl:template&gt;</span> de um <span style="font-family: 'Courier New';">&lt;xsl:template match&gt;</span>. As classes <span style="font-style: italic;">CSS</span> também podem estar em um arquivo externo, sem as <span style="font-family: 'Courier New';">&lt;style/&gt;</span>. Este arquivo deverá ser aplicado a uma página ou canal, através de suas propriedades.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;padding:8px;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;border:1px&nbsp;solid&nbsp;#ccc;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;.tit&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;font-size:110%;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;text-transform:uppercase;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;padding-bottom:8px;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;.rowtit&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;padding-bottom:5px;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;img.dataImage&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;float:left;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;margin:0&nbsp;8px&nbsp;12px&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;border-left:2px&nbsp;solid&nbsp;#ccc;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;br&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;line-height:70%;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">#listaRapida&nbsp;a&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;color:#003399;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Visualização da interface <span style="font-style: italic;">Lista Rápida</span> após aplicação do <span style="font-style: italic;">CSS</span>:</p>
+<p style="text-align: center; margin: 8px 0px 8px 0px;"><img src="xsl011.jpg" width="484" height="248" border="0" alt="xsl011" style="margin:0 auto;margin:0px;"> </p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Propriedades de Sistema</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?configpropsistema.htm"; }
+  else { parent.quicksync('a3.9.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Propriedades de Sistema</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="searchconfig.htm">Previous</a>&nbsp;
+     <a href="visoes_do_portal.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Há configurações do <span style="font-style: italic;">Lumis Portal</span> que podem ser definidas através de propriedades de sistema do <span style="font-style: italic;">JVM</span>. Abaixo são apresentadas as configurações disponíveis.</p>
+<p>&nbsp;</p>
+<p><a name="lumisdatapath"></a><span style="font-weight: bold;">lumisDataPath</span></p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">lumisDataPath</span>, além de poder ser definido no <span style="font-style: italic;">web.xml</span>, conforme ilustrado nos <a href="passosinstalacao.htm">Passos para a instalação</a>, ele também pode ser definido através da propriedade de sistema <span style="font-style: italic;">lumis.portal.lumisDataPath</span>. Caso o <span style="font-style: italic;">lumisDataPath</span> esteja definido através desta propriedade de sistema, sua definição no <span style="font-style: italic;">web.xml</span> será ignorada.</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;java&nbsp;(...)&nbsp;-Dlumis.portal.lumisDataPath=C:/caminho/para/lumisdata&nbsp;(...)</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Definindo o <span style="font-style: italic;">lumisDataPath</span> pelo <span style="font-style: italic;">web.xml</span> e não pela propriedade de sistema <span style="font-style: italic;">lumis.portal.lumisDataPath</span>, esta última será criada automaticamente durante a inicialização do portal.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a name="developmentmode"></a><span style="font-weight: bold;">Modo de Desenvolvimento</span></p>
+<p>&nbsp;</p>
+<p>O modo de desenvolvimento pode ser habilitado atribuindo o valor <span style="font-style: italic;">true</span> para a propriedade de sistema <span style="font-style: italic;">lumis.portal.developmentMode</span>. Quando o <span style="font-style: italic;">Lumis Portal</span> é executado em modo de desenvolvimento, alguns comportamentos são ajustados para ajudar na produtividade em um ambiente de desenvolvimento. Não é recomendado habilitar este modo em ambientes de produção.</p>
+<p>&nbsp;</p>
+<p>Comportamentos afetados pelo modo de desenvolvimento:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Caso exista outro processo utilizando os dados de monitoramento, o portal normalmente não iniciaria, indicando erro. Com o modo de desenvolvimento habilitado, o portal inicia com a coleta de dados de monitoramento desabilitada.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Com o modo de desenvolvimento habilitado, alguns elementos e atributos que normalmente não apareceriam, estarão presentes nos <span style="font-style: italic;">HTMLs</span> gerados pelo portal. Isto visa facilitar depuração ou entendimento do HTML gerado, por exemplo, quando a página possui um <a href="layoutfile.htm">Layout File</a>.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>A configuração padrão de <a href="layoutfile.htm">Layout File</a>, normalmente não verifica se o arquivo <span style="font-style: italic;">HTML</span> foi alterado, sendo necessário reiniciar o portal para sua alteração ser aplicada; mas no modo de desenvolvimento o padrão é verificar se ele foi alterado a cada 1 segundo. Esse comportamento pode ser alterado no <a href="lumisportalconfig.htm#layoutfile">LumisPortalConfig</a>.</td></tr></table></div><p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;java&nbsp;(...)&nbsp;-Dlumis.portal.developmentMode=true&nbsp;(...)</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

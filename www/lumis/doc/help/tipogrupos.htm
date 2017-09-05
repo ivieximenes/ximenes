@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Tipo de Grupos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?tipogrupos.htm"; }
+  else { parent.quicksync('a7.3.1.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Tipo de Grupos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="grupos.htm">Previous</a>&nbsp;
+     <a href="gruposdinamicos.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Lumis Portal</span> permite que novos tipo de grupos (diferentes do padrão) sejam criados através de customização de classes, adicionados ao portal através do gerenciador de tipo de grupos e configurados para que <a href="gruposdinamicos.htm">grupos dinâmicos</a> possam ser criados.<br>
+&nbsp;</p>
+<p><img src="tipogrupo002.jpg" width="900" height="347" border="0" alt="TipoGrupo002"></p>
+<p>&nbsp;</p>
+<p>O tipo de grupo padrão está implementado na classe <span style="font-style: italic;">lumis.portal.group.standardgrouptype.</span> Esse tipo é simples e não possui nenhum critério de adição de usuários a grupos.</p>
+<p>&nbsp;</p>
+<p>Os grupos padrão do <span style="font-style: italic;">Lumis</span>. Os grupos a serem adicionados, exceto os grupos locais também podem ser desse tipo.</p>
+<p>&nbsp;</p>
+<p>Além do tipo padrão <span style="font-style: italic;">lumis.portal.group.standardgrouptype</span>, o <span style="font-style: italic;">Lumis</span> vem com a implementação do tipo <span style="font-style: italic;">lumis.portal.group.databaseviewmembership.DatabaseViewGroupMembershipProvider </span> que permite que os membros de um grupo sejam calculados dinamicamente a partir de dados obtidos em uma <span style="font-style: italic;">view</span> ou uma tabela do banco de dados.</p>
+<p>&nbsp;</p>
+<p>Porém, para utilizar esse tipo no cadastro de um grupo, ele deve ser devidamente adicionado no portal, através da administração de tipos de grupos.</p>
+<p>&nbsp;</p>
+<p>Para adicionar um tipo, deve-se acionar "Adicionar" e preencher as seguintes informações:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="tipogrupo001.jpg" width="900" height="603" border="0" alt="TipoGrupo001" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">ID:</span> campo obrigatório que deve ser preenchido com um identificador para o tipo de grupo a ser cadastrado;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome:</span> Campo obrigatório que deve ser preenchido com um nome sugestivo para o tipo de grupo, que será exibido no cadastro de um grupo;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Descrição:</span> campo facultativo que pode ser preenchido com uma breve descrição sobre o que o tipo a ser cadastrado permite;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic; font-weight: bold;">Group Membership Provider</span><span style="font-weight: bold;">:</span> Campo obrigatório que deve ser preenchido com a classe customizada que deve conter a implementação da interface <span style="font-style: italic;"><a href="..\api\lumis\portal\group\IGroupMembershipProvider.html" target="_blank" class="weblink">IGroupMembershipProvider</a></span> de <span style="font-style: italic;">lumis.portal.group</span>. </td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Configuração de Tipos de Grupos</span></p>
+<p>&nbsp;</p>
+<p>Após o cadastro de um tipo de grupo, é necessário configurá-lo. Para isso, basta acionar o ícone ao lado do identificador do tipo de grupo e preencher as seguintes informações:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="tipogrupo004.jpg" width="909" height="291" border="0" alt="TipoGrupo004" style="margin:0 auto;margin:0px;"></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Identificador da conexão: </span>deve ser preenchido com o arquivo <span style="font-style: italic;">XML</span> do <span style="font-style: italic;">connectionID</span> do <span style="font-style: italic;">source</span> se houver conexão externa ao banco de dados. Caso contrário, pode ser deixado em branco que será assumido a base padrão do portal. Para maiores informações sobre conexão externa consultar a seção sobre <span style="font-style: italic;"><a href="douisources2.htm">sources</a></span>.<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome da </span><span style="font-style: italic; font-weight: bold;">view</span><span style="font-weight: bold;">: </span>campo obrigatório que deve ser preenchido com o nome da view criada que contém os dados dos membros e grupos. Caso não seja utilizada alguma <span style="font-style: italic;">view</span>, pode-se utilizar as tabelas <span style="font-style: italic;">lum_principal, lum_group</span> e <span style="font-style: italic;">lum_user;</span><br>
+<span style="font-style: italic;">&nbsp;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Idade máxima do </span><span style="font-style: italic; font-weight: bold;">cache</span><span style="font-weight: bold;"> (segundos): </span>Campo obrigatório que deve ser preenchido com o tempo, em segundos, que membros e grupos ficarão em <span style="font-style: italic;">cache </span>de memória quando o portal precisar realizar uma consulta. Ex: verificação de permissão.</td></tr></table></div><p style="text-indent: -13px; margin: 0px 0px 0px 13px;"> &nbsp; <br>
+Deve haver uma compensação entre otimização <span style="font-style: italic;">versus</span> atualização. Ou seja, um tempo maior evita que a <span style="font-style: italic;">view</span> seja acessada, e evita que as informações sejam recalculadas, uma vez que estão em <span style="font-style: italic;">cache</span>. Por sua vez, o tempo que uma alteração na <span style="font-style: italic;">view</span> leva para ser refletida no portal, é de acordo com a idade máxima do cache, ou seja, o tempo que ele leva para ser expirado.</p>
+<p style="text-indent: -13px; margin: 0px 0px 0px 13px;">&nbsp;</p>
+<p style="text-indent: -13px; margin: 0px 0px 0px 13px;">Ao clicar em "Próximo", mais informações devem ser preenchidas:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="tipogrupo005.jpg" width="911" height="354" border="0" alt="TipoGrupo005" style="margin:0 auto;margin:0px;"></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Coluna com </span><span style="font-style: italic; font-weight: bold;">Principal shortId</span><span style="font-weight: bold;">: </span>Deve-se escolher qual será o identificador único do membro para ser exibido na coluna "Apelido" da tela membros do grupo dinâmico. <span style="font-style: italic;">ShortID</span> é uma propriedade do <span style="font-style: italic;">Principal,</span><span style="font-style: italic; font-weight: bold;"> </span>e é<span style="font-style: italic;"> </span>um identificador único, que não é o <span style="font-style: italic;">ID</span> propriamente dito, que representa um usuário ou grupo. Observe que <span style="font-style: italic;">shortID</span> de usuários é o <span style="font-style: italic;">login </span>e de grupos é apelido. Não pode haver mais de um usuário com o mesmo <span style="font-style: italic;">login</span>, da mesma forma não pode haver mais de um grupo com o mesmo apelido;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Campos para seleção: </span>Nesta etapa devem ser preenchidos o(s) campo(s) que farão parte da parametrização dos filtros de seleção de membros de um grupo dinâmico.</td></tr></table></div><p>&nbsp;</p>
+<p>Clicar em "Finalizar" para que as configurações do tipo de grupo adicionado no gerenciador de tipos sejam concluídas.</p>
+<p>&nbsp;</p>
+<p>O tipo de grupo cadastrado e suas configurações será utilizado no cadastro de grupos no <a href="gerenciadorgrupos.htm">gerenciador de grupos</a>, a adição de membros a estes grupos ocorrerá dinamicamente.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

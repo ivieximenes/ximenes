@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Elasticsearch</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?elasticsearch.htm"; }
+  else { parent.quicksync('a8.6.3.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Elasticsearch</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="bigdata.htm">Previous</a>&nbsp;
+     <a href="tiporelatorio.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Highlighttitle"><span class="f_Highlighttitle">Instalando o Elasticsearch</span></p>
+<p>&nbsp;</p>
+<p>Por padrão o <span style="font-style: italic;">Elasticsearch</span> é embutido no mesmo JVM do Lumis Portal, no entanto não é recomendado utilizar a versão embutida em ambientes de produção. Por esse motivo, é recomendado instalar o <span style="font-style: italic;">Elasticsearch</span> a parte.</p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">Elasticsearch</span> está disponivel para download no site <a href="https://www.elastic.co/downloads/elasticsearch" target="_blank" class="weblink">https://www.elastic.co/downloads/elasticsearch</a>. Deve ser utilizada a versão de <span style="font-style: italic;">Elasticsearch</span> suportada pelo <span style="font-style: italic;">Lumis Portal</span> de acordo com os <a href="requisitossistema.htm">requisitos de sistema</a>. Para informações de configuração, veja o <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html" target="_blank" class="weblink">manual do Elasticsearch</a>.</p>
+<p>&nbsp;</p>
+<p>É importante observar que o <span style="font-style: italic;">Elasticsearch</span> cria um cluster com outras instancias que tenham o mesmo valor na configuração <span style="font-style: italic;">clusterName</span>. É recomendado sempre alterar o valor do <span style="font-style: italic;">clusterName </span>ao invés de deixar o valor padrão para evitar que outro <span style="font-style: italic;">Elasticsearch </span>executado na mesma rede possa formar um <span style="font-style: italic;">cluster</span> indesejado.</p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">Elasticsearch</span> por padrão disponibiliza acesso pelas portas 9200 e 9300 e não há controle de acesso. Recomenda-se permitir os acessos às portas expostas pelo <span style="font-style: italic;">Elasticsearch</span> apenas ao <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p>&nbsp;</p>
+<p>O JVM utilizado para executar o <span style="font-style: italic;">Elasticsearch</span> deve ser exatamente a mesma versão (incluindo número de <span style="font-style: italic;">update</span>) da que está sendo utilizada para executar o <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p class="p_Highlighttitle"><span class="f_Highlighttitle">Instalando o plugin ICU Analysis for Elasticsearch</span></p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">Lumis Portal</span> requer que o <span style="font-style: italic;">Elasticsearch</span> tenha o plugin <span style="font-style: italic;"><a href="https://github.com/elastic/elasticsearch-analysis-icu/" target="_blank" class="weblink">ICU Analysis for Elasticsearch</a></span> instalado em todos os nós de <span style="font-style: italic;">Elasticsearch</span> que serão utilizados.</p>
+<p>&nbsp;</p>
+<p>Para instalar este <span style="font-style: italic;">plugin</span>, em cada nó do <span style="font-style: italic;">Elasticsearch</span>, copie a pasta <span class="f_CodeExample">&lt;lumisdata&gt;/data/elasticsearch/plugin</span> para <span class="f_CodeExample">&lt;instalação do elasticsearch&gt;/plugin</span> (ou diretório de <span style="font-style: italic;">plugin</span> configurado no <span style="font-style: italic;">Elasticsearch</span>, caso esta configuração tenha sido modificada). Ou se preferir, pode seguir as instruções de instalação de <span style="font-style: italic;">plugin</span> disponível no <a href="https://github.com/elastic/elasticsearch-analysis-icu/" target="_blank" class="weblink">manual do mesmo</a>, atentando a utilizar a versão do <span style="font-style: italic;">plugin</span> correspondente à versão do <span style="font-style: italic;">Elasticsearch</span> sendo utilizada.</p>
+<p class="p_Highlighttitle"><span class="f_Highlighttitle">Configurações</span></p>
+<p class="p_Highlighttitle">Para configurar qual repositório de <span style="font-style: italic;">Big Data</span> o <span style="font-style: italic;">Lumis Portal</span> utiliza, acesse <a href="configuracoes_do_ambiente.htm">Configurações &gt; Configurações do Portal &gt; Configurações do Ambiente</a>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

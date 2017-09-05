@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16603 $ $Date: 2014-11-11 19:36:27 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:annotation>
+		<xsd:documentation>This is the XML Schema for the database definition. The database definition is used to create then into the various databases servers.</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:complexType name="field">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This is the description for the tag field.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="constraint" type="constraint" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="databaseResourceName" use="required">
+			<xsd:annotation>
+				<xsd:documentation>The name of the field.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="dataTypes" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The data type of the field.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="size" type="xsd:integer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The length of the data type.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="fixed" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Indicate if the data type is fixed-length (e.g. CHAR) or variable-length (e.g. VARCHAR).</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="dbType" type="dbType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Use this attribute if the field is for a specific database.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isNotNull" type="nullDefinition" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specify if the field's value must be null.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="unicode" type="xsd:boolean" use="optional" default="true">
+			<xsd:annotation>
+				<xsd:documentation>Specifies if a string field uses a unicode character set.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="collate" type="collateTypes" use="optional" default="default">
+			<xsd:annotation>
+				<xsd:documentation>Specifies the collation to be set for a field.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="collateTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="default"/>
+			<xsd:enumeration value="binary"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="constraint">
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="fields" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="field" type="field"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="references" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="fields">
+							<xsd:complexType>
+								<xsd:sequence maxOccurs="unbounded">
+									<xsd:element name="field" type="field"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute use="required" name="table" type="databaseResourceName"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="databaseResourceName" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Specify the name of the constraint.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="table" type="databaseResourceName" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specify the name of the table it is affected.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="constraintType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specify the type of the constraint.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="defaultValue" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specify the default value of the constraint.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isClustered" type="nullDefinition" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specify if the constraint is clustered or not.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="onDeleteCascade" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="onUpdateCascade" type="xsd:boolean" use="optional" fixed="true">
+			<xsd:annotation>
+				<xsd:documentation></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="index">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="fields" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="field" type="field"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="databaseResourceName" use="required"/>
+		<xsd:attribute name="table" type="databaseResourceName" use="required"/>
+		<xsd:attribute name="unique" type="xsd:boolean"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="table">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="fields" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="field" type="field"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="constraints" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="constraint" type="constraint"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="databaseResourceName" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="view">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="query" type="query" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element> 
+		</xsd:sequence>
+		<xsd:attribute name="name" type="databaseResourceName" use="required">
+			<xsd:annotation>
+				<xsd:documentation></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="sqlQuery">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="query" type="query" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="query">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="dbType" type="dbType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Use this attribute if the query is for a specific database.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:element name="databaseDefinition">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="table" type="table"/>
+				</xsd:sequence>
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="view" type="view"/>
+				</xsd:sequence>
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="constraint" type="constraint"/>
+				</xsd:sequence>
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="index" type="index"/>
+				</xsd:sequence>
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="sqlQuery" type="sqlQuery"/>
+				</xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+
+	<xsd:simpleType name="dataTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="guid"/>
+			<xsd:enumeration value="guidOrId"/>
+			<xsd:enumeration value="string"/>
+			<xsd:enumeration value="binary"/>
+			<xsd:enumeration value="integer"/>
+			<xsd:enumeration value="long"/>
+			<xsd:enumeration value="number"/>
+			<xsd:enumeration value="double"/>
+			<xsd:enumeration value="date"/>
+			<xsd:enumeration value="time"/>
+			<xsd:enumeration value="dateTime"/>
+			<xsd:enumeration value="html"/>
+			<xsd:enumeration value="text"/>
+			<xsd:enumeration value="boolean"/>
+			<xsd:enumeration value="lumisPrincipal"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="nullDefinition">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="false"/>
+			<xsd:enumeration value="true"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="constraintType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="primaryKey"/>
+			<xsd:enumeration value="foreignKey"/>
+			<xsd:enumeration value="unique"/>
+		</xsd:restriction>
+	</xsd:simpleType>		
+
+	<xsd:simpleType name="databaseResourceName">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-zA-Z0-9_]{1,30}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="dbType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="sqlserver"/>
+			<xsd:enumeration value="oracle"/>
+			<xsd:enumeration value="mysql"/>
+		</xsd:restriction>
+	</xsd:simpleType>		
+		
+</xsd:schema>

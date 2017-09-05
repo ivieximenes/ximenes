@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Revision: 13992 $ $Date: 2012-01-31 15:06:47 -0200 (Tue, 31 Jan 2012) $ -->
+<strings>
+	<string id="STR_SERVICE_NAME">Banners</string>
+	<string id="STR_SERVICE_DESCRIPTION">Allows to manage and to display banners.</string>
+	<string id="STR_ADD_CATEGORY">Add Category</string>
+	<string id="STR_ADMINISTRATION">Administration</string>
+	<string id="STR_ADMINISTRATION_CATEGORY">Category Administration</string>
+	<string id="STR_BANNER">Banner</string>
+	<string id="STR_BANNER_PROPERTIES">Banner Properties</string>
+	<string id="STR_BASIC_INFORMATION">Basic Information</string>
+	<string id="STR_CATEGORY">Category</string>
+	<string id="STR_DESCRIPTION">Description</string>
+	<string id="STR_EDIT_CATEGORY">Edit Category</string>
+	<string id="STR_ENABLED">Enabled</string>
+	<string id="STR_FLASH_PROPERTIES">Flash Properties</string>
+	<string id="STR_HEIGHT">Height</string>
+	<string id="STR_HTML">Html</string>
+	<string id="STR_HTML_PROPERTIES">Html Properties</string>
+	<string id="STR_IMAGE_PATH">Image</string>
+	<string id="STR_IMAGE_PROPERTIES">Image Properties</string>
+	<string id="STR_INTERNAL_PAGE">Internal Page</string>
+	<string id="STR_IS_POPUP">Use Pop Up</string>
+	<string id="STR_LINK_TYPE">Link Type</string>
+	<string id="STR_LOG">Log</string>
+	<string id="STR_LOG_CLICKS">Log Clicks</string>
+	<string id="STR_LOG_VIEWS">Log Views</string>
+	<string id="STR_NAME">Name</string>
+	<string id="STR_PAGE">Page</string>
+	<string id="STR_POINT_WEIGHT">Weight</string>
+	<string id="STR_RANDOMIZE">Randomize</string>
+	<string id="STR_DYNAMIC">Dynamic</string>
+	<string id="STR_TIMEOUT">Interval</string>
+	<string id="STR_STYLE">Style</string>
+	<string id="STR_TOTAL_ITEMS">Total Items</string>
+	<string id="STR_TYPE">Type</string>
+	<string id="STR_TYPE_FLASH">Flash</string>
+	<string id="STR_TYPE_HTML">Html</string>
+	<string id="STR_TYPE_IMAGE">Image</string>
+	<string id="STR_URL">Url</string>
+	<string id="STR_WIDTH">Width</string>
+	<string id="STR_XSL_FILE">Xsl File</string>
+	<string id="STR_NO_BANNER_CATEGORY_SELECTED">No category selected for this Banner</string>
+	<string id="STR_NO_LINK">No Link</string>
+	<string id="STR_CLICK_POPUP_PROPERTIES">Popup Properties</string>
+	<string id="STR_BANNER_IMAGE_NOT_DEFINED">Banner "%1" image not defined</string>
+	<string id="STR_CATEGORY_IS_BEING_USED">Category "%1" is being used</string>
+	<string id="STR_INVALID_URL">The URL is invalid.</string>
+	<string id="STR_INVALID_FLASH_FILE">Invalid flash file.  The file must have a .swf extension.</string>
+	<!-- Montor Strings -->
+	<string id="STR_BANNER_CATEGORY_NAME_DESCRIPTION">Banner Category Name</string>
+	<string id="STR_BANNER_CATEGORY_NAME_NAME">Banner Category Name</string>
+	<string id="STR_BANNER_CLICK_DESCRIPTION">Banner Click</string>
+	<string id="STR_BANNER_CLICK_NAME">Banner Click</string>
+	<string id="STR_BANNER_NAME_DESCRIPTION">Banner Name</string>
+	<string id="STR_BANNER_NAME_NAME">Banner Name</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_DESCRIPTION">Banner Service Instance Friendly Path</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_NAME">Banner Service Instance Friendly Path</string>
+	<string id="STR_BANNER_SI_PATH_DESCRIPTION">Banner Service Instance Path</string>
+	<string id="STR_BANNER_SI_PATH_NAME">Banner Service Instance Path</string>
+	<string id="STR_BANNER_VIEW_DESCRIPTION">Banner View</string>
+	<string id="STR_BANNER_VIEW_NAME">Banner View</string>
+</strings>

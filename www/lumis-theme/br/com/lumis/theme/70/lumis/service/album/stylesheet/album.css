@@ -1,0 +1,77 @@
+/* $Revision: 15618 $ $Date: 2013-07-19 14:04:32 -0300 (Fri, 19 Jul 2013) $ */
+.cLumAlbum .cLumAlbumDetailBox
+{
+	border:1px solid #D2D3C3;
+	background:#E4E3DE;
+	color:inherit;
+	width:380px;
+	height:380px;
+	overflow:auto;
+}
+.cLumAlbum img.cLumAlbumDetailImg
+{
+	display:block;
+	margin:14px;
+	border:1px solid #C0C0C0;
+}
+.cLumAlbum .cLumAlbumPhotoListBox
+{
+	background:white;
+	color:inherit;
+	border:1px solid #D2D3C3;
+}
+.lum-album-data-list .lum-album-item {
+	margin:10px 20px 15px 0;
+	overflow-y:hidden;
+	vertical-align: top;
+	display: inline-block;
+}
+.lum-album-data-list .lum-album-item .lum-album-imgwrap {
+	width:108px;
+	height:108px;
+	border:2px solid #cdcdcd;
+	border-radius:3px;
+	position:relative;
+	overflow:hidden;
+	background:#e9e9e9;
+}
+.lum-album-data-list .lum-album-item.lum-row-selected {
+	background: inherit;
+}
+.lum-album-data-list .lum-album-item.lum-row-selected .lum-album-imgwrap {
+	border-color:#b92b2a;
+}
+.lum-album-data-list .lum-album-item .lum-album-imgwrap input[type='checkbox'] {
+	position:absolute;
+	top:4px;
+	left:4px;
+	z-index:9;
+	outline:none;
+}
+.lum-album-data-list .lum-album-item .lum-album-imgwrap .lum-album-hover-menu-selectable {
+	padding-top:8px;
+}
+.lum-album-data-list .lum-album-item .lum-album-imgwrap ul.lum-row-actions {
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:7;
+	background:url(../../../portal/client/images/fader_white.png) repeat 0 0;
+	list-style:none;
+	padding:40px 0;
+	text-align: center;
+	margin:0;
+	font-weight:bold;
+	text-transform:lowercase;
+}
+.lum-album-data-list .lum-album-item .lum-album-imginfo {
+	width:112px;
+	overflow-x:hidden;
+	padding:4px 0 0 0;
+}
+.lum-album-data-list .lum-album-item .lum-album-img {
+	display:block;
+	width:108px;
+	height:108px;
+	border:0;
+}

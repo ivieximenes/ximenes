@@ -1,0 +1,4 @@
+.lumis-service-questionnaire-questionnaireAnswer .lum-form-field-label label:after
+{
+	content: none;
+}

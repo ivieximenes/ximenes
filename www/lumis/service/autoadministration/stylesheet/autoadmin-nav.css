@@ -1,0 +1,150 @@
+/* $Revision: 15046 $ $Date: 2012-11-29 16:47:21 -0200 (Thu, 29 Nov 2012) $ */
+/*header/filters*/
+.lum-autoadmin-nav {
+	width:100%;
+	border-left:1px solid #cdcdcd; 
+	border-right:1px solid #cdcdcd; 
+}
+.lum-autoadmin-nav-header { 
+	background:#fff; 
+	padding:10px 10px 10px 10px;  
+	border-top:1px solid #cdcdcd;
+	border-bottom:1px solid #cdcdcd; 
+	margin-top:20px; 
+	text-transform:uppercase; 
+	font-weight:bold; 
+	min-width: 160px;
+}
+.lum-autoadmin-nav-title {
+	font-size:1.3em; 
+	padding: 0 10px 0 0; 
+}
+.lum-autoadmin-nav-down-arrow { 
+	padding:8px 10px 9px 10px; 
+	float:right; 
+	background:url(../image/down_arrow.png) no-repeat scroll 50% 50% transparent; 
+	border:1px solid #cdcdcd;
+	border-radius:2px;
+	box-shadow:0 0 2px #cdcdcd;
+}
+.lum-autoadmin-nav-up-arrow { 
+	padding:8px 10px 9px 10px; 
+	float:right; 
+	background:url(../image/up_arrow.png) no-repeat scroll 50% 50% transparent; 
+	border:1px solid #cdcdcd;
+	border-radius:2px;
+	box-shadow:0 0 2px #cdcdcd;
+}
+.lum-autoadmin-nav-filter-body { 
+	background:#f7f7f7; 
+	padding:10px; 
+	border-bottom:1px solid #cdcdcd; 
+}
+.lum-autoadmin-nav-filter-body label {
+	display:block;
+	font-weight:bold;
+	padding-bottom:4px;	
+}
+/*main list*/
+.lum-autoadmin-nav-tree {
+	min-height:200px;
+	padding:10px 0 20px 10px;
+	overflow-x:hidden;
+	display:block; 
+	clear:both;
+	background:#fff; 
+	border-bottom:1px solid #cdcdcd;
+	cursor: default;
+}
+.lum-autoadmin-nav-tree-top-level,
+.lum-autoadmin-nav-tree-inner-level {
+	list-style:none;
+	padding:0;
+	margin:0;
+	background:url(../image/bg_autoadmin_line.gif) repeat-y 0 0;
+}
+.lum-autoadmin-nav-tree-top-level li {
+	display:block;
+	clear:both;
+	height:20px;
+}
+.lum-autoadmin-nav-item-channel, .lum-autoadmin-nav-item-service, .lum-autoadmin-nav-item-interface {
+	display:block;
+	float:left;
+	font-weight:bold;
+	outline:none;
+}
+.lum-autoadmin-nav-item-channel, .lum-autoadmin-nav-item-service {
+	background:url(../image/ico_autoadmin_minus.gif) no-repeat 0 4px;
+	margin:0 5px 0 0;
+	padding:2px 0 2px 15px;
+	color:#444;
+}
+.lum-autoadmin-nav-item-toggle {
+	background:url(../image/ico_autoadmin_plus.gif) no-repeat 0 4px;
+	margin:0 5px 0 0;
+	padding:2px 0 2px 15px;
+	color:#444;
+}
+.lum-autoadmin-nav-item-toggle-expanded {
+	background:url(../image/ico_autoadmin_minus.gif) no-repeat 0 4px;
+}
+.lum-autoadmin-nav-item-toggle.lum-autoadmin-nav-item-service {
+	background:url(../image/ico_autoadmin_plus_service.gif) no-repeat 0 3px;
+	padding-left: 31px;
+}
+.lum-autoadmin-nav-item-toggle-expanded.lum-autoadmin-nav-item-service {
+	background:url(../image/ico_autoadmin_minus_service.gif) no-repeat 0 3px;
+}
+.lum-autoadmin-nav-item-interface {
+	padding:2px 0 2px 14px;
+	background:url(../image/ico_autoadmin_arrow.gif) no-repeat 2px 4px;
+}
+.lum-autoadmin-nav-tree-inner-level li {
+	padding-left:11px;
+	background:url(../image/bg_autoadmin_linelink.gif) no-repeat 0 50%;
+}
+.lum-autoadmin-nav-tree-inner-level li.last-child {
+	background:url(../image/bg_autoadmin_linelink_last.gif) no-repeat 0 50%;
+}
+.lum-autoadmin-nav-tree-inner-level .lum-autoadmin-nav-tree-inner-level {
+	display:none; /*hides 2nd lvl sons*/
+}
+
+.lum-autoadmin-nav-tree-inner-level.lum-autoadmin-nav-item-selected {
+	display:block; /* shows selected items */
+}
+
+ul.lum-autoadmin-myportal-item {
+	float: left;
+	list-style:none;
+	padding:0;
+	margin:0 -10px;
+}
+ul.lum-autoadmin-myportal-item li a {
+	display:block;
+	height:20px;
+	line-height:20px;
+	white-space:nowrap;
+	background:url(../image/ico_autoadmin_arrow.gif) no-repeat 6px 5px;
+	padding:0 19px;
+	font-weight:bold;
+}
+ul.lum-autoadmin-myportal-item li a.selected {
+	background-color:#fff1e6;
+}
+
+/*begin webkit*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.lum-autoadmin-nav-tree-top-level li {
+		height:auto;
+		min-height:20px;
+	}
+	.lum-autoadmin-nav-tree-inner-level li,
+	.lum-autoadmin-nav-tree-inner-level li:last-child,
+	.lum-autoadmin-nav-tree-inner-level li.last-child {
+		background-position:0 -1130px;
+	}
+}
+
+/*end webkit*/

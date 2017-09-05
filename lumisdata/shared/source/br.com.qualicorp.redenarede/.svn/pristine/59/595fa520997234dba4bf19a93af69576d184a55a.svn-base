@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>8A489E1F50AE95AA0150B8A758D73061</id>
+  <interface-id>lumis.service.banner.banner</interface-id>
+  <name>Rede na Rede - Banner (Área Pública)</name>
+  <file-path>lumis/service/banner/style/banner.xsl</file-path>
+</interface-style>

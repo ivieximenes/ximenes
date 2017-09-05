@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service name="STR_SERVICE_NAME" type="lum_content">
+		<description>STR_SERVICE_DESCRIPTION</description>
+	</service>
+
+	<interfaces>
+		
+		<!-- user interfaces -->
+		<interface id="addembedded" name="STR_FORM" type="lum_contentAdministrationEmbeddedAddPropertyPage">
+			<isAdministration>false</isAdministration>
+			<styles>
+				<style name="form" path="br/com/qualicorp/redenarede/service/businesscontact/style/form.xsl" id="form" />
+				<style name="form-beneficiario" path="br/com/qualicorp/redenarede/service/businesscontact/style/form-beneficiario.xsl" id="form-beneficiario" />
+				<style name="form-prestador" path="br/com/qualicorp/redenarede/service/businesscontact/style/form-prestador.xsl" id="form-prestador" />
+			</styles>
+		</interface>
+		
+		<!-- administration interfaces -->
+		<interface id="administration" name="STR_ADMINISTRATION" type="lum_contentAdministrationList">
+			<isAdministration>true</isAdministration>
+			
+		</interface>
+				
+		<interface id="configuration" name="STR_CONFIGURATION" type="lum_douiAdministrationAddPropertyPage"/>
+		<interface id="edit" name="STR_EDIT" type="lum_douiAdministrationEDITPropertyPage"/>
+	</interfaces>
+
+</serviceDefinition>

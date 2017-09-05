@@ -1,0 +1,9 @@
+/* $Revision: 14782 $ $Date: 2012-10-05 15:19:24 -0300 (Fri, 05 Oct 2012) $ */
+.lum-socialnetwork-countdown-negative{
+	color: red;
+}
+
+.lum-socialnetwork-countdown{
+	float: right;
+	display: none;
+}

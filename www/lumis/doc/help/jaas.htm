@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>JAAS</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?jaas.htm"; }
+  else { parent.quicksync('a3.7.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">JAAS</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="autenticacao.htm">Previous</a>&nbsp;
+     <a href="autenticacaointegrada.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Há quatro tipos de autenticação utilizando o protocolo <span style="font-style: italic;">JAAS:</span></p>
+<p style="margin: 14px 0px 0px 0px;">- A autenticação padrão do <span style="font-style: italic;">Lumis Portal</span>, utilizando o <span style="font-family: 'Courier New'; font-style: italic;">lumis.portal.authentication.LumisLoginModule</span>;</p>
+<p>- Autenticação utilizando <span style="font-style: italic;">com.sun.security.auth.module.Krb5LoginModule </span>no <span style="font-style: italic;">Active Directory</span>;</p>
+<p>- Autenticação customizada no banco utilizando o <span style="font-style: italic;">DatabaseLoginModule</span>;</p>
+<p>- Autenticação utilizando um <span style="font-style: italic;">LoginModule </span>customizado.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="605" cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p><span style="font-weight: bold;"> Observações</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Na autenticação nativa do <span style="font-style: italic;">Lumis</span> todas as senhas ficam criptografadas no banco de dados.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Para mais informações sobre <span style="font-style: italic;">Login Modules</span> no <span style="font-style: italic;">JAAS</span>, acesse:</td></tr></table></div><p style="margin: 14px 0px 0px 0px;"><a href="http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASLMDevGuide.html" target="_blank" class="weblink">http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASLMDevGuide.html</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal</span> utiliza <span style="font-style: italic;">JAAS Login Module</span> para realizar a autenticação no <span style="font-style: italic;">Active Directory</span> .</p>
+<p style="margin: 14px 0px 0px 0px;">É possível utilizar outros módulos de <span style="font-style: italic;">login</span> para fazer autenticação no <span style="font-style: italic;">Lumis Portal</span>. Por exemplo, se as informações dos usuários estiverem em um banco de dados externo, basta implementar um <span style="font-style: italic;">Login Module</span> que acesse a tabela com as informações e configurar o <span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config</span> para usar seu módulo customizado<span style="font-style: italic;">. </span></p>
+<p style="margin: 14px 0px 0px 0px;">Abaixo um exemplo de configuração do <span style="font-style: italic;">Login Module</span><span style="font-style: italic;">.</span><br>
+<span style="font-style: italic;">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="594" style="width:594px; border: solid 1px #000000;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">LumisPortal&nbsp;{&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lumis.portal.authentication.LumisLoginModule&nbsp;sufficient</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;debug=true;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.sun.security.auth.module.Krb5LoginModule</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sufficient&nbsp;debug=true;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mydomain.authentication.DatabaseLoginModule&nbsp;sufficient</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;debug=true</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;table=test_users</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loginColumn=login</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;passwordColumn=password;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">};</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Active Directory</span> </p>
+<p style="margin: 14px 0px 0px 0px;">Para delegar a autenticação para o Active Directory basta alterar os seguintes arquivos:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">lumisdata/config/lumisportalconfig.xml:</span> &nbsp;Retirar o comentário da configuração do <span style="font-style: italic;">kerberos</span> que define qual arquivo será utilizado pelo <span style="font-style: italic;">JAAS</span>:<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;security&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;enable&nbsp;NTLM&nbsp;Authentication&nbsp;Protocol.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;Need&nbsp;also&nbsp;to&nbsp;configure&nbsp;the&nbsp;web.xml&nbsp;accordingly.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;httpAuthenticator&nbsp;className="lumis.portal.authentication.http.NtlmAuthenticator"&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;</span><span style="font-family: 'Courier New'; color: #ff0000;">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;Kerberos&nbsp;Authentication&nbsp;Protocol.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;configurationFile&gt;security/krb5.conf&lt;/configurationFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/security&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;specify&nbsp;a&nbsp;custom&nbsp;security&nbsp;alias.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;securityAlias&gt;&lt;/securityAlias&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 35px;">A <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;securityAlias&gt;</span> permite especificar um outro <span style="font-style: italic;">alias </span>para substituir o <span style="font-style: italic;">default</span> "LumisPortal", que no caso do <span style="font-style: italic;">Tomcat</span>, está especificado no arquivo <span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config.</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">lumisdata/config/security/krb5.conf</span>: Arquivo de configuração do protocolo <span style="font-style: italic;">Kerberos</span>, utilizado pelo <span style="font-style: italic;">JASS</span>, que define as propriedades do sistema responsável pela autenticação.</td></tr></table></div><p style="margin: 0px 0px 0px 35px;">Assumindo que o nome do domínio é <span style="font-style: italic;">mydomain.net</span> e o nome do servidor do <span style="font-style: italic;">AD</span> é <span style="font-style: italic;">server01</span>, o arquivo ficaria assim:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="462" style="width:462px; border: solid 1px #000000;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[domain_realm]</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;mydomain.net&nbsp;=&nbsp;MYDOMAIN.NET</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[libdefaults]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default_realm&nbsp;=&nbsp;MYDOMAIN.NET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dns_lookup_kdc&nbsp;=&nbsp;true</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[realms]</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MYDOMAIN.NET&nbsp;=</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;admin_server&nbsp;=&nbsp;server01</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default_domain&nbsp;=&nbsp;MYDOMAIN.NET</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kdc&nbsp;=&nbsp;server01</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config:</span>Inclua o <span style="font-style: italic;">login module</span> <span style="font-style: italic;">Krb5LoginModule </span>para autenticação com o protocolo <span style="font-style: italic;">Kerberos:</span><br>
+<span style="font-style: italic;">&nbsp;</span></td></tr></table></div><div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table align="center" width="619" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #808080;"><p><span style="font-family: 'Courier New';">LumisPortal {</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp;com.sun.security.auth.module.Krb5LoginModule sufficient &nbsp;debug=true;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp;lumis.portal.authentication.LumisLoginModule sufficient &nbsp;debug=true;</span></p>
+<p><span style="font-family: 'Courier New';">};</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 35px;">Essa configuração é para que o <span style="font-style: italic;">Lumis</span> tente fazer primeiro o <span style="font-style: italic;">login</span> com o <span style="font-style: italic;">AD</span> e, se a autenticação não ocorrer com sucesso, tentar a autenticação padrão na base de dados do Lumis Portal.</p>
+<p style="margin: 14px 0px 0px 35px;">Esta configuração desse ser realizada quando o servidor de aplicação utilizado é o <span style="font-style: italic;">Tomcat.</span> Consulte o manual de instalação para verificar o módulo de autenticação no <a href="ibmwebsphere.htm">Websphere</a>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

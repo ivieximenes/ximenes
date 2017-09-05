@@ -1,0 +1,253 @@
+$fs-grid-columns-sm:                3;
+$fs-grid-columns-md:                6;
+$fs-grid-columns-lg:                12;
+
+$fs-grid-gutter:                    1.0416666666666667%;
+
+$fs-grid-width-xs:                  300px;
+$fs-grid-width-sm:                  480px;
+$fs-grid-width-md:                  720px;
+$fs-grid-width-lg:                  960px;
+$fs-grid-width-xl:                  1200px;
+
+$fs-grid-width-break-xs:            320px;
+$fs-grid-width-break-sm:            600px;
+$fs-grid-width-break-md:            740px;
+$fs-grid-width-break-lg:            980px;
+$fs-grid-width-break-xl:            1220px;
+
+$fs-grid-mq-max-sm:                 "max-width: "($fs-grid-width-break-sm - 1px);
+$fs-grid-mq-max-md:                 "max-width: "($fs-grid-width-break-md - 1px);
+$fs-grid-mq-max-lg:                 "max-width: "($fs-grid-width-break-lg - 1px);
+$fs-grid-mq-max-xl:                 "max-width: "($fs-grid-width-break-xl - 1px);
+
+$fs-grid-mq-min-sm:                 "min-width: "($fs-grid-width-break-sm);
+$fs-grid-mq-min-md:                 "min-width: "($fs-grid-width-break-md);
+$fs-grid-mq-min-lg:                 "min-width: "($fs-grid-width-break-lg);
+$fs-grid-mq-min-xl:                 "min-width: "($fs-grid-width-break-xl);
+
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+@mixin fs_grid_column($total, $margin, $count) {
+        width: (((100% / $total) * $count) - ($margin * 2));
+}
+
+@mixin fs_grid_column_pushed($total, $margin, $count) {
+    margin-left:((100% / $total) * $count) + $margin;
+}
+
+@mixin clearfix {
+   &:after {
+    height: 0;
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+  }
+  &:before {
+    height: 0;
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    width:0;
+  }
+}
+
+@mixin fs_row  {
+  width: 97.91666667%;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+  @media screen and ($fs-grid-mq-min-sm) {
+    width: $fs-grid-width-sm;
+  }
+  @media screen and ($fs-grid-mq-min-md) {
+    width: $fs-grid-width-md;
+  }
+  @media screen and ($fs-grid-mq-min-lg) {
+    width: $fs-grid-width-lg;
+  }
+  @media screen and ($fs-grid-mq-min-xl) {
+    width: $fs-grid-width-xl;
+  }
+}
+
+@mixin fs_row_row {
+  @include clearfix;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
+}
+
+@mixin fs_grid_row_row_contained {
+  @include clearfix;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// Mixins de células (rows):
+// -----------------------------
+@mixin fs_grid_cell_centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+@mixin fs_grid_cell {
+  width: 97.91666667%; 
+  float: left;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
+}
+
+@mixin fs_grid_cell_padded {
+  box-sizing: content-box;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.04166667%;
+  padding-right: 1.04166667%;
+}
+
+@mixin fs_grid_cell_right {
+  float: right;
+}
+
+@mixin fs_grid_cell_contained {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@mixin fs-all-full {
+  width: 97.91666667%;
+}
+
+// !Small, 540 (max 740)
+@mixin fs_cell_xs($count, $total:0) {
+    @media screen and ($fs-grid-mq-max-sm) {
+        @if $total==0 {
+            @include fs_grid_column($fs-grid-columns-sm, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// Push
+@mixin fs_push_xs($count, $total:0) {
+    @media screen and ($fs-grid-mq-max-sm) {
+        @if $total == 0 {
+            @include fs_grid_column_pushed($fs-grid-columns-sm, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column_pushed($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// !Min, 300 (max 500)
+@mixin fs_cell_sm($count, $total:0) {
+    @media screen and ($fs-grid-mq-max-md) {
+        @if $total == 0 {
+            @include fs_grid_column($fs-grid-columns-sm, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// Push
+@mixin fs_push_sm($count, $total:0) {
+    @media screen and ($fs-grid-mq-max-md) {
+        @if $total == 0 {
+            @include fs_grid_column_pushed($fs-grid-columns-sm, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column_pushed($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// !Medium, 6 column, 720 (min 740)
+@mixin fs_cell_md($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-md) and ($fs-grid-mq-max-lg) {
+        @if $total == 0 {
+            @include fs_grid_column($fs-grid-columns-md, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// Push
+@mixin fs_push_md($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-md) and ($fs-grid-mq-max-lg) {
+        @if $total == 0 {
+            @include fs_grid_column_pushed($fs-grid-columns-md, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column_pushed($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// !Large, 12 column, 960 (min 980)
+@mixin fs_cell_lg($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-lg) {
+        @if $total == 0 {
+            @include fs_grid_column($fs-grid-columns-lg, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// Push
+@mixin fs_push_lg($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-lg) {
+        @if $total == 0 {
+            @include fs_grid_column_pushed($fs-grid-columns-lg, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column_pushed($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// !XLarge, 12 column, 1200 (min 1220)
+@mixin fs_cell_xl($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-xl) {
+        @if $total == 0 {
+            @include fs_grid_column($fs-grid-columns-lg, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column($total, $fs-grid-gutter, $count);
+        }
+    }
+}
+
+// Push
+@mixin fs_push_xl($count, $total:0) {
+    @media screen and ($fs-grid-mq-min-xl) {
+        @if $total == 0 {
+            @include fs_grid_column_pushed($fs-grid-columns-lg, $fs-grid-gutter, $count);
+        }
+        @else {
+            @include fs_grid_column_pushed($total, $fs-grid-gutter, $count);
+        }
+    }
+}

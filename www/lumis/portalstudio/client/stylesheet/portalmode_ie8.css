@@ -1,0 +1,10 @@
+/* $Revision: 12849 $ $Date: 2011-04-26 18:57:23 -0300 (Tue, 26 Apr 2011) $ */
+/*lumbar ie css*/
+
+#lumbar ul.menu_dd li ul.dd, #lumbar ul.menu_modeswap li ul.dd {
+	padding-bottom:0 !important;
+	background:none !important;
+}
+#lumbar ul.menu_dd li ul.dd li a, #lumbar ul.menu_modeswap li ul.dd li a {
+	background:url(../images/bg_dd.png) repeat top left !important;
+}

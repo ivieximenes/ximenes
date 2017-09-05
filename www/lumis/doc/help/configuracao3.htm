@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Configuração</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?configuracao3.htm"; }
+  else { parent.quicksync('a6.1.16.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Configuração</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="rest.htm">Previous</a>&nbsp;
+     <a href="utilizacao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Interfaces REST</span></p>
+<p style="margin: 14px 0px 0px 0px;">Para que dados sejam acessíveis via REST, uma interface REST precisa ser explicitamente declarada nos arquivos de configuração de serviço (douidefinition.xml). </p>
+<p style="margin: 14px 0px 0px 0px;">O trecho a seguir mostra uma sugestão de como esta configuração poderia ser feita.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="641" bgcolor="#f3f3f3" style="width:641px; background-color:#f3f3f3; border: solid 1px #000000;"><p style="text-align: left; margin: 0px 0px 0px 24px;"><span style="color: #008080;">&lt;restInterfaces&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;restInterface </span><span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"lista"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f; background-color: #c0c0c0;">sources</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; text-indent: 47px; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">source</span> <span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"default"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">fields</span> <span style="color: #7f007f;">inherit</span>=<span style="font-style: italic; color: #2a00ff;">"all"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">field</span> <span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"imageFile"</span> <span style="color: #7f007f;">display</span>=<span style="font-style: italic; color: #2a00ff;">"true"</span><span style="color: #008080;">/&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">field</span> <span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"parentFolder"</span> <span style="color: #7f007f;">display</span>=<span style="font-style: italic; color: #2a00ff;">"true"</span><span style="color: #008080;">/&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">fields</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">source</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 13px 72px;"><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f; background-color: #c0c0c0;">sources</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;/restInterface&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;restInterface </span><span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"noticias"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f; background-color: #c0c0c0;">sources</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; text-indent: 47px; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">source</span> <span style="color: #7f007f;">id</span>=<span style="font-style: italic; color: #2a00ff;">"noticias"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">fields</span> <span style="color: #7f007f;">inherit</span>=<span style="font-style: italic; color: #2a00ff;">"all" /</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 72px;"><span style="width:24px">&nbsp;</span><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">source</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 13px 72px;"><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f; background-color: #c0c0c0;">sources</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="color: #008080;">&lt;/restInterface&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 24px;"><span style="color: #008080;">&lt;/restInterfaces&gt;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 48px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; margin: 0px 0px 13px 0px;"><span style="font-size: 9pt; font-family: 'Calibri'; font-weight: bold; color: #4f81bd;">Definição da Interface REST </span></p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">De acordo com o código apresentado acima, foram criadas duas interfaces REST chamadas <span style="font-weight: bold;">lista</span> e <span style="font-weight: bold;">noticias</span>. Também podem ser declarados, nesta estrutura, filtros, além de configurações de número de itens e ordenação. É importante desta que que as regras e recursos para criação de sources em interfaces de serviços estão disponíveis na criação de interfaces REST.</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração de Instâncias de Serviços</span></p>
+<p style="margin: 14px 0px 0px 0px;">Para que uma instância de serviço não precise ser referenciada por seu ID, foi criado um nome ‘<span style="font-weight: bold;">curto</span>’, para instâncias de serviço chamado de <span style="font-weight: bold;">Nome REST</span>. Este nome é único e é uma configuração das instâncias de serviços.</p>
+<p style="margin: 14px 0px 0px 0px;">Uma vez configurado uma <span style="font-weight: bold;">Interface REST</span> no serviço, por padrão todas as instâncias de serviço permitirão acesso a esta fonte de dados. Entretanto para que o acesso seja permitido é necessário ativar em cada instância de serviço o acesso REST conforme apresentado na imagem abaixo.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: center;"><img src="restconfiguracao0001.zoom81.png" width="827" height="183" border="0" alt="RESTConfiguracao0001" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center; margin: 0px 0px 13px 0px;"><span style="font-size: 9pt; font-family: 'Calibri'; font-weight: bold; color: #4f81bd;">Configuração da Instância de Serviço </span></p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: center;"><img src="restconfiguracao0002.zoom84.png" width="532" height="488" border="0" alt="RESTConfiguracao0002" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center; margin: 0px 0px 13px 0px;"><span style="font-size: 9pt; font-family: 'Calibri'; font-weight: bold; color: #4f81bd;">Configuração do Nome REST e Habilitando o acesso REST </span></p>
+<p style="text-align: left; margin: 0px 0px 13px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="100" bgcolor="#ffffff" style="width:100px; background-color:#ffffff; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="486" bgcolor="#ffffff" style="width:486px; background-color:#ffffff; border: solid 1px #000000;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="588" bgcolor="#ffffff" style="width:588px; background-color:#ffffff; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 10px;">Por padrão todas as interfaces do tipo lista e detalhes são configuradas automaticamente para acesso via REST. Para acessar essas interfaces é necessário ativar o acesso REST na instância de serviço desejada.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

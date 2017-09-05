@@ -1,0 +1,298 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Utilização do controle lum_filters</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?xslutilizacaocontrolelum_filters.htm"; }
+  else { parent.quicksync('a8.5.3.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Utilização do controle lum_filters</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="xslutilizacaocontrolelum_pagination.htm">Previous</a>&nbsp;
+     <a href="xslutilizacaocontrolelum_advancedtabulardata.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Em quaisquer interfaces, principalmente nas interfaces <span style="font-style: italic;">Lista</span> ou <span style="font-style: italic;">Administração</span> pode-se determinar filtros, através da opção “Filtros” no <span style="font-style: italic;">right-click</span> dessas interfaces.</p>
+<p style="margin: 8px 0px 0px 0px;">Para a interface <span style="font-style: italic;">Lista</span> foi criado o filtro com campo “Título”, com Operador do tipo “Igual a”, o que significa que é basicamente uma busca por palavras-chave nos títulos de notícias cadastradas. Além disso, foi escolhido um <span style="font-style: italic;">id </span>qualquer e determinado a largura do campo do filtro em 300 (<span style="font-style: italic;">pixels</span>).</p>
+<p style="margin: 8px 0px 0px 0px;">Com isso tem-se o seguinte <span style="font-style: italic;">XML</span> chegando na interface de Lista (em negrito as informações de filtros):</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e6e6e6" border="0" style="background-color: #e6e6e6; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="1110" style="width:1110px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;renderData&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_form"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_interfaceHeader"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lista&nbsp;(Notícias)&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;control&nbsp;type="lum_filters"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_filter"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_label"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;Título&lt;/text&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;style="width:300"&nbsp;type="lum_inputText"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;blankOptionText&gt;&nbsp;STR_FILTER_OPTION_ALL&lt;/blankOptionText&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_buttonList"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;text="STR_FILTER"&nbsp;type="lum_button"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;Filtrar&lt;/name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;onclick&gt;function&nbsp;f1();return&nbsp;false;&lt;/onclick&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type="lum_tabularData"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;row&nbsp;href="main.jsp"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lumis&nbsp;expande&nbsp;operação&nbsp;no&nbsp;Brasil&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;06/09/06&nbsp;11:16&lt;/value&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;img_logoLumis.gif&lt;/name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;href&gt;data/files/img_logoLumis.gif&lt;/href&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;imageLegend&gt;Logo&nbsp;da&nbsp;Lumis&lt;/imageLegend&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;Lumis&nbsp;(www.lumis.com.br),&nbsp;desenvolvedora&nbsp;da&nbsp;plataforma&nbsp;de&nbsp;software&nbsp;para&nbsp;portais&nbsp;corporativos,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lumis&nbsp;Portal&nbsp;Suíte,&nbsp;estende&nbsp;operações&nbsp;para&nbsp;o&nbsp;Sul&nbsp;do&nbsp;Brasil,&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com&nbsp;uma&nbsp;unidade&nbsp;de&nbsp;negócios&nbsp;recéminstalada&nbsp;em&nbsp;Curitiba.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/row&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;row&nbsp;href="main.jsp"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Magazine&nbsp;Luiza&nbsp;implanta&nbsp;nova&nbsp;plataforma&nbsp;de&nbsp;intranet&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;06/09/06&nbsp;11:12&lt;/value&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/publishStartDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;img_logoLumis.gif&lt;/name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;href&gt;data/files/img_logoLumis.gif&lt;/href&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;imageLegend&gt;Logo&nbsp;da&nbsp;Lumis&lt;/imageLegend&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introductionImage&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depois&nbsp;de&nbsp;utilizar,&nbsp;por&nbsp;um&nbsp;ano,&nbsp;solução&nbsp;própria&nbsp;para&nbsp;gerenciar&nbsp;o&nbsp;Portal&nbsp;Luiza,&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;rede&nbsp;de&nbsp;varejo&nbsp;migra&nbsp;para&nbsp;ferramenta&nbsp;da&nbsp;Lumis.&nbsp;A&nbsp;intranet&nbsp;atende&nbsp;a&nbsp;10&nbsp;mil&nbsp;funcionários.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/introduction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/row&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/data&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/renderData&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Assim como na paginação, tem-se a opção de chamar o template de filtros no <span style="font-style: italic;">XSL</span> de <span style="font-style: italic;">Lista</span>. Se não há necessidade de customização na estrutura ou no <span style="font-style: italic;">layout</span>, </p>
+<p style="margin: 8px 0px 0px 0px;">esta opção de chamar o template é a mais simples.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="1108" style="width:1108px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:stylesheet&nbsp;xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&nbsp;xmlns:lum="http://www.lumis.com.br/doui"&nbsp;version="1.0"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:import&nbsp;href="../../../../lumis/doui/style/DouiControls.xsl"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:output&nbsp;omit-xml-declaration&nbsp;=&nbsp;"yes"&nbsp;method="xml"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;strong&gt;&lt;xsl:value-ofselect="//control[@type='lum_interfaceHeader']/data/title"&nbsp;/&gt;&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templatesselect="//control[@type='lum_filters']"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:for-eachselect="//control[@type='lum_tabularData']/data/row"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="title"&nbsp;/&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;xsl:value-of&nbsp;select="publishStartDate/value"&nbsp;/&gt;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/name&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src="{introductionImage/href}"&nbsp;border="0"&nbsp;alt=""&nbsp;style="float:left;margin:0&nbsp;6px&nbsp;6px&nbsp;0;"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/imageLegend&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="alt"&gt;&lt;xsl:value-of&nbsp;select="introductionImage/imageLegend"&nbsp;/&gt;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;disable-output-escaping="yes"&nbsp;select="introduction"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">No exemplo anterior foi utilizado a <span style="font-style: italic;">tag</span> <span style="font-family: 'Courier New';">&lt;lum:form /&gt; </span>para deixar o código mais simples.</p>
+<p style="margin: 8px 0px 0px 0px;">A figura a seguir exibe a interface de notícia com o filtro inserido.</p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="xsl021.jpg" width="466" height="292" border="0" alt="xsl021" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 8px 0px 0px 0px;">A customização da estrutura do controle <span style="font-style: italic;">lum_filters</span> é consideravelmente mais trabalhosa do que nos controles vistos até aqui. Isso porque envolve uma série de controles que são chamados dentro do <span style="font-family: 'Courier New';">&lt;xsl:templatematch=”//control[@type=’lum_filters’]”&gt;</span>. Na customização ignore os testes do tipo <span style="font-family: 'Courier New';">&lt;xsl:if&gt;</span> e procure apenas pelo <span style="font-style: italic;">HTML</span>, que será na realidade a estrutura a ser customizada.</p>
+<p style="margin: 8px 0px 0px 0px;">No exemplo a seguir, exibe uma customização feita com o objetivo de deixar o código o mais simples possível:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="1109" style="width:1109px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:stylesheet&nbsp;xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&nbsp;xmlns:lum="http://www.lumis.com.br/doui"&nbsp;version="1.0"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:import&nbsp;href="../../../../lumis/doui/style/DouiControls.xsl"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:output&nbsp;omit-xml-declaration&nbsp;=&nbsp;"yes"&nbsp;method="xml"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;strong&gt;&lt;xsl:value-ofselect="//control[@type='lum_interfaceHeader']/data/title"&nbsp;/&gt;&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templatesselect="//control[@type='lum_filters']"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:for-eachselect="//control[@type='lum_tabularData']/data/row"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;&lt;xsl:value-of&nbsp;select="title"&nbsp;/&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;xsl:value-of&nbsp;select="publishStartDate/value"&nbsp;/&gt;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:iftest==&nbsp;"introductionImage/name!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src="{introductionImage/href}"&nbsp;border="0"&nbsp;alt=""&nbsp;style="float:left;margin:0&nbsp;6px&nbsp;6px&nbsp;0;"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="introductionImage/imageLegend&nbsp;!=&nbsp;''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="alt"&gt;&lt;xsl:value-of</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">select="introductionImage/imageLegend"&nbsp;/&gt;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;disable-output-escaping="yes"&nbsp;select="introduction"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;xsl:templatematch="control[@type='lum_filters']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;xsl:iftest="@hasVisibleFilters='false'"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="style"&gt;display:none;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;table&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:for-eachselect="control[@type='lum_filter']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templates&nbsp;select="."&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:if&nbsp;test="not(@hideFilterButton)&nbsp;or&nbsp;@hideFilterButton!='true'"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan="2"&gt;&lt;/td&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templatesselect="control[@type='lum_buttonList']"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/table&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;xsl:templatematch="control[@type='lum_filter']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:for-each&nbsp;select="control"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templates&nbsp;select="."&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;xsl:templatematch="control[@type='lum_inputText']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;.inputTreinamento&nbsp;{border:1px&nbsp;solid&nbsp;#ccc;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="text"&nbsp;name="{@id}"&nbsp;value="{data/value}"&nbsp;class="inputTreinamento"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templates&nbsp;select="@*"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:iftest="@trim='true'"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attributename="onBlur"&gt;this.value=this.value.replace(/^\s*|\s*$/g,'');&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/input&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templates&nbsp;select="control"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;xsl:templatematch="control[@type='lum_buttonList']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:for-each&nbsp;select="control"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:apply-templates&nbsp;select="."/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:for-each&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;xsl:templatematch="control[@type='lum_button']"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:variable&nbsp;name="buttonName"&nbsp;select="data/name"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:variable&nbsp;name="buttonHref"&nbsp;select="data/href"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:variable&nbsp;name="buttonOnclick"&nbsp;select="data/onclick"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;xsl:variable&nbsp;name="showLabel"&nbsp;select="@showLabel"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;.buttonTreinamento&nbsp;{display:block;width:36px;border:1px&nbsp;solid&nbsp;#ccc;background:#f7f7f7;padding:4px;margin:8px&nbsp;0;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="#"&nbsp;class="buttonTreinamento"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:iftest="$buttonHref!=''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="href"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;select="$buttonHref"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:iftest="$buttonOnclick!=''"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:attribute&nbsp;name="onclick"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;select="$buttonOnclick"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:attribute&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:if&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:choose&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:whentest="$showLabel='false'"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:when&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:otherwise&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xsl:value-of&nbsp;select="$buttonName"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:otherwise&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xsl:choose&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Foi inserido <span style="font-style: italic;">CSS</span> dentro de tags <span style="font-family: 'Courier New';">&lt;style /&gt;.</span>Idealmente é melhor colocar o <span style="font-style: italic;">CSS</span> em um arquivo externo, aplicado a um canal ou página onde está instanciada a interface. Para isso basta tão somente recortar o código <span style="font-style: italic;">CSS</span> dentro das<span style="font-style: italic;"> tags</span> <span style="font-family: 'Courier New';">&lt;style /&gt;</span> e colar (sem modificações) no arquivo <span style="font-style: italic;">CSS</span> externo.</p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">layout</span> customizado para interface <span style="font-style: italic;">Lista</span> com filtros ficará assim:</p>
+<p style="text-align: center; margin: 8px 0px 8px 0px;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="xsl023.jpg" width="519" height="328" border="0" alt="xsl023" style="margin:0 auto;margin:0px;"></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

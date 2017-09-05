@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>2C96A66853B531AE015459818E421E2B</id>
+  <interface-id>lumis.service.link.quicklist</interface-id>
+  <name>Rede na Rede - Serviços Beneficiário (Destaques)</name>
+  <file-path>style/lumis/service/link/quicklist/servicos-home-logada-beneficiario.xsl</file-path>
+</interface-style>

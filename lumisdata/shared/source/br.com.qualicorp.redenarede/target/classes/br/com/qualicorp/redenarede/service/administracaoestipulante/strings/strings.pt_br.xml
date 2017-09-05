@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<strings>
+<string id="STR_SERVICE_NAME"><![CDATA[Cadastro de Estipulantes]]></string>
+<string id="STR_SERVICE_DESCRIPTION"><![CDATA[Cadastrar, alterar e excluir Estipulantes]]></string>
+
+<string id="STR_VALUE_MUST_BE_INTEGER">Código do Estipulante inválido.</string>
+<string id="STR_REQUIRED_FIELD">%1: Campo obrigatório.</string>
+<string id="STR_VALUE_MUST_BE_NUMERIC">%1: Campo tipo numérico</string>
+<string id="STR_VALUE_BELOW_MINIMUM_VALUE">%1: Valor deve ser maior ou igual a %2.</string>
+<string id="STR_VALUE_ABOVE_MAXIMUM_VALUE">%1: Valor deve ser menor ou igual a %3.</string>
+</strings>

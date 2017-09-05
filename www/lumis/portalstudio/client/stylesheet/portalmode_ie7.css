@@ -1,0 +1,10 @@
+/* $Revision: 12849 $ $Date: 2011-04-26 18:57:23 -0300 (Tue, 26 Apr 2011) $ */
+/*lumbar ie7 only css*/
+
+#lumbar ul.menu_dd li ul.dd li, #lumbar ul.menu_modeswap li ul.dd li {
+	margin-top:-1px !important;
+}
+#lumbar ul.menu_dd li ul.dd li a, #lumbar ul.menu_modeswap li ul.dd li a  {
+	height:1% !important;
+	padding:7px 3px 7px 12px !important;
+}

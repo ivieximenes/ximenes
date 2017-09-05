@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Apache com JBoss</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?apachejboss.htm"; }
+  else { parent.quicksync('a3.6.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Apache com JBoss</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="apachetomcat.htm">Previous</a>&nbsp;
+     <a href="apachewebsphere.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Para configurar o Apache como <span style="font-style: italic;">servidor web</span> e o <span style="font-style: italic;">JBoss</span> como <span style="font-style: italic;">servidor de aplicação</span> é necessário utilizar os módulos <span style="font-style: italic;">mod_proxy,</span> <span style="font-style: italic;">mod_proxy_ajp</span>, <span style="font-style: italic;">mod_headers</span> e <span style="font-style: italic;">mod_rewrite</span> incluídos com o Apache. </p>
+<p>&nbsp;</p>
+<p>Devido à funcionalidade de <span style="font-style: italic;">cache</span> do <span style="font-style: italic;">Lumis Portal</span>, o <span style="font-style: italic;">apache</span> deverá ser configurado para verificar se existe localmente um arquivo estático a ser servido. Caso esse arquivo não exista, a requisição deverá ser delegada para o <span style="font-style: italic;">servidor de aplicação</span>, mesmo se a requisição tenha sido realizada para um arquivo estático, pois esse arquivo pode ser um arquivo de <span style="font-style: italic;">cache</span> que ainda não foi gerado ou que foi expirado. </p>
+<p>&nbsp;</p>
+<p>Outras configurações avançadas para fins de otimização também são recomendadas para ambientes de produção. Não será abordado como realizar a otimização da comunicação entre o <span style="font-style: italic;">servidor de web</span> e o <span style="font-style: italic;">servidor de aplicação.</span></p>
+<p>&nbsp;</p>
+<p>Para mais informações sobre os módulos <span style="font-style: italic;">mod_proxy,</span> <span style="font-style: italic;">mod_proxy_ajp</span>, <span style="font-style: italic;">mod_headers</span> e <span style="font-style: italic;">mod_rewrite</span>, consulte a <a href="http://httpd.apache.org/docs/current/mod/mod_proxy.html" target="_blank" class="weblink">documentação correspondente do Apache</a>.</p>
+<p>&nbsp;</p>
+<p>Segue o passo a passo necessário para realizar a configuração:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>As configurações abaixo são apenas exemplos, sendo necessário adequá-las conforme as particularidades do ambiente. Por exemplo, pode ser necessário adequar o caminho do <span style="font-style: italic;">WEB_ROOT_PATH</span>, número das portas utilizadas, ou outros detalhes específicos do ambiente de instalação.</p>
+<p>&nbsp;</p>
+<p>As configurações no servidor web devem ser consistentes com as configurações dos websites do portal (ver <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>). Cada URL de um website deve corresponder ao seu diretório estático correspondente, além de aplicar as regras de encaminhamento ao servidor de aplicação apresentadas. Para isso, pode por exemplo, criar um <span style="font-style: italic;">VirtualHost</span> (ver passo 2 abaixo) para cada website no portal.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>1. Editar o arquivo <span style="font-style: italic;">APACHE_HOME/conf/httpd.conf</span> habilitando os módulos <span style="font-style: italic;">mod_proxy,</span> <span style="font-style: italic;">mod_proxy_ajp</span>, <span style="font-style: italic;">mod_headers</span> e <span style="font-style: italic;">mod_rewrite</span>, caso ainda não estejam habilitados:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="398" style="width:398px; border: solid 1px #000000;"><p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">LoadModule&nbsp;headers_module&nbsp;modules/mod_headers.so</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">LoadModule&nbsp;proxy_module&nbsp;modules/mod_proxy.so</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">LoadModule&nbsp;proxy_ajp_module&nbsp;modules/mod_proxy_ajp.so</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">LoadModule&nbsp;rewrite_module&nbsp;modules/mod_rewrite.so</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<p>2. Configurar o <span style="font-style: italic;">virtual host</span>, por exemplo, no arquivo <span style="font-style: italic;">APACHE_HOME/conf/httpd.conf</span>:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&lt;VirtualHost&nbsp;*&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DocumentRoot&nbsp;"WEB_ROOT_PATH"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DirectoryIndex&nbsp;index.htm</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteEngine&nbsp;on</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.jsp$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.lumis$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;^/(.*)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1/index.htm&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteRule&nbsp;^(.*)&nbsp;$1.lumis&nbsp;[PT,env=X-lumWebServer:true]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RequestHeader&nbsp;set&nbsp;X-lumWebServer&nbsp;"apache"&nbsp;env=X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Header&nbsp;set&nbsp;X-UA-Compatible&nbsp;"IE=edge"&nbsp;env=!X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ProxyPreserveHost&nbsp;On</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ProxyPassMatch&nbsp;^/(.*\.(?:jsp|lumis))$&nbsp;ajp://localhost:8009/$1</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/VirtualHost&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Caso o contexto de sua aplicação não esteja na raiz, por exemplo, em <span style="font-style: italic;">/portal</span>, será necessário configurar o virtual <span style="font-style: italic;">host</span> da seguinte forma:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&lt;VirtualHost&nbsp;*&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Alias&nbsp;/portal&nbsp;"WEB_ROOT_PATH"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DirectoryIndex&nbsp;index.htm</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RedirectMatch&nbsp;permanent&nbsp;^/portal$&nbsp;/portal/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteEngine&nbsp;on</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.jsp$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.lumis$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;^/portal/(.*)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1/index.htm&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteRule&nbsp;^(.*)&nbsp;$1.lumis&nbsp;[PT,env=X-lumWebServer:true]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RequestHeader&nbsp;set&nbsp;X-lumWebServer&nbsp;"apache"&nbsp;env=X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Header&nbsp;set&nbsp;X-UA-Compatible&nbsp;"IE=edge"&nbsp;env=!X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ProxyPreserveHost&nbsp;On</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ProxyPassMatch&nbsp;^/portal/(.*\.(?:jsp|lumis))$&nbsp;ajp://localhost:8009/portal/$1</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/VirtualHost&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>3. Configurar o conector <span style="font-style: italic;">AJP </span>na configuração do perfil sendo usado (normalmente será em um dos arquivos <span style="font-style: italic;">standalone.xml</span>, <span style="font-style: italic;">domain.xml</span> ou <span style="font-style: italic;">host.xml - </span>para maiores informações consultar a documentação do JBoss):</p>
+<p>&nbsp;</p>
+<p>Adicionar um novo<span style="font-style: italic;"> socket-binding</span> no grupo de <span style="font-style: italic;">socket-binding</span>, como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e5e5e5" border="0" style="background-color: #e5e5e5; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;socket-binding-group name="standard-sockets" default-interface="public"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp;  <span style="font-weight: bold; color: #0000ff;">&lt;socket-binding name="ajp13" port="8009"/&gt;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;socket-binding name="http" port="8080"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;socket-binding name="https" port="8443"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>&lt;/socket-binding-group&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>A porta utilizada deverá ser a mesma configurada no workers.properties criado nos passos anteriores.</p>
+<p>&nbsp;</p>
+<p>Adicionar um novo conector no subsystem <span style="font-weight: bold;">jboss:domain:web</span>, como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#dadada" border="0" style="background-color: #dadada; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;">&lt;subsystem xmlns="urn:jboss:domain:web:1.0" default-virtual-server="default-host"&gt;</p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;connector name="http" protocol="HTTP/1.1" socket-binding="http" scheme="http"/&gt;</p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp;  <span style="font-weight: bold; color: #0000ff;">&lt;connector name="ajp13" protocol="AJP/1.3" socket-binding="ajp13" scheme="http"/&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p style="text-align: left;">&lt;/subsystem&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>O nome do <span style="font-style: italic;">socket-binding</span> deve ser o mesmo definido na configuração anterior.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

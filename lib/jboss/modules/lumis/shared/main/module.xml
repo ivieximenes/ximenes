@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17551 $ $Date: 2015-07-10 17:43:11 -0300 (Fri, 10 Jul 2015) $ -->
+<module xmlns="urn:jboss:module:1.0" name="lumis.shared">
+  <resources>
+		<resource-root path="xercesImpl.jar" />
+		<resource-root path="portlet-api-2.0.jar" />
+		<resource-root path="pluto-util-1.1.0-beta1.jar" />
+		<resource-root path="pluto-taglib-1.1.0-beta1.jar" />
+		<resource-root path="pluto-descriptor-impl-1.1.0-beta1.jar" />
+		<resource-root path="pluto-descriptor-api-1.1.0-beta1.jar" />
+		<resource-root path="pluto-container-1.1.0-beta1.jar" />
+		<resource-root path="lumisportal_8.1.1.150831_shared.jar" />
+		<resource-root path="commons-logging-api.jar" />
+		<resource-root path="castor-1.0.3.jar" />
+		<resource-root path="activation-1.1.jar" />
+		<resource-root path="xercesImpl.jar" />
+  </resources>
+  <dependencies>
+	<module name="javax.api" export="true"/>
+	<module name="javax.servlet.api" export="true"/>
+  </dependencies>
+</module>

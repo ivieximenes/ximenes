@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>8A489E1F50AE95AA0150B8AD856D33BA</id>
+  <name>Conteúdo</name>
+  <parent-template-id>2C96A2CE5AC7FD01015AC96072926625</parent-template-id>
+  <hidden>true</hidden>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>template.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="busca">
+        <interface id="2C96A2CE5AC7FD01015AC969C7E667B5"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="2C96A2CE5AC7FD01015AC969C7F067B6"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC969C7F967B7"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="2C96A2CE5AC7FD01015AC969C80467B8"></interface>
+    </holder>
+    <holder id="interfaces">
+        <interface id="40286D2C51B5C4870151B66864F6776F"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC969C80B67B9"></interface>
+    </holder>
+    <holder id="menurodape">
+        <interface id="2C96A2CE5AC7FD01015AC969C81F67BC"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C7E667B5</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC960B13F6651</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C7F067B6</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC960FF3D6653</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C7F967B7</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaBeneficiario</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC96119B16655</parent-interface-instance-id>
+      <applied-interface-style-id>alterarSenhaBeneficiarioSmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C80467B8</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC96182B56668</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C80B67B9</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC96072DC662B</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC969C81F67BC</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC961D0F6666B</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286D2C51B5C4870151B66864F6776F</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentDetails</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150AFA63DED33DD</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

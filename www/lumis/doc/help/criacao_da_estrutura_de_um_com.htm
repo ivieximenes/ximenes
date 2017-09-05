@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Criação da estrutura de um componente</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?criacao_da_estrutura_de_um_com.htm"; }
+  else { parent.quicksync('a8.11.1.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Criação da estrutura de um componente</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="definicao_de_componente.htm">Previous</a>&nbsp;
+     <a href="desenv_componente_scripts.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>A criação da estrutura de um componente requer que esse componente já esteja, ao menos, definido. Ou seja, que sua definição esteja criada (mesmo que essa venha a ser alterada no futuro) e que o componente já tenha sido implantado no ambiente no qual sua estrutura será criada.</p>
+<p>Os passos do exemplo a seguir são feitos em um ambiente de desenvolvimento utilizando a IDE <a href="http://eclipse.org/" target="_blank" class="weblink">Eclipse</a>. Como exemplo, suponha o seguinte projeto:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="deployment-estrutura-001.png" width="397" height="398" border="0" alt="Deployment-Estrutura-001" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Nota-se que esse projeto contém um módulo, definido em sua raiz, e quatro componentes: <span class="f_CodeExample">br.com.minhaempresa.intranet</span>, <span class="f_CodeExample">br.com.minhaempresa.intranet.noticias</span>, <span class="f_CodeExample">br.com.minhaempresa.intranet.noticias.economia</span> e <span class="f_CodeExample">br.com.minhaempresa.intranet.noticias.esportes</span>. Como exemplo, vamos supor que o workspace desse projeto esteja localizado em <span class="f_CodeExample">C:\Lumis\LumisPortalProjects\projeto-intranet\workspace</span>, como mostra a figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-002.png" width="724" height="271" border="0" alt="Deployment-Estrutura-002" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Para que a estrutura do componente seja exportada para o local correto, é necessário configurar a pasta de código-fonte do servidor<span style="font-size: 7pt; vertical-align: super;">1</span>. Para isso, basta acessar <span style="text-decoration: underline;">Configurações &gt; Informações &gt; Configurações do Portal &gt; Configurações de Ambiente</span>, como é mostrado na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-003.png" width="799" height="414" border="0" alt="Deployment-Estrutura-003" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, basta editar as configurações do servidor<span style="font-size: 7pt; vertical-align: super;">2</span> e inserir o caminho base de códigos do servidor apontando para a pasta de workspace do ambiente, como na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-004.png" width="887" height="423" border="0" alt="Deployment-Estrutura-004" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="90%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="127" style="width:127px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 0px;">Observações</p>
+</td>
+<td valign="top" width="1071" style="width:1071px;"><p style="text-align: center; border-color: #a54b40; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-bottom: none;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="1071" style="width:1071px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; border-bottom: none;"> 1 - Para maiores informações sobre configurações do ambiente veja <a href="configuracoes_do_ambiente.htm">Configurações do Ambiente</a>.</p>
+<p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; border-top: none;"> 2 - Caso o ambiente seja um cluster, essa configuração deve ser realizada em todos os servidores, apropriadamente.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Também é necessário definir o caminho de source dos componentes<span style="font-size: 7pt; vertical-align: super;">3</span>. Esse caminho é o caminho relativo ao caminho base de códigos do servidor necessário para chegar à pasta do componente. Nesse exemplo, a pasta é a mesma para todos os componentes e é <span class="f_CodeExample">intranet\src</span>. Esse caminho (quando necessário) vai depender do layout adotado no projeto. Nesse exemplo, todos os arquivos <span class="f_CodeExample">componentdefinition.xml</span> foram alterados adicionando o trecho de código destacado na imagem a seguir:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-005.png" width="751" height="142" border="0" alt="Deployment-Estrutura-005" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após a implantação desses componentes no portal, eles serão exibidos no <a href="gerenciador_de_componentes.htm">Gerenciador de Componentes</a> da seguinte forma:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-006.png" width="1273" height="555" border="0" alt="Deployment-Estrutura-006" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Uma vez que os componentes estejam implantados, a estrutura dos mesmos pode ser criada. Suponha que a seguinte estrutura seja criada:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-007.png" width="922" height="723" border="0" alt="Deployment-Estrutura-007" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Nesse caso, foi decidido que cada componente terá sua própria estrutura:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Componente <span class="f_CodeExample">br.com.minhaempresa.intranet</span> =&gt; canal <span class="f_CodeExample">/Portal/Intranet</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Componente <span class="f_CodeExample">br.com.minhaempresa.intranet.notícias</span> =&gt; canal <span class="f_CodeExample">/Portal/Intranet/Notícias</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Componente <span class="f_CodeExample">br.com.minhaempresa.intranet.notícias.economia</span> =&gt; canal <span class="f_CodeExample">/Portal/Intranet/Economia</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Componente <span class="f_CodeExample">br.com.minhaempresa.intranet.notícias.esportes</span> =&gt; canal <span class="f_CodeExample">/Portal/Intranet/Esportes</span></td></tr></table></div><p>&nbsp;</p>
+<p>É necessário associar os componentes aos seus respectivos canais. Para isso, basta ir em <span style="text-decoration: underline;">Configurações &gt; Deployment e Performance Tuning &gt; Implantação &gt; Componentes</span> e acionar a opção "Associar canal" em cada componente, como na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-008.png" width="1273" height="567" border="0" alt="Deployment-Estrutura-008" style="margin:0 auto;margin:0px;">3</p>
+<p>&nbsp;</p>
+<p>Isso fará com que o portal abra a tela de associação de componente com canal, como na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-009.png" width="924" height="541" border="0" alt="Deployment-Estrutura-009" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Basta associar cada componente a seu respectivo canal. Após isso, já pode-se exportar a estrutura do portal. Para isso, basta, no Portal Studio, clicar com o botão direito sobre o canal que deseja-se exportar, no exemplo iremos exportar o portal inteiro, e em seguida clicar em "Exportar", como na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-010.png" width="288" height="491" border="0" alt="Deployment-Estrutura-010" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>É importante validar que o tipo de exportação selecionado seja "Estrutura", como mostrado abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-011.png" width="929" height="543" border="0" alt="Deployment-Estrutura-011" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>A exportação de estrutura levará em conta cada componente para que sua estrutura seja exportada para o local adequado (desde que o mesmo já esteja associado ao devido canal). Após a exportação ser concluída, pode-se ir na IDE de desenvolvimento e dar um <span style="font-style: italic;">refresh </span>no projeto. Isso fará com que as estruturas de cada componente seja revelada no <span style="font-style: italic;">Project Navigator</span>, como na figura abaixo:</p>
+<p style="text-align: center;"><img src="deployment-estrutura-012.png" width="395" height="468" border="0" alt="Deployment-Estrutura-012" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Com isso, cada componente já possui a sua estrutura exportada no local adequado. No exemplo, a estrutura do componente <span class="f_CodeExample">br.com.minhaempresa.intranet</span> ficaria em <span class="f_CodeExample" style="color: #57769e;">C:\Lumis\LumisPortalProjects\projeto-intranet\workspace</span><span class="f_CodeExample">\</span><span class="f_CodeExample" style="color: #748c43;">intranet\src</span><span class="f_CodeExample">\</span><span class="f_CodeExample" style="color: #604b79;">br\com\minhaempresa\intranet</span><span class="f_CodeExample">\</span><span class="f_CodeExample" style="color: #b97034;">componentfiles\structure</span>.</p>
+<p>&nbsp;</p>
+<p>Onde:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span class="f_CodeExample" style="color: #57769e;">C:\Lumis\LumisPortalProjects\projeto-intranet\workspace </span>é a pasta base de código-fonte do servidor</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span class="f_CodeExample" style="color: #748c43;">intranet\src</span><span class="f_CodeExample" style="color: #57769e;"> </span>é o caminho de código-fonte do componente</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span class="f_CodeExample" style="color: #604b79;">br\com\minhaempresa\intranet</span> é o caminho do componente</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span class="f_CodeExample" style="color: #b97034;">componentfiles\structure </span>é a subpasta da estrutura, dentro do componente</td></tr></table></div><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Genericamente, a estrutura de um componente será exportada em:</p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;pasta&nbsp;de&nbsp;código-fonte&nbsp;do&nbsp;servidor&gt;[/&lt;caminho&nbsp;de&nbsp;código-fonte&nbsp;do&nbsp;componente&gt;]/&lt;caminho&nbsp;do&nbsp;componente&gt;/componentfiles/structure</span></p>
+<p>&nbsp;</p>
+<p>Onde:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>pasta de código-fonte do servidor: é a pasta configurada nas Configurações de Ambiente ou, caso não esteja configurada, <span class="f_CodeExample">&lt;portal install&gt;/lumisdata/source</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>caminho de código-fonte do componente: é o caminho definido no componente, caso haja.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 8pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>caminho do componente: é o caminho equivalente ao identificador do componente (ex.: componente <span class="f_CourierFixed">br.com.minhaempresa.intranet</span> tem um caminho de componente <span class="f_CodeExample">br/com/minhaempresa/intranet</span>).</td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

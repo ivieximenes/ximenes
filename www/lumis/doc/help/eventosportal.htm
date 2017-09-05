@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Eventos do Portal</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?eventosportal.htm"; }
+  else { parent.quicksync('a7.4.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Eventos do Portal</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="gerenciadormensagens.htm">Previous</a>&nbsp;
+     <a href="tarefas_agendadas.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Nesta seção é possível cadastrar observadores (<span style="font-style: italic;">Observers)</span> que são responsáveis por captar determinados eventos do portal.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Observadores</span></p>
+<p style="margin: 14px 0px 0px 0px;">Um observador nada mais é que uma classe <span style="font-style: italic;">JAVA</span> que recebe as informações do portal, através de eventos. Para isso, é necessário registrar a classe no portal através do ambiente administrativo de gerenciador de observadores.</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm149.jpg" width="900" height="375" border="0" alt="portalAdm149" style="margin:15px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplo de observador cadastrado na figura anterior, o "MetaDataPrincipal" é responsável por receber notificações quando um metadado for adicionado, atualizado ou removido. O mesmo ocorre com o "ServiceInterfaceInstance" que é o responsável &nbsp;por receber notificações de instâncias de serviços adicionadas, atualizadas ou removidas.</p>
+<p style="margin: 14px 0px 0px 0px;">Para adicionar uma classe que implementa um observador , deve-se acionar “Adicionar” e preencher as seguintes informações:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm151.jpg" width="900" height="213" border="0" alt="portalAdm151" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome: </span>Nome dado ao observador;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Classe</span>: Nome completo da classe.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Uma vez registrados, os observadores estão habilitados para receber eventos do portal. Os observadores posteriormente cadastrados e os do produto ficam disponíveis na área administrativa para que possam ser desabilitados (quando não há necessidade de utilizá-los para determinado fim) e para serem excluídos. Porém, os observadores padrão do produto, quando removidos, serão novamente registrados quando a opção “Atualizar Padrão” for acionada.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table width="588" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="472" style="width:472px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td valign="middle" width="6" style="width:6px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="588" style="width:588px; border: solid 1px #000000;"><p>Recomenda-se não desabilitar e nem excluir os observadores padrão, pois pode influenciar no correto funcionamento do produto.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

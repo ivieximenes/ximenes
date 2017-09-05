@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 8401 $ $Date: 2007-10-16 22:52:43 -0200 (Tue, 16 Oct 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_dataGrid"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_dataGrid"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_dataGrid">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="initialNumberOfRows" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies the initial number of rows. The calculated node value takes precedence over the initialNumberOfRows attribute value.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="sourceId" type="xsd:string">
+									<xsd:annotation>
+										<xsd:documentation>Identifier of the source from which the initial number of rows will be taken.  The source is loaded at runtime and the number of rows in its result set determines the number of rows.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="headerButtonsAreaStyle" type="xsd:string"/>
+				<xsd:attribute name="itemButtonsAreaStyle" type="xsd:string"/>
+				<xsd:attribute name="showHeader" type="xsd:boolean" default="true"/>
+				<xsd:attribute name="initialNumberOfRows" type="xsd:integer" default="0">
+					<xsd:annotation>
+						<xsd:documentation>The first time the control is being renedered, the number of rows available to the user may be specified here.  If not specified, no rows are included.  This node initialNumberOfRows value takes precedence over this attribute value.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="allowAddRows" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>If this attribute is set to false, the add button to include new rows is not displayed to the end user.  Default is true.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="allowDeleteRows" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>If this attribute is set to false, the delete button in each row is not displayed to the end user. Default is true.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Customização do Workflow Padrão</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?contentcustomizacaoworkflowpadrao.htm"; }
+  else { parent.quicksync('a8.4.5.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Customização do Workflow Padrão</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="contenthyperlinks.htm">Previous</a>&nbsp;
+     <a href="contentconfiguracaopapeis.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">O arquivo <span style="font-style: italic;">default</span> de configuração do <span style="font-style: italic;">workflow</span> está situado em <span style="font-style: italic;">lumisdata/def/lumis/workflow/standard/workflowdefinition.xml</span>. Neste arquivo estão descritas todas as informações referentes aos estados do <span style="font-style: italic;">workflow</span>, as transições de estado, permissões e configurações de <span style="font-style: italic;">layout</span> e cores.</p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">Lumis</span> permite que o processo de <span style="font-style: italic;">workflow</span> seja customizado. Para isso, deve-se definir um novo arquivo <span style="font-style: italic;">workflowdefinition.xml</span> no diretório do novo serviço ou em um outro diretório referente a customizações de <span style="font-style: italic;">XSL</span>, <span style="font-style: italic;">CSS</span>, <span style="font-style: italic;">Workflow</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Além disso, no <span style="font-style: italic;">servicedefinition.xml</span> do serviço customizado, deve estar explícita a <span style="font-style: italic;">tag</span> de <span style="font-style: italic;">workflow</span> habilitado". Isso significa informar ao <span style="font-style: italic;">framework</span> do portal que o <span style="font-style: italic;">workflow</span> será utilizado. Não definir a <span style="font-style: italic;">tag</span>, determina que a opção de escolha do <span style="font-style: italic;">workflow</span> não será exibida no menu de contexto da interface do serviço.</p>
+<p style="margin: 8px 0px 0px 0px;">Se o valor for "<span style="font-style: italic;">true</span>" determina que será exibido o <span style="font-style: italic;">workflow</span> padrão no menu de contexto da interface do serviço, mais a lista de <span style="font-style: italic;">workflows </span>customizados e registrados. Além disso, exibe os papéis do <span style="font-style: italic;">workflow</span> no controle de acesso da instância do serviço, e o formulário do processo de aprovação de conteúdo. O valor "<span style="font-style: italic;">false</span>" faz com que nenhuma lista de <span style="font-style: italic;">workflow</span> no menu de contexto da instância de serviço seja exibida, além de não exibir o formulário de processo de aprovação do conteúdo.  </p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;!--&nbsp;$Revision:&nbsp;10707&nbsp;$&nbsp;$Date:&nbsp;2009-07-20&nbsp;18:47:03&nbsp;-0300&nbsp;(Mon,&nbsp;20&nbsp;Jul&nbsp;2009)&nbsp;$&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;serviceDefinition&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&nbsp;xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;service&nbsp;id="teste"&nbsp;name="STR_SERVICE_NAME"&nbsp;type="lum_content"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;description&gt;STR_SERVICE_DESCRIPTION&lt;/description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; color: #ff0000;">&lt;workflow&nbsp;enabled="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/service&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;..........</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/serviceDefinition&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">No arquivo <span style="font-style: italic;">douidefinition.xml</span>, ao habilitar o metadado &lt;/<span style="font-style: italic;">workflow</span>&gt;, significa que será informado ao <span style="font-style: italic;">framework</span> do <span style="font-style: italic;">content</span> que o <span style="font-style: italic;">workflow</span> será utilizado disponibilizando portanto o <span style="font-style: italic;">autolayout</span> do formulário de aprovação de conteúdo. </p>
+<p style="margin: 8px 0px 0px 0px;">Por fim, para que os serviços do portal possam utilizar o novo <span style="font-style: italic;">workflow</span> é necessário registrá-lo no portal. </p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="108" style="width:108px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="595" style="width:595px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 8px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Todos os arquivos de definição de <span style="font-style: italic;">workflow</span> devem ser nomeados como <span style="font-style: italic;">workflowdefinition.xml</span> e devem estar localizados em seus respectivos diretórios de customizações;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 8px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Para registrá-los, consultar a seção <span style="font-style: italic;"><a href="workflow.htm">Workflow</a></span> .</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Arquivos espelhados nos servidores</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?fs_arquivos_espelhados_nos_servid.htm"; }
+  else { parent.quicksync('a7.6.3.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Arquivos espelhados nos servidores</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="configuracoes_do_ambiente.htm">Previous</a>&nbsp;
+     <a href="fs_arquivos_com_copia_unica.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Essa implementação de sistema de arquivos mantém uma cópia dos arquivos no sistema de arquivos do portal em cada nó do cluster, de forma que o acesso a leitura nesses arquivos é local. Para que uma alteração no sistema de arquivos (adição, edição e remoção) gerada em um nó do cluster seja replicada nos outros nós, o <a href="../api/lumis/portal/cluster/package-summary.html" target="_blank" class="weblink">framework de cluster</a> é utilizado.</p>
+<p>&nbsp;</p>
+<p>Exemplo:</p>
+<p>Imagine que um arquivo do sistema de arquivos do portal é escrito no nó <span style="font-style: italic;">Server1</span>, e que posteriormente esse mesmo arquivo seja lido nos outros nós do cluster. Nesse caso, o arquivo seria distribuído pelo cluster pelo framework de cluster e os acessos a esse arquivo são feitas em pastas locais, como mostrado na figura abaixo:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm-filesystem-clustermirrored.png" width="776" height="387" border="0" alt="portalAdm-FileSystem-ClusterMirrored" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Preparação do sistema de arquivos</span></p>
+<p>Essa implementação de sistema de arquivos requer que os arquivos estejam localizados em pastas locais em cada nó do cluster, como na lista abaixo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 57px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">def</span>: a sua raíz deve ser a pasta <span style="font-family: 'Courier New';">&lt;lumisdata&gt;/shared/def</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 57px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">data</span>: a sua raíz deve ser a pasta <span style="font-family: 'Courier New';">&lt;lumisdata&gt;/shared/data</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 57px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">source</span>: a sua raíz deve ser a pasta <span style="font-family: 'Courier New';">&lt;lumisdata&gt;/shared/source</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 57px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>diretórios estáticos de websites: devem estar localizados no mesmo local configurado no <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>.</td></tr></table></div><p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

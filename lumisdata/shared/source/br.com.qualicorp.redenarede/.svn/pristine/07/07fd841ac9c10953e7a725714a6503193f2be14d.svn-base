@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Revision: 16635 $ $Date: 2014-11-19 18:47:22 -0200 (Wed, 19 Nov 2014) $ -->
+<strings>
+	<string id="STR_SERVICE_NAME">Rede na Rede - Login</string>
+	<string id="STR_SERVICE_DESCRIPTION">Permite autenticar usuários e atualizar seus dados.</string>
+	<string id="STR_LOGIN">Login</string>
+	<string id="STR_LOGIN_INTERNO">Página interna de Login</string>
+	<string id="STR_LOGIN_PRESTADOR">Página de Login dos prestadores</string>
+	<string id="STR_LOGIN_BENEFICIARIO">Página de Login dos beneficiários</string>
+	<string id="STR_LOGIN_HIBRIDO">Página de Login Híbrido</string>
+	<string id="STR_LOGIN_SMART">Página de Login Smart</string>
+	<string id="STR_USER">Usuário</string>
+	<string id="STR_PASSWORD">Senha</string>
+	<string id="STR_CONFIRM_PASSWORD">Confirme senha</string>
+	<string id="STR_PASSWORD_DOES_NOT_MATCH">Senha especificada diferente da confirmação</string>
+	<string id="STR_SUBMIT">Ok</string>
+	<string id="STR_UPDATE">Atualizar</string>
+	<string id="STR_ERROR_MSG">Usuário ou senha inválidos</string>
+	<string id="STR_LOGOUT">Logout</string>
+	<string id="STR_LOGOUT_ACTION">Sair</string>
+	<string id="STR_WELCOME_MSG">Bem vindo</string>
+	<string id="STR_WELCOME_MSG_PORTAL">Bem vindo ao</string>
+	<string id="STR_FIRST_NAME">Nome</string>	
+	<string id="STR_MIDDLE_NAME">Nome do meio</string>	
+	<string id="STR_LAST_NAME">Último nome</string>	
+	<string id="STR_EMAIL">E-Mail</string>
+	<string id="STR_UPDATE_INFO">Atualizar Cadastro</string>
+	<string id="STR_LOGIN_PAGE_TITLE">Login - Lumis Portal</string>
+	<string id="STR_USERS_MSG">Digite o seu usuário e senha nos campos ao lado e acesse a administração do portal.</string>
+	<string id="STR_NAME_PORTAL">Lumis Portal.</string>
+	<string id="STR_SUCCESSFULLY_UPDATED_INFO_MSG">A alteração foi realizada com sucesso.</string>
+	<string id="STR_ERROR_NO_PAGE_TO_REDIRECT">O Lumis não encontrou uma página que você tenha acesso.</string>
+	<string id="STR_ERROR_NO_PAGE_TO_REDIRECT_GUEST"></string>
+	<string id="STR_ERROR_PAGE_ACCESS_DENIED">Acesso negado. Você não tem permissão para acessar a página solicitada.</string>
+	<string id="STR_ERROR_PAGE_ACCESS_DENIED_GUEST"></string>
+	<string id="STR_WELCOME_TO">Bem vindo ao </string>
+	<string id="STR_WELCOME_MESSAGE">Digite o seu usuário e senha nos campos ao lado e acesse a administração do portal.</string>
+	<string id="STR_COPY_RIGHT">Todos os direitos reservados.</string>
+	<string id="STR_ENTER">Entrar</string>
+	<string id="STR_PROFILE_IMAGE">Imagem do perfil</string>
+	<string id="STR_ESQUECI_SENHA_BENEFICIARIO">Esqueci Senha - Beneficiário</string>
+	<string id="STR_ESQUECI_SENHA_BENEFICIARIO_SMART">Esqueci Senha - Beneficiário Smart</string>
+	<string id="STR_ESQUECI_SENHA_PRESTADOR">Esqueci Senha - Prestador</string>
+	<string id="STR_ESQUECI_SENHA_PRESTADOR_SMART">Esqueci Senha - Prestador Smart</string>
+	<string id="STR_ALTERAR_SENHA_PRESTADOR">Alterar Senha - Prestador</string>
+	<string id="STR_ALTERAR_SENHA_PRESTADOR_SMART">Alterar Senha - Prestador Smart</string>
+	<string id="STR_ALTERAR_SENHA_BENEFICIARIO">Alterar Senha - Beneficiário</string>
+	<string id="STR_ALTERAR_SENHA_BENEFICIARIO_SMART">Alterar Senha - Beneficiário Smart</string>
+	
+	<string id="STR_HOME_PRESTADOR">Home - Prestador</string>
+	<string id="STR_HOME_BENEFICIARIO">Home - Beneficiário</string>
+	<string id="STR_PRESTADOR">Logo - Prestador</string>
+	<string id="STR_BENEFICIARIO">Logo - Beneficiário</string>
+	<string id="STR_CURRENT_PASSWORD_DOES_NOT_MATCH">Senha atual não confere.</string>
+	<string id="PASSWORD_DOES_NOT_EQUALS">As senhas não são iguais.</string>
+	
+	<string id="STR_VISAO_BENEFICIARIO">Visão de Beneficiários.</string>
+	<string id="STR_VISAO_PRESTADOR">Visão de Prestadores.</string>
+</strings>

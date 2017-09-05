@@ -1,0 +1,240 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>SPNEGO/Kerberos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?spnego_kerberos.htm"; }
+  else { parent.quicksync('a3.7.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SPNEGO/Kerberos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="autenticacaointegrada.htm">Previous</a>&nbsp;
+     <a href="ntlm.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal </span>inclui uma implementação de autenticação integrada utilizando <span style="font-style: italic;">SPNEGO/Kerberos</span>. Para utilizar esta forma de autenticação é necessário efetuar a configuração apropriada no <span style="font-style: italic;">Lumis Portal</span> e no servidor de autenticação <span style="font-style: italic;">Kerberos</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Para esta forma de autenticação funcionar, é necessário que ambos, o servidor do portal e o navegador cliente tenham acesso ao servidor de autenticação do <span style="font-style: italic;">Kerberos</span> (KDC).</p>
+<p style="margin: 14px 0px 0px 0px;">Os usuários autenticados por esta funcionalidade devem ter login no formato <span style="font-style: italic;">user@mydomain.com</span>.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração no Lumis Portal</span></p>
+<p style="margin: 14px 0px 0px 0px;">No <span style="font-style: italic;">Lumis Portal</span> é necessário configurar a classe <span style="font-family: 'Courier New'; font-style: italic;">lumis.portal.authentication.http.SpnegoAuthenticator</span><span style="font-family: 'Courier New';"> no elemento &lt;</span><span style="font-family: 'Courier New'; font-style: italic;">httpAuthenticator&gt; do lumisportalconfig.xml:</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;security&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;</span><span style="font-family: 'Courier New'; color: #ff0000;">&lt;httpAuthenticator&nbsp;className="lumis.portal.authentication.http.SpnegoAuthenticator"&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;Kerberos&nbsp;Authentication&nbsp;Protocol.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&lt;configurationFile&gt;security/krb5.conf&lt;/configurationFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;/kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/security&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Também é necessário efetuar a devida configuração da conexão com o servidor <span style="font-style: italic;">Kerberos</span>. Para isto, descomentar o elemento <span style="font-style: italic;">kerberos/configurationFile</span>, e se desejado ajustar o caminho para o arquivo desejado:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;security&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;httpAuthenticator&nbsp;className="lumis.portal.authentication.http.SpnegoAuthenticator"&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;Kerberos&nbsp;Authentication&nbsp;Protocol.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;configurationFile&gt;security/krb5.conf&lt;/configurationFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/security&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">No arquivo de configuração do <span style="font-style: italic;">Kerberos</span> (com a configuração exemplo acima, estaria em <span style="font-style: italic;">lumisdata/config/security/krb5.conf</span>), efetuar a configuração correspondente ao ambiente do servidor que será utilizado para autenticação.</p>
+<p style="margin: 14px 0px 0px 0px;">Exemplo de configuração:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[domain_realm]</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">.mydomain.com&nbsp;=&nbsp;MYDOMAIN.COM</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[libdefaults]</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">default_tkt_enctypes&nbsp;=&nbsp;aes128-cts&nbsp;rc4-hmac&nbsp;des3-cbc-sha1&nbsp;des-cbc-md5&nbsp;des-cbc-crc</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">default_tgs_enctypes&nbsp;=&nbsp;aes128-cts&nbsp;rc4-hmac&nbsp;des3-cbc-sha1&nbsp;des-cbc-md5&nbsp;des-cbc-crc</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">permitted_enctypes&nbsp;&nbsp;&nbsp;=&nbsp;aes128-cts&nbsp;rc4-hmac&nbsp;des3-cbc-sha1&nbsp;des-cbc-md5&nbsp;des-cbc-crc</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">default_realm&nbsp;=&nbsp;MYDOMAIN.COM</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">[realms]</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">MYDOMAIN.COM&nbsp;=&nbsp;{</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">kdc&nbsp;=&nbsp;10.200.20.12</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">default_domain&nbsp;=&nbsp;MYDOMAIN.COM</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Configurar um <span style="font-style: italic;">LoginModule</span> com nome <span style="font-style: italic;">LumisPortalSpnego</span> para efetuar a autenticação utilizando esta configuração <span style="font-style: italic;">Kerberos</span> (O local de configuração do <span style="font-style: italic;">LoginModule</span> depende de seu servidor de aplicação. Veja nas instruções de instalação do Lumis Portal em seu servidor de aplicação onde o <span style="font-style: italic;">LoginModule</span> <span style="font-style: italic;">LumisPortal</span> foi instalado, e fazer o equivalente para o exemplificado abaixo. Em ambientes sem instrução específica, como no <span style="font-style: italic;">Tomcat</span>, esta configuração deve ser ajustada em <span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config</span>). Exemplo de configuração do <span style="font-style: italic;">LoginModule</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">LumisPortalSpnego&nbsp;{</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;com.sun.security.auth.module.Krb5LoginModule&nbsp;required</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;debug=false</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;storeKey=true</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;doNotPrompt=true</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;useKeyTab=true</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;keyTab="${lumis.portal.lumisDataPath}/config/security/lumisportal.keytab"</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;principal="lumisportalservice@MYDOMAIN.COM";</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">};</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Na configuração acima, o atributo <span style="font-style: italic;">principal</span> deve corresponder ao usuário que o portal utilizará para acessar o <span style="font-style: italic;">Kerberos</span>. Deve estar presente no <span style="font-style: italic;">keyTab</span> especificado as chaves de autenticação deste usuário.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table align="center" width="605" cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p><span style="font-weight: bold;"> Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p>Para maiores informações sobre configurações do <span style="font-style: italic;">Krb5LoginModule</span>, acesse:</p>
+<p style="margin: 14px 0px 0px 0px;"><a href="http://docs.oracle.com/javase/6/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html" target="_blank" class="weblink">http://docs.oracle.com/javase/6/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração no Active Directory</span></p>
+<p style="margin: 14px 0px 0px 0px;">Para usar o SPNEGO/Kerberos com o <span style="font-style: italic;">Active Directory</span>, os seguintes passos precisam ser feitos:</p>
+<p style="margin: 14px 0px 0px 0px;">1) Criar um usuário para ser utilizado pelo <span style="font-style: italic;">Lumis Portal</span> para processar as autenticações. Pode ser desejado configurar o usuário para que a senha não expire com o tempo, para evitar ter que manualmente alterar a senha e recriar o keytab para o usuário após a expiração. Para efeitos ilustrativos, nos exemplos será assumido que o login deste usuário é <span style="font-style: italic;">lumisportalservice@MYDOMAIN.COM</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">2) Efetuar o registro de SPNs (Service Principal Name) no usuário. Para esta operação, utilize o <span style="font-style: italic;">setspn.exe</span> pela linha de comando em seu servidor <span style="font-style: italic;">Windows</span>. Caso seu servidor <span style="font-style: italic;">Windows</span> não possua o <span style="font-style: italic;">setspn.exe</span>, obtenha-o instalando o <span style="font-style: italic;"><a href="http://go.microsoft.com/fwlink/?LinkId=62270" target="_blank" class="weblink">Windows Support Tools</a></span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Deve ser adicionado ao usuário SPNs na forma de <span style="font-style: italic;">HTTP/&lt;hostname&gt;</span>, onde <span style="font-style: italic;">&lt;hostname&gt;</span> corresponde aos possíveis hosts que podem referenciar o servidor do portal. Por exemplo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">setspn.exe&nbsp;-A&nbsp;HTTP/portalserver&nbsp;lumisportalservice</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">setspn.exe&nbsp;-A&nbsp;HTTP/portalserver.mydomain.com&nbsp;lumisportalservice</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">setspn.exe&nbsp;-A&nbsp;HTTP/intranet.myportal.com&nbsp;lumisportalservice</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">setspn.exe&nbsp;-A&nbsp;HTTP/www.myportal.com&nbsp;lumisportalservice</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Para visualizar os SPNs associados ao usuário, pode-se executar:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table width="100%" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">setspn.exe&nbsp;-L&nbsp;lumisportalservice</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; margin: 0px 0px 0px 25px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table align="center" width="605" cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p><span style="font-weight: bold;"> Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p>Um mesmo SPN não deve ser registrado para mais de um usuário, caso contrário poderá causar problemas durante o processo de autenticação. Portanto se, por exemplo, for alterar qual o usuário o portal utiliza, antes de adicionar os SPNs ao novo usuário deve-se removê-los do usuário antigo.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">3) Gerar um arquivo de <span style="font-style: italic;">keytab</span> contendo as chaves de autenticação para o usuário criado no item (1). Com o JDK é distribuído <span style="font-style: italic;">ktab.exe</span>, no seu diretório <span style="font-style: italic;">bin</span>. Ele deve ser usado para gerar o arquivo de <span style="font-style: italic;">keytab</span>. Ele pode ser executado em qualquer máquina, não precisando necessariamente ser no servidor.</p>
+<p style="margin: 14px 0px 0px 0px;">Para criar o arquivo de <span style="font-style: italic;">keytab</span>, pode-se executar:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table width="100%" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">ktab&nbsp;-a&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;-n&nbsp;0&nbsp;-k&nbsp;lumisportal.keytab</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Após executar este comando ele pedirá a senha do usuário. Em seguida o arquivo especificado (no exemplo <span style="font-style: italic;">lumisportal.keytab</span>) será gerado.</p>
+<p style="margin: 14px 0px 0px 0px;">O argumento "-n 0" indica para a chave ter versão (KVNO) 0 (zero). Quando a chave tem versão zero, seu número de versão não será validado com o número de versão no servidor. Pode-se ao invés de zero colocar o número correto da versão, mas neste caso tem que ser igual ao que está armazenado no servidor, caso contrário a chave não funcionará. Para descobrir o número da chave no servidor do <span style="font-style: italic;">Active Directory</span>, execute <span style="font-style: italic;">ADSIEdit.msc</span>, vá até o usuário, abra suas propriedades e veja o valor do atributo <span style="font-style: italic;">msDS-KeyVersionNumber</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table align="center" width="605" cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p><span style="font-weight: bold;"> Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p>No <span style="font-style: italic;">ktab</span> distribuído com o Java 6 não há o argumento "-n &lt;kvno&gt;", não sendo possível explicitar o número da versão a ser usada. Ele simplesmente usa um número incremental iniciando em 1. Portanto se o número de versão no servidor for 6, precisaria executar esse comando 6 vezes seguidas para o número de versão no arquivo de <span style="font-style: italic;">keytab</span> crescer até 6. Para poder usar o argumento "-n &lt;kvno&gt;" como no exemplo acima, utilize o <span style="font-style: italic;">ktab</span> distribuído com o Java 7.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Para visualizar informações sobre as chaves que estão armazenadas em um arquivo de <span style="font-style: italic;">keytab,</span> execute o comando como o exemplo abaixo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table width="100%" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">C:\Java\jdk1.7.0\bin&gt;ktab&nbsp;-l&nbsp;-e&nbsp;-t&nbsp;-k&nbsp;lumisportal.keytab</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">Keytab&nbsp;name:&nbsp;lumisportal.keytab</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">KVNO&nbsp;Timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Principal</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">----&nbsp;--------------&nbsp;----------------------------------------------------------------------</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;0&nbsp;21/09/12&nbsp;18:31&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;(17:AES128&nbsp;CTS&nbsp;mode&nbsp;with&nbsp;HMAC&nbsp;SHA1-96)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;0&nbsp;21/09/12&nbsp;18:31&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;(23:RC4&nbsp;with&nbsp;HMAC)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;0&nbsp;21/09/12&nbsp;18:31&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;(16:DES3&nbsp;CBC&nbsp;mode&nbsp;with&nbsp;SHA1-KD)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;0&nbsp;21/09/12&nbsp;18:31&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;(3:DES&nbsp;CBC&nbsp;mode&nbsp;with&nbsp;MD5)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;0&nbsp;21/09/12&nbsp;18:31&nbsp;lumisportalservice@MYDOMAIN.COM&nbsp;(1:DES&nbsp;CBC&nbsp;mode&nbsp;with&nbsp;CRC-32)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Após criar o arquivo de <span style="font-style: italic;">keytab</span>, mova-o para a instalação do portal e o referencie no atributo <span style="font-style: italic;">keyTab</span> do <span style="font-style: italic;">Login Module LumisPortalSpnego</span>, como exemplificado anteriormente.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Navegadores Web</span></p>
+<p style="margin: 14px 0px 0px 0px;">Uma vez o portal configurado corretamente, os navegadores podem efetuar automaticamente a autenticação dependendo de suas característica e configurações:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">Internet Explorer</span>: Por padrão efetua a autenticação automática se o endereço acessado for considerado zona de intranet. Pode-se utilizar a funcionalidade de política de grupos do <span style="font-style: italic;">Active Directory</span> para automaticamente configurar as máquinas do domínio para considerarem os endereços do portal como zona de intranet, caso já não seja o caso.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">Google Chrome</span>: Não possui configuração específica, mas utiliza a mesma configuração que o <span style="font-style: italic;">Internet Explorer</span>. </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">Mozilla Firefox</span>: Acessar <span style="font-style: italic;">about:config</span> e incluir no parâmetro <span style="font-style: italic;">network.negotiate-auth.trusted-uris</span> os endereços, separados por vírgula, que se confia para efetuar a autenticação automática. Em ambiente corporativos, pode-se usar a funcionalidade do <span style="font-style: italic;">Firefox</span> de difusão das configurações no ambiente corporativo para efetuar tal configuração nas máquinas clientes do ambiente.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table align="center" width="605" cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p><span style="font-weight: bold;"> Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="607" style="width:607px; border: solid 1px #000000;"><p>A autenticação por <span style="font-style: italic;">SPNEGO/Kerberos</span> pode não funcionar se o navegador web sendo utilizado estiver na mesma máquina que está executando o <span style="font-style: italic;">Lumis Portal</span>. É necessário acessar o portal usando o navegador em outra máquina.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Resolução de Problemas</span></p>
+<p style="margin: 14px 0px 0px 0px;">Caso a autenticação automática não esteja funcionando como esperado, algumas formas de obter mais informações afim de tentar resolver o problema são:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Verificar informações presentes nos logs do Lumis Portal.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se não estiver habilitado, em <span style="font-style: italic;">lumislogconfig.xml </span>habilitar o log de depuração da categoria <span style="font-style: italic;">lumis.portal.authentication.http.SpnegoAuthenticator</span> (na configuração padrão todos os logs de depuração já vêm habilitados escrevendo em lumisdata/log/lumis/debug/lumis-debug.*).</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Habilitar mensagens de depuração do <span style="font-style: italic;">Login Module</span>, colocando parâmetro <span style="font-style: italic;">debug=true</span> no <span style="font-style: italic;">com.sun.security.auth.module.Krb5LoginModule</span> no <span style="font-style: italic;">LumisPortalSpnego</span>. Estas mensagens são normalmente emitidas na saída padrão (System.out) da aplicação.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Habilitar mensagens de depuração do <span style="font-style: italic;">Kerberos</span>, incluindo no JVM do servidor de aplicação a propriedade de sistema <span style="font-style: italic;">sun.security.krb5.debug</span> com valor <span style="font-style: italic;">true</span>. Estas mensagens são normalmente emitidas na saída padrão (System.out) da aplicação.</td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

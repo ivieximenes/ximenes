@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+ <head> 
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+  <title>Qualicorp</title> 
+  <link href="css/reset.css" rel="stylesheet" type="text/css" media="all" /> 
+  <link href="css/main.css" rel="stylesheet" type="text/css" media="all" /> 
+  <link href="css/bjqs.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
+  
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-1512888-21', 'auto');
+	  ga('send', 'pageview');
+ </script>
+ </head> 
+ <body> 
+   <!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TJQWNB"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TJQWNB');</script>
+  <!-- End Google Tag Manager -->
+  
+  <header id="header" class="logged"> 
+   <a class="logo" href="#" page:holder="logo"><img src="assets/logo.png" /></a> 
+   <ul class="nav-menu" page:holder="menu"> 
+    <li><a href="#">Menu 1</a></li> 
+    <li class="divider"></li> 
+    <li><a href="#">Menu 2</a></li> 
+    <li class="divider"></li> 
+    <li><a href="#">Menu 3</a></li> 
+    <li class="divider"></li> 
+    <li><a href="#">Menu 4</a></li> 
+    <li class="divider"></li> 
+    <li><a href="#">Menu 5</a></li> 
+    <li class="divider"></li> 
+    <li><a href="#">Menu 6</a></li> 
+   </ul> 
+   <div class="sec-nav-menu"> 
+    <div class="search" page:holder="busca"> 
+     <input type="text" /> 
+     <a href="#"></a> 
+    </div> 
+    <div class="login logged"> 
+     <p page:holder="logout">Olá, nome usuário | <a href="#">sair</a></p> 
+    </div> 
+   </div> 
+  </header> 
+  <page:dummy page:holder="menu_vertical"></page:dummy>
+  <div class="main-banner logged" page:holder="banner"> 
+   <h1>Banner Rotativo</h1> 
+  </div> 
+  <div class="services half" page:holder="servicos"> 
+   <header class="header-blue"> 
+    <h1>Serviços</h1> 
+   </header> 
+   <a href="#" class="service">Chamada serviço</a> 
+   <a href="#" class="service">Chamada serviço</a> 
+   <a href="#" class="service">Chamada serviço</a> 
+   <a href="#" class="service">Chamada serviço</a> 
+  </div> 
+  <div class="news half last" page:holder="noticias"> 
+   <header class="header-blue"> 
+    <h1>Notícias</h1> 
+   </header> 
+   <div class="headline"> 
+    <img src="assets/imagem.jpg" /> 
+    <h2>Título da Notícia</h2> 
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p> 
+   </div> 
+   <div class="headline"> 
+    <img src="assets/imagem.jpg" /> 
+    <h2>Título da Notícia</h2> 
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat.</p> 
+   </div> 
+  </div> 
+  <div class="footer"> 
+	  <div class="footer-div" style="float: left;">
+		<a class="footer-div-content" href="http://www.ans.gov.br/" target="_blank" onclick="ga('send', 'event', 'botao', 'clique', 'footer_logoans');" >
+			<img src="assets/ans_1.png" alt="ANS" title="ANS">
+		</a>
+		</div>
+	  <div>
+  	  </div>  
+	  <div class="footer-div" style="float: right;">
+		<a class="footer-div-content" href="http://www.ans.gov.br/" target="_blank" style="right:0" onclick="ga('send', 'event', 'botao', 'clique', 'footer_logoans');">
+			<img src="assets/ans_gamasaude_completa_portal.png" alt="N�mero ANS" title="N�mero ANS">
+		</a>
+	  </div>
+  	</div>
+ </body>
+</html>

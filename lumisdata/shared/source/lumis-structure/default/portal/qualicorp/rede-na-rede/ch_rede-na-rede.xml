@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851324</id>
+  <name>Rede na Rede</name>
+  <position>1</position>
+  <local-group-prefix>gsp</local-group-prefix>
+  <friendly-url-specific-pattern-enabled>true</friendly-url-specific-pattern-enabled>
+  <access-control-list>
+    <entries>
+      <entry principal-id="0000000050C9BD630150CD6AE2AC0505">
+        <allow-permissions>622848</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <property-bag>
+    <property name="lumis.portal.url.forceFirstPageLinkToChannelLink">
+      <default-values>
+        <value>true</value>
+      </default-values>
+    </property>
+  </property-bag>
+  <themes>
+    <theme>br.com.qualicorp.redenarede.theme.novo-qualicorp-redenarede</theme>
+  </themes>
+  <groups>
+    <group alias="Publicador">
+      <id>0000000050C9BD630150CD6AE2AC0505</id>
+      <name>Publicador GSP</name>
+    </group>
+    <group alias="beneficiario">
+      <id>8A489E1F50A956990150A976625D15AA</id>
+      <name>Beneficiário</name>
+    </group>
+    <group alias="prestador">
+      <id>8A489E1F50A956990150A976982115B8</id>
+      <name>Prestador</name>
+    </group>
+  </groups>
+</channel>

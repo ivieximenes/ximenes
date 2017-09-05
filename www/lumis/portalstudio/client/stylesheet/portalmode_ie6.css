@@ -1,0 +1,36 @@
+/* $Revision: 13109 $ $Date: 2011-06-03 10:10:41 -0300 (Fri, 03 Jun 2011) $ */
+/*lumbar ie6 only css*/
+
+#lumbar ul.menu_modeoptions li a {
+	height:1% !important;
+	background:url(../images/bg_transparent.png) repeat top left;
+}
+#lumbar ul.menu_modeswap li a {
+	background:url(../images/bg_transparent.png) repeat top left;
+}
+#lumbar ul.menu_dd li a, #lumbar ul.menu_modeswap li a {
+	height:28px !important;
+	float:left !important;
+}
+#lumbar ul.menu_dd li a img.ddarrow, #lumbar ul.menu_modeswap li a img.ddarrow {
+	margin:7px 0 0 0 !important;
+	padding:2px 0 0 3px !important;
+}
+#lumbar ul.menu_dd li ul.dd li, #lumbar ul.menu_modeswap li ul.dd li {
+	margin-top:-1px !important;
+}
+#lumbar ul.menu_dd li ul.dd li a, #lumbar ul.menu_modeswap li ul.dd li a {
+	height:1% !important;
+	background:#222;
+	padding:7px 3px 7px 12px !important;
+}
+#lumbar ul.menu_dd li ul.dd li a:hover, #lumbar ul.menu_modeswap li ul.dd li a:hover {
+	background:#3c3c3c !important;
+}
+
+
+
+
+
+
+

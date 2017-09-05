@@ -1,0 +1,430 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+		<link rel="stylesheet" href="css/normalize.min.css"> 
+		<link rel="stylesheet" href="vendor/slick.css"> 
+		<link rel="stylesheet" href="css/smart.css">
+
+		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+	</head>
+	<body>
+
+		<div class="smt-skipnav visuallyhidden" data-focus-class="true">
+			<ol>
+				<li><a href="#main">Ir para conteúdo</a></li>
+				<li><a href="#menu">Ir para menu principal</a></li>
+				<li><a href="#search">Ir para busca</a></li>
+				<li><a href="#footer">Ir para rodapé</a></li>
+			</ol>    
+		</div>
+
+		<header class="smt-header">
+			<div class="smt-header-contents">
+				<div class="smt-header-logo">
+					<a href="/" class="smt-logo">
+						<h1 class="">
+							Smart 
+							<small>Saúde com inteligência</small>
+						</h1>
+					</a>
+				</div>
+				<div class="smt-header-actions">
+					<div class="smt-search-holder" data-focus-class="true">
+						<input id="smart-header-search-mobile" class="visuallyhidden smt-toggler" type="checkbox"/>
+						<label for="smart-header-search-mobile" class="smt-toggler-search smt-icon-toggler">Pesquisar</label>
+						<form class="smt-search-form" id="search">
+							<label for="smart-header-search" class="visuallyhidden">Pesquisar no site</label>
+							<input data-focus-class="true" class="smt-input smt-search" id="smart-header-search" type="search" placeholder="Pesquisar no site" name="search"/>
+							<button type="submit" class="visuallyhidden">Pesquisar</button>
+						</form>
+					</div>
+					<div class="smt-header-login">
+						<input id="smart-header-login" data-modal="hide" class="visuallyhidden smt-toggler smt-modal-toggler" type="checkbox"/>
+						<label for="smart-header-login" class="smt-toggler-login smt-icon-toggler">Login</label>
+						<div class="smt-modal-login smt-modal">
+							<div class="smt-modal-backdrop">
+								<div class="smt-modal-wrapper">
+									<a class="smt-modal-close" href="#">Fechar modal</a>
+									<article class="smt-modal-popup">
+										<header class="smt-modal-header">
+											<h3 class="smt-modal-title">Faça seu <span class="smt-smile">login</span></h3>
+										</header>
+										<div class="smt-modal-body">
+											<div class="smt-modal-content">                                            
+												<input class="smt-checkbox visuallyhidden" checked type="radio" name="smart-login-profile" id="smart-login-cliente"/>
+												<label class="smt-form-label smt-label-checkbox" for="smart-login-cliente">Sou um cliente</label> 
+												<input class="smt-checkbox visuallyhidden" type="radio" name="smart-login-profile" id="smart-login-prestador"/>
+												<label class="smt-form-label smt-label-checkbox" for="smart-login-prestador">Sou um prestador</label>
+												<form class="smt-hidden-form smt-client-login">
+													<div class="smt-input-holder">
+														<label for="smart-carteirinha-cliente" class="smt-form-label visuallyhidden"></label>
+														<input class="smt-input" type="tel" placeholder="Carteirinha ou CPF" name="client-id"/>
+														<label for="smart-carteirinha-cliente" class="smt-label-warn">Somente números</label>
+													</div>
+													<div class="smt-input-holder">
+														<label for="smart-password" class="smt-form-label visuallyhidden"></label>
+														<input class="smt-input" type="password" placeholder="Senha" name="client-password" maxlength="11"/>
+														<label for="smart-password" class="smt-label-warn">Atenção: sua senha deve possuir ao menos 8 caracteres e conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula e 1 caractere especial.</label>
+													</div>
+													<div class="smt-input-holder smt-input-actions">
+														<a href="#" class="smt-form-action">Esqueci minha senha</a>
+														<button type="submit" class="smt-main-button">entrar</button>
+													</div>
+												</form>
+												<form class="smt-hidden-form smt-provider-login">
+													<div class="smt-input-holder">
+														<label for="smart-carteirinha-cliente" class="smt-form-label visuallyhidden"></label>
+														<input class="smt-input" type="email" placeholder="E-mail" name="provider-email"/>
+													</div>
+													<div class="smt-input-holder">
+														<label for="smart-password" class="smt-form-label visuallyhidden"></label>
+														<input class="smt-input" type="password" placeholder="Senha" name="provider-password" maxlength="8"/>
+														<label for="smart-password" class="smt-label-warn">Atenção: sua senha possui entre 6 a 8 caracteres e contêm ao menos 1 número, 1 letra e 1 caractere especial (#, @, &amp; ou _).</label>
+													</div>
+													<div class="smt-input-holder smt-input-actions">
+														<a href="#" class="smt-form-action">Esqueci minha senha</a>
+														<button type="submit" class="smt-main-button">entrar</button>
+													</div>
+												</form>
+											</div>
+											<footer class="smt-modal-footer">
+												<div class="smt-modal-message">
+													<p>Não tem uma conta? <a href="#" id="modal-signup" data-remote-modal="#smart-signup">Cadastre-se</a></p>
+												</div>
+											</footer>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="smt-header-menu" id="menu">
+						<input id="smart-header-menu" data-modal="hide" class="smt-menu-toggle smt-toggler visuallyhidden" type="checkbox"/>
+						<label for="smart-header-menu" class="smt-toggler-menu smt-icon-toggler">Menu</label>  
+						<ul class="smt-menu">
+							<li class="smt-menu-item smt-menu-logo">
+							   <div class="smt-menu-logo-wrapper">
+								   <a href="/" class="smt-logo">
+										<span class="">
+											Smart 
+											<small>Saúde com inteligência</small>
+										</span>
+									</a>
+								</div> 
+							</li>
+							<li class="smt-menu-item"><a href="" class="smt-menu-link">Conheça o Smart</a></li>
+							<li class="smt-menu-item"><a href="" class="smt-menu-link">Aplicativos</a></li>
+							<li class="smt-menu-item"><a href="" class="smt-menu-link">Rede credenciada</a></li>
+							<li class="smt-menu-item"><a href="" class="smt-menu-link">Faz bem para você</a></li>
+							<li class="smt-menu-item"><a href="" class="smt-menu-link">Fale conosco</a></li>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="smt-carousel smt-carousel-wrapper">
+				<div class="smt-carousel-items">
+					<div class="smt-carousel-slide">
+						<div class="smt-carousel-content">
+							<h1 class="smt-carousel-title">Faz bem pra você</h1>
+							<a class="smt-main-button" href="#">Voltar para a lista de notícias</a>
+						</div><!--
+						--><img class="smt-carousel-image" src="img/banner-faz-bem.png" alt="ilustração de um notebook com imagens iconográficas"/>
+					</div>
+				</div>
+			</section>
+
+			<nav class="smt-breadcrumb">
+				<ul class="smt-breadcrumb-list">
+					<li>Você está em</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Faz bem pra você</a></li>
+					<li>DPOC - Conheça a doença que pode dar uma canseira na sua qualidade de vida.</li>
+				</ul>
+			</nav>
+			
+			<article class="smt-news-detail">
+				<header class="smt-news-detail-header">
+					<div class="smt-news-header-wrapper">
+						<figure class="smt-header-image">
+							<img src="img/art-01.png" alt="Ícone de uma sirene de alerta, ligada."/>
+						</figure>
+						<div class="smt-header-content">
+							<h2 class="smt-section-title">DPOC - Conheça a doença que pode dar uma canseira na sua qualidade de vida.</h2>
+							<time class="smt-news-date">18/10/2016</time>
+							<p>A DPOC é uma doença pulmonar e está entre as que mais matam, segundo a Organização Mundial da Saúde.</p>
+						</div>
+					</div>
+				</header>
+				<div class="smt-section-contents">
+					<section class="smt-news-detail-section">
+						<p>A DPOC é uma das doenças que mais matam e, segundo a Organização Mundial da Saúde, até 2020, subirá ao pódio e será a terceira principal causa de morte no mundo.</p>
+						<p>Cerca de 20% dos fumantes desenvolvem essa doença e, só no Brasil, cerca de 7 milhões de pessoas já sofrem com ela.</p>
+						<p>Ainda assim, muita gente não sabe o que é a DPOC - Doença Pulmonar Obstrutiva Crônica. Prova disso? Somente 12% dos pacientes são diagnosticados. Tome fôlego, a gente te conta mais.</p>
+					</section>
+					<section class="smt-news-detail-section">
+						<h3>Que doença é essa?</h3>
+						<p>Tecnicamente é chamada de doença crônica - aquelas doenças que geralmente se desenvolvem lentamente e duram um tempão. Por isso, elas também levam muito tempo para serem curadas e, em alguns casos, podem não ter cura.</p>
+						<p>Por exemplo: diabetes, hipertensão, asma.</p>
+						<p>A DPOC é uma doença crônica do pulmão que vai debilitando e dificultando a respiração. É considerada também uma doença “guarda-chuva”, já que traz consigo outras doenças associadas, como a bronquite crônica e o enfisema pulmonar, causando a destruição de pequenas estruturas que levam oxigênio para o sangue.</p>
+						<p>A DPOC começa com falta de ar em hábitos comuns do cotidiano, como subir escadas ou fazer uma caminhada mais rápida. Só que, conforme o tempo vai passando, essa falta de ar, que os médicos chamam de dispneia, vai ficando mais forte e surgindo depois de esforços cada vez menores. Falta ar para tudo. Nas fases mais graves, o paciente fica cansado até mesmo parado ou deitado. Atividades simples, como tomar banho, são impossíveis.</p>
+						<p>Grande parte dos casos de DPOC acontece em pessoas que fumaram por muitos anos ou tiveram tuberculose. Fique atento.</p>
+					</section>
+					<section class="smt-news-detail-section">
+						<h3>Outros perigos causadores</h3>
+						<p>O fumo não é o único agente causador. Conviver com fumantes, o chamado fumante passivo, pode ser tão perigoso quanto fumar. Genética, poluição, poeira constante ou produtos químicos podem contribuir também para o desenvolvimento da doença.</p>
+					</section>
+					<section class="smt-news-detail-section">
+                        <h3>Estou sem ar e tossindo, eu tenho DPOC?</h3>
+                        <p>Não é bem assim. Outros sintomas também estão associados à doença.</p>
+                        <p>Além da falta de ar e tosse constantes, a DPOC tem como marca registrada a produção de catarro e a limitação progressiva para atividades corriqueiras. Segundo a Iniciativa Global, a DPOC pode ser classificada de acordo com seus graus de avanço e respectivos sintomas:</p>
+                        <ul>
+                        	<li>Grau A - O nível do fluxo aéreo, que é a entrada e saída do ar, ainda está acima dos 50%, ou seja, você quase nem percebe. Nesse grau, os principais sintomas são a tosse e o catarro constantes.</li>
+                        	<li>Grau B - O nível do fluxo aéreo continua parecido com o nível do Grau A, mas já há um aumento da falta de ar, tosse e catarro, principalmente durante esforços. Aqui, a preocupação já começa a bater à porta.</li>
+                        	<li>Grau C - Os sintomas são parecidos aos do grau anterior, mas a função pulmonar já está abaixo dos 50%. Você já sente falta de ar quase sempre.</li>
+                        	<li>Grau D - Neste grau, a capacidade para praticar exercícios físicos e tarefas cotidianas já é bem menor. Muito cansaço e dificuldade de respirar reduzem significativamente sua qualidade de vida.</li>
+                        </ul>
+                        <p>Como em outras doenças, quanto mais cedo a descoberta, menores os danos e mais fácil o tratamento. Fique atento: se você é fumante há mais de dez anos, é aconselhável consultar um médico da sua confiança para uma avaliação detalhada.</p>
+                    </section>
+                    <section class="smt-news-detail-section">
+						<h3>Retomando o fôlego</h3>
+						<p>Tratar a DPOC significa combinar vários métodos. Envolve mudanças de hábitos, medicação, fisioterapia, imunização e acompanhamento contínuo. Veja:</p>
+						<ul>
+                        	<li><em>Tchau, cigarro</em> - obviamente, pacientes com DPOC devem cortar o mal pela raiz. Cigarro, nem pensar.</li>
+                        	<li><em>Vacinação em dia</em> - portadores de DPOC devem se vacinar todos os anos contra a gripe e contra o pneumococo (bactéria que pode causar meningite, artrite, pneumonias, entre outras doenças respiratórias).</li>
+                        	<li><em>Medicamentos</em> - utilizados para aliviar sintomas, como secreções e falta de ar.</li>
+                        	<li><em>Fisioterapia</em> - técnicas de reabilitação respiratória têm apresentado resultados animadores, melhorando a resistência e proporcionando mais qualidade de vida ao paciente.</li>
+                        	<li><em>Oxigenoterapia</em> - nos casos mais grave, pode ser necessário o uso de oxigênio. Essa técnica auxilia na respiração e pode, inclusive, aumentar a sobrevida dos portadores da doença.</li>
+                        </ul>
+                        <p>As consequências da DPOC, infelizmente, não podem ser curadas, mas podem ser controladas, trazendo mais qualidade de vida ao paciente. A chave é, o quanto antes, ter o diagnóstico assertivo e o acompanhamento adequado e contínuo. Por isso, fique de olho nos sintomas e fale sempre com o seu médico em caso de dúvidas.</p>
+					</section>
+					<section class="smt-news-detail-section">
+						<h3>Mas, afinal, qual a diferença entre DPOC e asma?</h3>
+						<p>Sim, elas são muito parecidas e isso gera muita confusão. As duas são doenças pulmonares crônicas. As duas inflamam os brônquios. As duas deixam o paciente sem ar, com muito cansaço, catarro e tosse. Diferenças importantes são que a asma geralmente surge na infância ou adolescência, enquanto a DPOC aparece lá depois dos 40 anos. A asma acontece em etapas ou crises, e a DPOC progride constantemente e com consequências irreversíveis para o pulmão.</p>
+						<p>FONTES:</p>
+						<p>Site da Associação Brasileira de Portadores de DPOC. 16 de setembro de 2016.
+						<br/>Disponível em: <a href="http://www.dpoc.org.br/">http://www.dpoc.org.br/</a></p>
+						<p>DPOC. Site Drauzio Varella. 18 de outubro de 2011.
+						<br/>Disponível em: <a href="http://drauziovarella.com.br/dependencia-quimica/tabagismo/dpoc/">http://drauziovarella.com.br/dependencia-quimica/tabagismo/dpoc/</a></p>
+						<p>Site AbcMed Informações Sobre a sua Saúde. 16 de setembro de 2016.
+						<br/>Disponível em: <a href="http://www.abc.med.br/p/366449/doenca+pulmonar+obstrutiva+cronica+dpoc+o+que+e+quais+as+causas+e+os+sintomas+como+sao+o+diagnostico+e+o+tratamento+e+a+evolucao.htm">http://www.abc.med.br/p/366449/doenca+pulmonar+obstrutiva+cronica+dpoc+o+que+e+quais+as+causas+e+os+sintomas+como+sao+o+diagnostico+e+o+tratamento+e+a+evolucao.htm</a></p>
+						<p><a href="http://www.tuasaude.com/enfisema-pulmonar/">http://www.tuasaude.com/enfisema-pulmonar/</a></p>
+					</section>
+				</div>
+			</article>
+
+			<section class="smt-section smt-section-news details-highlights">
+				<div class="smt-section-wrapper">
+					<header class="smt-section-header">
+						<div class="smt-header-content">
+							<h2 class="smt-section-title">Outros destaques</h2>
+						</div>
+					</header>
+					<div class="smt-section-contents">
+						<div class="smt-news-carousel smt-carousel-wrapper">
+							<ul class="smt-news-items">
+								<li class="smt-news-slide">
+									<a class="smt-link-block" href="#">
+										<img class="smt-news-image" src="img/art-01.png" alt="Ícone de uma sirene de alerta, ligada."/>
+										<h3 class="smt-news-title">Desconfie de um médico que mal te olha e já pede exames</h3>
+										<p class="smt-news-introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique temporibus quibusdam qui cum minus dignissimos.</p>
+									</a>
+								</li>
+								<li class="smt-news-slide">
+									<a class="smt-link-block" href="#">
+										<img class="smt-news-image" src="img/art-01.png" alt="Ícone de uma sirene de alerta, ligada."/>
+										<h3 class="smt-news-title">Desconfie de um médico que mal te olha e já pede exames</h3>
+										<p class="smt-news-introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique temporibus quibusdam qui cum minus dignissimos.</p>
+									</a>
+								</li>
+								<li class="smt-news-slide">
+									<a class="smt-link-block" href="#">
+										<img class="smt-news-image" src="img/art-01.png" alt="Ícone de uma sirene de alerta, ligada."/>
+										<h3 class="smt-news-title">Desconfie de um médico que mal te olha e já pede exames</h3>
+										<p class="smt-news-introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique temporibus quibusdam qui cum minus dignissimos.</p>
+									</a>
+								</li>
+								<li class="smt-news-slide">
+									<a class="smt-link-block" href="#">
+										<img class="smt-news-image" src="img/art-01.png" alt="Ícone de uma sirene de alerta, ligada."/>
+										<h3 class="smt-news-title">Desconfie de um médico que mal te olha e já pede exames</h3>
+										<p class="smt-news-introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique temporibus quibusdam qui cum minus dignissimos.</p>
+									</a>
+								</li>
+							</ul>
+							<div class="smt-section-actions">
+								<a href="#" class="smt-secondary-button">Ver todos os artigos</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="smt-footer" id="footer">
+			<nav class="smt-footer-nav">
+				<ul class="smt-footer-nav-items">
+					<li class="smt-footer-item"><a href="" class="smt-footer-link">O Smart</a></li>
+					<li class="smt-footer-item"><a href="" class="smt-footer-link">Aplicativos</a></li>
+					<li class="smt-footer-item"><a href="" class="smt-footer-link">Rede credenciada</a></li>
+					<li class="smt-footer-item"><a href="" class="smt-footer-link">Faz bem para você</a></li>
+					<li class="smt-footer-item"><a href="" class="smt-footer-link">Fale conosco</a></li>      
+				</ul>
+				<dl class="smt-contacts">
+					<dt class="smt-contact-title">Central de atendimento, central de cuidados e SAC - atendimento 24 horas</dt>
+					<dd class="smt-contact-info"><tel>0800 779 9005</tel> / <tel>11 3004 4633</tel></dd>
+					<dt class="smt-contact-title">Central de atendimento ao prestador</dt>
+					<dd class="smt-contact-info"><tel>0800 779 9005</tel></dd>
+					<dt class="smt-contact-title">Ouvidoria</dt>
+					<dd class="smt-contact-info"><a href="mailto:ouvidoria@gamasaudesgp">ouvidoria@gamasaudegsp.com.br</a></dd>
+				</dl>
+				<aside class="smt-legal">
+					<ul class="smt-legal-logos">
+						<li class="smt-legal-item"><img src="img/logo-smart.svg" alt="Logo Smart" class="smt-logo-legal"></li>
+						<li class="smt-legal-item"><img src="img/logo-gama-saude.svg" alt="Logo Gama Saúde" class="smt-logo-legal"></li>
+						<li class="smt-legal-item"><img src="img/ans.png" alt="Logo ANS - Disque ANS: 0800 701 9858" class="smt-logo-legal"></li>
+						<li class="smt-legal-item"><img src="img/ans-numero.png" alt="ANS nº 407011" class="smt-logo-legal"></li>
+					</ul>
+				</aside>
+			</nav>
+		</footer>
+		<aside class="smt-modals">
+			<article>
+				<input id="smart-signup" data-modal="hide" class="visuallyhidden smt-toggler smt-modal-toggler" type="checkbox"/>
+				<div class="smt-modal-signup smt-modal">
+					<div class="smt-modal-backdrop">
+						<div class="smt-modal-wrapper">
+							<a class="smt-modal-close" href="#">Fechar modal</a>
+							<article class="smt-modal-popup">
+								<header class="smt-modal-header">
+									<h3 class="smt-modal-title">Cadastre-se</h3>
+								</header>
+								<div class="smt-modal-body">
+									<div class="smt-modal-content">                                            
+										<input class="smt-checkbox visuallyhidden" checked type="radio" name="smart-signup-profile" id="smart-signup-cliente"/>
+										<label class="smt-form-label smt-label-checkbox" for="smart-signup-cliente">Sou um cliente</label> 
+										<input class="smt-checkbox visuallyhidden" type="radio" name="smart-signup-profile" id="smart-signup-prestador"/>
+										<label class="smt-form-label smt-label-checkbox" for="smart-signup-prestador">Sou um prestador</label>
+										<form class="smt-hidden-form smt-client-signup">
+											<div class="smt-input-holder">
+												<label for="smart-cpf" class="smt-form-label visuallyhidden">CPF</label>
+												<input class="smt-input" type="tel" placeholder="CPF" name="client-id"/>
+												<label for="smart-carteirinha-cliente" class="smt-label-warn">Menores de 18 anos que não possuem CPF não precisam preencher este campo</label>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-mother-name" class="smt-form-label visuallyhidden">Nome da mãe</label>
+												<input class="smt-input" type="text" placeholder="Nome da mãe" name="client-mother-name"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-card" class="smt-form-label visuallyhidden">Nº da carteirinha</label>
+												<input class="smt-input" type="text" placeholder="Nº da carteirinha" name="client-card-number"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-date" class="smt-form-label visuallyhidden">Data de nascimento</label>
+												<input class="smt-input" type="text" placeholder="Data de nascimento" name="client-birthdate"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-password" class="smt-form-label visuallyhidden">Senha</label>
+												<input class="smt-input" type="password" placeholder="Senha" name="client-password" maxlength="11"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-password-confirm" class="smt-form-label visuallyhidden">Confirme a senha</label>
+												<input class="smt-input" type="password" placeholder="Confirme a senha" name="client-password" maxlength="11"/>
+											</div>
+											<div class="smt-input-holder smt-input-actions">
+												<button type="submit" class="smt-main-button">entrar</button>
+											</div>
+										</form>
+										<form class="smt-hidden-form smt-provider-signup">
+											<div class="smt-input-holder">
+												<label for="smart-nome-prestador" class="smt-form-label visuallyhidden">Nome/Nome Fantasia</label>
+												<input class="smt-input" type="text" placeholder="Nome/Nome Fantasia" name="provider-name"/>
+											</div>
+											<div class="smt-input-holder">
+												<input class="smt-checkbox visuallyhidden" type="radio" name="smart-signup-profile" id="smart-provider-select-cpf"/>
+												<label class="smt-form-label smt-label-checkbox" for="smart-provider-select-cpf">CPF</label> 
+												<input class="smt-checkbox visuallyhidden" checked type="radio" name="smart-signup-profile" id="smart-provider-select-cnpj"/>
+												<label class="smt-form-label smt-label-checkbox" for="smart-provider-select-cnpj">CNPJ</label>
+												<input class="smt-input" name="provider-signup-cpf" type="tel" placeholder="CPF"/>
+												<input class="smt-input" name="provider-signup-cnpj" type="tel" placeholder="CNPJ"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-nome-prestador" class="smt-form-label visuallyhidden">E-mail</label>
+												<input class="smt-input" type="email" placeholder="E-mail" name="provider-email"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-nome-prestador" class="smt-form-label visuallyhidden">Razão social</label>
+												<input class="smt-input" type="text" placeholder="Razão social" name="provider-company-name"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-nome-prestador" class="smt-form-label visuallyhidden">Telefone</label>
+												<input class="smt-input" type="tel" placeholder="Telefone" name="provider-phone"/>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-password" class="smt-form-label visuallyhidden">Senha</label>
+												<input class="smt-input" type="password" placeholder="Senha" name="provider-password" maxlength="8"/>
+												<label for="smart-password" class="smt-label-warn">Atenção: sua senha possui entre 6 a 8 caracteres e contêm ao menos 1 número, 1 letra e 1 caractere especial (#, @, &amp; ou _).</label>
+											</div>
+											<div class="smt-input-holder">
+												<label for="smart-password" class="smt-form-label visuallyhidden">Confirme a senha</label>
+												<input class="smt-input" type="password" placeholder="Confirme a senha" name="provider-password" maxlength="8"/>
+											</div>
+											<div class="smt-input-holder smt-input-actions">
+												<button type="submit" class="smt-main-button">entrar</button>
+											</div>
+										</form>
+									</div>
+									<footer class="smt-modal-footer">
+										<div class="smt-modal-message">
+											<p>Já possui conta? <a href="#" id="modal-login" data-remote-modal="#smart-header-login">Faça login!</a></p>
+										</div>
+									</footer>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<script type="text/javascript" src="js/vendor/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript">
+			$('.smt-input[name="provider-signup-cpf"], .smt-input[name="client-id"]').mask('999.999.999-99');
+			$('.smt-input[name="provider-signup-cnpj"]').mask('99.999.999/9999-99');
+			$('.smt-input[name="client-card-number"]').mask('99999.9.999999.99.9');
+			$('.smt-input[name="client-birthdate"]').mask('99/99/9999');
+			$('.smt-input[name="provider-phone"]').mask('(99) 99999-999?9');
+			$('.smt-input[name="provider-phone"]').each(function(){
+				var $this = $(this);
+				$this.blur(function(event) {
+					var myValue = $this.val().replace(/\D/g, '');
+					$this.unmask();  
+				   if(myValue.length > 10) {
+					  $this.mask('(99) 99999-999?9');
+				   } else {
+					  $this.mask('(99) 9999-9999?9');
+					  $this.val($this.val);
+				   }
+				});
+			});
+		</script>
+		<script src="vendor/slick.min.js"></script>
+		<script src="js/vendor/mousetrap.min.js"></script>
+		<script src="js/vendor/mousetrap-global-bind.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

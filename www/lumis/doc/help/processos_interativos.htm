@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Processos Interativos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?processos_interativos.htm"; }
+  else { parent.quicksync('a7.5.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Processos Interativos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="deployment_e_performance_tunin.htm">Previous</a>&nbsp;
+     <a href="gerenciadorcache.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Lumis Portal </span>provê um <span style="font-style: italic;">framework </span>de execução de processos interativos. Esses processos são compostos de um ou mais passos que fazem um trabalho específico. Ao executar o último passo do processo, ele é automaticamente removido pelo <span style="font-style: italic;">framework</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Administração</span></p>
+<p>A administração dos processos interativos provê uma lista de todos os processos sendo executados ou prontos para serem executados, como na figura a seguir:</p>
+<p style="text-align: center;"><img src="interprocess0001.zoom74.png" width="1005" height="298" border="0" alt="interprocess0001" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Administração de Processos Interativos</p>
+<p>&nbsp;</p>
+<p>Na lista é possível abrir a tela de execução de um determinado processo, ao clicar em detalhes do processo, ou recuperar um processo em estado "Executando passo".</p>
+<p>A recuperação de um processo força ele a retornar ao estado "Pronto" para que possa, então, continuar sendo executado. Esse procedimento visa contornar possiveis problemas que podem ser ocasionados quando um servidor que esteja executando um dado passo de um processo seja interrompido, por algum motivo. Nesse caso, o processo ficaria sempre no estado "Executando".</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="500" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93" style="width:93px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px;"><span style="font-weight: bold;">Importante</span></p>
+</td>
+<td valign="top" width="407" style="width:407px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="407" style="width:407px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px;">A recuperação de um processo pode causar um estado inconsistente do portal que pode, inclusive, ser irrecuperável. Tenha certeza que a recuperação é extremamente necessária antes de executá-la.</p>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a name="execucao"></a><span style="font-weight: bold;">Execução</span></p>
+<p>A tela de execução de processos exibe uma lista de todos os passos do processo, uma descrição do passo atual que está sendo exibido e, possivelmente, uma lista de botões com ações a serem tomadas sobre o passo atual.</p>
+<p>&nbsp;</p>
+<p>Caso o passo em exibição seja o próximo passo a ser executado, uma lista de botôes de ação será mostrada:</p>
+<p style="text-align: center;"><img src="interprocess0006.zoom66.png" width="860" height="427" border="0" alt="interprocess0006" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Execução do passo atual</p>
+<p>&nbsp;</p>
+<p>As ações que podem ser tomadas são as seguintes:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Executar: Executa o passo atual e para no próximo passo.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Executar até o fim: Executa o passo atual e todos os outros até o fim ou até que um erro ocorra.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Ignorar: Ignora o passo atual e passa para o próximo. Caso o passo atual seja um passo mandatório ele não poderá ser ignorado e, portanto, esse botão não será exibido.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Parar: Interrompe a execução do processo e o excluir da lista de processos na adminstração. Este procedimento pode gerar uma instabilidade no portal. </td></tr></table></div><p>&nbsp;</p>
+<p>Caso o passo escolhido esteja sendo executado no momento, a exibição não traz botões de ação, como na figura a seguir:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="interprocess0002.zoom66.png" width="902" height="427" border="0" alt="interprocess0002" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Passo sendo executado</p>
+<p>&nbsp;</p>
+<p>Caso o passo escolhido já tenha sido executado, será mostrado, além do detalhe do passo, o resultado dele (sucesso, falha ou ignorado) como na figura abaixo:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="interprocess0003.zoom66.png" width="895" height="429" border="0" alt="interprocess0003" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Passo já executado</p>
+<p>&nbsp;</p>
+<p>Caso o passo escolhido não seja o atual e não tenha sido executado (ou seja, se for um passo "futuro"), serão exibidos detalhes do passo e nenhum botão de ação será exibido.</p>
+<p>&nbsp;</p>
+<p>Caso o passo atual tenha dado erro (ou na execução até o fim tenha dado um erro), uma tela será exibida com o detalhe do passo que falhou e a mensagem de erro. Também serão exibidas opções para o passo, como na figura a seguir:</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><img src="interprocess0004.zoom64.png" width="879" height="423" border="0" alt="interprocess0004" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Erro executando</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Em todos os casos anteriores exibem um botão "Fechar" que fecha a tela de execução e volta para a tela de administração.</p>
+<p>&nbsp;</p>
+<p>Quando um usuário executa um passo do processo, a janela pela qual ele executou esse passo torna-se a dona desse processo. Caso algum outro usuário (ou o mesmo usuário em outra janela) tente executar qualquer ação sobre esse mesmo processo, o portal o perguntará se ele deseja passar a ser o dono do processo, como a figura abaixo:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="interprocess0005.zoom67.png" width="912" height="354" border="0" alt="interprocess0005" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">Obter propriedade do processo</p>
+<p>&nbsp;</p>
+<p>Caso o usuário confirme, sua janela passa a ser a dona do processo.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

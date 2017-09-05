@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050A1A02C0150A1B7B73322FA</id>
+  <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+  <name>Rede na Rede - Menu Horizontal</name>
+  <file-path>lumis/service/hierarchicalcontent/style/menu-horizontal.xsl</file-path>
+</interface-style>

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Contexto de Negócio</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="G" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?contexto_de_negocio.htm"; }
+  else { parent.quicksync('a8.10'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Contexto de Negócio</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="exemplos_de_criacao_de_temas.htm">Previous</a>&nbsp;
+     <a href="deployment_desenv.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Um contexto de negócio do portal é um conjunto de propriedades que serão disponibilizadas de forma centralizada. Um contexto é definido por um arquivo chamado <span style="font-style: italic;">contextdefinition.xml</span>. A referência deste arquivo é o XSD <a href="../xsd/businesscontext/index.html" target="_blank" class="weblink">contextdefinition.xsd</a>, que deve utilizar a localização <span style="font-style: italic;">http://www.lumis.com.br/context</span> e na distribuição do produto encontra-se em <span style="font-style: italic;">def/lumis/portal/businesscontext/contextdefinition.xsd</span>.</p>
+<p>&nbsp;</p>
+<p>A estrutura básica do arquivo de definição do contexto é a seguinte:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;context </p>
+<p><span style="width:48px">&nbsp;</span>name="STR_LUMIS_DEFAULT_CONTEXT" </p>
+<p><span style="width:48px">&nbsp;</span>xmlns="http://www.lumis.com.br/context" </p>
+<p><span style="width:48px">&nbsp;</span>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" </p>
+<p><span style="width:48px">&nbsp;</span>xsi:schemaLocation="http://www.lumis.com.br/context"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;properties&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;property name="STR_MY_PROPERTY" id="my.property"&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/property&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p><span style="width:48px">&nbsp;</span>&lt;/properties&gt;</p>
+<p>&lt;/context&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Cada propriedade (nó <span style="font-style: italic;">property</span>) deve possuir um dos seguintes nós:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 37px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">fixed</span>: utilizado para expor um valor fixo no contexto.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 37px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">expression</span>: utilizado para expor o valor de uma EL (expression language) no contexto.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 37px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">custom</span>: utilizado para customizar a obtenção do valor para ser exposto no contexto.</td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Valores fixos no contexto</span></p>
+<p>Para expor um valor fixo no contexto, um parâmetro pode ser definido como:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="my.property"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;fixed&gt;<span style="font-weight: bold; color: #0000ff;">valor</span>&lt;/fixed&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Onde valor é o <span style="font-weight: bold; color: #0000ff;">valor</span> a ser exposto.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Valores de EL no contexto</span><br>
+Para expor valores de EL no contexto, um parâmetro pode ser definido como:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="my.property"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;expression&gt;<span style="font-weight: bold; color: #0000ff;">el</span>&lt;/expression&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Onde <span style="font-weight: bold; color: #0000ff;">el</span> é a EL a ser exposta. As variáveis disponíveis são listadas em <a href="recursos_disponiveis_em_el.htm">Recursos disponíveis em EL</a>, marcadas com o escopo LayoutFile. A variável <span class="f_CodeExample">pageWebResource</span>, no entanto, não está disponível.</p>
+<p>Além dessas variáveis, as seguintes variáveis estão disponíveis:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">groupsHash</span>: retorna um hash dos grupos do usuário corrente.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">lum_device</span>: retorna o dispositivo que está acessando o portal.</td></tr></table></div><p>&nbsp;</p>
+<p>As funções disponíveis são:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">isMemberOf(String groupAlias)</span>: Retorna se o usuário atual pertence ao grupo dado. Em outras palavras, retorna verdadeiro se existe um grupo <span style="font-style: italic;">G</span> tal que apelido de <span style="font-style: italic;">G</span> é igual ao parâmetro fornecido.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">groupsHash()</span>: Retorna um <span style="font-style: italic;">hash </span>com os grupos que o usuário pertence.</td></tr></table></div><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Valores customizados no contexto</span></p>
+<p>Para expor valores customizados no contexto, é necessário definir o elemento &lt;<span style="font-style: italic;">custom</span>&gt; especificando a classe que implementa <span style="font-style: italic;">IBusinessContextValueProvider</span> utilizando um dos atributos <span style="font-style: italic;">className</span> ou <span style="font-style: italic;">scriptPath</span>.</p>
+<p>Se espeficado o atributo <span style="font-style: italic;">className</span>, ele deve conter o nome totalmente qualificado da classe <span style="font-style: italic;">Java</span> que implementa <span style="font-style: italic;">IBusinessContextValueProvider</span>. Já, se for especificado o atributo <span style="font-style: italic;">scriptPath</span>, ele deve conter o caminho do arquivo de <span style="font-style: italic;">script</span> que define a classe <span style="font-style: italic;">Java</span> implementando <span style="font-style: italic;">IBusinessContextValueProvider</span>.</p>
+<p>Na definição da propriedade customizada podem ser passados parâmetros para serem utilizados no cálculo do valor a ser exposto, como no seguinte exemplo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="my.property"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;custom className="<span style="font-weight: bold; color: #0000ff;">lumis.portal.businesscontext.example.HelloWorldContextValueProvider</span>"&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;parameters&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;parameter name="<span style="font-weight: bold; color: #0000ff;">name</span>"&gt;World&lt;/parameter&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/parameters&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;/custom&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Nesse caso, <span style="font-weight: bold; color: #0000ff;">lumis.portal.businesscontext.example.HelloWorldContextValueProvider</span> é o nome totalmente qualificado da classe customizada a ser utilizada. Essa classe <span style="font-weight: bold;">deve </span>implementar <span style="font-style: italic;">lumis.portal.businesscontext.IBusinessContextValueProvider</span>. Para uma melhor compatibilidade futura, é recomendado estender a classe abstrata <span style="font-style: italic;">lumis.portal.businesscontext.AbstractBusinessContextValueProvider</span>. A interface define os seguintes métodos:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 37px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">public String get(HttpServletRequest request)</span>: Método utilizado para calcular o valor da propriedade na requisição.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 37px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">public void initialize(Map&lt;String, String&gt; parameters)</span>: Método de inicialização que recebe um mapa de parâmetros opcionais passados no nó parameters dentro do nó custom. No exemplo, esse mapa seria: {<span style="font-weight: bold; color: #0000ff;">name</span>=<span style="font-weight: bold; color: #0000ff;">World</span>}.</td></tr></table></div><p>&nbsp;</p>
+<p>Abaixo uma implementação de exemplo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>public class HelloWorldContextValueProvider extends AbstractBusinessContextValueProvider</p>
+<p>{</p>
+<p><span style="width:48px">&nbsp;</span>@Override</p>
+<p><span style="width:48px">&nbsp;</span>public String get(HttpServletRequest request)</p>
+<p><span style="width:48px">&nbsp;</span>{</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;return "Hello, " + parameters.get("name");</p>
+<p><span style="width:48px">&nbsp;</span>}</p>
+<p>}</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Nessa implementação de exemplo, o valor da propriedade seria "Hello, World", onde <span style="font-weight: bold; color: #0000ff;">World</span> é o parâmetro com o nome <span style="font-weight: bold; color: #0000ff;">name</span>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para maiores informações, veja a API <a href="../api/lumis/portal/businesscontext/package-summary.html" target="_blank" class="weblink">Java</a> e <a href="../xsd/businesscontext/index.html" target="_blank" class="weblink">XSD</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Exemplos de utilização</span></p>
+<p>&nbsp;</p>
+<p>Para expor o dispositivo do usuário na propriedade <span style="font-weight: bold; color: #0000ff;">device.os</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="<span style="font-weight: bold; color: #0000ff;">device.os</span>"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;expression&gt;<span style="font-weight: bold; color: #0000ff;">lum_device.device_os</span>&lt;/expression&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para expor o tipo de dispositivo do usuário na propriedade <span style="font-weight: bold; color: #0000ff;">device.type</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="<span style="font-weight: bold; color: #0000ff;">device.type</span>"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;expression&gt;<span style="font-weight: bold; color: #0000ff;">lum_device.device_type</span>&lt;/expression&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para expor o hash dos grupos do usuário na propriedade <span style="font-weight: bold; color: #0000ff;">groups.hash</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="<span style="font-weight: bold; color: #0000ff;">groups.hash</span>"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;expression&gt;<span style="font-weight: bold; color: #0000ff;">groupsHash</span>&lt;/expression&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para expor se o usuário pertence a algum grupo na propriedade <span style="font-weight: bold; color: #0000ff;">is.member.of.apelido</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>&lt;property name="STR_MY_PROPERTY" id="<span style="font-weight: bold; color: #0000ff;">is.member.of.apelido</span>"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;expression&gt;<span style="font-weight: bold; color: #0000ff;">isMemberOf('apelido_grupo')</span>&lt;/expression&gt;</p>
+<p>&lt;/property&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para obter o contexto atual no contexto de uma interface (ou seja, em um controle, em um <span style="font-style: italic;">process action</span>, em um <span style="font-style: italic;">data provider </span>etc), basta utilizar o método <span style="font-style: italic;">getBusinessContext()</span> do request de interface, por exemplo:</p>
+<p>&nbsp;</p>
+<p>Em um <span style="font-style: italic;">process action</span> ou controle:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>IBusinessContext businessContext = douiContext.getRequest().getBusinessContext();</p>
+<p>String myPropertyValue = businessContext.get("my.property");</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Em um <span style="font-style: italic;">data provider</span>:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="80%" cellspacing="0" cellpadding="20" bgcolor="#e8e8e8" border="1" style="background-color: #e8e8e8; border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: none"><p>IBusinessContext businessContext = source.getDouiContext().getRequest().getBusinessContext();</p>
+<p>String myPropertyValue = businessContext.get("my.property");</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

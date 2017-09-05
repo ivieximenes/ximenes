@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Exportação em LEC</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?exportacao_lec.htm"; }
+  else { parent.quicksync('a5.6.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Exportação em LEC</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="exportacaoimportacao.htm">Previous</a>&nbsp;
+     <a href="importacao_lec.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Esta opção permite que estruturas de canais (com páginas; instâncias de serviços; grupos locais; arquivos <span style="font-style: italic;">XSL;</span> e referências a arquivos CSS, <span style="font-style: italic;">workflows,</span> serviços customizados, usuários ou grupos globais e controle de acesso) &nbsp;e conteúdos &nbsp;sejam exportados em um arquivo compactado com extensão .lec (<span style="font-style: italic;">Lumis Exported Channel)</span> para o diretório “<span style="font-style: italic;">lumisdata/data/exporteddata</span>”.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table width="564" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="114" style="width:114px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="469" style="width:469px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="583" style="width:583px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>A exportação/importação deve ser realizada entre ambientes com a mesma versão, pois devido a alterações e melhorias no <span style="font-style: italic;">Lumis</span> , podem &nbsp;ocorrer problemas na importação;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>A exportação de conteúdo ocorre tanto para serviços <span style="font-style: italic;">Lumis</span> quanto para serviços customizados de gestão de conteúdo básico, em que há isolamento de repositório de dados entre as instâncias de serviço. Porém, conteúdos tais como comentários do Serviço de Comentários não são exportados;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Conteúdos de uma instância de serviço fora do escopo da exportação, referenciados em conteúdos de outra instância de serviço, não serão exportados. Considere por exemplo, um <span style="font-style: italic;">link</span> no editor <span style="font-style: italic;">HTML</span> que referencia um documento de uma instância de serviços Documentos, que não está no escopo da exportação, será exportado somente a <span style="font-style: italic;">string</span> do <span style="font-style: italic;">link</span> , com a referência. O documento não será exportado.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td> Não ocorre exportação de conteúdos provenientes da funcionalidade "Publicar para Instância", a partir de outra instância do mesmo serviço localizada fora da estrutura a ser exportada;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">5.</span></td><td>Estilos pertencentes à definição do serviço não são exportados, são considerados parte do código-fonte e serão atualizados ao registrar a nova versão do serviço. Estilos adicionados pelo <span style="font-style: italic;">frontend</span> e não definidos no serviço são considerados adições na soluções, e são exportados e importados.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">6.</span></td><td>Os arquivos físicos .CSS, da solução, não são incluídos na exportação. Cabe a solução tratar manualmente a restauração dos mesmos no momento da importação do LEC.</td></tr></table></div><p style="margin: 0px 0px 0px 71px;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Na exportação, são verificadas todas as dependências externas, ou seja, objetos exportados <span style="font-weight: bold;">que dependem de objetos que não estão sendo exportados</span>, <span style="font-weight: bold;">de forma a alertar o administrador que tais objetos deverão estar presentes no destino, para que a importação ocorra com sucesso.</span> No entanto, algumas dependências impedem a importação, outras não.</p>
+<p style="margin: 14px 0px 0px 0px;">Exemplos de dependências externas:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>template de canais ou páginas criados fora do escopo do canal exportado e que estão aplicados em canais e páginas deste canal;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>instâncias de serviços que utilizam outras instâncias de serviços. Ex: instância do serviço de <span style="font-style: italic;">Notícias</span> que pode utilizar instâncias dos serviços de <span style="font-style: italic;">Documentos</span> e <span style="font-style: italic;">Imagens, </span>que por sua vez estão instanciados fora do escopo da estrutura a ser exportada;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">workflow</span> customizado pertencente ou não ao escopo da exportação;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>usuários e grupos globais do controle de acesso de um objeto pertencente ao escopo da exportação.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="126" style="width:126px; border: solid 1px #000000;"><p style="text-align: left; text-indent: -20px; margin: 0px 0px 0px 25px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="439" style="width:439px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 25px;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="565" style="width:565px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 25px;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Os usuários e grupos globais padrão do produto não são considerados dependências externas, pois pelo fato de não poderem ser removidos, eles sempre estarão presentes no portal destino, não havendo necessidade, portanto, de fazer esta validação. No entanto, há exceção para o usuário global padrão "admin", que é considerado uma dependência externa;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Usuários ou grupos globais adicionados e que fazem parte do controle de acesso da estrutura a ser exportada, são dependências externas, que, embora possam ser adicionados no destino, poderão ocasionar problemas na importação da estrutura, a não ser que eles sejam adicionados com o mesmo ID com que estão cadastrados no ambiente origem.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Considere o seguinte cenário: Exportação do canal “Agenda de Eventos”.</p>
+<p style="margin: 14px 0px 0px 0px;">A estrutura "Agenda de Eventos" possui dois canais: "Agenda de Eventos" e "Administração"; e quatro páginas: "Lista Rápida", "Lista" e "Detalhes" pertencentes ao canal "Agenda de Eventos", e "Administração" pertencente ao canal de mesmo nome. Nestas páginas, estão instanciadas as interfaces de mesmo nome das páginas citadas. Estas interfaces são da instância de serviço "Agenda de Eventos" que está no canal de mesmo nome.</p>
+<p style="margin: 14px 0px 0px 0px;">As páginas possuem o template “templ_interna” aplicado. Este template localiza-se no canal “templates” que está no mesmo nível do canal “Agenda de Eventos”. A interface <span style="font-style: italic;">Logout </span>instanciada neste template, pertence à instância de serviço de <span style="font-style: italic;">Login </span>do canal com o mesmo nome, que por sua vez, também está fora do escopo do canal a ser exportado.</p>
+<p style="margin: 14px 0px 0px 0px;">A estrutura “Agenda de Eventos”, bem como suas interfaces possuem um XSL customizado (“intranetJava.xsl") e além disso, a instância de serviço “Agenda de Eventos” utiliza um <span style="font-style: italic;">workflow</span> customizado (“<span style="font-style: italic;">workflow2</span>”).</p>
+<p style="margin: 14px 0px 0px 0px;">No controle de acesso do objeto a ser exportado, está adicionado o usuário local "Lumis.bruno". Estão adicionados também grupos globais padrão do produto.  </p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio064.jpg" width="256" height="443" border="0" alt="portalStudio064" style="margin:0 auto;margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Enfim, com o <span style="font-style: italic;">right-click</span> no canal “Agenda de Eventos”, selecione a opção <span style="font-style: italic;">Exportar. </span> Em seguida, informe no formulário de exportação:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Aba Geral:</span></p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio066.jpg" width="900" height="602" border="0" alt="portalStudio066" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p>Respectivamente:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>o nome para o arquivamento da estrutura a ser exportada. Recomenda-se nomear o arquivo com o nome do canal a ser exportado;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Incluir sub-canais recursivamente: permite escolher se os sub-canais da estrutura serão exportados ou não. As vezes faz-se necessário exportar apenas as páginas, templates de página, grupos locais, instâncias de serviços, entre outros; sem exportar os sub-canais. Na importação, por sua vez, os sub-canais não seriam alterados. Nestes casos, deve-se desmarcar esta opção que vem selecionada por <span style="font-style: italic;">default.</span> Por sua vez, os elementos globais, como XSL, por exemplo, são exportados e importados independente dessa opção;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Incluir conteúdo: se deseja exportar o conteúdo (com seu versionamento, informações de publicação e <span style="font-style: italic;">workflow</span>) da instância de serviço;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Incluir referência a membros do tipo usuário: permite incluir ou não na exportação a relação de "membro de" entre usuário e grupo.</td></tr></table></div><p> &nbsp; </p>
+<p>No cenário em que há usuário local pertencente a grupos locais, esta opção é indiferente, já que usuários e grupos locais são exportados.</p>
+<p>&nbsp;</p>
+<p>Já no cenário em que há usuários globais pertencentes a grupos locais é útil selecionar essa opção, já que usuários globais não são exportados, e eles podem não existir no destino, ou existir mas com <span style="font-style: italic;">IDs</span> diferentes, acarrentando problemas futuros na importação.</p>
+<p>&nbsp;</p>
+<p>Há ainda o caso em que usuários globais são membros de grupos globais. Grupos globais do tipo padrão podem ser exportados ou não, dependendo do que for configurado na aba "grupos globais". Mas como usuários globais não são, pode-se não incluir na exportação suas referências de "membro de" com tais grupos. A não ser que aqueles usuários globais existam no destino (cadastrados com o mesmo <span style="font-style: italic;">ID</span>), pode-se incluir suas referências para que no destino tenham a mesma relação de "membro de" entre usuários globais e seus grupos;</p>
+<p>&nbsp;</p>
+<p>Quando os grupos globais a serem exportados são do tipo dinâmicos, não há necessidade de incluir referências do tipo usuário, uma vez que os usuários desses grupos serão incluídos no destino através de um cálculo dinâmico.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Exibir alertas sobre dependências externas: se deseja exibir os alertas sobre as dependências externas no relatório sobre a exportação. Caso contrário, serão exibidas apenas as informações sobre a quantidade de dependências externas e se o canal foi ou não exportado com sucesso.</td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Grupos globais</span></p>
+<p>&nbsp;</p>
+<p>Uma forma de exportar grupos globais, é informá-los no formulário de exportação do canal, mesmo que eles não façam parte do controle de acesso daquele canal. Se os grupos não existem no destino, eles serão criados.</p>
+<p>&nbsp;</p>
+<p>Para isso, basta clicar em adicionar, que são exibidos todos grupos globais do portal, menos os grupos padrão (Administradores do Portal, Desenvolvedores, Usuários Cadastrados e Todos os Usuários). Isso porque, os grupos globais padrão do produto são sempre exportados.</p>
+<p>&nbsp;</p>
+<p>Os motivos para a exportação de grupos globais foram explicados anteriormente na opção de incluir referência a membro do tipo usuário.</p>
+<p style="text-align: center;"><img src="portalstudio244.jpg" width="911" height="609" border="0" alt="portalStudio244" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">De acordo com as informações do formulário da aba geral, o arquivo a ser gerado no diretório “<span style="font-style: italic;">lumisdata/data/exporteddata</span>” será “Agenda de Eventos.lec”, e nele conterá o conteúdo da instância de serviço presente no canal a ser exportado.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="456" style="width:456px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="565" style="width:565px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Não</span> &nbsp;colocar a extensão do arquivo ".lec", pois senão será criado o arquivo "Agenda de Eventos.lec.lec". </p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">O administrador será notificado se a exportação ocorreu com sucesso, e, no caso de haver dependências externas, essas serão exibidas em um relatório de exportação, e os objetos envolvidos nas dependências externas poderão ser visualizados ao clicar nas setas ao lado de cada um deles.</p>
+<p style="margin: 14px 0px 0px 0px;">A figura a seguir é um exemplo de relatório gerado a partir da exportação do canal “Agenda de Eventos”, e que informa que os quatro conteúdos cadastrados para a instância "Agenda de Eventos" foram exportados com sucesso, e que a página "Lista" depende do "templ_interna" localizado no canal "Portal/templates":</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio068.jpg" width="910" height="610" border="0" alt="portalStudio068" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Outro trecho do relatório:</p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-weight: bold; color: #808080;">Objeto dependente:</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Instância de Serviço</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Agenda de Eventos</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F72EF8C2A164F</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Serviço</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Agenda de Eventos</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: lumis.service.event</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Canal</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Portal/Agenda de Eventos</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F72EF8BDC164D</span></p>
+<p style="margin: 14px 0px 0px 142px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-weight: bold; color: #808080;">Objeto do qual se depende:</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Workflow</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: workflow2</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-weight: bold; color: #808080;">Objeto dependente:</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Instância de Interface de Serviço</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Área: 2</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Coluna: 1</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Linha: 1</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Célula: 1</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F730A398E1977</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Página</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Administração</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F72EF8F841669</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Canal</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Portal/Agenda de Eventos/Administração</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F72EF8EA91667</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Interface de Serviço</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Logout</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: lumis.service.login.logout</span></p>
+<p style="margin: 14px 0px 0px 142px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 142px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-weight: bold; color: #808080;">Objeto do qual se depende:</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Instância de Serviço</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Login</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F7257F36905E9</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Serviço</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Login</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: lumis.service.login</span></p>
+<p style="margin: 14px 0px 0px 142px;"><span style="font-size: 8pt; font-weight: bold; color: #808080;">Canal</span><a href="http://localhost:8080/portal/lumis/portal/controller/html/ProgressControllerHtml.jsp?lumProcessId=8A488ACB0F71632D010F7316890919B8&lumContext=serialization##"><img src="portalstudio069.gif" width="14" height="12" border="0" alt="portalStudio069"></a></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">Nome: </span><span style="font-size: 8pt; color: #606060;">Portal/Login</span></p>
+<p style="margin: 0px 0px 0px 142px;"><span style="font-size: 8pt; font-family: 'Times New Roman'; color: #656565;">ID: 8A488ACB0F71632D010F7257C56B058D</span></p>
+<p style="margin: 14px 0px 0px 0px;">O trecho do relatório acima informa que:</p>
+<p style="margin: 14px 0px 0px 0px;">A instância de serviço “Agenda de Eventos” pertencente ao canal com o mesmo nome, depende do objeto customizado <span style="font-style: italic;">“workflow2”</span> que pode estar ou não registrado no portal destino.</p>
+<p style="margin: 14px 0px 0px 0px;">A instância de interface “Logout” que está localizada na página “Administração” do canal “Portal/Agenda de Eventos/Administração”, DEPENDE da instância de serviço “Login” que está localizada no canal não pertencente à estrutura exportada “Portal/Login”.</p>
+<p style="margin: 14px 0px 0px 0px;">Para cada um dos objetos citados são informados o seu <span style="font-style: italic;">ID</span> e outras informações que podem ajudar na identificação do objeto como nome e título, etc. Além disso, as setas localizadas ao lado de todos os objetos listados no relatório, remetem para sua localização no portal.</p>
+<p style="margin: 14px 0px 0px 0px;">Caberá ao administrador tomar uma das seguintes decisões em relação às dependências externas, para que não haja problemas durante a importação :</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Exportar as dependências externas, preservando os <span style="font-style: italic;">IDs</span>, para que as referências sejam mantidas;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Excluir os objetos dependentes e exportar novamente o canal, agora, sem dependências. Dessa forma, esses objetos terão que ser adicionados no portal destino, caso se queira que a estrutura seja como a original;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Registrar <span style="font-style: italic;">workflows</span> e serviços customizados inexistentes no portal destino. Como o ID de <span style="font-style: italic;">workflows</span> e serviços estão localizados nos arquivos que serão registrados, ele sempre será igual ao ID registrado na origem. </td></tr></table></div><p style="margin: 14px 0px 0px 0px;">É importante atentar para os <span style="font-style: italic;">alerts</span> do relatório de exportação, que podem ser:</p>
+<p style="text-indent: -2px; margin: 14px 0px 0px 2px;">o Informação sobre o andamento do processo da exportação e sobre o sucesso da exportação do conteúdos da(s) instância(s) de serviço, representado pelo ícone:<img src="portalstudio071.jpg" width="15" height="15" border="0" alt="portalStudio071">;</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 1px;">o Avisos em geral, tais como restrições em relação às dependências externas, representados pelo ícone:<img src="portalstudio073.jpg" width="15" height="15" border="0" alt="portalStudio073">;</p>
+<p style="text-indent: -3px; margin: 14px 0px 0px 3px;">o Possíveis erros não esperados na exportação, representado pelo ícone:<img src="portalstudio075.jpg" width="15" height="15" border="0" alt="portalStudio075"> . Tais erros podem ocorrer, por exemplo, quando há insuficiência de memória, de espaço em disco, etc;</p>
+<p style="margin: 14px 0px 0px 0px;">o Resultado da exportação com sucesso, representado pelo ícone: <img src="portalstudio077.jpg" width="15" height="15" border="0" alt="portalStudio077"><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+<p style="margin: 14px 0px 0px 0px;">A exportação pode ser cancelada, a qualquer momento, antes do seu término, selecionando o botão "Cancelar".</p>
+<p style="text-indent: -53px; margin: 14px 0px 14px 53px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

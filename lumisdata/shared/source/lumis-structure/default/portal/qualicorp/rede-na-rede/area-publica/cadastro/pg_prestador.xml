@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851337</id>
+  <name>Prestador</name>
+  <parent-template-id>0000000050A1A02C0150A1ACC6861342</parent-template-id>
+  <position>2</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="menu">
+        <interface id="2C96A66853B531AE015459758FB51B58" isNew="1"></interface>
+        <interface id="40286DB25181A68E0151821C5F6C6564"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="40286DB25181A68E0151821C5F706565"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="40286DB25181A68E0151821C5F746566"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="0000000050A1A02C0150A200BE096D60"></interface>
+        <interface id="40286DB25181A68E0151821C5F786567"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050A1A02C0150A200BE096D60</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.addprestador</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE015459758FB51B58</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+      <parent-interface-instance-id>2C96A66853B531AE0154597558DA1B16</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB25181A68E0151821C5F6C6564</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AF938818E2</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB25181A68E0151821C5F706565</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AFB58618EB</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB25181A68E0151821C5F746566</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1BA4918288A</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB25181A68E0151821C5F786567</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AF6EA518D7</parent-interface-instance-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+  </interface-instances>
+</page>

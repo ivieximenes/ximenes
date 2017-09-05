@@ -1,0 +1,322 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>JBoss Enterprise Application Platform 6</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?jboss_eap_6.htm"; }
+  else { parent.quicksync('a3.5.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">JBoss Enterprise Application Platform 6</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="tomcat.htm">Previous</a>&nbsp;
+     <a href="weblogic103.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Este tópico descreve como o <span style="font-style: italic;">Lumis Portal </span>deve ser instalado no servidor <span style="font-style: italic;">JBoss Enterprise Application Platform 6</span>.</p>
+<p>Nessa documentação, assume-se que a instalação do portal está situada em um caminho que a partir desse momento é simplesmente citado como <span style="font-style: italic;">%LUMIS_HOME%</span>. Também assume-se que a instalação do JBoss está situada em <span style="font-style: italic;">%JBOSS_HOME%</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Instalação e atualização de módulos</span></p>
+<p>Em <span style="font-style: italic; font-weight: bold;">%LUMIS_HOME%/lib/jboss/modules</span> há os módulos que devem ser instalados no <span style="font-style: italic;">JBoss</span>. Ele é composto de um módulo <span style="font-style: italic;">Lumis Shared</span> (<span style="font-style: italic;">lumis/shared</span>), módulos de <span style="font-style: italic;">drivers JDBC</span> (<span style="font-style: italic;">lumis/jdbc</span>).</p>
+<p>Para instalar/atualizar estes módulos, deve-se copiar o diretório <span style="font-style: italic; font-weight: bold;">%LUMIS_HOME%/lib/jboss/modules</span> para <span style="font-style: italic; font-weight: bold;">%JBOSS_HOME%/modules</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Configuração do perfil</span></p>
+<p>A configuração do perfil dar-se-á de acordo com a arquitetura escolhida para a solução. Normalmente será em um dos arquivos <span style="font-style: italic;">standalone.xml</span>, <span style="font-style: italic;">domain.xml</span> ou <span style="font-style: italic;">host.xml </span>(para maiores informações consultar a documentação do JBoss).</p>
+<p>&nbsp;</p>
+<p><a name="inclusaomoduloglobal"></a>Na configuração, deve-se incluir o módulo <span style="font-style: italic;">Lumis</span> no <span style="font-style: italic;">subsystem</span> <span style="font-weight: bold;">jboss:domain:ee</span>. Para isso, basta criar um nó de módulo global como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e1e1e1" border="0" style="background-color: #e1e1e1; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p> &lt;subsystem xmlns="urn:jboss:domain:ee:1.2"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp;&lt;global-modules&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;module name="lumis.shared" slot="main"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp;&lt;/global-modules&gt;</p>
+<p> &nbsp;&lt;/subsystem&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Também deve-se aumentar o <span style="font-style: italic;">timeout</span> de <span style="font-style: italic;">deployment</span> para que o deploy do portal possa ser completo. Para isso, basta incluir (ou alterar de acordo) o atributo <span style="font-weight: bold;">deployment-timeout</span> do nó <span style="font-weight: bold;">deployment-scanner</span> no subsystem <span style="font-weight: bold;">jboss:domain:deployment-scanner</span>. Esse tempo é medido em segundos e deve ser ajustado para as características do ambiente.</p>
+<p>&nbsp;</p>
+<p>Outro ajuste necessário é a remoção das referências ao JAXRS da configuração. Para isso, basta remover do arquivo as seguintes linhas (que não serão subsequentes na configuração):</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e1e1e1" border="0" style="background-color: #e1e1e1; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/&gt;</p>
+<p>&lt;subsystem xmlns="urn:jboss:domain:webservices:1.1"&gt;</p>
+<p>&lt;!-- remova também todo seu conteúdo --&gt;</p>
+<p>&lt;subsystem&gt;</p>
+<p>&lt;extension module="org.jboss.as.jaxrs"/&gt;</p>
+<p>&lt;extension module="org.jboss.as.webservices"/&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Também é necessária a inclusão de um <span style="font-style: italic;">security-domain</span> no subsystem <span style="font-weight: bold;">jboss:domain:security</span>. Para isso, basta adicionar um novo nó como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e6e6e6" border="0" style="background-color: #e6e6e6; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;security-domain name="LumisPortal" cache-type="default"&gt;</p>
+<p> &nbsp; &nbsp;&lt;authentication&gt;</p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;login-module code="lumis.portal.authentication.LumisLoginModule" flag="sufficient"/&gt;</p>
+<p> &nbsp; &nbsp;&lt;/authentication&gt;</p>
+<p>&lt;/security-domain&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="99" style="width:99px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="619" style="width:619px; border: solid 1px #000000;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-right: none; border-bottom: none; border-left: none;">Para instalação do portal como <span style="font-weight: bold;">root</span> será necessário a alteração do valor do atributo <span style="font-weight: bold;">enable-welcome-root </span>para <span style="font-style: italic;">false</span>:</p>
+<p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-right: none; border-bottom: none; border-left: none;">&nbsp;<br>
+&lt;subsystem xmlns="urn:jboss:domain:web:1.1" default-virtual-server="default-host" native="false"&gt;<br>
+ &nbsp; &nbsp;&lt;connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/&gt;<br>
+ &nbsp; &nbsp;&lt;virtual-server name="default-host" <span style="font-weight: bold;">enable-welcome-root="</span><span style="font-style: italic; font-weight: bold;">false</span><span style="font-weight: bold;">"</span>&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;alias name="localhost"/&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;alias name="example.com"/&gt;<br>
+ &nbsp; &nbsp;&lt;/virtual-server&gt;<br>
+&lt;/subsystem&gt;<br>
+&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Efetuar o deploy do portal</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Em modo <span style="font-style: italic;">standalone</span></td></tr></table></div><p style="margin: 0px 0px 0px 51px;">Copiar a pasta <span style="font-style: italic; font-weight: bold;">%LUMIS_HOME%/www</span><span style="font-style: italic;"> </span>para a pasta de deploy da configuração <span style="font-style: italic;">standalone</span> no JBoss AS 7 (<span style="font-style: italic; font-weight: bold;">%JBOSS_HOME%/standalone/deployments</span><span style="font-style: italic;">)</span>. A pasta copiada deve ser renomeada para <span style="font-weight: bold;">&lt;nome do contexto&gt;.war</span> (exemplo: <span style="font-weight: bold;">portal.war</span>, se o contexto é <span style="font-weight: bold;">portal</span>). Também deve ser criado um arquivo em branco com o mesmo nome da pasta com a terminação <span style="font-weight: bold;">.dodeploy</span> (seguindo o exemplo, seria <span style="font-weight: bold;">portal.war.dodeploy</span>).</p>
+<p style="margin: 0px 0px 0px 51px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Em modo <span style="font-style: italic;">domain</span></td></tr></table></div><p><span style="width:48px">&nbsp;</span>Gerar um arquivo de aplicação web ("WAR") a partir da pasta <span style="font-style: italic; font-weight: bold;">%LUMIS_HOME%/www</span> e efetuar a instalação do WAR via console administrativa do servidor de aplicação.</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="99" style="width:99px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="619" style="width:619px; border: solid 1px #000000;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-right: none; border-bottom: none; border-left: none;">Ao invés de efetuar uma cópia, também pode-se utilizar link ou junction para o diretório no destino corresponder ao <span style="font-style: italic; font-weight: bold;">%LUMIS_HOME%/www</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a name="jboss71datasource"></a><span style="font-weight: bold;">Criação e configuração do </span><span style="font-style: italic; font-weight: bold;">datasource</span></p>
+<p>Este item descreve como configurar o Lumis Portal para utilizar um datasource no JBoss. Estes passos só são necessários se for desejado utilizar datasource.</p>
+<p>&nbsp;</p>
+<p>Para o uso correto de <span style="font-style: italic;">datasource </span>no portal, o módulo do driver JDBC correspondente ao banco de dados utilizado deve ser instalado no servidor de aplicação, assim como o módulo <span style="font-style: italic;">Lumis Shared</span>. O local de origem do módulo será:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 41px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>para Oracle: <span style="font-style: italic;">%LUMIS_HOME%/lib/jboss/modules/lumis/jdbc/driver/oracle</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 41px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>para SQL Server: <span style="font-style: italic;">%LUMIS_HOME%/lib/jboss/modules/lumis/jdbc/driver/sqlserver</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 41px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>para MySQL: <span style="font-style: italic;">%LUMIS_HOME%/lib/jboss/modules/lumis/jdbc/driver/mysql</span></td></tr></table></div><p>&nbsp;</p>
+<p>O módulo correspondente deve ser copiado para <span style="font-style: italic;">%JBOSS_HOME%/modules</span> (por exemplo, se o banco de dados utilizado for o Oracle, a estrutura de pastas deve ficar <span style="font-style: italic;">%JBOSS_HOME%/modules/lumis/jdbc/driver/oracle/main</span>).</p>
+<p>O módulo também deve ser referenciado no arquivo de configuração, como no <a href="jboss_eap_6.htm#inclusaomoduloglobal">caso do módulo Lumis Shared</a>. Para isso, basta inserir sua referência nos módulos globais, como destacado a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;subsystem xmlns="urn:jboss:domain:ee:1.0"&gt;</p>
+<p> &nbsp; &nbsp;&lt;global-modules&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;module name="lumis.shared" slot="main"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp;  <span style="font-weight: bold; color: #0000ff;">&lt;module name="lumis.jdbc.driver.oracle" slot="main"/&gt;</span></p>
+<p> &nbsp; &nbsp;&lt;/global-modules&gt;</p>
+<p>&lt;/subsystem&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Depois de feito isso, o <span style="font-style: italic;">datasource </span>pode ser criado no subsystem <span style="font-weight: bold;">jboss:domain:datasources</span>, como o exemplo a seguir:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;subsystem xmlns="urn:jboss:domain:datasources:1.0"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;datasources&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;datasource jndi-name="java:jboss/datasources/PortalDS" pool-name="PortalDS" enabled="true" jta="true" use-java-context="true" use-ccm="true"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;connection-url&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;jdbc:oracle:thin:@localhost:1521:ora11g</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/connection-url&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ojdbc14</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;security&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;user-name&gt;USUÁRIO&lt;/user-name&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;password&gt;SENHA&lt;/password&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/security&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/datasource&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;drivers&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver name="ojdbc14" module="lumis.jdbc.driver.oracle"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver-class&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;oracle.jdbc.driver.OracleDriver</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver-class&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/drivers&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/datasources&gt;</p>
+<p>&lt;/subsystem&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Dentro do nó <span style="font-style: italic;">datasources</span> dois nós devem ser criados. Um nó <span style="font-style: italic;">driver</span>, dentro do nó <span style="font-style: italic;">drivers</span>, para definir o driver a ser utilizado e um nó <span style="font-style: italic;">datasource </span>para a criação do <span style="font-style: italic;">datasource </span>em si.</p>
+<p>No nó de driver é importante definir:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>O nome do driver: vai ser o nome que o datasource vai referenciar como driver (no exemplo o nome usado é ojdbc14);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>O módulo que contém o driver: qual módulo possui esse driver (lumis.jdbc.driver.&lt;tipo de banco de dados&gt;, no exemplo é lumis.jdbc.driver.oracle);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Classe do driver:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 54px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#9633;</span></td><td>para Oracle: oracle.jdbc.driver.OracleDriver;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 54px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#9633;</span></td><td>para SQL Server: net.sourceforge.jtds.jdbc.Driver;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 54px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#9633;</span></td><td>para MySQL: com.mysql.jdbc.Driver</td></tr></table></div><p style="margin: 0px 0px 0px 54px;">&nbsp;</p>
+<p>No nó do datasource, definir:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Nome JNDI: é o nome a ser referenciado no <span style="font-style: italic;">lumishibernate.cfg.xml</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>URL de conexão: a URL utilizada para a conexão;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Driver: o nome do driver utilizado (utilizar o mesmo nome definido no nó de driver);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Usuário e Senha: login de acesso à base de dados.</td></tr></table></div><p>&nbsp;</p>
+<p>Passo extra para usuários de MySQL:</p>
+<p style="margin: 0px 0px 0px 41px;">O driver do MySQL baixado descrito no tópico <a href="mysql5.htm">MySQL</a> deve ser copiado para a pasta <span style="font-style: italic;">%JBOSS_HOME%/modules/lumis/jdbc/driver/mysql/main</span> e o arquivo <span style="font-style: italic;">module.xml </span>(residente ao mesmo diretório) deve ser ajustado de acordo como o exemplo a seguir (para o driver <span style="font-weight: bold; color: #0000ff;">mysql-connector-java-5.1.34-bin.jar</span>):</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 41px;"><table align="center" width="50%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;!-- $Revision: 17046 $ $Date: 2015-03-03 11:04:42 -0300 (Tue, 03 Mar 2015) $ --&gt;</p>
+<p>&lt;module xmlns="urn:jboss:module:1.0" name="lumis.jdbc.driver.mysql"&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;resources&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;resource-root path="<span style="font-weight: bold; color: #0000ff;">mysql-connector-java-5.1.34-bin.jar</span>" /&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;/resources&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;dependencies&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;module name="javax.api"/&gt;</p>
+<p><span style="width:48px">&nbsp;</span>&lt;/dependencies&gt;</p>
+<p>&lt;/module&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="width:48px">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>Caso desejado, a senha do datasource pode permanecer criptografada. Para isso, deve-se gerá-la executando o seguinte comando no diretório %JBOSS_HOME%:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;">java -cp modules\org\picketbox\main\picketbox-4.0.1.jar;modules\org\jboss\logging\main\jboss-logging-3.0.1.GA.jar org.picketbox.datasource.security.SecureIdentityLoginModule [SENHA]</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="99" style="width:99px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="619" style="width:619px; border: solid 1px #000000;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-right: none; border-bottom: none; border-left: none;">Os separadores de pasta e de classpath devem ser ajustados de acordo com o ambiente sendo utilizado: "\" e ";" para Windows; e "/"</p>
+<p style="text-align: left; border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"> e ":" para Linux, respectivamente.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Também é necessária a inclusão de um <span style="font-style: italic;">security-domain</span> no subsystem <span style="font-weight: bold;">jboss:domain:security </span>para armazenagem do usuário do datasource e da senha criptografada. Para isso, basta adicionar um novo nó como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" bgcolor="#e6e6e6" border="0" style="background-color: #e6e6e6; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;security-domain name="portal-ds" cache-type="default"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;authentication&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;login-module code="SecureIdentity" flag="required"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;module-option name="username" value="USUÁRIO"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;module-option name="password" value="[SENHA CRIPTOGRAFADA]"/&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/login-module&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/authentication&gt;</p>
+<p>&lt;/security-domain&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Nesse security domain, deve-se definir: usuário (no exemplo, <span style="font-style: italic;">USUÁRIO</span>), senha criptografada (no exemplo, <span style="font-style: italic;">[SENHA CRIPTOGRAFADA]</span>) e nome do security domain (no exemplo, <span style="font-style: italic;">portal-ds</span>).</p>
+<p>&nbsp;</p>
+<p>Após isso, deve-se alterar o nó security do datasource, removendo os nós user-name e password e adicionando um novo nó security-domain referenciando o security domain criado anteriormente, como a seguir:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;subsystem xmlns="urn:jboss:domain:datasources:1.0"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;datasources&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;datasource jndi-name="java:jboss/datasources/PortalDS" pool-name="PortalDS" enabled="true" jta="true" use-java-context="true" use-ccm="true"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;connection-url&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;jdbc:oracle:thin:@localhost:1521:ora11g</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/connection-url&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ojdbc14</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;security&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold; color: #0000ff;"> &lt;security-domain&gt;</span></p>
+<p><span style="font-weight: bold; color: #0000ff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;portal-ds</span></p>
+<p><span style="font-weight: bold; color: #0000ff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/security-domain&gt;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/security&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/datasource&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;drivers&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver name="ojdbc14" module="lumis.jdbc.driver.oracle"&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;driver-class&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;oracle.jdbc.driver.OracleDriver</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver-class&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/driver&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/drivers&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/datasources&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/subsystem&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Maiores informações sobre a configuração de datasources em <a href="https://docs.jboss.org/author/display/AS7/DataSource+configuration" target="_blank" class="weblink">https://docs.jboss.org/author/display/AS7/DataSource+configuration</a>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Configuração da codificação de URIs</span></p>
+<p>É necessário que a codificação de URIs seja configurada para UTF-8. Para isto, acrescente uma propriedade de sistema igual o exemplo destacado abaixo:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>&lt;server name="myserver" xmlns="urn:jboss:domain:1.0"&gt;</p>
+<p> &nbsp; &nbsp;&lt;extensions&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;....</p>
+<p> &nbsp; &nbsp;&lt;/extensions&gt;</p>
+<p><span style="font-weight: bold; color: #0000ff;"> &nbsp; &nbsp; </span>&lt;system-properties&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; <span style="color: #0000ff;">&lt;property name="org.apache.catalina.connector.URI_ENCODING" value="UTF-8"/&gt;</span></p>
+<p><span style="color: #0000ff;"> </span> &nbsp; &lt;/system-properties&gt;</p>
+<p> &nbsp; &nbsp;&lt;management&gt;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;....</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* $Revision: 16544 $ $Date: 2014-10-27 11:16:49 -0200 (Mon, 27 Oct 2014) $ */
+.lum-hierarchicalcontent-sitemap ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	font-size:12px;
+}
+.lum-hierarchicalcontent-sitemap > ul > li {
+	width:170px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;   
+	box-sizing:border-box; 
+	padding:12px 14px;
+	display:inline-block;
+	vertical-align:top;
+}
+.lum-hierarchicalcontent-sitemap ul ul {
+	display:block;
+	padding-left:12px;
+}
+.lum-hierarchicalcontent-sitemap ul a,
+.lum-hierarchicalcontent-sitemap ul span {
+	display:block;
+	padding:4px 0;
+	font-weight:bold;
+}
+.lum-hierarchicalcontent-sitemap ul span {
+	color:#919191;
+	cursor:default;
+}
+.lum-hierarchicalcontent-sitemap ul ul a,
+.lum-hierarchicalcontent-sitemap ul ul span {
+	padding:3px 0;
+	font-weight:normal;
+}

@@ -1,0 +1,175 @@
+/* $Revision: 14771 $ $Date: 2012-10-03 18:21:31 -0300 (Wed, 03 Oct 2012) $ */
+.cLumMultiFileUpload .uploadifyQueueItem {
+	background-color: #FFFFFF;
+	border: none;
+	border: 2px solid #E5E5E5;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 0;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.cLumMultiFileUpload .uploadifyError {
+	background-color: #FDE5DD !important;
+	border: none !important;
+	border-bottom: 1px solid #FBCBBC !important;
+}
+
+.cLumMultiFileUpload .uploadifyQueueItem .cancel {
+	float: right;
+}
+
+.cLumMultiFileUpload .uploadifyQueue .cLumMultiFileUploadCompletedMessage { 
+	background: none repeat scroll 0 0 #F3F2F2 !important;
+	display:none;
+}
+
+.cLumMultiFileUpload .uploadifyQueue .completed .cLumMultiFileUploadCompletedMessage { 
+	background: none repeat scroll 0 0 #F3F2F2 !important;
+	display:inherit;
+}
+
+.cLumMultiFileUpload .uploadifyQueue .completed .percentage { 
+	background: none repeat scroll 0 0 #F3F2F2 !important;
+	display:none;
+}
+
+.cLumMultiFileUpload .uploadifyQueueItem .fileName {
+	_float: left;
+}
+
+.cLumMultiFileUpload .uploadifyQueue .percentage { 
+	display:inline;
+	padding-left:5px;
+}
+
+.cLumMultiFileUpload .uploadifyQueue .completed { 
+	background: none repeat scroll 0 0 #F3F2F2 !important;
+	clear: all;
+}
+
+
+.cLumMultiFileUpload .uploadifyProgress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+}
+
+.cLumMultiFileUpload .uploadifyProgressBar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}
+
+.cLumMultiFileUpload .queue {
+	border: 1px solid #ccc;
+	height: 213px;
+	margin-bottom: 10px;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.cLumMultiFileUploadQueueHTML5 {
+	height: 213px;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+
+.cLumMultiFileUploadItemHTML5 {
+	background-color: #FFFFFF;
+	border: none;
+	border: 1px solid #E5E5E5;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 0;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.cLumMultiFileUploadImageBorderNone
+{
+	border: 0px;	
+}
+
+.cLumMultiFileUploadProgressBarHTML5
+{
+	background-color:none !important;
+	width:100% !important;
+}
+
+.cLumMultiFileUploadButtonsBar
+{
+}
+
+.cLumMultiFileUploadButtonsBar > span, .cLumMultiFileUploadButtonsBar > label
+{
+	width: 80px !important;
+	height: 24px !important;
+	padding: 0;
+}
+
+.cLumMultiFileUploadButtonsBar > button
+{
+	width: 82px !important;
+	height: 26px !important;
+}
+
+.cLumMultiFileUploadQueue
+{
+	width:100%;
+}
+
+.cLumMultiFileUploadContainer
+{
+	width:100%;
+	height:252px; 
+}
+
+.cLumMultiFileUploadButtonsBarFlash
+{
+	height:26px;
+}
+
+.cLumMultiFileUploadAddButtonFlash
+{
+	position:relative;
+}
+
+.cLumMultiFileUploadClearButtonContainerFlash
+{
+	position:relative; 
+	top:-15px; 
+	display:block; 
+	height:100%;
+}
+
+.cLumMultiFileUploadClearButtonContainerFlash a 
+{
+	text-decoration:none; 
+	color: #606060;
+}
+
+.cLumMultiFileUploadClearButtonFlash
+{
+	border: 0px;
+	margin: 1px 5px; 
+	float:top;
+}
+
+.cLumMultiFileUploadInpuFileHML4
+{
+	margin-bottom:10px !important;
+}
+
+.cLumMultiFileUploadContainerHML4
+{
+	 position:relative; 
+	 display:block; 
+}
+
+.cLumMultiFileUploadSupportedVersionsLink
+{
+	float:left;
+}
+
+.cLumMultiFileUploadCompleted { 
+	background: none repeat scroll 0 0 #F3F2F2 !important;
+}

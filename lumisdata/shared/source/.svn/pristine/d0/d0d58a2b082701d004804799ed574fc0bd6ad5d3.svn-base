@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:common="http://ws.common.tempoassist.com.br/schema"
+           xmlns:beneficiario="http://ws.beneficiario.tempoassist.com.br/schema"
+           attributeFormDefault="qualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://ws.beneficiario.tempoassist.com.br/schema">
+   <xs:import namespace="http://ws.common.tempoassist.com.br/schema"
+              schemaLocation="Common.xsd"/>
+   <xs:complexType name="Beneficiario">
+      <xs:complexContent>
+         <xs:extension base="common:Contato">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="hierarquia" nillable="true" type="common:Hierarquia"/>
+               <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="numeroCNS" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="codigoCarteirinha" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="sexo" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="vinculo" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="plano" nillable="true" type="common:Plano"/>
+               <xs:element minOccurs="0" name="acomodacao" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="historicoMovimentacao" type="xs:int"/>
+               <xs:element minOccurs="0" name="idade" nillable="true" type="xs:int"/>
+               <xs:element minOccurs="0" name="peso" nillable="true" type="xs:decimal"/>
+               <xs:element minOccurs="0" name="altura" nillable="true" type="xs:decimal"/>
+               <xs:element minOccurs="0" name="massaCorporal" nillable="true" type="xs:decimal"/>
+               <xs:element minOccurs="0" name="tipo" nillable="true" type="beneficiario:TipoBeneficiario"/>
+               <xs:element minOccurs="0" name="identidade" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="posto" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="titular" nillable="true" type="beneficiario:Beneficiario"/>
+               <xs:element minOccurs="0" name="matriculaFuncional" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="unidadeFuncional" nillable="true"
+                           type="common:UnidadeFuncional"/>
+               <xs:element minOccurs="0" name="validadeCarteirinha" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="dataRealizacaoAtendimento" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="estadoCivil" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="nomeMae" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="empresa" nillable="true" type="common:Empresa"/>
+               <xs:element minOccurs="0" name="endereco" nillable="true" type="common:Endereco"/>
+               <xs:element minOccurs="0" name="rg" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="orgaoEmissor" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="dataEmissaoCarteirinha" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="dataEntradaPlano" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="dataBaseCarencia" nillable="true" type="xs:date"/>
+               <xs:element minOccurs="0" name="codigoInterno" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="cobertura" nillable="true" type="xs:string"/>
+               <xs:element maxOccurs="unbounded" minOccurs="0" name="grupoFamiliar" nillable="true"
+                           type="beneficiario:Beneficiario"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TipoBeneficiario">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AutenticacaoBeneficiario">
+      <xs:complexContent>
+         <xs:extension base="beneficiario:Beneficiario">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="senhaAnterior" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="confirmacaoSenha" nillable="true" type="xs:string"/>
+               <xs:element minOccurs="0" name="confirmacaoEmail" nillable="true" type="xs:string"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

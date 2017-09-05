@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 11060 $ $Date: 2009-11-09 18:34:22 -0200 (Mon, 09 Nov 2009) $ -->
+<weblogic-web-app>
+
+	<!-- Uncomment to specify a contextRoot for the web application
+	<context-root>/contextRoot</context-root>
+	-->
+	
+	<container-descriptor>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	
+</weblogic-web-app>

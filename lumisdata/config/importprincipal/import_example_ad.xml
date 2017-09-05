@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14408 $ $Date: 2012-06-20 13:11:00 -0300 (Wed, 20 Jun 2012) $ -->
+<config>
+	<importgroups>true</importgroups>
+	<readers>
+		<reader type="ADReader">
+			<domain>meudominio.com</domain>
+			<!-- NetBIOS domain to NTLM authentication -->
+			<netbiosDomain>MEUDOMINIO</netbiosDomain>
+			<uris>
+				<uri>ldap://10.200.10.2:389/OU=Usuarios,DC=MEUDOMINIO,DC=COM</uri>
+				<uri>ldap://10.200.10.2:389/OU=Grupos,DC=MEUDOMINIO,DC=COM</uri>
+			</uris>
+			<credential>
+				<user>username@meudominio.com</user>
+				<password>password</password>
+			</credential>
+		</reader>
+	</readers>
+</config>

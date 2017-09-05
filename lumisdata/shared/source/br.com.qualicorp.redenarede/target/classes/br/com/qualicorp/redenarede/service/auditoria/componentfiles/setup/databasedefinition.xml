@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd">
+	
+	<table name="qc_auditoria">
+		<fields>
+			<field name="id" type="guid" isNotNull="true" />
+			<field name="userId" type="guid" isNotNull="true" />
+			<field name="userName" type="string" size="255" />
+			<field name="login" type="string" size="255" />
+			<field name="serviceId" type="string" size="255" />
+			<field name="serviceName" type="string" size="500" isNotNull="true" />
+			<field name="instanceId" type="guid" />
+			<field name="instanceName" type="string" size="500" />
+			<field name="operation" type="integer" size="11" isNotNull="true" />
+			<field name="dateProcess" type="dateTime" isNotNull="true" />
+			<field name="content" type="text" isNotNull="true" />
+			<field name="customMessage" type="text" />
+			<field name="itemId" type="guid" isNotNull="false" />
+		</fields>
+		<constraints>
+			<constraint name="qc_auditoria_pk" type="primaryKey">
+				<fields>
+					<field name="id"/>
+				</fields>
+			</constraint>
+		</constraints>
+	</table>
+	
+</databaseDefinition>

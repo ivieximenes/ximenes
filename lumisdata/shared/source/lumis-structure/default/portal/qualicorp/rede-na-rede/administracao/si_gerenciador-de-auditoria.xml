@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>2C96A668583109F501583110AE7B00B7</id>
+  <name>Gerenciador de Auditoria</name>
+  <service-id>br.com.qualicorp.redenarede.service.auditoria</service-id>
+</service-instance>

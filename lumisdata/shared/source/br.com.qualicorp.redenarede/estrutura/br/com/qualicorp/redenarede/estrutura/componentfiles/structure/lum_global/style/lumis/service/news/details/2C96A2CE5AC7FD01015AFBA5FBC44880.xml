@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>2C96A2CE5AC7FD01015AFBA5FBC44880</id>
+  <interface-id>lumis.service.news.details</interface-id>
+  <name>Rede na Rede - Detalhes beneficiário</name>
+  <file-path>lumis/service/news/style/detalhes-noticia-beneficiario.xsl</file-path>
+</interface-style>

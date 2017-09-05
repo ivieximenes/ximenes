@@ -1,0 +1,340 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Váriavel lum_xpath</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?variavel_lum_xpath.htm"; }
+  else { parent.quicksync('a5.5.1.3.1.1.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="font-style: italic;">lum_xpath</span> é um objeto com a finalidade de disponibilizar vários métodos que facilitam na hora de obter dados provenientes do contexto (XML) da interface cujo estilo está sendo gerado, através do uso de <a href="http://www.w3.org/TR/xpath/" target="_blank" class="weblink">XPath</a>.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th valign="top" width="161" style="width:161px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Tipo retornado</span></p>
+</th>
+<th valign="top" width="328" style="width:328px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Método</span></p>
+</th>
+<th valign="top" style="border: solid 1px #000000;"><p><span style="font-weight: bold;">Descrição</span></p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">String</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">valueOf</span>(String xpath, Node context)</p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';">Retorna uma string representando o valor do nó no xpath do contexto passado.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">Node</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">selectSingleNode</span>(String xpath)</p>
+</td>
+<td rowspan="2" valign="top" style="border: solid 1px #000000;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';">Retorna um único elemento com o XPath no contexto passado.</span><br>
+<span style="font-size: 12pt; font-family: 'Times New Roman';">Caso o contexto não seja passado, o documento (lum_document) será usado.</span><br>
+<span style="font-size: 12pt; font-family: 'Times New Roman';">Quando mais de um elemento for encontrado, somente o primeiro será retornado.</span><br>
+<span style="font-size: 12pt; font-family: 'Times New Roman';">Se nenhum elemento for encontrado retorna nulo.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; height:15px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">Node</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; height:15px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">selectSingleNode</span>(String xpath, Node context)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">List&lt;Node&gt;</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">selectNodes</span>(String xpath)</p>
+</td>
+<td rowspan="2" valign="top" style="border: solid 1px #000000;"><p>Retorna uma lista dos os elementos com o XPath no contexto passado.<br>
+Caso o contexto não seja passado, o documento (lum_document) será usado.</p>
+<p>Se nenhum elemento for encontrado, uma lista vazia será retornada.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">List&lt;Node&gt;</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">selectNodes</span>(String xpath, Node context)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="161" style="width:161px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-style: italic;">Map&lt;String, Object&gt;</span></p>
+</td>
+<td valign="middle" width="328" style="width:328px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">toMap</span>(Node node)</p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Retorna um mapa representando o nó passado. Para maiores informações na estrutura do mapa e suas regras de conversão, veja a página </span><a href="../api/lumis/portal/serviceinterface/style/impl/scripting/IXPath.html#toMap-org.w3c.dom.Node-" target="_blank" class="weblink">IXPath.toMap</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';">A seguir uma série de exemplos de uso para cada método:</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Exemplos de uso do método</span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;"> </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-style: italic;">lum_xpath.valueOf</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="515" style="width:515px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">XML</span></p>
+</td>
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">JavaScript</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td rowspan="6" valign="top" width="515" style="width:515px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">renderData</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">controls</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="autoLayout"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_autoLayoutContentQuickList"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="lum_form"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_form"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="lum_interfaceHeader"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_interfaceHeader"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">data</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;controlTitle/&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInterfaceInstanceTitle/&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInterfaceTitle&gt;Lista&nbsp;Rápida&lt;/serviceInterfaceTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInstanceTitle&gt;Notícias&lt;/serviceInstanceTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lista&nbsp;Rápida&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">patterns</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">standardTitle</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-style: italic; font-weight: bold; text-decoration: underline;">Notícias</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/standardTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">administrationTitle</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-style: italic; font-weight: bold; text-decoration: underline;">Lista&nbsp;Rápida</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/administrationTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/patterns&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/renderData&gt;</span></p>
+</td>
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 1: Valor de nó simples</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+lum_xpath.valueOf(<span style="color: #2a00ff;">"/renderData/controls/control[@id='autoLayout']/control[@id='lum_form']/control[@id='lum_interfaceHeader']/data/patterns/standardTitle"</span>, lum_document)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima retornaria a string "<span style="font-weight: bold;">Notícias</span>".</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 2: Valor de nó com filhos</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+lum_xpath.valueOf(<span style="color: #2a00ff;">"/renderData/controls/control[@id='autoLayout']/control[@id='lum_form']/control[@id='lum_interfaceHeader']/data/patterns"</span>, lum_document)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="699" style="width:699px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima retornaria a string "<span style="font-weight: bold;">Notícias Lista Rápida</span>".<br>
+Note que o valor dos filhos foi concatenado no retorno.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Exemplos de uso do método </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-style: italic;">lum_xpath.selectSingleNode</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="516" style="width:516px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">XML</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">JavaScript</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td rowspan="6" valign="top" width="516" style="width:516px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">renderData</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">controls</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="autoLayout"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_autoLayoutContentQuickList"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="lum_form"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_form"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control&nbsp;id="lum_interfaceHeader"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;type="lum_interfaceHeader"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">data</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;controlTitle/&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInterfaceInstanceTitle/&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInterfaceTitle&gt;Lista&nbsp;Rápida&lt;/serviceInterfaceTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;serviceInstanceTitle&gt;Notícias&lt;/serviceInstanceTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lista&nbsp;Rápida&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">patterns</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">standardTitle</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-style: italic; font-weight: bold; text-decoration: underline;">Notícias</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/standardTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">administrationTitle</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;Lista&nbsp;Rápida&lt;/administrationTitle&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/patterns&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/renderData&gt;</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 1: Pegando um nó sem passar contexto</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+var dataNode = lum_xpath.selectSingleNode(<span style="color: #2a00ff;">"/renderData/controls/control[@id='autoLayout']/control[@id='lum_form']/control[@id='lum_interfaceHeader']/data"</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima retornaria o nó data, que poderia ser usado no exemplo do <span style="font-style: italic;">valueOf:</span><br>
+lum_xpath.valueOf(<span style="color: #2a00ff;">"./patterns/standardTitle"</span>, dataNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 2: </span><span style="font-weight: bold;">Pegando um nó especificando um contexto</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+var patternsNode = lum_xpath.selectSingleNode(<span style="color: #2a00ff;">"./patterns"</span>, dataNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima retornaria o nó patterns, que pode ser usado no exemplo do valueOf:<br>
+lum_xpath.valueOf(<span style="color: #2a00ff;">"./standardTitle"</span>, patternsNode)</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Exemplos de uso do método </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-style: italic;">lum_xpath.selectNodes</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="514" style="width:514px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">XML</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">JavaScript</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td rowspan="3" valign="top" width="514" style="width:514px; border: solid 1px #000000;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">renderData</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">controls</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control id="autoLayout"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_autoLayoutContentQuickList"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control id="lum_form"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_form"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">dataId="id"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">id="list"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_list"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control &nbsp;id="list.tabulardata"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">data</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://www.lumis.com.br/"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Lumis&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://linx.lumis.com.br"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Linx - Lumis&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://www.google.com/"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Google&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;"> &lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/data&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; ...</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/renderData&gt;</span></p>
+</td>
+<td valign="top" style="height:19px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 1: Pegando uma lista de nós</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+var rows = lum_xpath.selectNodes(<span style="color: #2a00ff;">"/renderData/controls/control[@id='autoLayout']/control[@id='lum_form']/control[@id='list']/control[@id='list.tabulardata']/data/row"</span>);<br>
+<span style="font-weight: bold; color: #7f0055;">for</span>(i <span style="font-weight: bold; color: #7f0055;">in</span> rows)<br>
+{<br>
+ &nbsp; print(<span style="color: #2a00ff;">"&lt;a href='"</span> + lum_xpath.valueOf(<span style="color: #2a00ff;">"./@href"</span>, rows[i]) + <span style="color: #2a00ff;">"'&gt;"</span> +<br>
+ &nbsp; &nbsp; &nbsp;lum_xpath.valueOf(<span style="color: #2a00ff;">"./title"</span>, rows[i] ) + <span style="color: #2a00ff;">"&lt;/a&gt; &lt;br/&gt;\n"</span>);<br>
+}</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima pega uma lista com todos os nós "<span style="font-weight: bold;">row</span>" com o XPath passado e cria uma lista de links usando o valor do titulo e href dos mesmos</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-style: italic;">&lt;a href='</span><span style="font-style: italic; font-weight: bold;">http://www.lumis.com.br/</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Lumis</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span><br>
+<span style="font-style: italic;">&lt;a href=</span><span style="font-style: italic; font-weight: bold;">'http://linx.lumis.com.br</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Linx - Lumis</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span><br>
+<span style="font-style: italic;">&lt;a href='</span><span style="font-style: italic; font-weight: bold;">http://www.google.com/</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Google</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';">Exemplos de uso do método </span><span style="font-size: 12pt; font-family: 'Times New Roman'; font-style: italic;">lum_xpath.toMap</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="513" style="width:513px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">XML</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman'; font-weight: bold;">JavaScript</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td rowspan="3" valign="top" width="513" style="width:513px; border: solid 1px #000000;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">renderData</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">controls</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control id="autoLayout"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_autoLayoutContentQuickList"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control id="lum_form"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_form"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">dataId="id"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">id="list"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> type="lum_list"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">control &nbsp;id="list.tabulardata"</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">data</span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://www.lumis.com.br/"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Lumis&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://linx.lumis.com.br"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Linx - Lumis&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;">&lt;row href="http://www.google.com/"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;title&gt;Google&lt;/title&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana'; font-weight: bold;"> &lt;/row&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/data&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';"> &nbsp; &nbsp; &nbsp; &nbsp; ...</span><br>
+<span class="f_CodeExample" style="font-size: 10pt; font-family: 'Verdana';">&lt;/renderData&gt;</span></p>
+</td>
+<td valign="top" style="height:19px; border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Exemplo 1: Usando o mapa de um nó</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Código</span><br>
+var rows = lum_xpath.selectNodes(<span style="color: #2a00ff;">"//data/row"</span>);<br>
+&nbsp;<br>
+<span style="font-weight: bold; color: #7f0055;">for</span>(<span style="font-weight: bold; color: #7f0055;">var</span> i <span style="font-weight: bold; color: #7f0055;">in</span> rows)<br>
+{<br>
+<span style="font-weight: bold; color: #7f0055;"> &nbsp; var</span> row = lum_xpath.toMap(rows[i]);<br>
+ &nbsp; print(<span style="color: #2a00ff;">"&lt;a href='"</span> + row.$href +<span style="color: #2a00ff;">"'&gt;"</span> + row.title + <span style="color: #2a00ff;">"&lt;/a&gt;&lt;br/&gt;\n"</span>);<br>
+}</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-weight: bold;">Retorno</span><br>
+O código acima pega uma lista com todos os nós "<span style="font-weight: bold;">row</span>" com o XPath passado e para cada nó cria um mapa para gerar uma lista de links usando o titulo e href.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-style: italic;">&lt;a href='</span><span style="font-style: italic; font-weight: bold;">http://www.lumis.com.br/</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Lumis</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span><br>
+<span style="font-style: italic;">&lt;a href=</span><span style="font-style: italic; font-weight: bold;">'http://linx.lumis.com.br</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Linx - Lumis</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span><br>
+<span style="font-style: italic;">&lt;a href='</span><span style="font-style: italic; font-weight: bold;">http://www.google.com/</span><span style="font-style: italic;">'&gt;</span><span style="font-style: italic; font-weight: bold;">Google</span><span style="font-style: italic;">&lt;/a&gt;&lt;br/&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 11993 $ $Date: 2010-10-05 16:08:47 -0300 (Tue, 05 Oct 2010) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_pagination"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_pagination"
+	xmlns:control="http://www.lumis.com.br/douicontrols"
+	xmlns:genericControl="http://www.lumis.com.br/douicontrols/lum_genericControl"
+	elementFormDefault="unqualified">
+	
+    <xsd:import schemaLocation="../lum_genericControl.xsd" namespace="http://www.lumis.com.br/douicontrols/lum_genericControl" />
+    
+    <xsd:complexType name="lum_pagination">
+    	<xsd:complexContent>
+    		<xsd:extension base="genericControl:lum_genericControl">
+    			<xsd:attribute name="maxPages">
+                    <xsd:annotation>
+                    	<xsd:documentation>The maximum number of pages that this control will generate in its render. Must be greater than or equal to 1.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+    					<xsd:restriction base="xsd:int">
+    						<xsd:minInclusive value="1"></xsd:minInclusive>
+    					</xsd:restriction>
+    				</xsd:simpleType>
+    			</xsd:attribute>
+    			<xsd:attribute name="blockSize">
+                    <xsd:annotation>
+                    	<xsd:documentation>The pagination block size. It must be odd and greater than zero.</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+    					<xsd:restriction base="xsd:int">
+    						<xsd:minInclusive value="1"></xsd:minInclusive>
+    					</xsd:restriction>
+    				</xsd:simpleType>
+    			</xsd:attribute>
+    		</xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

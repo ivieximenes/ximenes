@@ -1,0 +1,164 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>API</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalapi.htm"; }
+  else { parent.quicksync('a8.2.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">API</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="portaltutorial2registroservico.htm">Previous</a>&nbsp;
+     <a href="douidesenvolvimento.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Todos os componentes do portal são gerenciados através de um conjunto de classes chamadas de <span style="font-style: italic;">Managers.</span> Os <span style="font-style: italic;">Managers</span> e seus métodos representam as <span style="font-style: italic;">API's </span>do portal. Por exemplo, os serviços que necessitam receber informações de dados do usuário logado, se comunicam através dessas <span style="font-style: italic;">API’s </span>(<span style="font-style: italic;">managers</span> ). Toda a interação com o Portal é feita através dos <span style="font-style: italic;">Managers</span> tais como <span style="font-style: italic;">Channel Manager</span>, <span style="font-style: italic;">Service Manager</span>, <span style="font-style: italic;">Service Interface Manager</span>, <span style="font-style: italic;">Page Manager </span>etc.</p>
+<p style="margin: 14px 0px 0px 0px;">Para obter um manager é necessário utilizar o <span style="font-style: italic;">ManagerFactory</span>. Não é permitido instanciar nenhum <span style="font-style: italic;">manager</span>. É errado criar um <span style="font-style: italic;">Channel Manager</span> instanciado diretamente o objeto (IChannelManager cm = new ChannelManager()), por exemplo. O correto é utilizar o <span style="font-style: italic;">ManagerFactory</span> <span style="font-style: italic;">ManagerFactory.getChannelManager();</span></p>
+<p style="margin: 14px 0px 0px 0px;">A seguir as APIs <span style="font-style: italic;">Lumis</span> que podem ser utilizadas para a implementação de:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/authentication/AuthenticationManager.html" target="_blank" class="weblink">Authentication Manager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> da autenticação no portal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/channel/ChannelManager.html" target="_blank" class="weblink">Channel Manager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> referente a gerência de canais.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/file/FileManager.html" target="_blank" class="weblink">FileManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> referente a gerência de arquivos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/filesystem/FileSystemManager.html" target="_blank" class="weblink">FileSystemManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> referente a alterações de arquivos no sistema operacional.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/group/GroupManager.html" target="_blank" class="weblink">GroupManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> rerente a gerência de operações sobre grupos do portal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/hyperlink/HyperLinkManager.html" target="_blank" class="weblink">HyperLinkManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> referente a gerência de operações de <span style="font-style: italic;">hyperlinks</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/localization/LocalizationManager.html" target="_blank" class="weblink">LocalizationManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> referente a gerência de localização de strings</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/page/PageManager.html" target="_blank" class="weblink">PageManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">Javadoc referente a gerência de página.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/event/PortalEventManager.html" target="_blank" class="weblink">PortalEventManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">Javadoc referente a gerência de eventos do portal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/principal/PrincipalManager.html" target="_blank" class="weblink">PrincipalManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">Javadoc referente a gerência de usuários e grupos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/sendmail/SendMailManager.html" target="_blank" class="weblink">SendMailManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">Javadoc referente a gerência de envio de e-mail.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/user/UserManager.html" target="_blank" class="weblink">UserManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">Javadoc referente a gerência de usuários no portal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/lock/LockManager.html" target="_blank" class="weblink">LockManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> para operações relacionadas a lock.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/cache/CacheManager.html" target="_blank" class="weblink">CacheManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc </span>para operações relacionadas a cache do portal. A limpeza do cache do portal é realizada após ações tais como adição e edições de configurações no <span style="font-style: italic;">portal administration</span> e <span style="font-style: italic;">portal studio</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/monitor/impl/MonitorManager.html" target="_blank" class="weblink">MonitorManager</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc</span> para operações relacionadas a monitoração de dados e coleção de estatísticas utilizados pelos observadores de eventos ocorridos no portal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="30%" style="width:30%; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><a href="../api/lumis/portal/deployment/package-summary.html" target="_blank" class="weblink">Deployment</a></p>
+</td>
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-style: italic;">Javadoc </span>referente ao comportamento do <span style="font-style: italic;">deployment</span> de pacote de classes que o <span style="font-style: italic;">Lumis</span> pode executar.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

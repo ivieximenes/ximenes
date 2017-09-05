@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>Accessing Monitored Data</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+	<style>.code{background:#eeeeee;border:1px solid black;padding: 2px 2px 2px 2px}</style>
+</head>
+
+<body>
+
+<h1>Accessing Monitored Data</h2>
+
+<h2>Introduction</h2>
+<p>
+This document illustrates how to access the data collected by the monitoring framework.
+One useful purpose for such access is for generating reports using this data.
+</p>
+<p>
+The access is shown in a step-by-step style, with SQL examples. Note that these
+tables may be used only for read operations (SELECT) and their data must not
+be changed directly (such as UPDATE, DELETE or INSERT operations).
+</p>
+<p>
+For more theoretical background concerning the monitoring framework entities, 
+see the <a href="../../package-summary.html">lumis.portal.monitor package javadoc</a>.
+</p>
+<h2>EventData</h2>
+<p>
+EventData is the main entity where the data collected by the monitor framework
+is stored.
+To filter the data by the kind of event, you must perform a join with Event:
+</p>
+
+<div class="code">
+SELECT * <br/>
+FROM lum_MonEventData eventData<br/>
+INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview'
+</div>
+
+<p>
+Using eventData properties, filter by the period can be done easily.
+Note that there may be multiple eventData rows due to different aggregations in
+the same time period. A <em>GROUP BY</em> is usually used to further
+consolidate event data rows.
+</p>
+
+<div class="code">
+SELECT eventData.startOfPeriod, eventData.endOfPeriod<br/>
+FROM lum_MonEventData eventData<br/>
+INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview' <strong>AND eventData.startOfPeriod > '2000-01-01' AND eventData.endOfPeriod < '2010-01-01'<br/>
+GROUP BY eventData.startOfPeriod, eventData.endOfPeriod ORDER BY eventData.startOfPeriod</strong>
+</div>
+
+<h2>EventDataMeasure</h2>
+
+<p>
+The actual statistics data are stored in EventDataMeasure. A join from EventData
+is needed to access this data:
+</p>
+
+<div class="code">
+SELECT eventData.startOfPeriod, eventData.endOfPeriod<strong>, SUM(eventDataMeasure.hits)</strong><br/>
+FROM lum_MonEventData eventData<br/>
+INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+<strong>INNER JOIN lum_MonEventDataMeasure eventDataMeasure ON eventDataMeasure.eventDataId = eventData.id</strong><br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview' AND eventData.startOfPeriod > '2000-01-01' AND eventData.endOfPeriod < '2010-01-01'<br/>
+GROUP BY eventData.startOfPeriod, eventData.endOfPeriod ORDER BY eventData.startOfPeriod
+</div>
+
+<p>
+But a single EventData may have entries in EventDataMeasure of different measure
+types. So it usually makes no sense just joining EventDataMeasure without filtering
+the respective measure type. Such filtering can be done by joining MeasureType from
+EventDataMeasure:
+</p>
+
+<div class="code">
+SELECT eventData.startOfPeriod, eventData.endOfPeriod<strong>, SUM(durationMeasure.hits) as durationHits</strong><br/>
+FROM lum_MonEventData eventData<br/>
+INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+<strong>INNER JOIN lum_MonEventDataMeasure durationMeasure ON durationMeasure.eventDataId = eventData.id INNER JOIN lum_MonMeasureType durationMeasureType ON durationMeasure.measureTypeId = durationMeasureType.id AND durationMeasureType.measureTypeKey = 'lumis.portal.monitor.mt.duration.ms'</strong><br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview' AND eventData.startOfPeriod > '2000-01-01' AND eventData.endOfPeriod < '2010-01-01'<br/>
+GROUP BY eventData.startOfPeriod, eventData.endOfPeriod ORDER BY eventData.startOfPeriod
+</div>
+
+<p>
+If data of another measure for the same event data is also desired, just make
+another join to EventDataMeasure and MeasureType to obtain the desired data.
+This could be repeated as many times as desired.
+</p>
+
+<div class="code">
+SELECT eventData.startOfPeriod, eventData.endOfPeriod, SUM(durationMeasure.hits) as durationHits<strong>, SUM(activityMeasure.hits) as activityHits</strong><br/>
+FROM lum_MonEventData eventData INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+INNER JOIN lum_MonEventDataMeasure durationMeasure ON durationMeasure.eventDataId = eventData.id INNER JOIN lum_MonMeasureType durationMeasureType ON durationMeasure.measureTypeId = durationMeasureType.id AND durationMeasureType.measureTypeKey = 'lumis.portal.monitor.mt.duration.ms'<br/>
+<strong>INNER JOIN lum_MonEventDataMeasure activityMeasure ON activityMeasure.eventDataId = eventData.id INNER JOIN lum_MonMeasureType activityMeasureType ON activityMeasure.measureTypeId = activityMeasureType.id AND activityMeasureType.measureTypeKey = 'lumis.portal.monitor.mt.activity.ms'</strong><br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview' AND eventData.startOfPeriod > '2000-01-01' AND eventData.endOfPeriod < '2010-01-01'<br/>
+GROUP BY eventData.startOfPeriod, eventData.endOfPeriod ORDER BY eventData.startOfPeriod
+</div>
+
+<p>
+Note that these inner joins are appropriated only if each event data has data
+collected for all the joined measure types, otherwise an outer join or multiple
+selects may be required.
+</p>
+
+<p>
+The following statistical data can be easily obtained from the columns in EventDataMeasure:
+<ul>
+	<li>Sum of values: SUM(eventDataMeasure.sumOfValues)</li>
+	<li>Minimum value: MIN(eventDataMeasure.minValue)</li>
+	<li>Maximum value: MAX(eventDataMeasure.maximumValue)</li>
+	<li>Number of times the measure was collected: SUM(eventDataMeasure.hits)</li>
+	<li>Average value: SUM(eventDataMeasure.sumOfValues)/SUM(eventDataMeasure.hits)</li>
+	<li>Sum of squares: SUM(eventDataMeasure.sumOfSquares)</li>
+</ul>
+Standard deviation</a> can be calculated using sum of squares, sum of values and
+hits, with the formula: <em>(1/hits)*sqrt(hits*sumOfSquares - sumOfValues*sumOfValues)</em>.
+When grouping, the formula variables <em>hits</em>, <em>sumOfSquares</em>
+and <em>sumOfValues</em> are calculated with SUM as shown above.
+</p>
+
+<h2>EventDataAggregation</h2>
+
+<p>
+If it is desired to group by or filter by an aggregation data, you should join
+to EventDataAggregation and AggregationType in a similar way as was done to join
+with EventDataMeasure and MeasureType. This kind of join may also be done multiple
+times to access multiple aggregation values.
+</p>
+
+<div class="code">
+SELECT eventData.startOfPeriod, eventData.endOfPeriod, SUM(durationMeasure.hits) as durationHits, SUM(activityMeasure.hits) as activityHits<strong>, loginAggregation.value</strong><br/>
+FROM lum_MonEventData eventData<br/>
+INNER JOIN lum_MonEvent event ON eventData.eventId = event.id<br/>
+INNER JOIN lum_MonEventDataMeasure durationMeasure ON durationMeasure.eventDataId = eventData.id INNER JOIN lum_MonMeasureType durationMeasureType ON durationMeasure.measureTypeId = durationMeasureType.id AND durationMeasureType.measureTypeKey = 'lumis.portal.monitor.mt.duration.ms'<br/>
+INNER JOIN lum_MonEventDataMeasure activityMeasure ON activityMeasure.eventDataId = eventData.i INNER JOIN lum_MonMeasureType activityMeasureType ON activityMeasure.measureTypeId = activityMeasureType.id AND activityMeasureType.measureTypeKey = 'lumis.portal.monitor.mt.activity.ms'<br/>
+<strong>INNER JOIN lum_MonEventDataAggregation loginAggregation ON loginAggregation.eventDataId = eventData.id INNER JOIN lum_MonAggregationType loginAggregationType ON loginAggregation.aggregationTypeId = loginAggregationType.id AND loginAggregationType.aggregationTypeKey = 'lumis.portal.monitor.at.user.login'</strong><br/>
+WHERE event.eventKey = 'lumis.portal.presentation.ev.pageview' AND eventData.startOfPeriod > '2000-01-01' AND eventData.endOfPeriod < '2010-01-01'<br/>
+GROUP BY eventData.startOfPeriod, eventData.endOfPeriod<strong>, loginAggregation.value</strong> ORDER BY eventData.startOfPeriod
+</div>
+
+<h2>Monitor Database Diagram</h2>
+
+<p>
+Following is the ER diagram for the monitored data tables:
+</p>
+<img src="monitor_database.png" alt="Monitored data tables ER diagram"/>
+
+<h2>Conclusion</h2>
+
+<p>
+This steps have shown how to:
+<ul>
+	<li>Access the event data of a specific event</li>
+	<li>Access statistical measure values for that event data</li>
+	<li>Access aggregation values for that event data</li>
+</ul>
+</p>
+
+</body>
+</html>

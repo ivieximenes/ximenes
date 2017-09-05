@@ -1,0 +1,87 @@
+/* $Revision: 15489 $ $Date: 2013-06-14 19:22:58 -0300 (Fri, 14 Jun 2013) $ */
+
+.lumis-service-categorization-list ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.lumis-service-categorization-list .lum-content-body > ul > li {
+	width:170px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;   
+	box-sizing:border-box; 
+	padding:12px 14px;
+	display:inline-block;
+	vertical-align:top;
+}
+.lumis-service-categorization-list ul ul {
+	display:block;
+	padding-left:12px;
+}
+.lumis-service-categorization-list ul a {
+	display:block;
+	padding:4px 0;
+	font-weight:bold;
+}
+.lumis-service-categorization-list ul ul a {
+	padding:3px 0;
+	font-weight:normal;
+}
+
+.lumis-service-categorization-associatedTerms {
+	border-top:1px solid #cdcdcd;
+}
+.lumis-service-categorization-associatedTerms .lum-header {
+	margin:15px 0;
+}
+.lumis-service-categorization-associatedTerms.lum-interface-type-standard .lum-interface-title {
+	font-size:13px;
+	text-transform:none;
+	font-weight:bold;
+}
+.lumis-service-categorization-associatedTerms.lum-interface-type-standard .lum-interface-title:after {
+	content:":";
+	background-color:transparent;
+	display:inline;
+	margin:0;
+	position:static;
+	vertical-align:baseline;
+	height:auto;
+	width:auto;
+}
+.lumis-service-categorization-associatedTerms .lum-list-item:after {
+	display:none;
+}
+.lumis-service-categorization-associatedTerms .lum-list-item a {
+	font-weight:normal;
+	display:inline-block;
+}
+.lumis-service-categorization-associatedTerms .lum-list-item a:after {
+	content:'\00A0\00BB\00A0';
+	color:#444;
+	font-size:.9em;
+	vertical-align:top;
+	display:inline-block;
+}
+.lumis-service-categorization-associatedTerms .lum-list-item a.lum-last:after {
+	content:none;
+}
+
+.lumis-service-categorization-details h1 > a {
+	font-size:12px;
+	text-transform:none; 
+}
+.lumis-service-categorization-details h1 > a:after {
+	content:'\00A0\00A0\00BB\00A0';
+	color:#444;
+	font-size:.9em;
+	font-weight:normal;
+	vertical-align:top;
+	display:inline-block;
+}
+.lumis-service-categorization-details h1 > a.lum-last:after {
+	content:none;
+}
+.lumis-service-categorization-details .lum-field-value {
+	padding-right:8px;
+}

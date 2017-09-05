@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+	<xs:import schemaLocation="2.xsd"
+		namespace="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+	<xs:element name="ValidarUsuarioPrestador">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="usuarioPrestador"
+					nillable="true" type="q1:UsuarioPrestador"
+					xmlns:q1="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ValidarUsuarioPrestadorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ValidarUsuarioPrestadorResult"
+					nillable="true" type="q2:RetornoUsuarioPrestador"
+					xmlns:q2="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CadastrarUsuarioPrestador">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="usuarioPrestador"
+					nillable="true" type="q3:UsuarioPrestador"
+					xmlns:q3="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CadastrarUsuarioPrestadorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="CadastrarUsuarioPrestadorResult"
+					nillable="true" type="q4:RetornoUsuarioPrestador"
+					xmlns:q4="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AlterarSenhaUsuarioPrestador">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="usuarioPrestador"
+					nillable="true" type="q5:UsuarioPrestador"
+					xmlns:q5="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AlterarSenhaUsuarioPrestadorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="AlterarSenhaUsuarioPrestadorResult" nillable="true"
+					type="q6:RetornoUsuarioPrestador"
+					xmlns:q6="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RecuperarSenhaUsuarioPrestador">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="usuarioPrestador"
+					nillable="true" type="q7:UsuarioPrestador"
+					xmlns:q7="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RecuperarSenhaUsuarioPrestadorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="RecuperarSenhaUsuarioPrestadorResult" nillable="true"
+					type="q8:RetornoUsuarioPrestador"
+					xmlns:q8="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

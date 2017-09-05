@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>2C96A668530A50E0015384BE2D3811E6</id>
+  <name>Busca na Rede</name>
+  <hidden>true</hidden>
+  <position>6</position>
+  <layout-pages-type>LAYOUT_FILE</layout-pages-type>
+  <layout-file>deslogado-internas-2-colunas.html</layout-file>
+</channel>

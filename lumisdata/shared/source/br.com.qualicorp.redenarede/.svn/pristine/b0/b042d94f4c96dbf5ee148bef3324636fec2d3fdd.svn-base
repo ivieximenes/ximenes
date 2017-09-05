@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.qualicorp</groupId>
+	<artifactId>redenarede</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Qualicorp - Rede na Rede</name>
+
+	<!-- Lumis default repository, you may include more as it's needed -->
+	<repositories>
+		 <repository>
+      		<id>public_old</id>
+      		<url>http://build.lumis.com.br/archiva/repository/public</url>
+    </repository>
+	</repositories>
+
+
+	<dependencies>
+		<!-- Define a dependecy for a Lumis version -->
+		<dependency>
+			<groupId>com.lumis.lumisportal</groupId>
+			<artifactId>lumisportal.pom</artifactId>
+			<version>8.1.1.150831</version>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<finalName>br.com.qualicorp.redenadere</finalName>
+		<resources>
+			<resource>
+				<directory>src/</directory>
+				<includes>
+					<include>br/**</include>
+					<include>META-INF/**</include>
+				</includes>
+				<excludes>
+					<exclude>src/**</exclude>
+					<exclude>**/*.java</exclude>
+					<exclude>**/.svn</exclude>
+					<exclude>**/.svn</exclude>
+					<exclude>**/_svn</exclude>
+					<exclude>**/_svn</exclude>
+					<exclude>**/..DS_Store</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<sourceDirectory>src</sourceDirectory>
+		<defaultGoal>package</defaultGoal>
+		<plugins>
+		     <plugin>
+		       <artifactId>maven-jar-plugin</artifactId>
+		       <version>2.6</version>
+		       <configuration>
+		         <archive>
+		           <addMavenDescriptor>false</addMavenDescriptor>
+		         </archive>
+		       </configuration>
+		     </plugin>
+		     
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.6</source> 
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!--
+			This profile is activated by default. It's intended to be used for
+			development environments. It must be deactivated for production
+			builds (i.e. "mvn deploy -P!env-dev").
+		-->
+		<profile>
+			<id>env-dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<phase>prepare-package</phase>
+								<configuration>
+								    <target>
+										<jar destfile="${deployFolder.dir}/br.com.qualicorp.redenarede.wsit-client.jar" update="true" encoding="UTF-8">
+								    	 	<fileset dir="${basedir}/www/WEB-INF/classes" >
+								    	 		<include name="**"/>
+												<exclude name="**/.svn"/>
+												<exclude name="**/.svn/**"/>
+												<exclude name="**/_svn"/>
+												<exclude name="**/_svn/**"/>
+												<exclude name="**/.DS_Store/**"/>
+								    	 	</fileset>
+								    	</jar>
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<modules>
+	</modules>
+
+
+</project>
+

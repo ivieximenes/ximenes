@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16605 $ $Date: 2008-06-20 13:17:43 -0300 (sex, 20 jun 2008)$ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.lumis.com.br/lumisportal/xsd/report"
+		xmlns="http://www.lumis.com.br/lumisportal/xsd/report"
+		xmlns:control="http://www.lumis.com.br/douicontrols"
+		xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"
+		elementFormDefault="unqualified">
+	<xsd:import namespace="http://www.lumis.com.br/lumisportal/xsd/doui"/>
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols"/>
+	
+	<xsd:element name="reportDefinition" type="reportDefinition">
+		<xsd:annotation>
+			<xsd:documentation>Root element for a report definition file.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="reportDefinition">
+		<xsd:sequence>
+			<xsd:element name="report" type="report">
+				<xsd:annotation>
+					<xsd:documentation>Defines a report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="report">
+		<xsd:sequence>
+			<xsd:element name="reportPath" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The path, relative to lumisdata/def, to the JasperReport jrxml file.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataSourceProvider" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The class name of a lumis.report.IJRDataSourceProvider 
+					implementation, that will be used to provide the data source for the report.
+					If not specified, a JDBC connection is provided for the report instead.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="configParameters" type="reportInterface">
+				<xsd:annotation>
+					<xsd:documentation>Defines the user interface for specifying the report configuration parameters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="runtimeParameters" type="reportInterface">
+				<xsd:annotation>
+					<xsd:documentation>Defines the user interface for specifying the report runtime parameters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameters" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Lists the parameters that are sent to the report.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="parameter">
+							<xsd:annotation>
+								<xsd:documentation>The definition of a parameter that will be sent to the report.</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="value" type="xsd:string" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>The value of the parameter. The value will be parsed and converted according to the parameter type attribute.</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+								</xsd:sequence>
+								<xsd:attribute name="name" use="required" type="xsd:NCName">
+									<xsd:annotation>
+										<xsd:documentation>The name of the parameter. The parameter will be available in the report as this name.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:attribute>
+								<xsd:attribute name="type" use="optional" type="xsd:string">
+									<xsd:annotation>
+										<xsd:documentation>The class name of the type of the value attribute of this parameter.
+										If the type is net.sf.jasperreports.engine.JasperReport, the value is assumed to be the
+										path, relative to lumisdata/def directory, to the JasperReport jrxml file.
+										If the type is any other type in net.sf.jasperreports.engine package, the value is assumed
+										to be the class name of a corresponding class implementation that will be instantiated as 
+										the parameter value. Otherwise, a conversion from the value string to the class name 
+										specified in this attribute will be done.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:NCName">
+			<xsd:annotation>
+				<xsd:documentation>The identifier for this report. It is recommended
+				to use Java class namespacing style to prevent conflicts.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="name" use="required" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>The display name for this report. The value 
+				may be a key to the report's strings for proper localization.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="reportInterface">
+		<xsd:sequence>
+			<xsd:element name="source" type="doui:servicesource" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Defines a source for a report parameters interface.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="controls" type="control:lum_controls" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Defines the controls for a report parameters interface.
+					If not specified, the controls are automatically generated based on the
+					report interface's source definition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

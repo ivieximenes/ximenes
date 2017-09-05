@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 6396 $ $Date: 2007-04-11 15:46:46 -0300 (Wed, 11 Apr 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_pane"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_pane"
+	xmlns:control="http://www.lumis.com.br/douicontrols"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_pane">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="pane" type="pane" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>
+								Used to represent a cell of the table control
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="pane">
+		<xsd:complexContent>
+			<xsd:extension base="control:lum_controls">
+				<xsd:attribute name="id" type="xsd:string" use="required"/>
+				<xsd:attribute name="renderOnlyWhenSourceHasData" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation>
+						Render pane only if source data is not empty.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

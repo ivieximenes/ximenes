@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 10033 $ $Date: 2009-01-07 18:26:11 -0200 (Wed, 07 Jan 2009) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_inputHtmlEditor"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_inputHtmlEditor"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_inputHtmlEditor">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="width" type="xsd:string" minOccurs="0"></xsd:element>
+					<xsd:element name="height" type="xsd:string" minOccurs="0"></xsd:element>
+					<xsd:element name="toolbarSet" type="xsd:string" minOccurs="0"></xsd:element>
+					<xsd:element name="customConfigurationsPath" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Path to a configuration file for the editor. Its relative to the application root path.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

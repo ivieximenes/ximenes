@@ -1,0 +1,62 @@
+/*
+ * Copyright 2005 Lumis EIP Tecnologia da Informa��o
+ */
+package br.com.qualicorp.redenarede.service.banner;
+
+import java.io.IOException;
+
+import lumis.doui.service.DouiServiceInterface;
+import lumis.portal.PortalException;
+import lumis.portal.PortalRequestParameters;
+import lumis.portal.UnexpectedException;
+import lumis.portal.presentation.mode.PortalModes;
+import lumis.portal.serviceinterface.IServiceInterfaceRenderRequest;
+import lumis.portal.serviceinterface.IServiceInterfaceRenderResponse;
+import lumis.portal.serviceinterface.ServiceInterfaceException;
+
+// TODO: Kishnan analyze why I cannot extend ContentDetailsServiceInterface... apparently this is related to a filter
+// that is automatically added.
+
+/**
+ * 
+ * 
+ * @since 4.0.0
+ * @version $Revision: 17622 $ $Date: 2015-08-03 14:59:17 -0300 (Mon, 03 Aug 2015) $
+ */public class BannerDouiInterface extends DouiServiceInterface//ContentDetailsServiceInterface 
+{
+	public void render(IServiceInterfaceRenderRequest request, IServiceInterfaceRenderResponse response) throws ServiceInterfaceException, PortalException
+	{
+		// if is saving the xml or is refreshing the interface (view banner / right-click refresh)
+		if(request.getSaveXml() || "getBanner".equals(request.getParameter("bannerMethod")) || request.getMode() != PortalModes.MODE_NAVIGATION.getId())
+		{
+			super.render(request, response);
+		}
+		else
+		{
+			// generate a <script> tag so the banner gets rendered
+			response.applyStyle(IServiceInterfaceRenderResponse.APPLY_STYLE_NONE, null);
+			
+			try
+			{
+				response.getWriter().write("<span id=\"lum_banner" + request.getServiceInterfaceInstanceConfig().getId() + "\"><script type=\"text/javascript\">\n" +
+						"(function() {\n" +
+						"var getbannerhref = \"" + BannerController.getBannerControllerUrl() +
+						"?" + PortalRequestParameters.PAGE_PARAMETER_RENDER_INTERFACE_INST + "=" + request.getServiceInterfaceInstanceId() +
+						"&bannerMethod=getBanner" +
+						"&" + PortalRequestParameters.PAGE_PARAMETER_PAGEID + "=LumisBlankPage" +
+						"&" + PortalRequestParameters.PAGE_PARAMETER_REFERER + "=\" + encodeURIComponent(window.location.href) + \"" + 
+						"&" + PortalRequestParameters.PAGE_PARAMETER_PAGE_CACHE_ID + "=0\";\n" +
+						"var xmlHttp = LumisPortal.getXmlHttpObject();\n" + 
+						"xmlHttp.open(\"GET\", getbannerhref, false);\n" + 
+						"xmlHttp.send();\n" +
+						"eval(xmlHttp.responseText);" +
+						"})();" +
+						"</script></span>");
+			}
+			catch (IOException e)
+			{
+				throw new UnexpectedException(e);
+			}
+		}
+	}
+}

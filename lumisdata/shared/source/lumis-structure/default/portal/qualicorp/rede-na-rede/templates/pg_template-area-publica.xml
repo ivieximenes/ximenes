@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>2C96A2CE5AC7FD01015AC947925E6159</id>
+  <name>Template Área Pública</name>
+  <template>true</template>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>template.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="busca">
+        <interface id="2C96A2CE5AC7FD01015AC9484A4A6185"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="2C96A2CE5AC7FD01015AC94866C66187"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC949114F618C"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC948EF7B6189"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="2C96A2CE5AC7FD01015AC94924FC6190"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC949BC546197"></interface>
+    </holder>
+    <holder id="interfaces">
+        <interface id="2C96A2CE5AC7FD01015AC947928F615F"></interface>
+    </holder>
+    <holder id="menurodape">
+        <interface id="2C96A2CE5AC7FD01015AC94A893061A2"></interface>
+    </holder>
+    <holder id="cadastro_cliente">
+        <interface id="2C96A2CE5AC7FD01015AC94AB97961A6"></interface>
+    </holder>
+    <holder id="cadastro_prestador">
+        <interface id="2C96A2CE5AC7FD01015AC94AA2B761A4"></interface>
+    </holder>
+</layout>]]></layout>
+  <ssi-enabled>false</ssi-enabled>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC947928F615F</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC9484A4A6185</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC94866C66187</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <applied-interface-style-id>loginSmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC948EF7B6189</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC949114F618C</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaBeneficiario</interface-id>
+      <applied-interface-style-id>alterarSenhaBeneficiarioSmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC94924FC6190</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC949BC546197</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC94A893061A2</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC94AA2B761A4</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.addprestador</interface-id>
+      <applied-interface-style-id>addprestadorsmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC94AB97961A6</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.addbeneficiario</interface-id>
+      <applied-interface-style-id>addbeneficiariosmart</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>8A489E1F50AE95AA0150B8AAC2F93367</id>
+  <name>Beneficiário</name>
+  <position>2</position>
+  <friendly-url-enabled>true</friendly-url-enabled>
+  <access-control-list>
+    <entries>
+      <entry principal-id="8A489E1F50A956990150A976625D15AA">
+        <allow-permissions>65792</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</channel>

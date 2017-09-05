@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16603 $ $Date: 2014-11-11 19:36:27 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/lumisportal/xsd/component" 
+	xmlns="http://www.lumis.com.br/lumisportal/xsd/component" 
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xsd:include 
+		schemaLocation="deployment/lumis-version.xsd"/>
+	
+	<xsd:element name="lumis-component">
+		<xsd:annotation>
+			<xsd:documentation>
+				The root element of the component.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="version" type="lum_version" nillable="false">
+					<xsd:annotation>
+						<xsd:documentation>
+							The version number of the component.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="description" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The description of the component.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="sourcePath" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The (relative) source path of the component. This path represents the source code folder of the component.
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1" />
+							<xsd:maxLength value="255" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="constraints" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							The component's constraints.
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence maxOccurs="unbounded">
+							<xsd:element name="dependency" type="lum_dependency" maxOccurs="1" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation>
+										Makes this component dependent on other.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="replace" minOccurs="0" type="lum_replace">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates which components this one replaces.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="lum_dependency">
+		<xsd:attribute name="component-id" use="required" type="lum_componentId">
+			<xsd:annotation>
+				<xsd:documentation>
+					The identifier of the component this component depend on.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="version" type="lum_version">
+			<xsd:annotation>
+				<xsd:documentation>
+					The version of the component this component depend on.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="version-restriction-type" default="equal to">
+			<xsd:annotation>
+				<xsd:documentation>
+					The type of restriction.
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="equal to">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates the version of the component this component depends on must be equal to the given one.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="greater than">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates the version of the component this component depends on must be greater than the given one.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="greater than or equal to">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates the version of the component this component depends on must be greater than or equal to the given one.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_replace">
+		<xsd:sequence>
+			<xsd:element name="component" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						A component that will be replaced by this one.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="joint-with" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									Indicates that this replacement must be realized together with other component(s). If a component will be replaced by this one and this one replaces that component together with other components, all of these components must, also, be present in the deployment package.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="component" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>
+												A component that must be present in the deployment package when this component replaces the other provided in the replace option.
+											</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:attribute name="id" use="required" type="lum_componentId">
+												<xsd:annotation>
+													<xsd:documentation>
+														The identifier of the component that will replace another component joint with this one.
+													</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+											<xsd:attribute name="version" type="lum_version">
+												<xsd:annotation>
+													<xsd:documentation>
+														The minimum version of the component that will replace another component joint with this one.
+													</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+							<xsd:unique name="un_replace_joint_id">
+								<xsd:selector xpath="component"></xsd:selector>
+								<xsd:field xpath="@id"></xsd:field>
+							</xsd:unique>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="required" type="lum_componentId">
+						<xsd:annotation>
+							<xsd:documentation>
+								The identifier of the component that will be replaced.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="version" type="lum_version" use="required">
+						<xsd:annotation>
+							<xsd:documentation>
+								The version of the component that will be replaced.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="lum_componentId">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+			<xsd:pattern value="[^\s]+.*" />
+			<xsd:maxLength value="255" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

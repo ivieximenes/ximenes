@@ -1,0 +1,42 @@
+2017-08-05 13:55:37,842 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000002 guest - Title: 'Added service interface instance: STR_ADD' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB352DA441213
+  interface id: lumis.service.hierarchicalcontent.add
+  display name: STR_ADD
+  page id: 0000000050A1A02C0150A1ACC685132B
+  page name: Home
+  service instance id: 0000000050A1A02C0150A1AF436118B2'
+2017-08-05 13:55:37,961 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000002 guest - Title: 'Added service interface instance: STR_EDIT' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB352DAD61217
+  interface id: lumis.service.hierarchicalcontent.edit
+  display name: STR_EDIT
+  page id: 0000000050A1A02C0150A1ACC685132B
+  page name: Home
+  service instance id: 0000000050A1A02C0150A1AF436118B2'
+2017-08-05 14:06:31,259 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DADB830015DADC43BE70D60 130090002825021 - Title: 'Added service interface instance: STR_ADD' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB35CD2DA1289
+  interface id: lumis.service.hierarchicalcontent.add
+  display name: STR_ADD
+  page id: 8A489E1F50AE95AA0150B8AD856D33B7
+  page name: Home
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'
+2017-08-05 14:06:31,262 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DADB830015DADC43BE70D60 130090002825021 - Title: 'Added service interface instance: STR_EDIT' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB35CD2DD128A
+  interface id: lumis.service.hierarchicalcontent.edit
+  display name: STR_EDIT
+  page id: 8A489E1F50AE95AA0150B8AD856D33B7
+  page name: Home
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'
+2017-08-05 14:06:32,358 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DADB830015DADC43BE70D60 130090002825021 - Title: 'Added service interface instance: STR_ADD' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB35CD72312C7
+  interface id: lumis.service.link.add
+  display name: STR_ADD
+  page id: 8A489E1F50AE95AA0150B8AD856D33B7
+  page name: Home
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33C1'
+2017-08-05 14:06:32,361 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DADB830015DADC43BE70D60 130090002825021 - Title: 'Added service interface instance: STR_EDIT' - Description: 'Added service interface instance
+  id: 402881865DADB830015DB35CD72812C8
+  interface id: lumis.service.link.edit
+  display name: STR_EDIT
+  page id: 8A489E1F50AE95AA0150B8AD856D33B7
+  page name: Home
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33C1'

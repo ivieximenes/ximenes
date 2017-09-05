@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Apache com Weblogic</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?apacheweblogic.htm"; }
+  else { parent.quicksync('a3.6.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Apache com Weblogic</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="apachewebsphere.htm">Previous</a>&nbsp;
+     <a href="nginx.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Para configurar o <span style="font-style: italic;">apache</span> como <span style="font-style: italic;">servidor web</span> e o <span style="font-style: italic;">Weblogic</span> como <span style="font-style: italic;">servidor de aplicação</span> é necessário ter instalado o <a href="http://www.oracle.com/technetwork/middleware/ias/downloads/wls-plugins-096117.html" target="_blank" class="weblink">weblogic server proxy plug-in</a>. </p>
+<p>&nbsp;</p>
+<p>Devido à funcionalidade de <span style="font-style: italic;">cache</span> no <span style="font-style: italic;">Lumis Portal</span>, o <span style="font-style: italic;">apache</span> deverá ser configurado para verificar se existe localmente um arquivo estático a ser servido. Caso esse arquivo não exista, a requisição deverá ser delegada para o <span style="font-style: italic;">servidor de aplicação</span>, mesmo se a requisição tenha sido feita para um arquivo estático, pois esse arquivo pode ser um arquivo de <span style="font-style: italic;">cache</span> que ainda não foi gerado ou que foi expirado. </p>
+<p>&nbsp;</p>
+<p>Outras configurações de <span style="font-style: italic;">tuning</span> também são necessárias para ambientes de produção. Nesse documento não iremos abordar como realizar o <span style="font-style: italic;">tuning</span> de comunicação entre o <span style="font-style: italic;">servidor de web</span> e o <span style="font-style: italic;">servidor de aplicação</span>.</p>
+<p>&nbsp;</p>
+<p>Segue o passo a passo necessário para realizar a configuração:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>As configurações abaixo são apenas exemplos, sendo necessário adequá-las conforme as particularidades do ambiente. Por exemplo, pode ser necessário adequar o caminho do <span style="font-style: italic;">WEB_ROOT_PATH</span>, número das portas utilizadas, ou outros detalhes específicos do ambiente de instalação.</p>
+<p>&nbsp;</p>
+<p>As configurações no servidor web devem ser consistentes com as configurações dos websites do portal (ver <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>). Cada URL de um website deve corresponder ao seu diretório estático correspondente, além de aplicar as regras de encaminhamento ao servidor de aplicação apresentadas. Para isso, pode por exemplo, criar um <span style="font-style: italic;">VirtualHost</span> (ver passo 3 abaixo) para cada website no portal.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>1. Copiar para <span style="font-style: italic;"> "APACHE_HOME/modules"</span> o arquivo <span style="font-style: italic;">mod_wl_xx.so</span> referente à versão do Apache utilizada, disponível na pasta de instalação do <span style="font-style: italic;">plugin</span> do <span style="font-style: italic;">weblogic;</span></p>
+<p>&nbsp;</p>
+<p>2. Editar o arquivo <span style="font-style: italic;">APACHE_HOME/conf/httpd.conf</span> adicionando o <span style="font-style: italic;">plugin</span>:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">LoadModule&nbsp;weblogic_module&nbsp;modules\mod_wl_xx.so</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>3. Configurar o <span style="font-style: italic;">virtual host</span>, por exemplo, no arquivo <span style="font-style: italic;">APACHE_HOME/conf/httpd.conf</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&lt;VirtualHost&nbsp;*&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DocumentRoot&nbsp;"WEB_ROOT_PATH"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DirectoryIndex&nbsp;index.htm</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteEngine&nbsp;on</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.jsp$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.lumis$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;^/(.*)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1/index.htm&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteRule&nbsp;^(.*)&nbsp;$1.lumis&nbsp;[PT,env=X-lumWebServer:true]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RequestHeader&nbsp;set&nbsp;X-lumWebServer&nbsp;"apache"&nbsp;env=X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Header&nbsp;set&nbsp;X-UA-Compatible&nbsp;"IE=edge"&nbsp;env=!X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">WebLogicHost&nbsp;127.0.0.1</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">WebLogicPort&nbsp;7001</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MatchExpression&nbsp;*.jsp</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MatchExpression&nbsp;*.lumis</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/VirtualHost&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Caso o contexto de sua aplicação não esteja na raiz, por exemplo, em <span style="font-style: italic;">/portal</span>, será necessário configurar o <span style="font-style: italic;">virtual host</span> da seguinte forma:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&lt;VirtualHost&nbsp;*&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Alias&nbsp;/portal&nbsp;"WEB_ROOT_PATH"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DirectoryIndex&nbsp;index.htm</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RedirectMatch&nbsp;permanent&nbsp;^/portal$&nbsp;/portal/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteEngine&nbsp;on</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.jsp$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!^.*\.lumis$</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;^/portal/(.*)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteCond&nbsp;WEB_ROOT_PATH/%1/index.htm&nbsp;!-f</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RewriteRule&nbsp;^(.*)&nbsp;$1.lumis&nbsp;[PT,env=X-lumWebServer:true]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">RequestHeader&nbsp;set&nbsp;X-lumWebServer&nbsp;"apache"&nbsp;env=X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Header&nbsp;set&nbsp;X-UA-Compatible&nbsp;"IE=edge"&nbsp;env=!X-lumWebServer</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">WebLogicHost&nbsp;127.0.0.1</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">WebLogicPort&nbsp;7001</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MatchExpression&nbsp;/portal/*.jsp</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MatchExpression&nbsp;/portal/*.lumis</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/VirtualHost&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

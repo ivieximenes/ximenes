@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050C9BD630150CA2276D4352C</id>
+  <interface-id>lumis.service.banner.banner</interface-id>
+  <name>Rede na Rede - Banner (Área Logada)</name>
+  <file-path>lumis/service/banner/style/banner-logado.xsl</file-path>
+</interface-style>

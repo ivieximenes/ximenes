@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Revision: 16635 $ $Date: 2014-11-19 18:47:22 -0200 (Wed, 19 Nov 2014) $ -->
+<strings>
+	<string id="STR_SERVICE_NAME">Rede na Rede - Busca por Médicos</string>
+	<string id="STR_SERVICE_DESCRIPTION">Permite aos usuários realizarem a busca de prestadores.</string>
+	
+	<string id="STR_BUSCA_POR_MEDICO">Busca por Médicos.</string>
+	<string id="STR_BUSCA_DESCREDENCIADOS">Busca Descredenciados</string>
+	<string id="STR_SRC">Url</string>
+	<string id="STR_CONFIGURATION">Configuração</string>
+	<string id="STR_SUCCESS_MESSAGE">Dados gravados com sucesso.</string>
+	
+</strings>

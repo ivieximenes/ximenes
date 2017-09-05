@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- $Revision: 15835 $ $Date: 2013-09-03 16:42:37 -0300 (Tue, 03 Sep 2013) $ -->
+<databaseDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd">
+	<table name="qc_BannerCategory">
+		<fields>
+			<field name="bannerCategoryId" type="guid" isNotNull="true">
+				<description>Código de identificação da categoria de banner.</description>
+			</field>
+			<field name="name" type="string" size="100" isNotNull="true">
+				<description>Nome da categoria.</description>
+			</field>
+			<field name="description" type="string" isNotNull="false">
+				<description>Descrição da categoria</description>
+			</field>
+		</fields>
+		<constraints>
+			<constraint name="QC_PK_BANNERCAT" type="primaryKey">
+				<fields>
+					<field name="bannerCategoryId"/>
+				</fields>
+			</constraint>
+		</constraints>
+	</table>
+	<table name="qc_Banner">
+		<fields>
+			<field name="bannerId" type="guid" isNotNull="true">
+				<description>Código de identificação do banner.</description>
+			</field>
+			<field name="name" type="string" isNotNull="true">
+				<description>Nome do banner.</description>
+			</field>
+			<field name="btncontent" type="string" isNotNull="true">
+				<description>Conteúdo do botão.</description>
+			</field>
+			<field name="description" type="string" isNotNull="true">
+				<description>Descrição do banner.</description>
+			</field>
+			<field name="categoryId" type="guid" isNotNull="false">
+				<description>Código da categoria do banner.</description>
+			</field>
+			<field name="type" type="integer" isNotNull="true">
+				<description>Tipo de banner.</description>
+			</field>
+			<field name="pointWeight" type="integer" isNotNull="true">
+				<description></description>
+				<constraint name="LUM_DF_BANNER" defaultValue="1"/>
+			</field>
+			<field name="htmlContent" type="text" isNotNull="false">
+				<description>Conteúdo em HTML.</description>
+			</field>
+			<field name="onClickLinkType" type="integer" isNotNull="false">
+				<description></description>
+			</field>
+			<field name="onClickPageId" type="string" size="32" isNotNull="false">
+				<description>Código da página clicada.</description>
+			</field>
+			<field name="onClickUrl" type="string" size="1000" isNotNull="false">
+				<description>Clique na URL.</description>
+			</field>
+			<field name="onClickPopup" type="integer" isNotNull="false">
+				<description>Clique em popup.</description>
+				<constraint name="LUM_DF_BANNER2" defaultValue="0"/>
+			</field>
+			<field name="onClickPopupProperties" type="string" isNotNull="false">
+				<description>Propriedades do clique em popup.</description>
+			</field>
+			<field name="width" type="integer" isNotNull="false">
+				<description>Largura do banner.</description>
+			</field>
+			<field name="height" type="integer" isNotNull="false">
+				<description>Altura do banner.</description>
+			</field>
+			<field name="image" type="guid" isNotNull="false">
+				<description>Identificador da imagem.</description>
+			</field>
+		</fields>
+		<constraints>
+			<constraint name="QC_PK_BANNER" type="primaryKey">
+				<fields>
+					<field name="bannerId"/>
+				</fields>
+			</constraint>
+			<constraint name="QC_FK_BANNERCAT" type="foreignKey">
+				<fields>
+					<field name="categoryId"/>
+				</fields>
+				<references table="qc_BannerCategory">
+					<fields>
+						<field name="bannerCategoryId"/>
+					</fields>
+				</references>
+			</constraint>
+		</constraints>
+	</table>
+	<index name="QC_IX_BANNER1" table="qc_Banner">
+		<fields>
+			<field name="categoryId"/>
+		</fields>
+	</index>
+</databaseDefinition>

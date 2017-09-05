@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Configuração do LumisPortal e Criação do primeiro Módulo Editável</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?configuracao_do_lumisportal_e_.htm"; }
+  else { parent.quicksync('a8.1.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Configuração do LumisPortal e Criação do primeiro Módulo Editável</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="configuracao_do_eclipse.htm">Previous</a>&nbsp;
+     <a href="integracao_continua.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>É recomendado que se altere a pasta de códigos fontes do servidor <span style="font-style: italic;">Lumis Portal </span>para a pasta do workspace utilizado pelo Eclipse.</p>
+<p>Para isso, deve-se ir, no <span style="font-style: italic;">Lumis Portal</span>, em <span style="font-style: italic;">Configurações -&gt; Informações -&gt; Configurações do Portal -&gt; Configurações de ambiente</span> e em seguida clicar em <span style="font-style: italic;">Editar</span>, no servidor local de desenvolvimento.</p>
+<p>Na tela exibida, entrar com o local do workspace utilizado pelo Eclipse (no exemplo, <span style="font-style: italic;">C:\LumisPortalProjects\workspace</span>).</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="criarlivemodule1.png" width="918" height="618" border="0" alt="CriarLiveModule1" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, o portal estará pronto para criar seu primeiro Módulo Editável. Para isso, deve-se ir em <span style="font-style: italic;">Configurações -&gt; Deployment e Performance Tuning -&gt; Deployment -&gt; Módulos</span>. Nesse momento não haverá nenhum módulo instalado. Para criar o módulo editável, deve-se clicar em <span style="font-style: italic;">Criar Módulo Editável</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="criarlivemodule2.png" width="676" height="684" border="0" alt="CriarLiveModule2" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Na tela seguinte, deve-se preencher os valores de acordo com o desejado. No exemplo, foi preenchido somente o nome do módulo, deixando as outras entradas com seus valores padrão.</p>
+<p style="text-align: center;"><img src="criarlivemodule3.png" width="921" height="618" border="0" alt="CriarLiveModule3" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após a criação do módulo, deve-se importá-lo no Eclipse para que seu desenvolvimento seja facilitado. Para isso, deve-se entrar na tela de importação, como demonstrado abaixo.</p>
+<p style="text-align: center;"><img src="criarlivemodule4.png" width="650" height="564" border="0" alt="CriarLiveModule4" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Em seguida, deve-se selecionar a opção <span style="font-style: italic;">Existing Projects into Workspace</span>.</p>
+<p style="text-align: center;"><img src="criarlivemodule5.png" width="470" height="550" border="0" alt="CriarLiveModule5" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Quando solicitado, selecionar a pasta do workspace do Eclipse. Após isso, o projeto criado pela interface do <span style="font-style: italic;">Lumis Portal</span> deverá ser exibido. Ele deverá ser, então, selecionado.</p>
+<p style="text-align: center;"><img src="criarlivemodule6.png" width="470" height="629" border="0" alt="CriarLiveModule6" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após esse passo, o projeto estará disponível no worskpace do Eclipse, como mostra a figura abaixo.</p>
+<p style="text-align: center;"><img src="criarlivemodule7.png" width="460" height="207" border="0" alt="CriarLiveModule7" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Agora o módulo já está pronto para ser desenvolvido no Eclipse. Abaixo é mostrada uma figura demonstrando algumas edições no módulo.</p>
+<p style="text-align: center;"><img src="criarlivemodule8.png" width="394" height="365" border="0" alt="CriarLiveModule8" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Essas alterações não estarão aplicadas ao módulo de imediato. Para isso, deve-se atualizar o módulo na interface de gerenciamento de módulos.</p>
+<p style="text-align: center;"><img src="criarlivemodule9.png" width="538" height="444" border="0" alt="CriarLiveModule9" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após a atualização, os artefatos do módulo já estarão disponíveis. Como exemplo, um componente e um tema foram criados.</p>
+<p style="text-align: center;"><img src="criarlivemodule10.png" width="708" height="325" border="0" alt="CriarLiveModule10" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;"><img src="criarlivemodule11.png" width="436" height="377" border="0" alt="CriarLiveModule11" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>É possível que algum componente do módulo possua uma estrutura associada. Para isso, vamos criar essa estrutura e associá-la ao componente <span style="font-style: italic;">br.com.empresa</span>.</p>
+<p>Abaixo encontra-se uma figura da representação da estrutura escolhida para o componente.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-01.png" width="372" height="506" border="0" alt="CriarLiveModule-AssociarCanal-01" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Uma vez criada a estrutura, ela deve ser associada ao componente desejado. Para isso, deve-se ir na lista de componentes, em <span style="font-style: italic;">Configurações -&gt; Deployment e Performance Tuning -&gt; Deployment -&gt; Componentes. </span>Após isso, clicar em <span style="font-style: italic;">Associar canal</span>, no componente desejado.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-02.png" width="552" height="345" border="0" alt="CriarLiveModule-AssociarCanal-02" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Na configuração exibida, selecionar o canal raiz da estrutura criado.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-03.png" width="469" height="245" border="0" alt="CriarLiveModule-AssociarCanal-03" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Uma vez associado o canal, podemos exportá-lo para que sua estrutura seja armazenada junto dos arquivos do módulo. Atenção: a exportação a ser realizada deve ser do tipo <span style="font-style: italic;">Estrutura </span>e não do tipo LEC.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-04.png" width="403" height="718" border="0" alt="CriarLiveModule-AssociarCanal-04" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, o projeto no Eclipse pode ser atualizado para que os novos arquivos sejam mostrados.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-05.png" width="384" height="666" border="0" alt="CriarLiveModule-AssociarCanal-05" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Feito isso, os novos arquivos já estarão sendo exibidos no Eclipse.</p>
+<p style="text-align: center;"><img src="criarlivemodule-associarcanal-06.png" width="327" height="625" border="0" alt="CriarLiveModule-AssociarCanal-06" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Também se pode ser criado um projeto no Portal Studio, que conterá uma estrutura básica para um projeto. Para mais informações, veja a seção <a href="criacao_de_projetos.htm">Criação de Projetos</a>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

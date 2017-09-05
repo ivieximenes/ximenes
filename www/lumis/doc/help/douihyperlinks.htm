@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>hyperLinks</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douihyperlinks.htm"; }
+  else { parent.quicksync('a8.3.5.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">hyperLinks</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douiorderby.htm">Previous</a>&nbsp;
+     <a href="douicontrols.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">No contexto de <span style="font-style: italic;">DOUI</span>, o <span style="font-style: italic;">hyperlink</span> além de ser utilizado para linkar para uma outra interface, é utilizado para enviar um conteúdo de uma interface (atual) para outra (destino).</p>
+<p>&nbsp;</p>
+<p>Normalmente, as interfaces precisam comunicar-se umas com as outras. Um exemplo disso é o índice de um conteúdo da interface <span style="font-style: italic;">Lista</span> para a interface <span style="font-style: italic;">Detalhes</span> que muitos serviços apresentam.</p>
+<p style="margin: 8px 0px 0px 0px;">O índice deve ter a habilidade de redirecionar o usuário para a página que apresenta a interface <span style="font-style: italic;">Detalhes</span> e enviar o conteúdo selecionado para esta interface. A questão envolvida é que a interface <span style="font-style: italic;">Detalhes</span> pode ser disponibilizada em uma página qualquer do portal, fazendo com que o índice de conteúdo conheça para qual página o usuário deverá ser redirecionado.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;hyperLinks&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;hyperLink&nbsp;fieldId="title"&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;onClick&nbsp;type="renderAction"&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;setControlValues&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&nbsp;type="fieldValue"&nbsp;fieldId="id"&nbsp;controlId="adminList.filters.parentFolder.value"&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/setControlValues&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/onClick&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;/hyperLink&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;hyperLink&nbsp;id="details"&nbsp;interfaceId="details"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/hyperLinks&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Para <span style="font-style: italic;">&lt;onClick type= "renderAction"&gt;</span> pode-se também especificar um atributo <span style="font-style: italic;">destinationAnchorId</span> passando um nome válido para âncoras<span style="font-style: italic;"> html.</span> Dessa forma, caso seja especificado no <span style="font-style: italic;">&lt;onClick type="renderAction"&gt; </span>o atributo <span style="font-style: italic;">destinationAnchorId="ABC"</span>, deve-se inserir o elemento <span style="font-style: italic;">&lt;A name="ABC"/&gt;</span> na página destino.</p>
+<p>&nbsp;</p>
+<p>Quando não é especificado um atributo <span style="font-style: italic;">sourceId</span> no elemento <span style="font-style: italic;">interfaces/interface/hyperLinks/hyperLink</span>, será utilizado o <span style="font-style: italic;">source</span> <span style="font-style: italic;">default</span>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17027 $ $Date: 2015-02-26 17:15:02 -0300 (Thu, 26 Feb 2015) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui" xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service id="br.com.qualicorp.redenarede.service.banner">
+		<sources>
+			<source id="bannerProperties">
+				<dataProviderClassName>br.com.qualicorp.redenarede.service.banner.BannerPropertiesDataProvider</dataProviderClassName>
+				<fields>
+					<field id="totalItems" name="STR_TOTAL_ITEMS" dataType="integer" />
+					<field id="randomize" name="STR_RANDOMIZE" dataType="boolean"/>
+					<field id="dynamic" name="STR_DYNAMIC" dataType="boolean"/>
+					<field id="timeout" name="STR_TIMEOUT" dataType="long" requiredWhenVisible="true" minimumValue="1"/>
+					<field id="logViews" name="STR_LOG_VIEWS" dataType="boolean"/>
+					<field id="logClicks" name="STR_LOG_CLICKS" dataType="boolean"/>
+				</fields>
+			</source>
+			
+			<source id="banner" type="contentTable">
+				<table>qc_Banner</table>
+				<fields>
+					<field id="bannerId" display="false" name="STR_ID" dataType="string" isPrimaryKey="true"/>
+					<field id="name" name="STR_NAME" dataType="html" isPrimaryName="true" required="true" maxLength="200"/>
+					<field id="btncontent" name="STR_BTN_CONTENT" dataType="string" required="true" maxLength="200"/>
+					<field id="description" name="STR_DESCRIPTION" dataType="string" maxLength="200"/>
+					<field id="type" name="STR_TYPE" dataType="integer">
+						<options>
+							<option value="0">STR_TYPE_IMAGE</option>
+							<option value="1">STR_TYPE_FLASH</option>
+							<option value="2">STR_TYPE_HTML</option>
+						</options>
+					</field>
+					<field id="pointWeight" name="STR_POINT_WEIGHT" dataType="integer" required="true"/>
+					<field id="image" name="STR_IMAGE_PATH" dataType="media" doLookup="true" requiredWhenVisible="true"/>
+					<field id="htmlContent" name="STR_HTML" dataType="html" requiredWhenVisible="true"/>
+					<field id="onClickLinkType" name="STR_LINK_TYPE" dataType="integer">
+						<options>
+							<option value="0" selected="1">STR_URL</option>
+							<option value="1">STR_INTERNAL_PAGE</option>
+							<option value="2">STR_NO_LINK</option>
+						</options>
+					</field>
+					<field id="onClickPageId" name="STR_PAGE" dataType="string" requiredWhenVisible="true"/>
+					<field id="onClickUrl" name="STR_URL" dataType="string" requiredWhenVisible="true" maxLength="500"/>
+					<field id="onClickPopup" name="STR_IS_POPUP" dataType="boolean"/>
+					<field id="onClickPopupProperties" name="STR_CLICK_POPUP_PROPERTIES" dataType="string"/>
+					<field id="width" name="STR_WIDTH" dataType="integer" requiredWhenVisible="true" defaultValue="600"/>
+					<field id="height" name="STR_HEIGHT" dataType="integer" requiredWhenVisible="true" defaultValue="200"/>
+				</fields>
+				<metaData>
+					<serviceInstanceIsolation/>
+					<publishToPrincipals/>
+					<publishStartDate/>
+					<publishEndDate/>
+					<multiLanguage/>
+					<publishToServiceInstances/>
+				</metaData>
+				<administrationInterfaceId>administration</administrationInterfaceId>
+				<addInterfaceId>add</addInterfaceId>
+				<editInterfaceId>edit</editInterfaceId>
+			</source>
+			
+			<source id="banners" type="contentTable" metaDataSourceId="banner">
+				<dataProviderClassName>br.com.qualicorp.redenarede.service.banner.BannerDataProvider</dataProviderClassName>
+				<table>qc_Banner</table>
+				<fields>
+					<field id="bannerId" display="false" name="id" dataType="string" isPrimaryKey="true"/>
+					<field id="name" name="STR_NAME" dataType="html" isPrimaryName="true" required="true" maxLength="200"/>
+					<field id="btncontent" name="STR_BTN_CONTENT" dataType="string" required="true" maxLength="200"/>
+					<field id="description" name="STR_DESCRIPTION" dataType="string" maxLength="200"/>
+					<field id="type" name="STR_TYPE" dataType="integer"/>
+					<field id="pointWeight" name="STR_POINT_WEIGHT" dataType="integer" required="true"/>
+					<field id="image" name="STR_IMAGE_PATH" dataType="media" doLookup="true"/>
+					<field id="htmlContent" name="STR_HTML" dataType="html"/>
+					<field id="onClickLinkType" name="STR_LINK_TYPE" dataType="integer"/>
+					<field id="onClickPageId" name="STR_PAGE" dataType="string"/>
+					<field id="onClickUrl" name="STR_URL" dataType="string" maxLength="500"/>
+					<field id="onClickPopup" name="STR_IS_POPUP" dataType="boolean"/>
+					<field id="onClickPopupProperties" name="STR_CLICK_POPUP_PROPERTIES" dataType="string"/>
+					<field id="width" name="STR_WIDTH" dataType="integer"/>
+					<field id="height" name="STR_HEIGHT" dataType="integer"/>
+				</fields>
+				<metaData>
+					<serviceInstanceIsolation/>
+					<publishToPrincipals/>
+					<publishStartDate/>
+					<publishEndDate/>
+					<multiLanguage/>
+					<publishToServiceInstances/>
+				</metaData>
+				<administrationInterfaceId>administration</administrationInterfaceId>
+				<addInterfaceId>add</addInterfaceId>
+				<editInterfaceId>edit</editInterfaceId>
+			</source>
+		</sources>
+	</service>
+	<interfaces>
+		
+		<!-- ********************* BANNERS **************************** -->
+		
+		<interface id="administration">
+			<sources>
+				<source id="banner">
+					<fields>
+						<field id="bannerId" display="false"/>
+						<field id="name"/>
+						<field id="type" doOptionLookup="true"/>
+						<field id="pointWeight"/>
+						<field id="publishStartDate"/>
+						<field id="publishEndDate"/>
+						<field id="publishToPrincipals"/>
+						<field id="lastModifiedDate"/>
+					</fields>
+				</source>
+			</sources>
+		</interface>
+		
+		<interface id="add">
+			<sources>
+				<source id="banner"/>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_propertyPage>
+						<control:lum_controlGroup title="STR_BASIC_INFORMATION" visualAid="true">
+							<control:lum_autoLayoutContentFields>
+								<field id="name" />
+								<field id="btncontent" />
+								<field id="description" />
+								<field id="pointWeight">
+									<value>
+										<control:lum_inputNumber id="pointWeight" defaultValue="5"/>
+									</value>
+								</field>
+								<field id="type">
+									<value>
+										<control:lum_dropDownList id="type" sourceId="banner" renderBlankOption="false">
+											<onChange type="script">
+												<script>bannerChooseTypePane(document.getElementById("type"))</script>
+											</onChange>
+										</control:lum_dropDownList>
+									</value>
+								</field>
+							</control:lum_autoLayoutContentFields>
+							<control:lum_controlGroup visualAid="true">
+							<control:lum_div id="properties" style="height:180px;" visualAid="true">
+								<control:lum_div id="imageLocation">
+									<control:lum_autoLayoutContentFields id="imgFields">
+										<field id="image" />
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+								<control:lum_div id="imgProperties">
+									<control:lum_autoLayoutContentFields id="imgPropFields">
+										<field id="onClickLinkType">
+											<value>
+												<control:lum_dropDownList id="onClickLinkType" sourceId="banner" renderBlankOption="false">
+													<onChange type="script">
+														<script>bannerChooseURLPane(document.getElementById("onClickLinkType"))</script>
+													</onChange>
+												</control:lum_dropDownList>
+											</value>
+										</field>
+									</control:lum_autoLayoutContentFields>
+									<control:lum_div id="linkURL">
+										<control:lum_autoLayoutContentFields id="linkURLFields">
+											<field id="onClickUrl">
+												<value>
+													<control:lum_div style="width:380px;" visualAid="true">
+														<control:lum_inputText id="onClickUrl" defaultValue="http://">
+															<control:lum_regularExpressionValidator id="onClickUrlREWVValidator" expression=".+:(//)?[^/]+.*" errorMessage="STR_INVALID_URL" validateOnlyIfVisible="true"/>
+															<control:lum_requiredValueValidator id="onClickUrlRVWVValidator" validateOnlyIfVisible="true"/>
+														</control:lum_inputText>
+													</control:lum_div>
+												</value>
+											</field>
+											<field id="onClickPopup">
+												<value>
+													<control:lum_checkBox id="onClickPopup">
+														<onClick type='script'><script>onPopupChange();</script></onClick>
+													</control:lum_checkBox>
+												</value>
+											</field>
+											<field id="onClickPopupProperties">
+												<value>
+													<control:lum_div style="width:380px;" visualAid="true">
+														<control:lum_inputText id="onClickPopupProperties" />
+														<control:lum_div style="color:#595959;">
+															<control:lum_text sourceId="none"><text>(width=200, height=100, resizable=yes, scrollbars=yes, status=yes, toolbar=yes)</text></control:lum_text>
+														</control:lum_div>
+													</control:lum_div>
+												</value>
+											</field>
+										</control:lum_autoLayoutContentFields>
+									</control:lum_div>
+									<control:lum_div id="linkInternal">
+										<control:lum_autoLayoutContentFields id="linkInternalFields">
+											<field id="onClickPageId">
+												<value>
+													<control:lum_selectPage id="onClickPageId" />
+												</value>
+											</field>
+										</control:lum_autoLayoutContentFields>
+									</control:lum_div>
+								</control:lum_div>
+								<control:lum_div id="flashProperties">
+									<control:lum_autoLayoutContentFields id="flashPropertiesFields">
+										<field id="width" />
+										<field id="height" />
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+								<control:lum_div id="htmlProperties">
+									<control:lum_autoLayoutContentFields id="htmlPropertiesFields">
+										<field id="htmlContent">
+											<value>
+												<control:lum_inputHtmlEditor id="htmlContent">
+													<width>530</width>
+													<height>120</height>
+													<toolbarSet>Lumis</toolbarSet>
+												</control:lum_inputHtmlEditor>
+											</value>
+										</field>
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+							</control:lum_div>
+						</control:lum_controlGroup>
+						</control:lum_controlGroup>
+
+						<control:lum_script>
+						<script>
+							function bannerChooseTypePane(bannerType)
+							{
+								var d = document;
+								var choice = bannerType.selectedIndex;
+								
+								switch(choice)
+								{
+									case 0:
+										d.getElementById("imgProperties").style.display = "";
+										d.getElementById("flashProperties").style.display = "none";
+										d.getElementById("htmlProperties").style.display = "none";
+										d.getElementById("imageLocation").style.display = "";
+										if(document.getElementById('image_display') != null)
+										{
+											var imageFile = document.getElementById('image_display').value + "";
+											if(imageFile.length > 4)
+											{
+												var imageExtension = imageFile.substring(imageFile.length -4);
+												if(imageExtension.toUpperCase() == "SWF)")
+												{
+													document.getElementById('image').value='';
+													document.getElementById('image_display').value=''
+												}
+											}
+										}
+										break;
+									case 1:
+										d.getElementById("imgProperties").style.display = "none";
+										d.getElementById("flashProperties").style.display = "";
+										d.getElementById("htmlProperties").style.display = "none";
+										d.getElementById("imageLocation").style.display = "";
+										break;
+									case 2:
+										d.getElementById("imgProperties").style.display = "none";
+										d.getElementById("flashProperties").style.display = "none";
+										d.getElementById("htmlProperties").style.display = "";
+										d.getElementById("imageLocation").style.display = "none";
+										d.getElementById("image").value = "";
+										break;
+								}
+							}
+							
+							function bannerChooseURLPane(bannerURL)
+							{
+								var d = document;
+								var choice = bannerURL.selectedIndex;
+								
+								switch(choice)
+								{
+									case 0:
+										d.getElementById("linkURL").style.display = "";
+										d.getElementById("linkInternal").style.display = "none";
+										break;
+									case 1:
+										d.getElementById("linkURL").style.display = "none";
+										d.getElementById("linkInternal").style.display = "";
+										break;
+									case 2:
+										d.getElementById("linkURL").style.display = "none";
+										d.getElementById("linkInternal").style.display = "none";
+										break;
+								}
+							};
+							
+							function onPopupChange()
+							{
+								var pCheck = document.getElementById("onClickPopup");									
+								var pPopUpProperties = document.getElementById("onClickPopupProperties");
+								
+								if(pCheck.checked)
+									pPopUpProperties.disabled = false;
+								else
+									pPopUpProperties.disabled = true;
+							};
+							
+							bannerChooseTypePane(document.getElementById("type"));
+							bannerChooseURLPane(document.getElementById("onClickLinkType"));
+							onPopupChange();
+							
+						</script>
+						</control:lum_script>
+						<control:lum_autoLayoutMetaDataInformation />
+					</control:lum_propertyPage>
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.banner.BannerAddDataProcessActionHandler" sourceId="banner">
+					<response type="doui_standardPopup" />
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="edit">
+			<sources>
+				<source id="banner">
+					<filters>
+						<filter id="bannerId" required="true" hidden="true" />
+					</filters>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_filters id="filters"/>
+					<control:lum_propertyPage>
+						<control:lum_controlGroup title="STR_BASIC_INFORMATION" visualAid="true">
+							<control:lum_autoLayoutContentFields>
+								<field id="name" />
+								<field id="btncontent" />
+								<field id="description" />
+								<field id="pointWeight">
+									<value>
+										<control:lum_inputNumber id="pointWeight" defaultValue="5"/>
+									</value>
+								</field>
+								<field id="type">
+									<value>
+										<control:lum_dropDownList id="type" sourceId="banner" renderBlankOption="false">
+											<onChange type="script">
+												<script>bannerChooseTypePane(document.getElementById("type"))</script>
+											</onChange>
+										</control:lum_dropDownList>
+									</value>
+								</field>
+							</control:lum_autoLayoutContentFields>
+							<control:lum_controlGroup visualAid="true">
+							<control:lum_div id="properties" style="height:180px;" visualAid="true">
+								<control:lum_div id="imageLocation">
+									<control:lum_autoLayoutContentFields id="imgFields">
+										<field id="image" />
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+								<control:lum_div id="imgProperties">
+									<control:lum_autoLayoutContentFields id="imgPropFields">
+										<field id="onClickLinkType">
+											<value>
+												<control:lum_dropDownList id="onClickLinkType" sourceId="banner" renderBlankOption="false">
+													<onChange type="script">
+														<script>bannerChooseURLPane(document.getElementById("onClickLinkType"))</script>
+													</onChange>
+												</control:lum_dropDownList>
+											</value>
+										</field>
+									</control:lum_autoLayoutContentFields>
+									<control:lum_div id="linkURL">
+										<control:lum_autoLayoutContentFields id="linkURLFields">
+											<field id="onClickUrl">
+												<value>
+													<control:lum_div style="width:380px;" visualAid="true">
+														<control:lum_inputText id="onClickUrl" defaultValue="http://">
+															<control:lum_regularExpressionValidator id="onClickUrlREWVValidator" expression=".+:(//)?[^/]+.*" errorMessage="STR_INVALID_URL" validateOnlyIfVisible="true"/>
+															<control:lum_requiredValueValidator id="onClickUrlRVWVValidator" validateOnlyIfVisible="true"/>
+														</control:lum_inputText>
+													</control:lum_div>
+												</value>
+											</field>
+											<field id="onClickPopup">
+												<value>
+													<control:lum_checkBox id="onClickPopup">
+														<onClick type='script'><script>onPopupChange();</script></onClick>
+													</control:lum_checkBox>
+												</value>
+											</field>
+											<field id="onClickPopupProperties">
+												<value>
+													<control:lum_div style="width:380px;" visualAid="true">
+														<control:lum_inputText id="onClickPopupProperties" />
+														<control:lum_div style="color:#595959;">
+															<control:lum_text sourceId="none"><text>(width=200, height=100, resizable=yes, scrollbars=yes, status=yes, toolbar=yes)</text></control:lum_text>
+														</control:lum_div>
+													</control:lum_div>
+												</value>
+											</field>
+										</control:lum_autoLayoutContentFields>
+									</control:lum_div>
+									<control:lum_div id="linkInternal">
+										<control:lum_autoLayoutContentFields id="linkInternalFields">
+											<field id="onClickPageId">
+												<value>
+													<control:lum_selectPage id="onClickPageId" />
+												</value>
+											</field>
+										</control:lum_autoLayoutContentFields>
+									</control:lum_div>
+								</control:lum_div>
+								<control:lum_div id="flashProperties">
+									<control:lum_autoLayoutContentFields id="flashPropertiesFields">
+										<field id="width" />
+										<field id="height" />
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+								<control:lum_div id="htmlProperties">
+									<control:lum_autoLayoutContentFields id="htmlPropertiesFields">
+										<field id="htmlContent">
+											<value>
+												<control:lum_inputHtmlEditor id="htmlContent">
+													<width>530</width>
+													<height>120</height>
+													<toolbarSet>Lumis</toolbarSet>
+												</control:lum_inputHtmlEditor>
+											</value>
+										</field>
+									</control:lum_autoLayoutContentFields>
+								</control:lum_div>
+							</control:lum_div>
+						</control:lum_controlGroup>
+						</control:lum_controlGroup>
+						
+						<control:lum_script>
+						<script>
+							document.getElementById('onClickUrl').maxLength = 500;
+							
+							function bannerChooseTypePane(bannerType)
+							{
+								var d = document;
+								var choice = bannerType.selectedIndex;
+								
+								switch(choice)
+								{
+									case 0:
+										d.getElementById("imgProperties").style.display = "";
+										d.getElementById("flashProperties").style.display = "none";
+										d.getElementById("htmlProperties").style.display = "none";
+										d.getElementById("imageLocation").style.display = "";
+										if(document.getElementById('image_display') != null)
+										{
+											var imageFile = document.getElementById('image_display').value + "";
+											if(imageFile.length > 4)
+											{
+												var imageExtension = imageFile.substring(imageFile.length -4);
+												if(imageExtension.toUpperCase() == "SWF)")
+												{
+													document.getElementById('image').value='';
+													document.getElementById('image_display').value=''
+												}
+											}
+										}
+										break;
+									case 1:
+										d.getElementById("imgProperties").style.display = "none";
+										d.getElementById("flashProperties").style.display = "";
+										d.getElementById("htmlProperties").style.display = "none";
+										d.getElementById("imageLocation").style.display = "";
+										break;
+									case 2:
+										d.getElementById("imgProperties").style.display = "none";
+										d.getElementById("flashProperties").style.display = "none";
+										d.getElementById("htmlProperties").style.display = "";
+										d.getElementById("imageLocation").style.display = "none";
+										d.getElementById("image").value = "";
+										break;
+								}
+							}
+							
+							function bannerChooseURLPane(bannerURL)
+							{
+								var d = document;
+								var choice = bannerURL.selectedIndex;
+								
+								switch(choice)
+								{
+									case 0:
+										d.getElementById("linkURL").style.display = "";
+										d.getElementById("linkInternal").style.display = "none";
+										break;
+									case 1:
+										d.getElementById("linkURL").style.display = "none";
+										d.getElementById("linkInternal").style.display = "";
+										break;
+									case 2:
+										d.getElementById("linkURL").style.display = "none";
+										d.getElementById("linkInternal").style.display = "none";
+										break;
+								}
+							};
+							
+							function onPopupChange()
+							{
+								var pCheck = document.getElementById("onClickPopup");									
+								var pPopUpProperties = document.getElementById("onClickPopupProperties");
+								
+								if(pCheck.checked)
+									pPopUpProperties.disabled = false;
+								else
+									pPopUpProperties.disabled = true;
+							};
+							
+							bannerChooseTypePane(document.getElementById("type"));
+							bannerChooseURLPane(document.getElementById("onClickLinkType"));
+							onPopupChange();
+							
+						</script>
+						</control:lum_script>
+						<control:lum_autoLayoutMetaDataInformation />
+					</control:lum_propertyPage>
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.banner.BannerUpdateDataProcessActionHandler" sourceId="banner">
+					<response type="doui_standardPopup" />
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<!-- ********************** BANNER PROPERTIES ************************ -->
+		
+		<interface id="bannerProperties">
+			<sources>
+				<source id="bannerProperties" readData="always"/>
+			</sources>
+			
+			<controls>
+				<control:lum_form>
+					<control:lum_inputHidden id="callerInterfaceInstanceId" className="lumis.service.portalmanagement.xsleditor.InputTextProxyControl" value="lum_callerInterfaceInstanceId" sourceId="none"/>
+					<control:lum_propertyPage>
+						<control:lum_controlGroup title="STR_BASIC_INFORMATION">
+							<control:lum_table>
+								<tr>
+									<td>
+										<control:lum_label dataId="totalItems" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_inputText id="totalItems" style="width:50px" sourceId="bannerProperties" >
+											<control:lum_integerDataTypeValidator minimumValue="1" maximumValue="1000"/>
+										</control:lum_inputText>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<control:lum_label dataId="randomize" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_checkBox id="randomize" sourceId="bannerProperties" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<control:lum_label dataId="dynamic" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_checkBox id="dynamic" sourceId="bannerProperties" />
+									</td>
+								</tr>
+								<tr id="timeoutTR">
+									<td>
+										<control:lum_label dataId="timeout" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_inputNumber id="timeout" sourceId="bannerProperties" />
+									</td>
+								</tr>
+							</control:lum_table>
+						</control:lum_controlGroup>
+						
+						<control:lum_controlGroup title="STR_LOG">
+							<control:lum_table>
+								<tr>
+									<td>
+										<control:lum_label dataId="logViews" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_checkBox id="logViews" sourceId="bannerProperties"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<control:lum_label dataId="logClicks" sourceId="bannerProperties" />
+									</td>
+									<td>
+										<control:lum_checkBox id="logClicks" sourceId="bannerProperties" />
+									</td>
+								</tr>
+							</control:lum_table>
+						</control:lum_controlGroup>
+					</control:lum_propertyPage>
+					<control:lum_script>
+						<script src="lumis/tool/jquery/jquery.js" key="jquery.js" />
+					</control:lum_script>
+					<control:lum_script>
+						<script>
+							$(document).ready(function(){
+								$('#dynamic').click(function(){
+									toggleTimeoutTr();
+								});
+							});
+							
+							function toggleTimeoutTr()
+							{
+								var dynamic = $('#dynamic')[0].checked;
+								if(dynamic)
+								{
+									$('#timeoutTR').show();
+								}
+								else
+								{
+									$('#timeoutTR').hide();
+								}
+							}
+							toggleTimeoutTr();
+						</script>
+					</control:lum_script>
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" actionType="lum_bannerSetProperties" className="br.com.qualicorp.redenarede.service.banner.BannerProcessActionHandler">
+					<response type="doui_standardPopup" />
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="banner">
+			<sources>
+				<source id="banners" readData="always">
+					
+					<orderBy>
+						<field direction="descending" id="pointWeight"/>
+					</orderBy>
+					<maxRows>-1</maxRows>
+				</source>
+			</sources>
+			<controls>
+				<!--control type="lum_filters" id="filters"/-->
+				<control:lum_form>
+					<control type="lum_banner" id="banner" className="br.com.qualicorp.redenarede.service.banner.BannerControl"/>
+				</control:lum_form>
+			</controls>
+		</interface>
+	</interfaces>
+	
+</doui:douiDefinition>

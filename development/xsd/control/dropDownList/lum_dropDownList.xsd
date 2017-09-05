@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 10078 $ $Date: 2009-01-23 15:08:20 -0200 (Fri, 23 Jan 2009) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_dropDownList"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_dropDownList"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_dropDownList">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="blankOptionText" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+							If renderBlankOption="true", this element overrides the default blank option text.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="option" maxOccurs="unbounded" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								A static option to be included in this control. If optionsSourceId is defined, insertLocation will define where the static options are included relative to the dynamic options.
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:simpleContent>
+								<xsd:extension base="xsd:string">
+									<xsd:attribute name="value" type="xsd:string" use="required"/>
+									<xsd:attribute name="insertLocation" type="optionInsertLocation" use="optional">
+										<xsd:annotation>
+											<xsd:documentation>
+												Specified when optionsSourceId is defined to choose where static options should be included. It can be before or after the dynamic options.
+											</xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:extension>
+							</xsd:simpleContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="onChange" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="optionsSourceId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Source id for the list of options available for this control.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="renderBlankOption" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>
+						Specifies whether a blank option in the drop down list must be included.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="disabled" type="xsd:boolean" default="false"/>
+				<xsd:attribute name="valueFieldId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Among the fields of the source, this field is considered the value field for the options.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="textFieldId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Among the fields of the source, this field is considered the display field for the options.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="optionInsertLocation">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="before"/>
+			<xsd:enumeration value="after"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+</xsd:schema>

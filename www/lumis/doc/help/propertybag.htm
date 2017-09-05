@@ -1,0 +1,235 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Property Bag</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?propertybag.htm"; }
+  else { parent.quicksync('a5.7.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Property Bag</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="expimp_observacoes_gerais.htm">Previous</a>&nbsp;
+     <a href="area_tags.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p>O recurso <span style="font-style: italic;">Property Bag </span>permite adicionar propriedades para canais e páginas que podem ser herdadas através da estrutura do portal. As propriedades não são pré-definidas e podem conter quaisquer valores dependendo da necessidade da solução. Normalmente os valores customizados são lidos por serviços customizados através do uso da API disponível no pacote lumis.portal.propertybag.</p>
+<p>&nbsp;</p>
+<p>As propriedades nativas disponíveis no <span style="font-style: italic;">Lumis Portal</span> estão listadas na tabela abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Propriedade</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Descrição</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.content.table.selectmetadatacontroller.params.inline</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Determina se alguns parâmetros no SQL genérico utilizado para carregar <span style="font-style: italic;">source</span> tipo <span style="font-style: italic;">contentTable</span> serão incluídos de forma <span style="font-style: italic;">inline</span> ou por <span style="font-style: italic;">bind variable</span>. Este comportamento será aplicado aos <span style="font-style: italic;">sources</span> pertencentes à instância de serviço que possuir esta propriedade.</p>
+<p>Esta configuração não traz diferença funcional, mas pode trazer diferença de desempenho em alguns cenários.</p>
+<p>Se o valor for "<span style="font-style: italic;">true</span>", os parâmetros que levam em conta esta propriedade serão incluídos de forma <span style="font-style: italic;">inline</span>, caso contrário serão incluídos por <span style="font-style: italic;">bind variable</span>. O valor padrão para esta propriedade é "<span style="font-style: italic;">false</span>".</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.url.IURLResolver</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Determina a classe java responsável por resolver <span style="font-style: italic;">URLs</span> amigáveis.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.url.preservePreviousParameters</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Se o valor for "<span style="font-style: italic;">true</span>", determina que a <span style="font-style: italic;">API</span> de geração de <span style="font-style: italic;">URL</span> deve gerar <span style="font-style: italic;">URLs</span> que mantenham os parâmetros anteriores. Ao habilitar esse recurso é adicionado, sempre que for necessário, o parâmetro lum<span style="font-style: italic;">PSId</span> na <span style="font-style: italic;">URL</span>. O valor de <span style="font-style: italic;">default</span> é <span style="font-style: italic;">"false"</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.serviceinterfaceinstance.renderBefore.print</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><p>Se o valor for "<span style="font-style: italic;">true</span>", determina que o <span style="font-style: italic;">HTML</span> escrito no <span style="font-style: italic;">BeforeWriter</span> deve ser descartado. O valor default é <span style="font-style: italic;">"false".</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.url.extension.html</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Configura a extensão do web resource como .html. A configuração é utilizada apenas no momento de criação do web resource. Os já existentes não são atualizados ao efetuar uma reconfiguração. Quando não especificado, o valor utilizado é obtido do lumisportalconfig.xml.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.url.extension.shtml</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Configura a extensão do web resource como .shtml. A configuração é utilizada apenas no momento de criação do web resource. Os já existentes não são atualizados ao efetuar uma reconfiguração. Quando não especificadas, o valor utilizado é obtido do lumisportalconfig.xml.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.url.forceFirstPageLinkToChannelLink </span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Se o valor for "true", não será feita a criação do web resource da página (sem parâmetros), usando a URL do canal em seu lugar.</p>
+<p>&nbsp;</p>
+<p>O objetivo desta configuração é evitar que seja gerada uma URL para uma página e outra URL para um canal, evitando assim a potencial duplicidade de páginas.</p>
+<p>&nbsp;</p>
+<p>O valor padrão desta propriedade é "true".</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.file.validation.height</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Define o limite máximo de altura para um determinado arquivo. &nbsp;Esta validação será aplicada apenas em arquivos que possuam este tipo de informação como meta-dado.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.file.validation.width</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Define o limite máximo de largura para um determinado arquivo. &nbsp;Esta validação será aplicada apenas em arquivos que possuam este tipo de informação como meta-dado.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.file.validation.size</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Define o limite máximo de tamanho em kbytes para um determinado arquivo. &nbsp;Esta validação será aplicada a todos os tipos de arquivos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.file.validation.className</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Define a lista de validadores a serem utilizados pelo gerenciador de arquivos (File Manager) ao incluir um arquivo. O valor desta propriedade é uma lista de nomes de Classes que implementam a interface <a href="../api/lumis/portal/file/IFileValidator.html" target="_blank" class="weblink">IFileValidator</a>. O comportamento e/ou regras de validação ficam a critério da implementação.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.presentation.outputDateTime</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Se o valor for "true" será inserido um comentário no HTML da página com a data e hora da geração da página. Caso esta propriedade apresente mais de um valor, apenas o primeiro será considerado e os demais serão ignorados.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.presentation.outputMetaGenerator</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Se o valor for "true" será inserido um elemento <span style="font-style: italic;">meta</span> de <span style="font-style: italic;">generator</span> junto com os demais elementos <span style="font-style: italic;">meta</span> gerados no HTML da página. O valor padrão desta propriedade é "true".</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.presentation.outputServerId</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Se o valor for "<span style="font-style: italic;">true</span>", será inserido um comentário no <span style="font-style: italic;">HTML</span> da página a identificação do servidor que a gerou.</p>
+<p>Caso esta propriedade apresente mais de um valor, apenas o primeiro será considerado e os demais serão ignorados.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.presentation.htmlevaluation.level</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Define o nível de problemas de <a href="acessibilidade.htm">acessibilidade</a> a ser considerado. Valores esperados para esta property bag são: INFO, WARNNIG, ERROR e SUMMARY. Maiores detalhes consultar <a href="avaliacaoacessibilidademonitoracao.htm">Monitoração de Acessibilidade</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.presentation.X-UA-Compatible</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Será usada para adicionar um cabeçalho &nbsp;HTTP com o nome X-UA-Compatible &nbsp;e valor igual ao definido na property bag, quando uma página do portal é acessada. Se esta property bag não estiver definida o valor padrão será IE=edge. Caso o valor seja vazio este cabeçalho não será adicionado.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.service.socialnetworkservice.socialprofile.photosizelimit</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Quando esta propriedade está aplicada (ou herdada) a uma instância do <a href="perfilsocial.htm">serviço de Perfil Social</a>, ela indica o tamanho máximo, em <span style="font-style: italic;">bytes</span>, do arquivo que se pode ser feito upload para utilizar como foto quando o usuário atualiza seu perfil. Se esta propriedade não estiver definida, o tamanho máximo padrão é 500KB.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="397" style="width:397px; border: solid 1px #000000;"><p><span style="font-style: italic;">lumis.portal.isAdministrationArea</span></p>
+</td>
+<td valign="top" width="491" style="width:491px; border: solid 1px #000000;"><p>Propriedade para indicar se uma determinada estrutura do portal é uma área administrativa. Na renderização padrão, haverá mudanças no estilo visual dependendo do valor dessa propriedade.</p>
+<p>&nbsp;</p>
+<p>Suporta dois valores: <span style="font-style: italic;">true</span>, para indicar que a área é administrativa e <span style="font-style: italic;">false</span> para indicar que a área não é uma área administrativa.</p>
+<p>&nbsp;</p>
+<p>Para interfaces DOUI (quaisquer interfaces que estendam a classe <a href="../api/lumis/doui/service/DouiServiceInterface.html" target="_blank" class="weblink">lumis.doui.service.DouiServiceInterface</a>) que não sobrescrevam o método <a href="../api/lumis/doui/service/DouiServiceInterface.html#renderData(lumis.portal.serviceinterface.IServiceInterfaceRenderResponse,%20lumis.doui.DouiContext)" target="_blank" class="weblink">lumis.doui.service.DouiServiceInterface.renderData(IServiceInterfaceRenderResponse, DouiContext)</a> padrão, conterá no nó de CSSs da interface, no Xpath <span style="font-style: italic;">/renderData/douiContext/interfaceCss</span>, uma das seguintes entradas:</p>
+<p>&nbsp;</p>
+<p>- <span style="text-decoration: underline;">lum-administration-area</span>: se a interface a ser renderizada encontra-se em uma área administrativa; ou</p>
+<p>- <span style="text-decoration: underline;">lum-non-administration-area</span>: caso contrário.<br>
+&nbsp;<br>
+O valor padrão para essa informação é extraído da interface sendo renderizada. Será considerado <span style="font-style: italic;">true</span>, se a interface é uma interface administrativa e <span style="font-style: italic;">false </span>caso contrário.<br>
+&nbsp;<br>
+Para informações sobre como definir se uma interface é administrativa ou não, consulte o elemento <a href="../xsd/service/schemas/servicedefinition_xsd/elements/isAdministration.html" target="_blank" class="weblink">isAdministration</a> do XSD de servicedefinition.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>O cenário abaixo exemplifica a funcionalidade de <span style="font-style: italic;">property bags</span>:</p>
+<p>&nbsp;</p>
+<p>Suponha a seguinte hierarquia de canais e páginas:<br>
+&nbsp;</p>
+<p style="text-align: center;"><span style="width:48px">&nbsp;</span><img src="portalstudio245.jpg" width="226" height="146" border="0" alt="portalStudio245" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;</p>
+<p>A seguir, as propriedades adicionadas ao "Canal A":</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portalstudio246.jpg" width="900" height="603" border="0" alt="portalStudio246" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Foi adicionada a "Propriedade 1" com três valores ("Valor A", "Valor B" e "Valor C") para o "Canal A". A quebra de linha determina a adição de valores. <br>
+&nbsp;</p>
+<p>Observe que para excluir, basta clicar no botão ao lado do nome da propriedade. Observe também que não há nenhuma propriedade herdada para esse canal, isso porque não há propriedades adicionadas em seu canal pai.</p>
+<p>&nbsp;</p>
+<p>Para a persistência desses valores, é necessário clicar em <span style="font-style: italic;">OK</span>. Pode-se adicionar tantas quanto forem necessárias, para depois persistir de uma só vez.</p>
+<p>&nbsp;</p>
+<p>A seguir, as propriedades do "Canal B":</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portalstudio247.jpg" width="900" height="605" border="0" alt="portalStudio247" style="margin:0 auto;margin:0px;"></p>
+<p>Observe que a "Propriedade 1" foi herdada do "Canal A" e que as propriedades "Propriedade 2" e "Propriedade 3" foram adicionadas para o "Canal B".</p>
+<p>&nbsp;</p>
+<p>Por fim, as propriedades do "Canal C":</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portalstudio248.jpg" width="900" height="605" border="0" alt="portalStudio248" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Para este canal, não foram adicionadas outras propriedades, apenas as propriedades dos canais anteriores foram herdadas.</p>
+<p>&nbsp;</p>
+<p>A herança não pode ser desligada. Ou seja, sempre as propriedades serão herdadas de um canal para outro. No entanto, o <span style="font-style: italic;">Lumis</span> permite que propriedades sejam sobrescritas, ou seja, uma propriedade adicionada sobrescrever uma herdada. Portanto, caso não queira que um canal filho tenha uma determinada propriedade herdada, basta adicionar outra no canal, com o mesmo nome da herdada, porém com valores diferentes. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

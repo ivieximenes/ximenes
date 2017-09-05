@@ -1,0 +1,53 @@
+/* $Revision: 15371 $ $Date: 2013-05-22 16:02:20 -0300 (Wed, 22 May 2013) $ */
+
+.lumis-service-vote-vote .lum-content-title {
+	font-size:12px;
+	font-weight:bold;
+	text-transform:none;
+}
+
+.lumis-service-vote-results .lum-list-item,
+.lumis-service-vote-history .lum-list-item .lum-list-item {
+	margin:10px 0;
+	position:relative;
+}
+.lumis-service-vote-results .lum-list-item:after,
+.lumis-service-vote-history .lum-list-item .lum-list-item:after {
+	content:none;
+}
+.lumis-service-vote-history .lum-list .lum-content-title {
+	text-transform:uppercase;
+}
+.lumis-service-vote-history .lum-pagination {
+	border-bottom: 1px solid #CDCDCD;
+	margin-top: 6px;
+	padding-bottom: 6px;
+}
+
+.lum-vote-result-list-title {
+	font-size:12px;
+	margin-bottom:2px;
+}
+.lum-vote-result-list-info {
+	text-align:right;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.lum-vote-result-list-info span {
+	font-weight:bold;
+}
+.lum-vote-result-list-progress-bar {
+	border:1px solid #feac1a;
+	background:#fcf0d8;
+	height:9px;
+	margin-right:80px;
+}
+.lum-vote-result-list-progress-bar-fill {
+	width:0;
+	height:9px;
+	background-color:#ff9700;
+	background-image:-moz-linear-gradient(#ff9a00,#ff7311);
+	background-image:-webkit-gradient(linear,0 top,0 bottom,from(#ff9a00),to(#ff7311));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9a00,endColorstr=#ff7311)); 
+}

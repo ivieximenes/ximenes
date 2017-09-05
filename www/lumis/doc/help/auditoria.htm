@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Auditoria</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?auditoria.htm"; }
+  else { parent.quicksync('a7.6.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Auditoria</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="fs_arquivos_com_copia_unica.htm">Previous</a>&nbsp;
+     <a href="visualizar_entradas_de_auditor.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O Lumis possui uma API para realizar auditoria. É possível registrar algumas operações originadas pelos usuários tais como: criação de um canal, criação de uma página, remoção de uma versão de conteúdo, etc.</p>
+<p style="margin: 14px 0px 0px 0px;">Os dados registrados em cada operação são:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Categoria;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Tipo;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Identificador do Usuário;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Login do Usuário;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Título;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Descrição.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">É possível determinar quanto tempo as entradas de Auditoria serão mantidas no banco de dados. &nbsp;Também é possível habilitar e desabilitar os tipos de Auditoria. – isso determina se as entradas serão salvas no banco de dados ou não. &nbsp;Todas as entradas são registradas no arquivo de log independentemente de estarem habilitadas ou não.</p>
+<p style="margin: 14px 0px 0px 0px;">O campo "Categoria" representa uma área do Portal Lumis. O campo "Tipo" representa um tipo de operação possível para determinada área. Assim, cada categoria agrupa alguns tipos de operações possíveis. As categorias existentes são: “Audit”, "Structure", “Portal Studio”, "Content" e “Website”.</p>
+<p style="margin: 14px 0px 0px 0px;">A categoria "Structure" agrupa as operações relativas à estrutura do Portal, tais como: &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 11pt; font-family: 'Calibri';"> </span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover canal;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover página;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover instância de serviço;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover instância de interface;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Limpeza de cache de páginas e/ou canais via Portal Studio;</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">A categoria "Content" agrupa as operações realizadas nos conteúdos, tais como: &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover versão de conteúdo;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Bloquear e desbloquear Content Locale;</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">A categoria "Portal Studio" agrupa as operações realizadas no portal studio, tais como: &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Limpar cache do portal, canal e página;</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">A categoria "Audit" agrupa as operações realizadas referentes à administração da auditoria, tais como: &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Habilitar / desabilitar a funcionalidade de auditoria;</td></tr></table></div><p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">A categoria "Website" agrupa as operações referentes ao website, tais como: &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover website;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar, atualizar e remover URLs de um website;</td></tr></table></div><p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">O campo "Título" apresenta um resumo da operação realizada. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">A descrição varia de acordo com o componente que está registrando a operação. Cada componente monta o texto que será utilizado como descrição de acordo com os dados que forem relevantes para a operação. &nbsp;Algumas informações que podem estar disponíveis na descrição de uma entrada de auditoria são: identificador da interface de serviço, identificador e nome da página, identificador da instância de serviço, etc.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-size: 11pt; font-family: 'Calibri';"> </span>Abaixo, exemplo de uma entrada de auditoria no arquivo de log:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table width="423" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">2010-10-18&nbsp;11:32:07,199&nbsp;Category:&nbsp;Structure&nbsp;-&nbsp;Type:&nbsp;Add&nbsp;Service&nbsp;Instance&nbsp;-&nbsp;User:&nbsp;00000000D00000000000000000000001&nbsp;admin&nbsp;-&nbsp;Title:&nbsp;'Added&nbsp;service&nbsp;instance:&nbsp;Notícias'&nbsp;-&nbsp;Description:&nbsp;'Added&nbsp;service&nbsp;instance:</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;id:&nbsp;8A488A1F2B439C15012B454E9A2B01B2</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;name:&nbsp;Notícias</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;description:&nbsp;Permite&nbsp;gerenciar&nbsp;notícias&nbsp;no&nbsp;portal.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;service&nbsp;id:&nbsp;lumis.service.news</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;channel&nbsp;id:&nbsp;8A488A1F2B439C15012B454E9A1C01AE</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&nbsp;channel&nbsp;name:&nbsp;news'</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 1px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

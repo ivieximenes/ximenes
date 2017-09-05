@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 9152 $ $Date: 2008-04-18 15:08:34 -0300 (Fri, 18 Apr 2008) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_filters"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_filters"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_filters">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:attribute name="text" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Defines the title of the interface header.  If not specified the title will be the title of the interface with the service instance name within parenthesis.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="icon" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If specified the icon will be placed in the header</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="setWindowText" type="xsd:boolean" use="optional" default="false">
+					<xsd:annotation>
+						<xsd:documentation>Defines whether the title set should be applied to the browser window as well.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="class" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="hideFilterButton" type="xsd:boolean">
+					<xsd:annotation>
+						<xsd:documentation>Indicates if a filter submit button renderization is to be omitted. Default is false if contains a filter that is not of type lum_parentFilter; default is true otherwise.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 6396 $ $Date: 2007-04-11 15:46:46 -0300 (Wed, 11 Apr 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_localePicker"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_localePicker"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_localePicker">
+	</xsd:complexType>
+
+</xsd:schema>

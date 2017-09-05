@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>servicedefinition.xml</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?contentservicedefinitionxml.htm"; }
+  else { parent.quicksync('a8.4.5.1.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">servicedefinition.xml</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="contentestruturadiretoriosarquivosgeradosassistente.htm">Previous</a>&nbsp;
+     <a href="contentdouidefinitionxml.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">A configuração básica do funcionamento do serviço é realizada através do arquivo <span style="font-style: italic;">servicedefinition.xml</span>. Nele estão especificadas as interfaces com todas as funcionalidades referentes à publicação que foram especificadas durante a criação do serviço pelo assistente.</p>
+<p style="margin: 8px 0px 0px 0px;">O arquivo abaixo refere-se ao <span style="font-style: italic;">servicedefinition.xml</span> do serviço “example_1” gerado pelo <span style="font-style: italic;">Wizard</span>:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;!--&nbsp;$Revision:&nbsp;17579&nbsp;$&nbsp;$Date:&nbsp;2015-07-15&nbsp;15:09:03&nbsp;-0300&nbsp;(Wed,&nbsp;15&nbsp;Jul&nbsp;2015)&nbsp;$&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;serviceDefinition&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&nbsp;xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;service&nbsp;id="teste"&nbsp;name="STR_SERVICE_NAME"&nbsp;type="lum_content"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;description&gt;STR_SERVICE_DESCRIPTION&lt;/description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;workflow&nbsp;enabled="true"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/service&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;!--&nbsp;user&nbsp;interfaces&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="quicklist"&nbsp;name="STR_QUICK_LIST"&nbsp;type="lum_contentQuickList"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;previewSupported&gt;false&lt;/previewSupported&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;styles&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;path="lumis/doui/style/GenericQuickList.xsl"&nbsp;name="STR_DEFAULT"&nbsp;id="genericQuickList"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;path="lumis/doui/style/DouiServiceInterface.xsl"&nbsp;name="STR_GENERIC"&nbsp;id="genericDetails"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/styles&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/interface&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="list"&nbsp;name="STR_LIST"&nbsp;type="lum_contentList"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;previewSupported&gt;false&lt;/previewSupported&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;styles&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;path="lumis/doui/style/GenericList.xsl"&nbsp;name="STR_DEFAULT"&nbsp;id="genericList"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;path="lumis/doui/style/GenericListForHtmlFile.xsl"&nbsp;name="STR_DEFAULT_FOR_HTML_FILE"&nbsp;id="genericListForHtmlFile"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;path="lumis/doui/style/DouiServiceInterface.xsl"&nbsp;name="STR_GENERIC"&nbsp;id="genericDetails"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/styles&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/interface&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="details"&nbsp;name="STR_DETAILS"&nbsp;type="lum_contentDetails"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;previewSupported&gt;false&lt;/previewSupported&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;!--&nbsp;administration&nbsp;interfaces&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="administration"&nbsp;name="STR_ADMINISTRATION"&nbsp;type="lum_contentAdministrationList"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="add"&nbsp;name="STR_ADD"&nbsp;type="lum_contentAdministrationAddPropertyPage"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;popupWindowProperties&gt;width=625,height=540,scrollbars=yes&lt;/popupWindowProperties&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/interface&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="edit"&nbsp;name="STR_EDIT"&nbsp;type="lum_contentAdministrationEditPropertyPage"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;popupWindowProperties&gt;width=625,height=540,scrollbars=yes&lt;/popupWindowProperties&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/interface&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="addembedded"&nbsp;name="STR_ADD"&nbsp;type="lum_contentAdministrationEmbeddedAddPropertyPage"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/serviceDefinition&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">No quadro abaixo estão listadas as definições do serviço e suas interfaces no <span style="font-style: italic;">servicedefinition.xml</span>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 32px;"><table width="600" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" bgcolor="#8c8c8c" style="height:29px; background-color:#8c8c8c; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Principais tags, atributos e valores utilizados no </span><span style="font-style: italic; font-weight: bold; color: #ffffff;">sevicedefinition.xml</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="156" bgcolor="#dedede" style="width:156px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic; font-weight: bold;">serviceDefinition</span></p>
+</td>
+<td valign="middle" width="599" style="width:599px; height:29px; border: solid 1px #000000;"><p style="text-align: left; margin: 8px 0px 8px 0px;">Possui 2 atributos: <span style="font-weight: bold;">xmlns:xsi</span> e <span style="font-weight: bold;">xsi:namespaceSchemaLocation</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="156" bgcolor="#dedede" style="width:156px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic; font-weight: bold;">service</span></p>
+</td>
+<td valign="middle" width="599" style="width:599px; height:29px; border: solid 1px #000000;"><p style="text-align: left; margin: 8px 0px 0px 0px;">Possui 3 atributos:</p>
+<p style="text-align: left; text-indent: -43px; margin: 8px 0px 0px 48px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-weight: bold;">id</span>=”nome_do_serviço”;</p>
+<p style="text-align: left; text-indent: -13px; margin: 8px 0px 0px 18px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">name </span>(string de tradução que pode ser alterado no arquivo <span style="font-style: italic;">strings.pt_br.xml</span>);</p>
+<p style="text-align: left; text-indent: -10px; margin: 8px 0px 0px 15px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-weight: bold;">type=</span>”lum_content” (serviços de gestão de conteúdo, são do tipo <span style="font-style: italic;">lum_content</span>).</p>
+<p style="text-align: left; margin: 8px 0px 8px 0px;">A tag “<span style="font-weight: bold;">&lt;workflow enabled=</span>”true”<span style="font-weight: bold;">/&gt;</span>” habilita a propriedade de <span style="font-style: italic;">workflow</span> para o serviço<span style="font-size: 8pt; font-family: 'Courier New';">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="156" bgcolor="#dedede" style="width:156px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic; font-weight: bold;">interface</span></p>
+</td>
+<td valign="middle" width="599" style="width:599px; height:29px; border: solid 1px #000000;"><p style="text-align: left; margin: 8px 0px 0px 0px;">Possui 3 atributos com seus respectivos valores:</p>
+<p style="text-align: left; text-indent: -12px; margin: 8px 0px 0px 17px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">id</span>= “quicklist”<span style="font-size: 8pt; font-family: 'Courier New'; color: #000080;"> </span>(para a interface de Lista Rápida de alguns conteúdos linkável para a interface de Lista e Detalhes); “list” (para a interface de Lista de conteúdos linkáveis para a interface de detalhes dos mesmos); “details” (para a interface de Detalhes dos conteúdos cadastrados na interface de Administração); “administration” (para a interface de Administração de conteúdos); “add” (para a inteface não instanciável de adição de conteúdo); “edit” (para a interface não instanciável de edição de conteúdo); “addembedded” (para uma interface instanciável de adição de conteúdo);</p>
+<p style="text-align: left; text-indent: -12px; margin: 8px 0px 0px 17px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-weight: bold;">name</span> (string de tradução de cada interface que pode ser alterado no arquivo <span style="font-style: italic;">strings.pt_br.xml</span>);</p>
+<p style="text-align: left; text-indent: -12px; margin: 8px 0px 0px 17px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-weight: bold;">type</span>:variantes do tipo “content” ;</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;">A <span style="font-style: italic;">tag</span> <span style="font-style: italic; font-weight: bold;">&lt;popupWindowProperties</span><span style="font-weight: bold;">&gt;</span> permite que &nbsp;interfaces de adicionar/editar sejam exibidas em um <span style="font-style: italic;">pop-up</span> quando são acionadas a partir da interface de administração.</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;">A <span style="font-style: italic;">tag</span> <span style="font-style: italic; font-weight: bold;">&lt;styles&gt;</span><span style="font-weight: bold;"> </span>permite especificar um ou mais estilos para renderizar a interface. A tag &lt;<span style="font-style: italic; font-weight: bold;">styles</span>&gt; permite especificar um ou mais estilos para renderizar a interface. Se não for especificada, o Lumis Portal irá procurar uma pasta com nome "style" e buscar arquivos de layout &nbsp; &nbsp;(*.xsl, *.js, *.groovy) com seu nome sendo igual ao identificador da interface. Se algum for encontrado, este será considerado o arquivo padrão de estilo da interface. Cada estilo é definido em uma tag <span style="font-style: italic; font-weight: bold;">&lt;style&gt;</span><span style="font-weight: bold;">.</span>Seus atributos são:</p>
+<p style="text-align: left; text-indent: -11px; margin: 8px 0px 0px 14px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">path: </span>especifica o nome do arquivos de layout (*.xsl, *.js, *.groovy) que será utilizado para renderizar a interface;</p>
+<p style="text-align: left; text-indent: -12px; margin: 8px 0px 0px 17px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">name: </span>especifica o nome do estilo para a renderização da interface;</p>
+<p style="text-align: left; text-indent: -1px; margin: 8px 0px 8px 6px;">A tag <span style="font-style: italic;">&lt;previewSupported&gt;</span> exibe a interface com o conteúdo selecionado, na tela de visualização (<a href="visualizacaoconteudo.htm">preview do conteúdo</a>), quando o valor for "true", caso contrário, a interface não será exibida em tal tela. Por <span style="font-style: italic;">default</span> , as interfaces dos tipos <span style="font-style: italic;">lum_contentQuickList</span>, <span style="font-style: italic;">lum_contentList</span>, <span style="font-style: italic;">e lum_contentDetails</span> já possuem <span style="font-style: italic;">&lt;previewSupported&gt;true&lt;/previewSupported&gt;</span>, e portanto, não é explicitado na definição da interface. No entanto, caso a interface não deva fazer parte da visualização, deve-se, explicitamente, definir <span style="font-style: italic;">&lt;previewSupported&gt;false&lt;/previewSupported&gt;</span> em sua definição.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table align="center" width="584" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="113" style="width:113px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="443" style="width:443px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="556" style="width:556px; border: solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Verificar a documentação “XSD-DOCS” para utilização dos elementos do <span style="font-style: italic;">servicedefinition.xml</span>;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Os serviços criados pelo assistente são registrados por ele no Portal. Caso sejam realizadas customizações em tais serviços, estes necessitam ser manualmente registrados no portal;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Caso o serviço de <span style="font-style: italic;">content</span> seja criado sem a utilização do assistente, ele deverá ser registrado no Portal, para posterior utilização. Verificar a seção <a href="gerenciadorservicos.htm">Gerenciador de Serviços</a> &nbsp;sobre como registrar serviços;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Caso deseja-se alterar o ID, um novo serviço será registrado se o atual for removido.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

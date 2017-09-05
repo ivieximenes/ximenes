@@ -1,0 +1,473 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>LumisPortalConfig</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?lumisportalconfig.htm"; }
+  else { parent.quicksync('a3.9.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LumisPortalConfig</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="lumislogconfig.htm">Previous</a>&nbsp;
+     <a href="lumishibernateconfig.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">A seguir serão apresentados trechos do arquivo “<span style="font-style: italic;">lumisdata/config/lumisportalconfig.xml</span>” seguido da explicação de cada configuração:</p>
+<p style="margin: 14px 0px 0px 0px;">a) O elemento <span style="font-style: italic;">&lt;serverId</span>&gt; determina o identificador do servidor de aplicação:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 82px;"><table width="452" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Set&nbsp;the&nbsp;serverId&nbsp;below&nbsp;to&nbsp;a&nbsp;unique&nbsp;server&nbsp;identifier.&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;serverId&gt;LumisPortalServer&lt;/serverId&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">O valor desse elemento deve ser único entre servidores em um ambiente <span style="font-style: italic;">multi-server</span>.</p>
+<p style="margin: 0px 0px 0px 82px;">&nbsp;</p>
+<p style="text-align: left; line-height: 1.50;">b) O elemento <span style="font-style: italic;">&lt;deviceDetection&gt; </span>determina quais são os arquivos de configurações de dispositivos que serão reconhecidos durante o processamento das requisições realizadas às páginas do portal.  No nó <span style="font-style: italic;">&lt;deviceDetections&gt; </span>existem<span style="font-style: italic;"> </span>nós filhos cujo o objetivo é representar o arquivo principal que contém as definições dos dispositivos e possíveis atualizações da lista de dispositivos definidos no arquivo principal. Ou seja, o primeiro arquivo informado é considerado o arquivo principal e os demais arquivos são considerados atualizações. A medida que novos dispositivos forem surgindo basta adicionar um novo arquivo com as definições dos novos dispositivos como sendo uma atualização.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 80px;"><table width="498" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--Uncomment&nbsp;to&nbsp;customize&nbsp;the&nbsp;Wurfl&nbsp;device&nbsp;detection&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">that&nbsp;will&nbsp;detect&nbsp;what&nbsp;device&nbsp;is&nbsp;requesting&nbsp;a&nbsp;specific&nbsp;URL.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">The&nbsp;first&nbsp;file&nbsp;is&nbsp;the&nbsp;root&nbsp;devices&nbsp;node,&nbsp;the&nbsp;others&nbsp;are&nbsp;devices&nbsp;patchs.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;deviceDetection&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;deviceDefinitions&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;file&gt;wurfl.zip&lt;/file&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;file&gt;patch1.xml&lt;/file&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;file&gt;patch2.xml&lt;/file&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;/deviceDefinitions&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/deviceDetection&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Por padrão o Lumis utiliza uma lista de definições de dispositivos publicada pelo projeto <a href="http://wurfl.sourceforge.net/" target="_blank" class="weblink">WURFL</a>. Caso o administrador do portal deseje desativar a opção de detecção de dispositivos, basta informar a configuração abaixo. Desta forma o Lumis irá ignorar a lista de definições de dispositivos publicadas pelo WURFL.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 80px;"><table width="498" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--Uncomment&nbsp;to&nbsp;customize&nbsp;the&nbsp;Wurfl&nbsp;device&nbsp;detection&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">that&nbsp;will&nbsp;detect&nbsp;what&nbsp;device&nbsp;is&nbsp;requesting&nbsp;a&nbsp;specific&nbsp;URL.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">The&nbsp;first&nbsp;file&nbsp;is&nbsp;the&nbsp;root&nbsp;devices&nbsp;node,&nbsp;the&nbsp;others&nbsp;are&nbsp;devices&nbsp;patchs.--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;deviceDetection&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/deviceDetection&gt;</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 80px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação:</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p style="line-height: 1.50;">Para a funcionalidade de detecção de dispositivos ser ativada, é necessário a inclusão da biblioteca do WURFL no classpath da aplicação do portal (exemplo: incluir o JAR em www/WEB-INF/lib). O JAR pode ser obtido em <a href="http://search.maven.org/remotecontent?filepath=net/sourceforge/wurfl/wurfl/1.2.2/wurfl-1.2.2.jar" target="_blank" class="weblink">http://search.maven.org/remotecontent?filepath=net/sourceforge/wurfl/wurfl/1.2.2/wurfl-1.2.2.jar</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p style="margin: 0px 0px 0px 82px;">&nbsp;</p>
+<p style="line-height: 1.50;">c) O elemento &lt;<span style="font-style: italic;">defaultPageDocType</span>&gt; permite determinar qual dos possíveis valores de <span style="font-style: italic;">DocType</span> será incluído nas páginas geradas pelo <span style="font-style: italic;">Lumis Portal</span> para que sejam validadas pelo <span style="font-style: italic;">W3C:</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 82px;"><table width="456" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;enable&nbsp;customized&nbsp;default&nbsp;page&nbsp;DocType.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;Valid&nbsp;values&nbsp;are:&nbsp;XHTML10_STRICT,&nbsp;XHTML10_TRANSITIONAL,&nbsp;XHTML10_TRANSITIONAL,</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;XHTML10_FRAMESET,&nbsp;XHTML11_DTD,&nbsp;XHTMLBASIC10_DTD,&nbsp;XHTMLBASIC11_DTD,</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;HTML401_STRICT,&nbsp;HTML401_TRANSITIONAL,&nbsp;HTML401_FRAMESET,&nbsp;HTML20_DTD,&nbsp;HTML32_DTD,&nbsp;HTML5&nbsp;and&nbsp;NONE.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;If&nbsp;not&nbsp;specified&nbsp;the&nbsp;default&nbsp;value&nbsp;is&nbsp;HTML5.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;defaultPageDocType&gt;HTML5&lt;/defaultPageDocType&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 82px;">&nbsp;</p>
+<p style="line-height: 1.50;">Se for especificado o valor "<span style="font-style: italic;">NONE</span>" não será incluído nenhum <span style="font-style: italic;">DOCType</span> na página gerada pelo <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="line-height: 1.50;">Para uma lista de todas os <span style="font-style: italic;">DOCTypes W3C</span>, consultar: <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="_blank" class="weblink">http://www.w3.org/QA/2002/04/valid-dtd-list.html</a>.<br>
+&nbsp;</p>
+<p style="line-height: 1.50;">d) No elemento <span style="font-style: italic;">&lt;cache</span>&gt; podem ser configurados:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>a capacidade <span style="font-style: italic;">default </span>do cache de um objeto (capacidade máxima da quantidade daquele objeto em memória) que deve ser configurado no elemento <span style="font-style: italic;">&lt;defaultCapacity&gt;</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>segundo nível de <span style="font-style: italic;">cache</span> para ser utilizado pelo <span style="font-style: italic;">cache</span> embutido no <span style="font-style: italic;">Portal Cache</span> para armazenar os objetos não recentemente acessados. Caso não seja utilizado este segundo nível, utilizar o valor "none" no elemento &lt;<span style="font-style: italic;">overflowType</span>&gt;. O valor padrão é "<span style="font-style: italic;">soft</span>" que significa, quando a memória deste segundo nível extrapolar, alguns objetos serão removidos; Há ainda o valor "<span style="font-style: italic;">weak</span> " que deixa a cargo do <span style="font-style: italic;">garbage collect</span> remover os objetos deste segundo nível, mesmo que a memória ainda não tenha extrapolado. Maiores detalhes, consultar o <a href="http://java.sun.com/j2se/1.3/docs/api/java/lang/ref/package-summary.html" target="_blank" class="weblink">Javadoc de WeakReference ou SoftReference</a><span style="font-size: 12pt; font-family: 'Times New Roman';">:</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 83px;"><table width="567" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;the&nbsp;portal&nbsp;cache.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;overflowType&nbsp;may&nbsp;be&nbsp;'none',&nbsp;'weak'&nbsp;or&nbsp;'soft'.&nbsp;Default&nbsp;is&nbsp;'soft'.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;cache&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;defaultCapacity&gt;1000&lt;/defaultCapacity&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;overflowType&gt;soft&lt;/overflowType&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/cache&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">e) O elemento <span style="font-style: italic;">&lt;defaultDeadline&gt;</span> do elemento &lt;<span style="font-style: italic;">locks&gt;</span> define o tempo máximo para (em minutos) antes de ser realizado um <span style="font-style: italic;">lock</span> no portal:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 83px;"><table width="567" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;specify&nbsp;a&nbsp;default&nbsp;lock&nbsp;deadline&nbsp;(in&nbsp;minutes).</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;locks&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;defaultDeadline&gt;60&lt;/defaultDeadline&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/locks&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 83px;">&nbsp;</p>
+<p style="line-height: 1.50;">f) Por <span style="font-style: italic;">default</span> o serviço de <span style="font-style: italic;">clock</span> do portal está habilitado. Para desabilitá-lo, deve-se atribuir o valor zero para o elemento &lt;<span style="font-style: italic;">enable&gt;</span>. O intervalo em segundos do operador deve ser atribuído ao elemento &lt;<span style="font-style: italic;">tickInterval&gt;</span> que por <span style="font-style: italic;">default é </span>30:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: -1px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 85px;"><table width="595" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;enable&nbsp;customized&nbsp;portal&nbsp;clock&nbsp;interval</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;portalClock&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;enable&gt;1&lt;/enable&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tickInterval&gt;30&lt;/tickInterval&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/portalClock&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">g) Para alterar o tempo de expiração da sessão, será necessário configurar o arquivo <span style="font-style: italic;">lumisportalconfig.xml</span>, como é mostrado abaixo:</p>
+<p style="margin: 14px 0px 0px 0px;"> O elemento &lt;<span style="font-style: italic;">sessionTimeout&gt; </span>define o tempo para expirar a sessão:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 82px;"><table width="396" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="402" style="width:402px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Times New Roman';"> </span><span style="font-family: 'Courier New';">&lt;!-- Uncomment to change default session timeout</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;sessionTimeout&gt;30&lt;/sessionTimeout&gt;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; line-height: 1.50;">É recomendado configurar o tempo de sessão no servidor de aplicação com a mesma duração, configurando-o no <span style="font-style: italic;">web.xml</span> em <span style="font-style: italic;">session-config/session-timeout</span>. Caso esta configuração seja diferente do<span style="font-style: italic;"> lumisportalconfig.xml</span>, objetos armazenados na sessão (<span style="font-style: italic;">HttpSession</span>) poderão sofrer expiração em momentos distintos em relação à sessão do usuário no Lumis Portal.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">h) </span>Em <span style="font-style: italic;">&lt;fileUpload&gt;</span> podem ser configurados o tamanho do arquivo para <span style="font-style: italic;">upload</span>, bem como as extensões de arquivos <span style="font-weight: bold;">não</span> permitidas.</p>
+<p>&nbsp;</p>
+<p style="line-height: 1.50;">Através do <span style="font-style: italic;">&lt;maxSize&gt;</span> pode-se controlar globalmente o tamanho de um arquivo submetido à <span style="font-style: italic;">upload.</span> O valor "-1" significa tamanho ilimitado.</p>
+<p style="line-height: 1.50;">Já o elemento <span style="font-style: italic;">&lt;deniedExtensions&gt;</span> contém como valor uma expressão regular que é comparada com a extensão do arquivo enviado. Se ocorrer um <span style="font-style: italic;">match</span>, o <span style="font-style: italic;">upload</span> do arquivo não é permitido. Essa restrição não é aplicada para qualquer envio do arquivo ao portal, mas está disponível para os componentes que queiram utilizar. O <span style="font-style: italic;"><a href="../api/lumis/portal/file/FileManager.html" target="_blank" class="weblink">lumis.portal.file.IFileManager</a></span> restringe a adição de arquivos conforme esta configuração. Campos do <span style="font-style: italic;">douidefinition</span> do tipo <span style="font-style: italic;">file</span> ou <span style="font-style: italic;">files</span> utilizam essa configuração e portanto sofrem a mesma restrição.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 1px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 81px;"><table width="366" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;fileUpload&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;limit&nbsp;max&nbsp;upload&nbsp;size&nbsp;in&nbsp;bytes</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;maxSize&gt;-1&lt;/maxSize&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;specify&nbsp;file&nbsp;upload&nbsp;extensions&nbsp;that&nbsp;are&nbsp;denied.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;value&nbsp;is&nbsp;a&nbsp;regular&nbsp;expression&nbsp;to&nbsp;be&nbsp;matched&nbsp;against&nbsp;the&nbsp;file&nbsp;extension.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;deniedExtensions&gt;jspx?|php\d?|phtml|pwml|inc|aspx?|ascx|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi&lt;/deniedExtensions&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/fileUpload&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><a name="encryption"></a>i) &nbsp;O elemento <span style="font-style: italic;">encryption</span> define os algoritmos de criptografia utilizados. O <span style="font-style: italic;">Lumis Portal </span>disponibiliza dois tipos criptografias:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">OneWay</span>: Utilizada para criptografias de mão única, ou seja, a informação encriptada não poderá ser descriptografada. A implementação padrão <span style="font-style: italic;"><a href="../api/index.html?lumis/portal/crypto/MessageDigestCipher.html" target="_blank" class="weblink">lumis.portal.crypto.MessageDigestCipher</a>, </span>possui as seguintes configurações:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">Provider</span>: Define o nome do provedor JCE a ser utilizado. Caso o valor não seja especificado o provedor utilizado é o padrão da <span style="font-style: italic;">JVM;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">Algorithm</span>: Define o algoritmo de <span style="font-style: italic;">MessageDigest </span>a ser utilizado. Ex: SHA-512 ou SHA-1. Para mais detalhes consulte a documentação do provedor utilizado. As opções disponíveis no provedor padrão JCE podem ser encontradas em <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/SunProviders.html" target="_blank" class="weblink">Java Cryptography Architecture Sun Providers Documentation</a>.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">Reversible</span>: Utilizada para criptografias onde é necessário ser possível descriptografar a informação encriptada. A implementação padrão <span style="font-style: italic;"><a href="../api/index.html?lumis/portal/crypto/SymmetricCipher.html" target="_blank" class="weblink">lumis.portal.crypto.SymmetricCipher</a>, </span>possui as seguintes configurações:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">Provider</span>: Define o nome do provedor <span style="font-style: italic;">JCE</span> a ser utilizado. Caso o valor não seja especificado o provedor utilizado é o padrão da <span style="font-style: italic;">JVM;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">Algorithm, Mode, Padding</span>: Definem parametros do <span style="font-style: italic;"><a href="http://java.sun.com/javase/6/docs/api/javax/crypto/Cipher.html" target="_blank" class="weblink">Cipher</a> </span>a ser utilizado. Para mais detalhes consulte a documentação do provedor utilizado. As opções disponíveis no provedor padrão <span style="font-style: italic;">JCE</span> podem ser encontradas em <span style="font-style: italic;"><a href="http://java.sun.com/javase/6/docs/technotes/guides/security/SunProviders.html" target="_blank" class="weblink">Java Cryptography Architecture Sun Providers Documentation</a></span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">KeyGenerationSize</span>: Define o tamanho da chave (<span style="font-style: italic;">bits</span>) utilizada na criptografia. Este valor precisa ser compatível com o algoritmo utilizado;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-style: italic;">Mac</span>: Define o algoritmo utilizado para verificação da integridade do valor descriptografado. Para mais detalhes consulte a documentação do provedor utilizado. As opções disponíveis no provedor padrão <span style="font-style: italic;">JCE</span> podem ser encontradas em <span style="font-style: italic;"><a href="http://java.sun.com/javase/6/docs/technotes/guides/security/SunProviders.html" target="_blank" class="weblink">Java Cryptography Architecture Sun Providers Documentation</a></span>.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 80px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="633" style="width:633px; border: solid 1px #000000;"><p><span style="font-size: 9pt; font-family: 'Courier New';">&lt;!-- Uncomment to enable other encryption algorithms.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">Note that any change may prevent previously encrypted data from being read.</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">It is recommended to increase the key size of AES to 256, but for it to</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">be allowed, it is required to install the </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">'Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy'</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">in your Java environment. Check your Java vendor documentation for </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">availability, restrictions and other information.</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 9pt; font-family: 'Courier New';">&lt;encryption&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;oneWay className="lumis.portal.crypto.MessageDigestCipher"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;provider&gt;&lt;/provider&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;algorithm&gt;SHA-512&lt;/algorithm&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;/oneWay&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;reversible className="lumis.portal.crypto.SymmetricCipher"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;provider&gt;&lt;/provider&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;algorithm&gt;AES&lt;/algorithm&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;mode&gt;CBC&lt;/mode&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;padding&gt;PKCS5Padding&lt;/padding&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;keyGenerationSize&gt;128&lt;/keyGenerationSize&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;mac&gt;HmacSHA256&lt;/mac&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 9pt; font-family: 'Courier New';">&lt;/reversible&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 9pt; font-family: 'Courier New';">&lt;/encryption&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-size: 9pt; font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 0px 0px 0px 20px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="714" style="width:714px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação:</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Caso haja alterações nos algoritmos ou configurações de criptografia as informações anteriormente criptografadas não serão recuperadas.  </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Caso haja alterações nos valores de <span style="font-style: italic;">Mac</span> e <span style="font-style: italic;">KeyGenerationSize</span> será necessário remover o conteúdo da tabela <span style="font-style: italic;">lum_CrySymmetricCipher</span>.</td></tr></table></div><p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">j) O elemento &lt; <span style="font-style: italic;">interfaceTitleBarStyle&gt;</span> define o arquivo <span style="font-style: italic;">XSL</span> que customiza a barra de título global das interfaces:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 79px;"><table width="636" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="636" style="width:636px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New';">&lt;!-- Uncomment to specify a custom interface title bar style.</span></p>
+<p style="white-space: nowrap; margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;interfaceTitleBarStyle&gt;lumis/portal/serviceinterface/style/ServiceInterfaceTitleBar.xsl&lt;/interfaceTitleBarStyle&gt;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 0px 0px 0px 79px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;">k) Para a segurança do portal, tem-se as seguintes configurações: O elemento <span style="font-style: italic;">&lt;httpAuthenticator&gt;</span> habilita a autenticação <span style="font-style: italic;">NTLM </span>(Retirar o comentário quando for utilizar este tipo de autenticação). Já o elemento  <span style="font-style: italic;">&lt;configurantionFile&gt;</span> serve para customizar a segurança do portal:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 80px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="633" style="width:633px; border: solid 1px #000000;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;security&gt;&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;enable&nbsp;ntlm&nbsp;authentication.&nbsp;Need&nbsp;also&nbsp;to&nbsp;configure&nbsp;the&nbsp;web.xml&nbsp;accordingly.&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;httpAuthenticator&nbsp;className="lumis.portal.authentication.http.NtlmAuthenticator"&nbsp;/&gt;&nbsp;&nbsp;--&gt;&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;kerberos.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;configurationFile&gt;security/krb5.conf&lt;/configurationFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/kerberos&gt;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/security&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 0px 0px 0px 80px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;">l) O elemento &lt; <span style="font-style: italic;">securityAlias&gt;</span> deve ser utilizada em ambientes que possuem duas soluções em um mesmo servidor de aplicação que utilizam módulos de <span style="font-style: italic;">login</span> diferentes.</p>
+<p style="line-height: 1.50;">Por <span style="font-style: italic;">default,</span> o valor do elemento &lt; <span style="font-style: italic;">securityAlias&gt;</span> é "<span style="font-style: italic;">LumisPortal</span>". Este valor está determinado em “<span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config</span>”. Para atribuir um valor diferente de “<span style="font-style: italic;">LumisPorta</span>l” deve-se substituí-lo no arquivo <span style="font-style: italic;">lumisdata/config/lumissecuritylogin.config</span> e atribuir o novo valor no elemento <span style="font-style: italic;">securityAlias</span>. O <span style="font-style: italic;">Lumis Authentication Manager</span>, através desse elemento, requisita ao servidor de aplicação, um <span style="font-style: italic;">LoginModule</span> do <span style="font-style: italic;">JAAS</span>:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 77px;"><table width="426" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Times New Roman';"> </span><span style="font-family: 'Courier New';">&lt;!-- Uncomment to specify a custom security alias.</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;securityAlias&gt;&lt;/securityAlias&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">m) A configuração de cache está detalhadamente documentada na seção <a href="cachepaginas.htm">Gerenciador de Páginas em Cache</a>.<span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+<p style="margin: 14px 0px 0px 0px;">n) O elemento &lt;<span style="font-style: italic;">errorPage</span>&gt; serve para customização de página de erro para a solução:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 1px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 74px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="633" style="width:633px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New';">&lt;!-- Uncomment to enable customized error page (relative to frameworkUrl)</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;errorPage&gt;customizedErrorPage.jsp&lt;/errorPage&gt;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; text-indent: 1px; margin: 0px 0px 0px 74px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;">O portal vai retornar erro 404, através de uma página de erro customizada, caso seja acessada uma página (<span style="font-style: italic;">HTML</span> ou <span style="font-style: italic;">JSP</span> ) que não existe.</p>
+<p style="line-height: 1.50;">Inserir a <span style="font-style: italic;">string</span> <span style="font-style: italic;">&lt;!-- Lumis Portal Error Page --&gt;</span> na nova página de erro para que o gerador de <span style="font-style: italic;">cache</span> detecte que é uma página de erro e não gere seu <span style="font-style: italic;">cache</span> <span style="font-style: italic;">HTML. </span></p>
+<p style="line-height: 1.50;">A página de erro customizada da <span style="font-style: italic;">Lumis</span> é exibida ao ser acessada uma página, canal ou arquivo com um <span style="font-style: italic;">id</span> que não existe, e fora do <span style="font-style: italic;">F2 </span>(modo usuário). Caso o portal esteja no <span style="font-style: italic;">F2 </span>(modo administrativo do portal), o usuário é redirecionado para o canal portal.</p>
+<p style="line-height: 1.50;">&nbsp;</p>
+<p style="line-height: 1.50;">o) O elemento &lt;<span style="font-style: italic;">cluster&gt;</span> deverá ser habilitado &nbsp;quando desejar que um servidor do ambiente <span style="font-style: italic;">multi-server</span> participe do <span style="font-style: italic;">cluster. </span>Para habilitar a confguração de <span style="font-style: italic;">cluster</span> é necessário retirar o comentário que envolve tal configuração.</p>
+<p style="line-height: 1.50;">Três propriedades da configuração devem ser especificadas. As máquinas que estão em <span style="font-style: italic;">cluster</span> devem ter o mesmo endereço <span style="font-style: italic;">mcastAddress </span>e a mesma porta <span style="font-style: italic;">mcastPort</span>. &nbsp;Além disso, todos os servidores devem estar utilizando o mesmo banco de dados para que se tenha o correto funcionamento do <span style="font-style: italic;">cluster</span>.</p>
+<p style="line-height: 1.50;">Os valores apresentados são <span style="font-style: italic;">default</span>, mas outros podem ser especificados. Recomenda-se informar o valor para <span style="font-style: italic;">bindAddress</span> caso haja mais de um endereço externo de rede, pois caso não seja especificado, será escolhido aleatoriamente:</p>
+<div style="text-align: left; text-indent: 1px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 70px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="633" style="width:633px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New';">&lt;!-- Uncomment to enable multi-server clustering</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;cluster&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;multicast&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;mcastAddress&gt;231.12.21.132&lt;/mcastAddress&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;mcastPort&gt;45566&lt;/mcastPort&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;bindAddress&gt;&lt;/bindAddress&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/multicast&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;/cluster&gt;</span></p>
+<p><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Pode-se configurar também o cluster para utilizar <span style="font-style: italic;">TCP</span> (ao invés do <span style="font-style: italic;">default UDP multicast</span>) com os seguintes parâmetros:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 70px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="636" style="width:636px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-family: 'Courier New';">&lt;cluster&gt;</span><br>
+<span style="font-family: 'Courier New';">&lt;properties&gt;TCP(start_port=%START_PORT%;end_port=%END_PORT%;loopback=true;bind_addr=%BIND_ADDR%;send_buf_size=500000;recv_buf_size=500000):</span><br>
+<span style="font-family: 'Courier New';">TCPPING(timeout=3000;initial_hosts=%INITIAL_HOSTS%;port_range=1;num_initial_members=10):</span><br>
+<span style="font-family: 'Courier New';">MERGE2(min_interval=5000;max_interval=20000):</span><br>
+<span style="font-family: 'Courier New';">FD_SOCK:</span><br>
+<span style="font-family: 'Courier New';">FD(timeout=5000;max_tries=3;shun=true):</span><br>
+<span style="font-family: 'Courier New';">VERIFY_SUSPECT(timeout=5000):</span><br>
+<span style="font-family: 'Courier New';">lumis.portal.cluster.multiserver.DurableNAKACK(gc_lag=50;retransmit_timeout=300,600,1200,2400,4800;use_mcast_xmit=false;discard_delivered_msgs=true):</span><br>
+<span style="font-family: 'Courier New';">pbcast.STABLE(stability_delay=6000;desired_avg_gossip=20000):</span><br>
+<span style="font-family: 'Courier New';">pbcast.GMS(join_timeout=11000;shun=true;print_local_addr=true):</span><br>
+<span style="font-family: 'Courier New';">lumis.portal.cluster.multiserver.Sequencer:</span><br>
+<span style="font-family: 'Courier New';">pbcast.FLUSH(timeout=10000)&lt;/properties&gt;</span><br>
+<span style="font-family: 'Courier New';">&lt;/cluster&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&lt;--O&nbsp;que&nbsp;está&nbsp;contido&nbsp;entre&nbsp;&lt;properties&gt;&nbsp;e&nbsp;&lt;/properties&gt;&nbsp;não&nbsp;pode&nbsp;haver&nbsp;espaços&nbsp;e&nbsp;ENTER.--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; text-indent: 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 1px; line-height: 1.50;">Os trechos em destaque definem os endereços <span style="font-style: italic;">ip</span> e as portas a serem utilizadas, e precisam ser ajustados para a solução de acordo com as seguintes observações:</p>
+<p style="line-height: 1.50;">O primeiro trecho, entre parênteses após <span style="font-style: italic; font-weight: bold;">TCP</span>, define como o <span style="font-style: italic;">socket</span> servidor deste nó será aberto:</p>
+<p style="text-indent: -1px; line-height: 1.50; margin: 0px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span><span style="font-style: italic;">start_port</span> e <span style="font-style: italic;">end_port</span>: especifica o número mínimo e máximo que será utilizado para a porta aberta;</p>
+<p style="text-indent: -1px; line-height: 1.50; margin: 0px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic;">bind_addr</span>: especifica o endereço <span style="font-style: italic;">ip </span>da placa de rede que será utilizada para abrir a porta;</p>
+<p style="line-height: 1.50;">O segundo trecho, entre parênteses após <span style="font-weight: bold;">TCPPING</span>, define como os outros nós são encontrados:</p>
+<p style="line-height: 1.50;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic;">initial_hosts</span>: é uma lista de <span style="font-style: italic;">hosts</span> no formato <span style="font-weight: bold;">&lt;endereço_ip&gt;[porta_inicial],&lt;endereço_ip&gt;[porta_inicial],…</span></p>
+<p style="line-height: 1.50;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span><span style="font-style: italic;">port_range</span>: quantas portas são procuradas em cada <span style="font-style: italic;">host</span>, na lista definida em <span style="font-style: italic;">initial_host</span>, começando pela porta inicial especificada;</p>
+<p style="line-height: 1.50;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span><span style="font-style: italic;">num_initial_members</span>: recomenda-se que seja igual ao número máximo de servidores ligados em <span style="font-style: italic;">cluster</span>.</p>
+<p style="text-align: left; line-height: 1.50;">Maiores detalhes sobre tais propriedades consultar: <a href="http://www.jgroups.org/" target="_blank" class="weblink">http://www.jgroups.org</a>.</p>
+<p style="margin: 14px 0px 0px 0px;">p)<span style="font-size: 12pt; font-family: 'Times New Roman';"> </span> No elemento <span style="font-style: italic;">&lt;executor&gt; </span>podem ser configurados quantidade mínima e máxima de processos a serem utilizados nas execuções realizadas pelo portal:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 1px; padding: 0px 0px 0px 0px; margin: 0px 284px 0px 71px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="688" style="width:688px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;IExecutorManager&nbsp;properties.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;executor&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;minThreads&gt;5&lt;/minThreads&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;maxThreads&gt;20&lt;/maxThreads&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/executor&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Mais detalhes no <span style="font-style: italic;">javadoc </span>da <span style="font-style: italic;">interface</span> <span style="font-style: italic;"><a href="../api/lumis/portal/executor/IExecutorManager.html" target="_blank" class="weblink">IExecutorManager</a></span> <span style="font-size: 12pt; font-family: 'Times New Roman';">.</span></p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="line-height: 1.50;">q) No elemento <span style="font-style: italic;">&lt;loadingHtmlMessage&gt; </span>é possível configurar uma indicação de progresso nas chamadas das interfaces <span style="font-style: italic;">client-side.</span> Por <span style="font-style: italic;">default</span>, O usuário visualizará uma imagem juntamente com a <span style="font-style: italic;">string</span> "Carregando". A renderização das interfaces <span style="font-style: italic;">client-side</span> passou a ser assíncrona, ou seja, o portal não espera que uma interface seja renderizada, para renderizar a outra. As renderizações são realizadas em paralelo:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;loading&nbsp;message.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;loadingHtmlMessage&gt;&lt;![CDATA[&lt;img&nbsp;src="lumis/portal/client/images/Loading.gif"&nbsp;style="vertical-align:&nbsp;middle;"&nbsp;alt="${localize("STR_LOADING")}"/&gt;]]&gt;&lt;/loadingHtmlMessage&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.50;">&nbsp;</p>
+<p style="line-height: 1.50;"><a name="pooldedocumentbuilder"></a>r) No elemento <span style="font-style: italic;">&lt;documentBuilderPool&gt;</span> podem ser configurado o <span style="font-style: italic;">pool</span> de <span style="font-style: italic;">DocumentBuilder </span>utilizado internamente pelo <span style="font-style: italic;">lumis.util.XmlUtil. </span>Esta configuração pode se realizada se desejar efetuar ajustes finos neste <span style="font-style: italic;">pool</span>.</p>
+<div style="text-align: justify; text-indent: 2px; padding: 0px 0px 0px 0px; margin: 0px 416px 0px 71px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="761" style="width:761px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;for&nbsp;fine&nbsp;tunning&nbsp;XmlUtil&nbsp;internal&nbsp;DocumentBuilder&nbsp;pool&nbsp;&nbsp;&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;documentBuilderPool&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;minSize&gt;10&lt;/minSize&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;maxSize&gt;100&lt;/maxSize&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;timeBetweenEvictionRunsMillis&gt;-1&lt;/timeBetweenEvictionRunsMillis&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;numTestsPerEvictionRun&gt;3&lt;/numTestsPerEvictionRun&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">&lt;minEvictableIdleTimeMillis&gt;1800000&lt;/minEvictableIdleTimeMillis&gt; &nbsp; </span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;/documentBuilderPool&gt; &nbsp; </span></p>
+<p><span style="font-family: 'Courier New';">--&gt; &nbsp;  </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Abaixo a descrição de cada parâmetro:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">minSize</span>: O tamanho mínimo do<span style="font-style: italic;"> pool</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">maxSize</span><span style="font-family: 'Courier New'; font-weight: bold;">:</span><span style="font-family: 'Courier New';"> </span>O tamanho máximo do <span style="font-style: italic;">pool</span><span style="font-family: 'Courier New';">; </span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">timeBetweenEvictionRunsMillis</span>:<span style="font-style: italic;"> </span>O número de milisegundos para dormir entre as execuções da <span style="font-style: italic;">thread</span> de desalocação de objetos inativos. <br>
+Quando é negativo, nenhuma thread de desalocação de objetos inativos será executada;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> <span style="font-style: italic;">numTestsPerEvictionRun</span>: O número de objetos a ser examinados durante cada execução da <span style="font-style: italic;">thread</span> de desalocação de objetos inativos (se existir alguma);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">minEvictableIdleTimeMillis: </span>A quantidade mínima de tempo que um objeto pode ficar inativo no <span style="font-style: italic;">pool</span> antes de se tornar elegível para exclusão pelo desalocador de objetos inativos (se existir algum)<span style="font-style: italic;">.</span></td></tr></table></div><p style="margin: 14px 0px 0px 0px;"><a name="layoutfile"></a>s) No elemento <span style="font-style: italic;">&lt;layoutFile&gt;</span>, pode ser configurado o comportamento do <span style="font-style: italic;">Layout File</span>.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> pollIntervalSecs: Define o intervalo em segundos de verificação de alteração do arquivo <span style="font-style: italic;">HTML</span>. O valor 0 (zero) desabilita a verificação sendo necessário reiniciar o portal para que qualquer alterações seja refletida. O valor <span style="font-style: italic;">default</span> depende se o portal está sendo executado em <a href="configpropsistema.htm#developmentmode">modo de desenvolvimento</a>. </td></tr></table></div><p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 2px; padding: 0px 0px 0px 0px; margin: 0px 416px 0px 71px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="683" style="width:683px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;layoutFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;interval&nbsp;for&nbsp;polling&nbsp;layout&nbsp;file&nbsp;for&nbsp;changes.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">Specify&nbsp;interval&nbsp;in&nbsp;seconds.&nbsp;A&nbsp;value&nbsp;of&nbsp;0&nbsp;(zero)&nbsp;disables&nbsp;this&nbsp;polling.&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">With&nbsp;it&nbsp;disabled,&nbsp;any&nbsp;change&nbsp;to&nbsp;a&nbsp;layout&nbsp;file&nbsp;may&nbsp;require&nbsp;restart&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">of&nbsp;the&nbsp;portal&nbsp;to&nbsp;be&nbsp;applied.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">Default&nbsp;value&nbsp;is&nbsp;one&nbsp;second&nbsp;with&nbsp;development&nbsp;mode&nbsp;enabled,&nbsp;and</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">polling&nbsp;disabled&nbsp;with&nbsp;development&nbsp;mode&nbsp;disabled.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;pollIntervalSecs&gt;0&lt;/pollIntervalSecs&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/layoutFile&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: 2px; margin: 0px 416px 0px 71px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><a name="transaction"></a>t) No elemento <span style="font-style: italic;">&lt;transaction&gt;</span> pode ser configurado comportamentos relativos às transações do portal.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>logAbandonedTimeout: Define o tempo limite para uma transação ser finalizada após sua criação, em segundos. Se o tempo limite for ultrapassado, é emitido um log nível <span style="font-style: italic;">WARN</span> contendo informações sobre a transação. Um valor não-positivo desabilita a geração deste log. O valor padrão para esta configuração é de 600 segundos. (Podem não ser emitidos logs para as transações que durem até 25% mais do que o tempo configurado, devido a otimizações de performance)</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 2px; padding: 0px 0px 0px 0px; margin: 0px 416px 0px 71px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="683" style="width:683px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;transaction&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;the&nbsp;logging&nbsp;of&nbsp;long-lived&nbsp;transactions.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">If&nbsp;a&nbsp;transaction&nbsp;is&nbsp;not&nbsp;disposed&nbsp;within&nbsp;the&nbsp;specified&nbsp;timeout&nbsp;period&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">after&nbsp;its&nbsp;creation,&nbsp;a&nbsp;warning&nbsp;level&nbsp;message&nbsp;is&nbsp;sent&nbsp;to&nbsp;the&nbsp;portal&nbsp;log.</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">The value is in seconds. A non-positive value disables this logging</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">feature.&nbsp;Default&nbsp;value&nbsp;is&nbsp;600&nbsp;seconds.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">(it&nbsp;is&nbsp;possible&nbsp;that&nbsp;transactions&nbsp;that&nbsp;last&nbsp;up&nbsp;to&nbsp;25%&nbsp;more&nbsp;than&nbsp;the&nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">configured&nbsp;timeout&nbsp;are&nbsp;not&nbsp;logged,&nbsp;due&nbsp;to&nbsp;performance&nbsp;optimizations)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;logAbandonedTimeout&gt;600&lt;/logAbandonedTimeout&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/transaction&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: 2px; margin: 0px 416px 0px 71px;">&nbsp;</p>
+<p style="text-indent: 2px; margin: 0px 416px 0px 71px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><a name="cookies"></a>u) No elemento <span style="font-style: italic;">&lt;cookies&gt;</span> pode ser configurado os comportamentos relativos aos cookies do portal.</p>
+<p style="text-indent: 2px; margin: 0px 416px 0px 71px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>cookie: Cada elemento cookie possui um atributo "name" representando o nome do cookie, um atributo "enabled" representando se o cookie será inserido ou completamente ignorado e um atributo "httpOnly", uma vez ativo, este atributo faz com que os navegadores a utilizem cookies via protocolo HTTP only. (Incluindo HTTPS; HttpOnly não é oposto ao atributo "Secure".) Um cookie HttpOnly, não é acessível via métodos não-HTTP, como chamadas JavaScript.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 2px; padding: 0px 0px 0px 0px; margin: 0px 416px 0px 71px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="683" style="width:683px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;cookies&nbsp;generated&nbsp;by&nbsp;Lumis&nbsp;Portal.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">The&nbsp;example&nbsp;below&nbsp;contains&nbsp;the&nbsp;default&nbsp;values&nbsp;for&nbsp;each&nbsp;Lumis&nbsp;Portal&nbsp;cookie.</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">If&nbsp;the&nbsp;&lt;cookies&gt;&nbsp;element&nbsp;is&nbsp;present&nbsp;and&nbsp;uncommented,&nbsp;each&nbsp;&lt;cookie&gt;&nbsp;must</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">be&nbsp;configured&nbsp;or&nbsp;they&nbsp;will&nbsp;default&nbsp;to&nbsp;enabled="true"&nbsp;httpOnly="false".</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;cookies&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserSessionId"&nbsp;enabled="true"&nbsp;httpOnly="true"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserLocale"&nbsp;enabled="true"&nbsp;httpOnly="false"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserId"&nbsp;enabled="false"&nbsp;httpOnly="true"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserLogin"&nbsp;enabled="false"&nbsp;httpOnly="true"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserName"&nbsp;enabled="true"&nbsp;httpOnly="false"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Courier New';">&lt;cookie&nbsp;name="lumUserEmail"&nbsp;enabled="false"&nbsp;httpOnly="true"/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/cookies&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">--&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: 2px; margin: 0px 416px 0px 71px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

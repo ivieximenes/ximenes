@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1ACC685132D</id>
+  <name>Serviços</name>
+  <description>Permite gerenciar links no portal.</description>
+  <service-id>lumis.service.link</service-id>
+  <access-control-list>
+    <entries>
+      <entry principal-id="0000000050C9BD630150CD6AE2AC0505">
+        <allow-permissions>4</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <workflow>lumis.standardworkflow</workflow>
+  <workflow-permissions>
+    <workflow-permission principal-id="0000000050C9BD630150CD6AE2AC0505">
+      <role type="allow">chiefEditor</role>
+    </workflow-permission>
+    <workflow-permission principal-id="00000000C00000000000000000000003">
+      <role type="allow">author</role>
+      <role type="allow">chiefEditor</role>
+      <role type="allow">editor</role>
+    </workflow-permission>
+  </workflow-permissions>
+  <dependencies>
+    <dependency type="document_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851327</service-instance-id>
+    </dependency>
+    <dependency type="media_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851328</service-instance-id>
+    </dependency>
+  </dependencies>
+</service-instance>

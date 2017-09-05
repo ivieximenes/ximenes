@@ -1,0 +1,59 @@
+/* $Revision: 16932 $ $Date: 2015-02-11 17:14:08 -0200 (Wed, 11 Feb 2015) $ */
+.lum-systeminfo-button
+{ 
+	margin-top:5px;
+}
+
+.lum-systeminfo-img-button
+{
+	border-width:0px;
+	vertical-align:middle;
+	margin: 0px 3px 3px 0px;
+}
+
+.lum-systeminfo-workflow-img
+{
+	border-width:0px;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-footer
+{
+	border-top:none;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-field
+{
+	display:table-cell;
+	padding: 10px;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-field .lum-label
+{
+	display:none;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-list-item
+{
+	display: table-row;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo.lum-interface-type-administration .lum-property-page-content
+{
+	display:block;
+	width:100%;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo.lum-interface-type-administration .lum-property-page
+{
+	max-width:none;
+}
+
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-adv-tabular-data td
+{
+	word-break:break-all;
+	min-width:100px;
+}
+.lumis-service-portalmanagement-systeminfo-systeminfo .lum-adv-tabular-data td:nth-child(1)
+{
+	width:25%;
+}

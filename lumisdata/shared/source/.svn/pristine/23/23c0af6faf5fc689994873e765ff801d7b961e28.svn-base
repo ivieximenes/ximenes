@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>8A489E1F50AE95AA0150AFAB02AA39FF</id>
+  <interface-id>lumis.service.search.searchResults</interface-id>
+  <name>Rede na Rede - Resultado da Busca</name>
+  <file-path>lumis/service/search/style/resultado-busca.xsl</file-path>
+</interface-style>

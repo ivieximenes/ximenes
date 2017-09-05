@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Integração Contínua</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?integracao_continua.htm"; }
+  else { parent.quicksync('a8.1.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Integração Contínua</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="configuracao_do_lumisportal_e_.htm">Previous</a>&nbsp;
+     <a href="amb_desenv_projeto_de_exemplo.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Para que um módulo editável seja implantado nos próximos ambientes do fluxo do projeto (homologação e produção, por exemplo), é recomendado que ele seja transformado em um módulo não editável. Essa etapa pode ser executada em um ambiente de integração contínua, por exemplo. O modelo apresentado a seguir utiliza um script ANT para a construção do módulo adequadamente.</p>
+<p>&nbsp;</p>
+<p>Para isso, demonstraremos a criação de um script ANT de exemplo.</p>
+<p>Primeiramente, deve-se criar um arquivo XML na raiz do projeto. Para isso, basta utilizar o menu de novo item e selecionar a opção <span style="font-style: italic;">Other</span>.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-01.png" width="635" height="730" border="0" alt="Montagem de ambiente de desenvolvimento-ant-01" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, escolher a opção de arquivo XML.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-02.png" width="500" height="500" border="0" alt="Montagem de ambiente de desenvolvimento-ant-02" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, nomear o arquivo. Recomenda-se utilizar como padrão <span style="font-style: italic;">build.xml</span>.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-03.png" width="500" height="577" border="0" alt="Montagem de ambiente de desenvolvimento-ant-03" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, o arquivo estará criado e pronto para edição. Para facilitar o desenvolvimento, é recomendada a utilização do editor de scripts ANT ao invés do editor XML padrão. Para abrí-lo, clicar com o botão direito no arquivo e abrir o menu <span style="font-style: italic;">Open with</span>. Após, selecionar a opção <span style="font-style: italic;">Other</span>.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-04.png" width="563" height="785" border="0" alt="Montagem de ambiente de desenvolvimento-ant-04" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Na próxima tela, escolher a opção <span style="font-style: italic;">ANT Editor</span>.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-05.png" width="296" height="391" border="0" alt="Montagem de ambiente de desenvolvimento-ant-05" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, o arquivo será aberto no editor de ANT scripts.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-06.png" width="772" height="1050" border="0" alt="Montagem de ambiente de desenvolvimento-ant-06" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Uma vez que o arquivo esteja terminado, ele pode ser executado para fins de teste. Para isso, execute-o como <span style="font-style: italic;">Ant Build</span>.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-07.png" width="704" height="916" border="0" alt="Montagem de ambiente de desenvolvimento-ant-07" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Se o arquivo estiver feito corretamente, ele deve ser executado sem erros.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-08.png" width="939" height="211" border="0" alt="Montagem de ambiente de desenvolvimento-ant-08" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após ele ser executado, o módulo já deve estar construído.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-09.png" width="330" height="270" border="0" alt="Montagem de ambiente de desenvolvimento-ant-09" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>É recomendado que o módulo seja implantado nos ambientes de homologação e produção através do arquivo <span style="font-style: italic;">JAR</span> construído.</p>
+<p>&nbsp;</p>
+<p>Também é possível criar o <span style="font-style: italic;">JAR </span>do módulo manualmente usando a opção <span style="font-style: italic;">Baixar Arquivo</span>, no <span style="font-style: italic;">Gerenciador de Módulos</span>, como demonstrado abaixo.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-ant-10.png" width="910" height="319" border="0" alt="Montagem de ambiente de desenvolvimento-ant-10" style="margin:0 auto;margin:0px;"></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

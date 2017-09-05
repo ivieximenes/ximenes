@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador">
+	<xs:import schemaLocation="3.xsd" namespace="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.Comuns" />
+	<xs:complexType name="UsuarioPrestador">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CPFCNPJ" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ConfirmacaoSenha" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Id" type="xs:long" />
+			<xs:element minOccurs="0" name="RazaoSocial" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="SenhaAtual" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="SenhaNova" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Telefone" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="TipoDocumento" type="q1:TipoDocumento" xmlns:q1="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.Comuns" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UsuarioPrestador" nillable="true" type="tns:UsuarioPrestador" />
+	<xs:complexType name="RetornoUsuarioPrestador">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Sucesso" type="xs:boolean" />
+			<xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="RetornoUsuarioPrestador" nillable="true" type="tns:RetornoUsuarioPrestador" />
+</xs:schema>

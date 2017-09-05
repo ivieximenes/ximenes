@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>JavaScript</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?estilo_em_javascript.htm"; }
+  else { parent.quicksync('a5.5.1.3.1.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">JavaScript</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="estilo_em_groovy.htm">Previous</a>&nbsp;
+     <a href="adicionar_estilo.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">O Lumis Portal permite desenvolver estilos em JavaScript. Para criar um estilo em JavaScript basta ao criar o estilo, escolher a linguagem de programação "JavaScript".</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Para informações sobre o formato de um estilo em script, veja o tópico <a href="estilos_em_scripts.htm">Estilos em Scripts</a>.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">A seguir um exemplo de estilo em JavaScript<span style="font-style: italic;"> </span>parecido com o de <span style="font-style: italic;">Lista Rápida </span>do serviço de <span style="font-style: italic;">notícias</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: left;"><span style="color: #008080;">&lt;</span><span style="color: #3f7f7f; background-color: #d4d4d4;">ul</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-list"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="color: #bf5f3f;">&lt;%</span></p>
+<p style="text-align: left;"> &nbsp;  <span style="font-weight: bold; color: #7f0055;">var</span> rows = lum_xpath.selectNodes(<span style="color: #2a00ff;">"//data/row"</span>);</p>
+<p style="text-align: left;"> &nbsp;  <span style="font-weight: bold; color: #7f0055;">for</span>(<span style="font-weight: bold; color: #7f0055;">var</span> i in rows)</p>
+<p style="text-align: left;"> &nbsp; &nbsp;{</p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp;  <span style="font-weight: bold; color: #7f0055;">var</span> row = lum_xpath.toMap(rows[i]);</p>
+<p style="text-align: left;"><span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"> &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">li</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-list-item"</span><span style="color: #bf5f3f;">&lt;%=</span>i == 0 ? <span style="color: #2a00ff;">" lum-first"</span> : "" + i == rows.length-1 ? <span style="color: #2a00ff;">" lum-last"</span> : <span style="color: #2a00ff;">""</span><span style="color: #bf5f3f;">%&gt;</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">article</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-content"</span> <span style="color: #7f007f;">data-lum-entityid</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.contentId<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span> <span style="color: #7f007f;">data-lum-title</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.title<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span> <span style="color: #7f007f;">data-lum-url</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.$href<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span> <span style="color: #7f007f;">data-lum-serviceinstanceid</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.serviceInstanceId<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">header</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-content-header"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">h1</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-content-title"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">a</span> <span style="color: #7f007f;">href</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.$href<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #bf5f3f;">&lt;%=</span>row.title<span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">a</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">h1</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">ul</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-content-meta-information"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">li</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-first lum-last"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Em </p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">time</span> <span style="color: #7f007f;">datetime</span>=<span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.year<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">-</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.month<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">-</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.day<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">T</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.hours<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">:</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.minutes<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">:</span><span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.seconds<span style="color: #bf5f3f;">%&gt;</span><span style="font-style: italic; color: #2a00ff;">"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #bf5f3f;">&lt;%=</span>row.publishStartDate.value<span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">time</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">li</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">ul</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">div</span> <span style="color: #7f007f;">class</span>=<span style="font-style: italic; color: #2a00ff;">"lum-content-introduction"</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;</span><span style="color: #3f7f7f;">p</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #bf5f3f;">&lt;%=</span>row.introduction<span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">p</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">div</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">header</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp; &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">article</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"> &nbsp;  <span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f;">li</span><span style="color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="color: #bf5f3f;">&lt;%</span></p>
+<p style="text-align: left;"> &nbsp; &nbsp;}<span style="color: #3f7f5f;">//fechamento do for</span></p>
+<p style="text-align: left;"><span style="color: #bf5f3f;">%&gt;</span></p>
+<p style="text-align: left;"><span style="color: #008080;">&lt;/</span><span style="color: #3f7f7f; background-color: #d4d4d4;">ul</span><span style="color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;">No exemplo acima, são utilizados métodos utilitários fornecidos pelo <span style="font-style: italic;">Lumis Portal.</span> Para informações completas sobre os mesmos, veja o tópico <a href="variavel_lum_xpath.htm">Variável lum_xpath</a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="357" style="width:357px; border: solid 1px #000000;"><p style="text-align: left;">List&lt;Node&gt; lum_xpath.selectNodes(String xpath)</p>
+</td>
+<td valign="top" width="415" style="width:415px; border: solid 1px #000000;"><p style="text-align: left;">Retorna uma lista com todos os Elementos do tipo Node com o XPath fornecido. No JavaScript a lista é convertida em um vetor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="357" style="width:357px; border: solid 1px #000000;"><p style="text-align: left; line-height: 2.0;">Map&lt;String, Object&gt; lum_xpath.toMap(Node node)</p>
+</td>
+<td valign="top" width="415" style="width:415px; border: solid 1px #000000;"><p style="text-align: left;">Retorna um Map&lt;String, Object&gt; representando o Node fornecido. As regras de conversão podem ser encontradas na página <a href="../api/lumis/portal/serviceinterface/style/impl/scripting/IXPath.html#toMap-org.w3c.dom.Node-" target="_blank" class="weblink">IXPath</a><span style="font-family: 'Arial';">. </span>No JavaScript o mapa é convertido em um vetor[String] = Object</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

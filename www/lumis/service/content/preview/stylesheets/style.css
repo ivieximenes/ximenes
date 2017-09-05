@@ -1,0 +1,89 @@
+/* $Revision: 13155 $ $Date: 2011-06-17 20:25:58 -0300 (Fri, 17 Jun 2011) $ */
+div.lum-mobilepreview {
+	margin:0 0 0 0;
+	background:#222;
+}
+
+.clear {
+	clear:both;
+}
+
+div.lum-carbox {
+	width:320px;
+	height:58px;
+	overflow:hidden;
+}
+
+/* buttons */
+ul.lum-skins {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.lum-skins li {
+	float:left;
+	margin-right:10px;
+}
+ul.lum-skins li a {
+	display:block;
+	float:left;
+	width:60px;
+	height:58px;
+	text-indent:-9999px;
+	outline:none;
+}
+/*jQuery*/
+.jq-icar {
+  	width:320px; /* .wrapper width + .wrapper margin */
+  	position:relative;
+}
+.jq-icar .wrapper {
+  	width:270px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
+  	height:58px;
+  	overflow:hidden;
+ 	margin:0 25px;
+  	position:absolute;
+  	top:0;
+}
+.jq-icar .wrapper ul {
+  	width:9999px;
+  	list-style-image:none;
+  	list-style-position:outside;
+  	list-style-type:none;
+  	margin:0;
+  	padding:0;
+ 	position:absolute;
+  	top:0;
+}
+.jq-icar ul li {
+  	display:block;
+  	float:left;
+  	margin:0;
+  	padding:0;
+  	width:70px; /*item width + 10px margin-right*/ 
+  	height:58px;
+}
+.jq-icar .arrow {
+  	display:block;
+	width:18px;
+  	height:56px;
+ 	text-indent:-9999px;
+  	position:absolute;
+  	top:1px;
+  	cursor:pointer;
+  	outline:none;
+}
+.jq-icar a.forward {
+  	background:url(../images/bt_next_off.jpg) no-repeat top left;
+  	right:0;
+}
+.jq-icar a.back {
+  	background:url(../images/bt_prev_off.jpg) no-repeat top left;
+  	left:0;
+}
+.jq-icar a.forward:hover {
+  	background:url(../images/bt_next_on.jpg) no-repeat top left;
+}
+.jq-icar a.back:hover {
+	background:url(../images/bt_prev_on.jpg) no-repeat top left;
+}

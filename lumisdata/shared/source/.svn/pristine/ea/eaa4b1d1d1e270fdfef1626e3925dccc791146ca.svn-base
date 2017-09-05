@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851328</id>
+  <name>Repositório de Mídias</name>
+  <description>Permite gerenciar um repositório de mídias.</description>
+  <service-id>lumis.service.media</service-id>
+  <uses-public-file-storage>true</uses-public-file-storage>
+  <access-control-list>
+    <entries>
+      <entry principal-id="0000000050C9BD630150CD6AE2AC0505">
+        <allow-permissions>4</allow-permissions>
+      </entry>
+      <entry principal-id="00000000C00000000000000000000001">
+        <allow-permissions>8</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</service-instance>

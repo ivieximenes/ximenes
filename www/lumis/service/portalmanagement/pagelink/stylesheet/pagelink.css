@@ -1,0 +1,194 @@
+/* $Revision: 15526 $ $Date: 2013-06-26 11:19:37 -0300 (Wed, 26 Jun 2013) $ */
+.lum-pagelink-control-group-context-rules 
+{
+	height: 162px;
+}
+
+.lum-pagelink-control-group-context-rules-text-area 
+{
+	height: 120px;
+}
+
+.lum-pagelink-div-url-rules 
+{
+	overflow: auto;
+	height: 100px;
+	margin-left: 20px;
+	margin-top: 5px;
+	border: 1px solid #EEEEE7;
+	padding: 3px 3px 3px 3px;
+}
+
+/*PageLinkAdministration.xsl*/
+div.lum-pagelink-content-url 
+{
+	display: none;
+	width: 100%;
+	max-width: 210px;
+	position: absolute;
+	margin-left: -135px;
+	margin-top: -4px;
+}
+
+div.lum-pagelink-triangle 
+{
+	margin-top: 18px
+}
+
+div.lum-pagelink-triangle-capabilities 
+{
+	margin-top: 19px;
+}
+
+div.lum-pagelink-content-row ul li 
+{
+	padding-top: 5px;
+	vertical-align: top;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	margin: 5px 36px;
+	color: #464646;
+}
+
+div.lum-pagelink-content-row 
+{
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+div.lum-pagelink-content-row ul
+{
+	list-style: none;
+	padding: 0;
+	display: inline;
+}
+
+div.lum-pagelink-content-row ul li:before
+{
+	margin-left: -15px;
+	content: "\2022";
+	color: #fab500;
+	padding-right: 10px;
+	position: absolute;
+}
+
+div.lum-pagelink-div-a a 
+{
+	color: #cdcdcd;
+	font-weight: bold;
+}
+
+span.lum-pagelink-orange 
+{
+	color: #ff6a00;
+}
+
+div.lum-pagelink-orange 
+{
+	margin-bottom: 10px;
+}
+
+div.lum-pagelink-orange a 
+{
+	color: #ff6a00;
+	margin-left: 11%;
+	font-weight: bold;
+}
+
+div.lum-pagelink-triangle 
+{
+	width: 100%;
+	margin-bottom: -12px;
+	max-width: 210px;
+	height: 9px;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px;
+	z-index: 1;
+	position: relative;
+}
+
+div.lum-pagelink-triangle div.lum-pagelink-triangle-top 
+{
+	width: 0px;
+	position: absolute;
+	margin-top: -12px;
+	height: 0px;
+	border-style: solid;
+	margin-left: 82%;
+	border-width: 0 5.5px 10px 5.5px;
+	border-color: transparent transparent #cdcdcd transparent;
+	float: left;
+}
+
+div.lum-pagelink-triangle div.lum-pagelink-triangle-top+div 
+{
+	width: 0px;
+	padding-top: 2px;
+	position: absolute;
+	margin-top: -12px;
+	margin-left: 82%;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 5.5px 10px 5.5px;
+	border-color: transparent transparent #FFFFFF transparent;
+	float: left;
+}
+
+div.lum-pagelink-triangle+div 
+{
+	width: 100%;
+	padding-top: 1px;
+	max-width: 210px;
+	border-color: #cdcdcd;
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	position: relative;
+	border-radius: 4px;
+}
+
+div.lum-pagelink-content-capabilities 
+{
+	display: none;
+	width: 100%;
+	max-width: 260px;
+	position: absolute;
+	margin-left: -129px;
+	word-wrap: break-word;
+	margin-top: -4px;
+}
+
+div.lum-pagelink-content-capabilities div.lum-pagelink-content-value 
+{
+	padding: 10px;
+}
+
+/*PageLinkWebsiteURLsList.xsl*/
+div.lum-pagelink-row ul li 
+{
+	padding-top: 5px;
+	display: inline-block;
+	width: 40%;
+	word-wrap: break-word;
+	vertical-align: top;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	margin: 5px 15px;
+	color: #464646;
+}
+
+div.lum-pagelink-row ul 
+{
+	list-style: none;
+	padding: 0;
+	display: inline;
+}
+
+div.lum-pagelink-row ul li:before 
+{
+	margin-left: -15px;
+	content: "\2022";
+	color: #fab500;
+	padding-right: 10px;
+	position: absolute;
+}

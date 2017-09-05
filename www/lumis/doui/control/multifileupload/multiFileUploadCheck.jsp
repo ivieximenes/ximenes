@@ -1,0 +1,3 @@
+<%@page import="lumis.doui.control.multifileupload.MultiFileUploadCheckControllerHtml"%><%@ page import="lumis.portal.file.*" errorPage="/error.jsp"%><%// $Revision: 13264 $ $Date: 2011-07-27 14:36:14 -0300 (Wed, 27 Jul 2011) $
+	MultiFileUploadCheckControllerHtml multiFileUploadCheckControllerHtml = new MultiFileUploadCheckControllerHtml(request, response);
+	multiFileUploadCheckControllerHtml.handleRequest();%>

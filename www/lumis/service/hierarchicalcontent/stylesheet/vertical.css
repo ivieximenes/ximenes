@@ -1,0 +1,104 @@
+/* $Revision: 16544 $ $Date: 2014-10-27 11:16:49 -0200 (Mon, 27 Oct 2014) $ */
+
+.lum-hierarchicalcontent-vertical {
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	padding:8px;
+}
+/*1st lvl*/
+.lum-hierarchicalcontent-vertical ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.lum-hierarchicalcontent-vertical ul li {
+	border-bottom:1px solid #dbdbdb;
+	position:relative;
+}
+.lum-hierarchicalcontent-vertical ul li.lum-last {
+	border-bottom:0;
+}
+.lum-hierarchicalcontent-vertical ul a {
+	display:block;
+	padding:8px 6px;
+	font-weight:bold;
+}
+/*rightarrow*/
+.lum-hierarchicalcontent-vertical ul li.lum-menu-parent > a:after {
+	content:"";
+	border:4px solid transparent;
+	border-left-color:#ba2a2a;
+	position:absolute;
+	z-index:2;
+	right:-9px;
+	top:50%;
+	margin-top:-4px;
+}
+.lum-hierarchicalcontent-vertical ul li:hover > a {
+	background:#fde9da;
+	text-decoration:none;
+	margin-right:-8px;
+	padding-right:14px;
+}
+/*selected*/
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-selected > a,
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-breadcrumb > a {
+	background:#b82a2a;
+	color:#fff;
+	margin-right:-8px;
+	padding-right:14px;
+	font-weight:bold;
+}
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-selected > a:after,
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-breadcrumb > a:after {
+	border:0;
+}
+/*rightarrow outside*/
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-selected:after,
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-breadcrumb:after {
+	content:"";
+	border:4px solid transparent;
+	border-left:7px solid #b82a2a;
+	position:absolute;
+	left:100%;
+	top:50%;
+	margin-top:-4px;
+	margin-left:8px;
+}
+/*2nd lvl*/
+.lum-hierarchicalcontent-vertical ul li ul {
+	display:none;
+	position:absolute;
+	z-index:9;
+	top:-5px;
+	left:100%;
+	margin-left:8px;
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	padding:4px 8px;
+	width:124px;
+}
+.lum-hierarchicalcontent-vertical ul li:hover > ul {
+	display:block;
+}
+.lum-hierarchicalcontent-vertical ul ul a {
+	margin-left:-8px;
+	padding-left:14px;
+	font-weight:normal;
+}
+/*3rd+ lvl*/
+.lum-hierarchicalcontent-vertical ul li ul ul {
+	left:132px;
+	margin-left:0;
+}
+/*z-index order*/
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-selected:after,
+.lum-hierarchicalcontent-vertical > ul > li.lum-menu-breadcrumb:after {
+	z-index:8;
+}
+.lum-hierarchicalcontent-vertical ul li.lum-menu-selected > ul,
+.lum-hierarchicalcontent-vertical ul li.lum-menu-breadcrumb > ul {
+	z-index:7;
+}

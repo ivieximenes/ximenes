@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>2C96A668526A8B1D01527F2FD84F49FD</id>
+  <interface-id>lumis.service.link.details</interface-id>
+  <name>Serviços - Detalhes</name>
+  <file-path>lumis/service/link/style/detalhes.xsl</file-path>
+</interface-style>

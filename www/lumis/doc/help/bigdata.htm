@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Big Data</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?bigdata.htm"; }
+  else { parent.quicksync('a8.6.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Big Data</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="apixsd.htm">Previous</a>&nbsp;
+     <a href="elasticsearch.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Lumis Portal</span> possui um <span style="font-style: italic;">framework</span> de <span style="font-style: italic;">Big Data</span> que permite que seja customizável o repositório de Big Data a ser utilizado. Nativamente são incluídas opções para utilizar <span style="font-style: italic;"><a href="https://www.elastic.co/products/elasticsearch" target="_blank" class="weblink">Elasticsearch</a></span>. Há opção para executá-lo embutido no mesmo JVM do Lumis Portal (não recomendado para ambientes de produção) e para conectar a um <span style="font-style: italic;">Elasticsearch</span> remoto. Conectores para outros tipos de repositórios podem ser implementados e integrados ao <span style="font-style: italic;">Lumis Portal</span>. Para informações de como instalar o <span style="font-style: italic;">Elasticsearch</span> veja <a href="elasticsearch.htm">Instalando o Elasticsearch</a>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Características </span></p>
+<p>&nbsp;</p>
+<p>Cada item armazenado no Big Data é chamado de documento. Um documento pode possuir vários campos, cada um com seu valor.</p>
+<p>&nbsp;</p>
+<p>Existe uma <span style="font-style: italic;">API</span> disponível em <span style="font-style: italic;">Java</span> para acessar o repositório de <span style="font-style: italic;">Big Data</span>. Acessando o repositório é possível adicionar e remover documentos, e efetuar buscas por documentos. Para maiores informações sobre esta <span style="font-style: italic;">API</span>, acesse o <span style="font-style: italic;">javadoc</span> em <span style="font-style: italic;"><a href="../api/lumis/portal/bigdata/package-summary.html" target="_blank" class="weblink">lumis.portal.bigdata</a></span>.</p>
+<p>&nbsp;</p>
+<p>Para reindexar os dados armazenados no repositório de <span style="font-style: italic;">Big Data</span>, acesse <a href="configuracao_bigdata.htm">Configurações &gt; Frameworks &gt; Big Data</a>. Usualmente é necessário efetuar uma reindexação se os dados a serem armazenados sofreram alguma alteração e estão desatualizados, como por exemplo, após a estrutura de dados de um serviço ser alterada.</p>
+<p>&nbsp;</p>
+<p>Os <span style="font-style: italic;"><a href="douiprocessactions.htm">ProcessActionHandlers</a></span><a href="douiprocessactions.htm"> padrões de </a><span style="font-style: italic;"><a href="douiprocessactions.htm">DOUI</a></span> e o <span style="font-style: italic;"><a href="content.htm">framework de Content</a></span> atualizam os documentos correspondentes no repositório de <span style="font-style: italic;">Big Data</span> cada vez que ocorre uma adição, atualização ou exclusão.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Customizações </span></p>
+<p>&nbsp;</p>
+<p>Para cada serviço <span style="font-style: italic;">DOUI</span> ou <span style="font-style: italic;">Content</span> é possível configurar, no nível do <span style="font-style: italic;">source,</span> qual <span style="font-style: italic;">big data persister</span> será utilizado para indexar seus dados. Além disso, também é possível especificar em cada campo do <span style="font-style: italic;">source</span> configurações sobre o armazenamento deste campo no <span style="font-style: italic;">big data</span>, que serão utilizadas pelo <span style="font-style: italic;">persister</span> padrão. </p>
+<p>&nbsp;</p>
+<p>Também é possível customizar o forma de indexação padrão em um <span style="font-style: italic;">data type</span> customizado. Campos por padrão seguem a implementação utilizada no seu respectivo <span style="font-style: italic;">data type</span>.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

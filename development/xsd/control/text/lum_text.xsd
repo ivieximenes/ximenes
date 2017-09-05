@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 7499 $ $Date: 2007-06-19 18:19:44 -0300 (Tue, 19 Jun 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_text"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_text"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_text">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="text" type="xsd:string" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string"/>
+				<xsd:attribute name="preserveValue" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation>If specified to true the text value is preserved between client-server calls.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

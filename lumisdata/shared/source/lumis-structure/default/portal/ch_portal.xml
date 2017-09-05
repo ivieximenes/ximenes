@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>00000000F00000000000000000000001</id>
+  <name>Portal</name>
+  <description>Portal</description>
+  <center-pages>false</center-pages>
+  <friendly-url-enabled>true</friendly-url-enabled>
+  <friendly-url-specific-pattern-enabled>true</friendly-url-specific-pattern-enabled>
+  <friendly-url-specific-pattern>/</friendly-url-specific-pattern>
+  <access-control-list>
+    <inherit>false</inherit>
+    <entries>
+      <entry principal-id="00000000C00000000000000000000003">
+        <allow-permissions>1048575</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <property-bag>
+    <property name="lumis.portal.areatag">
+      <private>true</private>
+      <default-values>
+        <value>Portal</value>
+      </default-values>
+    </property>
+  </property-bag>
+  <csss>
+    <css>
+      <css-id>4CE4DEA51CFF4049B47CF7C774CB8714</css-id>
+    </css>
+  </csss>
+</channel>

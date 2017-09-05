@@ -1,0 +1,9 @@
+/* $Revision: 15719 $ $Date: 2013-08-06 12:43:29 -0300 (Tue, 06 Aug 2013) $ */
+.lum-businesscontext-failList
+{
+	max-height: 460px; 
+	overflow: auto;
+}
+.lum-channel-tree-select-wrap{
+	left: 15px !important;
+}

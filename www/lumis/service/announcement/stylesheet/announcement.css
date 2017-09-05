@@ -1,0 +1,18 @@
+﻿/* $Revision: 15363 $ $Date: 2013-05-22 10:51:07 -0300 (Wed, 22 May 2013) $ */
+
+.lumis-service-announcement-details {
+	border-width:1px;
+	border-style:solid;
+	border-color:#ff9600;
+	border-radius:3px;
+	background:#fff5e6;
+}
+.lumis-service-announcement-details .lum-content {
+	margin:14px;
+}
+.lum-interface-type-standard.lumis-service-announcement-details > .lum-content > .lum-content-header > .lum-content-title:after {
+	content:none;
+}
+.lumis-service-announcement-details .lum-content-header + .lum-content-body {
+	margin-top:10px;
+}

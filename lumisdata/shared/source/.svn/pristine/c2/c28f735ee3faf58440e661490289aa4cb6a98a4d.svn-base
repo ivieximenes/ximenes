@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>8A489E1F50AE95AA0150AFA63DED33DD</id>
+  <interface-id>lumis.service.hierarchicalcontent.contentDetails</interface-id>
+  <name>Rede na Rede - Conteúdo</name>
+  <file-path>lumis/service/hierarchicalcontent/style/conteudo.xsl</file-path>
+</interface-style>

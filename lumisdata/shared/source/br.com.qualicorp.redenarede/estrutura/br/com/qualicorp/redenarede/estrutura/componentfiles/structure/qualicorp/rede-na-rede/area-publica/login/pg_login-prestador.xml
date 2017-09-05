@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>2C96A66853B531AE0154B9BA6F067B89</id>
+  <name>Login Prestador</name>
+  <hidden>true</hidden>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="menu">
+        <interface id="2C96A66853B531AE0154B9BA70DB7BA5"></interface>
+        <interface id="2C96A66853B531AE0154B9BA70DE7BA6"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="2C96A66853B531AE0154B9BA70E17BA7"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="2C96A66853B531AE0154B9BA70E37BA8"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BA70DB7BA5</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BA70DE7BA6</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BA70E17BA7</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BA70E37BA8</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <applied-interface-style-id>loginPrestador</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

@@ -1,0 +1,53 @@
+/* $Revision: 15370 $ $Date: 2013-05-22 15:55:57 -0300 (Wed, 22 May 2013) $ */
+
+.lum-navigation-horizontal-simple {
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	padding:4px;
+	width:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.lum-navigation-horizontal-simple ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+	display:inline;
+	counter-reset:section; 
+}
+.lum-navigation-horizontal-simple ul li {
+	display:inline;
+	color:#ccc;
+}
+.lum-navigation-horizontal-simple ul li.lum-menu-leaf {
+    white-space:nowrap;
+}
+.lum-navigation-horizontal-simple ul li:after {
+	content:'|';
+	padding:0 4px;
+}
+.lum-navigation-horizontal-simple ul li.lum-last:after {
+	content:'';
+	padding:0;
+}
+.lum-navigation-horizontal-simple ul ul li.lum-first:before {
+	content:'|';
+	padding:0 4px;
+}
+.lum-navigation-horizontal-simple ul li a {
+	display:inline-block;
+	padding:8px;
+}
+.lum-navigation-horizontal-simple ul li a:before {
+	color:#ccc;
+	padding-right:3px;
+	font-weight:normal;
+	counter-increment:section;
+ 	content:counters(section, ".") ". "; 
+}
+.lum-navigation-horizontal-simple ul li a:hover {
+	text-decoration:none;
+	background:#fde9da;
+}

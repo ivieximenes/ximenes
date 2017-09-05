@@ -1,0 +1,1638 @@
+/* $Revision: 16635 $ $Date: 2014-11-19 18:47:22 -0200 (Wed, 19 Nov 2014) $ */
+
+/* Intranet CSS */
+/* begin global */
+
+.cLumBody, .cLumRunTimeBody
+{
+	margin:0px 0px 0px 0px;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	color:#606060;
+	background:#F3F2F2;
+}
+
+body.cLumRunTimeBody .cLumPage
+{
+	margin-top:-4px;
+}
+
+table, span, div, input, select, textarea, td, a, pre
+{
+	font-family:arial,sans-serif;
+	font-size:11px;
+}
+font a, font span, h1 a, h1 span, h2 a, h2 span, h3 a, h3 span, h4 a, h4 span, h5 a, h5 span 
+{
+	font-size:100%; /* fix FCK editor on IE */
+}
+
+a
+{
+	color:#343434;
+	background-color:inherit;
+ 	text-decoration:none;
+ 	cursor:pointer;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+a.cLumNoHoverLink:hover
+{
+	text-decoration:none;
+}
+
+textarea
+{
+	overflow:auto;
+}
+form
+{
+	margin:0px;
+}
+
+.cLumisInterface
+{
+	padding:5px 8px; /* sets padding for ALL interfaces */
+}
+
+.cLumArea, .cLumColumn, .cLumCell
+{
+	float:left;
+}
+
+.cLumAreaSeparator, .cLumRowSeparator
+{
+	clear:left;
+}
+
+/* end global */
+
+
+/* begin palette */
+.cLumIntraIcon, .cLumIntraFooter
+{
+	background-color:#EB8C13;
+	color:inherit;
+}
+.cLumIntraIcon2
+{
+	background-color:#EFEFD0;
+	color:inherit;
+}
+/* end palette */
+
+
+/* begin portal only */
+img.cLumIntraMarginRight
+{
+	margin:0px 5px 0px 0px;
+	vertical-align:middle;
+}
+img.cLumIntraMarginLeft
+{
+	margin:0px 0px 0px 5px;
+	vertical-align:middle;
+}
+.cLumHorDotline
+{
+	clear:both;
+	width:auto;
+	height:1px;
+	background:url(../images/Dotline2.gif) bottom left repeat-x;
+	white-space:nowrap;
+	display:block;
+	margin:10px 0px 0px 0px;
+}
+
+.cLumTableDetails
+{
+	border-top:1px solid #D3D3C2;
+	border-right:0px;
+	border-bottom:0px;
+	border-left:0px;
+}
+.cLumTableDetails a
+{
+	color:#343434;
+	background-color:inherit;
+}
+.cLumTableDetails th, .cLumTableDetails td
+{
+	border-bottom:1px solid #D3D3C2;
+}
+.cLumTableDetails .fieldcell
+{
+ 	width:133px;
+}
+.cLumTableDetails .detailcell
+{
+ 	background:white;
+	color:inherit;
+ 	padding-left:6px;
+}
+.cLumTableDetails .detaillink
+{
+ 	float:right;
+ 	padding:0px 6px 0px 0px;
+}
+#LumisAllComments
+{
+	width:100%;
+	height:140px;
+	overflow:auto;
+	border:1px solid #CCCCCC;
+	padding:5px;
+	margin-bottom:10px;
+	background-color:#f9f8f8;
+	color:inherit;
+}
+.cLumMaskField pre
+{
+ 	color:#595959;
+	background-color:inherit;
+ 	padding:0px 0px 10px 0px;
+}
+.cLumMaskField
+{
+ 	color:#595959;
+	background-color:inherit;
+ 	padding:0px 0px 10px 0px;
+}
+
+/* end portal only */
+
+
+/* begin specific */
+.cLumInputText, .cLumTextArea, .cLumImagePickerInputText, .cLumDisabledInputText, .cLumInputFile
+{
+	border:1px solid #C0C0C0;
+	width:400px;
+}
+input.cLumInputText, input.cLumImagePickerInputText, input.cLumDisabledInputText
+{
+	height:14px; /* must be lower (from 18px) because of doctype applied */
+}
+
+input.cLumInputFile
+{
+	height:18px; /* must be upper (from 14px, old class value was cLumInputText) because of doctype applied */
+}
+
+.cLumImagePickerInputText
+{
+	width:362px;
+	border:1px solid #ccccca;
+	color:#6a6a68;
+	background:#e8e8e3;
+}
+.cLumInformation
+{
+	padding:5px;
+}
+.cLumInputDownload
+{
+	border:1px solid #C0C0C0;
+	width:340px;
+}
+
+.cLumFileUploadControl
+{
+	width:400px;
+}
+
+.cLumInputNumber
+{
+    border:1px solid #C0C0C0;
+    width:40px;
+	text-align:right;
+}
+
+.cLumValidatorText
+{
+	padding-left:1px;
+	color:red;
+	background-color:inherit;
+}
+
+.cLumDisabledInputText
+{
+	border:1px solid #ccccca;
+	color:#6a6a68;
+	background:#e8e8e3;
+}
+
+.cLumFilters
+{
+	padding:10px 16px;
+	background:#E4E4DE;
+	color:inherit;
+	border-left:0px;
+	border-right:0px;
+	border-top:1px solid #D3D3C2;
+}
+
+.cLumPropertyPageBody .cLumFilters
+{
+	border-top:1px solid #D3D3C2;
+	border-bottom:1px solid #D3D3C2;
+	padding-bottom:10px;
+}
+
+.cLumFilterButton
+{
+	width:auto;
+	padding:0px 6px;
+}
+.cLumFilterButton img
+{
+	display:block;
+	margin:0px 0px 2px 0px;
+}
+
+.cLumParentFilters
+{
+	padding:0px 6px 5px 6px;
+}
+
+.cLumFiltersIndependent
+{
+	background:white;
+	color:inherit;
+	padding-bottom:10px;
+}
+
+.cLumAccessDenied
+{
+	width:100%;
+	padding:20px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.cLumPropertyPage
+{
+	width:auto;
+	background:#F3F2F2;
+	color:inherit;
+	padding:8px 8px 8px 8px;
+}
+
+.cLumLabelTd
+{
+	width:120px;
+}
+
+.cLumLabel
+{
+	padding:0px 10px 0px 0px;
+	width:120px;
+	font-weight:bold;
+	color:#606060;
+	background-color:inherit;
+}
+
+.cLumRequiredValuesDescriptor
+{
+	padding-top:10px;
+}
+
+.cLumTableAdmin
+{
+	border:0px;
+}
+.cLumTableAdmin a
+{
+	color:#343434;
+	background-color:inherit;
+}
+.cLumTableAdmin th, .cLumTableAdmin td
+{
+	border-bottom:1px solid #D3D3C2;
+}
+.cLumTableAdmin th
+{
+	border-top:1px solid #D3D3C2;
+}
+.cLumEvenRow
+{
+	background:none;
+}
+.cLumTableAdminHeader
+{
+	white-space:nowrap;
+	border-top:1px solid #D3D3C2;
+}
+.cLumTableAdminHeaderCheck
+{
+	width:20px;
+	padding-left:4px;
+}
+.cLumTableAdminHeaderRow
+{
+	font-weight:bold;
+	padding:0px 2px;
+	background:white;
+	color:inherit;
+	height:24px;
+}
+th.cLumLeftCell, td.cLumLeftCell
+{
+	padding-left:12px;
+}
+th.cLumRightCell, td.cLumRightCell
+{
+	padding-right:12px;
+}
+
+.cLumListHeight
+{
+	border:1px solid #D3D3C2;
+}
+.cLumListHeight .cLumTableAdmin
+{
+	border:0px;
+}
+
+.cLumPropertyPage .cLumListHeight
+{
+	border:1px solid #eeeee7;
+}
+
+a.cLumTableAdminHeaderSelected
+{
+	color:#343434;
+	background-color:inherit;
+}
+
+img.cLumTableAdminHeaderOrder
+{
+	vertical-align:middle;
+	border:0px;
+	margin:0px 0px 0px 8px;
+}
+
+img.cLumAdminRowImg
+{
+	vertical-align:top;
+	border:0px;
+	margin:3px 8px;
+}
+
+.cLumTableAdminCell
+{
+	padding:0px 0px 0px 4px;
+	height:22px;
+	color:#606060;
+	background-color:inherit;
+}
+.cLumTableAdminCell a
+{
+	color:#343434;
+}
+
+.cLumInterfaceButtons a
+{
+	color:#AAA;
+	background-color:inherit;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.cLumControlGroup
+{
+	width:auto;
+	padding:5px;
+	background:#E4E4DE;
+	color:inherit;
+	border:1px solid #D3D3C2;
+}
+
+.cLumDynamicListItems
+{
+	width:auto;
+	padding:5px;
+	background:#FFF;
+	color:inherit;
+	border:1px solid #D3D3C2;
+}
+
+.cLumControlServiceGroup
+{
+	padding:10px 5px;
+	background:#E4E4DE;
+	color:inherit;
+	border:1px solid #D3D3C2;
+	border-right:0px;
+	border-left:0px;
+}
+html>body .cLumControlGroup
+{
+	/*width:560px;*/
+	width:auto;
+	padding:5px;
+}
+
+.cLumControlGroupHeader
+{
+	padding:5px 5px 5px 5px;
+	font-weight:bold;
+}
+.cLumControlBlock
+{
+	margin:8px 0px 0px 0px;
+	padding:5px;
+	background:#F9F8F8;
+	color:inherit;
+	border:1px solid #D2D1D1;
+}
+
+.cLumAdminPropertyDialogLabelCell
+{
+	white-space:nowrap;
+}
+
+.cLumAdminPropertyDialogTextBoxCell
+{
+	width:100%;
+}
+
+.cInterfaceButtons
+{
+	padding-top:10px;
+}
+
+span.cLumSpacer
+{
+	font-size:1px;
+	width:auto;
+}
+
+.cLumAdminListPopArea
+{
+	width:570px;
+	height:355px;
+	overflow:auto;
+}
+.cLumAdminListPopAreaPagination
+{
+	width:570px;
+	height:315px;
+	overflow:auto;
+}
+
+#lumAssociationArea
+{
+	background:white;
+	color:inherit;
+	border:1px solid #D2D1D1;
+}
+.cLumAssociationTable
+{
+	background:#F9F8F8;
+	color:inherit;
+	border:1px solid #D2D1D1;
+	width:100%;
+}
+/* end specific */
+
+
+/* begin buttons */
+.cLumButton1 ul
+{
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:auto;
+	list-style-type:none;
+}
+.cLumButton1 ul li
+{
+ 	display:inline;
+}
+.cLumButton1 a
+{
+	float:left;
+	display:block;
+	min-height:14px;
+	height:14px;
+	padding:5px 5px 6px 5px;
+	font-size:11px;
+	text-transform:lowercase;
+	font-weight:bold;
+	color:#606060;
+	text-decoration:none;
+	background:#D3D3C2 url(../images/BtIntra1_bg.gif) top left repeat-x;
+}
+html>body .cLumButton1 a
+{
+	height:auto;
+}
+.cLumButton1 .brdleft, .cLumButton1 .brdright
+{
+	float:left;
+	width:5px;
+	height:25px;
+}
+.cLumButton1 ul li .spacer
+{
+	float:left;
+	width:9px;
+	height:25px;
+}
+.cLumButton1 .brdleft
+{
+ 	background:url(../images/BtIntra1_brdleft.gif) top left no-repeat;
+}
+.cLumButton1 .brdright
+{
+ 	background:url(../images/BtIntra1_brdright.gif) top left no-repeat;
+}
+.cLumButton1 img
+{
+	 vertical-align:top;
+	 border:0px;
+	 margin:0px 6px 0px 0px;
+}
+
+.cLumButton2
+{
+	width:auto;
+	padding:13px 0px 5px 0px;
+	background:none;
+	border-left:0px;
+	border-right:0px;
+	height:17px;
+}
+.cLumButton2 ul
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.cLumButton2 ul li
+{
+	display:inline;
+}
+.cLumButton2 a
+{
+	display:block;
+	float:left;
+	height:17px;
+	line-height:17px;
+	white-space:nowrap;
+	margin:0px 15px 0px 0px;
+	padding:0px;
+	font-weight:normal;
+	color:#343434;
+	background-color:inherit;
+}
+.cLumButton2 .brdleft
+{
+	display:none;
+}
+.cLumButton2 .brdright 
+{
+	display:none;
+}
+.cLumButton2 img
+{
+	vertical-align:middle;
+	margin:0px 6px 0px 0px;
+	border:0px;
+}
+
+.cLumButton3 ul 
+{
+	margin:0px;
+	padding:0px;
+	width:auto;
+	list-style:none;
+}
+.cLumButton3 ul li
+{
+	display:block;
+	clear:both;
+}
+.cLumButton3 a 
+{
+	float:left;
+	display:block;
+	white-space:nowrap;
+	min-width:114px;
+	width:123px;
+	height:14px;
+	padding:3px 0px 5px 0px;
+	font-size:11px;
+	font-weight:bold;
+	color:#606060;
+	text-decoration:none;
+	background:#D3D3C2 url(../images/BtIntra3_bg.gif) top left repeat-x;
+	margin:4px 0px 0px 0px;
+}
+html>body .cLumButton3 a 
+{
+	height:auto;
+}
+.cLumButton3 .brdleft, .cLumButton3 .brdright 
+{
+	float:left;
+	width:5px;
+	height:22px;
+	margin:4px 0px 0px 0px;
+}
+.cLumButton3 ul li .spacer 
+{
+	display:none;
+}
+.cLumButton3 .brdleft 
+{
+	background:url(../images/BtIntra3_brdleft.gif) top left no-repeat;
+}
+.cLumButton3 .brdright 
+{
+	background:url(../images/BtIntra3_brdright.gif) top left no-repeat;
+}
+.cLumButton3 img
+{
+	vertical-align:middle;
+	border:0px;
+	margin:0px 9px 0px 0px;
+}
+.LumButtonColor
+{
+	color:#606060;
+	background-color:inherit;
+}
+/* end buttons */
+
+
+/* begin menus */
+.cLumMenu .menuBarVert
+{
+	width:auto;
+	padding:8px;
+	margin:0px 0px 14px 0px;
+	background:#EFEFD0;
+	color:inherit;
+  	position:static;
+  	left:0px;
+  	top:0px;
+  	z-index:101;
+}
+.cLumMenu .menuBarVert a.item, .cLumMenu .menuBarVert a.home, .cLumMenu .menuBarVert a.selected
+{
+	display:block;
+	width:auto;
+	height:1%; /*IE6-only*/
+	padding:6px 12px;
+	color:#343434;
+	background-color:inherit;
+	text-decoration:none;
+	border-bottom:1px solid #D3D3C2;
+}
+html>body .cLumMenu .menuBarVert a.item, html>body .cLumMenu .menuBarVert a.home, html>body .cLumMenu .menuBarVert a.selected
+{
+	height:auto; /*fix for modern browsers*/
+}
+.cLumMenu .menuBarVert a.home
+{
+	color:#5D5D49;
+	background-color:inherit;
+}
+.cLumMenu .menuBarVert a.selected
+{
+	background:white;
+	color:inherit;
+}
+.cLumMenu .menuBarVert a:hover.item
+{
+	background:white;
+	color:inherit;
+}
+.cLumMenu .menuBarVert a:hover.home
+{
+	background:none;
+}
+.cLumMenu .menuBarVert a.item img, .cLumMenu .menuBarVert a.selected img
+{
+	margin:0px 8px 0px 0px;
+}
+.cLumMenu .menuBarVert a.home img
+{
+	margin:0px 5px 0px 0px;
+}
+
+.cLumMenu .menuBarHor
+{
+	width:auto;
+	min-height:17px;
+	height:1%;
+	padding:6px 8px;
+	margin:0px;
+	background:#EFEFD0;
+	color:inherit;
+  	position:static;
+  	left:0px;
+  	top:0px;
+  	z-index:100;
+}
+html>body .cLumMenu .menuBarHor
+{
+	height:auto;
+}
+.cLumMenu .menuBarHor a.item, .cLumMenu .menuBarHor a.home, .cLumMenu .menuBarHor a.selected
+{
+	display:block;
+	float:left;
+	padding:2px 8px;
+	color:#343434;
+	text-decoration:none;
+	white-space:nowrap;
+	background:#EFEFD0;
+}
+.cLumMenu .menuBarHor a.home
+{
+	color:#5D5D49;
+	background-color:inherit;
+}
+.cLumMenu .menuBarHor a.selected
+{
+	background:white;
+	color:inherit;
+}
+.cLumMenu .menuBarHor a:hover.item
+{
+	background:white;
+	color:inherit;
+}
+.cLumMenu .menuBarHor a:hover.home
+{
+	background:none;
+}
+.cLumMenu .menuBarHor a.item img, .cLumMenu .menuBarHor a.selected img
+{
+	margin:0px 8px 0px 0px;
+}
+.cLumMenu .menuBarHor a.home img
+{
+	margin:0px 5px 0px 0px;
+}
+/* end menus */
+
+
+/* begin sub-menus */
+.menuVert, .menu
+{
+	width:150px;
+	border-top:1px solid #D3D3C2;
+	position:absolute;
+  	left:0px;
+  	top:0px;
+  	visibility:hidden;
+  	z-index:102;
+}
+
+a.menuItem
+{
+	clear:both;
+	display:block;
+	width:100%;
+	height:14px;
+	min-height:14px;
+	padding:6px 0px;
+	color:#343434;
+	border-top:0px;
+	border-right:1px solid #D3D3C2;
+	border-bottom:1px solid #D3D3C2;
+	border-left:1px solid #D3D3C2;
+	background:#EFEFD0;
+}
+html>body a.menuItem
+{
+	width:auto;
+	height:auto;
+	padding:6px;
+}
+a:hover.menuItem
+{
+	background:white;
+	color:inherit;
+	text-decoration:none;
+}
+.menuItemText
+{
+ 	display:block;
+	float:left;
+	margin:0px -6px 0px 0px;/*arrow bug on IE*/
+	padding:0px 6px;
+}
+html>body .menuItemText
+{
+	float:none;
+	margin:0px;
+}
+.menuItemArrow
+{
+ 	float:right;
+}
+/* end sub-menus */
+
+
+/* begin generic lists */
+.cLumList .header, .cLumQuickList .header {
+	padding:0px 0px 8px 0px;
+}
+.cLumList .row, .cLumQuickList .row {
+	clear:both;
+	padding:0px 0px 8px 0px;
+}
+.cLumDetails .title {
+	font-size:110%;
+	padding:0px 0px 8px 0px;
+}
+.cLumList .titGroup {
+	color:#eb8c13;
+	background-color:inherit;
+	font-weight:bold;
+}
+.cLumDetails .content {
+	clear:both;
+	padding:0px 0px 8px 0px;
+}
+.cLumList p, .cLumQuickList p, .cLumDetails p {
+	margin:0px;
+	padding:0px 0px 8px 0px;
+}
+.cLumList img.imgleft, .cLumQuickList img.imgleft, .cLumDetails img.imgleft {
+	margin:0px 8px 8px 0px;
+	display:block;
+	float:left;
+}
+.cLumList img.imgright, .cLumQuickList img.imgright, .cLumDetails img.imgright {
+	margin:0px 0px 8px 8px;
+	display:block;
+	float:right;
+}
+
+.cLumQuickList .linkbox
+{
+	clear:both;
+	padding:1px 3px;
+	margin:5px;
+	width:1%;
+	white-space:nowrap;
+	text-align:center;
+	display:block;
+}
+html>body .cLumQuickList .linkbox
+{
+	width:40px;
+}
+.cLumQuickList img.more
+{
+	margin:0px 4px 1px 0px;
+	vertical-align:bottom;
+}
+.cLumQuickList .linkbox a
+{
+	font-size:10px;
+}
+/* end generic lists */
+
+
+/* begin areas */
+.cLumInterfaceHeader_top
+{
+	display:none;
+}
+.cLumInterfaceHeader_top .cLumBrdLeft
+{
+	display:none;
+}
+.cLumInterfaceHeader_top .cLumBrdRight
+{
+	display:none;
+}
+
+.cLumInterfaceHeader
+{
+	width:auto;
+	padding:5px 0px 0px 0px;
+	background:none;
+	border:0px;
+}
+.cLumTitleBar
+{
+	background-color:#e4e3de;
+	border-top:1px solid #d2d3c3;
+	color:#808080;
+	padding:3px 10px;
+}
+.cLumInterfaceHeader .tit
+{
+	color:#808080;
+	background-color:inherit;
+	font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:0px;
+	font-size:12px;
+	float:left;
+}
+.cLumInterfaceHeader a.bt_filter
+{
+	display:none;
+}
+
+#LumPropertyPageHeader
+{
+	width:auto;
+}
+#LumPropertyPageHeader .headerTitle
+{
+	background:#FFE3B1;
+	border-top:1px solid #FFC763;
+	border-right:0px;
+	border-bottom:1px solid #FFC763;
+	border-left:0px;
+	padding-left:5px;
+	font-size:11px;
+	font-weight:bold;
+	color:#656565;
+}
+
+.cLumPropertyPageBody
+{
+	background:#F3F2F2;
+	color:inherit;
+	border:0px;
+	padding:0px 2px 0px 0px;
+	width:100%;
+}
+html>body .cLumPropertyPageBody
+{
+	/*width:570px;*/
+	width:auto;
+}
+
+.cLumPropertyPageBody > .cLumRequiredValuesDescriptor + .cInterfaceButtons
+{
+	margin-top:-25px;
+}
+
+/* fix Firefox bugs on admin pops */
+body.cLumRunTimeBody .cLumInterfaceHeader
+{
+	margin-top:0px;
+}
+html>body body.cLumRunTimeBody .cLumInterfaceHeader
+{
+	margin-top:-14px;
+}
+body.cLumRunTimeBody .cLumPropertyPageBody
+{
+	margin-top:0px;
+	clear:both;
+}
+html>body body.cLumRunTimeBody .cLumPropertyPageBody
+{
+	margin-top:-10px;
+}
+
+.cLumPropertyPageFooter
+{
+	display:none;
+}
+.cLumPropertyPageFooter .mid
+{
+}
+
+.cLumNavigation
+{
+	width:auto;
+	background:white;
+	color:inherit;
+	border-top:1px solid #D3D3C3;
+	border-bottom:1px solid #D3D3C3;
+	padding:2px 0px;
+	margin:15px 0px 6px 0px;
+}
+.cLumNavigation .pad1
+{
+	padding:0px 0px 0px 12px;
+}
+.cLumNavigation .pad2
+{
+	padding:0px 12px 0px 0px;
+}
+
+#LumisCalendar
+{
+	background:#f3f2f2;
+	color:inherit;
+	height:100%;
+	padding:8px 0px;
+}
+.cLumCalendarbody
+{
+	border-left:0px;
+	border-right:0px;
+	background:#f3f2f2;
+	color:inherit;
+	padding:0px;
+	text-align:center;
+}
+.cLumCalendarBody a
+{
+	color:#666;
+	background-color:inherit;
+
+}
+.cLumCalendarbody th.cLumCalendarTitle
+{
+	margin:0px 3px;
+	padding:3px 6px;
+	text-align:center;
+	font-weight:bold;
+	background:#DDDDDD;
+	color:inherit;
+}
+.cLumCalendar
+{
+	text-align:center;
+	background:#FFFFFF;
+	color:inherit;
+}
+#LumisCalendarBottom
+{
+	height:8px;
+	background:#f3f2f2 url(../images/Pix.gif) bottom left repeat-x;
+	color:inherit;
+}
+#LumisCalendarBottom .cLumBrdLeft
+{
+	background:#f3f2f2 url(../images/Pix.gif) bottom left no-repeat;
+	color:inherit;
+	height:9px;
+	width:9px;
+	float:left;
+}
+#LumisCalendarBottom .cLumBrdRight
+{
+	background:#f3f2f2 url(../images/Pix.gif) bottom right no-repeat;
+	color:inherit;
+	float:right;
+	height:9px;
+	width:9px;
+}
+.cLumCalendarNow
+{
+	border:1px solid #000000;
+	background:white;
+	color:inherit;
+}
+
+.cLumAlbum .cLumAlbumDetailBox
+{
+	border:1px solid #D2D3C3;
+	background:#E4E3DE;
+	color:inherit;
+	width:380px;
+	height:380px;
+	overflow:auto;
+}
+.cLumAlbum img.cLumAlbumDetailImg
+{
+	display:block;
+	margin:14px;
+	border:1px solid #C0C0C0;
+}
+.cLumAlbum .cLumAlbumPhotoListBox
+{
+	background:white;
+	color:inherit;
+	border:1px solid #D2D3C3;
+}
+
+.cLumLoginField
+{
+	width:100%;
+}
+.cLumFilterTable .cLumInputText, .cLumFilterTable .cLumInputFile
+{
+	width:99.9%;
+}
+
+.cLumFilterTable
+{
+	width:100%;
+}
+
+#LumSiteMap .cLumSiteMapRow
+{
+	padding:0px 0px 4px 0px;
+}
+
+#LumContact .titContacts
+{
+	color:#343333;
+	border:1px solid #d3d3c2;
+	border-bottom:0px;
+	background-color:#f4f4f2;
+	font-weight:bold;
+	padding:2px 0px 0px 12px;
+	height:18px;
+}
+#LumContact .boxeContacts
+{
+	color:#626262;
+	border:1px solid #d3d3c2;
+	background-color:#ffffff;
+	padding:5px 0px 0px 12px;
+	height:100px;
+}
+#LumContact .ContactFilter
+{
+	background-color:#d8d8cb;
+	width:25px;
+	text-align:center;
+	white-space:nowrap;
+}
+#LumContact .ContactFilterOver
+{
+	background-color:#929270;
+	width:25px;
+	text-align:center;
+	white-space:nowrap;
+}
+#LumContact .ContactFilter a
+{
+	color:#7f7e7d;
+	background-color:#d8d8cb;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}
+#LumContact .ContactFilter a:hover
+{
+	color:#ffffff;
+	background-color:#929270;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}
+#LumContact .ContactFilterOver a
+{
+	color:#ffffff;
+	background-color:#929270;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+/* end areas */
+
+
+/* begin tabs */
+.cLumTabs ul, .cLumTabs2 ul
+{
+	width:100%;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+	background:white url(../images/Tab_bg.gif) top left repeat-x;
+	color:inherit;
+	float:left;
+}
+.cLumTabs2 ul
+{
+	background:#F3F2F2 url(../images/Tab_bg02.gif) top left repeat-x;
+	color:inherit;
+}
+.cLumTabs ul li, .cLumTabs2 ul li
+{
+	display:inline;
+}
+.cLumTabs ul li a
+{
+	height:22px;
+	padding:0px 12px 0px 12px;
+	line-height:22px;
+	font-size:12px;
+	font-weight:bold;
+	color:#4E4E4E;
+	text-decoration:none;
+	background:white;
+	border-top:1px solid #B2B2A5;
+	border-bottom:1px solid #B2B2A5;
+	float:left;
+}
+html>body .cLumTabs ul li a
+{
+	height:auto;
+}
+.cLumTabs2 ul li a
+{
+	height:22px;
+	padding:0px 12px 0px 12px;
+	line-height:22px;
+	font-size:12px;
+	color:#4E4E4E;
+	text-decoration:none;
+	background:#f3f1f2;
+	border-top:1px solid #d2d3c3;
+	border-bottom:1px solid #d2d3c3;
+	float:left;
+}
+html>body .cLumTabs2 ul li a
+{
+	height:auto;
+}
+.cLumTabs ul li a.selected, .cLumTabs2 ul li a.selected
+{
+	background:#FFFFFF;
+	color:#8C0C06;
+	border-bottom:1px solid #E4E4DE;
+}
+
+.cLumTabs2 ul li a.selected
+{
+	background:#E4E4DE;
+	font-weight:bold;
+	color:#343434;
+}
+.cLumTabs ul li .tab_first_left_on, .cLumTabs2 ul li .tab_first_left_on,
+.cLumTabs ul li .tab_first_left_off, .cLumTabs2 ul li .tab_first_left_off,
+.cLumTabs ul li .tab_middle_left_on, .cLumTabs2 ul li .tab_middle_left_on,
+.cLumTabs ul li .tab_middle_left_off, .cLumTabs2 ul li .tab_middle_left_off,
+.cLumTabs ul li .tab_middle_right_on, .cLumTabs2 ul li .tab_middle_right_on,
+.cLumTabs ul li .tab_middle_right_off, .cLumTabs2 ul li .tab_middle_right_off,
+.cLumTabs ul li .tab_middle_right_off2, .cLumTabs2 ul li .tab_middle_right_off2,
+.cLumTabs ul li .tab_last_right_on, .cLumTabs2 ul li .tab_last_right_on,
+.cLumTabs ul li .tab_last_right_off, .cLumTabs2 ul li .tab_last_right_off
+{
+	width:4px;
+	height:24px;
+	float:left;
+}
+.cLumTabs ul li .tab_first_left_on
+{
+	background:url(../images/Tab_first_left_on.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_first_left_on
+{
+	background:url(../images/Tab_first_left_on02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_first_left_off
+{
+	background:url(../images/Tab_first_left_off.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_first_left_off
+{
+	background:url(../images/Tab_first_left_off02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_middle_left_on
+{
+	background:url(../images/Tab_middle_left_on.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_middle_left_on
+{
+	background:url(../images/Tab_middle_left_on02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_middle_left_off
+{
+	background:url(../images/Tab_middle_left_off.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_middle_left_off
+{
+	background:url(../images/Tab_middle_left_off02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_middle_right_on
+{
+	background:url(../images/Tab_middle_right_on.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_middle_right_on
+{
+	background:url(../images/Tab_middle_right_on02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_middle_right_off
+{
+	background:url(../images/Tab_middle_right_off.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_middle_right_off
+{
+	background:url(../images/Tab_middle_right_off02.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_middle_right_off2
+{
+	background:url(../images/Tab_middle_right_off2.gif) top left no-repeat;
+}
+.cLumTabs2 ul li .tab_middle_right_off2
+{
+	background:url(../images/Tab_middle_right_off202.gif) top left no-repeat;
+}
+.cLumTabs ul li .tab_last_right_on
+{
+	background:url(../images/Tab_last_right_on.gif) top left no-repeat;
+	width:8px;
+}
+.cLumTabs2 ul li .tab_last_right_on
+{
+	background:url(../images/Tab_last_right_on02.gif) top left no-repeat;
+	width:8px;
+}
+.cLumTabs ul li .tab_last_right_off
+{
+	background:url(../images/Tab_last_right_off.gif) top left no-repeat;
+	width:8px;
+}
+.cLumTabs2 ul li .tab_last_right_off
+{
+	background:url(../images/Tab_last_right_off02.gif) top left no-repeat;
+	width:8px;
+}
+.cLumTabBox
+{
+	background:white;
+	color:inherit;
+	border-top:0px;
+	border-right:1px solid #B2B2A5;
+	border-bottom:1px solid #B2B2A5;
+	border-left:1px solid #B2B2A5;
+	padding:10px 10px 25px 10px;
+}
+html>body .cLumTabBox
+{
+	padding:10px 10px 10px 10px;
+}
+.cLumTabBox2
+{
+	background:#E4E4DE;
+	color:inherit;
+	padding:10px 10px 10px 10px;
+	border-top:0px;
+	border-right:1px solid #d2d3c3;
+	border-bottom:1px solid #d2d3c3;
+	border-left:1px solid #d2d3c3;
+}
+html>body .cLumTabBox
+{
+	padding:5px 10px 0px 10px;
+}
+.cLumTextArea
+{
+	vertical-align:top;
+}
+/* end tabs */
+
+
+/* begin metadata */
+#lumPublishingArea
+{
+	width:100%;
+	background:white;
+	color:inherit;
+	border-top:1px solid #D2D1D1;
+	border-right:1px solid #D2D1D1;
+	border-bottom:1px solid #D2D1D1;
+	border-left:0px;
+}
+#lumPublishingArea tr td
+{
+	padding:4px;
+	border-left:1px solid #D2D1D1;
+}
+#lumPublishingArea .cLumLabel
+{
+	width:auto;
+}
+
+#lumWorkflowArea,#lumLanguageArea
+{
+	background:#f9f7f8;
+	color:inherit;
+	border:1px solid #d1d1d1;
+	width:100%;
+	padding:2px;
+}
+
+#lumWorkflowArea .cLumLabel,#lumLanguageArea .cLumLabel
+{
+	width:80px;
+}
+
+/* end metadata */
+
+/*begin used by interface*/
+#LumisUsedByInterface
+{
+	font-weight:bold;
+}
+#LumisUsedByInterface .cLumUsedByInterfaceTable
+{
+	padding-top:13px;
+
+}
+#LumisUsedByInterface .cLumUsedByInterfaceTable td
+{
+	background:#f9faf5;
+	color:inherit;
+	height:20px;
+}
+#LumisUsedByInterface h1.cLumTitle
+{
+	margin:0px;
+	padding:0px 0px 3px 0px;
+	font:bold 11px verdana,arial,sans-serif;
+}
+#LumisUsedByInterface .cLumTitlePages
+{
+	height:153px;
+	overflow:auto;
+	border:1px solid #EEEEE7;
+}
+#LumisUsedByInterface .cLumTitleServiceIntance
+{
+	height:153px;
+	overflow:auto;
+	border:1px solid #EEEEE7;
+}
+.cLumDataGrid .cLumInputText, .cLumDataGrid .cLumFileUploadControl, .cLumDataGrid .cLumInputFile
+{
+	width:200px;
+}
+
+.cLumClientRenderWaitBox
+{
+	background-color:#FFFFFF;
+	filter:alpha(opacity:70);
+	-moz-opacity: 0.7;
+	opacity:.70;
+}
+
+.cLumClientRenderWaitMessage
+{
+	text-align:center;
+	padding-top:5px;
+}
+/*end user by interface*/
+
+/*begin personalized page*/
+.cLumPPPlaceholder
+{
+	width: 100%;
+	height: 100%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin: 10px 10px 10px 0;
+	list-style: none;
+	border:2px dotted #e39113 !important;
+	height:50px;
+	box-shadow:0 0 6px #e39113 !important;
+ 	-moz-box-shadow:0 0 6px #e39113 !important;
+	-webkit-box-shadow:0 0 6px #e39113 !important;
+}
+
+.cLumPPHolder
+{
+	width: 100%;
+	height: 100%;
+	float: left;
+	left:0px;
+	list-type: none;
+	min-height: 25px; /*Although the starting holder's min height is supposed to be 0px, 
+	it MUST be initialized with a sufficient height so the drag can work properly. When the page loads, 
+	it will be set by 0px.*/
+	padding-left: 0px;
+	margin-left:0px !important;
+}
+
+.cLumPPHolderHighlight
+{
+}
+.lum-widget-holder {
+	border:0px solid #e39113 !important;
+	box-shadow:0 0 6px #e39113 !important;
+ 	-moz-box-shadow:0 0 6px #e39113 !important;
+	-webkit-box-shadow:0 0 6px #e39113 !important;
+	background-color:#EED !important;
+}
+
+.cLumPPWidget
+{
+	border-left: #dddddd 2px solid;
+	border-right: #dddddd 2px solid;
+	border-bottom: #dddddd 2px solid;
+	border-top: #dddddd 2px solid;
+	list-style: none;
+	margin: 10px 10px 10px 10px;
+}
+
+.cLumPPWidgetTitleBar>span
+{
+	white-space:nowrap;
+	background-color: #dddddd;
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: #dddddd 2px solid;
+}
+
+.cLumPPWidgetTitle
+{
+	cursor: move;
+	float: left;
+}
+
+.cLumPPWidgetToolBox
+{
+	float: right;
+}
+
+.cLumPPWidgetContent
+{
+	background-color: #eeeeee;
+}
+
+.cLumPPOfferedWidget
+{
+	list-style: none;
+	cursor: move;
+	color: #101010;
+}
+
+.cLumPPUndraggable
+{
+	list-style: none;
+	color: #cccccc;
+	cursor: default;
+}
+
+.cLumPPUntranslated
+{
+	color: #cccccc;
+}
+
+.cLumPPUntranslated > a
+{
+	color: #aaaaaa !important;
+}
+
+.cLumPPWidgetUntranslated
+{
+	border-left: #ff0000 2px dotted;
+	border-right: #ff0000 2px dotted;
+	border-bottom: #ff0000 2px dotted;
+	border-top: #ff0000 2px dotted;
+}
+/*end personalized page*/
+
+.cLumSitemapElemWithoutWebsite, .cLumSitemapElemInDifferentWebsite
+{
+	font-weight: bold;
+}
+.cLumSitemapElemWithoutWebsite
+{
+	color: red;
+}
+.cLumSitemapElemInDifferentWebsite
+{
+	color: blue;
+}
+.lum-preview-container
+{
+	border:1px solid #AAAAAA;
+}
+
+.lum-profile-image
+{
+	float: left;
+}
+.lum-profile-image img
+{
+	margin: 9px 18px 9px 0;
+	width:80px;
+	height:80px;
+	border: 1px solid #cdcdcd;
+	border-radius: 3px;
+}
+.lum-profile-image .lum-profile-delete-image
+{
+	height: 20px;
+}
+.lum-profile-input
+{
+	margin-left: 100px;
+	line-height: 100px;
+}
+.lum-profile-input input[type='file']
+{
+	margin-top: 38px;
+	margin-bottom: 38px;
+}
+

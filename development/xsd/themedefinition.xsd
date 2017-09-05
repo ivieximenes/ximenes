@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16603 $ $Date: 2014-11-11 19:36:27 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.lumis.com.br/lumisportal/xsd/theme" 
+		xmlns="http://www.lumis.com.br/lumisportal/xsd/theme"
+		elementFormDefault="qualified" 
+		attributeFormDefault="unqualified">
+	
+	<xsd:element name="themeDefinition">
+		<xsd:annotation>
+			<xsd:documentation>Root element of the theme definition XML.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="name">
+					<xsd:annotation>
+						<xsd:documentation>The display name for the theme. May be a non-localizable string or a string key that will be localized using the theme's string resources.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="50"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="description" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>The description for the theme. May be a non-localizable string or a string key that will be localized using the theme's string resources.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="255"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="openRuntimeInterfaceWithoutActiveParentBehavior" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							<p>
+							The default behavior to be applied when opening a runtime interface. If this element is not specified, the default behavior will not
+							be changed, and remain as configured or inherited in the respective page.
+							</p>
+							<p>
+							The possible values are:
+							<ul>
+							<li><b>popup</b>: the runtime interface will be opened in a popup.</li>
+							<li><b>replace</b>: the runtime interface will replace the opener interface and be shown in the same page.</li>
+							<li><b>lightbox</b>: the runtime interface will be shown in a lightbox style element in the same page.</li>
+							</ul>
+							</p>
+						]]></xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="popup"/>
+							<xsd:enumeration value="replace"/>
+							<xsd:enumeration value="lightbox"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="openRuntimeInterfaceWithActiveParentBehavior" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							<p>
+							The default behavior to be applied when opening a runtime interface. If this element is not specified, the default behavior will not
+							be changed, and remain as configured or inherited in the respective page.
+							</p>
+							<p>
+							The possible values are:
+							<ul>
+							<li><b>popup</b>: the runtime interface will be opened in a popup.</li>
+							<li><b>lightbox</b>: the runtime interface will be shown in a lightbox style element in the same page.</li>
+							</ul>
+							</p>
+						]]></xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="popup"/>
+							<xsd:enumeration value="lightbox"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

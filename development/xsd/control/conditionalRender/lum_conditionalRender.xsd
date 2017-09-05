@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 9383 $ $Date: 2008-06-04 20:49:07 -0300 (Wed, 04 Jun 2008) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_conditionalRender"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_conditionalRender"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_conditionalRender">
+		<xsd:annotation>
+			<xsd:documentation>Defines a conditional render control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence>
+					<xsd:element name="condition" type="xsd:string" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Specifies a condition that the control must evaluate before rendering.  If the expression evaluates to true, rendering of the control is performed.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Tipo de Relatório</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?tiporelatorio.htm"; }
+  else { parent.quicksync('a8.6.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Tipo de Relatório</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="elasticsearch.htm">Previous</a>&nbsp;
+     <a href="recursos_disponiveis_em_el.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Esta seção refere-se a criação de novos tipos de relatórios utilizando o <span style="font-style: italic;">Jasper Report</span> e o <span style="font-style: italic;">iReport</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">A definição de um tipo de relatório consiste em um diretório contendo os seguintes recursos:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">reportdefinition.xml;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>definição de relatórios de <span style="font-style: italic;">JasperReports (*.jrxml)</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>diretório <span style="font-style: italic;">strings</span>, com as strings internacionalizadas, caso deseja-se suporte a localização de strings.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">O tipo de relatório deve ser cadastrado no portal através da <a href="relatorios.htm">administração de tipos de relatórios</a>, localizado em <a href="portaladministration.htm">Configurações</a>.</p>
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">reportdefinition.xml</span> é o principal arquivo de configuração. Nele deve ser definido o identificador do tipo de relatório, a interface de parâmetros de configuração (<span style="font-style: italic;">configParameters</span>) e a interface de parâmetros em tempo de execução (<span style="font-style: italic;">runtimeParameters</span>). Também deve ser definido o caminho para o <span style="font-style: italic;">JasperReport </span>a ser utilizado para este relatório e os parâmetros que serão repassados para ele. Consultar o <span style="font-style: italic;"><a href="../xsd/workflow/index.html" target="_blank" class="weblink">reportdefinition.xsd</a> </span>para detalhes.</p>
+<p style="margin: 14px 0px 0px 0px;">E necessário configurar no ambiente de desenvolvimento o <span style="font-style: italic;">XSD</span> do <span style="font-style: italic;">report, a URI: lumisdata\def\lumis\report  </span>e o<span style="font-style: italic;"> Key</span> <span style="font-style: italic;">http://www.lumis.com.br/lumisportal/xsd/report.</span></p>
+<p style="margin: 14px 0px 0px 0px;">A interface de parâmetros de configuração permite configurar os parâmetros no momento em que um relatório de determinado tipo é criado/editado. A interface de parâmetros de tempo de execução permite configurar parâmetros no momento em que um relatório é visualizado.</p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;">Para auxiliar na definição de relatórios <span style="font-style: italic;">JasperReports</span> (<span style="font-style: italic;">arquivos jrxml</span>), pode-se utilizar o aplicativo gratuito <span style="font-style: italic;">iReport</span>. Algumas dicas para configuração deste aplicativo:</p>
+<p>&nbsp;</p>
+<p>Em <span style="font-style: italic;">Opções/Classpath </span>incluir:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>o <span style="font-style: italic;">JAR</span> do driver <span style="font-style: italic;">JDBC</span> que será utilizado, para poder criar a conexão ao banco de dados;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>o <span style="font-style: italic;">JAR</span> <span style="font-style: italic;">lumisportal_x.x.x.xxxxxx.jar</span>, para poder referenciar e utilizar a classe <span style="font-style: italic;">lumis.report.ReportContext</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">JAR</span> ou diretório de classes do projeto, caso for utilizar alguma classe específica no relatório. Algumas classes com implementação complexa ou dependente do contexto do portal podem não funcionar na visualização dentro no <span style="font-style: italic;">iReport</span>. Isto inclui a maior parte das classes do <span style="font-style: italic;">Lumis Portal</span>. Mas tais relatórios devem funcionar quando visualizados por dentro do portal.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Uma instância da classe <span style="font-style: italic;">lumis.report.ReportContext</span> é sempre enviada ao <span style="font-style: italic;">JasperReports</span> como parâmetro com nome <span style="font-style: italic;">lumReportContext</span>. Através deste objeto é possível executar operações de localização ou obter outras informações. Este parâmetro pode ter seu valor <span style="font-style: italic;">default</span> configurado como <span style="font-style: italic;">new lumis.report.ReportContext()</span> para o objeto estar disponível também na visualização interna do <span style="font-style: italic;">iReport</span>. Quando executada fora do contexto do portal (na visualização dentro do <span style="font-style: italic;">iReport</span> por exemplo), a classe <span style="font-style: italic;">lumis.report.ReportContext</span> não efetua uma localização normal de <span style="font-style: italic;">strings</span>, ao invés disto apenas substitui '_' por espaço. Mas quando o relatório for exibido dentro do portal, a localização de <span style="font-style: italic;">strings</span> ocorrerá normalmente.</p>
+<p style="margin: 14px 0px 0px 0px;">Tipos de relatórios padrão no produto estão implementadas em <span style="font-style: italic;">lumisdata/def/lumis/report</span>. Os arquivos nestas pastas não devem ser alterados, mas podem ser copiados para serem utilizados como ponto inicial para customização do tipo de relatório.</p>
+<p style="margin: 14px 0px 0px 0px;">Referências:</p>
+<p><span style="font-style: italic;">JasperReports</span> - <a href="http://jasperforge.org/sf/projects/jasperreports" target="_blank" class="weblink">http://jasperforge.org/projects/jasperreports</a></p>
+<p><span style="font-style: italic;">iReport</span> - <a href="http://www.jasperforge.org/sf/projects/ireport" target="_blank" class="weblink">http://www.jasperforge.org/projects/ireport</a></p>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Gerenciar Filas</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?filasdeexecucao.htm"; }
+  else { parent.quicksync('a7.4.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Gerenciar Filas</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="configuracoes_dos_servidores.htm">Previous</a>&nbsp;
+     <a href="bloqueiosdoportal.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Através da administração de Filas de Execução é possível verificar o andamento dos processos assíncronos na fila de execução genérica do portal.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração dos Servidores</span></p>
+<p style="margin: 14px 0px 0px 0px;">Quando um servidor inicia, ele automaticamente é configurado para criar cinco threads para atender à execução de processos assíncronos caso não exista nenhuma configuração pré-existente. &nbsp;Na página de visualização da configuração dos servidores aparecerão todos os servidores e o número de threads que cada um possui para atender à fila.  </p>
+<p class="p_ImageCaption"><img src="portaladm256.png" width="1032" height="549" border="0" alt="portalAdm256" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;">Caso não seja desejado que um servidor participe do consumo da fila de execução, é possível desabilitá-lo para seu consumo na fila. &nbsp;Isso é feito alterando o número de threads para zero para aquele servidor. &nbsp;A nova configuração só entrará em vigor a partir da próxima vez que o Lumis for reiniciado. &nbsp; O botão de excluir serve para remover servidores que não pertencem mais à solução.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Visualização da Fila de Execução</span></p>
+<p style="margin: 14px 0px 0px 0px;">Para visualizar a fila de execução, basta acessar a opção: Frameworks / Filas de Execução / Gerenciar Filas. &nbsp;Nesta tela é possível obter informações sobre a fila. &nbsp;No topo da página, temos as informações da fila naquele momento: o total de itens, o número de itens agendados, o número de itens enfileirados, processando e no estado de erro. &nbsp;Os processos que são concluídos com sucesso são removidos da fila. &nbsp;Uma vez que uma tarefa inicia o seu processamento, ela deixa de ser contada no estado que anteriormente se encontrava (agendado, enfileirado ou erro).</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm257.png" width="1206" height="491" border="0" alt="portalAdm257"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;">De acordo com a imagem acima, temos filtros para auxiliar a pesquisa na fila. &nbsp;É possível pesquisar pelo identificador (ID) de um processo específico, por itens em determinado status e pelo título do processo.</p>
+<p style="margin: 14px 0px 0px 0px;">Somente tarefas em erro podem ser reprocessadas. &nbsp;Para isso basta selecioná-lo e apertar o botão de “Reprocessar”. &nbsp;Qualquer item pode ser excluído contanto que não esteja em execução naquele momento. Mas observe que a exclusão de um item impedirá a execução da tarefa correspondente, o que pode provocar efeitos colaterais de acordo com a tarefa.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

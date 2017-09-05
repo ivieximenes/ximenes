@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Cache do Portal</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?cacheportal.htm"; }
+  else { parent.quicksync('a7.5.2.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Cache do Portal</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="cachexsl.htm">Previous</a>&nbsp;
+     <a href="replicacao_de_arquivos_publico.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Lumis</span> também utiliza cache de seus objetos e os disponibiliza em um gerenciador, disponível em Configuração--&gt;Gerenciadores de Cache--&gt;Cache do Portal, em que são listados com seu respectivo tamanho de <span style="font-style: italic;">cache </span>(quantidade de objetos em memória).</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm164.zoom51.png" width="631" height="319" border="0" alt="portalAdm164"></p>
+<p style="margin: 14px 0px 0px 0px;">Por <span style="font-style: italic;">default</span>, a capacidade do <span style="font-style: italic;">cache</span> de cada objeto é 1000, mas pode ser configurada para outro valor. O novo valor recebe uma sinalização para indicar que a capacidade <span style="font-style: italic;">default</span> foi alterada.</p>
+<p style="margin: 14px 0px 0px 0px;">Para alterar a capacidade de cache em memória de um objeto, basta selecioná-lo &nbsp;e acionar <span style="font-style: italic;">Editar:</span></p>
+<p style="margin: 14px 0px 0px 72px;"><img src="portaladm165.jpg" width="900" height="199" border="0" alt="portalAdm165" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplo, foi selecionado o objeto <span style="font-style: italic;">lumis.doui.control.ControlConfig </span>e alterada a sua capacidade de 1000 para 1500. Dessa forma, o valor da sua capacidade ficou sinalizada, indicando que a capacidade <span style="font-style: italic;">default</span> foi alterada. </p>
+<p style="margin: 14px 0px 0px 0px;">O painel informa também as estatísticas de acertos e falhas de acesso a estes objetos.</p>
+<p style="margin: 14px 0px 0px 0px;">Essa lista é útil aos desenvolvedores, pois podem consultar o tamanho do <span style="font-style: italic;">cache</span> de um objeto específico, quando a solução não estiver correspondendo adequadamente. Provavelmente, para este objeto, o número de falhas (acesso sem sucesso) estará maior que o número de acertos.</p>
+<p style="margin: 14px 0px 0px 0px;">Um acesso a um objeto no <span style="font-style: italic;">cache</span> de memória pode falhar. Isso significa objeto não encontrado e, portanto, o campo <span style="font-style: italic;">Falhas</span> é incrementado. Dependendo da solução implementada, o primeiro acesso do objeto, após a falha, será realizado na sua origem, e, em seguida, será realizado um "put" deste objeto em <span style="font-style: italic;">cache</span> de memória. Como consequência, o campo <span style="font-style: italic;">Tamanho </span>é incrementado.</p>
+<p style="margin: 14px 0px 0px 0px;">Para cada objeto, as estimativas de acertos e falhas de acesso podem ser zeradas através da opção <span style="font-style: italic;">Limpar Estatísticas. </span>As configurações da capacidade de memória podem ser descartadas através da opção <span style="font-style: italic;">Usar Padrão. </span>Por fim, acionar <span style="font-style: italic;">Limpar Cache</span> &nbsp;para retirar os objetos cacheados da memória.</p>
+<p style="margin: 14px 0px 14px 0px;">Verificar as configurações de <span style="font-style: italic;">cache</span> que podem ser utilizadas para uma maior otimização da funcionalidade. Tais configurações estão disponíveis no elemento <span style="font-style: italic;">&lt;cache&gt;</span> no <span style="font-style: italic;"><a href="configuracoesportal.htm">LumisPortalConfig</a></span>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

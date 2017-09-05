@@ -1,0 +1,26 @@
+/* $Revision: 15796 $ $Date: 2013-08-21 16:12:55 -0300 (Wed, 21 Aug 2013) $ */
+.lum-group-img-user
+{
+	background: url("../../../../portal/client/images/User.gif") no-repeat scroll 0 1px transparent;
+	border-width:0px;
+	height: 13px;
+}
+
+.lum-group-img-group
+{
+	background: url("../../../../portal/client/images/Group.gif") no-repeat scroll 0 1px transparent;
+	border-width:0px;
+	height: 13px;
+}
+
+.lum-group-img-group-disabled
+{
+	background: url("../../../../portal/client/images/GroupDisabled.gif") no-repeat scroll 0 1px transparent;
+	border-width:0px;
+	height: 13px;
+}
+
+.lum-group-td-type
+{
+	width:50px;
+}

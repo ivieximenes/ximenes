@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC6861342</id>
+  <name>Internas - Ára Pública</name>
+  <template>true</template>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="menu">
+        <interface id="2C96A66853B531AE0154597558DA1B16"></interface>
+        <interface id="0000000050A1A02C0150A1AF938818E2"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="0000000050A1A02C0150A1AFB58618EB"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="0000000050A1A02C0150A1BA4918288A"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="0000000050A1A02C0150A1AF6EA518D7"></interface>
+    </holder>
+</layout>]]></layout>
+  <ssi-enabled>false</ssi-enabled>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1AF6EA518D7</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1AF938818E2</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1AFB58618EB</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1BA4918288A</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154597558DA1B16</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

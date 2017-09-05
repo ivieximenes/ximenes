@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="ServicoPrestador"
+	targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+	xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+	xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+	<wsp:Policy wsu:Id="BasicHttpsBinding_IServicoPrestador_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false" />
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256 />
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax />
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp />
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<sp:SignedSupportingTokens
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:UsernameToken
+							sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+							<wsp:Policy>
+								<sp:WssUsernameToken10 />
+							</wsp:Policy>
+						</sp:UsernameToken>
+					</wsp:Policy>
+				</sp:SignedSupportingTokens>
+				<sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy />
+				</sp:Wss10>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://tempuri.org/Imports">
+			<xsd:import schemaLocation="0.xsd" namespace="http://tempuri.org/" />
+			<xsd:import schemaLocation="4.xsd" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+			<xsd:import schemaLocation="1.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+			<xsd:import schemaLocation="2.xsd" namespace="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.GestaoPrestador" />
+			<xsd:import schemaLocation="3.xsd" namespace="http://schemas.datacontract.org/2004/07/Qualicorp.GSP.Contratos.Comuns" />
+			<xsd:import schemaLocation="5.xsd" namespace="http://schemas.datacontract.org/2004/07/System" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="IServicoPrestador_ValidarUsuarioPrestador_InputMessage">
+		<wsdl:part name="parameters" element="tns:ValidarUsuarioPrestador" />
+	</wsdl:message>
+	<wsdl:message name="IServicoPrestador_ValidarUsuarioPrestador_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ValidarUsuarioPrestadorResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_ValidarUsuarioPrestador_FaultExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:FaultException"
+			xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_CadastrarUsuarioPrestador_InputMessage">
+		<wsdl:part name="parameters" element="tns:CadastrarUsuarioPrestador" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_CadastrarUsuarioPrestador_OutputMessage">
+		<wsdl:part name="parameters" element="tns:CadastrarUsuarioPrestadorResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_CadastrarUsuarioPrestador_FaultExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:FaultException"
+			xmlns:q2="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_AlterarSenhaUsuarioPrestador_InputMessage">
+		<wsdl:part name="parameters" element="tns:AlterarSenhaUsuarioPrestador" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_AlterarSenhaUsuarioPrestador_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AlterarSenhaUsuarioPrestadorResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_AlterarSenhaUsuarioPrestador_FaultExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:FaultException"
+			xmlns:q3="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_RecuperarSenhaUsuarioPrestador_InputMessage">
+		<wsdl:part name="parameters" element="tns:RecuperarSenhaUsuarioPrestador" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_RecuperarSenhaUsuarioPrestador_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RecuperarSenhaUsuarioPrestadorResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IServicoPrestador_RecuperarSenhaUsuarioPrestador_FaultExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q4:FaultException"
+			xmlns:q4="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+	</wsdl:message>
+	<wsdl:portType name="IServicoPrestador">
+		<wsdl:operation name="ValidarUsuarioPrestador">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IServicoPrestador/ValidarUsuarioPrestador"
+				message="tns:IServicoPrestador_ValidarUsuarioPrestador_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IServicoPrestador/ValidarUsuarioPrestadorResponse"
+				message="tns:IServicoPrestador_ValidarUsuarioPrestador_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IServicoPrestador/ValidarUsuarioPrestadorFaultExceptionFault"
+				name="FaultExceptionFault"
+				message="tns:IServicoPrestador_ValidarUsuarioPrestador_FaultExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="CadastrarUsuarioPrestador">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IServicoPrestador/CadastrarUsuarioPrestador"
+				message="tns:IServicoPrestador_CadastrarUsuarioPrestador_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IServicoPrestador/CadastrarUsuarioPrestadorResponse"
+				message="tns:IServicoPrestador_CadastrarUsuarioPrestador_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IServicoPrestador/CadastrarUsuarioPrestadorFaultExceptionFault"
+				name="FaultExceptionFault"
+				message="tns:IServicoPrestador_CadastrarUsuarioPrestador_FaultExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AlterarSenhaUsuarioPrestador">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IServicoPrestador/AlterarSenhaUsuarioPrestador"
+				message="tns:IServicoPrestador_AlterarSenhaUsuarioPrestador_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IServicoPrestador/AlterarSenhaUsuarioPrestadorResponse"
+				message="tns:IServicoPrestador_AlterarSenhaUsuarioPrestador_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IServicoPrestador/AlterarSenhaUsuarioPrestadorFaultExceptionFault"
+				name="FaultExceptionFault"
+				message="tns:IServicoPrestador_AlterarSenhaUsuarioPrestador_FaultExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="RecuperarSenhaUsuarioPrestador">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IServicoPrestador/RecuperarSenhaUsuarioPrestador"
+				message="tns:IServicoPrestador_RecuperarSenhaUsuarioPrestador_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IServicoPrestador/RecuperarSenhaUsuarioPrestadorResponse"
+				message="tns:IServicoPrestador_RecuperarSenhaUsuarioPrestador_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IServicoPrestador/RecuperarSenhaUsuarioPrestadorFaultExceptionFault"
+				name="FaultExceptionFault"
+				message="tns:IServicoPrestador_RecuperarSenhaUsuarioPrestador_FaultExceptionFault_FaultMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpsBinding_IServicoPrestador"
+		type="tns:IServicoPrestador">
+		<wsp:PolicyReference URI="#BasicHttpsBinding_IServicoPrestador_policy" />
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ValidarUsuarioPrestador">
+			<soap:operation
+				soapAction="http://tempuri.org/IServicoPrestador/ValidarUsuarioPrestador"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="FaultExceptionFault">
+				<soap:fault name="FaultExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="CadastrarUsuarioPrestador">
+			<soap:operation
+				soapAction="http://tempuri.org/IServicoPrestador/CadastrarUsuarioPrestador"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="FaultExceptionFault">
+				<soap:fault name="FaultExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AlterarSenhaUsuarioPrestador">
+			<soap:operation
+				soapAction="http://tempuri.org/IServicoPrestador/AlterarSenhaUsuarioPrestador"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="FaultExceptionFault">
+				<soap:fault name="FaultExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RecuperarSenhaUsuarioPrestador">
+			<soap:operation
+				soapAction="http://tempuri.org/IServicoPrestador/RecuperarSenhaUsuarioPrestador"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="FaultExceptionFault">
+				<soap:fault name="FaultExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ServicoPrestador">
+		<wsdl:port name="BasicHttpsBinding_IServicoPrestador"
+			binding="tns:BasicHttpsBinding_IServicoPrestador">
+			<soap:address location="https://xeonio:8013/ServicoPrestador.svc" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

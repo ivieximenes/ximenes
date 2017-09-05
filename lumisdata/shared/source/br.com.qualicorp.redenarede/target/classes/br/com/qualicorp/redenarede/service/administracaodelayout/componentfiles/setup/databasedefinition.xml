@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- $Revision: 16445 $ $Date: 2014-09-18 18:21:12 -0300 (Thu, 18 Sep 2014) $ -->
+<databaseDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd">
+	
+	<table name="QC_LAYOUTESTIPULANTE">
+		<fields>
+			<field name="id" type="guid" isNotNull="true" />
+			<field name="nome_do_layout" type="string" isNotNull="true" />
+			<field name="cor_do_fundo" type="string" />
+			<field name="cor_das_letras" type="string" />
+			<field name="fonte_das_letras" type="string" />
+		</fields>
+		<constraints>
+			<constraint name="QC_LAYOUTESTIPULANTE_PK" type="primaryKey">
+				<fields>
+					<field name="id"/>
+				</fields>
+			</constraint>
+		</constraints>
+	</table>
+	
+</databaseDefinition>

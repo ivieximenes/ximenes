@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16605 $ $Date: 2014-11-11 19:43:51 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.lumis.com.br/lumisportal/xsd/doui/logic"
+		xmlns="http://www.lumis.com.br/lumisportal/xsd/doui/logic"
+		elementFormDefault="qualified" 
+		attributeFormDefault="unqualified">
+			
+	<xsd:element name="choose" type="choiceElement">
+		<xsd:annotation>
+			<xsd:documentation>Allows to choose a code fragment to be used according to conditions. Needs to contain at least one "when" element and may only be used inside an interface definition (douiDefinition/interfaces/interface or its children).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="choiceElement">
+		<xsd:sequence>
+			<xsd:element name="when" type="whenElement" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the fragment to be used if a conditional test is satisfied. Only the first satisfied when element in a choose is used.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="otherwise" type="otherwiseElement" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines the default fragment, if any exists. It is used if no when element has a successful test.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>	
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="whenElement">
+		<xsd:complexContent>
+			<xsd:extension base="conditionalElement">
+				<xsd:attribute name="test" type="xsd:string" use="required">
+					<xsd:annotation>
+						<xsd:documentation>EL used to test whether the fragment in the when tag should be included or ignored.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="otherwiseElement">
+		<xsd:complexContent>
+			<xsd:extension base="conditionalElement" />
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:complexType name="conditionalElement" abstract="true">
+		<xsd:choice>
+			<xsd:any minOccurs="0" maxOccurs="unbounded" />
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>

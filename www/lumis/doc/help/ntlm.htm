@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>NTLM</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?ntlm.htm"; }
+  else { parent.quicksync('a3.7.2.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">NTLM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="spnego_kerberos.htm">Previous</a>&nbsp;
+     <a href="upgrade.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal </span>inclui uma implementação de autenticação integrada utilizando <span style="font-style: italic;">NTLM</span>, que<span style="font-style: italic;"> </span>é um protocolo de autenticação e negociação de segurança utilizado em diversos sistemas da <span style="font-size: 8pt; font-family: 'Times New Roman';"> </span><span style="font-style: italic;">Microsoft®</span> para prover autenticação integrada.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 97px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="456" style="width:456px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="565" style="width:565px; border: solid 1px #000000;"><p>A autenticação por <span style="font-style: italic;">NTLM</span> incluída no <span style="font-style: italic;">Lumis Portal</span> não dá suporte ao <span style="font-style: italic;">NTLMv2</span>. Em ambientes em que o servidor ou o cliente exige uso do <span style="font-style: italic;">NTLMv2</span> a autenticação integrada não funcionará. Caso não seja desejado configurar o ambiente para permitir funcionamento com o <span style="font-style: italic;">NTLM</span> (versão 1), recomenda-se utilizar a autenticação integrada por <span style="font-style: italic;"><a href="spnego_kerberos.htm">SPNEGO/Kerberos</a></span> ao invés desta.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Para utilizar o <span style="font-style: italic;">NTLM </span>é necessário configurar a classe <span style="font-family: 'Courier New'; font-style: italic;">lumis.portal.authentication.http.NtlmAuthenticator</span><span style="font-family: 'Courier New';"> no elemento &lt;</span><span style="font-family: 'Courier New'; font-style: italic;">httpAuthenticator&gt; do lumisportalconfig.xml:</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;security&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;</span><span style="font-family: 'Courier New'; color: #ff0000;">&lt;httpAuthenticator&nbsp;className="lumis.portal.authentication.http.NtlmAuthenticator"&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;">&nbsp;</p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;</span><span style="font-family: 'Courier New';">&nbsp;&lt;!--&nbsp;Uncomment&nbsp;to&nbsp;configure&nbsp;Kerberos&nbsp;Authentication&nbsp;Protocol.&nbsp;See&nbsp;Lumis&nbsp;Portal&nbsp;documentation&nbsp;for&nbsp;details.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&nbsp;&lt;configurationFile&gt;security/krb5.conf&lt;/configurationFile&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;/kerberos&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/security&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 1px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">Além disto, deve-se descomentar e configurar o filtro <span style="font-style: italic;">NtlmFilter </span>no arquivo <span style="font-style: italic;">web.xml</span>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 44px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="588" style="width:588px; border: solid 1px #000000;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&lt;!--</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;The&nbsp;below&nbsp;example&nbsp;is&nbsp;the&nbsp;NTLM&nbsp;filter&nbsp;required&nbsp;to&nbsp;use&nbsp;the</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;NtlmAuthenticator.&nbsp;To&nbsp;enable&nbsp;the&nbsp;NTLM&nbsp;filter&nbsp;uncomment&nbsp;it</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;and&nbsp;set&nbsp;the&nbsp;jcifs&nbsp;properties&nbsp;as&nbsp;this&nbsp;filter's&nbsp;parameters.</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;See&nbsp;<a href="http://jcifs.samba.org/src/docs/ntlmhttpauth.html#props" target="_blank" class="weblink">http://jcifs.samba.org/src/docs/ntlmhttpauth.html#props</a></span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;for&nbsp;detailed&nbsp;documentation&nbsp;for&nbsp;jcifs&nbsp;properties&nbsp;(basic</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;authentication&nbsp;is&nbsp;not&nbsp;supported).</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&lt;filter&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;filter-name&gt;NtlmFilter&lt;/filter-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;filter-class&gt;lumis.portal.authentication.http.NtlmFilter&lt;/filter-class&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-name&gt;jcifs.http.domainController&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-value&gt;10.200.10.2&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-name&gt;jcifs.smb.client.domain&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-value&gt;DOMAIN_NAME&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-name&gt;jcifs.smb.client.username&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-value&gt;A_LOGIN_FOR_THE_SPECIFIED_DOMAIN&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-name&gt;jcifs.smb.client.password&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-value&gt;THE_PASSWORD_FOR_THE_LOGIN&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-name&gt;jcifs.util.loglevel&lt;/param-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&nbsp;&lt;param-value&gt;1&lt;/param-value&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;/init-param&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&lt;/filter&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&lt;filter-mapping&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;filter-name&gt;NtlmFilter&lt;/filter-name&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&nbsp;&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;&lt;/filter-mapping&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New'; color: #ff0000;">&nbsp;--&gt;</span>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 35px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 97px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="456" style="width:456px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="565" style="width:565px; border: solid 1px #000000;"><p>- Para configurar as propriedades do <span style="font-style: italic;">NTLM</span> , consulte:</p>
+<p style="margin: 14px 0px 0px 0px;"><a href="http://jcifs.samba.org/src/docs/ntlmhttpauth.html#props" target="_blank" class="weblink">http://jcifs.samba.org/src/docs/ntlmhttpauth.html#props</a>.</p>
+<p style="margin: 14px 0px 0px 0px;">- Verificar no arquivo <span style="font-style: italic;">web.xml</span> a configuração do parâmetro <span style="font-style: italic;">loglevel</span>, pois pode ser útil na depuração da autenticação do <span style="font-style: italic;">NTLM</span>. Neste parâmetro pode ser configurado o nível de detalhamento do <span style="font-style: italic;">log.</span> A <span style="font-style: italic;">URL</span> acima exemplifica em maiores detalhes essa configuração.</p>
+<p style="margin: 14px 0px 0px 0px;">- A autenticação integrada não ocorre quando a página é pública.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

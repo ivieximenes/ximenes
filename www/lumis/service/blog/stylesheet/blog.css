@@ -1,0 +1,32 @@
+/* $Revision: 15491 $ $Date: 2013-06-16 14:14:00 -0300 (Sun, 16 Jun 2013) $ */
+
+.lumis-service-blog-blogDetails .lum-list-item .lum-content-header .lum-content-meta-information {
+	display:inline-block;
+	padding-right:5px;
+}
+.lumis-service-blog-blogDetails .lum-list-item .lum-content-header .lum-actions {
+	display:inline-block;
+}
+
+.lumis-service-blog-blogPostDetails .lum-content .lum-content {
+	border-top:1px solid #cdcdcd;
+	padding-top:15px;
+	margin-top:25px;
+}
+.lumis-service-blog-blogPostDetails .lum-content .lum-header-buttons {
+	float:left;
+}
+.lumis-service-blog-blogPostDetails .lum-content .lum-content .lum-content-header {
+	padding-bottom:7px;
+}
+.lumis-service-blog-blogPostDetails .lum-content .lum-content .lum-content-title {
+	font-size:12px;
+	color:#000;
+	display:inline-block;
+	padding-left:15px;
+	padding-top:4px;
+}
+
+.lumis-service-blog-addBlogPostComment .lum-content .lum-content .lum-content-title {
+	font-weight:normal;
+}

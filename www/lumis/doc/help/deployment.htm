@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Deployment</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?deployment.htm"; }
+  else { parent.quicksync('a7.5.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Deployment</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="multiserver.htm">Previous</a>&nbsp;
+     <a href="deployment_e_historico_de_pacotes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Lumis Portal </span>provê ferramentas que visam facilitar o deployment de projetos em um dado ambiente. O portal utiliza-se de três níveis de artefatos para fazer o deploy de projetos: componentes, módulos e pacotes. Cada um desses é descrito abaixo.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Componentes</span></p>
+<p>Componentes são unidades de aplicações que podem possuir uma versão para controle, declaração de dependência de outros componentes, pacotes Java, serviços, temas, contextos de negócio, estrutura de canais e arquivos públicos (arquivos que ficarão nos diretórios estáticos dos websites). Não existe deployment de componentes puros no portal. Um componente deve sempre pertencer a um módulo e para que o componente seja instalado no portal, seu módulo deve ser instalado. Nesse caso, a instalação do módulo acarretará na instalação do componente também.</p>
+<p>Um componente é definido pelo seu <a href="definicao_de_componente.htm">arquivo de definição</a>. Para maiores informação sobre componentes, veja a seção <a href="desenv_componentes.htm">Componentes</a>.</p>
+<p>O portal provê uma lista de todos os componentes instalados no portal. Para informações da lista de componentes, veja a seção <a href="gerenciador_de_componentes.htm">Gerenciador de componentes</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Módulos</span></p>
+<p>Módulos são unidades de <span style="font-style: italic;">deployment</span> de aplicações que podem conter pacotes Java, serviços, temas, contextos de negócio e componentes. Ao instalar (ou atualizar) um módulo, todos os seus artefatos serão disponibilizados. Suas classes Java ficarão disponíveis em um classloader, seus serviços, seus temas, seus contextos de negócio e seus componentes serão registrados e disponibilizados. Um módulo deve conter um <a href="definicao_de_modulo.htm">arquivo de definição</a> que traz informações importantes sobre ele. Para maiores informações sobre módulos, veja a seção <a href="desenv_modulos.htm">Módulos</a>.</p>
+<p>O portal provê uma lista administrativa de todos os módulos do portal. Para informações sobre a lista de módulos, veja a seção <a href="gerenciador_de_modulos.htm">Gerenciador de módulos</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Pacotes</span></p>
+<p>Pacotes são unidades de <span style="font-style: italic;">deployment </span>de aplicações que podem conter scripts de instalação, módulos e comandos para ajustes diversos. Para maiores informações sobre pacotes, veja a seção <a href="desenv_pacotes.htm">Pacotes</a>.</p>
+<p>O portal provê um histórico de instalações de pacotes no portal. Para informações sobre o histórico de pacotes, veja a seção <a href="deployment_e_historico_de_pacotes.htm">Histórico de pacotes</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Recomendações</span></p>
+<p>É altamente recomendado que a seção de <a href="recomendacoes_e_boas_praticas.htm">Recomendações</a> seja lida, pois a mesma contém informações úteis e importantes.</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>Para informações sobre como desenvolver itens para deployment, veja a seção <a href="deployment_desenv.htm">Deployment</a>, em Customização e Desenvolvimento.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

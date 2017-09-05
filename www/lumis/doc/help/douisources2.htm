@@ -1,0 +1,234 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>sources</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douisources2.htm"; }
+  else { parent.quicksync('a8.3.5.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">sources</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douiarquivodefinicao.htm">Previous</a>&nbsp;
+     <a href="douifilters.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">No arquivo <span style="font-style: italic;">douidefinition.xml</span>, o <span style="font-style: italic;">source</span> é definido através do elemento <span style="font-style: italic;">&lt;source&gt;</span>, sob o elemento <span style="font-style: italic;">&lt;<a href="../xsd/doui/schemas/douidefinition_xsd/complexTypes/sources.html" target="_blank" class="weblink">sources</a>&gt;</span>, e sua classe é definida através dos atributos <span style="font-style: italic;">type</span> (no caso de <span style="font-style: italic;">sources</span> padrão) e <span style="font-style: italic;">className</span> (no caso de <span style="font-style: italic;">sources</span> não padrão) do elemento <span style="font-style: italic;">&lt;source&gt;</span>. Portanto, o elemento <span style="font-style: italic;">&lt;sources&gt;, </span>lista as fontes de dados disponíveis para o serviço, identificando-as pelo atributo <span style="font-style: italic;">id.</span></p>
+<p>&nbsp;</p>
+<p>No nível do serviço (sob o elemento <span style="font-style: italic;">&lt;service&gt;</span>), o <span style="font-style: italic;">source</span> deve definir todos os seus campos que poderão ser utilizados nas interfaces. Cada interface, em seu nível de definição (ou seja, sob o elemento <span style="font-style: italic;">&lt;interface&gt;</span>), define quais campos irá utilizar, evitando consultar mais campos que o necessário. Caso não defina, todos os campos definidos a nível de <span style="font-style: italic;">source</span> serão utilizados.</p>
+<p style="margin: 8px 0px 0px 0px;">Cada <span style="font-style: italic;">source</span> possui um identificador único na interface, definido através do atributo <span style="font-style: italic;">id</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Uma alternativa para recuperação de dados de uma tabela ou arquivo é a utilização de <span style="font-style: italic;">data providers, </span>cuja implementação deve ser referenciada no elemento <span style="font-style: italic;">&lt;dataProviderclassName&gt;.</span>Para definir a classe de um <span style="font-style: italic;">data provider</span>, utiliza-se o elemento <span style="font-style: italic;">&lt;dataProviderClassName&gt;</span> sob o elemento <span style="font-style: italic;">&lt;source&gt;</span>. O atributo type de uma definição de <span style="font-style: italic;">source</span> define não apenas uma classe de <span style="font-style: italic;">source</span>, mas também uma classe de <span style="font-style: italic;">data provider</span>. Portanto, caso seja definido tanto o atributo <span style="font-style: italic;">type</span> quanto o elemento <span style="font-style: italic;">&lt;dataProviderClassName&gt;,</span> este último terá precedência sobre o primeiro.</p>
+<p style="margin: 8px 0px 0px 0px;">Geralmente, cada fonte de dados possui, ao menos, os seguintes elementos: <span style="font-style: italic;">&lt;table&gt;</span>, <span style="font-style: italic;">&lt;fields&gt;</span> e <span style="font-style: italic;">&lt;field&gt;</span>. </p>
+<p style="margin: 8px 0px 0px 0px;">O elemento <span style="font-style: italic;">&lt;table&gt;</span> é utilizado principamente quando o <span style="font-style: italic;">source</span> é do tipo tabular, ou seja atributo <span style="font-style: italic;">type="table"</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">O elemento <span style="font-style: italic;">&lt;fields&gt;</span> possui a lista dos campos que fazem parte da tabela e serão utilizados pelo serviço, cada um deles especificado na tag <span style="font-style: italic;">&lt;field&gt;</span>.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 6px 0px 7px;"><table width="583" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="middle" width="583" bgcolor="#8c8c8c" style="width:583px; height:29px; background-color:#8c8c8c; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;"><span style="font-weight: bold; color: #ffffff;">Atributos mais utilizados pela tag &lt;field&gt;</span></p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Verificar o lumisdata/def/lumis/doui/douidefinition.xsd</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">id</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:29px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Este é o nome do campo da tabela ou de uma consulta SQL.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">name</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:29px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Nome do campo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">dataType</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:29px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Utilizado para definir o tipo de dados. Os possíveis tipos de dados são:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-family: 'Times New Roman';"> </span>string</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> integer</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> double</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> date</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> dateTime</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> time</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> guid</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> html</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> text</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> boolean</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> file</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> files</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> image</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> document</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">No field cujo <span style="font-style: italic;">dataType</span> é “double”, pode-se colocar um atributo “pattern”, cujo valor define o padrão do número que esse campo utilizará. Esse padrão é composto pelos seguintes caracteres:</p>
+<p style="margin: 8px 0px 0px 0px;"> - 0: dígito, aparece mesmo se zero;</p>
+<p style="margin: 8px 0px 0px 0px;"> - #: dígito, se for zero, não aparece;</p>
+<p style="margin: 8px 0px 0px 0px;"> - .: separador decimal;</p>
+<p style="margin: 8px 0px 0px 0px;">- ,: separador de agrupamento;</p>
+<p style="margin: 8px 0px 0px 0px;">Exemplos:</p>
+<p>“#, ##0.00”: Dinheiro</p>
+<p style="margin: 8px 0px 0px 0px;">O valor 1234,567890 aplicado ao padrão abaixo para português do Brasil</p>
+<p style="margin: 8px 0px 0px 0px;">#,##0.##”: “1.234,57”</p>
+<p style="margin: 8px 0px 0px 0px;">#,##0.#########”: “1.234,56789”</p>
+<p style="margin: 8px 0px 0px 0px;">#,##0.000000000”: “1.234,567890000”</p>
+<p style="margin: 8px 0px 0px 0px;">“000,000”:”001.235”</p>
+<p style="margin: 8px 0px 0px 0px;">“0”:”12345”</p>
+<p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:29px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">display</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:29px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Se o campo será exibido na interface.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:5px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Required</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:5px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Determina se o campo vai ser “not null”.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:38px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">isSearchable</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:38px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Determina se o campo vai fazer parte do índice da busca.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:38px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">isPrimarykey</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:38px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Um campo quando definido com o atributo <span style="font-style: italic;">isPrimaryKey=“true” </span>será utilizado como identificador do conteúdo. &nbsp;Somente um campo pode ser definido como chave primária por <span style="font-style: italic;">source</span> .</p>
+<p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:38px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">isPrimaryName</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:38px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Um campo quando definido com o atributo <span style="font-style: italic;">isPrimaryName=“true” </span>será utilizado como título do conteúdo. &nbsp;Somente um campo pode ser definido como nome primário por <span style="font-style: italic;">source</span> .</p>
+<p style="margin: 8px 0px 8px 0px;">Além disso, o valor desse campo será utilizado na <span style="font-style: italic;">tag</span>  <span style="font-style: italic;">&lt;title&gt; </span>a ser exibido no <span style="font-style: italic;">header</span> <span style="font-style: italic;">html</span> da página de detalhes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:38px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">isIntroduction</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:38px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Um campo quando definido com o atributo <span style="font-style: italic;">isIntroduction=“true”</span> será utilizado como texto introdutório ou descrição do conteúdo. Somente um campo pode ser definido como introdução por <span style="font-style: italic;">source</span> .</p>
+<p style="margin: 8px 0px 8px 0px;">Além disso, o valor desse campo será utilizado na <span style="font-style: italic;">meta</span>-<span style="font-style: italic;">tag</span>  <span style="font-style: italic;">description</span> a ser exibido no <span style="font-style: italic;">header</span> <span style="font-style: italic;">html</span> da página de detalhes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="161" bgcolor="#dedede" style="width:161px; height:38px; background-color:#dedede; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">isKeywords</span></p>
+</td>
+<td valign="middle" width="422" style="width:422px; height:38px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Um campo pode ser definido como <span style="font-style: italic;">keyword</span> para que seu valor seja utilizado na <span style="font-style: italic;">meta-tag keywords</span> no <span style="font-style: italic;">header</span> <span style="font-style: italic;">html</span> de uma página de detalhes.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">No exemplo abaixo, o repositório de dados possui característica tabular definido pelo atributo type="table" e os dados estão sendo fornecidos tanto pela tabela "lum_sample" quanto pelo <span style="font-style: italic;">data provider </span>que está recuperando dados de uma outra fonte através da classe "lumis.sample.testDataProvider".<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="631" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;source&nbsp;id=“default”&nbsp;type=“table”&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;dataProviderClassName&gt;lumis.sample.testDataProvider&lt;/dataProviderClassName&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;table&gt;lum_sample&lt;/table&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;fields&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;field&nbsp;id=“id”&nbsp;dataType=“guid”&nbsp;name=“identificador”&nbsp;isPrimaryKey=“true”/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;field&nbsp;id=“name”&nbsp;dataType=“string”&nbsp;name=“nome”&nbsp;isPrimaryName=“true”/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;field&nbsp;id=“description”&nbsp;dataType=“html”&nbsp;name=“descrição”&nbsp;/&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;/fields&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/source&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Na interface são especificados os <span style="font-style: italic;">sources</span> que estarão disponíveis para ela. O <span style="font-style: italic;">id</span> do source precisa corresponder ao <span style="font-style: italic;">id</span> de um <span style="font-style: italic;">source</span> definido em <span style="font-style: italic;">service</span>. O primeiro <span style="font-style: italic;">source</span> listado é considerado o <span style="font-style: italic;">source</span> <span style="font-style: italic;">default</span> da interface. Na interface, a definição de um <span style="font-style: italic;">source</span> pode ser alterada. As especificações na definição do <span style="font-style: italic;">source</span> na interface têm prioridade sobre as que estão definidas no <span style="font-style: italic;">source</span> no <span style="font-style: italic;">service</span>. Quando um item não for especificado na definição da interface, será utilizada a especificação definida em <span style="font-style: italic;">service</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Quando dois <span style="font-style: italic;">sources</span> tipo <span style="font-style: italic;">table</span> possuem um relacionamento e ambos são utilizados em uma interface, no <span style="font-style: italic;">sql</span> a ser gerado para obter seus dados, é realizado um <span style="font-style: italic;">join</span> entre as tabelas dos <span style="font-style: italic;">sources</span> conforme definido em seu relacionamento.</p>
+<p style="margin: 19px 0px 0px 0px;"><span style="font-weight: bold;">Acesso a Banco de Dados Externos</span></p>
+<p style="margin: 19px 0px 0px 0px;">Para configurar outras conexões no portal, basta criar uma pasta com o nome <span style="font-style: italic;">connection</span> na pasta <span style="font-style: italic;">lumisdata/config</span> e criar arquivos <span style="font-style: italic;">xml</span> igual ao <span style="font-style: italic;">lumishibernate.cfg.xml</span>. O nome do arquivo servirá de identificador para a aplicação utilizar.</p>
+<p style="margin: 19px 0px 0px 0px;">Suponha um serviço que exibe dados de uma tabela “Region” de um banco de dados externo. Para isso, o serviço foi implementado pata ter uma interface de lista que exibe as regiões cadastradas.</p>
+<p style="margin: 8px 0px 0px 0px;">Deve-se criar um arquivo com o nome do banco (Ex: <span style="font-style: italic;">sqlnorthwind.xml</span>) em <span style="font-style: italic;">/lumisdata/config/connection</span> (criar este diretório). Este arquivo contém a configuração do <span style="font-style: italic;">hibernate</span>. Essa configuração define como é feita a conexão com o banco de dados.</p>
+<p style="margin: 8px 0px 0px 0px;">Para criar este arquivo, copie o conteúdo do arquivo <span style="font-style: italic;">lumishibernate.cfg.xml</span> e salve com o nome do banco com extensão <span style="font-style: italic;">.XML</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Verifique que o arquivo copiado possui o seguinte código:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 20px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="624" style="width:624px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;property&nbsp;name="cache.provider_class"&gt;lumis.portal.dao.hibernate.PortalCacheProvider&lt;/property&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">A classe especificada irá permitir que o <span style="font-style: italic;">cache</span> do <span style="font-style: italic;">hibernate</span> seja corretamente sincronizado em ambiente <span style="font-style: italic;">multi-server</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">No <span style="font-style: italic;">source</span> do <span style="font-style: italic;">douidefinition.xml</span>, deve haver o elemento <span style="font-style: italic;">connectionId</span> contendo tal arquivo conexão.</p>
+<p style="margin: 8px 0px 0px 0px;">Caso não seja utilizado o elemento <span style="font-style: italic;">connectionId</span>, por <span style="font-style: italic;">default</span> o serviço utilizará as configurações de conexão definidas em <span style="font-style: italic;">lumisdata/config/lumishibernate.cfg.xml</span>.<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="103" style="width:103px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="505" style="width:505px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="608" style="width:608px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">Uma outra maneira, não utilizando <span style="font-style: italic;">DOUI</span>, para conectar em outras bases de dados, pode ser utilizado o método <span style="font-style: italic;">ITransaction.getByConnectionid(String id)</span>, onde id é o arquivo.xml.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Segue-se um exemplo do arquivo <span style="font-style: italic;">doudefinition.xml</span> do serviço citado que exibe uma lista de regiões, sendo que essas regiões pertencem a uma tabela de um banco de dados externo.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;doui:douiDefinition&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;xmlns:doui=http://www.lumis.com.br/lumisportal/xsd/doui</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;xmlns:control="http://www.lumis.com.br/douicontrols&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;service&nbsp;id="unimed.service.region"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;sources&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;source&nbsp;id="default"&nbsp;type="table"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;connectionId&gt;sqlnorthwind.xml&lt;/connectionId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&gt;Region&lt;/table&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;fields&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="RegionId"&nbsp;name="STR_ID"&nbsp;dataType="guid"&nbsp;isPrimaryKey="true"&nbsp;display="false"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;field&nbsp;id="RegionDescription"&nbsp;name="Description"&nbsp;dataType="string"&nbsp;required="true"&nbsp;isPrimaryName="true"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fields&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;/source&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/sources&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/service&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/doui:douiDefinition&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 1px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 1px;">Recomenda-se criar um arquivo <span style="font-style: italic;">xml</span> para cada <span style="font-style: italic;">datasource</span> que estará disponível para a aplicação utilizando como nome do arquivo o mesmo nome do <span style="font-style: italic;">datasource</span>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

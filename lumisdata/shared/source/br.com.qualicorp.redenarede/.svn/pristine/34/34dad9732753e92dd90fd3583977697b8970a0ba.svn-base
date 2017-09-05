@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>40286D2C51B5C4870151B5D46D25047B</id>
+  <interface-id>lumis.service.hierarchicalcontent.contentChildren</interface-id>
+  <name>Filhos Conteúdo</name>
+  <file-path>lumis/service/hierarchicalcontent/style/filhos-conteudo.xsl</file-path>
+</interface-style>

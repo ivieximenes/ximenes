@@ -1,0 +1,194 @@
+/* $Revision: 16344 $ $Date: 2014-07-14 19:07:54 -0300 (Mon, 14 Jul 2014) $ */
+.th-icon  {
+	width:29px !important;
+	overflow:hidden;
+	font-size:0.01em;
+	text-indent:-9999px;
+	margin-right:10px;
+}
+
+.primarykey{
+	background:url(../image/key.png) no-repeat center center;
+}
+
+.featured{
+	background:url(../image/featured.png) no-repeat center center;
+}
+
+.introduction{
+	background:url(../image/introduction.png) no-repeat center center;
+}
+
+.searchable{
+	background:url(../image/searchable.png) no-repeat center center;
+}
+
+.campos {
+	border-collapse:collapse;
+	font-size:12px;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.campos th {
+	height: 12px;
+	font-weight: normal;
+	text-align: left;
+	margin-right: 5px !important;
+}
+
+.campos td input {
+	 position:relative;
+	 top:2px;
+	 margin-right:10px;
+	 width:207px;
+}
+
+.tablecheck{
+	width:13px !important;
+	position:relative;
+	left:4px;
+	top:-20px;
+}
+
+.lum-tabs{
+	display:none;
+}
+.lum-tabs-tab-box{
+	left: 15px !important;
+}
+.goback {
+	position: absolute;
+	margin-top: -39px;
+	right: 20px;
+}
+.remove{
+	text-align: right;
+	overflow: hidden;
+	display: inline-block;
+	text-indent: 9999px;
+	height: 14px;
+	width: 14px;
+	background:url(../image/del.png) no-repeat center center;
+}
+.lum-wiz-field-advanced-properties{
+	width:100%;
+}
+.lum-wiz-field-advanced-properties tr td:first-child{
+	width:150px;
+}
+
+.lum-label{
+	padding: 5px 10px !important;
+}
+
+h2.titlearea{
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:15px;
+	font-weight:normal;
+	margin:0;
+	color:#464646;
+}
+.subsection{
+	display:block;
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:0 0 5px 0;
+	margin:0 0 10px 0;
+	color:#909090;
+	border-bottom:1px solid #d3d3d3;
+}
+
+.marginbottom{
+	margin-bottom:20px !important;
+}
+.marginbottom-half{
+	margin-bottom:10px !important;
+}
+
+.grid input {
+	display:inline-block !important;
+	width:350px !important;
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	color:#909090;
+	border-radius:3px;
+	padding:5px 10px !important;
+	border: 1px solid #cfcfd1;
+	margin-bottom:5px;
+}
+
+.label{
+	display:inline-block;
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	margin:0 0 3px 0;
+	color:#464646;
+}
+
+.nova-linha{
+	display:block;
+}
+
+.label-option{
+	position: relative;
+	top: -3px;
+}
+
+a.link{
+text-decoration:none;
+font-weight:normal;
+color:#f58500;
+}
+
+a.link:hover{
+text-decoration:underline;
+}
+
+.nomecampo{
+	width:209px !important;
+}
+
+.tipocampo{
+	width:123px !important;
+}
+
+.full {
+margin-left:0px;
+}
+
+.options {
+	padding-right: 0px;
+	display: block;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	color: #464646;
+	border-radius: 3px;
+	border: 1px solid #cfcfd1;
+	height: 28px !important;
+	min-width: 110px;
+	position: relative;
+	top: 2px;
+}
+
+.marginleft{
+	padding-left:20px;
+}
+
+.marginleft-half{
+	padding-left:12px;
+}
+
+.addfield {
+ width:177px !important;
+}
+
+.activearea {
+	width:600px;
+	height:400px;
+	scroll:auto;
+	margin-right:20px;
+	margin-left:3px;
+	margin-bottom:3px;
+}

@@ -1,0 +1,3 @@
+﻿
+FCKLang.LumisHtmlEditorBtn = 'Edit' ;
+

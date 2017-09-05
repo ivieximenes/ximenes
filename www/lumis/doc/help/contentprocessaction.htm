@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>ProcessAction</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?contentprocessaction.htm"; }
+  else { parent.quicksync('a8.4.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ProcessAction</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="contentcontroles.htm">Previous</a>&nbsp;
+     <a href="contentmetadados.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Como verificado em <a href="douiprocessactions.htm">DOUI--&gt;Process Actions</a>, a execução dos mesmos é realizada pelo P<span style="font-style: italic;">rocessActionContainer</span> que é responsável por instanciar as classes que implementam a interface <span style="font-style: italic;">IProcessActionHandler</span> .</p>
+<p style="margin: 8px 0px 0px 0px;">Porém os  <span style="font-style: italic;">process actions handlers</span> padrão de <span style="font-style: italic;">doui</span> para adicionar, atualizar e excluir dados não podem ser usados em <span style="font-style: italic;">sources</span> de <span style="font-style: italic;">content</span>, porque estes precisam também manipular dados específicos de metadados. No lugar de cada um desses  <span style="font-style: italic;">process actions handlers</span> de <span style="font-style: italic;">DOUI</span> há um de <span style="font-style: italic;">content</span> que deve ser usado em seu lugar quando o <span style="font-style: italic;">source</span> for do tipo “contentTable”.</p>
+<p style="margin: 8px 0px 0px 0px;">A tabela abaixo exibe as classes de  <span style="font-style: italic;">process actions handlers</span> que devem ser utilizadas no lugar de cada uma de <span style="font-style: italic;">DOUI</span>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="260" style="width:260px; border: solid 1px #000000;"><p style="text-align: center; margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Doui</span></p>
+</td>
+<td valign="top" width="320" style="width:320px; border: solid 1px #000000;"><p style="text-align: center; margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Content</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="260" style="width:260px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;">tableAddDataProcessActionHandler</span></p>
+</td>
+<td valign="top" width="320" style="width:320px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;"><a href="../api/lumis/content/table/ContentTableAddDataProcessActionHandler.html" target="_blank" class="weblink">contentTableAddDataProcessActionHandler</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="260" style="width:260px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;">tableUpdateDataProcessActionHandler</span></p>
+</td>
+<td valign="top" width="320" style="width:320px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;"><a href="../api/lumis/content/table/ContentTableUpdateDataProcessActionHandler.html" target="_blank" class="weblink">contentTableUpdateDataProcessActionHandler</a></span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="260" style="width:260px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;">tableDeleteDataProcessActionHandler</span></p>
+</td>
+<td valign="top" width="320" style="width:320px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;"><a href="../api/lumis/content/table/ContentTableDeleteDataProcessActionHandler.html" target="_blank" class="weblink">contentTableDeleteDataProcessActionHandler</a></span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

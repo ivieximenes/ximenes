@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Autorização</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?autorizacao.htm"; }
+  else { parent.quicksync('a2.1.2.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Autorização</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="sincronizaorepositoriosexternos.htm">Previous</a>&nbsp;
+     <a href="cache.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O controle de acesso do <span style="font-style: italic;">Lumis Portal</span> é baseado em <span style="font-style: italic;">ACL</span> (<span style="font-style: italic;">Access Control List</span>). A <span style="font-style: italic;">ACL</span> é o conjunto de permissões de um objeto que está associado a um <span style="font-style: italic;">principal</span> (usuário ou grupo). A um <span style="font-style: italic;">principal</span> pode-se atribuir uma ou mais permissões de um objeto.</p>
+<p style="margin: 14px 0px 0px 0px;">Mesmo em cenários de <a href="sincronizaorepositoriosexternos.htm">autenticação</a> integrada com outros repositórios (como <span style="font-style: italic;">LDAP</span>), o <span style="font-style: italic;">Lumis</span> precisa manter uma representação dos usuários e grupos, para que possa fazer o controle do acesso dos usuários aos diferentes elementos do portal, tais como canais, páginas e serviços.</p>
+<p style="margin: 14px 0px 0px 0px;">Os objetos que podem ter <span style="font-style: italic;">ACL</span> são: Portal, Canal, Grupo, Página, Serviço e Instância de Serviço. Estes possuem sua própria <span style="font-style: italic;">ACL</span>.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="segportal002.jpg" width="350" height="361" border="0" alt="segPortal002" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Exemplo:</p>
+<p style="margin: 14px 0px 0px 0px;">Na <span style="font-style: italic;">ACL</span> do objeto Serviço, tem-se as seguintes permissões:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Gerenciar segurança do serviço,</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Gerenciar serviço e</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Criar instância de Serviço.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Ao usuário “Administrador”, pode-se atribuir a permissão <span style="font-style: italic;">Gerenciar segurança do serviço</span>, que implica, por conseguinte as outras duas permissões.</p>
+<p style="margin: 14px 0px 0px 0px;">Ao grupo “Desenvolvedores”, pode-se atribuir a permissão <span style="font-style: italic;">Criar Instância de Serviço</span>.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Permitir ou Negar</span></p>
+<p style="margin: 14px 0px 0px 0px;">É possível “permitir” (<span style="font-style: italic;">allow</span>) ou “negar” (<span style="font-style: italic;">denny</span>) uma permissão a um <span style="font-style: italic;">principal</span>. “Negar” uma permissão prevalece sobre “Permitir”.</p>
+<p style="margin: 14px 0px 0px 0px;">Por exemplo:</p>
+<p style="margin: 14px 0px 0px 0px;">O usuário “Pedro” pertence ao grupo “Autores”. Na <span style="font-style: italic;">ACL</span> do “Canal A”, define-se que ao <span style="font-style: italic;">principal</span> “Pedro” é permitido <span style="font-style: italic;">Gerenciar Página</span> e ao grupo “Autores” esta mesma permissão foi negada. Como “Pedro” está no grupo “Autores”, esta permissão também será negada a ele.</p>
+<p style="margin: 14px 0px 0px 0px;">A opção de negar uma permissão, normalmente, é utilizada quando a herança entre os objetos está habilitada e, portanto, nas configurações herdadas, é desejado negar alguma(s) delas.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Herança</span></p>
+<p style="margin: 14px 0px 0px 0px;">Um objeto pode herdar a configuração de acesso de outro objeto, de acordo com a hierarquia entre eles. A <span style="font-style: italic;">ACL</span> herdada do objeto pai pode ser modificada na <span style="font-style: italic;">ACL</span> local. Abaixo, a hierarquia entre os objetos do <span style="font-style: italic;">Lumis Portal Server</span>.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="segportal004.jpg" width="243" height="261" border="0" alt="segPortal004" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Um canal pode conter um ou mais canais. Neste caso, o canal filho pode herdar o controle de acesso do canal pai.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Permissões</span></p>
+<p style="margin: 14px 0px 0px 0px;">Cada objeto do portal possui seu conjunto de permissões visualizadas no controle de acesso do mesmo. Tais permissões quando setadas, implicam outras permissões. Consultar a documentação do controle de acesso de cada objeto para visualizar suas permissões.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table width="637" cellspacing="0" cellpadding="0" border="1" style="border: solid 2px #000000; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="105" style="width:105px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="532" style="width:532px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="637" style="width:637px; border: solid 1px #000000;"><p>A negação de uma permissão propaga no sentindo oposto ao das implicações das permissões. Isso significa que, se uma permissão "A" implica uma permissão "B", ao negar esta última, a permissão "A" também será negada.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: left; margin: 0px 0px 0px 8px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 8px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

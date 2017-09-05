@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ValidarPrestador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:ValidarPrestadorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidarPrestadorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidarPrestadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarPrestadorResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastrarPrestador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:CadastrarPrestadorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CadastrarPrestadorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SeuNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPFCNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RazaoSocial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeuEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmaSenha" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CadastrarPrestadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastrarPrestadorResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReenviarSenhaPrestador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:ReenviarSenhaPrestadorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReenviarSenhaPrestadorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFCNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeuEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReenviarSenhaPrestadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReenviarSenhaPrestadorResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarSenhaPrestador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:AlterarSenhaPrestadorDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlterarSenhaPrestadorDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFCNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeuEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SenhaAtual" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NovaSenha" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmaSenha" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AlterarSenhaPrestadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlterarSenhaPrestadorResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidarPrestadorSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarPrestador" />
+  </wsdl:message>
+  <wsdl:message name="ValidarPrestadorSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarPrestadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastrarPrestadorSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastrarPrestador" />
+  </wsdl:message>
+  <wsdl:message name="CadastrarPrestadorSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastrarPrestadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReenviarSenhaPrestadorSoapIn">
+    <wsdl:part name="parameters" element="tns:ReenviarSenhaPrestador" />
+  </wsdl:message>
+  <wsdl:message name="ReenviarSenhaPrestadorSoapOut">
+    <wsdl:part name="parameters" element="tns:ReenviarSenhaPrestadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterarSenhaPrestadorSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaPrestador" />
+  </wsdl:message>
+  <wsdl:message name="AlterarSenhaPrestadorSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaPrestadorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Qualicorp_PortalR2_PortalLumis_WebserviceSoap">
+    <wsdl:operation name="ValidarPrestador">
+      <wsdl:input message="tns:ValidarPrestadorSoapIn" />
+      <wsdl:output message="tns:ValidarPrestadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarPrestador">
+      <wsdl:input message="tns:CadastrarPrestadorSoapIn" />
+      <wsdl:output message="tns:CadastrarPrestadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReenviarSenhaPrestador">
+      <wsdl:input message="tns:ReenviarSenhaPrestadorSoapIn" />
+      <wsdl:output message="tns:ReenviarSenhaPrestadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenhaPrestador">
+      <wsdl:input message="tns:AlterarSenhaPrestadorSoapIn" />
+      <wsdl:output message="tns:AlterarSenhaPrestadorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Qualicorp_PortalR2_PortalLumis_WebserviceSoap" type="tns:Qualicorp_PortalR2_PortalLumis_WebserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarPrestador">
+      <soap:operation soapAction="http://tempuri.org/ValidarPrestador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarPrestador">
+      <soap:operation soapAction="http://tempuri.org/CadastrarPrestador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReenviarSenhaPrestador">
+      <soap:operation soapAction="http://tempuri.org/ReenviarSenhaPrestador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenhaPrestador">
+      <soap:operation soapAction="http://tempuri.org/AlterarSenhaPrestador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Qualicorp_PortalR2_PortalLumis_WebserviceSoap12" type="tns:Qualicorp_PortalR2_PortalLumis_WebserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarPrestador">
+      <soap12:operation soapAction="http://tempuri.org/ValidarPrestador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarPrestador">
+      <soap12:operation soapAction="http://tempuri.org/CadastrarPrestador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReenviarSenhaPrestador">
+      <soap12:operation soapAction="http://tempuri.org/ReenviarSenhaPrestador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenhaPrestador">
+      <soap12:operation soapAction="http://tempuri.org/AlterarSenhaPrestador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Qualicorp_PortalR2_PortalLumis_Webservice">
+    <wsdl:port name="Qualicorp_PortalR2_PortalLumis_WebserviceSoap" binding="tns:Qualicorp_PortalR2_PortalLumis_WebserviceSoap">
+      <soap:address location="http://localhost:50358/Qualicorp.PortalR2.PortalLumis.Webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Qualicorp_PortalR2_PortalLumis_WebserviceSoap12" binding="tns:Qualicorp_PortalR2_PortalLumis_WebserviceSoap12">
+      <soap12:address location="http://localhost:50358/Qualicorp.PortalR2.PortalLumis.Webservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

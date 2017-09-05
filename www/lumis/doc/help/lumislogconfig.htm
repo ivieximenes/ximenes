@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>LumisLogConfig</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?lumislogconfig.htm"; }
+  else { parent.quicksync('a3.9.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LumisLogConfig</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="upgrade.htm">Previous</a>&nbsp;
+     <a href="lumisportalconfig.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">As informações de <span style="font-style: italic;">log</span> são registradas em arquivos textos e seguem o padrão do <span style="font-style: italic;">W3C Extended</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">As configurações desses arquivos estão definidas no arquivo <span style="font-style: italic;">lumisdata/config/lumislogconfig.xml</span> que por sua vez segue o padrão“<span style="font-style: italic;">log4j</span>” que pode ser encontrado em <a href="http://logging.apache.org/log4j/docs/documentation.html" target="_blank" class="weblink">http://logging.apache.org/log4j/docs/documentation.html</a>.</p>
+<p style="margin: 14px 0px 0px 0px;">Para facilitar, pode-se utilizar a variável <span style="font-style: italic;">${lumisdata} </span>dentro do valor de qualquer parâmetro. Esta variável retorna o diretório desinstalação relativo ao <span style="font-style: italic;">lumisdata</span>, não necessitando explicitá-lo.</p>
+<p style="margin: 14px 0px 0px 0px;">Dentre várias configurações disponíveis no <span style="font-style: italic;">lumislogconfig</span>, uma delas é a possibilidade de receber por e-mail, os <span style="font-style: italic;">logs</span> gerados para determinado nível. Tal configuração está disponível na <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;appender name="SMTP" class="org.apache.log4j.net.SMTPAppender"&gt;</span> .</p>
+<p style="margin: 14px 0px 0px 0px;">Quando não especificado, o <span style="font-style: italic;">log4j's SMTPAppender</span> aceita apenas <span style="font-style: italic;">log</span> com nível error ou maior (<span style="font-style: italic;">fatal</span> ).</p>
+<p style="margin: 14px 0px 0px 0px;">Alguns tipos de <span style="font-style: italic;">log</span> &nbsp;disponíveis:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">debug</span>: Detalha a informação sobre o fluxo do sistema que são úteis para o debug da aplicação;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">trace</span>: Traz informações mais refinadas sobre o fluxo do sistema, que as disponíveis pelo nível <span style="font-style: italic;">debug</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">info</span>: Traz informações do progresso da aplicação;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">warn</span>: Traz informações sobre potenciais situações que podem comprometer o sistema;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">error</span>: Traz informações de erros, mas que permitem que a aplicação continue rodando;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">fatal</span>:Traz informações de erros que fazem a aplicação abortar.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Por <span style="font-style: italic;">default</span>, os <span style="font-style: italic;">logs</span> gerados pelo portal estão configurados para <span style="font-style: italic;">debug,</span> exceto para <span style="font-style: italic;">log</span> de serialização.</p>
+<p style="margin: 14px 0px 0px 0px;">Consultar a seção <a href="logsportal.htm">Logs do Portal</a> para visualizar os arquivos gerados pelo <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><a name="suportemdc"></a><span style="font-weight: bold;">Suporte ao </span><span style="font-style: italic; font-weight: bold;">MDC</span><span style="font-weight: bold;"> no </span><span style="font-style: italic; font-weight: bold;">log</span></p>
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal</span> provê suporte ao <span style="font-style: italic;">MDC </span>(<a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/MDC.html" target="_blank" class="weblink">http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/MDC.html</a>) nativamente.</p>
+<p style="margin: 14px 0px 0px 0px;">A configuração e integração do <span style="font-style: italic;">MDC </span>com o<span style="font-style: italic;"> Apache Log4J, </span>dá-se, através da classe de <span style="font-style: italic;">layout PatternLayout</span>, que já possui um caracter de conversão específico para acessar as variáveis contidas no<span style="font-style: italic;"> MDC</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Para acessar as variáveis disponíveis no <span style="font-style: italic;">MDC</span>, deve-se incluir no padrão de conversão o caracter 'X', como a seguir: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f2f2f2" border="0" style="background-color: #f2f2f2; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th valign="top" width="270" style="width:270px; border: solid 1px #000000;"><p style="text-align: center; margin: 7px 0px 7px 0px;"><span style="font-size: 9pt;">%X{&lt;nome da variável desejada&gt;}</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-weight: bold;">Variáveis Disponibilizadas:</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-weight: bold;"> Descrição: </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.user.login</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">Login</span> do usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.user.groups</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Grupos do usuário autenticado.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.user.locale</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Língua do usuário atual.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.request.client.ip</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">IP</span> do <span style="font-style: italic;">request</span> do cliente.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.website</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">Website</span> do <span style="font-style: italic;">request</span> atual.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.server.id</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Identificador do servidor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.channel.path</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Caminho real do canal atual.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.page.name</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Nome da página atual.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="208" style="width:208px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;"><span style="font-style: italic;">lumis.si.name</span></p>
+</td>
+<td valign="top" width="265" style="width:265px; border: solid 1px #000000;"><p style="text-align: left; line-height: 1.50;">Nome da instância de serviço atual.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Soluções customizadas podem adicionar variáveis customizadas ao <span style="font-style: italic;">MDC</span>. Essa adição pode ser feita de duas formas:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Diretamente pela<span style="font-style: italic;"> API MDC</span> do <span style="font-style: italic;">Apache Log4J</span>: Dessa forma, a variável passa a estar disponível para o<span style="font-style: italic;"> Log4J</span> através do <span style="font-style: italic;">MDC</span>. Porém, a mesma não estará disponível para as coletas de monitoramento pelo contexto de monitoramento;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Pela <span style="font-style: italic;">API</span> de monitoramento do portal: Dessa forma a variável fica disponível tanto no contexto de monitoramento quanto para o <span style="font-style: italic;">Log4J, </span>através do <span style="font-style: italic;">MDC</span><span style="font-family: 'Courier New';">.</span></td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

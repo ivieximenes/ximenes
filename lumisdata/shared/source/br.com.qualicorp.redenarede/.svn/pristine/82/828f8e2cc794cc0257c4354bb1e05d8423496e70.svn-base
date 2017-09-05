@@ -1,0 +1,39 @@
+package br.com.qualicorp.redenarede.service.buscapormedico.interfaces;
+
+import br.com.qualicorp.redenarede.service.buscapormedico.manager.BuscaNaRedeManager;
+import lumis.doui.service.DouiServiceInterface;
+import lumis.portal.PortalException;
+import lumis.portal.UnexpectedException;
+import lumis.portal.serviceinterface.IServiceInterfaceRenderRequest;
+import lumis.portal.serviceinterface.IServiceInterfaceRenderResponse;
+import lumis.portal.serviceinterface.ServiceInterfaceException;
+
+public class BuscaDescredenciadosInterface extends DouiServiceInterface
+{
+	public void render(IServiceInterfaceRenderRequest request, IServiceInterfaceRenderResponse response) throws ServiceInterfaceException, PortalException
+	{
+		try
+		{
+			String src = BuscaNaRedeManager.getInstance().getUrlBuscaDescredenciados(request);
+			
+			response.getWriter().append("<div style='margin-top: 40px;'>");
+			response.getWriter().append("<p class=\"blue-higlithed-inform\">Atualização de rede:</p> <br />");
+			response.getWriter().append("<p class=\"blue-higlithed-inform\">Selecione o seu plano, tipo de serviço, especialidade e local para obter o(s) resultado(s) do(s) prestador(es) descredenciado(s) e o seu substituto.</p>");
+			response.getWriter().append("</div>");
+			
+			StringBuilder iframe = new StringBuilder();
+			
+			iframe.append("<iframe frameborder=\"0\" scrolling=\"no\" ");
+			iframe.append(	"	height=\"780\"");
+			iframe.append(	"	width=\"100%\"" );
+			iframe.append(	"	src=\"").append(src).append("\">");
+			iframe.append("</iframe>");
+			
+			response.getWriter().append(iframe.toString());
+		}
+		catch(Exception e)
+		{
+			throw new UnexpectedException(e);
+		}
+	}
+}

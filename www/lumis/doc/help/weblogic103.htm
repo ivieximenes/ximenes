@@ -1,0 +1,297 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Oracle Weblogic Server 10.3</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?weblogic103.htm"; }
+  else { parent.quicksync('a3.5.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Oracle Weblogic Server 10.3</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="jboss_eap_6.htm">Previous</a>&nbsp;
+     <a href="ibmwebsphere.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Neste tópico, são descritos os passos necessários para instalação do <span style="font-style: italic;">Lumis Portal</span> no <span style="font-style: italic;">Oracle Weblogic Server</span>.</p>
+<p>&nbsp;</p>
+<p>Um ambiente <span style="font-style: italic;">Oracle Weblogic Server</span> sempre possui uma instancia especial chamada de <span style="font-style: italic;">Administration Server</span>. Normalmente, são configuradas outras instancias chamadas <span style="font-style: italic;">Managed Servers</span> onde as aplicações são instaladas. </p>
+<p>&nbsp;</p>
+<p>Abaixo estão os detalhes de ajustes que devem ser feitos na aplicação web para o funcionamento corretom com o Weblogic, e em seguida como preparar o <span style="font-style: italic;">Managed Server</span> e o <span style="font-style: italic;">Administration Server</span> para realizar o <span style="font-style: italic;">deploy</span> do <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Ajustes na aplicação web</span></p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">Weblogic Server 10.3</span> não possui suporte a <span style="font-style: italic;">Servlet 3</span>. Por isto, as seguintes alterações precisam ser feitas em relação ao <span style="font-style: italic;">WEB-INF/web.xml</span> padrão distribuído com o Lumis Portal:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>A abertura do elemento raiz <span class="f_CodeExample">&lt;web-app&gt;</span> deve ser alterado para:</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="10" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;"><span class="f_CodeExample">&lt;web-app xmlns="http://java.sun.com/xml/ns/j2ee"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee&nbsp;http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;version="2.4"&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>O elemento <span class="f_CodeExample">&lt;session-config&gt;</span>, exibido abaixo, deve ser removido:</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="10" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;"><span class="f_CodeExample">&lt;session-config&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;cookie-config&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;path&gt;/&lt;/path&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;/cookie-config&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/session-config&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Preparação do </span><span style="font-style: italic; font-weight: bold;">Administration Server</span></p>
+<p>&nbsp;</p>
+<p>Essa configuração só deve ser realizada se o <span style="font-style: italic;">deploy</span> do <span style="font-style: italic;">Lumis Portal</span> for realizado no <span style="font-style: italic;">Administration Server</span>.</p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">Para que a configuração do <span style="font-style: italic;">login module</span> do <span style="font-style: italic;">Lumis Portal</span> funcione corretamente, é preciso incluir o parâmetro <span style="font-style: italic;">-Djava.security.auth.login.config</span> na variável de ambiente <span style="font-style: italic;">JAVA_OPTIONS</span>. Esta variavél pode ser configurada no arquivo <span style="font-style: italic;">startweblogic.cmd</span>, que se encontra na pasta /bin, adicionando a linha abaixo logo depois da linha "<span style="font-style: italic;">set JAVA_OPTIONS=%SAVE_JAVA_OPTIONS%".</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="478" style="width:478px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span><span class="f_CodeExample">set&nbsp;JAVA_OPTIONS=%SAVE_JAVA_OPTIONS%</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;set&nbsp;SAVE_JAVA_OPTIONS=</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;set&nbsp;JAVA_OPTIONS=%JAVA_OPTIONS%&nbsp;-Djava.security.auth.login.config=%LUMIS_HOME%\lumisdata\config\lumissecuritylogin.config&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">É preciso instalar algumas bibliotecas (arquivos .<span style="font-style: italic;">JAR</span>) na área de bibliotecas compartilhadas no servidor de aplicação. No <span style="font-style: italic;">Oracle Weblogic Server 10.3</span>, basta copiar os arquivos JAR que estão na pasta <span style="font-style: italic;">%LUMIS_HOME%</span><span style="font-style: italic;">/lib/shared</span>, para a pasta <span style="font-style: italic;">/lib</span> existente no domínio utilizado. Ex.: <span style="font-style: italic;">WLS_HOME/user_projects/domains/LumisDomain/lib.</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">É necessário também instalar algumas blibliotecas na área endorsed. No <span style="font-style: italic;">Oracle Weblogic Server 10.3</span>, basta copiar os arquivos JAR que estão na pasta <span style="font-style: italic;">%LUMIS_HOME%</span><span style="font-style: italic;">/lib/endorsed </span>para a pasta <span style="font-style: italic;">WLS_HOME\jrockit_160_05\jre\lib\endorsed</span>. É possível alterar a área endorsed configurando o parametro <span style="font-style: italic;">-Djava.endorsed.dirs</span> na variável de ambiente <span style="font-style: italic;">JAVA_OPTIONS</span>. Exemplo:</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="478" style="width:478px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span><span class="f_CodeExample">set&nbsp;JAVA_OPTIONS=%SAVE_JAVA_OPTIONS%</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;set&nbsp;SAVE_JAVA_OPTIONS=</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;set&nbsp;JAVA_OPTIONS=%JAVA_OPTIONS%&nbsp;-Djava.security.auth.login.config=%LUMIS_HOME%\lumisdata\config\lumissecuritylogin.config&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;set&nbsp;JAVA_OPTIONS=%JAVA_OPTIONS%&nbsp;-Djava.endorsed.dirs=%DOMAIN_HOME%\endorsed</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Preparação do</span><span style="font-style: italic; font-weight: bold;"> Managed Server</span></p>
+<p>&nbsp;</p>
+<p>Essa configuração só deve ser realizada caso o <span style="font-style: italic;">deploy</span> do <span style="font-style: italic;">Lumis Portal</span> seja realizado em um <span style="font-style: italic;">Managed Server</span>.</p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">Para que a configuração do <span style="font-style: italic;">login module</span> do <span style="font-style: italic;">Lumis Portal</span> funcione corretamente, é preciso incluir o parâmetro <span style="font-style: italic;">-Djava.security.auth.login.config</span> na variável de ambiente <span style="font-style: italic;">JAVA_OPTIONS</span>. Esta variavél pode ser configurada no arquivo <span style="font-style: italic;">startweblogic.cmd</span>, que se encontra na pasta /bin, adicionando a linha abaixo logo depois da linha "<span style="font-style: italic;">set JAVA_OPTIONS=%SAVE_JAVA_OPTIONS%".</span></p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">É preciso instalar algumas bibliotecas (arquivos . <span style="font-style: italic;">JAR</span>) na área de bibliotecas compartilhadas no servidor de aplicação.</p>
+<p>&nbsp;</p>
+<p>Para configuração das bibliotecas compartilhadas seguem os seguintes passos:</p>
+<p>1. Acessar a opção “<span style="font-style: italic;">Environment\Servers”</span> no menu;</p>
+<p style="text-align: left;">2. Selecionar o <span style="font-style: italic;">Managed Server</span> no qual o <span style="font-style: italic;">Lumis Portal</span> será instalado;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><img src="instalacao43.jpg" width="500" height="366" border="0" alt="instalacao43" style="margin:0 auto;margin:0px;"><br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;</p>
+<p>3.Selecionar a opção <span style="font-style: italic;">Server Start</span>;</p>
+<p>&nbsp;</p>
+<p>4. Configure o <span style="font-style: italic;">Class Path</span> com as classes abaixo:</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="496" style="width:496px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/activation-1.1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/castor-1.0.3.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/commons-logging-api.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/jsr250-api-1.0.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/lumisportal_0.0.0.000000_shared.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/pluto-container-1.1.0-beta1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/pluto-descriptor-api-1.1.0-beta1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/pluto-descriptor-impl-1.1.0-beta1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/pluto-taglib-1.1.0-beta1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/pluto-util-1.1.0-beta1.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;LUMIS_HOME/lib/shared/portlet-api-2.0.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;WLS_HOME/jrockit90_150_06/lib/tools.jar;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;WLS_HOME/server/lib/weblogic_sp.jar;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;WLS_HOME/server/lib/weblogic.jar</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: center;"><img src="instalacao44.jpg" width="500" height="314" border="0" alt="instalacao44" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: left;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="108" style="width:108px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td><span style="font-style: italic;">LUMIS_HOME </span>deve ser alterado pela pasta no qual o <span style="font-style: italic;">Lumis Portal</span> está instalado. WLS_HOME deve ser alterado pela pasta na qual o <span style="font-style: italic;">Weblogic Server</span> está instalado;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>O ambiente utilizado determina o separador dos elementos. No <span style="font-style: italic;">Windows</span>, tipicamente deve ser usado ponto e virgura (;), no Linux tipicamente deve ser usado dois pontos (:);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Não deve existir <span style="font-style: italic;">enter</span> ou espaços entre as bibliotecas configuradas;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Caso o <span style="font-style: italic;">Managed Server</span> esteja em um servidor diferente do <span style="font-style: italic;">Admin Server</span>, as bibliotecas listadas acima deverão ser copiadas manualmente para servidor no qual está instalado o <span style="font-style: italic;">Managed Server</span>. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">É necessário também instalar algumas blibliotecas na área endorsed. No <span style="font-style: italic;">Oracle Weblogic Server 10.3</span>, basta copiar os arquivos JAR que estão na pasta <span style="font-style: italic;">%LUMIS_HOME%</span><span style="font-style: italic;">/lib/endorsed </span>para a pasta <span style="font-style: italic;">WLS_HOME\jrockit90_150_06\jre\lib\endorsed</span>. É possível alterar a área endorsed configurando o parametro <span style="font-style: italic;">-Djava.endorsed.dirs.</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p><span style="font-style: italic; font-weight: bold;">Deployment</span></p>
+<p>&nbsp;</p>
+<p>Após <span style="font-style: italic;">login</span> no <span style="font-style: italic;">BEA WebLogic Server Administration</span> <span style="font-style: italic;">Console</span> seguem os seguintes passos para a realização do <span style="font-style: italic;">deployment</span> da aplicação:</p>
+<p>1. Acessar a opção <span style="font-style: italic;">Deployments</span> no Menu;</p>
+<p style="text-align: left;">2. Na lista de <span style="font-style: italic;">Deployments</span>, clicar no botão <span style="font-style: italic;">Install</span>, selecionar o arquivo “.<span style="font-style: italic;">war</span>” &nbsp;ou uma pasta que se encontra o <span style="font-style: italic;">Lumis Portal</span> &nbsp;e logo em seguida, clicar em <span style="font-style: italic;">Next</span>;</p>
+<p style="text-align: center;">&nbsp;<br>
+&nbsp;<br>
+<img src="instalacao46.jpg" width="500" height="389" border="0" alt="instalacao46" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;">3. Selecionar a opção <span style="font-style: italic;">Install this deployment as an application</span> e clicar em <span style="font-style: italic;">Next</span>;</p>
+<p style="text-align: center;">&nbsp;<br>
+<img src="instalacao47.jpg" width="500" height="303" border="0" alt="instalacao47" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>4. Selecionar o servidor no qual deseja realizar o <span style="font-style: italic;">deploy</span>, no exemplo: <span style="font-style: italic;">Lumis</span>;</p>
+<p style="text-align: center;">&nbsp;<br>
+<img src="instalacao48.jpg" width="500" height="319" border="0" alt="instalacao48" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>5. Configurar o nome do <span style="font-style: italic;">deployment</span>, no campo <span style="font-style: italic;">name</span> e clicar em <span style="font-style: italic;">Finish</span>;</p>
+<p style="text-align: center;">&nbsp;<br>
+<img src="instalacao49.jpg" width="500" height="186" border="0" alt="instalacao49" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p style="text-align: left;">6. Na tela de <span style="font-style: italic;">deployments</span>, selecionar <span style="font-style: italic;">Start\Servicing all requests</span> para iniciar o <span style="font-style: italic;">deployment</span> da aplicação.</p>
+<p style="text-align: center;">&nbsp;<br>
+<img src="instalacao50.jpg" width="500" height="365" border="0" alt="instalacao50" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Notas:</span></p>
+<p>Quando o servidor<span style="font-style: italic;"> BEA Weblogic</span> não tem acesso à <span style="font-style: italic;">internet</span>, em uma situação de <span style="font-style: italic;">deployment</span> de <span style="font-style: italic;">portlets</span>, por exemplo, pode ocorrer um <span style="font-style: italic;">stack trace</span> equivalente ao descrito abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">Caused&nbsp;by:&nbsp;java.net.UnknownHostException:&nbsp;java.sun.com</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;java.net.InetAddress.getAllByName0(InetAddress.java:1133)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;java.net.InetAddress.getAllByName0(InetAddress.java:1098)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;java.net.InetAddress.getAllByName(InetAddress.java:1061)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.HttpClient.openServer(HttpClient.java:303)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.HttpClient.openServer(HttpClient.java:375)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.HttpClient.(HttpClient.java:149)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.HttpURLConnection.getHttpClient(HttpURLConnection.java:175)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.HttpURLConnection.getInputStream(HttpURLConnection.java:395)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">at&nbsp;weblogic.net.http.SOAPHttpURLConnection.getInputStream(SOAPHttpURLConnection.java:31)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>O erro acima é causado pela tentativa de obter o <span style="font-style: italic;">DTD</span> da fonte externa. Para resolver esse problema,deve-se realizar o devido mapeamento, conforme descrito na ajuda do console de administração do <span style="font-style: italic;">Weblogic Server</span> em "<span style="font-style: italic;">How Do I...&gt;Configure services&gt;Configure XML Resources&gt;XML Registries&gt;Configure external entity resolution</span>".</p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">DOCTYPE</span> geralmente utilizados por <span style="font-style: italic;">portlets</span> é:</p>
+<p>- <span style="font-style: italic;">PUBLIC "-//Sun Microsystems, Inc.//DTD WebApplication 2.3//EN" "<a href="http://java.sun.com/dtd/web-app_2_3.dtd%22." target="_blank" class="weblink">http://java.sun.com/dtd/web-app_2_3.dtd".</a></span></p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="87" style="width:87px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>Se o <span style="font-style: italic;">deployment</span> do <span style="font-style: italic;">Lumis Portal</span> no <span style="font-style: italic;">Bea Weblogic</span> for em modo <span style="font-style: italic;">nostage</span>, o <span style="font-style: italic;">WAR</span> explodido dever ser selecionado. Existe uma limitação do <span style="font-style: italic;">classloader</span> do <span style="font-style: italic;">Weblogic</span>, de não acessar um arquivo dentro de outro arquivo. A biblioteca <span style="font-style: italic;">Axis</span>, por exemplo, contém outras bibliotecas.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><a name="weblogic103datasource"></a><span style="font-weight: bold;">Configuração do DataSource</span></p>
+<p>&nbsp;</p>
+<p>É possível configurar o <span style="font-style: italic;"><a href="datasource.htm">Data Source</a>,</span> para delegar ao servidor de aplicação, a gerência do <span style="font-style: italic;">pool</span> de conexões com o banco de dados.</p>
+<p>&nbsp;</p>
+<p>Acesse a opção <span style="font-style: italic;">Services &gt; JDBC &gt; Data Sources do JDBC:</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm261.zoom77.png" width="968" height="374" border="0" alt="portalAdm261" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Clique em "New" na lista de Data Sources:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm262.zoom81.png" width="805" height="541" border="0" alt="portalAdm262" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Name</span>: Nome do Data Source.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">JNDI Name</span>: o nome a ser referenciado no <span style="font-style: italic;"><a href="datasource.htm">lumishibernate.cfg.xml</a>.</span></td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Database Type</span>: tipo do banco de dados que será utilizado no Data Source.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Database Driver</span>: o nome do driver utilizado.</td></tr></table></div><p>&nbsp;</p>
+<p>Clicando em "Next", a próxima interface trata das opções de transações, cuja configuração é de acordo com a sua aplicação, configurada esta, clique em "Next".</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm263.zoom87.png" width="866" height="574" border="0" alt="portalAdm263" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Database Name</span>: Nome da base dados que será utilizada pelo Data Source.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Host</span> Name: endereço referente à base de dados.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Port</span>: porta referente à base de dados.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Database User Name</span> e <span style="font-weight: bold;">Password</span>: login de acesso à base de dados.</td></tr></table></div><p>&nbsp;</p>
+<p>E clique em "Next".</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm264.zoom85.png" width="850" height="867" border="0" alt="portalAdm264" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Driver Class Name</span>: o nome do driver utilizado.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Database User Name</span> e <span style="font-weight: bold;">Password</span>: login de acesso à base de dados.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Properties</span>: propriedades usadas pelo driver de conexão no teste.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Test Table Name</span>: query executada pelo teste.</td></tr></table></div><p>&nbsp;</p>
+<p>E clique em "Next".</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm265.zoom87.png" width="864" height="290" border="0" alt="portalAdm265" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Selecione o servidor utilizado em sua(s) aplicação(ões) e clique em "Finish".</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

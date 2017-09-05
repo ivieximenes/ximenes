@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<strings>
+<string id="STR_SERVICE_NAME"><![CDATA[Qualicorp - Oauth]]></string>
+<string id="STR_SERVICE_DESCRIPTION"><![CDATA[Permite o Cadastro de Links (Serviços)]]></string>
+</strings>

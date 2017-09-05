@@ -1,0 +1,13 @@
+/* $Revision: 14828 $ $Date: 2012-10-17 17:54:11 -0300 (Wed, 17 Oct 2012) $ */
+@import url('../../media/stylesheet/MediaFolder.css');
+
+.lumis-service-document.lum-interface-type-administration .lum-row-actions{
+	margin-top:5px;
+	margin-left:57px;
+}
+
+.lumis-service-document.lum-interface-type-administration .lum-adv-tabular-data tr td{
+	padding-top:15px;
+	padding-bottom:15px;
+	vertical-align:top;
+}

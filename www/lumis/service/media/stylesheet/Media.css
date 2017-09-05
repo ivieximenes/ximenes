@@ -1,0 +1,47 @@
+/* $Revision: 15872 $ $Date: 2013-09-20 14:46:26 -0300 (Fri, 20 Sep 2013) $ */
+
+.lumis-service-media-list .lum-list-item .lum-content {
+	margin-left:70px;
+}
+.lumis-service-media-list .lum-content-header .lum-content-introduction-image {
+	margin-left:-70px;
+}
+.lumis-service-media-list .lum-content-header .lum-content-introduction-image img {
+	width:95%;
+	border:1px solid #cdcdcd;
+}
+
+/*folder path*/
+.lumis-service-media-list .lum-filters {
+	margin:-5px 0 0;
+	padding:0;
+	border:none;
+}
+.lumis-service-media-list .lum-filters .lum-form-field {
+	margin:0;
+}
+.lumis-service-media-list .lum-filters .lum-form-field > div {
+	display:inline-block;
+}
+.lumis-service-media-list .lum-filters .lum-form-field, 
+.lumis-service-media-list .lum-filters .lum-form-field-label label {
+	font-size:12px;
+	color:#444;
+	text-transform:uppercase;
+	font-weight:normal;
+	display:inline-block;
+}
+.lumis-service-media-list .lum-filters .lum-form-field-value a {
+	text-transform:lowercase;
+	font-size:11px;
+	font-weight:normal;
+	margin-left:20px;
+}
+.lumis-service-media-list .lum-filters .lum-form-field-value a:before {
+	content:"";
+	display:inline-block;
+	border:4px solid transparent;
+	border-bottom-color:#ba2a2a;
+	margin-right:7px;
+	vertical-align:1px;
+}

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>MySQL</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?mysql5.htm"; }
+  else { parent.quicksync('a3.4.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MySQL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="sqlserver2005.htm">Previous</a>&nbsp;
+     <a href="oracle10g.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Nesta seção estão os passos necessários para a instalação do banco de dados do <span style="font-style: italic;">Lumis Portal</span> no Servidor <span style="font-style: italic;">MySQL:</span></p>
+<p><span style="font-size: 7pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+<p style="margin: 4px 0px 0px 0px;">1) Execute o arquivo <span style="font-style: italic;">/setup/generatesql.cmd</span>, para o <span style="font-style: italic;">Windows®</span>, ou <span style="font-style: italic;">generatesql.sh</span>, para o <span style="font-style: italic;">Linux</span>, para criar os arquivos de <span style="font-style: italic;">script</span> do banco de dados.</p>
+<p style="margin: 4px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 4px 0px 0px 0px;">2) Abra o <span style="font-style: italic;">MySQL Query Browser</span>, crie um novo <span style="font-style: italic;">database e</span> execute o script <span style="font-style: italic;">db_mysql.sql</span>.</p>
+<p style="margin: 4px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 4px 0px 0px 0px;">3) No arquivo <span style="font-style: italic;">lumisdata/config/lumishibernate.cfg.xml</span> altere as informações de conexão com o banco de dados.</p>
+<p style="margin: 4px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="635" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="635" style="width:635px; border: solid 1px #000000;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;!--&nbsp;MySQL&nbsp;5.5&nbsp;e&nbsp;5.6&nbsp;--&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="dialect"&gt;org.hibernate.dialect.MySQL5InnoDBDialect&lt;/property&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="connection.driver_class"&gt;com.mysql.jdbc.Driver&lt;/property&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="connection.username"&gt;</span><span style="font-family: 'Courier New'; color: #ff0000;">DB_USERNAME</span><span style="font-family: 'Courier New';">&lt;/property&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="connection.password"&gt;</span><span style="font-family: 'Courier New'; color: #ff0000;">DB_PASSWORD</span><span style="font-family: 'Courier New';">&lt;/property&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="connection.url"&gt;</span><span style="font-family: 'Courier New'; color: #ff0000;">jdbc:mysql://HOST_NAME/DATABASENAME</span><span style="font-family: 'Courier New';">?characterEncoding=UTF-8&amp;amp;useConfigs=maxPerformance&lt;/property&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;property&nbsp;name="connection.isolation"&gt;2&lt;/property&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Uma outra alternativa de conexão com o banco de dados, é a configuração do <span style="font-style: italic;"><a href="datasource.htm">datasource</a></span> no servidor de aplicação.</p>
+<p>&nbsp;</p>
+<p style="margin: 4px 0px 0px 0px;">4) Execute o arquivo <span style="font-style: italic;">/setup/initializeportal.cmd</span>, para o <span style="font-style: italic;">Windows</span>®, ou <span style="font-style: italic;">initializeportal.sh,</span> para o <span style="font-style: italic;">Linux.</span> Este <span style="font-style: italic;">script</span> executa uma aplicação <span style="font-style: italic;">Java</span> que abre uma conexão com o banco de dados, utilizando as informações do arquivo <span style="font-style: italic;">lumisdata/config/lumishibernate.cfg.xml. </span>Este script também insere os dados iniciais necessários para o funcionamento do <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="margin: 4px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 4px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="474" style="width:474px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 35px;">O <span style="font-style: italic;">driver</span> <span style="font-style: italic;">MySQL Connector Java </span>não está incluído na distribuição do <span style="font-style: italic;">Lumis Portal</span>, <span style="font-style: italic;">e</span>le pode ser encontrado no link abaixo:</p>
+<p style="margin: 0px 0px 0px 35px;"><a href="http://dev.mysql.com/downloads/connector/j/" target="_blank" class="weblink">http://dev.mysql.com/downloads/connector/j/</a></p>
+<p style="margin: 0px 0px 0px 35px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 35px;"><span style="font-weight: bold; color: #ff0000;">Verificar se a versão do conector do </span><span style="font-style: italic; font-weight: bold; color: #ff0000;">MySQL </span><span style="font-weight: bold; color: #ff0000;"> utilizado, corresponde ao especificado no arquivo </span><span style="font-style: italic; font-weight: bold; color: #ff0000;">setup/setclasspath.cmd</span><span style="font-weight: bold; color: #ff0000;"> ou </span><span style="font-style: italic; font-weight: bold; color: #ff0000;">setup/setclasspath.sh</span><span style="font-weight: bold; color: #ff0000;"> . Caso contrário, alterar a versão do conector no arquivo </span><span style="font-style: italic; font-weight: bold; color: #ff0000;">setclasspath</span><span style="font-weight: bold; color: #ff0000;"> .</span></p>
+<p style="margin: 14px 0px 0px 35px;">Deve-se ainda configurar o <span style="font-style: italic;">default charset</span> para <span style="font-style: italic;">UTF-8</span> para que funcione com <span style="font-style: italic;">STRICT MODE</span>.</p>
+<p style="margin: 14px 0px 0px 35px;">As configurações do <span style="font-style: italic;">MySQL </span>exigidas pelo <span style="font-style: italic;">Lumis Portal</span> podem ser passadas na inicialização ou configuradas no arquivo <span style="font-style: italic;">my.ini:</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">default-character-set=utf8</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 35px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">sql_mode=STRICT_TRANS_TABLES</span></td></tr></table></div><p style="margin: 0px 0px 0px 131px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Existe uma limitação quando utilizado o <span style="font-style: italic;">MySQL </span>que a data não pode ser inferior a 01/01/1753. Quando isso ocorre, é retornado uma mensagem de erro informando que a data é inválida.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Existe uma configuração no <span style="font-style: italic;">MySQL</span> que limita o tamanho máximo do pacote recebido pelo servidor que pode causar problema em cenários de cluster. Para contornar tal limitação, recomenta-se configurar a variável do servidor <span class="f_CodeExample">max_allowed_packet</span>, conforme no exemplo abaixo:</td></tr></table></div><div style="text-align: justify; text-indent: -13px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 52px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="margin: 0px 159px 0px 0px;">[mysqld]</p>
+<p style="margin: 0px 131px 0px 0px;">max_allowed_packet=16M</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -13px; margin: 0px 0px 0px 35px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 55px;">Onde 16M é o tamanho máximo do pacote. O padrão do servidor é 1M. O valor deve ser ajustado de acordo com a necessidade da aplicação.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 4px 0px 0px 0px;">  </p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

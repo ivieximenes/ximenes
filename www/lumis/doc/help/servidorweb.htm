@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Servidor Web</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?servidorweb.htm"; }
+  else { parent.quicksync('a3.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Servidor Web</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="ibmwebsphere.htm">Previous</a>&nbsp;
+     <a href="apachetomcat.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Um <span style="font-style: italic;">servidor web</span> é um aplicativo que aceita requisições do cliente, normalmente um <span style="font-style: italic;">browser</span>, e retorna respostas de acordo com a requisição realizada. Tipicamente, um <span style="font-style: italic;">servidor web</span> aceita somente requisições para arquivos estáticos. </p>
+<p>&nbsp;</p>
+<p>Um <span style="font-style: italic;">servidor de aplicação</span> também é um aplicativo que aceita requisições do cliente e retorna respostas de acordo com a requisição realizada. A diferença para o <span style="font-style: italic;">servidor web</span>, é que o servidor de aplicação tipicamente permite processamento dinâmico das requisições viabilizando a construção de aplicações.</p>
+<p>&nbsp;</p>
+<p>Em uma arquitetura de três camadas, o <span style="font-style: italic;">servidor web</span> é configurado para servir os arquivos estáticos delegando para o <span style="font-style: italic;">servidor de aplicação</span> os processamentos dinâmicos (normalmente <span style="font-style: italic;">JSPs</span> e <span style="font-style: italic;">servlets</span>). É importante que nessa arquitetura, o <span style="font-style: italic;">servidor web</span> e o <span style="font-style: italic;">servidor de aplicação</span> sejam configurados para acessar estruturas de arquivos diferentes. </p>
+<p>&nbsp;</p>
+<p>Considere portanto, <span style="font-style: italic;">WEB_ROOT_PATH</span> como caminho dos arquivos estáticos e <span style="font-style: italic;">APPLICATION_PATH</span> para o caminho dos arquivos dinâmicos.</p>
+<p>&nbsp;</p>
+<p>Para montar essa arquitetura é necessário mover os arquivos estáticos que fazem parte da distribuição do <span style="font-style: italic;">Lumis Portal</span> para a pasta <span style="font-style: italic;">WEB_ROOT_PATH</span> que deverá ser configurada como raiz do <span style="font-style: italic;">servidor web</span>. Deverá ser removido dessa pasta: os diretórios <span style="font-style: italic;">WEB-INF</span> e <span style="font-style: italic;">META-INF</span>; e arquivos <span style="font-style: italic;">*.jsp</span>.</p>
+<p>&nbsp;</p>
+<p>É aconselhado que os arquivos estáticos sejam removidos da pasta <span style="font-style: italic;">APPLICATION_PATH</span>. Por exemplo, deverão ser removidos os arquivos: <span style="font-style: italic;">*.html</span>, <span style="font-style: italic;">*.gif</span>, <span style="font-style: italic;">*.css</span>, <span style="font-style: italic;">*.js</span>, <span style="font-style: italic;">*.swf</span>, etc.</p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">Lumis Portal </span>possui funcionalidades de <span style="font-style: italic;">cache</span> de arquivos estáticos <span style="font-style: italic;">(cache HTML</span>) e arquivos públicos. Como o <span style="font-style: italic;">servidor web</span> estará servindo os arquivos estáticos, o <span style="font-style: italic;">Lumis Portal</span> precisa gerar esses arquivos na pasta <span style="font-style: italic;">WEB_ROOT_PATH</span> e não da pasta <span style="font-style: italic;">APPLICATION_PATH</span>. Para isso é possível configurar no <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>, mais especificamente no campo <span style="font-style: italic;">Diretório Estático</span> de um <span style="font-style: italic;">website,</span> o caminho a ser utilizado pelo <span style="font-style: italic;">Lumis Portal</span> para escrever os arquivos estáticos. No caso de haver vários websites para o portal, o servidor web deve ser configurado de forma que as URLs correspondentes a cada website responda o diretório estático correspondente, além de também obedecer as regras de encaminhamento ao portal descritas em maiores detalhes nos itens específicos dentro deste tópico.</p>
+<p>&nbsp;</p>
+<p>É possível replicar os arquivos gerados no <span style="font-style: italic;">WEB_ROOT_PATH</span> para outras pastas através da funcionalidade de <a href="replicacao_de_arquivos_publico.htm">Replicação de Arquivos Públicos</a>.</p>
+<p>&nbsp;</p>
+<p>A configuração do <span style="font-style: italic;">servidor web</span> irá variar de acordo com o tipo utilizado e com o <span style="font-style: italic;">servidor de aplicação</span> utilizado. </p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="108" style="width:108px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>O portal espera que ao acessar a raiz do contexto a requisição seja para <span style="font-style: italic;">main.jsp</span>. Se for desejado que a página padrão do contexto seja um arquivo <span style="font-style: italic;">HTML</span> customizado, isso deve ser configurado no <span style="font-style: italic;">servidor web</span> ao invés do <span style="font-style: italic;">servidor de aplicação</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

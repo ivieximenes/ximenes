@@ -1,0 +1,90 @@
+/* $Revision: 12849 $ $Date: 2011-04-26 18:57:23 -0300 (Tue, 26 Apr 2011) $ */
+
+/*************************** ADMIN HEADER ******************************/
+
+.cLumAdminHeaderTitle
+{
+	background-color:#F2A28C !important;
+}
+
+.cLumAdminHeaderTitle div
+{
+	background: url(../images/category2/AdminHeaderCategoryPortal.gif) top left no-repeat !important;
+	color: #BE5134 !important;
+}
+
+.cLumAdminNavigationPaneTop
+{
+	background:url(../images/category2/AdminNavPaneTopRight.gif) right #E47A5E no-repeat !important;
+}
+	
+.cLumAdminHeaderLine
+{
+	background:url(../images/category2/LumisAdminHeaderLineLeft.gif) #F2A28C no-repeat !important;
+}
+
+/*************************** NAVIGATION PANE - ADMIN MENU ******************************/
+
+.cLumAdminChannel
+{
+	background: #E47A5E !important;
+}
+
+.cLumAdminChannel a:hover
+{
+	background: #E6CEB7 !important;
+}
+
+/*************************** WORK PANE - HEADER ******************************/
+
+.cLumAdminWorkPaneUserBar
+{
+	background:url(../images/category2/AdminUserBarMid.gif) repeat-x !important;
+	
+}
+.cLumAdminWorkPaneUserBarLeft
+{
+	background:url(../images/category2/AdminUserBarLeft.gif) top left no-repeat !important;
+}
+
+.cLumAdminWorkPaneUserBarRight
+{
+	background:url(../images/category2/AdminUserBarRight.gif) top right no-repeat !important;
+}
+
+/*************************** WORK PANE - BODY ******************************/
+
+#LumisAdminWorkPaneBody
+{
+	scrollbar-face-color: #E47A5E !important;
+	scrollbar-arrow-color: #BE5134 !important;
+	scrollbar-track-color: #F5CDC2 !important;
+	scrollbar-highlight-color: #E47A5E !important;
+	scrollbar-3dlight-color: #E47A5E !important;
+	scrollbar-darkshadow-color: #E47A5E !important;
+	scrollbar-shadow-color: #BE5134 !important;
+	background:#FFF !important;
+	margin-top:2px !important;
+}
+
+/*********************************************************/
+
+.cLumAdminSplitter
+{
+	background: url(../images/category2/SplitterBackground.gif) !important;	
+}
+
+.cLumisAdminNavigationPaneResizer
+{
+	background: url(../images/category2/SplitterBackground.gif) !important;
+}
+
+.cLumisAdminNavigationPaneToggler 
+{
+	background: url(../images/category2/SplitterCenterImage.gif)  no-repeat !important;
+}
+
+
+.lumbar-portalstudio {
+	background:#27110c url(../images/bg_gestao.jpg) repeat-x top left !important;
+}

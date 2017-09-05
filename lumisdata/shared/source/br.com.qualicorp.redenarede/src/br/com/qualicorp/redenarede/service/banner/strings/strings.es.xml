@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 10753 $ $Date: 2009-07-27 20:08:07 -0300 (Mon, 27 Jul 2009) $ -->
+<strings>
+	<string id="STR_SERVICE_NAME">Banners</string>
+	<string id="STR_SERVICE_DESCRIPTION">Permite administrar y visualizar banners.</string>
+	<string id="STR_ADD_CATEGORY">Agregar categoría</string>
+	<string id="STR_ADMINISTRATION">Administración</string>
+	<string id="STR_ADMINISTRATION_CATEGORY">Administración de categorías</string>
+	<string id="STR_BANNER">Banner</string>
+	<string id="STR_BANNER_PROPERTIES">Propiedades de los banners</string>
+	<string id="STR_BASIC_INFORMATION">Información básica</string>
+	<string id="STR_CATEGORY">Categoría</string>
+	<string id="STR_DESCRIPTION">Descripción</string>
+	<string id="STR_EDIT_CATEGORY">Editar categoría</string>
+	<string id="STR_ENABLED">Habilitado</string>
+	<string id="STR_FLASH_PROPERTIES">Propiedades de Flash</string>
+	<string id="STR_HEIGHT">Altura</string>
+	<string id="STR_HTML">Html</string>
+	<string id="STR_HTML_PROPERTIES">Propiedades html</string>
+	<string id="STR_IMAGE_PATH">Imagen</string>
+	<string id="STR_IMAGE_PROPERTIES">Propiedades de la imagen</string>
+	<string id="STR_INTERNAL_PAGE">Página interna</string>
+	<string id="STR_IS_POPUP">Utilizar elementos emergentes</string>
+	<string id="STR_LINK_TYPE">Tipo de vínculo</string>
+	<string id="STR_LOG">Registro</string>
+	<string id="STR_LOG_CLICKS">Registrar clics</string>
+	<string id="STR_LOG_VIEWS">Registrar vistas</string>
+	<string id="STR_NAME">Nombre</string>
+	<string id="STR_PAGE">Página</string>
+	<string id="STR_POINT_WEIGHT">Peso</string>
+	<string id="STR_RANDOMIZE">Orden aleatorio</string>
+	<string id="STR_STYLE">Estilo</string>
+	<string id="STR_TOTAL_ITEMS">Total de elementos</string>
+	<string id="STR_TYPE">Tipo</string>
+	<string id="STR_TYPE_FLASH">Flash</string>
+	<string id="STR_TYPE_HTML">Html</string>
+	<string id="STR_TYPE_IMAGE">Imagen</string>
+	<string id="STR_URL">Dirección URL</string>
+	<string id="STR_WIDTH">Ancho</string>
+	<string id="STR_XSL_FILE">Archivo xsl</string>
+	<string id="STR_NO_BANNER_CATEGORY_SELECTED">No se ha seleccionado una categoría para este Banner.</string>
+	<string id="STR_NO_LINK">Sin vínculo</string>
+	<string id="STR_CLICK_POPUP_PROPERTIES">Propiedades de pop-up</string>
+	<string id="STR_BANNER_IMAGE_NOT_DEFINED">Imagen "%1" de banner no definida</string>
+	<string id="STR_CATEGORY_IS_BEING_USED">La categoría "%1" está siendo utilizada.</string>
+	<string id="STR_INVALID_URL">La dirección URL no es válida.</string>
+	<string id="STR_INVALID_FLASH_FILE">Archivo Flash no válido  La extensión del archivo debe ser .swf.</string>
+	<!-- Montor Strings -->
+	<string id="STR_BANNER_CATEGORY_NAME_DESCRIPTION">Nombre de la categoría del banner</string>
+	<string id="STR_BANNER_CATEGORY_NAME_NAME">Nombre de la categoría del banner</string>
+	<string id="STR_BANNER_CLICK_DESCRIPTION">Clic del banner</string>
+	<string id="STR_BANNER_CLICK_NAME">Clic del banner</string>
+	<string id="STR_BANNER_NAME_DESCRIPTION">Nombre del banner</string>
+	<string id="STR_BANNER_NAME_NAME">Nombre del banner</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_DESCRIPTION">Ruta de acceso fácil a la Instancia de servicios del banner</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_NAME">Ruta de acceso fácil a la Instancia de servicios del banner</string>
+	<string id="STR_BANNER_SI_PATH_DESCRIPTION">Ruta de acceso a la Instancia de servicios del banner</string>
+	<string id="STR_BANNER_SI_PATH_NAME">Ruta de acceso a la Instancia de servicios del banner</string>
+	<string id="STR_BANNER_VIEW_DESCRIPTION">Vista del banner</string>
+	<string id="STR_BANNER_VIEW_NAME">Vista del banner</string>
+</strings>

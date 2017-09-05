@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14243 $ $Date: 2012-04-27 18:14:29 -0300 (Fri, 27 Apr 2012) $ -->
+<module xmlns="urn:jboss:module:1.0" name="lumis.jdbc.driver.sqlserver">
+  <resources>
+		<resource-root path="jtds-1.2.2.jar" />
+  </resources>
+</module>

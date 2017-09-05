@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050C9BD630150CD5E03C9746D</id>
+  <name>Busca</name>
+  <parent-template-id>2C96A2CE5AC7FD01015AC9747A9A68E9</parent-template-id>
+  <hidden>true</hidden>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>template.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="busca">
+        <interface id="2C96A2CE5AC7FD01015ADCD28C415121"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="2C96A2CE5AC7FD01015ADCD28C4D5122"></interface>
+        <interface id="2C96A2CE5AC7FD01015ADCD28C535123"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="2C96A2CE5AC7FD01015ADCD28C5C5124"></interface>
+    </holder>
+    <holder id="interfaces">
+        <interface id="0000000050C9BD630150CD5E0AAE751D"></interface>
+        <interface id="2C96A2CE5AC7FD01015ADCD28C625125"></interface>
+    </holder>
+    <holder id="menurodape">
+        <interface id="2C96A2CE5AC7FD01015ADCD28C6B5126"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E0AAE751D</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.searchResults</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150AFAB02AA39FF</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C415121</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B0268F2</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C4D5122</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B0C68F3</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C535123</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaPrestador</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC974FE6B692C</parent-interface-instance-id>
+      <applied-interface-style-id>alterarSenhaPrestadorsmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C5C5124</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B1F68F5</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C625125</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B2968F6</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015ADCD28C6B5126</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B6968FC</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

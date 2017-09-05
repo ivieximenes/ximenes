@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17426 $ $Date: 2015-06-22 10:05:30 -0300 (Mon, 22 Jun 2015) $ --> 
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+		debug="false">
+
+	<!-- Appenders -->
+	<appender name="Full" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${lumisdata}/log/full/logfull.log"/>
+		<param name="MaxFileSize" value="5000KB"/>
+		<param name="MaxBackupIndex" value="2"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %-5p [%X{lumis.request.client.ip}] [%X{lumis.user.login}] [%X{lumis.channel.path}] [%X{lumis.page.name}] [%X{lumis.si.name}] [%t] %c - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="Lumis" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${lumisdata}/log/lumis/debug/lumis-debug.log"/>
+		<param name="MaxFileSize" value="5000KB"/>
+		<param name="MaxBackupIndex" value="2"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %-5p [%X{lumis.request.client.ip}] [%X{lumis.user.login}] [%X{lumis.channel.path}] [%X{lumis.page.name}] [%X{lumis.si.name}] [%t] %c - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="LumisInfo" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${lumisdata}/log/lumis/info/lumis-info.log"/>
+		<param name="MaxFileSize" value="5000KB"/>
+		<param name="MaxBackupIndex" value="2"/>
+		<param name="Threshold" value="INFO"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %-5p [%X{lumis.request.client.ip}] [%X{lumis.user.login}] [%X{lumis.channel.path}] [%X{lumis.page.name}] [%X{lumis.si.name}] [%t] %c - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="LumisBannerViews" class="lumis.util.log.NavigationFileAppender">
+		<param name="Directory" value="${lumisdata}/log/lumis/banner"/>
+		<param name="Prefix" value="bannerViews."/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="LumisBannerClicks" class="lumis.util.log.NavigationFileAppender">
+		<param name="Directory" value="${lumisdata}/log/lumis/banner"/>
+		<param name="Prefix" value="bannerClicks."/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="LumisSendMail" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${lumisdata}/log/lumis/sendmail/sendmail.log"/>
+		<param name="MaxFileSize" value="5000KB"/>
+		<param name="MaxBackupIndex" value="2"/>
+		<param name="Threshold" value="INFO"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %-5p [%t] %c - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="LumisSerialization" class="lumis.util.log.NavigationFileAppender">
+		<param name="Directory" value="${lumisdata}/log/lumis/serialization"/>
+		<param name="Prefix" value="serialization."/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="LumisAudit" class="biz.minaret.log4j.DatedFileAppender">
+		<param name="Directory" value="${lumisdata}/log/lumis/audit"/>
+		<param name="Prefix" value="audit."/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d [%X{lumis.request.client.ip}] %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="LumisHtmlEvaluation" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${lumisdata}/log/lumis/htmlevaluation/htmlevaluation.log"/>
+		<param name="MaxFileSize" value="5000KB"/>
+		<param name="MaxBackupIndex" value="2"/>
+		<param name="Threshold" value="INFO"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern" value="%d %-5p [%X{lumis.request.client.ip}] [%X{lumis.user.login}] [%X{lumis.channel.path}] [%X{lumis.page.name}] [%t] - %m%n"/>
+		</layout>
+	</appender>
+	<!-- 
+		Example appender for sending log notifications by e-mail.
+		lumis.util.log.AcceptAllEvaluator accepts any log. If this is not 
+		specified, the log4j's SMTPAppender default evaluator accepts only 
+		logs with ERROR level or higher.
+		The appender needs to be referenced to be called.
+	<appender name="SMTP" class="org.apache.log4j.net.SMTPAppender">
+		<param name="Threshold" value="INFO"/>
+		<param name="To" value="destination@host.address"/>
+		<param name="From" value="sender@host.address"/>
+		<param name="Subject" value="Email Subject"/>
+		<param name="SMTPHost" value="smtp.host.address"/>
+		<param name="SMTPUsername" value="smtp_login"/>
+		<param name="SMTPPassword" value="smtp_password"/>
+		<param name="SMTPDebug" value="false"/>
+		<param name="BufferSize" value="1"/>
+		<param name="EvaluatorClass" value="lumis.util.log.AcceptAllEvaluator"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%t] %c - %m%n"/>
+		</layout>
+	</appender>
+	-->
+
+	<!-- Categories -->
+	<category name="lumis">
+		<priority value="info"/>
+		<appender-ref ref="Lumis"/> 
+		<appender-ref ref="LumisInfo"/> 
+	</category>
+	
+	<category name="lumisservice.lumis.service.banner.views">
+		<priority value="info"/>
+		<appender-ref ref="LumisBannerViews"/>
+	</category>
+	
+	<category name="lumisservice.lumis.service.banner.clicks">
+		<priority value="info"/>
+		<appender-ref ref="LumisBannerClicks"/>
+	</category>
+	
+	<category name="lumisservice.lumis.service.portalmanagement.sendmail">
+		<priority value="info"/>
+		<appender-ref ref="LumisSendMail"/>
+	</category>
+
+	<category name="lumisservice.lumis.service.portalmanagement.serialization">
+		<priority value="info"/>
+		<appender-ref ref="LumisSerialization"/>
+	</category>
+	
+	<category name="lumis.portal.audit">
+		<priority value="debug"/>
+		<appender-ref ref="LumisAudit"/>
+	</category>
+	
+	<category name="org.apache.jasper.servlet.JspServlet">
+		<priority value="info"/>
+	</category>
+	<category name="com.mchange.v2.c3p0.impl.NewPooledConnection">
+		<priority value="info"/>
+	</category>
+	<category name="com.opensymphony.oscache">
+		<priority value="warn"/>
+	</category>
+
+	<category name="lumisservice.lumis.portal.presentation.htmlevaluation">
+		<priority value="info"/>
+		<appender-ref ref="LumisHtmlEvaluation"/>
+	</category>
+
+	<root>
+		<priority value="info"/>
+		<appender-ref ref="Full"/>
+	</root>
+</log4j:configuration>

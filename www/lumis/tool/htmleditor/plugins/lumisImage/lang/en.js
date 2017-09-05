@@ -1,0 +1,2 @@
+﻿
+FCKLang.LumisImageBtn			= 'Insert Image' ;

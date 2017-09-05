@@ -1,0 +1,846 @@
+/* $Revision: 15478 $ $Date: 2013-06-14 09:42:27 -0300 (Fri, 14 Jun 2013) $ */
+
+/*************************** RESET ******************************/
+
+/* TODO: Must be set by javascript to transpor config to workpane body */
+body
+{
+	overflow: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	min-width: 0 !important;
+	max-width: none !important;
+}
+
+.cLumAdminReset
+{
+    padding: 0 !important;
+	margin: 0 !important;
+	border: 0 !important;
+	font-family: Verdana,arial,sans-serif !important;
+	font-size: 10px !important;
+	text-align: left !important;
+	color: #606060 !important;
+	vertical-align: baseline !important;
+    outline: 0 !important;
+}
+
+.cLumAdminReset img
+{
+	margin: 0 !important;
+	border: 0 !important;
+	padding: 0 !important;
+}	
+
+/*************************** NAVIGATION PANE ******************************/
+
+.cLumAdminNavigationPane
+{	
+	overflow:hidden !important;
+	padding: 0 0px 0 0 !important;
+	background: #FFC763 !important;
+	float:right !important;
+	width: 20%;
+	height: 1024px;
+}
+
+.cLumAdminNavigationPaneTop
+{
+	background: #9CC946 no-repeat !important;
+	height:10px;
+}
+
+.cLumAdminNavigationHeader
+{
+	background:url(../images/category1/LumisAdminNavigationHeader.gif) #739C29 left top no-repeat !important;
+	color:#FFF !important;
+	padding: 3px 0 4px 20px !important;	
+	font-size:11px !important;
+}
+
+/*************************** NAVIGATION PANE - TREE ******************************/
+
+.cLumAdminChannelTree,
+.cLumAdminServiceInterfaceList
+{
+	background-color: #EFF3D2 !important;
+	color:#ffffff !important;
+	padding-bottom:5px !important;
+	overflow:auto !important;
+}
+
+.cLumAdminTreeItem
+{
+	padding: 5px 20px 0 20px;
+}
+
+.cLumAdminTreeItemSelected
+{
+	background-color:#cae595 !important;
+	font-weight:bold !important;
+	padding-top: 2px !important;
+}
+
+.cLumAdminTreeText
+{
+	cursor:pointer !important;
+	height:18px;
+	padding:2px 0 0 20px !important;
+	color:#666 !important;
+	font-family:Arial !important;
+	font-size:11px !important;
+}
+
+.cLumAdminTreeChannelWebsite
+{
+	background:url(../../../portal/client/images/IcoWebsite.png) no-repeat 0 3px !important;
+	padding:4px 0 0 20px !important;
+	cursor:pointer;
+}
+
+.cLumAdminTreeChannel
+{
+	background:url(../../../portal/client/images/Channel.gif) no-repeat  !important;	
+}
+
+.cLumAdminTreeChannelTemplate
+{
+	background:url(../../../portal/client/images/ChannelTemplate.gif) no-repeat !important;
+}
+
+.cLumAdminTreePage
+{
+	background:url(../../../portal/client/images/Page.gif) no-repeat !important;
+	margin-left:14px !important;
+}
+
+.cLumAdminTreePageTemplate
+{
+	background:url(../../../portal/client/images/PageTemplate.gif) no-repeat !important;
+	margin-left:14px !important;
+}
+
+.cLumAdminServiceListItem
+{
+	font-weight:bold !important;
+	height:18px;
+	padding:3px 5px 0 5px !important;
+	color:#666 !important;
+}
+
+.cLumAdminInterfaceListItem
+{
+	background:url(../../../portal/client/images/Interface.gif) no-repeat !important;
+	cursor:pointer !important;
+	height:18px;
+	margin-left:20px !important;
+	padding: 3px 5px 0 15px !important;
+	font-family:Arial;color:red !important;
+	color:#666 !important;
+}
+
+/*************************** NAVIGATION PANE - ADMIN MENU ******************************/
+
+.cLumAdminChannel
+{
+	background:#9CC946 !important;
+	padding: 4px 6px 6px 0 !important;
+}
+
+.cLumAdminChannel div
+{
+	list-style-type:none !important;
+	background:#E1E1CA !important;
+	margin:0 !important;
+	padding:0 0 0 0 !important;
+	border-top:1px solid #BEBEA1 !important;
+}
+
+.cLumAdminChannel img
+{
+	margin:3px 10px 3px 10px !important;
+	vertical-align:middle !important;
+}
+
+.cLumAdminChannel a
+{
+	display: block !important;
+	color:#989687 !important;
+	font:11px Helvetica !important;
+	font-weight:bold !important;
+	text-decoration:none !important;
+	text-transform:uppercase !important;
+}
+
+.cLumAdminChannel a:hover
+{
+	background: #D6E7AD !important;
+	text-decoration:none !important;
+}
+
+/*************************** WORK PANE ******************************/
+
+.cLumAdminWorkPane
+{
+	overflow:hidden !important;
+	position:absolute !important;
+	width: 77%;
+	left: 6px;
+	height: 1024px;
+}
+
+.cLumAdminWorkPaneTitle
+{
+	background-color:#EDF3D6 !important;
+	border-bottom:1px solid #BBB !important;
+	height:24px;
+	padding-top:2px !important; 
+	width:auto;
+}
+
+.cLumAdminWorkPaneUserBar
+{
+	background:url(../images/category1/AdminUserBarMid.gif) repeat-x !important;
+	color:#FFF !important;
+	height:19px;
+	padding:2px 17px 0 19px;
+}
+
+.cLumAdminWorkPaneUserBarLeft
+{
+	background:url(../images/category1/AdminUserBarLeft.gif) top left no-repeat !important;
+	height:28px;
+	position:absolute !important;
+	top:0 !important;
+	width:9px;
+}
+
+.cLumAdminWorkPaneUserBarRight
+{
+	background:url(../images/category1/AdminUserBarRight.gif) top right no-repeat !important;
+	height:28px;
+	padding:4px 5px 0 0 !important;
+	position:absolute !important;
+	right:-1px !important;
+	top:0 !important;
+	width:9px;
+}
+
+#LumisAdminContentTools ul li
+{
+	display:inline !important;
+	overflow:hidden !important;
+}
+
+.cLumAdminContentToolsLeft ul li a
+{
+	color:#666666 !important;
+	font-weight:bold !important;
+	overflow:hidden !important;
+	padding:0 8px !important;
+}
+
+.cLumAdminContentToolsLeft
+{	
+	float:left !important;
+	padding:5px 0 0 6px !important;
+	overflow:hidden !important;
+}
+
+.cLumAdminContentToolsRight
+{
+	float:right;
+	padding:5px 20px 0 0 !important;
+}
+
+/*************************** SPLITTER ******************************/
+
+.cLumAdminSplitter
+{
+	background: url(../images/category1/SplitterBackground.gif) !important;
+	cursor: E-resize !important;
+	height:100%;
+	position:absolute !important;
+	width: 8px;
+	margin-bottom: 555px !important;
+}
+
+.cLumAminCloseNavigationPane
+{
+	cursor:pointer !important;
+}
+
+/*************************** CONTEXT MENU ******************************/
+
+.cLumContexMenu
+{
+	background-color:#ECF2D4 !important;
+	border:1px solid #749E2C !important;
+	padding:3px 3px 1px 3px !important;
+	width:200px !important;
+}
+
+.cLumContextMenuTitle
+{
+	background:url(../../../portal/client/images/ServicesIcone.gif) #cae595 no-repeat 6px !important;
+	color:#5D5A59 !important;
+	height:23px;
+	font-weight:bold !important;
+	padding: 8px 10px !important;
+	text-indent:15px !important;
+	font-size:11px !important;
+}
+
+.cLumContextMenuPageTitle, .cLumContextMenuPageTemplateTitle, .cLumContextMenuChannelTitle,  .cLumContextMenuChannelTemplateTitle, .cLumContextMenuServiceTitle
+{
+	background:url(../../../portal/client/images/Page.gif) #cae595 no-repeat 7px !important;
+	color:#5D5A59 !important;
+	height:23px;
+	font-weight:bold !important;
+	padding: 8px 10px 1px 10px !important;
+	text-indent:20px !important;
+	font-size:11px !important;
+}
+
+.cLumContextMenuPageTemplateTitle
+{
+	background:url(../../../portal/client/images/PageTemplate.gif) #cae595 no-repeat 7px !important;	
+}
+
+.cLumContextMenuChannelTitle
+{
+	background:url(../../../portal/client/images/Channel.gif) #cae595 no-repeat  9px !important;	
+}
+
+.cLumContextMenuChannelTemplateTitle
+{
+	background:url(../../../portal/client/images/ChannelTemplate.gif) #cae595 no-repeat 9px !important;
+}
+
+.cLumContextMenuServiceTitle
+{
+	background:url(../../../portal/client/images/ServicesIcone2.gif) #cae595 no-repeat 9px !important;
+}
+
+.cLumContextMenuSeparator
+{
+	background-color:#749E2C !important;
+	border:1px solid #ECF2D4 !important;
+	height: 1px;
+}
+
+.cLumContextMenuItem,
+.cLumContextMenuItemMouseOver,
+.cLumContextMenuItemDisabledMouseOver,
+.cLumContextMenuItemDisabled
+{
+	background-color:#ECF2D4 !important;
+	color:#5D5A59 !important;
+	cursor:pointer !important;
+	font: 10px Verdana,sans-serif !important;
+	height:20px;
+	padding:4px 8px 0 8px !important;
+	margin-top:2px;
+	white-space: nowrap;
+}
+
+.cLumContextMenuItemMouseOver
+{
+	background:url(../../../portal/client/images/AdminBackContext.gif) repeat-x !important;
+}
+
+.cLumContextMenuItemDisabledMouseOver,
+.cLumContextMenuItemDisabled
+{	
+	color:#AAA !important;
+	cursor:default !important;
+}
+
+/*********************************************************/
+
+.cLumAdminChannelMenu
+{
+	border-bottom:1px solid #AAA !important;
+	height:15px;
+	font-size:11px !important;
+	font-weight:bold !important;
+	padding:3px 5px 3px 3px  !important;
+	color:#666 !important;
+}
+
+.cLumAdminPageTitle
+{
+	border-bottom:1px solid #AAA !important;
+	height:15px;
+	font-size:10px !important;
+	font-weight:bold !important;
+	padding:3px 15px 3px 3px !important;
+	color:#666 !important;
+}
+
+.cLumAdminPageMenu
+{
+	border-bottom:5px solid #FFC763 !important;
+	height:15px;
+	font-size:10px !important;
+	font-weight:bold !important;
+	padding:3px 15px 3px 3px !important;
+	color:#666 !important;
+}
+
+.cLumAdminInterfaceHighlight
+{
+	position:absolute !important;
+	overflow:hidden !important;
+	display:none;
+}
+
+.cLumAdminInterfaceHighlightSelected
+{
+	border: 3px dashed #A5CE44;
+	margin:-5px;
+	padding:1px;
+}
+
+.cLumAdminInterfaceHighlightTitle
+{
+	position:absolute;
+	color:#fff;
+	font-size:10px;
+	height:20px;
+	padding:3px;
+	overflow:hidden;
+}
+
+.cLumDraggedInterfaceLink
+{
+	background-color: #A5CE44 !important;	
+	color: #FFF !important;
+	cursor:default !important;
+	padding:4px 4px  !important;
+}
+
+.cLumDraggedInterfaceHolder
+{
+	background-color:#FFFF80 !important;
+	border:1px solid #AAA !important;
+	color:#555 !important;
+}
+
+.cLumColumnSizer,
+.cLumColumnSizerDisabled
+{
+	white-space: nowrap;
+	text-align: center !important;
+	background-color:#EEE !important;
+	height:19px;
+	padding: 0 3px
+}
+
+.cLumColumnSizer input,
+.cLumColumnSizerDisabled input
+{
+	border:1px solid #AAA !important;
+	font-size:9px !important;
+	width:auto !important;
+}
+.cLumColumnSizer image
+{
+	cursor:pointer !important;
+}
+
+.cLumColumnSizerDisabled
+{
+	cursor:default !important;
+}
+
+.cLumColumnDropLine
+{
+	border-top:3px dashed #A5CE44 !important;
+}
+
+.cLumAreaAdmin
+{
+	border:1px solid #AAA !important;
+	border-top:0 !important;
+	width:0%;
+	background-color:#FFFFFF !important;
+}
+
+.cLumAdminServiceInterfaceListHeader
+{
+	background-color:#FFFF80 !important;
+	border-bottom:1px solid #AAA !important;
+	color:#555 !important;
+	padding-left:3px !important;
+}
+
+.cLumAdminServiceInterfaceListHeader div
+{
+	margin-left:0 !important;
+}
+
+.cLumAdminAddService
+{
+	background:url(../../../portal/client/images/AddServiceInstance.gif) no-repeat !important;
+}
+
+.cLumInterfaceHolder
+{
+	border:1px dotted #AAA !important;
+	background-color:#FFFF80 !important;
+	color:#555 !important;
+	padding:10px !important;
+	text-align:center !important;
+}
+
+.cLumAdminToolBarButton
+{
+	color:#666 !important;
+	cursor:pointer !important;
+	font:10px Verdana !important;
+	padding:0 10px !important;
+	font-weight:bold !important;
+}
+
+.cLumAdminToolBarButtonDisabled
+{
+	color:#CCC !important;
+	cursor:default !important;
+	font:10px Verdana !important;
+	padding:0 10px !important;
+	font-weight:bold !important;
+}
+
+.cLumAdminToolBarButtonImageOff
+{
+	background-color:#A5CE44 !important;
+	cursor:pointer !important;
+}
+
+.cLumAdminToolBarButtonImageOn
+{
+	background-color:#666 !important;
+}
+
+.cLumAdminSubHeader
+{
+	background:#E3E3E3 !important;
+	border-top:1px solid #FFFFF5 !important;
+	height:20px;
+	padding:0 8px 0 28px !important;
+	width:auto;
+}
+
+#LumisAdminSubHeader td, 
+#LumisAdminSubHeader span, 
+#LumisAdminSubHeader div, 
+#LumisAdminSubHeader li, 
+#LumisAdminSubHeader a 
+{
+	color:#8C8C8C !important;
+	font:10px verdana, arial, sans-serif !important;
+	line-height:11px;
+}
+
+#LumisAdminSubHeader a 
+{
+	text-decoration:none !important;
+}
+
+#LumisAdminSubHeader a:hover 
+{
+	color:#696964 !important;
+	text-decoration:none !important;
+}
+
+#LumisAdminSubHeader .rgtmar 
+{
+	margin:0 5px 0 0 !important;
+}
+
+#LumisAdminSubHeader .lftmar 
+{
+	margin:0 0 0 8px !important;
+}
+
+#LumisAdminSubHeader .tddrop 
+{
+	padding:0 116px 0 0 !important;
+}
+
+.cLumAdminMenuSelected
+{
+	font-weight:bold !important;
+}
+
+.cLumAdminContentTitle
+{	
+	background-color:#EDF3D6 !important;
+	overflow:hidden !important;
+	padding-top:10px !important;
+	width:auto;	
+}
+
+.cLumAdminContentTitleLeft
+{
+	float:left !important;		
+	height:22px;
+	overflow:hidden !important;
+	width:10px;
+}
+
+.cLumAdminContentTitleRight
+{	
+	float:right !important;
+	height:22px;	
+	width:10px;
+}
+
+.cLumAdminContentSubTitle
+{
+	color:#666 !important;
+	padding: 3px 0 0 15px !important;
+	overflow:hidden !important;
+}
+
+#LumisAdminContentTools
+{
+	background:#FFFFFF !important;
+	overflow:hidden !important;
+	padding-left:2px !important;
+}
+
+#LumisAdminContentTools ul
+{
+	background-color:#FFF !important;
+	list-style:none !important;
+	margin:0 !important;
+	overflow:hidden !important;
+	padding:0 !important;
+}
+
+.cLumAdminCloseNavigationPane
+{
+	cursor:default !important;
+}
+
+#LumisAdminContentTools
+{
+	height:23px;
+	border-bottom:1px solid #BBB !important;
+	overflow:hidden !important;
+}
+
+/*
+#LumisAdminNavigationMenu
+{
+	background-color:#F4DFC7;
+	overflow:auto !important;
+	padding-bottom:5px !important;
+	width:100%;
+}
+
+#LumisAdminMenu0
+{
+	background-color:#BE5134 !important;
+	border-bottom:1px solid #F4DFC7 !important;
+	padding-left:15px !important;
+}
+
+#LumisAdminMenu0 a
+{
+	color:#FFF !important;
+	height:21px;
+	line-height:21px !important;
+	margin-left:5px !important;
+}
+
+#LumisAdminMenu0Left
+{
+	background:url(../images/category2/AdminMenu0Left.gif) left top no-repeat !important;
+	height:21px;
+	top:0 !important;
+	float:left !important;
+	width:8px;
+}
+
+#LumisAdminMenu1
+{
+	padding-left:30px !important;
+}
+
+#LumisAdminMenu2
+{
+	padding-left:60px !important;
+}
+
+#LumisAdminMenu3
+{
+	padding-left:90px !important;
+}
+
+#LumisAdminMenu1 a, 
+#LumisAdminMenu2 a, 
+#LumisAdminMenu3 a
+{
+	color:#BE5134 !important;
+	height:20px;
+	line-height:18px !important;
+}
+
+.cLumAdminMenuImage
+{
+	padding:10px !important;
+}
+*/
+
+.cLumSafeMode
+{
+	border:1px solid #AAAAAA !important;
+	background-color:#FFC763 !important;
+	padding:5px !important;
+	text-align:center !important;
+}
+.cLumFilterTable
+{
+	width:auto;
+}
+.cLumFilterButtonsTd
+{
+	width:100%;
+}
+
+.cLumisAdminNavigationPaneResizer, .cLumisAdminWorkPaneFooterResizer
+{
+	background: url(../images/category1/SplitterBackground.gif) !important;
+}
+
+.cLumisAdminNavigationPaneToggler 
+{
+	background: url(../images/category1/SplitterCenterImage.gif)  no-repeat  !important;
+}
+
+.cLumisAdminWorkPaneFooterToggler 
+{
+	background: url(../images/category1/WorkPaneFooterResizerCenterImage.gif)  no-repeat  !important;
+}
+
+.cLumisAdminNavigationPaneToggler-open, .cLumisAdminWorkPaneFooterToggler-open 
+{
+    display: none;
+}
+
+.cLumisAdminWorkPaneFooterPane
+{
+}
+
+#LumisAdminWorkPaneBody, #LumisAdminWorkPaneFooter
+{
+	overflow:auto !important;
+}
+
+.cLumAdminRemainingHoldersHeader
+{
+	background:url(../images/category1/LumisAdminNavigationHeader.gif) #739C29 left top no-repeat !important;
+	color:#FFF !important;
+	font-size:11px !important;
+	padding: 3px 0 4px 20px !important;
+}
+
+.cLumAdminHolderHeader
+{
+	background-color:#CAE595 !important;
+	color:#FFF !important;
+	cursor:default !important;
+	font-size:10px !important;
+	height:15px;
+	padding:3px;	
+}
+
+.cLumHolderStructureLayoutMode
+{
+	border: 1px dashed green !important;
+}
+
+.cLumHolderGridLayoutMode
+{
+	border: 1px dashed green !important;
+}
+
+.cLumEmptyHolder
+{
+	border: 1px dashed red !important;
+}
+
+.cLumPageHolderHighlight
+{
+	border: 4px solid green !important
+}
+
+#LumisAdminWorkPaneBodyD0
+{
+	position: absolute !important;
+	top:0 !important;
+	left:0 !important;	
+}
+
+#LumisAdminWorkPaneFooterD0
+{
+	position: absolute !important;
+	top:0 !important;
+	left:0 !important;	
+}
+
+.cLumSafeModeHolderList
+{
+	margin:5px;
+	margin-top:15px;
+	border:2px solid #6d9441;
+}
+
+.cLumSafeModeHolderId
+{
+	margin:0;
+	padding:3px;
+	background-color:#6d9441; /*638C19*/	
+	color:white;
+	display:block;
+}
+
+.cLumSafeModeHolderBody
+{
+	margin:1px;
+	padding:0px;
+}
+
+.cLumAreaError {
+	border:1px solid #ff0000;
+	position:relative;
+}
+
+.cLumAreaErrorIcon {
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:98;
+	width:16px;
+	height:16px;
+	background:#ff0000 url(../images/ico_areaerror.gif) no-repeat 0 0;
+	cursor:pointer;
+	cursor:hand;
+}
+
+.cLumAreaErrorMessage {
+	position:absolute;
+	top:5px;
+	right:5px;
+	z-index:99;
+	border:1px solid #bcbcbc;
+	width:170px;
+	padding:7px 7px 7px 30px;
+	background:#fff url(../images/ico_areaerror_msg.gif) no-repeat 7px 7px;
+	border-radius:3px;
+	box-shadow:0 0 1px #bcbcbc;
+}

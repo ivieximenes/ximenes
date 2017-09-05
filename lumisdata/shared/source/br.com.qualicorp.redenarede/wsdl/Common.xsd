@@ -1,0 +1,127 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:common="http://ws.common.tempoassist.com.br/schema"
+           attributeFormDefault="qualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://ws.common.tempoassist.com.br/schema">
+   <xs:complexType name="Hierarquia">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="estipulante" nillable="true" type="common:Operadora"/>
+         <xs:element minOccurs="0" name="operadora" nillable="true" type="common:Operadora"/>
+         <xs:element minOccurs="0" name="subestipulante" nillable="true" type="common:Operadora"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Operadora">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+         <xs:element maxOccurs="unbounded" minOccurs="0" name="areas" nillable="true"
+                     type="common:Enumerado"/>
+         <xs:element minOccurs="0" name="codigoConnectmed" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="pathLogo" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Enum">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="ordinal" nillable="true" type="xs:int"/>
+         <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Enumerado">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DadosPessoais">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:date"/>
+         <xs:element minOccurs="0" name="ddd" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="ramal" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="telefone" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Contato">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="codigoContato" nillable="true" type="xs:long"/>
+         <xs:element minOccurs="0" name="nomeContato" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="telefoneContato" nillable="true" type="common:Telefone"/>
+         <xs:element minOccurs="0" name="telefoneFax" nillable="true" type="common:Telefone"/>
+         <xs:element minOccurs="0" name="telefonePrincipal" nillable="true" type="common:Telefone"/>
+         <xs:element minOccurs="0" name="tipoContato" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Telefone">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="ddd" nillable="true" type="xs:int"/>
+         <xs:element minOccurs="0" name="numero" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="ramal" nillable="true" type="xs:int"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Plano">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:long"/>
+         <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="titular" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="vigencia" nillable="true" type="xs:date"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="UnidadeFuncional">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Empresa">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:int"/>
+         <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="sigla" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Endereco">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="cep" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="codigoIBGE" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="complemento" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="logradouro" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="numero" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="tipoLogradouro" nillable="true" type="xs:string"/>
+         <xs:element minOccurs="0" name="uf" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ServiceResponse">
+      <xs:sequence>
+         <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:boolean"/>
+         <xs:element minOccurs="0" name="codigoErro" nillable="true" type="common:TipoErro"/>
+         <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="TipoErro">
+      <xs:restriction base="xs:int">
+         <xs:enumeration value="0"/>
+         <xs:enumeration value="1"/>
+         <xs:enumeration value="2"/>
+         <xs:enumeration value="3"/>
+         <xs:enumeration value="4"/>
+         <xs:enumeration value="5"/>
+         <xs:enumeration value="6"/>
+         <xs:enumeration value="7"/>
+         <xs:enumeration value="8"/>
+         <xs:enumeration value="9"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

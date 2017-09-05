@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Multi-Server</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?multiserver.htm"; }
+  else { parent.quicksync('a7.5.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Multi-Server</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="geradores_de_cache.htm">Previous</a>&nbsp;
+     <a href="deployment.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Através do Gerenciador de <span style="font-style: italic;">Multi-Server</span> é possível visualizar os servidores que são membros ativos de um <span style="font-style: italic;">cluster.</span></p>
+<p style="margin: 14px 0px 0px 0px;">Neste tipo de ambiente, os servidores trocam mensagens que podem ser informativas ou para disparar alguma ação para todos os servidores ativos.</p>
+<p style="margin: 14px 0px 0px 0px;">A <span style="font-style: italic;">API</span> <span style="font-style: italic;"><a href="../api/lumis/portal/cluster/package-summary.html" target="_blank" class="weblink">lumis.portal.cluster</a></span> pode ser utilizado para customização da comunicação entre servidores, indicando o tipo de mensagens, tipo de operações e em quais diretórios essas operações serão realizadas. Essas operações são responsáveis pelas ações realizadas (positivas ou negativas).</p>
+<p style="margin: 14px 0px 0px 0px;">O produto foi implementado utilizando-se a <span style="font-style: italic;">API</span> mais alto nível <span style="font-style: italic;"><a href="../api/lumis/portal/filesystem/package-summary.html" target="_blank" class="weblink">lumis.portal.filesystem</a></span> para realização de operações que efetuam alterações nos sistemas de arquivos de todos os servidores ativos (mais especificamente nos seguintes diretórios <span style="font-style: italic;">lumisdata/def</span>, <span style="font-style: italic;">lumisdata/data</span> e <span style="font-style: italic;">www</span>). Tais operações podem ser: adição ou remoção de arquivos, limpeza de cache, sincronismo de memória, cópia de arquivos, entre outros.</p>
+<p style="margin: 14px 0px 0px 0px;">O fato de arquivos de soluções estarem localizados naqueles diretórios, não siginifica que serão automaticamente replicados. Ou seja, arquivos criados manualmente em tais diretórios não serão replicados, a não ser que esteja implementado para isso.</p>
+<p style="margin: 14px 0px 0px 0px;">As funcionalidades que fazem parte do produto que suportam <span style="font-style: italic;">multi-server</span>, implementam as replicações ou comunicações necessárias para seu correto funcionamento nesse cenário. Serviços customizados ou outros componentes executados no portal, devem ser implementados para darem suporte a <span style="font-style: italic;">multi-server</span> , conforme necessário.</p>
+<p>&nbsp;</p>
+<p>A figura abaixo exibe membros ativos de um <span style="font-style: italic;">cluster,</span> cujos registros estão ordenados por <span style="font-style: italic;">IP,</span> mas podem ser ordenados pela porta, bastando selecionar o nome da coluna:</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm167.jpg" width="799" height="604" border="0" alt="portalAdm167"></p>
+<p style="margin: 14px 0px 0px 0px;">É possivel ainda realizar uma configuração relacionada ao tempo que determinadas mensagens trocadas devem ser persistidas (mensagens duráveis), que por <span style="font-style: italic;">default</span> é de 10.080 minutos (uma semana).</p>
+<p style="margin: 14px 0px 0px 0px;">Tais mensagens podem estar relacionadas à criação e exclusão de determinados arquivos, como cache <span style="font-style: italic;">HTML</span>, índices de busca, arquivos públicos.</p>
+<p style="margin: 14px 0px 0px 0px;">Para alterar portanto o tempo de persistência de determinadas mensagens, deve-se acionar <span style="font-style: italic;">Configuração </span> e alterar o valor <span style="font-style: italic;">default</span> de 10.080 para o valor desejado que será considerado em minutos:</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm172.jpg" width="900" height="602" border="0" alt="portalAdm172" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Se o valor for igual a zero, as mensagens serão consideradas como não persistidas.</p>
+<p style="margin: 14px 0px 0px 0px;">A alteração da configuração só será processada se a configuração de <span style="font-style: italic;">cluster</span> estiver habilitada no arquivo <span style="font-style: italic;">lumisdata/config/lumisportalconfig.xml</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">A implementação que utiliza a <span style="font-style: italic;">API</span> de <span style="font-style: italic;">lumis.portal.cluster</span> pode decidir se a mensagem será ou não durável. Essa decisão deve se basear na importância da garantia de entrega e sobre o custo de desempenho e armazenamento que o fato da mensagem ser durável pode trazer. Como exemplo, &nbsp;mensagens de criação de <span style="font-style: italic;">cache</span> <span style="font-style: italic;">HTML </span>de páginas não são persistidas, enquanto que mensagens de remoção do mesmo, são persistidas. Dessa forma, uma máquina que não esteja ativa no <span style="font-style: italic;">cluster</span> quando ocorrer a remoção de um <span style="font-style: italic;">cache</span> <span style="font-style: italic;">HTML</span> em outro servidor que estiver ativo, receberá a mensagem de remoção do <span style="font-style: italic;">cache</span>, assim que a sua conexão estiver restabelecida.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="98" style="width:98px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="512" style="width:512px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="612" style="width:612px; border: solid 1px #000000;"><p>Na documentação acima foi utilizado o termo mensagens tanto para transmissão de informações quanto de comando. Porém, na <span style="font-style: italic;">API</span> do produto, é utilizado o termo Transmissão para mensagens (interface <span style="font-style: italic;">java</span> <span style="font-style: italic;"><a href="../api/lumis/portal/cluster/IClusterMessage.html" target="_blank" class="weblink">IClusterMessage</a></span>) e comandos (<span style="font-style: italic;"><a href="../api/lumis/portal/cluster/IClusterCommand.html" target="_blank" class="weblink">IClusterCommand</a></span>). Comando já é pré-definidos o que é executado no servidor, enquanto que mensagem gera eventos que quem observa (observadores de cada servidor) decide como agir.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

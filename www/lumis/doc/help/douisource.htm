@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Source</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douisource.htm"; }
+  else { parent.quicksync('a8.3.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Source</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douidesenvolvimento.htm">Previous</a>&nbsp;
+     <a href="douicontroles.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Um <span style="font-style: italic;">source</span> é a representação de repositório de dados que possui um conjunto de campos. Ele determina o esquema dos dados e popula os controles, que são os componentes visuais das interfaces <span style="font-style: italic;">DOUI</span>.  </p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">data provider</span> é o responsável por obter dados junto a uma fonte de dados (por exemplo, uma tabela de banco de dados ou um arquivo texto) e popular um <span style="font-style: italic;">source</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Portanto, todos os dados apresentandos nas interfaces <span style="font-style: italic;">DOUI</span> são obtidos através de <span style="font-style: italic;">sources</span> e <span style="font-style: italic;">data providers.</span></p>
+<p style="margin: 8px 0px 0px 0px;">Um <span style="font-style: italic;">source</span> consiste em uma classe que estende a classe <span style="font-style: italic;">Source. </span>Sua hierarquia é assim definida:</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;">a)<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>A classe <span style="font-style: italic;"><a href="../api/lumis/doui/source/Source.html" target="_blank" class="weblink">Source</a></span> possui a implementação da infraestrutura de um <span style="font-style: italic;">source</span>. É uma classe abstrata, ainda sem definição sobre como os dados são persistidos ou organizados;</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;">b)<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>A classe <span style="font-style: italic;"><a href="../api/lumis/doui/source/TabularSource.html" target="_blank" class="weblink">TabularSource</a> </span>estende <span style="font-style: italic;">Source</span>, acrescentando a lógica de que os dados estão organizados em uma forma tabular, em linhas e colunas, sendo que cada linha representa um dado e cada campo uma coluna. Há um campo que é a chave primária. O valor desse campo nunca repete e pode ser utilizado para identificar uma linha.</p>
+<p style="margin: 8px 0px 0px 0px;"> &nbsp; &nbsp; Os dados desse tipo de <span style="font-style: italic;">source</span> são armazenados em uma instância de <span style="font-style: italic;">TabularData</span>.</p>
+<p style="margin: 8px 0px 0px 24px;">Esta classe também é abstrata, por não definir sobre como os dados são persistidos.</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;">c)<span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>A classe <span style="font-style: italic;"><a href="../api/lumis/doui/table/TableSource.html" target="_blank" class="weblink">TableSource </a></span>estende <span style="font-style: italic;">TabularSource</span>, acrescentando a funcionalidade de poder mapear campos do <span style="font-style: italic;">source</span> diretamente com colunas de uma tabela de uma base de dados. Deve-se especificar o atributo <span style="font-style: italic;">type </span>com<span style="font-style: italic;"> valor “table” </span>na definição do <span style="font-style: italic;">source</span> .</p>
+<p style="margin: 8px 0px 0px 24px;">Este tipo de <span style="font-style: italic;">source</span> possui um <span style="font-style: italic;"><a href="../api/lumis/doui/source/IDataProvider.html" target="_blank" class="weblink">IDataProvider</a></span>, que é responsável em prover dados ao <span style="font-style: italic;">source</span>. A implementação de <span style="font-style: italic;">IDataProvider default</span> é um <span style="font-style: italic;"><a href="../api/lumis/doui/table/TableDataProvider.html" target="_blank" class="weblink">TableDataProvider</a>,</span> que lê os dados da tabela com o nome especificado no nó <span style="font-style: italic;">table</span> dentro do <span style="font-style: italic;">source</span>. As colunas lidas são conforme os identificadores dos campos, ou o atributo opcional <span style="font-style: italic;">columnName </span>nos campos.</p>
+<p style="margin: 8px 0px 0px 24px;">É possível utilizar um <span style="font-style: italic;">DataProvider</span> customizado. Para tal, na definição do <span style="font-style: italic;">source</span> deve ser definido um dos elementos <span style="font-style: italic;">dataproviderClassName</span> ou <span style="font-style: italic;">dataproviderScriptPath</span>. Nesse caso, se o elemento <span style="font-style: italic;">dataproviderClassName</span> for definido, ele deve conter o nome da classe que implementa o <span style="font-style: italic;">IDataProvider</span>, já se for definido o elemento <span style="font-style: italic;">dataproviderScriptPath</span>, este deve conter o caminho do arquivo de <span style="font-style: italic;">script</span> que define a classe <span style="font-style: italic;">Java</span> implementando o <span style="font-style: italic;">IDataProvider</span>. Dessa forma, ao invés do <span style="font-style: italic;">TableSource</span> utilizar sua forma padrão de leitura de dados, o <span style="font-style: italic;">IDataProvider</span> especificado será chamado quando o <span style="font-style: italic;">source</span> precisar ter seus dados lidos.</p>
+<p style="margin: 8px 0px 0px 0px;">O ciclo de vida de um <span style="font-style: italic;">source</span> é:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Sua instância é construída;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Seu método <span style="font-style: italic;">loadData()</span> é executado, onde seus dados são carregados.</td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

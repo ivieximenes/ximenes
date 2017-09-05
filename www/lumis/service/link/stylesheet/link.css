@@ -1,0 +1,52 @@
+﻿/* $Revision: 15522 $ $Date: 2013-06-26 11:05:58 -0300 (Wed, 26 Jun 2013) $ */
+
+/*items icon and horizontal alignment*/
+.lumis-service-link .lum-list-item {
+	position:relative;
+}
+.lumis-service-link .lum-list-item .lum-content-title > a:before {
+	content:url(../image/ico_dot.png);
+	position:absolute;
+	left:0;
+	top:-.1em;
+}
+.lumis-service-link .lum-list-item .lum-content-title > a.lum-link-attachment:before {
+	content:url(../../../portal/client/images/ico_attachment.png);
+	top:.1em;
+}
+.lumis-service-link .lum-list-item .lum-content {
+	margin-left:15px;
+}
+.lumis-service-link .lum-list-item.lum-link-category > .lum-content {
+	margin-left:0;
+}
+.lumis-service-link .lum-list-item .lum-content-title > a.lum-link-external:after {
+	content:url(../image/ico_link_external.png);
+	padding-left:4px;
+}
+
+/*category title*/
+.lumis-service-link .lum-link-category > .lum-content > .lum-content-header > .lum-content-title {
+	text-transform:uppercase;
+	font-weight:normal;
+}
+
+/*category spacing*/
+.lumis-service-link .lum-link-category {
+	margin-top:30px;
+}
+.lumis-service-link .lum-link-category.lum-first {
+	margin-top:15px;
+}
+
+/*borders between items*/
+.lumis-service-link .lum-list-item .lum-list-item:after {
+	border-color:#ececec;
+}
+.lumis-service-link .lum-list-item.lum-link-category:after,
+.lumis-service-link .lum-list-item .lum-list-item.lum-last:after {
+	border-width:0;
+}
+.lumis-service-link .lum-list-item.lum-link-category.lum-last:after {
+	border-width:1px;
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output omit-xml-declaration="yes" method="html" />
+	<xsl:import href="/lumis/doui/style/DouiControls.xsl" />
+	
+	<xsl:template match="/">
+
+
+
+		<section class="smt-carousel smt-carousel-wrapper">
+			<div class="smt-carousel-items">
+				<div class="smt-carousel-slide">
+					<div class="smt-carousel-content">
+						<h1 class="smt-carousel-title">Esqueci a senha</h1>
+						<p>Para receber uma nova senha no e-mail cadastrado, informe o número da carteirinha ou o CPF e clique em enviar.</p>
+					</div><!--
+					--><img class="smt-carousel-image" src="img/banner-03.png" alt="Ilustração de atendente de telecomunicação."/>
+				</div>
+			</div>
+		</section>
+		
+		<nav class="smt-breadcrumb">
+			<ul class="smt-breadcrumb-list">
+				<li>Você está em</li>
+				<li><a href="#">Home</a></li>
+				<li>Esqueci a senha</li>
+			</ul>
+		</nav>
+		
+		<section class="smt-section smt-section-forgot-password">
+			<div class="smt-section-wrapper">
+				<div class="smt-warning success">
+		               <p>Sua solicitação foi processada com sucesso! Você receberá um e-mail com instruções para recuperar a senha.</p>
+		           </div>
+		           <div class="smt-warning error">
+		               <p>Ocorreu um erro ao processar sua solicitação.</p>
+		           </div>
+		           <form class="smt-form-forgot-password" action="{//control[@type='lum_form']/data/action-commit}" method="post" id="esqueciSenhaForm" accept-charset="UTF-8">
+		                <div class="smt-input-holder">
+					        <input class="smt-checkbox visuallyhidden" type="radio" name="cpfCnpj" id="smart-provider-select-cpf"/>
+				            <label class="smt-form-label smt-label-checkbox" for="smart-provider-select-cpf">CPF</label> 
+				            <input class="smt-checkbox visuallyhidden" checked="true" type="radio" name="cpfCnpj" id="smart-provider-select-cnpj"/>
+				            <label class="smt-form-label smt-label-checkbox" for="smart-provider-select-cnpj">CNPJ</label>
+				            
+				            <input class="smt-input required" name="provider-signup-cpf" type="tel" placeholder="CPF"/>
+				            <input class="smt-input required" name="provider-signup-cnpj" type="tel" placeholder="CNPJ"/>      
+					    </div>
+		                <div class="smt-input-holder">
+					        <label for="smart-nome-prestador" class="smt-form-label visuallyhidden">E-mail</label>
+					        <input class="smt-input required" type="email" placeholder="E-mail" id="email" name="email"/>
+					    </div>
+		                <div class="smt-input-holder smt-input-actions">
+		                    <input type="submit" id="buttonform" name="op" value="Enviar" class="smt-main-button" onclick="ga('send', 'event', 'botao', 'clique', 'esquecisenha_prestador-enviar');"/>
+		                </div>
+		            </form>
+		
+			</div>
+		</section>
+		<script type="text/javascript">
+			<xsl:text disable-output-escaping="yes">
+				<![CDATA[
+					
+					$(document).ready(function(){
+					
+						$('#email').keyup(function() {
+							var email = $('#email').val();
+							if ( email.substring(0,1)==" " || email.substring(email.length-1)==" ")
+						  		$('#email').val($.trim($('#email').val()));
+						});
+					
+						$('.cpf-mask').mask("999.999.999-99");
+						var curForm = $("#esqueciSenhaForm");
+
+						curForm.validate({
+							rules: {
+								cpfCnpj: {required: true},
+								cpf_cnpj: {required: true, minlength: 14},
+								email: {required: true, email: true},
+							},
+							errorElement: "p",
+							messages: {
+								cpfCnpj: "Favor selecionar se é um CPF ou CNPJ",
+								cpf_cnpj: "Favor preencher com um CPF/CNPJ",
+								email: "Favor preencher com um e-mail válido",
+							}, 
+							submitHandler: function(form){
+								$("#divButton").hide();
+								$("#divLoading").show();
+								$.ajax({
+									type: "POST",
+									dataType: "json",
+									url: curForm.attr("action"),
+									data: curForm.serialize(),
+									success: function(data){
+										$("#divButton").show();
+										$("#divLoading").hide();
+										curForm[0].reset();
+										$('#success').val("1");
+										$("#formSuccess").submit();
+										
+										$('.smt-warning.success').addClass('open');
+										
+									}
+
+								}).fail(function(data){
+									try{
+									var dataObj = $.parseJSON(data.responseText)
+									var errorMessage = dataObj.responseParameters.doui_error;
+									if(errorMessage == null)
+										errorMessage = dataObj.responseParameters.error.message;
+										
+										if(errorMessage != null)
+										{
+											$(".smt-warning.error").text(errorMessage);
+										
+											console.log(errorMessage);
+										}
+									}catch(e){}
+									
+									$(".smt-warning.error").addClass('open');
+									
+									$("#divButton").show();
+									$("#divLoading").hide();
+								});
+								return false;
+							}
+						});
+						
+					});
+					function trocaClasse() {
+						
+						
+						if ( $("#radioCnpj").is(":checked") )
+						{
+							$("#cpf_cnpj").mask("99.999.999/9999-99");
+						}
+						if ( $("#radioCpf").is(":checked") )
+						{
+							$("#cpf_cnpj").mask("999.999.999-99");
+						}
+					}	
+						
+				]]>
+			</xsl:text>
+		</script>
+	</xsl:template>
+	
+</xsl:stylesheet>

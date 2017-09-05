@@ -1,0 +1,95 @@
+/* Text Styles */
+hr { color: #000000}
+body, table, tr, th /* Normal */
+{
+ font-size: 10pt;
+ font-family: 'Verdana';
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_CourierFixed /* Courier Fixed */
+{
+ font-size: 9pt;
+ font-family: 'Courier New';
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 14pt;
+ font-weight: bold;
+}
+span.f_Highlightlist /* Highlight list */
+{
+}
+span.f_Highlightsubtitle /* Highlight subtitle */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_Highlighttitle /* Highlight title */
+{
+ font-weight: bold;
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_Notes /* Notes */
+{
+ color: #333333;
+}
+/* Paragraph styles */
+p /* Normal */
+{
+ text-align: justify;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_CodeExample /* Code Example */
+{
+ text-align: left;
+ white-space: nowrap;
+}
+.p_Comment /* Comment */
+{
+}
+.p_Heading1 /* Heading1 */
+{
+ background: #ffffff;
+}
+.p_Highlightlist /* Highlight list */
+{
+ margin: 10px 0px 0px 0px;
+}
+.p_Highlightsubtitle /* Highlight subtitle */
+{
+ margin: 19px 0px 0px 0px;
+}
+.p_Highlighttitle /* Highlight title */
+{
+ margin: 29px 0px 0px 0px;
+}
+.p_ImageCaption /* Image Caption */
+{
+ text-align: center;
+}
+.p_Notes /* Notes */
+{
+ border-color: #808080;
+ border-style: solid;
+ border-width: 1px;
+ background: #ffffff;
+ padding: 4px 4px 4px 4px;
+ margin: -4px -4px -4px -4px;
+}

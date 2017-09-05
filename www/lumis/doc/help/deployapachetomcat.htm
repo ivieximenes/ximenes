@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Apache Tomcat</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?deployapachetomcat.htm"; }
+  else { parent.quicksync('a7.1.1.1.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Apache Tomcat</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="deployportlets.htm">Previous</a>&nbsp;
+     <a href="deploybeaweblogic.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>As seguintes etapas devem ser seguidas para realizar o “Deploy”:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Tipo de <span style="font-style: italic;">Deployment</span>: Neste campo pode-se especificar se será um “Novo serviço” ou &nbsp;“Atualizar serviço existente”.</td></tr></table></div><p style="margin: 14px 0px 0px 3px;">a)"Novo serviço" deve ser escolhido quando for realizado o <span style="font-style: italic;">deployment</span> de um <span style="font-style: italic;">portlet</span> pela &nbsp;primeira vez;</p>
+<p style="margin: 14px 0px 0px 3px;">b)"Atualizar serviço existente" é utilizado quando o <span style="font-style: italic;">portlet </span>ou <span style="font-style: italic;">portlets</span> foram alterados, sendo necessário, portanto, realizar um novo <span style="font-style: italic;">deployment</span> do arquivo com extensão <span style="font-style: italic;">war</span>.</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 3px;"> No exemplo foi escolhida a opção “Novo serviço”;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Arquivo de <span style="font-style: italic;">deployment</span>: Neste campo especifica-se o arquivo do serviço de <span style="font-style: italic;">portlet</span>. Ex:<span style="font-style: italic;">calcportlet.war</span>;</td></tr></table></div><p style="text-align: center; text-indent: -24px; margin: 14px 0px 0px 24px;"><img src="portaladm102.jpg" width="900" height="218" border="0" alt="portalAdm102" style="margin:0 auto;margin:20px;"><span style="font-weight: bold;"> </span></p>
+<p style="margin: 14px 0px 0px 0px;">As próximas etapas são:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"> <img src="portaladm104.jpg" width="900" height="234" border="0" alt="portalAdm104" style="margin:0 auto;margin:20px;"></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="19"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td><span style="font-style: italic;">Context path</span>: deve-se especificar qual é o <span style="font-style: italic;">context path</span> do servidor de aplicação onde o <span style="font-style: italic;">portlet</span> será instalado. Ex: <span style="font-style: italic;">“/calcportlet</span>”;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="19"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Identificador do serviço: deve-se especificar o identificador do serviço, que deve seguir um padrão de hierarquia de diretórios, separado por (.). Neste exemplo, a hierarquia é: “portlet.lumis.calc”;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="19"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">5.</span></td><td>Instalar: registra automaticamente o serviço no portal e cria o arquivo de definição do serviço (<span style="font-style: italic;">servicedefinition.xml</span>) no diretório a ser criado, pela hierarquia informada no campo "Identificador do serviço". No exemplo, será criado o diretório será "<span style="font-style: italic;">/portlet/lumis/calc</span>” em "<span style="font-style: italic;">lumisdata/def</span> ".</td></tr></table></div><p style="margin: 14px 0px 0px 19px;">No <span style="font-style: italic;">servicedefinition.xml </span>podem ser alterados:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>nome e a descrição do serviço, através, respectivamente, do atributo <span style="font-style: italic;">name</span> e elemento <span style="font-style: italic;">description</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>nome da interface através do atributo <span style="font-style: italic;">name</span> de cada elemento<span style="font-style: italic;"> interface</span>;</td></tr></table></div><p style="text-indent: 1px; margin: 14px 0px 0px 1px;">Após possíveis alterações no <span style="font-style: italic;">servicedefinition.xml, </span>este deve ser atualizado no Gerenciador de Serviços, na opção “Atualizar”, como é feito após qualquer alteração de serviços no <span style="font-style: italic;">Lumis.</span></p>
+<p style="margin: 14px 0px 0px 0px;">As figuras a seguir exibem respectivamente a instância de serviço “Calculadora”, que é o resultado de um <span style="font-style: italic;">deployment</span> do <span style="font-style: italic;">portlet calcportlet;</span> e uma página com a interface renderizada. O nome do serviço e sua descrição foram alterados no “<span style="font-style: italic;">lumidata/def/portlet/lumis/calc/servicedefinition.xml"</span> .</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm106.jpg" width="900" height="274" border="0" alt="portalAdm106" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm108.jpg" width="691" height="302" border="0" alt="portalAdm108" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;">A barra de título da interface que está acima da calculadora pode ser configurada para ser exibida ou não. Esta configuração é realizada através da opção “Exibir Barra de Título”, das propriedades da interface, acessadas à partir do <span style="font-style: italic;">right-click</span> da mesma. Por <span style="font-style: italic;">default</span> essa propriedade possui valor “não”.</p>
+<p style="margin: 14px 0px 14px 0px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

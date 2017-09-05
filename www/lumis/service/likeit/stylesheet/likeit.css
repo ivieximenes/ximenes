@@ -1,0 +1,113 @@
+.lum-likeit-header {
+	position:relative;
+}
+.lum-likeit-like-link, .lum-likeit-not-like-link {
+	text-transform: uppercase;
+}
+.lum-likeit-like-link {
+	display: inline-block;
+	background:url(../image/ico_disliked.png) no-repeat center center;
+	position: relative;
+	top: 4px;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	width: 18px;
+	height: 14px;
+	margin-right: 5px;
+}
+.lum-likeit-like .lum-likeit-like-link {
+	display: none;
+}
+.lum-likeit-not-like-link {
+	display: none;
+	background: url(../image/ico_liked.png) no-repeat center center;
+	position: relative;
+	top: 4px;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	width: 18px;
+	height: 14px;
+	margin-right: 5px;
+}
+.lum-likeit-like .lum-likeit-not-like-link {
+	display: inline-block;
+}
+
+.lum-likeit-likes-counter{
+	text-align: center;
+	color: #ba2a2a;
+	font-weight: bold;
+	position:relative;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	display: inline-block;
+	width: 18px;
+	height: 14px;
+	cursor:pointer;
+}
+.lum-likeit-likes-counter:before{
+	content:"";
+	display:block;
+	position:absolute;
+	width: 0;
+	height: 0;
+	top: 3px;
+	left: -5px;
+	border-style: solid;
+	border-width: 4px 5px 4px 0;
+	border-color: transparent #dedede transparent transparent;
+}
+.lum-likeit-likes-counter:after{
+	content:"";
+	display:block;
+	position:absolute;
+	width: 0;
+	height: 0;
+	top: 3px;
+	left: -4px;
+	border-style: solid;
+	border-width: 4px 6px 4px 0;
+	border-color: transparent #ffffff transparent transparent;
+}
+.lum-likeit-like-users-block{
+	text-transform: uppercase;
+	font-weight: bold;
+	position:absolute;
+	background-color:#464646;
+	width:150px;
+	margin-top:7px;
+	max-height:250px;
+	padding:15px 20px;
+	border-radius:3px;
+	display:block;
+	z-index:2;
+}
+.lum-likeit-like-users-block:before{
+	content:"";
+	display:block;
+	position:absolute;
+	top: -6px;
+	left: 30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 6px 5px;
+	border-color: transparent transparent #464646 transparent;
+}
+.lum-likeit-like-users-block .lum-likeit-like-users-block-title{
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#ffffff;
+	margin-bottom:8px;
+}
+.lum-likeit-like-users-block ul{
+	list-style-type:none;
+	color:#ffffff;
+	overflow-y:auto;
+	width: 170px;
+	max-height: 208px;
+	padding:0;
+}
+.lum-likeit-like-users-block ul li{
+	margin-bottom:4px;
+}

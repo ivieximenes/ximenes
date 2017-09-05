@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Controles</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douicontroles.htm"; }
+  else { parent.quicksync('a8.3.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Controles</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douisource.htm">Previous</a>&nbsp;
+     <a href="douiprocessactions.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Controles são responsáveis pela interação com o usuário e geração de <span style="font-style: italic;">front-end</span> para interface de serviço.</p>
+<p style="margin: 8px 0px 0px 0px;">Para implementar controles, é necessário implementar <span style="font-style: italic;">IControl</span> ou alguma interface que a estende. Controles podem armazenar um valor <span style="font-style: italic;">(IDataControl)</span>, e também podem estar vinculados a um campo de um source <span style="font-style: italic;">(IDataBoundControl)</span>. Há controles cuja função é especificamente validar dados entrados pelo usuário <span style="font-style: italic;">(IValidarControl)</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Ao invés de implementar diretamente alguma dessas interfaces citadas, pode-se estender uma de suas implementações, o que facilita a criação de um controle. Por exemplo, classes como <span style="font-style: italic;">Control</span>, <span style="font-style: italic;">DataControl</span>, <span style="font-style: italic;">DataBoundControl</span> e <span style="font-style: italic;">ValidatorControl</span> podem ser estendidas. Dessa forma, toda a lógica genérica do controle já estará implementada e o desenvolvedor pode focar apenas nos aspectos específicos do controle.</p>
+<p style="margin: 8px 0px 0px 0px;">Portanto, os controles podem ser divididos em:</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 14px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">Control</span>: Controles de <span style="font-style: italic;">layout</span> apenas;</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 14px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">Data Control</span>: Controles de <span style="font-style: italic;">layout</span>, mas também são responsáveis pela persistência de dados trocados entre o cliente (<span style="font-style: italic;">browser</span>) e o servidor;</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 14px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-style: italic; font-weight: bold;">Data Bound Control</span>: Controles que acessam um ou mais <span style="font-style: italic;">sources</span> e disparam <span style="font-style: italic;">processes actions</span>. Os controles de formulário fazem parte desta classificação, pois manipulam dados.</p>
+<p style="margin: 8px 0px 0px 0px;">As etapas principais no ciclo de vida de um controle são:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">init</span>;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">buildSubControls</span>;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">loadFromRequest</span> caso o <span style="font-style: italic;">IDataControl</span> esteja implementado,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">serverValidate</span> caso o  <span style="font-style: italic;">IValidatorControl </span>seja implementado e a requisição for um <span style="font-style: italic;">process action</span>;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">setRenderData</span> se for uma requisição de renderização;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 2px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">setProcessActionHandlerParameters</span> se for uma requisição de <span style="font-style: italic;">process action.</span></td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Além disso, na implementação em <span style="font-style: italic;">DataBoundControl</span>, o controle se registra como um observador de seu <span style="font-style: italic;">source</span>. Sempre quando os dados do <span style="font-style: italic;">source</span> são carregados, essa implementação executa o método <span style="font-style: italic;">setValueFromSource</span>, que atribui ao controle o valor que está no campo a que ele está associado. Um <span style="font-style: italic;">override</span> nesse método permite a customização de como o valor de um controle é lido do <span style="font-style: italic;">source</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Quando o método <span style="font-style: italic;">setRenderData</span> de um controle é executado, o controle deve acrescentar em seu <span style="font-style: italic;">XML</span> os dados que deseja disponibilizar para o <span style="font-style: italic;">XSL</span>, que é responsável por gerar o código <span style="font-style: italic;">HTML </span>que será renderizado no navegador.</p>
+<p style="margin: 8px 0px 8px 0px;">Outros <span style="font-style: italic;">XSLs </span>podem ser criados, para que o controle possa ser renderizado com diferentes designs, enquanto que a implementação da funcionalidade do controle continua a mesma, implementada na classe <span style="font-style: italic;">Java</span>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

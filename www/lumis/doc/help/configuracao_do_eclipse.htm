@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Configuração do Eclipse</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?configuracao_do_eclipse.htm"; }
+  else { parent.quicksync('a8.1.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Configuração do Eclipse</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="estrutura_de_diretorios.htm">Previous</a>&nbsp;
+     <a href="configuracao_do_lumisportal_e_.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>A distribuição recomendada do Eclipse para o ambiente de desenvolvimento é a versão para Java EE, que pode ser obtida em <a href="http://www.eclipse.org/" target="_blank" class="weblink">http://www.eclipse.org/</a>.</p>
+<p>Recomenda-se também a utilização do plugin Mongrel (<a href="http://marketplace.eclipse.org/content/mongrel" target="_blank" class="weblink">http://marketplace.eclipse.org/content/mongrel</a>) para iniciar e parar o Apache Tomcat.</p>
+<p>&nbsp;</p>
+<p>Ao se inicializar o Eclipse pela primeira vez, será solicitado o local do workspace a ser utilizado. No exemplo, foi utilizado <span style="font-style: italic;">C:\LumisPortalProjects\workspace</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-01_.png" width="616" height="580" border="0" alt="Montagem de ambiente de desenvolvimento-01_" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Após a inicialização do Eclipse, pode-se perceber que não há projeto algum, como mostrado na imagem a seguir:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-01.png" width="442" height="237" border="0" alt="Montagem de ambiente de desenvolvimento-01" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>O primeiro passo para a montagem do ambiente de desenvolvimento é a importação do projeto do <span style="font-style: italic;">LumisPortal</span>. O <span style="font-style: italic;">LumisPortal</span> contém em sua instalação os arquivos necessários para a integração com o Eclipse.</p>
+<p>&nbsp;</p>
+<p>Para importar o projeto, deve-se clicar com o botão direito no <span style="font-style: italic;">Project Explorer</span>, depois selecionar a opção <span style="font-style: italic;">Import / Import</span> ou através do menu <span style="font-style: italic;">File / Import</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-02.png" width="631" height="601" border="0" alt="Montagem de ambiente de desenvolvimento-02" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, deve-se selecionar a opção <span style="font-style: italic;">Existing Projects into Workspace</span> e clicar em <span style="font-style: italic;">Next</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-03.png" width="470" height="550" border="0" alt="Montagem de ambiente de desenvolvimento-03" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Na próxima tela, deve-se selecionar a pasta raiz dos artefatos do ambiente de desenvolvimento (<span style="font-style: italic;">C:\LumisPortalProjects, no exemplo</span>). Após isso, o projeto do <span style="font-style: italic;">LumisPortal </span>deve ser exibido com o nome <span style="font-style: italic;">lumisportal</span>. Deve-se selecioná-lo e clicar em <span style="font-style: italic;">Finish</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-04.png" width="603" height="598" border="0" alt="Montagem de ambiente de desenvolvimento-04" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após esse passo, o projeto do <span style="font-style: italic;">LumisPortal </span>já deve ser exibido no <span style="font-style: italic;">Project Explorer</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-05.png" width="430" height="352" border="0" alt="Montagem de ambiente de desenvolvimento-05" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após isso, deve-se importar o <span style="font-style: italic;">XML catalog </span>para facilitar o desenvolvimento. Esse arquivo contém as referências aos XSDs do portal. Para isso, deve-se, novamente, entrar na opção de <span style="font-style: italic;">Import</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-06.png" width="494" height="536" border="0" alt="Montagem de ambiente de desenvolvimento-06" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Na tela de importação, deve-se selecionar a opção <span style="font-style: italic;">XML Catalog</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-07.png" width="470" height="550" border="0" alt="Montagem de ambiente de desenvolvimento-07" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Quando solicitado, selecionar o arquivo <span style="font-style: italic;">lumisportal/development/eclipse/portal.xmlcatalog </span>e clicar em <span style="font-style: italic;">Finish</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-08.png" width="470" height="550" border="0" alt="Montagem de ambiente de desenvolvimento-08" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Para conferir se o <span style="font-style: italic;">XML catalog </span>foi importado corretamente, pode-se ir na opção <span style="font-style: italic;">Window -&gt; Preferences -&gt; XML -&gt; XML Catalog</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-09.png" width="800" height="746" border="0" alt="Montagem de ambiente de desenvolvimento-09" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Em <span style="font-style: italic;">User Specified Entries </span>devem existir as entradas dos XSDs do <span style="font-style: italic;">LumisPortal</span>.</p>
+<p>&nbsp;</p>
+<p>Após isso, será importado os templates de douidefinition e servicedefinition, basta importar na seguinte tela nas preferências do eclipse:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="eclipsetemplate01.zoom90.png" width="1092" height="644" border="0" alt="EclipseTemplate01" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após clicar no botão "Import...", selecione o arquivo  <span style="font-style: italic;">xmltemplates.xml </span>que se encontra no caminho "&lt;instalação_do_lumisportal&gt;/development/eclipse".</p>
+<p>Ao finalizar a importação os seguintes itens deverão aparecer na listagem de itens:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="eclipsetemplate02.zoom90.png" width="1092" height="645" border="0" alt="EclipseTemplate02" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Após isso, o plugin Mongrel deve ser configurado, indicando-se o local de instalação do Apache Tomcat (no exemplo, <span style="font-style: italic;">C:\LumisPortalProjects\apache-tomcat-8.0.14</span>):</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-10.png" width="795" height="650" border="0" alt="Montagem de ambiente de desenvolvimento-10" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-11.png" width="795" height="650" border="0" alt="Montagem de ambiente de desenvolvimento-11" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Também deve-se configurar o <span style="font-style: italic;">Source Path </span>do Mongrel para que debugs possam ser realizados adequadamente. Para isso, deve-se selecionar a opção Source Path, desmarcar a opção <span style="font-style: italic;">Automatically compute source path </span>e marcar todos os projetos.</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-13.png" width="706" height="714" border="0" alt="Montagem de ambiente de desenvolvimento-13" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Observação: sempre que um novo projeto for criado, ele deve ser adicionado ao <span style="font-style: italic;">Source Path </span>do <span style="font-style: italic;">Mongrel </span>nessa configuração.</p>
+<p>&nbsp;</p>
+<p>Após isso, o Apache Tomcat está pronto para ser executado através do Eclipse. Ele pode ser inicializado utilizando o botão do plugin <span style="font-style: italic;">Mongrel </span>ou através do menu <span style="font-style: italic;">Mongrel -&gt; Start Mongrel</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="montagem%20de%20ambiente%20de%20desenvolvimento-12.png" width="589" height="71" border="0" alt="Montagem de ambiente de desenvolvimento-12" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após esses passos, o <span style="font-style: italic;">LumisPortal </span>estará disponível para acesso.</p>
+<p>&nbsp;</p>
+<p>Recomenda-se a utilização de módulos editáveis para desenvolvimento no <span style="font-style: italic;">LumisPortal</span>. Para a criação do primeiro módulo editável, ver a próxima seção, <a href="configuracao_do_lumisportal_e_.htm">Configuração do LumisPortal e Criação do primeiro Módulo Editável</a>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

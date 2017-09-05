@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>2C96A2CE5AC7FD01015AC8D1373C57A3</id>
+  <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+  <name>Rede na Rede - Menu principal Smart</name>
+  <file-path>lumis/service/hierarchicalcontent/style/menu-principal-smart.xsl</file-path>
+</interface-style>

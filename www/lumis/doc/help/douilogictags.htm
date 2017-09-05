@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Logic Tags</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douilogictags.htm"; }
+  else { parent.quicksync('a8.3.5.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Logic Tags</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douiexpressionlanguageel.htm">Previous</a>&nbsp;
+     <a href="douiexemplocriacaoservico.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">O <span style="font-style: italic;">Lumis Portal</span> suporta condicionais para montar a definição do DOUI de uma interface dinamicamente, durante sua execução.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">As condicionais do<span style="font-style: italic;"> douidefinition.xml</span> devem estar declaradas no cabeçalho com o <span style="font-style: italic;">namespace</span> <span style="color: #0000ff; text-decoration: underline;">http://www.lumis.com.br/lumisportal/xsd/doui/logic</span>. Costuma-se associar o nome <span style="font-style: italic;">logic</span> ao<span style="font-style: italic;"> namespace</span> afim de explicitar que está utilizando-se desta funcionalidade.  </p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">As <span style="font-style: italic;">tags</span> para a utilização das condicionais só podem ser inseridas dentro da seção de interfaces.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">A lista de tags existentes são:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 13px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.15;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic; font-weight: bold;">choose</span>: Indica que um bloco da definição será decidida de acordo com condicionais. As seguintes <span style="font-style: italic;">tags</span> devem estar dentro do <span style="font-style: italic;">choose</span> e definem as condições:</td></tr></table></div><p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="width:48px">&nbsp;</span><span style="font-style: italic; font-weight: bold;">when</span>: Indica uma condição, que se atendida o bloco dentro desta <span style="font-style: italic;">tag</span> deve ser utilizada. O atributo <span style="font-style: italic;">test</span> determina qual é a expressão que deverá ser avaliada. A expressão deve ter um resultado do tipo <span style="font-style: italic;">boolean</span>. O valor do atributo <span style="font-style: italic;">test</span> já é a expressão, e não deve ser envolvida pelo <span style="font-style: italic;">${ ... }</span> normalmente usado para incluir expressões EL dentro de strings. Uma vez que a condição de uma <span style="font-style: italic;">tag</span> <span style="font-style: italic;">when</span> é avaliada como verdadeira, o <span style="font-style: italic;">choose</span> termina sem avaliar suas outras opções (ou seja, apenas o primeiro <span style="font-style: italic;">when</span> cujo <span style="font-style: italic;">test</span> resultou em verdadeiro será utilizado).</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="width:48px">&nbsp;</span><span style="font-style: italic; font-weight: bold;">otherwise</span>: Indica que se nenhuma condição das <span style="font-style: italic;">tags</span> <span style="font-style: italic;">when</span> for avaliada como verdadeiro, este trecho será utilizado. A presença desta <span style="font-style: italic;">tag </span>é opcional, e ela deverá sempre ser a última dentro de um grupo <span style="font-style: italic;">choose</span>. Caso esta <span style="font-style: italic;">tag</span> não esteja presente e nenhuma condição de <span style="font-style: italic;">when</span> seja verdadeiro, o <span style="font-style: italic;">choose</span> será eliminado, sem gerar nenhum fragmento de XML em seu lugar.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;">Exemplo de uso do <span style="font-style: italic;">choose</span>:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.15; padding: 0px 0px 0px 0px; margin: 0px 0px 13px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e6e6e6" border="0" style="background-color: #e6e6e6; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="875" style="width:875px; border: solid 1px #000000;"><p>&lt;doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" </p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui" &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;xmlns:control="http://www.lumis.com.br/douicontrols" </p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;xmlns:logic="http://www.lumis.com.br/lumisportal/xsd/doui/logic"&gt;</p>
+<p>&nbsp;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp;&lt;service id="myServiceId"&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp;&lt;/service&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp;&lt;interfaces&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;interface id="myInterfaceId"&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;logic:choose&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;logic:when test="empty param.lumItemId"&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/logic:when&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;logic:when test="param.myParameter eq 'value1'"&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/logic:when&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;logic:when test="param.myParameter eq 'value2'"&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/logic:when&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;logic:otherwise&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/logic:otherwise&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/logic:choose&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/interface&gt;</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+<p>  &nbsp; &nbsp; &nbsp; &nbsp;&lt;/interfaces&gt;</p>
+<p>&nbsp;</p>
+<p>&lt;/doui:douiDefinition&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

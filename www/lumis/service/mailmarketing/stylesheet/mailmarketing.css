@@ -1,0 +1,5 @@
+/* $Revision: 15435 $ $Date: 2013-06-07 11:50:06 -0300 (Fri, 07 Jun 2013) $ */
+.lumis-service-mailmarketing-userSubscription .lum-form-field-id-categoryId .lum-form-field-label,
+.lumis-service-mailmarketing-publicUserSubscription .lum-form-field-id-categoryId .lum-form-field-label {
+	display:none;
+}

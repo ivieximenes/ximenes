@@ -1,0 +1,86 @@
+/* $Revision: 16715 $ $Date: 2014-12-12 13:21:13 -0200 (Fri, 12 Dec 2014) $ */
+.lumis-service-activitystream-activitystream .lum-list-item:after, .lumis-service-activitystream-activitystream .lum-list-item:before{
+	content:none;
+}
+
+.lumis-service-activitystream-activitystream .lum-activitystream-actor-image img {
+	border-radius:6px;
+	width:50px;
+	border:1px solid #AAA;
+	vertical-align: top;
+}
+.lumis-service-activitystream-activitystream .lum-activitystream-actor-image {
+	position: absolute;
+	left: -70px;
+	top: -1px;
+}
+
+.lumis-service-activitystream-activitystream .lum-button-primary {
+	padding:6px 18px;
+	font-size: 1.1em;
+}
+
+.lumis-service-activitystream-activitystream .lum-list-item {
+	display: block;
+	padding-left: 70px;
+}
+.lumis-service-activitystream-activitystream .lum-list-item > .lum-content{
+	padding:15px;
+	border:1px solid #AAA;
+	border-radius:3px;
+	position:relative;
+}
+.lumis-service-activitystream-activitystream .lum-list-item > .lum-content > .lum-content-header > .lum-content-title{
+	color: #999;
+}
+
+.lumis-service-activitystream-activitystream .lum-list-item > .lum-content:before{
+	content:"";
+	width: 0px;
+	height: 0px;
+	position:absolute;
+	border-style: solid;
+	border-width: 5px 10px 5px 0;
+	border-color: transparent #AAA transparent transparent;
+	left:-10px;
+	top:17px;
+}
+
+.lumis-service-activitystream-activitystream .lum-list-item > .lum-content:after{
+	content:"";
+	width: 0px;
+	height: 0px;
+	position:absolute;
+	border-style: solid;
+	border-width: 5px 10px 5px 0;
+	border-color: transparent #FFF transparent transparent;
+	left:-8px;
+	top:17px;
+}
+
+.lumis-service-activitystream-activitystream .lum-list-item:after {
+ 	border-bottom: 0px;
+}
+
+.lumis-service-activitystream-activitystream .lum-list-item > .lum-content > .lum-content-header > .lum-content-title {
+	padding-right: 45px;
+}
+.lumis-service-activitystream-activitystream .lum-list .lum-actions {
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+.lumis-service-activitystream-activitystream .lum-list {
+	overflow: hidden;
+}
+.lumis-service-activitystream-activitystream .lum-list-item {
+	left: 0;
+	transition:left .4s;
+	position:relative;
+	visibility:visible;
+}
+.lumis-service-activitystream-activitystream .lum-list-item.lum-inserting {
+	left:100%;
+	visibility:hidden;
+}

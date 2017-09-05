@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Configurações do ambiente</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?configuracoes_do_ambiente.htm"; }
+  else { parent.quicksync('a7.6.3.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Configurações do ambiente</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="arquivos_de_configuracao_servidor.htm">Previous</a>&nbsp;
+     <a href="fs_arquivos_espelhados_nos_servid.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Esta página permite que os administradores do portal alterem configurações do ambiente. Essas configurações afetam todo o cluster do portal e não somente um servidor.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="deploymentenvironmentconfig001.jpg" width="881" height="631" border="0" alt="deploymentEnvironmentConfig001" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;"><span style="font-weight: bold;">Página de configurações de ambiente</span></p>
+<p>&nbsp;</p>
+<p>Abaixo está uma lista das configurações que podem ser realizadas.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Tags do ambiente</span></p>
+<p>O ambiente pode ter tags customizadas que o identificam. Essas tags podem ser usadas, por exemplo, para limitar tarefas a determinados ambientes.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Tipo de ambiente</span></p>
+<p>A configuração de tipo de ambiente define o tipo dp ambiente do portal. Essa configuração pode alterar comportamentos do portal de acordo e, portanto, sugere-se que em todos os ambientes instalados essa configuração seja realizada de acordo.</p>
+<p>Os tipos de ambiente existentes são:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">Desenvolvimento</span>: Usado para definir que o ambiente em questão é um ambiente de desenvolvimento. Tipicamente esse ambiente é executado na máquina de um desenvolvedor, utilizando sua própria instância de banco de dados e com sua própria instância de servidor de aplicação.</td></tr></table></div><p style="margin: 0px 0px 0px 11px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">Montagem</span>: Usado para definir que o ambiente em questão é um ambiente de montagem de estrutura. Tipicamente esse ambiente é executado em um servidor que é utilizado por um ou mais montadores para criação e manutenção de estrutura dos projetos.</td></tr></table></div><p style="margin: 0px 0px 0px 11px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">Qualidade</span>: Usado para indicar que o ambiente é utilizado para testes de qualidade. Tipicamente esse ambiente é caracterizado o máximo possível como o ambiente de produção. Utilizado para validações de funcionalidades antes que as mesmas sejam instaladas no ambiente de produção.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">Homologação</span>: Usado para indicar que o ambiente é utilizado para homologação. Tipicamente esse ambiente é caracterizado o máximo possível como o ambiente de produção. Utilizado para validações de funcionalidades antes que as mesmas sejam instaladas no ambiente de produção.</td></tr></table></div><p style="margin: 0px 0px 0px 11px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 11px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">Produção</span>: Usado para indicar que o ambiente é o ambiente final onde será, de fato, utilizado pelos usuários.</td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Habilitar monitoração JavaMelody</span></p>
+<p>Permite ativar ou desativar o <a href="javamelody.htm">JavaMelody</a>, que pode monitorar o uso e desempenho do ambiente.</p>
+<p>&nbsp;</p>
+<p><a name="implementacao_sistema_arquivos"></a><span style="font-weight: bold;">Tipo de implementação do sistema de arquivos</span></p>
+<p>A configuração do tipo de sistema de arquivos serve para definir qual sistema de arquivos será utilizado pelo <span style="font-style: italic;">LumisPortal</span>.</p>
+<p>O sistema de arquivos do <span style="font-style: italic;">LumisPortal </span>é composto por uma série de pastas conhecidas e seus arquivos. As pastas atualmente conhecidas pelo portal são: <span style="font-style: italic;">def</span>, <span style="font-style: italic;">data</span>, <span style="font-style: italic;">source</span> e <a href="gerenciador_de_websites.htm#diretorio_estatico">diretórios estáticos de websites</a>. </p>
+<p>Essa configuração permite abstrair os acessos de leitura e escrita ao sistema de arquivos do portal. O <span style="font-style: italic;">LumisPortal</span> provê duas implementações padrão: <a href="fs_arquivos_espelhados_nos_servid.htm">Arquivos espelhados nos servidores</a> e <a href="fs_arquivos_com_copia_unica.htm">Arquivos com cópia única</a>.</p>
+<p>Para informações sobre como customizar implementações, veja a API <a href="../api/lumis/portal/filesystem/package-summary.html" target="_blank" class="weblink">lumis.portal.filesystem</a>.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="105" style="width:105px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span>:</p>
+</td>
+<td valign="top" width="732" style="width:732px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p style="line-height: 1.50;">Para alterar a implementação do sistema de arquivos do portal, os seguintes passos devem ser adotados:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Alterar a implementação para a desejada nesta tela de configuração</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Parar todos os nós do cluster</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Preparar o sistema de arquivos em cada servidor do cluster. Essa preparação consiste em possuir todos os arquivos existentes na implementação selecionada antes da alteração disponíveis na nova implementação. Configurações específicas podem, também, ser necessárias, dependendo da implementação.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Iniciar todos os nós do cluster</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Repositório de Big Data:</span></p>
+<p>É possível configurar o <a href="bigdata.htm">repositório de Big Data</a> das seguintes formas:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Elasticsearch em local embutido</td></tr></table></div><p><img src="deploymentenvironmentconfig002.jpg" width="621" height="186" border="0" alt="deploymentEnvironmentConfig002"></p>
+<p>Ao escolher esta opção, o <span style="font-style: italic;">Elasticsearch</span> será inicializado localmente, junto do seu servidor de aplicação. </p>
+<p><span style="font-style: italic; font-weight: bold; color: #ff0000;">Essa opção não deve ser utilizada em ambientes de produção ou em ambientes com &nbsp;cluster de Lumis Portal.</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Elasticsearch em <a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/client.html#node-client" target="_blank" class="weblink">Node Client</a></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Elasticsearch em <a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/client.html#transport-client" target="_blank" class="weblink">Transport Client</a></td></tr></table></div><p><img src="deploymentenvironmentconfig003.jpg" width="597" height="289" border="0" alt="deploymentEnvironmentConfig003"></p>
+<p>Ambas as opções relacionadas ao tipo de cliente utilizam um <span style="font-style: italic;">Elasticsearch</span> remoto como repositório.</p>
+<p>Para maiores informações sobre as diferenças entre estes dois tipos de clientes, veja o seguinte <a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/client.html" target="_blank" class="weblink">link</a>.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Customizado</td></tr></table></div><p><img src="deploymentenvironmentconfig004.jpg" width="612" height="147" border="0" alt="deploymentEnvironmentConfig004"></p>
+<p>Esta opção permite que uma classe de repositório de Big Data customizada seja utilizada. Ela deve implementar <a href="../api/lumis/portal/bigdata/spi/IBigDataRepositorySPI.html" target="_blank" class="weblink">IBigDataRepositorySPI</a>, que é a classe responsável pelo armazenamento e busca de <a href="../api/lumis/portal/bigdata/Document.html" target="_blank" class="weblink">Documentos</a>.</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 7px;"><table align="center" width="588" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="472" style="width:472px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+<td valign="middle" width="6" style="width:6px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="588" style="width:588px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>O valor descrito no "Número máximo de requisições em massa concorrentes", irá limitar as requisições em massa por servidor <span style="font-style: italic;">Lumis Portal</span> e não por ambiente.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

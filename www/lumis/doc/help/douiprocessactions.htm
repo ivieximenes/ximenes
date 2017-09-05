@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Process Actions</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douiprocessactions.htm"; }
+  else { parent.quicksync('a8.3.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Process Actions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douicontroles.htm">Previous</a>&nbsp;
+     <a href="douifluxoinformacao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Quando o usuário interage com uma interface e solicita uma ação (por exemplo, ao clicar em &nbsp;um botão <span style="font-style: italic;">Ok</span>, ao terminar de editar um conteúdo), é disparado um processo de ação (<span style="font-style: italic;">process action</span> ).</p>
+<p style="margin: 8px 0px 0px 0px;">No contexto de interfaces <span style="font-style: italic;">DOUI</span>, cada <span style="font-style: italic;">process action</span> é executado através de um ou mais &nbsp;objetos, chamados <span style="font-style: italic;">handlers</span>, que irão de fato processar a ação solicitada pelo usuário. Cada interface define seus <span style="font-style: italic;">process actions</span> e respectivos <span style="font-style: italic;">handlers</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Um <span style="font-style: italic;">process action</span> é disparado a partir do controle que recebeu a interação (por exemplo, no caso do botão <span style="font-style: italic;">OK,</span> é utilizado o controle <span style="font-style: italic;">lum_button</span>). Os controles da interface enviam seus valores como parâmetros para o <span style="font-style: italic;">process action</span> e, então, cada <span style="font-style: italic;">handler</span> configurado é executado na seqüência definida. Os controles &nbsp;podem desencadear a execução de um ou mais <span style="font-style: italic;">process actions</span> como resposta a uma ação do usuário.</p>
+<p style="margin: 8px 0px 0px 0px;">Cada <span style="font-style: italic;">process action handler</span> consiste em uma classe que implementa a interface <span style="font-style: italic;">Java<a href="../api/lumis/doui/processaction/IProcessActionHandler.html" target="_blank" class="weblink">IProcessActionHandler</a>, </span>normalmente estendendo-se a classe genérica <span style="font-style: italic;"><a href="../api/lumis/doui/processaction/ProcessActionHandler.html" target="_blank" class="weblink">ProcessActionHandler</a></span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Cada <span style="font-style: italic;">handler</span> pode gerar uma resposta, contendo parâmetros a serem utilizados na renderização da interface, chamados de parâmetros de renderização (<span style="font-style: italic;">render parameters</span>). Um exemplo de resposta seria o “<span style="font-style: italic;">doui_closeWindow</span>”, utilizado por interfaces que executam numa janela <span style="font-style: italic;">pop-up</span> (por exemplo, ao adicionar um conteúdo). Após salvar os dados, esta resposta contém um parâmetro de renderização que instrui a interface a renderizar apenas o código <span style="font-style: italic;">Javascript</span> para fechar a janela, no lugar do <span style="font-style: italic;">HTML</span> normal da interface.</p>
+<p style="margin: 8px 0px 0px 0px;">A execução dos  <span style="font-style: italic;">process actions</span> é realizada pelo <span style="font-style: italic;">ProcessActionContainer</span> que é responsável por instanciar as classes que implementam a interface <span style="font-style: italic;">IProcessActionHandler</span> e terão o seguinte ciclo de vida:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">init</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">setParameter</span> passando todos os parâmetros definidos;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Execução do método <span style="font-style: italic;">processAction</span>.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Para facilitar a implementação de um <span style="font-style: italic;">IProcessActionHandler</span>, pode-se estender a classe <span style="font-style: italic;">ProcessActionHandler</span> e implementar apenas o método<span style="font-style: italic;"> processAction</span>.</p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-weight: bold;">ProcessActionHandler</span></p>
+<p style="margin: 8px 0px 0px 0px;">É uma classe que implementa a interface <span style="font-style: italic;">IProcessActionHandler</span> e executa operações tais como: adicionar, editar e excluir registros. Portanto, são quatro tipos de <span style="font-style: italic;">process action handler</span>:</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;">a) <span style="font-style: italic;">generic</span>: este  <span style="font-style: italic;">process action handler</span> apenas executa os <span style="font-style: italic;">responses</span> que estão em sua definição. Ele é implementado por <span style="font-style: italic;"><a href="../api/lumis/doui/processaction/GenericProcessActionHandler.html" target="_blank" class="weblink">GenericProcessActionHandler</a></span>.</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;">b) <span style="font-style: italic;">tableAddData</span>, <span style="font-style: italic;">tableUpdateData </span>e<span style="font-style: italic;"> tableDeleteData</span>: estes <span style="font-style: italic;">process actions handlers</span> são utilizados para adicionar, atualizar e remover um dado da persistência respectivamente. As suas implementações são apropriadas para quando é utilizado o <span style="font-style: italic;">TableSource</span> com sua forma padrão de mapeamento de dados (o <span style="font-style: italic;">source</span> com <span style="font-style: italic;">type</span>=“t<span style="font-style: italic;">able</span>”).</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;"> &nbsp; &nbsp;As classes que implementam cada um desses  <span style="font-style: italic;">process actions handlers</span> são, respectivamente:</p>
+<p style="text-indent: -24px; margin: 8px 0px 0px 24px;"> &nbsp; &nbsp; -<span style="font-style: italic;"><a href="../api/lumis/doui/table/TableAddDataProcessActionHandler.html" target="_blank" class="weblink">TableAddDataProcessActionHandler</a></span>,</p>
+<p style="margin: 8px 0px 0px 24px;">-<span style="font-style: italic;"><a href="../api/lumis/doui/table/TableUpdateDataProcessActionHandler.html" target="_blank" class="weblink">TableUpdateDataProcessActionHandler</a></span>,</p>
+<p style="margin: 8px 0px 0px 24px;">-<span style="font-style: italic;"><a href="../api/lumis/doui/table/TableDeleteDataProcessActionHandler.html" target="_blank" class="weblink">TableDeleteDataProcessActionHandler</a></span>.</p>
+<p style="text-indent: -18px; margin: 8px 0px 0px 18px;">c) <span style="font-style: italic;">tableAddMultiRow e tableUpdateMultiRow</span>: estes  <span style="font-style: italic;">process action handlers</span> &nbsp;são &nbsp; &nbsp; &nbsp;utilizados para adicionar e atualizar. Também é utilizado o <span style="font-style: italic;">TableSource</span> como a forma padrão de mapeamento de dados o <span style="font-style: italic;">source</span> com <span style="font-style: italic;">type</span>=“t<span style="font-style: italic;">able</span> ”).</p>
+<p style="margin: 8px 0px 0px 24px;">As classes que implementam cada um desses <span style="font-style: italic;">process actions handlers</span> são, respectivamente:</p>
+<p style="margin: 8px 0px 0px 24px;">-<span style="font-style: italic;"><a href="../api/lumis/doui/table/TableAddMultiRowDataProcessActionHandler.html" target="_blank" class="weblink">TableAddMultiRowDataProcessActionHandler</a></span>,</p>
+<p style="margin: 8px 0px 0px 24px;">-<span style="font-style: italic;"><a href="../api/lumis/doui/table/TableUpdateMultiRowDataProcessActionHandler.html" target="_blank" class="weblink">TableUpdateMultiRowDataProcessActionHandler</a></span>.</p>
+<p style="margin: 8px 0px 8px 24px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

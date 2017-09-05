@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Pacotes</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?desenv_pacotes.htm"; }
+  else { parent.quicksync('a8.11.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Pacotes</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="definicao_de_modulo.htm">Previous</a>&nbsp;
+     <a href="deploy_em_desenv.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Um pacote é um facilitador para a realização do deploy. Ele é um arquivo compactado, no formato ZIP, que pode conter um ou mais módulos, um ou mais comandos de desinstalação de módulos, scripts para serem executados antes do deploy e scripts para serem executados após o deploy.</p>
+<p>Os comando para remoção de módulos e os scripts de pré-deployment e de post-deployment são definidos em um arquivo de definição de pacote. Esse arquivo é um arquivo no formato XML que deve seguir o esquema <span style="font-style: italic;">lumis-package.xsd</span>, cujo link está presente em <a href="apixsd.htm">API e XSD</a>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Remoção de módulos</span></p>
+<p>Alguns módulos podem ser removidos durante um deploy, por alguns motivos.</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de descritor de pacote removendo o módulo moduloASerRemovido</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-package</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/package-install-script"</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns:xsi</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.w3.org/2001/XMLSchema-instance"</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xsi:schemaLocation</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/package-install-script http://www.lumis.com.br/lumisportal/xsd/package-install-script "</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">modules-to-be-removed</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">module</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">id</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"moduloASerRemovido"</span><span style="font-family: 'Consolas'; color: #008080;">/&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">modules-to-be-removed</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-package</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Scripts de pré-deployment e de post-deployment</span></p>
+<p>Os pacotes podem conter scripts de <span style="font-style: italic;">pré-deployment</span> e <span style="font-style: italic;">post-deployment</span>, que serão executados antes e depois do deployment, respectivamente.</p>
+<p>Os scripts do pacote podem incluir passos dos seguintes tipos:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Executar comando SQL: Executa um comando SQL no banco de dados.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Executar arquivo de definição de banco de dados: Toma como entrada um arquivo de definição de banco de dados e executa os comandos gerados a partir desse arquivo.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Executar uma classe Java: Executa uma classe Java no servidor.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Exibir uma mensagem: Exibe uma mensagem informacional.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Limpeza de itens globais não referenciados: Remove itens globais (estilos globais de instâncias de interface, registros de CSS e parâmetros de transformação de arquivos) não referenciados.</td></tr></table></div><div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#e8e8e8" style="background-color:#e8e8e8; border: solid 1px #000000;"><p style="text-align: center;">Exemplo de descritor de pacote com scripts de pré e pós deployment</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;?</span><span style="font-family: 'Consolas'; color: #3f7f7f;">xml</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">version</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"1.0"</span><span style="font-family: 'Consolas';"> </span><span style="font-family: 'Consolas'; color: #7f007f;">encoding</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"UTF-8"</span><span style="font-family: 'Consolas'; color: #008080;">?&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-package</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/package-install-script"</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xmlns:xsi</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.w3.org/2001/XMLSchema-instance"</span><span style="font-family: 'Consolas';"> </span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Consolas'; color: #7f007f;">xsi:schemaLocation</span><span style="font-family: 'Consolas';">=</span><span style="font-family: 'Consolas'; font-style: italic; color: #2a00ff;">"http://www.lumis.com.br/lumisportal/xsd/package-install-script http://www.lumis.com.br/lumisportal/xsd/package-install-script "</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">pre-deployment-script</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">display-message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">Script pré-deployment</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">display-message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">pre-deployment-script</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">post-deployment-script</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">display-message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;</span><span style="font-family: 'Consolas'; color: #3f7f7f;">message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span><span style="font-family: 'Consolas';">Script post-deployment</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">   &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">display-message</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">post-deployment-script</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas';">  </span></p>
+<p style="text-align: left;"><span style="font-family: 'Consolas'; color: #008080;">&lt;/</span><span style="font-family: 'Consolas'; color: #3f7f7f;">lumis-package</span><span style="font-family: 'Consolas'; color: #008080;">&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* $Revision: 15651 $ $Date: 2013-07-24 15:55:30 -0300 (Wed, 24 Jul 2013) $ */
+
+/*chatroom*/
+.lumis-service-callcenteronline .lum-msg-list {
+	height:280px;
+	overflow:auto;
+	padding:0 15px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box; 
+	border:1px solid #a8a8a8;
+	border-radius:3px;
+	background:#f7f7f7;
+	margin-bottom:10px;
+	font-size:12px;
+}
+.lumis-service-callcenteronline .lum-msg-list .lum-msg-info {
+	display:block;
+	margin:0;
+}
+.lumis-service-callcenteronline .lum-msg-list .lum-msg-user {
+	font-weight:bold;
+	display:inline;
+}
+.lumis-service-callcenteronline .lum-msg-list .lum-msg-user:after {
+	content:": ";
+}
+.lumis-service-callcenteronline .lum-msg-list .lum-msg {
+	display:inline;
+	line-height:1.5em;
+}
+.lumis-service-callcenteronline .lum-msg-list .lum-list-item.lum-last:after {
+	margin-bottom:40px;
+}
+
+/*organize content-body in two columns*/
+.lumis-service-callcenteronline .lum-content-body {
+	overflow:hidden;
+}
+.lumis-service-callcenteronline .lum-content-body > div.lum-first {
+	float:left;
+	width:65%;
+}
+.lumis-service-callcenteronline .lum-content-body > div.lum-last {
+	float:right;
+	width:33%;
+	font-size:11px;
+}
+/*second column*/
+.lumis-service-callcenteronline .lum-content-body > div.lum-last .lum-form-field-value {
+	display:inline-block;
+}
+.lumis-service-callcenteronline .lum-form-field-id-transfer {
+	margin:4px 0;
+}
+.lumis-service-callcenteronline .lum-form-field-id-transfer .lum-actions {
+	display:inline;
+	margin-left:5px;
+	vertical-align:1px;
+}
+.lumis-service-callcenteronline .lum-content-body > div.lum-last > .lum-actions {
+	display:block;
+	border-top:1px solid #dadada;
+	padding-top:20px;
+	margin-top:20px;
+	text-align:center;
+}
+.lumis-service-callcenteronline .lum-content-body > div.lum-last > .lum-actions .lum-button {
+	width:80%;
+}
+
+/*footer*/
+.lumis-service-callcenteronline .lum-form-field-id-message .lum-form-field-value select {
+	margin:4px 0;
+}
+.lumis-service-callcenteronline .lum-content-footer .lum-actions {
+	text-align:right;
+}

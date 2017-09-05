@@ -1,0 +1,8 @@
+/* $Revision: 15700 $ $Date: 2013-08-05 11:06:26 -0300 (Mon, 05 Aug 2013) $ */
+
+.lumis-service-print-printPage a:before {
+	content:url(../image/ico_print.png);
+	padding-right:4px;
+	display:inline-block;
+	vertical-align:middle;
+}

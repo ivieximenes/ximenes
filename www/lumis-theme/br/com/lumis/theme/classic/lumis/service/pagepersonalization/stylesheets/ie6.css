@@ -1,0 +1,48 @@
+/* $Revision: 15658 $ $Date: 2013-07-24 16:54:03 -0300 (Wed, 24 Jul 2013) $ */
+/*lumwidget ie6 only css*/
+
+#lumwidget .cont {
+	padding:0 !important;
+	margin-top:1px !important;
+}
+#lumwidget .carbox {
+	margin-left:0 !important;
+}
+#lumwidget .cont {
+	width:993px !important;
+}
+.cLumPPHolder
+{
+	height: 25px; /*Although the starting holder's min height is supposed to be 0px, 
+	it MUST be initialized with a sufficient height so the drag can work properly. When the page loads, 
+	it will be set by 0px.*/
+}
+#lumwidget ul.menu_widgets li.cLumPPUndraggable a:hover {
+	width:88px !important;
+	height:54px;
+	border:1px solid #4e4e4e !important;
+	background:#828282;
+	color:#fff !important;
+	cursor:move !important;
+	border-radius:4px !important;
+	-moz-border-radius:4px !important;
+	-webkit-border-radius:4px !important;
+}
+#lumfixed {
+	display:none;
+	width:100% !important;
+	top:0;
+	left:0;
+	z-index:99999;
+}
+/*jQuery*/
+.jq-icar {
+  	width:835px !important; /* .cLumPagePersonalizationWidgetListWrapper width + .cLumPagePersonalizationWidgetListWrapper margin */
+  	position:relative !important;
+}
+#lumwidget .carbox {
+	width:835px !important;
+	height:58px;
+	overflow:hidden !important;
+	margin-left:10px !important;
+}

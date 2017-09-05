@@ -1,0 +1,105 @@
+package br.com.qualicorp.redenarede.service.login.processaction;
+
+import br.com.qualicorp.redenarede.service.useraccount.manager.UserAccountManager;
+import br.com.qualicorp.redenarede.webservice.manager.BeneficiarioWebServiceManager;
+import br.com.qualicorp.redenarede.webservice.manager.PrestadorWebServiceManager;
+import br.com.qualicorp.redenarede.webservice.stub.beneficiario.RecuperarSenhaResponse;
+import br.com.qualicorp.redenarede.webservice.stub.pretador.RecuperarSenhaUsuarioPrestadorResponse;
+import lumis.doui.processaction.ProcessActionHandler;
+import lumis.doui.table.TableSource;
+import lumis.portal.PortalException;
+import lumis.portal.authentication.SessionConfig;
+import lumis.portal.manager.ManagerFactory;
+import lumis.portal.user.UserConfig;
+import lumis.util.XmlUtil;
+import lumis.util.log.ILogger;
+import lumis.util.log.LoggerFactory;
+
+public class EsqueciSenhaProcessActionHandler extends ProcessActionHandler<TableSource>
+{
+	public static final String ACTION_BENEFICIARIO = "esqueciSenhaBeneficiario";
+	public static final String ACTION_PRESTADOR = "esqueciSenhaPrestador";
+	private static ILogger logger = LoggerFactory.getServiceLogger("gsp.WebService");
+
+	@Override
+	public void processAction() throws PortalException
+	{
+		String actionType = XmlUtil.readAttributeString("actionType", processActionNode);
+
+		if (actionType.equals(ACTION_BENEFICIARIO))
+		{
+			String returno = processBeneficiarioAction();
+
+			String gamaMsg = "Sua solicitação foi processada com sucesso e enviada para \" " + returno + "\"! "
+					+ "Você receberá um e-mail com instruções para recuperar a senha. "
+					+ "Verifique se este e-mail não foi movido por algum filtro, ele poderá estar em alguma pasta de spam. "
+					+ "Caso queira alterar seu e-mail de cadastro, entre em contato com o RH.";
+
+			addResponseParameter(ProcessActionHandler.RESPONSE_TYPE_MESSAGE, gamaMsg);
+		}
+		else if (actionType.equals(ACTION_PRESTADOR))
+		{
+			processPrestadorAction();
+			addDefaultResponse();
+		}
+	}
+
+	private String processBeneficiarioAction() throws PortalException
+	{
+		String cpf = douiContext.getRequest().getParameter("cpfEsqueciSenha");
+		String codigo_carteirinha = douiContext.getRequest().getParameter("loginEsqueciSenha");
+		try
+		{
+			if (codigo_carteirinha == null || "".equals(codigo_carteirinha))
+				throw new PortalException("Código da carteirinha inválido");
+
+			codigo_carteirinha = codigo_carteirinha.replaceAll("[^0-9]", "");
+
+			BeneficiarioWebServiceManager beneficiarioWS = new BeneficiarioWebServiceManager();
+			RecuperarSenhaResponse recuperarSenha = beneficiarioWS.recuperarSenha(codigo_carteirinha, cpf, "");
+
+			if (!recuperarSenha.isResultado())
+				throw new PortalException(recuperarSenha.getMensagem());
+
+			return recuperarSenha.getMensagem();
+		}
+		catch (Exception e)
+		{
+			throw new PortalException(e.getMessage(), e);
+		}
+
+	}
+
+	private void processPrestadorAction() throws PortalException
+	{
+		String email = douiContext.getRequest().getParameter("email");
+		
+		String cpfCnpj = douiContext.getRequest().getParameter("provider-signup-cnpj")==null||
+				"".equals(douiContext.getRequest().getParameter("provider-signup-cnpj")) ? 
+						douiContext.getRequest().getParameter("provider-signup-cpf"):
+							douiContext.getRequest().getParameter("provider-signup-cnpj");
+		try
+		{
+			String login = UserAccountManager.getInstance().getUserIdPrestadorByCpfCnpj(cpfCnpj, transaction);
+
+			if (login == null)
+				throw new PortalException("CPF/CNPJ '" + cpfCnpj + "' não encontrado.");
+			else
+			{
+				UserConfig userConfig = ManagerFactory.getUserManager().get(SessionConfig.getCurrentSessionConfig(), login, transaction);
+				if (!userConfig.getEmail().equalsIgnoreCase(email))
+					throw new PortalException("E-mail '" + email + "' não encontrado.");
+			}
+
+			PrestadorWebServiceManager prestadorWS = new PrestadorWebServiceManager();
+			RecuperarSenhaUsuarioPrestadorResponse recuperarSenha = prestadorWS.recuperarSenha(cpfCnpj, email);
+
+			if (!recuperarSenha.getRecuperarSenhaUsuarioPrestadorResult().isSucesso())
+				throw new PortalException(recuperarSenha.getRecuperarSenhaUsuarioPrestadorResult().getMensagem());
+		}
+		catch (Exception e)
+		{
+			throw new PortalException(e.getMessage(), e);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16582 $ $Date: 2014-11-07 11:18:31 -0200 (Fri, 07 Nov 2014) $ -->
+<component-upgrade xmlns="http://www.lumis.com.br/lumisportal/xsd/component-upgrade-script" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<display-message step="1">
+		<message>Ok</message>
+	</display-message>
+	<run-sql step="2">
+		<sql>
+			CREATE TABLE QC_LAYOUT(
+				  IDLAYOUT char(32) NOT NULL PRIMARY KEY,
+				  NOME_DO_LAYOUT	NVARCHAR2(255)	not null,
+				  COR_DO_FUNDO	NVARCHAR2(255)	null,
+				  COR_DAS_LETRAS	NVARCHAR2(255)	null,
+				  FONTE_DAS_LETRAS	NVARCHAR2(255)	null
+			  )
+		</sql>
+	</run-sql>
+	<run-sql step="3">
+		<sql>
+			CREATE TABLE QC_LAYOUTESTIPULANTE (
+				  idlayoutestipulante char(32) NOT NULL PRIMARY KEY,
+				  idlayout char(32) NOT NULL,
+				  idestipulante char(32) NOT NULL,
+				  CONSTRAINT LUM_FK_LAYOUT FOREIGN KEY (idlayout) REFERENCES QC_LAYOUT (idlayout),
+				  CONSTRAINT LUM_FK_ESTIPULANTE FOREIGN KEY (idestipulante) REFERENCES qc_estipulante (idestipulante)
+			)
+		</sql>
+	</run-sql>
+</component-upgrade>

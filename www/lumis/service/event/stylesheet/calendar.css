@@ -1,0 +1,235 @@
+/* $Revision: 15609 $ $Date: 2013-07-19 13:04:28 -0300 (Fri, 19 Jul 2013) $ */
+
+.lumis-service-event-calendar.lum-interface-type-standard {
+	min-width:620px;
+}
+.lumis-service-event-calendar.lum-interface-type-standard .lum-content-header {
+	display:table;
+	width:100%;
+}
+.lumis-service-event-calendar.lum-interface-type-standard .lum-pagination {
+	padding:0;
+	margin:0;
+	border:0;
+	display:inline;
+}
+.lumis-service-event-calendar.lum-interface-type-standard .lum-pagination > div {
+	width:auto;
+}
+.lum-calendar-actual {
+	display:inline;
+	font-size:1.1em;
+	font-weight:bold;
+}
+.lum-calendar-selectors {
+	display:table-cell;
+	text-align:right;
+}
+.lum-calendar-selectors a {
+	font-weight:normal;
+}
+.lum-calendar-selectors div {
+	display:inline-block;
+	margin-right:5px;
+}
+.lum-calendar-selectors .lum-label {
+	color:#000;
+	font-weight:normal;
+}
+.lum-calendar-selectors .lum-label:after {
+	content:": ";
+}
+.lum-calendar-selectors ul {
+	display:inline-block;
+	list-style:none;
+	padding:0;
+	margin:0 40px 0 0;
+}
+.lum-calendar-selectors ul li {
+	display:inline-block;
+}
+.lum-calendar-selectors ul li.lum-first:after {
+	content:" | ";
+	padding:0 8px;
+	color:#acacac;
+}
+.lum-calendar-selectors ul li.lum-calendar-selected a {
+	font-weight:bold;
+}
+.lum-calendar-selectors ul li.lum-calendar-selected a:after {
+	content:url(../image/ico_selected_mark.png);
+	margin:0 0 0 4px;
+}
+
+.lumis-service-events-calendar .lum-content-body {
+	font-size:11px;
+}
+
+/*month layout (default)*/
+.lum-calendar-table {
+	padding:0;
+	margin:20px auto;
+	width:100%;
+	table-layout:fixed;
+	border-spacing:4px;
+}
+.lum-calendar-table tr {
+	vertical-align:top;
+}
+.lum-calendar-table th {
+	width:14.2%;
+	padding:8px;
+	text-align:left;
+	font-size:1.1em;
+	font-weight:normal;
+}
+.lum-calendar-table > tbody > tr > td {
+	width:14.2%;
+	padding:6px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+.lum-calendar-table > tbody > tr > td > div {
+	position:relative;
+	height:94px;
+}
+.lum-calendar-table .lum-calendar-table-day {
+	padding-bottom:2px;
+}
+.lum-calendar-table td.lum-calendar-table-othermonth .lum-calendar-table-day {
+	color:#ccc;
+}
+.lum-calendar-table td.lum-calendar-table-today {
+	border-color:#e37222;
+}
+.lum-calendar-table td.lum-calendar-table-today .lum-calendar-table-day {
+	color:#e37222;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.lum-calendar-table-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+	height:60px;
+	overflow-y:hidden;
+}
+td > div > .lum-calendar-table-list > li {
+	height:15px;
+}
+td > div > .lum-calendar-table-list > li > a {
+	font-weight:normal;
+}
+.lum-calendar-table-month td > div > .lum-calendar-table-list > li > a {
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-weight:normal;
+}
+.lum-calendar-table-list-more-layer .lum-calendar-table-list > li > a {
+	white-space:normal;
+}
+.lum-calendar-table-list-time {
+	font-weight:bold;
+}
+.lum-calendar-table-list-more {
+	position:absolute;
+	z-index:2;
+	bottom:0;
+}
+.lum-calendar-table-list-more a {
+	font-weight:normal;
+	outline:none;
+}
+.lum-calendar-table-list-more:hover .lum-calendar-table-list-more-layer {
+	opacity:1;
+	transition:opacity .4s;
+	-webkit-transition:opacity .4s;
+	visibility:visible;
+	z-index:8;
+	width:240px;
+}
+.lum-calendar-table-list-more-layer {
+	transition:opacity .4s,visibility 0s linear .4s,width 0s linear .4s;
+	-webkit-transition:opacity .4s,visibility 0s linear .4s,width 0s linear .4s;
+	visibility:hidden;
+	opacity:0;
+	position:absolute;
+	z-index:8;
+	width:0;
+	height:auto;
+	bottom:100%;
+	margin-bottom:10px;
+	left:-80px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	padding:12px 12px 8px 12px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background:#fff;
+}
+.lum-calendar-table-list-more .lum-calendar-table-list-more-layer:after {
+	content:"";
+	background:url("../image/ico_calendar_layerarrow.png") no-repeat 50% 0;
+	height:12px;
+	position:absolute;
+	z-index:9;
+	top:100%;
+	left:0;
+	width:100%;
+}
+.lum-calendar-table-sunday .lum-calendar-table-list-more-layer {
+	left:0px;
+}
+.lum-calendar-table-sunday .lum-calendar-table-list-more .lum-calendar-table-list-more-layer:after {
+	background-position:15% 0;
+}
+.lum-calendar-table-saturday .lum-calendar-table-list-more-layer {
+	left:auto;
+	right:-15px;
+}
+.lum-calendar-table-saturday .lum-calendar-table-list-more .lum-calendar-table-list-more-layer:after {
+	background-position:85% 0;
+}
+
+.lum-calendar-table-list-more .lum-calendar-table-list {
+	height:auto;
+	overflow-y:normal;
+}
+.lum-calendar-table-list-more .lum-calendar-table-list li {
+	padding-bottom:8px;	
+	line-height:1.5em;
+	white-space:normal;
+}
+
+/*week layout*/
+.lum-calendar-table-week > tbody > tr > td > div {
+	height:auto;
+	min-height:486px;
+	position:static;
+}
+.lum-calendar-table-week .lum-calendar-table-list {
+	margin-top:12px;
+}
+.lum-calendar-table-week .lum-calendar-table-list a {
+	font-weight:normal;
+	white-space:normal;
+}
+.lum-calendar-table-week .lum-calendar-table-list a:hover {
+	text-decoration:none;
+}
+.lum-calendar-table-week .lum-calendar-table-list {
+	height:auto;
+}
+.lum-calendar-table-week .lum-calendar-table-list > li {
+	padding-bottom:8px;	
+	line-height:1.5em;
+	height:auto;
+}
+.lum-calendar-table-week .lum-calendar-table-list-time {
+	display:block;
+}

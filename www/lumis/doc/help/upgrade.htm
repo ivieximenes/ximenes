@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Upgrade</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?upgrade.htm"; }
+  else { parent.quicksync('a3.8'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Upgrade</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="ntlm.htm">Previous</a>&nbsp;
+     <a href="lumislogconfig.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Este tópico descreve os passos necessários para a atualização de uma instalação existente do <span style="font-style: italic;">Lumis Portal. </span>Se estiver instalando o o <span style="font-style: italic;">Lumis Portal  </span>pela primeira vez, siga a seção <a href="passosinstalacao.htm">Passos da Instalação</a> e suas seções.</p>
+<p style="margin: 14px 0px 0px 0px;">Veja a seção <a href="destaquesversoes.htm">Destaques das Versões</a>, para verificar as alterações no produto, observações relevantes e possíveis passos específicos para o correto upgrade de versão. É necessário analisar a partir da versão de origem até a versão de destino.</p>
+<p style="margin: 8px 0px 0px 0px;">Recomenda-se fazer o <span style="font-style: italic;">upgrade</span> no ambiente de desenvolvimento, com os fontes dos serviços implementados e, em seguida, recompilar as classes da solução. </p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-weight: bold;">Importante: </span><span style="font-style: italic;">A partir da versão 6.2, o Lumis não permite realizar o upgrade do portal enquanto houver itens na <a href="filasdeexecucao.htm">fila de execução</a>. &nbsp;É necessário deixar toda a fila ser consumida antes de executar o passos do upgrade.</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p><span style="font-weight: bold;">Passos para o </span><span style="font-style: italic; font-weight: bold;">upgrade</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Fazer <span style="font-style: italic;">backup</span> da instalação existente;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Descompactar o arquivo da distribuição em um diretório temporário;</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Configurar, no diretório temporário, os arquivos da pasta <span style="font-style: italic;">/lumisdata/config</span> e em <span style="font-style: italic;">/www/WEB-INF/*.xml</span> de acordo com a instalação anterior;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Copiar, para o diretório temporário, os arquivos necessários da solução. Por exemplo, arquivos existentes em /lumisdata/def, /www e /www/WEB-INF/lib; </td></tr></table></div><p style="line-height: 1.50;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="472" style="width:472px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="581" style="width:581px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> Nenhum arquivo deve ser sobrescrito nessa cópia. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; line-height: 1.50;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">5.</span></td><td>Copiar, para o diretório temporário, os arquivos de dados existente em /lumisdata/data, lumisdata/logs e www/data;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">6.</span></td><td>Apagar a instalação previamente existente e mover o diretório temporário para o diretório definitivo;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">7.</span></td><td>Caso, a instalação esteja utilizando algum servidor web, os arquivos estáticos devem ser atualizados substituindo o diretório /www/lumis.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">8.</span></td><td>Verificar se a variável <span style="font-style: italic;">JAVA_HOME</span> está configurada no sistema operacional;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: 1.50;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">9.</span></td><td>Executar, a partir da linha de comando, o arquivo <span style="font-style: italic;">upgradeportal.cmd </span>(ambiente <span style="font-style: italic;">Windows</span>) ou <span style="font-style: italic;">upgradeportal.sh </span>(ambiente L<span style="font-style: italic;">inux</span>), localizado em <span style="font-style: italic;">/setup</span>;</td></tr></table></div><div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="472" style="width:472px; border: solid 1px #000000;"><p style="text-align: left; margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="581" style="width:581px; border: solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Para executar o <span style="font-style: italic;">upgradeportal</span> as seguintes configurações devem ser temporariamente ajustadas:</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>O <span style="font-style: italic;">lumishibernate.cfg.xml</span> não pode estar configurado para utilizar <span style="font-style: italic;">Data Source.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>O <span style="font-style: italic;">lumishibernate.cfg.xml</span> não pode possuir nenhum mapeamento de entidade extra.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>O <span style="font-style: italic;">lumishibernate.cfg.xml </span>não pode estar com a propriedade <span style="font-style: italic;">jdbc.factory_class</span> configurada para o javamelody.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>O <span style="font-style: italic;">lumisportalconfig.xml</span> não pode estar com o <span style="font-style: italic;">cluster</span> configurado.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Em ambientes multi-server, basta executar o <span style="font-style: italic;">upgradeportal</span> apenas uma vez - não é necessário executá-lo nos demais servidores.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">10.</span></td><td>Rever os passos de instalação específicos de seu <a href="servidoraplicacao.htm">servidor de aplicação</a>, incluindo configurações e bibliotecas compartilhadas e endorsed;</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; line-height: 1.50; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="472" style="width:472px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="581" style="width:581px; border: solid 1px #000000;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td> Observar, no destaques de versão, as bibliotecas compartilhadas e endorsed removidas. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">11.</span></td><td>Fazer o <span style="font-style: italic;">deployment</span> do portal no <a href="servidoraplicacao.htm">servidor de aplicação</a>.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">12.</span></td><td>Registrar os serviços que não são padrão do <span style="font-style: italic;">Lumis Portal</span> no <span style="font-style: italic;"><a href="gerenciadorservicos.htm">Gerenciador de Serviços</a>.</span></td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">13.</span></td><td>Limpar cache do Portal.</td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

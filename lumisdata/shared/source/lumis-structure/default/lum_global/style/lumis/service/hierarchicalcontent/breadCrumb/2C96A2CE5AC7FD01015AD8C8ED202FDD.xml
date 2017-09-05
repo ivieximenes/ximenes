@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>2C96A2CE5AC7FD01015AD8C8ED202FDD</id>
+  <interface-id>lumis.service.hierarchicalcontent.breadCrumb</interface-id>
+  <name>Breadcrumb Smart</name>
+  <file-path>lumis/service/hierarchicalcontent/style/breadcrumb-smart.xsl</file-path>
+</interface-style>

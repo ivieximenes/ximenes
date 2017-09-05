@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Administração de Eventos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?monitoracao.htm"; }
+  else { parent.quicksync('a7.6.6.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Administração de Eventos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="informacoesdoportal.htm">Previous</a>&nbsp;
+     <a href="javamelody.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="line-height: 1.50;">Através do gerenciador de eventos de monitoração, é possivel habilitar e desabilitar os eventos responsáveis por salvar determinados dados estatísticos no banco. Esses dados são utilizados, por exemplo, pelo serviço de Relatórios.</p>
+<p style="line-height: 1.50;">Quando um evento está desabilitado, os dados coletados por ele não são salvos no banco, e portanto, não farão parte de determinado relatório a ser extraído. Por sua vez, quando um evento de monitoração está habilitado, e ele ocorre, dados estatísticos são coletados.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm170.jpg" width="900" height="305" border="0" alt="portalAdm170" style="margin:0 auto;margin:0px;"></p>
+<p style="line-height: 1.50;">O portal faz uma verificação na sua inicialização para decidir se o monitoramento será ou não ativado. Caso não haja nenhum evento de monitoramento </p>
+<p style="line-height: 1.50;">ativado, o monitoramento não será ativado. Caso contrário, ele será ativado.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="105" style="width:105px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span>:</p>
+</td>
+<td valign="top" width="732" style="width:732px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p style="line-height: 1.50;">No caso de eventos do tipo <span style="font-style: italic;">pageview,</span> caso haja alterações nas propriedades das páginas ou do &nbsp;canal, os dados referentes a essas propriedades somente serão visualizados no relatório se a coleta for processada anteriormente a tal consulta. Ou seja, os dados exibidos são aqueles cadastrados no momento da coleta e não no momento da consulta.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p style="margin: 14px 0px 0px 0px;">A coleta é realizada fora do <span style="font-style: italic;">F2</span> e após o encerramento da sessão.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p>O estado do monitoramento não<span style="font-weight: bold;"> </span>é alterado em tempo de execução. Uma vez definido na inicialização, seu estado não é alterado até a próxima inicialização</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Sobre como é realizado o acesso sobre os dados coletados, consultar o javadoc do <a href="../api/lumis/portal/monitor/package-summary.html" target="_blank" class="weblink">lumis.portal.monitor</a>.<span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* $Revision: 15376 $ $Date: 2013-05-22 17:47:50 -0300 (Wed, 22 May 2013) $ */
+
+.lumis-service-login-login .lum-form-field .lum-label-required:before {
+	content:none;
+}
+.lumis-service-login-login .lum-form-field label {
+	font-weight:normal;
+	font-size:11px;
+	color:#000;
+}
+
+.lumis-service-login-logout {
+	font-size:12px;
+}
+.lumis-service-login-logout div {
+	display:inline;
+}
+.lumis-service-login-logout .lum-actions .lum-button {
+	background-color:transparent;
+	background-image:none;
+	border:0;
+	border-radius:0;
+	box-shadow:0 0 0 0;
+	color:#ba2a2a;
+	display:inline-block;
+	font-weight:bold;
+	padding:0;
+	text-decoration:none;
+}
+.lumis-service-login-logout .lum-actions > li:before {
+	content:" | ";
+	color:#444;
+	font-weight:normal;
+	padding:0 2px 0 5px;
+}

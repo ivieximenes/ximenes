@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Passos para a instalação</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?passosinstalacao.htm"; }
+  else { parent.quicksync('a3.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Passos para a instalação</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="requisitossistema.htm">Previous</a>&nbsp;
+     <a href="bancodados.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Neste tópico estão descritos todos os passos necessários para a instalação e configuração do <span style="font-style: italic;">Lumis Portal</span> , bem como as informações necessárias para a correta configuração dos servidores de aplicação e dos servidores de banco de dados suportados.</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="474" style="width:474px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; height:52px; border: solid 1px #000000;"><p>Caso este procedimento de instalação seja executado em uma versão existente do <span style="font-style: italic;">Lumis Portal</span> , todas as informações existentes serão perdidas. Para atualizar uma versão existente, siga as instruções para <a href="upgrade.htm">upgrade</a> .</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">No CD do <span style="font-style: italic;">Lumis Portal</span> , existem duas distribuições diferentes uma para cada plataforma, <span style="font-style: italic;">Windows</span>® e <span style="font-style: italic;">Linux</span>:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="225" style="width:225px; border: solid 1px #000000;"><p>LumisPortal_<span style="font-style: italic;">&lt;numero_da_release&gt;</span>.zip</p>
+</td>
+<td valign="top" width="332" style="width:332px; border: solid 1px #000000;"><p>Arquivo zip para ser descompactado no ambiente <span style="font-style: italic;">Windows</span>®.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="225" style="width:225px; border: solid 1px #000000;"><p>LumisPortal_<span style="font-style: italic;">&lt;numero_da_release&gt;</span>.tar.gz</p>
+</td>
+<td valign="top" width="332" style="width:332px; border: solid 1px #000000;"><p>Arquivo para ser descompactado no ambiente <span style="font-style: italic;">Linux</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Os arquivos de distribuição possuem &nbsp;a seguinte estrutura de pastas:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 20px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/lib/shared</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Contém as bibliotecas (jar) utilizadas pelo <span style="font-style: italic;">Lumis Portal</span>, que devem ser instaladas no servidor de aplicação em uma área <span style="font-style: italic;">shared</span> .</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/lumisdata/config</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Contém os arquivos de configuração do <span style="font-style: italic;">Lumis Portal</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/lumisdata/def/lumis</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Contém os arquivos de definição dos serviços.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/setup</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Arquivos de <span style="font-style: italic;">setup</span> do banco de dados.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/www</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Arquivos de instalação do servidor de aplicação. O arquivo <span style="font-style: italic;">WAR</span> é criado a partir desta pasta.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="156" style="width:156px; border: solid 1px #000000;"><p><span style="font-style: italic;">/www/lumis/doc</span></p>
+</td>
+<td valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>Contém o manual do <span style="font-style: italic;">Lumis Portal</span> (<span style="font-style: italic;">Help HTML</span>, <span style="font-style: italic;">XSD</span> e <span style="font-style: italic;">Javadoc</span> da <span style="font-style: italic;">API</span> pública). </p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Instalando o Lumis Portal</span></p>
+<p style="margin: 14px 0px 0px 0px;">1) Selecione a distribuição, em função do seu ambiente, e descompacte os arquivos em uma pasta local, em uma máquina cliente ou no próprio servidor. Para mais informações sobre os ambientes suportados, acesse o documento <a href="requisitossistema.htm">Requisitos do Sistema</a>;</p>
+<p style="margin: 14px 0px 0px 0px;">2) No arquivo <span style="font-style: italic;">www/WEB-INF/web.xml: a</span>ltere o valor do parâmetro do <span style="font-style: italic;">LumisDataPath</span> para o caminho onde ficará a pasta “<span style="font-style: italic;">lumisdata</span> ”;</p>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="507" style="width:507px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New';">&lt;context-param&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &lt;param-name&gt;lumisDataPath&lt;/param-name&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp;&lt;param-value&gt;</span><span style="font-family: 'Courier New'; font-weight: bold;">C:/LumisPortal/lumisdata</span><span style="font-family: 'Courier New';">&lt;/param-value&gt;</span></p>
+<p><span style="font-family: 'Courier New';">&lt;/context-param&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span><br>
+É possível utilizar valores de propriedades do sistema para gerar o caminho da pasta <span style="font-style: italic;">lumisdata</span>. A <span style="font-style: italic;">Expression Language</span> <span style="font-style: italic;">"${system.properties['nomePropriedade']}"</span> é substituída pelo valor da propriedade especificada. Exemplo:</p>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-style: italic;">C:/${system.properties['LumisDirName']}/lumisData</span> será substituído por <span style="font-style: italic;">C:/lumis/lumisData</span> se houver a propriedade do sistema "<span style="font-style: italic;">LumisDirName</span>" com valor "<span style="font-style: italic;">lumis</span>".</p>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span><br>
+Propriedades do sistema podem ser especificadas utilizando o parâmetro <span style="font-style: italic;">-D do java.exe</span>.<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="474" style="width:474px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; height:52px; border: solid 1px #000000;"><p>Também é possível utilizar apenas propriedade de sistema para definir o <span style="font-style: italic;">lumisDataPath</span>. Para maiores informações veja as <a href="configpropsistema.htm">configurações por propriedades de sistema</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">3) No arquivo <span style="font-style: italic;">lumisdata/config/lumishibernate.cfg.xml</span> : altere as informações de conexão com o banco de dados. Neste arquivo, estão todos os exemplos de conexão para os bancos <span style="font-style: italic;">Oracle</span>, <span style="font-style: italic;">MS SQL Server</span> e <span style="font-style: italic;">MYSQL</span>. Para criação da conexão desejada, selecione o item correspondente na seção  <a href="bancodados.htm">banco de dados</a> deste manual;</p>
+<p style="margin: 14px 0px 0px 0px;">4) Faça o <span style="font-style: italic;">deployment</span> do <span style="font-style: italic;">Lumis Portal</span> no servidor de aplicação Java™. No tópico <a href="servidoraplicacao.htm">Servidores de Aplicação</a> deste manual, verifique as instruções servidor Java™ desejado;</p>
+<p style="margin: 14px 0px 0px 0px;">5) É possível que nesse ponto o portal ainda não esteja acessível, dependendo das configurações do ambiente. Durante a instalação o portal cria um website padrão que aceita requisições de <span class="f_CodeExample">http://localhost:8080/portal</span> e <span class="f_CodeExample">https://localhost:8443/portal</span>. É necessário configurar os websites corretos que esse portal servirá. Para isso, acesse o portal em modo de segurança (veja <a href="gerenciador_de_websites.htm#mododesegurana">Modo de Segurança</a> para mais detalhes), faça o logon com o usuário Administrador (login "admin") como descrito abaixo, acesse o <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>, que fica em <a href="configuracao.htm">Configuração</a> e faça as configurações apropriadas para seu ambiente.</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="474" style="width:474px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; height:52px; border: solid 1px #000000;"><p>O Lumis Portal disponibiliza uma versão embutida do Elasticsearch, no entanto não é recomendado utilizar esta versão para ambientes de produção mas sim instalar uma versão a parte. Para informações de instalação veja <a href="elasticsearch.htm">Instalando o Elasticsearch</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">A partir daí, o <span style="font-style: italic;">Lumis Portal</span> está instalado e funcionando. Ele pode ser acessado pela <span style="font-style: italic;">URL</span> configurada no passo 3.</p>
+<p style="margin: 14px 0px 0px 0px;">Para fazer o primeiro <span style="font-style: italic;">logon</span> no <span style="font-style: italic;">Lumis Portal</span> , utilize o usuário Administrador. O login é "admin" e a senha, em branco. É recomendado alterar a senha do administrador por razões de segurança. Para alterar a senha, consulte a seção <a href="usuariosgrupos.htm">Usuários e Grupos</a>.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="instalacao040.jpg" width="519" height="374" border="0" alt="instalacao040" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Para administrar o <span style="font-style: italic;">Lumis Portal</span> , veja o tópico <a href="portaladministration.htm">Portal Administration</a>, neste manual.</p>
+<p style="margin: 14px 0px 0px 0px;">Para montar seu portal ou <span style="font-style: italic;">website</span> , veja o tópico <a href="portalstudio.htm">Portal Studio</a>, neste manual.</p>
+<p style="margin: 14px 0px 0px 0px;">Para customizações ou desenvolvimento de novos serviços, veja o tópico <a href="customizacaodesenvolvimento.htm">Customização e Desenvolvimento</a>, neste manual.</p>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

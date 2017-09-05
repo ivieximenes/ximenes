@@ -1,0 +1,52 @@
+2017-08-08 03:42:09,553 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-08 03:42:09,559 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-08 03:42:16,990 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-08 03:42:17,077 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-08 03:42:17,235 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-08 03:42:18,994 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-08 03:42:18,996 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-08 03:51:11,532 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DBA6D61015DBA829E0D01A1 130090002825005 - Title: 'Added service interface instance: STR_ADD' - Description: 'Added service interface instance
+  id: 402881865DC08499015DC09C8D0804C4
+  interface id: lumis.service.hierarchicalcontent.add
+  display name: STR_ADD
+  page id: 8A489E1F50AE95AA0150B8AD856D33BA
+  page name: Conteúdo
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'
+2017-08-08 03:51:11,535 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DBA6D61015DBA829E0D01A1 130090002825005 - Title: 'Added service interface instance: STR_EDIT' - Description: 'Added service interface instance
+  id: 402881865DC08499015DC09C8D2D04C5
+  interface id: lumis.service.hierarchicalcontent.edit
+  display name: STR_EDIT
+  page id: 8A489E1F50AE95AA0150B8AD856D33BA
+  page name: Conteúdo
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'
+2017-08-08 03:51:32,324 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DBA6D61015DBA829E0D01A1 130090002825005 - Title: 'Added service interface instance: STR_ADD' - Description: 'Added service interface instance
+  id: 402881865DC08499015DC09CDE5604E7
+  interface id: lumis.service.hierarchicalcontent.add
+  display name: STR_ADD
+  page id: 8A489E1F50AE95AA0150B8BAE20143BE
+  page name: Lista
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'
+2017-08-08 03:51:32,326 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 402881865DBA6D61015DBA829E0D01A1 130090002825005 - Title: 'Added service interface instance: STR_EDIT' - Description: 'Added service interface instance
+  id: 402881865DC08499015DC09CDE6504E8
+  interface id: lumis.service.hierarchicalcontent.edit
+  display name: STR_EDIT
+  page id: 8A489E1F50AE95AA0150B8BAE20143BE
+  page name: Lista
+  service instance id: 8A489E1F50AE95AA0150B8AD856D33B9'

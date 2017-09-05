@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Montagem do Serviço de Busca</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?buscamontagem.htm"; }
+  else { parent.quicksync('a6.14.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Montagem do Serviço de Busca</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="buscavisualizacaoservico.htm">Previous</a>&nbsp;
+     <a href="categorizacao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O serviço pode ser montado de diversas maneiras, para o usuário final da solução, dependendo de como foi arquitetado pelo administrador do portal.</p>
+<p style="margin: 14px 0px 0px 0px;">Para utilizar o serviço de <span style="font-style: italic;">Busca</span>, basta instanciá-lo em um canal e arrastar suas interfaces para as áreas das páginas em modo de edição. Suas interfaces correspondem a áreas de interação com serviço pelo usuário final.</p>
+<p style="margin: 14px 0px 0px 0px;">O serviço oferece duas interfaces, que visam facilitar a montagem de uma solução. Tais interfaces permitem que o mecanismo de busca seja utilizado em quaisquer páginas do portal e o resultado exibido através de uma lista de conteúdos, podendo o usuário refazer a busca a partir da tela de resultados.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Busca: Esta interface permite que o usuário digite o conteúdo a ser buscado;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Busca com Resultados: Esta interface permite que o usuário visualize o resultado da busca, que são títulos de conteúdos linkáveis para o detalhe dos mesmos. No caso do resultado da busca ser um <span style="font-style: italic;">link</span> para um documento, será exibido a página de detalhes deste documento, ao invés de disparar o <span style="font-style: italic;">download</span> do mesmo. Além disso, esta interface permite que o usuário realize uma nova busca.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Para disponibilizar o serviço de <span style="font-style: italic;">Busca</span> para o usuário final, os serviços buscáveis (Avisos, Notícias, Documentos, Imagens...) devem estar instanciados no mesmo canal que contém a instância de serviço de busca, ou em canais abaixo dele. As interfaces de busca podem ser instanciadas na mesma página ou em páginas diferentes.</p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplo, considere a seguinte hierarquia de canais, contendo instâncias de serviços de Busca e Notícias:</p>
+<p style="text-align: center; margin: 14px 0px 0px 24px;"><img src="busca009.jpg" width="683" height="490" border="0" alt="busca009" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Neste exemplo, uma busca realizada pela instância de Busca A encontrará conteúdos nas instâncias de Notícias M, N, O, P, Q, R e S. Já a instância de Busca B buscará somente nas instâncias M e N de Notícias. A instância C de Busca encontrará conteúdos das instâncias P, Q e R. Finalmente, a instância de Busca D somente procurará conteúdos na instância de Notícias S.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Parametrização</span></p>
+<p style="margin: 14px 0px 0px 0px;">É possível especificar se no "Resultado da Busca" serão exibidos o caminho da instância, o nome da instância e/ou a imagem da instância de serviço juntamente com o conteúdo retornado.</p>
+<p style="margin: 14px 0px 0px 0px;">Para isso é necessário configurar no menu de contexto da interface (acessado através do clique com o botão direito), na opção <span style="font-style: italic;">Campos</span>, respectivamente os campos <span style="font-style: italic;"> Caminho do serviço,</span> <span style="font-style: italic;">Nome do serviço e Imagem do Serviço</span>. A partir daí, o <span style="font-style: italic;">XSL</span> padrão do serviço passará a ler tais informações disponíveis no <span style="font-style: italic;">XML</span>. </p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="busca018.jpg" width="913" height="595" border="0" alt="busca018" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">A figura acima exemplifica quais informações estão sendo passadas para o <span style="font-style: italic;">XML</span>, porém o <span style="font-style: italic;">XSL </span>padrão do serviço de busca está implementado para retornar apenas título do conteúdo (<span style="font-style: italic;">Título</span>), introdução do conteúdo (<span style="font-style: italic;">Subtítulo</span>), <span style="font-style: italic;">Nome do serviço</span> e <span style="font-style: italic;">Caminho do Serviço</span>. Apesar de <span style="font-style: italic;">Endereço (URL) </span>e <span style="font-style: italic;">Relevância</span> estarem marcados por <span style="font-style: italic;">default,</span> não estão sendo informados no <span style="font-style: italic;">XML</span> e portanto o <span style="font-style: italic;">XSL</span> não está exibindo na interface tais informações. </p>
+<p style="margin: 14px 0px 0px 0px;">Uma observação importante, é que essas duas últimas informações quando acrescentadas para o resultado da busca, aumentam o processamento, pois para cada conteúdo retornado, essas informações serão obtidas do <span style="font-style: italic;">cache</span> ou do banco de dados se não houver <span style="font-style: italic;">cache</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Outra observação importante é que recomenda-se utilizar as informações de <span style="font-style: italic;">Nome do serviço</span> e <span style="font-style: italic;">Caminho do Serviço </span>caso a arquitetura de montagem da solução contribua com nomes sugestivos. Isso significa que não seria recomendável utilizar nomes para instância de serviços, tais como "Noticia 1", "Notícia 2". Além disso, as instâncias de serviço não poderiam estar em um canal e suas interfaces em páginas de outro canal.</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table width="638" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="543" style="width:543px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Para informações sobre como instanciar canais e páginas, consultar a seção</td></tr></table></div><p style="text-indent: -13px; margin: 0px 0px 0px 35px;"> <span style="font-style: italic;"><a href="portalstudio.htm">Portal Studio</a></span>;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Não são todos os campos (título, descrição, introdução, data...) de um conteúdo que são buscáveis (retornados pelo mecanismo de busca). Isto precisa estar explicitado na definição do serviço. Para serviços de gestão de conteúdo a serem criados pelo assistente de criação, por exemplo, pode-se determinar quais campos serão buscáveis. Maiores informações consultar a seção sobre criação de serviço utilizando o <a href="assistentecriacaoservicosdegestaoconteudo.htm">Assistente de Conteúdo</a>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>A busca retorna o destino mais próximo, isso significa que &nbsp;se uma interface de detalhes da mesma instância de serviço, de um conteúdo buscável, tenha sido instanciada em páginas diferentes, o <span style="font-style: italic;">link</span> retornado apontará para a página que estiver mais próxima do canal que &nbsp;contém a instância de serviço de busca;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Verificar seção sobre <a href="configuracao_bigdata.htm">Reindexação de Conteúdos</a> para que o mecanismo de busca funcione corretamente;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">5.</span></td><td>Através do <span style="font-style: italic;">right-click</span> da interface, encontram-se outras parametrizações disponíveis para a instância de serviço e customizações para a interface. Consultar a seção <a href="customizacaoinstanciainterfaceservico.htm">Customização de instâncias de Interfaces</a>.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

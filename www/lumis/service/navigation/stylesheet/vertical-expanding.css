@@ -1,0 +1,128 @@
+/* $Revision: 15370 $ $Date: 2013-05-22 15:55:57 -0300 (Wed, 22 May 2013) $ */
+
+.lum-navigation-vertical-expanding {
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	padding:8px;
+}
+.lum-navigation-vertical-expanding .lum-menu-parent > ul {
+	transition:max-height .3s ease-in, padding .3s ease-in, opacity .3s ease-in; 
+	max-height:2000px;
+	opacity:1;
+}
+.lum-navigation-vertical-expanding .lum-menu-collapsed > ul {
+	max-height:0;
+	padding-top:0;
+	padding-bottom:0;
+	transition:max-height .3s ease-out, padding .3s ease-in, opacity .2s ease-out .1s; 
+	overflow:hidden;
+	opacity:0;
+}
+/*1st lvl*/
+.lum-navigation-vertical-expanding ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.lum-navigation-vertical-expanding ul li {
+	border-bottom:1px solid #dbdbdb;
+	position:relative;
+}
+.lum-navigation-vertical-expanding ul li.lum-last {
+	border-bottom:0;
+}
+.lum-navigation-vertical-expanding ul a,
+.lum-navigation-vertical-expanding ul span {
+	display:block;
+	padding:8px 24px 8px 6px;
+	margin-right:-8px;
+	outline:none;
+	font-weight:bold;
+	cursor:pointer;
+	color:#ba2a2a;
+}
+.lum-navigation-vertical-expanding ul span {}
+/*downarrow*/
+.lum-navigation-vertical-expanding ul li.lum-menu-parent > span:after {
+	content:"";
+	border:4px solid transparent;
+	border-top-color:#ba2a2a;
+	position:absolute;
+	z-index:2;
+	right:5px;
+	top:1em;
+	margin-top:2px;
+}
+/*uparrow*/
+.lum-navigation-vertical-expanding ul li.lum-menu-parent.lum-menu-expanded > span:after {
+	border-bottom-color:#ba2a2a;
+	border-top-color:transparent;
+	margin-top:-2px;
+}
+.lum-navigation-vertical-expanding ul li a:hover,
+.lum-navigation-vertical-expanding ul li span:hover {
+	background-color:#fde9da;
+	text-decoration:none;
+}
+.lum-navigation-vertical-expanding ul li.lum-menu-parent.lum-menu-expanded span {
+	background-color:#f9f9f9;
+}
+.lum-navigation-vertical-expanding ul li.lum-menu-parent.lum-menu-expanded span:hover {
+	background-color:#fde9da;
+}
+/*selected*/
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected > a,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected > span,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb > a,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb > span {
+	background:#b82a2a !important;
+	color:#fff;
+}
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected > span:after,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb > span:after {
+	border-top-color:#fff;
+}
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected.lum-menu-expanded > span:after,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb.lum-menu-expanded > span:after {
+	border-bottom-color:#fff;
+	border-top-color:transparent;
+	margin-top:-3px;
+}
+/*rightarrow outside*/
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected:after,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-selected:after,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb:after,
+.lum-navigation-vertical-expanding > ul > li.lum-menu-breadcrumb:after {
+	content:"";
+	border:4px solid transparent;
+	border-left:7px solid #b82a2a;
+	position:absolute;
+	z-index:2;
+	left:100%;
+	top:1em;
+	margin-left:8px;
+}
+/*2nd lvl*/
+.lum-navigation-vertical-expanding ul li ul {
+	background:#f9f9f9;
+	padding:4px 8px 4px 12px;
+	margin-right:-8px;
+}
+.lum-navigation-vertical-expanding ul ul li {
+	border-bottom:0;
+}
+.lum-navigation-vertical-expanding ul ul li a,
+.lum-navigation-vertical-expanding ul ul li span {
+	font-weight:normal;
+	padding:6px 24px 6px 4px;
+}
+.lum-navigation-vertical-expanding ul li.lum-menu-selected ul li a,
+.lum-navigation-vertical-expanding ul li.lum-menu-selected ul li span {
+	color:#ba2a2a;
+}
+/*3rd+ lvl*/
+.lum-navigation-vertical-expanding ul li ul ul {
+	padding:4px 0;
+	margin:0 0 0 8px;
+}

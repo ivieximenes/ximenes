@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 13264 $ $Date: 2011-07-27 14:36:14 -0300 (Wed, 27 Jul 2011) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_multiFileUpload"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_multiFileUpload"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_multiFileUpload">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				    <xsd:element name="buttons" minOccurs="0" maxOccurs="1" nillable="false">
+				    	<xsd:complexType>
+				    		<xsd:sequence>
+				    			<xsd:element name="clearButton" minOccurs="0" maxOccurs="1" type="lum_multiFileUploadBT">
+				    				<xsd:annotation>
+				    					<xsd:documentation>
+				    						Define the clear button
+				    					</xsd:documentation>
+				    				</xsd:annotation>
+				    			</xsd:element>
+				    			<xsd:element name="deleteButton" minOccurs="0" maxOccurs="1" type="lum_multiFileUploadBT" >
+				    				<xsd:annotation>
+				    					<xsd:documentation>
+				    						Define the delete button
+				    					</xsd:documentation>
+				    				</xsd:annotation>
+				    			</xsd:element>
+				    			<xsd:element name="addButton" minOccurs="0" maxOccurs="1" type="lum_multiFileUploadBT" >
+				    				<xsd:annotation>
+				    					<xsd:documentation>
+				    						Define the Add button
+				    					</xsd:documentation>
+				    				</xsd:annotation>
+				    			</xsd:element>
+				    		</xsd:sequence>
+				    	</xsd:complexType>
+				    </xsd:element>
+				    <xsd:element name="messages" minOccurs="0" maxOccurs="1" nillable="false" >
+					    <xsd:annotation>
+							<xsd:documentation>
+								Define messages for this control
+							</xsd:documentation>
+						</xsd:annotation>
+				    	<xsd:complexType>
+				    		<xsd:sequence>
+							    <xsd:element name="error" type="xsd:string" minOccurs="0" maxOccurs="1" >
+							    	 <xsd:annotation>
+										<xsd:documentation>
+											Error message that will be displayed
+										</xsd:documentation>
+									</xsd:annotation>
+							    </xsd:element>
+							    <xsd:element name="success" type="xsd:string" minOccurs="0" maxOccurs="1">
+							     	<xsd:annotation>
+										<xsd:documentation>
+											Success message that will be displayed
+										</xsd:documentation>
+									</xsd:annotation>
+							    </xsd:element>
+				    		</xsd:sequence>
+				    	</xsd:complexType>
+				    </xsd:element>
+				    <xsd:element name="controls" minOccurs="0" maxOccurs="1" />
+				</xsd:choice>
+				<xsd:attribute name="allowedFileExtensions" type="xsd:string" >
+					<xsd:annotation>
+						<xsd:documentation>
+							Define the allowed file extensions in semicolon-separated format
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_multiFileUploadBT">
+		<xsd:sequence>
+			<xsd:element name="label" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Define the label for this button.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="image" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Define the image path for this button.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>
+

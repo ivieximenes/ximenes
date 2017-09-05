@@ -1,0 +1,393 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Importação de Usuários e Grupos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?importacaousuariosgrupos.htm"; }
+  else { parent.quicksync('a7.3.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Importação de Usuários e Grupos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="gruposdinamicos.htm">Previous</a>&nbsp;
+     <a href="gerenciador_de_redes_sociais.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Através da administração da importação de Usuários e Grupos é possível sincronizar usuários e grupos de um repositório externo com o banco de dados do <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">É executado em duas etapas: na primeira são registrados os geradores de <span style="font-style: italic;">XML</span>, que criam o arquivo <span style="font-style: italic;">XML</span> com usuários e grupos extraídos do repositório externo (um <span style="font-style: italic;">Active Directory</span>, por exemplo). A segunda etapa registra os importadores que insere o conteúdo do <span style="font-style: italic;">XML</span> (gerado na primeira etapa) no banco de dados do <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Arquivos de Configuração</span></p>
+<p style="margin: 14px 0px 0px 0px;">Através da administração de arquivos de configuração é possível visualizar e excluir os arquivos <span style="font-style: italic;">XML</span> utilizados para acessar um determinado repositório externo. Estes arquivos devem estar localizados em "<span style="font-style: italic;">lumisdata/config/importprincipal" </span>. </p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm152.jpg" width="900" height="412" border="0" alt="portalAdm152" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Para salvar no servidor, arquivos de configuração que estão locais ou em outros servidores que não o da aplicação, deve-se acionar "Enviar Arquivo" e informar:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm154.jpg" width="910" height="231" border="0" alt="portalAdm154" style="margin:0 auto;margin:20px;"></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Arquivo: Neste campo é atribuído o arquivo <span style="font-style: italic;">xml</span> que encontra-se em um diretório local ou de outro servidor. Basta localizá-lo clicando em "Procurar". Ao confirmar, o arquivo será salvo em "<span style="font-style: italic;">lumisdata/config/importprincipal" </span>do servidor de aplicação.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Exemplo de arquivo de configuração (“lumis.net.xml”):</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New';">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span style="font-family: 'Courier New';">&lt;config&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;importgroups&gt;true&lt;/importgroups&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;readers&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;reader type="ADReader"&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;domain&gt;lumis.net&lt;/domain&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- NetBIOS domain to NTLM authentication --&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;netbiosDomain&gt;LUMIS&lt;/netbiosDomain&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;uris&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;uri&gt;</span><span style="font-family: 'Courier New';">ldap://host_name:porta/OU=,DC=,DC=</span><span style="font-family: 'Courier New';">&lt;/uri&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;uri&gt;</span><span style="font-family: 'Courier New';">ldap://host_name:porta/OU=,DC=,DC=</span><span style="font-family: 'Courier New';">&lt;/uri&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/uris&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;credential&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;user&gt;username@lumis.net&lt;/user&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;password&gt;password&lt;/password&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/credential&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;user&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;attributes&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;attribute name="phoneNumber" /&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/attributes&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/user&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/reader&gt;</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;/readers&gt;</span></p>
+<p><span style="font-family: 'Courier New';">&lt;/config&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"> O arquivo de configuração a ser criado deve conter as seguintes <span style="font-style: italic;">tags</span>:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;importgroups&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Pode conter os valores “true” para importar os grupos contidos no diretório; ou “false” apenas para importar os usuários.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;readers&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Agrupa os vários “reader”.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;reader&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define um leitor de usuários/grupos para cada origem especificada.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">type</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>O atributo “type” define o tipo de leitor. O <span style="font-style: italic;">Lumis Portal</span> vem com um leitor do tipo “ADReader” que acessa o <span style="font-style: italic;">Active Directory</span> para extrair os usuários e grupos. Outros leitores podem ser implementados para outros tipos de repositórios.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;domain&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define o nome do domínio a ser importado.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;netbiosDomain&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Refere-se ao domínio <span style="font-style: italic;">NETBIOS</span> para autenticação <span style="font-style: italic;">NTLM</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;uris&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Agrupa vários possíveis caminhos <span style="font-style: italic;">&lt;uri&gt;</span> para o repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;uri&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define o caminho para o repositório. No caso do <span style="font-style: italic;">Active</span> <span style="font-style: italic;">Directory</span>, que usa o protocolo <span style="font-style: italic;">LDAP</span>, o formato da <span style="font-style: italic;">URI</span>segueoformato:“ldap://host_name:port/CN=,OU=,DC=”</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;credencial&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Contém as tags <span style="font-style: italic;">&lt;user&gt;</span> e <span style="font-style: italic;">&lt;password&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;user&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define o nome do usuário que tem direitos de acesso ao repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;password&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define a senha do usuário para acessar o repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;user&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Define os atributos customizados de usuário que deverão ser lidos do repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;attributes&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Contém os atributos customizados que deverão ser lidos do repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;attribute&gt;</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>Um atributo customizado que deverá ser lido do repositório.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="163" style="width:163px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">name</span></p>
+</td>
+<td valign="top" width="413" style="width:413px; border: solid 1px #000000;"><p>O nome do atributo a ser lido.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Gerar XML</span></p>
+<p style="margin: 14px 0px 0px 0px;">Esta é a primeira etapa do processo de importação de usuários e grupos. Refere-se ao cadastro de geradores <span style="font-style: italic;">XML</span>. É necessário especificar um arquivo de configuração para acesso a um <span style="font-style: italic;">AD</span> e um arquivo de saída contendo os dados extraídos para serem importados para o <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Para isso, deve-se clicar em “adicionar” na área administrativa de geradores <span style="font-style: italic;">XML</span>, e preencher as seguintes informações:<br>
+&nbsp;</p>
+<p style="text-align: center; line-height: 1.15; margin: 0px 0px 13px 0px;"><img src="portaladm195.jpg" width="900" height="296" border="0" alt="portalAdm195" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Origem: nome do repositório externo de usuários e grupos;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Arquivo de configuração: nome do arquivo de configuração (juntamente com a extensão .xml) que contém informações do repositório de origem. O arquivo deve estar em “<span style="font-style: italic;">lumisdata/config/importprincipal</span> ” (não necessitando informar o caminho);</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Arquivo de saída: nome do arquivo que conterá os dados (usuários e grupos) extraídos do repositório externo. Este arquivo será salvo em “<span style="font-style: italic;">lumisdata/data/importprincipal</span>”. Se o diretório não existir, será criado na primeira execução para a extração de dados.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 11pt; font-family: 'Calibri';">Agendar execução automática: indica se a geração do XML será realizada automaticamente. Caso a opção de geração automática seja escolhida, a geração será feita automaticamente uma vez por dia.</span></td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Para extrair os dados de determinado repositório, deve-se selecionar o gerador <span style="font-style: italic;">XML</span> correspondente e acionar “Executar”. Desta forma os dados de usuários e grupos são extraídos para o arquivo de saída estipulado previamente.</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm069.jpg" width="900" height="347" border="0" alt="portalAdm069"></p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">Na geração do arquivo <span style="font-style: italic;">XML</span>, o usuário que não possuir <span style="font-style: italic;">login</span> <span style="font-style: italic;">windows</span>, será utilizado o <span style="font-style: italic;">login</span> <span style="font-style: italic;">netbios</span> como o <span style="font-style: italic;">login</span> principal do <span style="font-style: italic;">Lumis Portal</span>. Caso o usuário não possua <span style="font-style: italic;">login</span> <span style="font-style: italic;">netbios</span>, ele não é exportado para esse arquivo.</p>
+<p style="margin: 14px 0px 0px 0px;">Como a identificação do usuário está baseada no <span style="font-style: italic;">login</span> principal do <span style="font-style: italic;">Lumis Portal</span>, cadastrar um <span style="font-style: italic;">login</span> <span style="font-style: italic;">windows </span>para um usuário que não o possui, equivale a alterar seu <span style="font-style: italic;">login</span> principal, e dessa forma, &nbsp;será identificado como um usuário diferente durante a importação. O mesmo ocorreria se &nbsp;o <span style="font-style: italic;">login windows </span>fosse alterado.</p>
+<p style="margin: 14px 0px 0px 0px;">Por outro lado, o <span style="font-style: italic;">login netbios</span> só é levado em conta se o parâmetro <span style="font-style: italic;">netbiosDomain</span> for especificado na configuração do arquivo para gerar o <span style="font-style: italic;">XML.</span></p>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Importar XML</span></p>
+<p style="margin: 14px 0px 0px 0px;">Esta é a segunda etapa do processo de importação de usuários e grupos de um repositório externo. Nesta etapa, são configurados importadores que são responsáveis por lerem o arquivo de saída gerado na etapa anterior e gravarem as informações no banco de dados do <span style="font-style: italic;">Lumis Portal</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Para isso, deve-se clicar em “Adicionar” no gerenciador de importadores e preencher as seguintes informações.<br>
+&nbsp;</p>
+<p style="text-align: center; line-height: 1.15; margin: 0px 0px 13px 0px;"><img src="portaladm196.jpg" width="900" height="605" border="0" alt="portalAdm196" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Origem: nome do repositório externo de usuários e grupos;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 4px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Arquivo de entrada: corresponde ao arquivo de saída da primeira etapa que será lido pelos importadores. Deve ser informado o nome juntamente com a extensão;</td></tr></table></div><p style="margin: 14px 0px 0px 3px;">O arquivo de entrada deverá ter o seguinte formato:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="584" style="width:584px; border: solid 1px #000000;"><p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;records&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;origin&gt;origem&lt;/origin&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;users&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;user&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;login&gt;login@domain&lt;/login&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;alternativeLogins&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;alternativeLogin&gt;DOMAIN\login&lt;/alternativeLogin&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/alternativeLogins&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;email&gt;&lt;/email&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;firstName&gt;user_firstname&lt;/firstName&gt;</span></p>
+<p style="margin: 4px 0px 0px 72px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;&lt;lastName&gt;user_lastname&lt;/lastName&gt;</span></p>
+<p style="margin: 4px 0px 0px 72px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;&lt;channelId&gt;&lt;/channelId&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;attributes&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;attribute&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;name&gt;custom_attribute&lt;/name&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;value&gt;custom attribute value&lt;/value&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/attribute&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/attributes&gt;</span></p>
+<p style="margin: 4px 0px 0px 72px;"><span style="font-family: 'Courier New';">&lt;/user&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;/users&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;groups&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;group&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;shortId&gt;group_shortid&lt;/shortId&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;name&gt;group_name&lt;/name&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;description&gt;&lt;/description&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;channelId&gt;&lt;/channelId&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;members&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;member&gt;username@lumis.net&lt;/member&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;member&gt;username@lumis.net&lt;/member&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/members&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/group&gt;</span></p>
+<p style="margin: 4px 0px 0px 0px;"><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &lt;/groups&gt;</span></p>
+<p style="margin: 4px 0px 4px 0px;"><span style="font-family: 'Courier New';">&lt;/records&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">As <span style="font-style: italic;">tags</span> contêm as seguintes informações:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;origin&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Define o nome de origem dos usuários e grupos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;users&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém a lista dos usuários.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;user&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém as propriedades do usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;login&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p><span style="font-style: italic;">Login</span> do usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;alternativeLogins&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém a lista de <span style="font-style: italic;">login</span> alternativo de cada usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;alternativeLogin&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Define o <span style="font-style: italic;">login</span> alternativo do usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;name&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Nome do usuário.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;channelId&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>ID do canal que o usuário irá pertencer. Este campo só é preenchido quando o usuário for um usuário local de um canal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;attributes&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém os atributos customizados (caso existam), na estrutura do exemplo acima.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;groups&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém a lista de grupos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;group&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém as propriedades do grupo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;shortId&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Apelido ou nome curto do grupo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;name&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Nome completo do grupo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;description&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Descrição do grupo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;channelId&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>ID do canal que o grupo irá pertencer. Este campo só é preenchido quando o grupo for local a um canal.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;members&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p>Contém os membros de um grupo.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="198" style="width:198px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 47px;"><span style="font-style: italic;">&lt;member&gt;</span></p>
+</td>
+<td valign="top" width="411" style="width:411px; border: solid 1px #000000;"><p><span style="font-style: italic;">Login</span> do usuário membro do grupo.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 48px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se existir no destino: permite ignorar ou sobrescrever o usuário ou grupo, caso eles existam no destino;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se não existir no destino: permite ignorar ou incluir o usuário ou grupo, caso eles não existam no destino;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se não existir na origem: Permite ignorar ou remover os grupos e desabilitar os usuários, caso eles existam no destino e não existam no repositório de origem.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-size: 11pt; font-family: 'Calibri';">Agendar execução automática: indica se a importação do XML será realizada automaticamente. Caso a opção de importação automática seja escolhida, a importação será feita automaticamente uma vez por dia.</span></td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Para importar para o banco do <span style="font-style: italic;">Lumis Portal</span>, deve-se selecionar o importador <span style="font-style: italic;">XML</span> correspondente e acionar “Executar”.</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm074.jpg" width="900" height="224" border="0" alt="portalAdm074"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;">Desta forma os dados de usuários e grupos serão importados para o banco e poderão ser acessados pelo <a href="usuariosgrupos.htm">gerenciador de Usuários e Grupos</a>.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table width="523" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>O <span style="font-style: italic;">AD</span> possui apenas <span style="font-style: italic;">first</span> e <span style="font-style: italic;">last name</span>. O <span style="font-style: italic;">middleName</span> no <span style="font-style: italic;">Lumis Portal</span> é sempre preenchido como <span style="font-style: italic;">null</span>, pois não existe no <span style="font-style: italic;">AD</span>. No caso de algum usuário não possuir <span style="font-style: italic;">first name</span> preenchido no <span style="font-style: italic;">xml</span>, o <span style="font-style: italic;">login</span> é utilizado como <span style="font-style: italic;">first name</span>, pois esse campo é obrigatório no <span style="font-style: italic;">Lumis Portal</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Arquivos XML</span></p>
+<p style="margin: 14px 0px 0px 0px;">Através da administração de arquivos <span style="font-style: italic;">XML</span> é possível visualizar e excluir os arquivos que contêm os usuários e grupos extraídos de um determinado repositório. Eles são os arquivos de saída do processo "Gerar XML" e utilizados como arquivos de entrada no processo "Importar XML". &nbsp;Estes arquivos estão localizados em "<span style="font-style: italic;">lumisdata/data/importprincipal" </span>.</p>
+<p style="margin: 14px 0px 0px 0px;"><img src="portaladm153.jpg" width="1050" height="651" border="0" alt="portalAdm153" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Para salvar no servidor, arquivos <span style="font-style: italic;">XML</span> que estão locais ou em outros servidores que não o da aplicação, deve-se acionar "Enviar Arquivo" e informar:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm155.jpg" width="910" height="232" border="0" alt="portalAdm155" style="margin:0 auto;margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 3px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Arquivo: Neste campo é atribuído o arquivo <span style="font-style: italic;">xml</span> que encontra-se em um diretório local ou de outro servidor. Basta localizá-lo clicando em "Procurar". Ao confirmar, o arquivo será salvo em "<span style="font-style: italic;">lumisdata/data/importprincipal" </span>do servidor de aplicação.</td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

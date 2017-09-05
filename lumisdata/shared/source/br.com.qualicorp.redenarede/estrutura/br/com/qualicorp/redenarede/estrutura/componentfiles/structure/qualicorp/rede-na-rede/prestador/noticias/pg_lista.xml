@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050C9BD630150CD5E03C9745F</id>
+  <name>Lista</name>
+  <parent-template-id>2C96A2CE5AC7FD01015AC9747A9A68E9</parent-template-id>
+  <hidden>true</hidden>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>template.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="busca">
+        <interface id="2C96A2CE5AC7FD01015AC982F3FF6AAE"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="2C96A2CE5AC7FD01015AC982F4066AAF"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC982F40D6AB0"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="2C96A2CE5AC7FD01015AC982F4146AB1"></interface>
+    </holder>
+    <holder id="interfaces">
+        <interface id="0000000050C9BD630150CD5E060F74A3"></interface>
+        <interface id="2C96A2CE5AC7FD01015AC982F4196AB2"></interface>
+    </holder>
+    <holder id="menurodape">
+        <interface id="2C96A2CE5AC7FD01015AC982F4286AB5"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E060F74A3</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C9745E</service-instance-id>
+      <interface-id>lumis.service.news.list</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1C5043F2FAF</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_orderBy"><![CDATA[<orderBy><field id="publishStartDate" direction="descending" /></orderBy>]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F3FF6AAE</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B0268F2</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F4066AAF</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B0C68F3</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F40D6AB0</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaPrestador</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC974FE6B692C</parent-interface-instance-id>
+      <applied-interface-style-id>alterarSenhaPrestadorsmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F4146AB1</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B1F68F5</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F4196AB2</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B2968F6</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC982F4286AB5</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9747B6968FC</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

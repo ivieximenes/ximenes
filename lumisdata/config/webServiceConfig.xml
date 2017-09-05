@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webServiceConfig>
+	<beneficiario>
+		<wsdlLocation>https://wwwt.connectmed.com.br/saudewebHomologacao/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?wsdl</wsdlLocation>
+		<codigoOperadora>4</codigoOperadora>
+		<codigoSistema>2</codigoSistema>
+		<errorMessage>Ocorreu um erro ao processar sua solicitação de 'Beneficiário'.</errorMessage>
+	</beneficiario>
+	<prestador>
+		<!--wsdlLocation>https://xeonio:8016/GSPServices/ServicoPrestador.svc?wsdl</wsdlLocation-->
+		<!--wsdlLocation>http://xeonio:8012/GSPServices/ServicoPrestador.svc?wsdl</wsdlLocation-->
+		<wsdlLocation>https://svc.gamasmart.com.br/ServicoPrestador.svc?wsdl</wsdlLocation>
+		<errorMessage>Ocorreu um erro ao processar sua solicitação de 'Prestador'.</errorMessage>
+	</prestador>
+</webServiceConfig>

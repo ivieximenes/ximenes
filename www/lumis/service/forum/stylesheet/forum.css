@@ -1,0 +1,19 @@
+/* $Revision: 15608 $ $Date: 2013-07-18 16:19:38 -0300 (Thu, 18 Jul 2013) $ */
+
+.lumis-service-forum-forumDetails .lum-header {
+	margin-bottom:0;
+}
+
+/* forum path */
+.lumis-service-forum-forumPath .lum-list-item {
+	display:inline;
+}
+.lumis-service-forum-forumPath .lum-list-item:after {
+	content:' \00BB  ';
+	border:0;
+	margin:0;
+	display:inline;
+}
+.lumis-service-forum-forumPath .lum-list-item.lum-last:after {
+	content:none;
+}

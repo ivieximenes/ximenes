@@ -1,0 +1,92 @@
+/* $Revision: 15488 $ $Date: 2013-06-14 18:57:15 -0300 (Fri, 14 Jun 2013) $ */
+
+.lum-comment-score {
+	width:94px;
+	height:18px;
+	background:url(../image/bg_0stars.gif) no-repeat 0 0;
+}
+.lum-comment-score-fill {
+	width:0;
+	height:18px;
+	background:url(../image/bg_5stars.gif) no-repeat 0 0;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.lum-comment-vote {}
+.lum-comment-vote ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	height:18px;
+	overflow:hidden;
+}
+.lum-comment-vote ul li {
+	float:left;
+}
+.lum-comment-vote ul li a {
+	display:block;
+	width:20px;
+	height:18px;
+	outline:none;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	background:url(../image/bg_0stars.gif) no-repeat 0 0;
+}
+.lum-comment-vote ul li a.selected {
+	background:url(../image/bg_5stars.gif) no-repeat 0 0;
+}
+
+.lumis-service-comment-averageGrade {
+	border-top:1px solid #cdcdcd;
+	padding-top:15px;
+	margin-top:15px;
+}
+.lumis-service-comment-averageGrade .lum-content-body {
+	margin:0;
+}
+.lumis-service-comment-averageGrade .lum-field {
+	margin:0;
+}
+.lumis-service-comment-averageGrade .lum-field-value {
+	display:inline-block;
+	vertical-align:middle;
+}
+.lumis-service-comment-averageGrade .lum-comment-score {
+	display:inline-block;
+}
+
+.lumis-service-comment-quicklist {
+	border-top:1px solid #cdcdcd;
+	padding-top:15px;
+	margin-top:15px;
+}
+.lumis-service-comment-quicklist .lum-content-header {
+	overflow:hidden;
+}
+.lumis-service-comment-quicklist .lum-content-header > ul.lum-header-buttons,
+.lumis-service-comment-list .lum-content-header > ul.lum-header-buttons {
+	float:left;
+}
+.lumis-service-comment-quicklist .lum-content-title,
+.lumis-service-comment-list .lum-content-title {
+	font-size:12px;
+	font-weight:bold;
+	color:#000;
+	display:inline-block;
+	padding-left:15px;
+	padding-top:5px;
+}
+.lumis-service-comment-quicklist .lum-list-item .lum-comment-score,
+.lumis-service-comment-list .lum-list-item .lum-comment-score {
+	float:right;
+}
+
+.lumis-service-comment-addComment .lum-form-field-id-primaryName {
+	display:none;
+}
+.lumis-service-comment-addComment .lum-form-field-id-grade .lum-form-field-value img {
+	cursor:pointer;
+}

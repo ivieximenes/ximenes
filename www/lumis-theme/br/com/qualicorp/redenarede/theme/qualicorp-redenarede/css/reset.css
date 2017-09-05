@@ -1,0 +1,224 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* Ajuste no corpo dos conte�dos */
+
+.news-content ul,
+.service-content ul,
+.lum-content-body ul,
+.faq .answer ul{
+	list-style: initial;
+	margin: 1em auto;
+    padding-left: 2em;
+}
+
+.news-content ol,
+.lum-content-body ol,
+.service-content ol,
+.faq .answer ol{
+	list-style: initial;
+	list-style-type: decimal;
+	margin: 1em auto;
+    padding-left: 2em;
+}
+
+.news-content strong, 
+.news-content b,
+.lum-content-body strong, 
+.lum-content-body b,
+.service-content strong, 
+.service-content b,
+.faq .answer strong,
+.faq .answer b{
+	font-weight: bold;
+}
+
+.news-content em,
+.lum-content-body em,
+.service-content em,
+.faq .answer em{
+	font-style: italic;
+}
+
+.service-content h1,
+.news-content h1,
+.lum-content-body h1,
+.faq .answer h1{
+	font-size: 2.3em;
+	margin:0.5em auto;
+}
+.service-content h2,
+.news-content h2, 
+.lum-content-body h2,
+.faq .answer h2{
+	font-size: 1.8em;
+	margin: 0.5em auto;
+}
+
+.service-content h3,
+.news-content h3,
+.lum-content-body h3,
+.faq .answer h3{
+	font-size: 1.4em;
+	margin: 0.5em auto;
+}
+
+.service-content h4,
+.news-content h4,
+.lum-content-body h4,
+.faq .answer h4{
+	font-size: 1.1em;
+    margin: 0.5em auto;
+	text-transform:uppercase;
+}
+
+.service-content h5,
+.news-content h5,
+.lum-content-body h5,
+.faq .answer h5{
+	font-size: 1.2em;
+	margin: 0.5em auto;
+}
+
+.service-content h6,
+.news-content h6,
+.lum-content-body h6,
+.faq .answer h6{
+	font-size:1em;
+	margin: 0.5em auto;
+	text-transform: uppercase;
+}
+
+.service-content pre,
+.news-content pre,
+.lum-content-body pre,
+.faq .answer pre{
+	font-family: monospace;
+    margin: 1em 0;
+}
+
+.service-content address,
+.news-content address,
+.lum-content-body address,
+.faq .answer address{
+    font-style: italic;
+}
+
+.service-content sub,
+.news-content sub,
+.lum-content-body sub,
+.faq .answer sub{
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.service-content sup,
+.news-content sup,
+.lum-content-body sup,
+.faq .answer sup{
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.service-content table caption,
+.news-content table caption,
+.lum-content-body table caption,
+.faq .answer table caption{
+	margin-bottom: 1em;
+}
+
+.service-content table, 
+.service-content th, 
+.service-content td,
+.news-content table, 
+.news-content th, 
+.news-content td,
+.lum-content-body table, 
+.lum-content-body th, 
+.lum-content-body td,
+.faq .answer table, 
+.faq .answer th, 
+.faq .answer td{ 
+	border: solid grey; 
+	border-spacing: 2px; 
+	border-collapse: initial;
+}
+
+.news-content td,
+.service-content td,
+.lum-content-body td,
+.faq .answer td{
+    padding: 1em;
+}
+
+.service-content th,
+.news-content th,
+.lum-content-body th,
+.faq .answer th {
+    padding: 0.5em;
+	font-weight: bold;
+}
+
+.service-content table sub,
+.news-content table sub,
+.lum-content-body table sub,
+.faq .answer table sub{
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.service-content table sup,
+.news-content table sup,
+.lum-content-body table sup,
+.faq .answer table sup{
+    vertical-align: super;
+    font-size: smaller;
+}
+
+/* Ajuste no corpo dos conte�dos */
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }

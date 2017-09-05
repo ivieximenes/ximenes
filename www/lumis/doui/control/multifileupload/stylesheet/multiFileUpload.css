@@ -1,0 +1,220 @@
+/* $Revision: 16141 $ $Date: 2014-02-14 19:09:11 -0200 (Fri, 14 Feb 2014) $ */
+.lum-multifileupload .uploadifyQueueItem {
+	background-color: #FFFFFF;
+	border:1px solid #cdcdcd;
+	margin-top: 15px;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius:3px;
+}
+
+.lum-multifileupload .lum-form-field, .lum-property-page-content .lum-multifileupload .lum-form-field  {
+	padding-top:10px;
+	padding-bottom: 0px;
+}
+
+.lum-multifileupload .fileName{
+	font-weight:bold;
+	font-size:12px;
+}
+.lum-multifileupload .fileSize{
+	font-size:12px;
+}
+.lum-multifileupload .percentage{
+	font-size:12px;
+}
+
+.lum-multifileupload .uploadifyError {
+	background-color: #FDE5DD !important;
+	border: none !important;
+	border-bottom: 1px solid #FBCBBC !important;
+}
+
+.lum-multifileupload .uploadifyQueueItem .cancel {
+	float: right;
+}
+
+.lum-multifileupload .uploadifyQueue .lum-multifileupload-completed-message { 
+	background: none repeat scroll 0 0 #FAFAFA !important;
+	display:none;
+}
+
+.lum-multifileupload .uploadifyQueue .completed .lum-multifileupload-completed-message { 
+	background: none repeat scroll 0 0 #FAFAFA !important;
+	display:inherit;
+}
+
+.lum-multifileupload .uploadifyQueue .completed .percentage { 
+	background: none repeat scroll 0 0 #FAFAFA !important;
+	display:none;
+}
+
+.lum-multifileupload .uploadifyQueueItem .fileName {
+	_float: left;
+}
+
+.lum-multifileupload .uploadifyQueue .percentage { 
+	display:inline;
+	padding-left:5px;
+}
+
+.lum-multifileupload .uploadifyQueue .completed { 
+	background: none repeat scroll 0 0 #FAFAFA !important;
+	clear: all;
+}
+
+
+.lum-multifileupload .uploadifyProgress {
+	background-color: #FAFAFA;
+	margin-top: 10px;
+}
+
+.lum-multifileupload .uploadifyProgressBar {
+	background-color: #FCF0D8;
+	width: 1px;
+}
+
+.lum-multifileupload .queue {
+	border: 1px solid #ccc;
+	height: 213px;
+	margin-bottom: 10px;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.lum-multifileupload-queue-html5 {
+	margin-bottom: 10px;
+	padding:0px;
+}
+
+.lum-multifileupload-item-html5 {
+	background-color: #FFFFFF;
+	border: none;
+	border: 1px solid #E5E5E5;
+	margin-top: 0;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.lum-multifileupload-buttons-bar > span, .lum-multifileupload-buttons-bar > label,.lum-multifileupload-buttons-bar-flash object
+{
+	width: 80px !important;
+	height: 24px !important;
+	padding: 0;
+}
+
+.lum-multifileupload-buttons-bar > button
+{
+	width: 82px !important;
+	height: 26px !important;
+}
+
+.cLumMultiFileUploadQueue
+{
+	width:100%;
+}
+
+.lum-multifileupload-container
+{
+	width:100%;
+}
+
+.lum-multifileupload-container .ui-widget-content{
+	border: 0px;
+	padding:0px;
+}
+
+.lum-multifileupload-clear-button-container-flash a 
+{
+	text-decoration:none; 
+	color: #606060;
+}
+
+.lum-multifileupload-input-file-html4
+{
+	margin-bottom:10px !important;
+}
+
+.lum-multifileupload-container-html4
+{
+	 position:relative; 
+	 display:block; 
+}
+
+.lum-multifileupload-supported-versions-link
+{
+	padding:5px;
+}
+
+.lum-multifileupload-completed { 
+	background: none repeat scroll 0 0 #FAFAFA !important;
+}
+
+
+.lum-multifileupload .fileupload-content .ui-progressbar{
+	border: 1px solid #FEAC1A;
+	height: 9px;
+	width: 100%;
+}
+
+.lum-multifileupload-dropbox {
+	border:1px solid #cdcdcd;
+	border-radius:6px;
+	min-height:80px;
+	background:#fff;
+	text-align:center;
+	padding:22px 0;
+	color:#919191;
+	font-weight:normal;
+	overflow: hidden;
+}
+.lum-multifileupload-dropbox.fileupload-buttonbar .ui-button input {
+	-moz-transform: translate(0px, -20px) scale(10);
+	-webkit-transform: translate(0px, -20px) scale(10);
+	z-index:9999;
+}
+.lum-multifileupload-dropbox input[type="file"] {
+	font-size:20px;
+}
+.lum-multifileupload-dropbox:hover {
+	box-shadow:0 0 6px #cdcdcd;
+	border-color:#c1c1c1;
+}
+.lum-multifileupload-dropbox .message-title {
+	font-size:1.9em;
+}
+.lum-multifileupload-dropbox .message-subtitle {
+	font-size:1.4em;
+}
+.lum-multifileupload-dropbox .lum-button {
+	float:none;
+	width:150px;
+	margin:5px auto 0 auto;
+}
+.lum-multifileupload-dropbox .lum-button {
+	font-size:1.2em;
+	white-space:nowrap;
+	padding:8px;
+	color: #B82A28;
+}
+.lum-multifileupload-dropbox .ui-widget-header {
+	border: 1px solid #cdcdcd;
+	background: #FFF;
+	font-weight: normal;
+}
+.lum-multifileupload-dropbox .ui-button input {
+	border:0px;
+	width:150px;
+	height:32px;
+}
+
+.lum-multifileupload-buttons-bar-flash{
+	position: relative;
+}
+
+.lum-multifileupload-buttons-bar-flash object{
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	z-index: 99999;
+}

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Grupos Dinâmicos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?gruposdinamicos.htm"; }
+  else { parent.quicksync('a7.3.1.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Grupos Dinâmicos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="tipogrupos.htm">Previous</a>&nbsp;
+     <a href="importacaousuariosgrupos.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Lumis</span> Portal permite que grupos dinâmicos sejam criados. </p>
+<p>&nbsp;</p>
+<p>O cadastro de um grupo dinâmico possui o diferencial de que deve possuir um tipo cuja implementação disponibiliza parâmetros que irão compor o filtro a ser configurado no grupo. O filtro selecionará os membros dinamicamente assim que forem cadastrados no portal, e serão automaticamente adicionados aos grupos.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Os grupos dinâmicos cadastrados podem ser visualizados no gerenciador de grupos juntamente com os outros grupos que não são dinâmicos e com aqueles que são padrão do produto:<br>
+&nbsp;</p>
+<p><img src="gruposdinamicos001.zoom80.png" width="970" height="525" border="0" alt="GruposDinamicos001"><br>
+Na lista, os grupos dinâmicos são identificados com um ícone ao lado do seu identificado nome. Esse ícone refere-se à configuração do grupo que será vista logo mais abaixo. </p>
+<p>&nbsp;</p>
+<p>Para cadastrar um grupo dinâmico, basta acionar "Adicionar" e preencher as seguintes informações:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="gruposdinamicos002.jpg" width="910" height="324" border="0" alt="GruposDinamicos002" style="margin:0 auto;margin:0px;"></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-weight: bold;">Apelido</span>: Campo obrigatório que deve conter um nome curto para a identificação do grupo dinâmico. É considerado o <span style="font-style: italic;">shortID</span>;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-weight: bold;">Nome</span>: Campo obrigatório que deve conter o nome completo do grupo ;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-weight: bold;">Descrição</span>: Breve descrição sobre o grupo. Não é obrigatório;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td><span style="font-weight: bold;">Tipo de Grupo: </span>Campo obrigatório no qual deve ser escolhido o <a href="tipogrupos.htm">tipo de grupo</a> para o grupo que está sendo cadastrado. Tal tipo deve conter implementação para que os membros de um grupo sejam calculados dinamicamente a partir de dados obtidos em uma <span style="font-style: italic;">view</span> ou uma tabela do banco de dados.</td></tr></table></div><p style="text-indent: -1px; margin: 0px 0px 0px 18px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Para editar e excluir um grupo, seguem os mesmos passos descritos no <a href="usuariosgrupos.htm">gerenciador de grupos</a>.</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-weight: bold;">Configuração do Grupo Dinâmico</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Após o cadastro do grupo, é necessário configurá-lo, ou seja, definir o perfil de membros através de filtros. Os membros serão adicionados dinamicamente e automaticamente aos grupos, assim que aqueles forem cadastrados no portal.</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Para configurar o filtro de um grupo dinâmico, basta selecionar um ícone localizado ao lado do seu nome na lista de grupos no gerenciador. A partir daí, adicionar tantos filtros quanto forem necessários. </p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Os parâmetros disponíveis para os filtros estão pré-determinados na implementação do tipo de grupo cadastrado para o grupo.</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Como exemplo, tem-se as configurações do grupo dinâmico cadastrado "GrupoA".</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Ao clicar em adicionar, nas suas configurações, são exibidos os seguintes parâmetros:</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><img src="gruposdinamicos003.jpg" width="910" height="378" border="0" alt="GruposDinamicos003"></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Para os operadores, há as seguintes observações:</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Operadores =, &lt;&gt;, LIKE e NOT LIKE são <span style="font-style: italic;">case insensitive</span>. As colunas na qual estes operadores estão aplicados no banco de dados não podem ser <span style="font-style: italic;">accent sensitive</span>, ou poderá causar comportamento inconsistente;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Operadores &gt;, &gt;=, &lt;, &lt;= não devem ser utilizados para campos textuais, exceto se o banco de dados interpretar, nas respectivas colunas, tais operadores de forma equivalente ao String.compareTo;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Operadores LIKE e NOT LIKE podem utilizar os caracteres coringas: </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>"_"para representar um caracter qualquer;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>"%" para representar uma quantidade qualquer de caracteres, inclusive nenhum caracter;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Para colunas de tipo data/data-hora/hora, o valor deve ser especificado seguindo o padrão ISO 8601. Exemplos: 2000-01-05T13:05:32, 2000-01-05, 13:05:32, 13:05:32.000-03:00;<br>
+&nbsp;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Para valores numéricos, o separador decimal deve ser o ponto (conforme padrão norte-americano). <br>
+&nbsp;<br>
+A figura abaixo exibe o filtro estabelecido para o grupo dinâmico "GrupoA":</td></tr></table></div><p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><img src="gruposdinamicos004.jpg" width="910" height="256" border="0" alt="GruposDinamicos004"></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Foram definidos dois perfis de membros através de dois filtros: Serão adicionados membros cujo primeiro nome comece com a palavra "user", mas que não seja o membro "user 1".</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">Portanto, todos os usuários e grupos que estejam ou que sejam cadastrados no portal e que tenham esses perfis, serão automaticamente adicionados ao "GrupoA".</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;">A figura abaixo, exibe os membros do "GrupoA" adicionados automaticamente de acordo com os perfis estabelecidos acima:</p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><img src="gruposdinamicos005.jpg" width="911" height="347" border="0" alt="GruposDinamicos005"></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 48px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="357" style="width:357px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><p>Não é possível adicionar manualmente membros a grupos dinâmicos.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* $Revision: 15325 $ $Date: 2013-05-14 15:36:25 -0300 (Tue, 14 May 2013) $ */
+.lum-cache-percent
+{
+	border:1px solid #AAAAAA;
+	width:102px;
+	height:7px;
+}
+
+.lum-cache-progress
+{
+	color:white;
+	height:7px;
+}
+
+.lum-cache-progress.lum-cache-hit-progress
+{
+	background:#89c613;
+}
+
+.lum-cache-progress.lum-cache-miss-progress
+{
+	background:#d2411e;
+}
+
+.lum-cache-hit-miss-span
+{
+	font-size:10px;	
+}
+
+.lum-cache-capacity-span
+{
+	color:#000000;
+}

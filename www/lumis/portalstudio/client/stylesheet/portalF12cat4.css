@@ -1,0 +1,118 @@
+/* $Revision: 12849 $ $Date: 2011-04-26 18:57:23 -0300 (Tue, 26 Apr 2011) $ */
+
+/*************************** ADMIN HEADER ******************************/
+
+.cLumAdminHeaderTitle
+{
+	background-color:#A2CBE7 !important;
+}
+
+.cLumAdminHeaderTitle div
+{
+	background: url(../images/category4/AdminHeaderCategoryPortal.gif) top left no-repeat !important;
+	color: #3275BA !important;
+}
+
+.cLumAdminNavigationPaneTop
+{
+	background:url(../images/category4/AdminNavPaneTopRight.gif) right #5F9AD7 no-repeat !important;
+}
+
+.cLumAdminHeaderLine
+{	
+	background:url(../images/category4/LumisAdminHeaderLineLeft.gif) #A2CBE7 no-repeat !important;
+}
+
+/*************************** NAVIGATION PANE - ADMIN MENU ******************************/
+
+.cLumAdminChannel
+{
+	background: #5F9AD7 !important;
+}
+
+.cLumAdminChannel a:hover
+{
+	background: #BACCCE !important;
+}
+
+/*************************** WORK PANE - HEADER ******************************/
+
+.cLumAdminWorkPaneUserBar
+{
+	background:url(../images/category4/AdminUserBarMid.gif) repeat-x !important;
+	
+}
+.cLumAdminWorkPaneUserBarLeft
+{
+	background:url(../images/category4/AdminUserBarLeft.gif) top left no-repeat !important;
+}
+
+.cLumAdminWorkPaneUserBarRight
+{
+	background:url(../images/category4/AdminUserBarRight.gif) top right no-repeat !important;
+}
+
+/*************************** WORK PANE - BODY ******************************/
+
+#LumisAdminWorkPaneBody
+{
+	scrollbar-face-color: #5F9AD7 !important;
+	scrollbar-arrow-color: #3275BA !important;
+	scrollbar-track-color: #B3CFEC !important;
+	scrollbar-highlight-color: #5F9AD7 !important;
+	scrollbar-3dlight-color: #5F9AD7 !important;
+	scrollbar-darkshadow-color: #5F9AD7 !important;
+	scrollbar-shadow-color: #3275BA !important;
+	background:#FFF !important;
+	margin-top:2px !important;
+}
+
+/*********************************************************/
+
+.cLumAdminSplitter
+{
+	background: url(../images/category4/SplitterBackground.gif) !important;	
+}
+
+#LumisAdminNavigationMenu
+{
+	background-color:#E5E4DA !important;
+}
+
+#LumisAdminMenu0
+{
+	background-color:#3275BA !important;
+}
+
+#LumisAdminMenu0Left
+{
+	background:url(../images/category4/AdminMenu0Left.gif) left top no-repeat !important;	
+}
+
+#LumisAdminMenu1 a, 
+#LumisAdminMenu2 a, 
+#LumisAdminMenu3 a
+{
+	color:#3275BA !important;
+	height:20px !important;
+	line-height:18px !important;
+}
+
+.cLumAdminMenuImage
+{
+	padding:10px !important;
+}
+
+.cLumisAdminNavigationPaneResizer
+{
+	background: url(../images/category4/SplitterBackground.gif) !important;
+}
+.cLumisAdminNavigationPaneToggler 
+{
+	background: url(../images/category4/SplitterCenterImage.gif)  no-repeat  !important;
+}
+
+
+.lumbar-portalstudio {
+	background:#0e2135 url(../images/bg_configuracao.jpg) repeat-x top left !important;
+}

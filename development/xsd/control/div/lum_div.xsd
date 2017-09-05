@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14864 $ $Date: 2012-10-25 17:15:42 -0200 (Thu, 25 Oct 2012) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_div"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_div"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_div">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:attribute name="class" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="visualAid" type="xsd:boolean">
+					<xsd:annotation>
+						<xsd:documentation>Indicates whether the control is for visual aid only. If so, it may be omitted without functional impact, but its inner controls must still be rendered.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

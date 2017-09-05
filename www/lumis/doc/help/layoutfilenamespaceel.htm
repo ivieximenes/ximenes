@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Namespace el</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?layoutfilenamespaceel.htm"; }
+  else { parent.quicksync('a8.8.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Namespace EL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="layoutfilenamespacepage.htm">Previous</a>&nbsp;
+     <a href="temas.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Como padrão, todo <span style="font-style: italic;">Layout File</span> possui este <span style="font-style: italic;">namespace</span> declarado permitindo a utilização de <span style="font-style: italic;">ELs</span> (E<span style="font-style: italic;">xpression Language</span>) no <span style="font-style: italic;">HTML</span>. A customização dessa configuração pode ser feita configurando o <span style="font-style: italic;">namespace xmlns:el="http://www.lumis.com.br/lumisportal/xsd/layoutfile/el" </span>no primeiro elemento do arquivo.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Tags</span></p>
+<p>&nbsp;</p>
+<p>A tag <span style="font-style: italic;">el:out</span> substitui o seu <span style="font-style: italic;">HTML</span> de exemplo com o resultado da <span style="font-style: italic;">el </span>definida no atributo <span style="font-style: italic;">value. </span></p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p><span class="f_CodeExample"> Código:</span></p>
+<p><span class="f_CodeExample"> &nbsp; &lt;div&gt;Total:&lt;el:out value="${1+1}"&gt;10&lt;/el:out&gt;&lt;/div&gt;</span></p>
+<p>&nbsp;</p>
+<p><span class="f_CodeExample"> Resultado:</span></p>
+<p><span class="f_CodeExample"> &nbsp; &nbsp;&lt;div&gt;Total: 2&lt;/div&gt;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>A tag <span style="font-style: italic;">el:out</span> também possui os atributos:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">escapeXml: </span>indica se o valor avaliado deve ser escapado. Esse atributo é opcional e seu valor <span style="font-style: italic;">default</span> é <span style="font-style: italic;">true</span>.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">default: </span>indica o valor a ser utilizado caso o resultado da avaliação retorne <span style="font-style: italic;">null </span>ou uma string vazia<span style="font-style: italic;">.</span></td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Atributos</span></p>
+<p>&nbsp;</p>
+<p>Qualquer atributo de <span style="font-style: italic;">HTML</span> pode ser tranformado por um resultado de uma <span style="font-style: italic;">EL</span> adicionando o prefixo do <span style="font-style: italic;">namespace </span>no nome do atributo. O atributo sem o <span style="font-style: italic;">namespace</span> pode ser mantido para permitir a leitura do arquivo <span style="font-style: italic;">offline</span> facilitando a prototipação do <span style="font-style: italic;">HTML</span>. </p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p><span class="f_CodeExample"> Código:</span></p>
+<p><span class="f_CodeExample"> &nbsp; &lt;div title="título" el:title="${1+1}"&gt;Conteúdo&lt;/div&gt;</span></p>
+<p>&nbsp;</p>
+<p><span class="f_CodeExample"> Resultado:</span></p>
+<p><span class="f_CodeExample"> &nbsp; &nbsp;&lt;div title="2"&gt;Conteúdo&lt;/div&gt;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Recursos disponíveis para o EL de LayoutFile</span></p>
+<p>O <span style="font-style: italic;">EL </span>de <span style="font-style: italic;">Layout File</span> pode utilizar os recursos (variáveis e funções) definidos no escopo <span style="font-style: italic;">Layout File </span>descritos em <a href="recursos_disponiveis_em_el.htm">Recursos disponíveis em EL</a>.</p>
+<p>&nbsp;</p>
+<p>Abaixo segue um exemplo de tradução utilizando a função <span style="font-style: italic;">localize </span>disponível:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 3px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="747" style="width:747px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="747" style="width:747px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Código:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;el:out&nbsp;value="${localize('STR_PROPERTIES')}"&gt;Propriedades&lt;/el:out&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Resultado:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Propriedades&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;português.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ou&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Properties&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;inglês.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="747" style="width:747px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Código:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;title="Propriedades"&nbsp;el:title="${localize('STR_PROPERTIES')}"&gt;Conteúdo&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Resultado:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;title="Propriedades"&gt;Conteúdo&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;português.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ou&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;title="Properties"&gt;Conteúdo&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;inglês.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="747" style="width:747px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Código:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;el:out&nbsp;value="${localize('STR_PROPERTIES',&nbsp;'lumis/portal/strings/strings')}"&gt;Propriedades&lt;/el:out&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;Resultado:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Propriedades&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;português.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;ou&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Properties&lt;/div&gt;,&nbsp;caso&nbsp;o&nbsp;usuário&nbsp;esteja&nbsp;navegando&nbsp;em&nbsp;inglês.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

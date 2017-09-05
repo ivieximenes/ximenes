@@ -1,0 +1,41 @@
+/*
+ * $Revision: 13854 $ $Date: 2011-12-23 17:19:26 -0200 (Fri, 23 Dec 2011) $
+ */
+ 
+@charset "utf-8";
+/* CSS Document */
+.Utility {
+		color: black;
+}	
+.NodeName {
+	font-weight:bold;
+	color: #800080;	
+}
+.AttributeName 
+{
+	font-weight:bold;
+	color: black;
+}
+.AttributeValue
+{
+	color:blue;
+}
+.NodeValue
+{
+	color: black;
+}
+.Element {
+	border-left-color:#b2b2a5;
+	border-left-width:1px;;
+	border-left-style:solid;
+	padding-top:0px;
+	margin-top:10px;
+}
+.Clickable {	
+	font-weight:900;
+	font-size:11px;
+	color: #800080;	
+	cursor:pointer;
+
+	vertical-align:middle;
+}

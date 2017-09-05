@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Diagramas de Seqüência de uma Interface de Serviço</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?diagramassequenciainterfaceservico.htm"; }
+  else { parent.quicksync('a8.2.1.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Diagramas de Seqüência de uma Interface de Serviço</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="portalinterfaceservico.htm">Previous</a>&nbsp;
+     <a href="portalurlinterface.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Quando o portal recebe uma requisição para processar uma ação em uma interface de serviço, ele envia essa requisição através do <span style="font-style: italic;">Service Interface Container</span> pelo método <span style="font-style: italic; font-weight: bold;">processAction</span>. Os parâmetros <span style="font-style: italic; font-weight: bold;">request</span> contêm todas as informações do ambiente do portal, os dados do usuário atual e os parâmetros direcionados à interface de serviço para que a ação seja processada. A interface do serviço portanto processa a ação, e usa o parâmetro <span style="font-style: italic; font-weight: bold;">response</span> para retornar as informações de renderização para o <span style="font-style: italic;">Service Interface Container</span>. Por sua vez, o <span style="font-style: italic;">Service Interface Container</span> chama o método <span style="font-style: italic; font-weight: bold;">render</span> para renderizar a interface na página.</p>
+<p style="margin: 8px 0px 0px 0px;">Como o usuário interage com apenas uma interface de cada vez, uma requisição <span style="font-style: italic; font-weight: bold;">process action</span><span style="font-style: italic;"> </span>do usuário pode ser direcionada para apenas uma interface de serviço. &nbsp;Depois que a ação for processada, a renderização de uma página ocorrerá pela chamada do método <span style="font-style: italic; font-weight: bold;">render </span>em todas as interfaces da página.</p>
+<p style="margin: 8px 0px 0px 0px;">Geralmente, uma requisição do cliente resulta numa chamada para o método <span style="font-style: italic; font-weight: bold;">processAction</span> e várias chamadas para o método <span style="font-style: italic; font-weight: bold;">render</span>, uma para cada interface de serviço da página.</p>
+<p style="margin: 8px 0px 0px 0px;">Em uma explicação mais alto nível, o usuário final recebe a página e pode interagir com ela clicando em um <span style="font-style: italic;">link</span>, realizando portanto, o  <span style="font-style: italic;">submit</span> de um formulário. O resultado dessa interação pode ser uma outra requisição, para renderizar uma página ou uma requisição para processar outras ações, como por exemplo, adicionar ou remover conteúdo.</p>
+<p style="margin: 8px 0px 0px 0px;">Os Diagramas de Seqüência abaixo exemplificam os fluxos de ações de uma interface de serviço através dos métodos <span style="font-style: italic;">process action</span> e <span style="font-style: italic;">render</span> pelo <span style="font-style: italic;">Service Interface Container</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: center; margin: 8px 0px 0px 47px;"><span style="font-size: 13pt; font-weight: bold;">Diagrama de requisição do </span><span style="font-size: 13pt; font-style: italic; font-weight: bold;">processAction</span></p>
+<p style="margin: 8px 0px 0px 0px;"><img src="portal003.jpg" width="637" height="448" border="0" alt="portal003"></p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;"><span style="font-size: 13pt; font-weight: bold;">Diagrama de requisição </span><span style="font-size: 13pt; font-style: italic; font-weight: bold;">render</span></p>
+<p style="text-align: center; margin: 8px 0px 8px 0px;"><img src="portal005.jpg" width="623" height="300" border="0" alt="portal005" style="margin:0 auto;margin:0px;"></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* $Revision: 15728 $ $Date: 2013-08-08 09:49:43 -0300 (Thu, 08 Aug 2013) $ */
+.titlearea {
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 0 0 15px 0;
+	margin: 0;
+	color: #464646;
+}
+
+#channelId-tree.lum-channel-tree-select-wrap {
+	left: 15px !important;
+    display: none;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: absolute;
+    resize: both;
+    width: 400px;
+    z-index: 100;
+}
+
+
+.lum-channel-tree-select-clear {
+	 top: -5px !important;
+}
+
+.subsection {
+	display: block;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	margin: 0 0 10px 0;
+	color: #909090;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.label {
+	display: inline-block;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0 0 3px 0;
+	color: #464646;
+}
+
+p.warning {
+	margin-left: 20px;
+}
+
+p.warning:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: url(../image/ignorado.gif);
+	margin-left: -20px;
+	margin-top: 1px;
+}
+
+p.warning.alerta-vermelho:before {
+	background: url(../image/erro.gif);
+}
+
+.marginbottom-10 {
+	margin-bottom: 10px !important;
+}
+
+.box-com-overflow {
+	padding: 15px 10px 10px;
+	overflow: auto;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	max-height: 100px;
+}
+
+.marginbottom {
+	margin-bottom: 20px !important;
+}
+
+ul.listagem {
+	list-style: none;
+	padding: 0;
+	margin: 0px;
+}
+
+ul.listagem li {
+	display: inline-block;
+	width: 43%;
+	word-wrap: break-word;
+	position: relative;
+	vertical-align: top;
+	font-weight: normal;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	margin: 0px 15px 10px 15px;
+	color: #464646;
+}
+
+ul.listagem.unicalinha li {
+	display: block;
+	width: auto;
+	word-wrap: break-word;
+	position: relative;
+	vertical-align: top;
+	font-weight: normal;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+	margin: 0px 15px 5px 15px;
+	color: #464646;
+}
+
+ul.listagem li:before {
+	margin-left: -15px;
+	content: "\2022";
+	color: #fab500;
+	padding-right: 10px;
+	position: absolute;
+}
+
+.clear {
+	display: block;
+	clear: both;
+}

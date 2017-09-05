@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Arquivo de string</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalarquivostring.htm"; }
+  else { parent.quicksync('a8.2.3.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Arquivo de string</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="portalldefinicaoservico.htm">Previous</a>&nbsp;
+     <a href="portalregistroservico.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Pode-se utilizar arquivos de mapeamentos para traduções em diversos idiomas (um arquivo para cada idioma) de campos e nomes de serviços e interfaces, entre outros. Arquivos para tradução de nomes para portal em português, devem ser nomeados como <span style="font-style: italic;">strings.pt_br.xml</span> e para portal em inglês, os arquivos devem ser nomeados para <span style="font-style: italic;">strings.en_us.xml</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">O nome do arquivo é composto por "strings"+"selecionador_ de_localização".xml. Exemplos de selecionadores de localização são <span style="font-style: italic;">pr_br,</span> <span style="font-style: italic;">en_us</span>, entre outros, que devem ser previamente <a href="selecionadorlocalizacaoadministracaoservico.htm">cadastrados</a>.</p>
+<p style="margin: 8px 0px 0px 0px;">Desta forma, o <span style="font-style: italic;">servicedefinition.xml</span> mostrado anteriormente, seria implementado da seguinte forma:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 20px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="614" style="width:614px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;serviceDefinition&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&nbsp;xsi:noNamespaceSchemaLocation=&nbsp;"www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;service&nbsp;id="corporate.helloworld"&nbsp;name="STR_SERVICE_NAME"&nbsp;type="lum_service"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;description&gt;STR_SERVICE_DESCRIPTION&lt;/description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;image&gt;corporate/helloworld/image/logo.gif&lt;/image&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/service&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;interface&nbsp;id="sayHello"&nbsp;name="STR_INTERFACE_NAME"&nbsp;className="corporate.helloworld.SayHello"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/serviceDefinition&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Note que o nome do serviço, a descrição e o nome da interface não estão traduzidos. Possuem <span style="font-style: italic;">strings</span> que estão mapeadas e traduzidas no arquivo <span style="font-style: italic;">strings.pt_br.xml </span>para tradução do serviço em português, quando o portal estiver configurado para este mesmo idioma:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"&nbsp;?&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;strings&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;string&nbsp;id="STR_SERVICE_NAME"&gt;Alô&nbsp;Mundo&lt;/string&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&nbsp;&lt;string&nbsp;id="STR_SERVICE_DESCRIPTION"&gt;Imprime&nbsp;a&nbsp;mensagem&nbsp;"Hello&nbsp;World!"&nbsp;na&nbsp;página.&lt;/string&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&nbsp;&lt;string&nbsp;id="STR_INTERFACE_NAME"&gt;Mensagem&lt;/string&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;/strings&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 8px 0px;">Como sugestão, os arquivos de mapeamento devem estar localizados em um diretório <span style="font-style: italic;">strings</span>, no diretório do serviço. Como por exemplo, o arquivo <span style="font-style: italic;">strings.pt_br.xml</span> anterior está localizado em <span style="font-style: italic;">corporate/helloworld/strings</span>.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050A1A02C0150A1B5EC5F201C</id>
+  <interface-id>lumis.service.search.search</interface-id>
+  <name>Rede na Rede - Busca</name>
+  <file-path>lumis/service/search/style/busca.xsl</file-path>
+  <isolation-level>SHARED</isolation-level>
+  <allowed-consumers>
+    <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+  </allowed-consumers>
+</interface-style>

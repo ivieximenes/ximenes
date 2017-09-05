@@ -1,0 +1,63 @@
+/* $Revision: 15230 $ $Date: 2013-03-13 16:12:18 -0300 (Wed, 13 Mar 2013) $ */
+#LumContact .titContacts
+{
+	color:#343333;
+	border:1px solid #d3d3c2;
+	border-bottom:0px;
+	background-color:#f4f4f2;
+	font-weight:bold;
+	padding:2px 0px 0px 12px;
+	height:18px;
+}
+#LumContact .boxeContacts
+{
+	color:#626262;
+	border:1px solid #d3d3c2;
+	background-color:#ffffff;
+	padding:5px 0px 0px 12px;
+	height:100px;
+}
+#LumContact .ContactFilter
+{
+	background-color:#d8d8cb;
+	width:25px;
+	text-align:center;
+	white-space:nowrap;
+}
+#LumContact .ContactFilterOver
+{
+	background-color:#929270;
+	width:25px;
+	text-align:center;
+	white-space:nowrap;
+}
+#LumContact .ContactFilter a
+{
+	color:#7f7e7d;
+	background-color:#d8d8cb;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}
+#LumContact .ContactFilter a:hover
+{
+	color:#ffffff;
+	background-color:#929270;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}
+#LumContact .ContactFilterOver a
+{
+	color:#ffffff;
+	background-color:#929270;
+	width:25px;
+	height:15px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+}

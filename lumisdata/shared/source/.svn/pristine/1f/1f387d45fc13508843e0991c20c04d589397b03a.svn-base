@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<strings>
+<string id="STR_SERVICE_NAME">Rede na Rede - Fale Conosco</string>
+<string id="STR_SERVICE_DESCRIPTION">Serviço de Fale Conosco da Qualicorp</string>
+<string id="STR_FORM">Formulário</string>
+<string id="STR_ADMINISTRATION">Administração</string>
+<string id="STR_EDIT">Editar</string>
+<string id="STR_EMAIL_TO">E-mail Destinatário</string>
+<string id="STR_SUCCESS_MESSAGE">E-mail gravado com sucesso.</string>
+<string id="STR_SUBJECT">Fale Conosco</string>
+<string id="STR_ERROR_CONTACTUS">Ocorreu um erro ao processar sua solicitação. Tente novamente..</string>
+
+</strings>

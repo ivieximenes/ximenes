@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Controles</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?xslcontroles.htm"; }
+  else { parent.quicksync('a8.5.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Controles</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="xslcustomizacao.htm">Previous</a>&nbsp;
+     <a href="xslutilizacaocontrolelum_navigationlist.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">No <span style="font-style: italic;">Lumis Portal </span>cada interface de um serviço recebe suas informações vindas do <span style="font-style: italic;">XML</span> agrupadas em controles, que são tão somente <span style="font-style: italic;">tags</span><span style="font-weight: bold;"> </span><span style="font-style: italic;">XML</span> nomeadas como &lt;control /&gt;.</p>
+<p style="margin: 8px 0px 0px 0px;">Cada controle possui um atributo <span style="font-style: italic;">type</span> que define o que ele traz em seu conteúdo.</p>
+<p style="margin: 8px 0px 0px 0px;">Vejamos um exemplo, o controle de <span style="font-style: italic;">lum_list</span>: <span style="font-style: italic;">&lt;control type="lum_list"/&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">O nome definido pelo atributo <span style="font-style: italic;">type </span>de cada controle geralmente descreve o que aquele controle estará montando. Por exemplo:</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">lum_form</span> (traz informações sobre o formulário da interface);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-style: italic; font-weight: bold;">lum_list</span> (traz informações da lista de dados cadastrados que são exibidos na interface Lista ou Administração);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">lum</span>_<span style="font-style: italic; font-weight: bold;">details</span> (traz os detalhes de um item cadastrado, quando este é selecionado na interface <span style="font-style: italic;">Lista</span>);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span><span style="font-style: italic; font-weight: bold;">lum_navigationList</span> (traz informações da lista de dados cadastrados numa interface <span style="font-style: italic;">Menu</span>);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">lum</span>_<span style="font-style: italic; font-weight: bold;">tabularData</span> (traz informações da tabela de itens cadastrados);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> </span><span style="font-style: italic; font-weight: bold;">lum_link </span>(traz informações do <span style="font-style: italic;">link</span> para interfaces <span style="font-style: italic;">Lista</span>, geralmente usado em interfaces <span style="font-style: italic;">Lista Rápida</span>);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">lum</span>_<span style="font-style: italic; font-weight: bold;">filters</span> (traz as informações de filtros definidos para a interface);</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 3px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span><span style="font-style: italic; font-weight: bold;">lum_pagination</span> (traz as informações de paginação da interface em várias páginas).</p>
+<p style="margin: 8px 0px 0px 0px;">Para modificar o <span style="font-style: italic;">layout</span> padrão com que o <span style="font-style: italic;">Lumis Portal </span>monta suas interfaces, nem sempre é preciso modificar todos os controles. Muitas vezes basta modificar o <span style="font-style: italic;">lum_list</span> ou o <span style="font-style: italic;">lum_details</span>, por exemplo.</p>
+<p style="margin: 8px 0px 0px 0px;">A seguir, será mostrado como customizar o <span style="font-style: italic;">XSL</span> para modificar os controles mais utilizados nas interfaces de serviços do produto.</p>
+<p style="margin: 8px 0px 0px 0px;">O processo de customização de arquivos <span style="font-style: italic;">XSL</span> a partir de um <span style="font-style: italic;">XSL</span> em branco será repetido para todos os outros controles que serão exemplificados a seguir. O processo é: ler o <span style="font-style: italic;">XML</span> da interface (após o cadastro de conteúdos na interface administrativa dos serviços em questão) e verificar quais controles precisam ser customizados.<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table width="606" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="108" style="width:108px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="494" style="width:494px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="600" style="width:600px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Para referenciar um controle, pode-se utilizar uma das seguintes formas:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-style: italic;">&lt;control type=nome_do_controle&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">ou</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-style: italic;">&lt;control:nome_do_controle&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851323</id>
+  <parent-id>00000000F00000000000000000000001</parent-id>
+  <name>Qualicorp</name>
+  <position>1</position>
+  <inherit-stylesheet>false</inherit-stylesheet>
+  <friendly-url-specific-pattern-enabled>true</friendly-url-specific-pattern-enabled>
+</channel>

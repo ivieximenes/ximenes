@@ -1,0 +1,110 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Arquivo de Definição do Serviço</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalarquivodefinicao.htm"; }
+  else { parent.quicksync('a8.2.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Arquivo de Definição do Serviço</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="portalurlinterface.htm">Previous</a>&nbsp;
+     <a href="exemplocriacaoservicoportal.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Serviços necessitam de um arquivo de definição <span style="font-style: italic;">XML </span>(<span style="font-style: italic;">servicedefinition.xml</span>) que deve conter informações do tipo de serviço, identificador, nome, descrição, imagem de identificação, interfaces e os objetos que implementam seus métodos. Através deste mesmo arquivo, o serviço será registrado no portal.</p>
+<p style="margin: 8px 0px 0px 0px;">Existem duas seções do <span style="font-style: italic;">servicedefinition.xml</span>:</p>
+<p style="text-indent: -13px; margin: 8px 0px 0px 13px;">• <span style="font-style: italic;">Service:</span> onde são especificadas todas as informações serviço incluindo identificador, nome e classe que implementa o tipo de serviço (ou utilizar o tipo padrão <span style="font-style: italic;">lum_service</span>).</p>
+<p style="text-indent: -13px; margin: 8px 0px 0px 13px;">• <span style="font-style: italic;">Interfaces:</span> onde são especificadas todas as informações necessárias para renderização da interface incluindo identificador, nome e classe que a implementa (ou utilizar o tipo <span style="font-style: italic;">lum_serviceInterface</span>).</p>
+<p style="margin: 8px 0px 0px 0px;">Abaixo, exemplo de um <span style="font-style: italic;">servicedefinition.xml</span> &nbsp;mínimo necessário para definir um serviço:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 8px;"><table align="center" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="624" style="width:624px; height:38px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;?xml&nbsp;version="1.0"&nbsp;encoding=&nbsp;"UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;serviceDefinition&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&nbsp;xsi:noNamespaceSchemaLocation="www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;service&nbsp;id="identificador&nbsp;do&nbsp;serviço"&nbsp;name=&nbsp;"Nomedo&nbsp;Serviço"&nbsp;type=&nbsp;"lum_service"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;Descrição&nbsp;do&nbsp;Serviço.&lt;/description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;image&gt;pasta1/pasta2/pasta3/icone_do_servico.gif&lt;/image&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/service&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;interfaces&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;interface&nbsp;id="identificador&nbsp;da&nbsp;interface"&nbsp;name=&nbsp;"Nome&nbsp;da&nbsp;Interface"&nbsp;className=&nbsp;&nbsp;&nbsp;"nome&nbsp;da&nbsp;&nbsp;&nbsp;&nbsp;classe&nbsp;&nbsp;&nbsp;&nbsp;que&nbsp;implementa&nbsp;a&nbsp;interface"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/interfaces&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/serviceDefinition&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">No exemplo acima, há somente uma interface que dá funcionalidade ao serviço.</p>
+<p style="margin: 8px 0px 0px 0px;">O formato <span style="font-style: italic;">XML</span> para definição de serviços é dividido em algumas partes.</p>
+<p style="margin: 8px 0px 0px 0px;">O elemento <span style="font-style: italic;">XML</span> que engloba todos os outros é <span style="font-style: italic;">&lt;serviceDefinition&gt;</span>. Dentro dele deve haver o elemento <span style="font-style: italic;">&lt;service&gt;</span> com as informações gerais sobre o serviço:</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 16px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>Atributo<span style="font-weight: bold;"> </span><span style="font-style: italic; font-weight: bold;">id</span>: Identificador do serviço. Este identificador deve ser único. Não podem existir dois serviços com o mesmo id.</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 16px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>Atributo<span style="font-weight: bold;"> </span><span style="font-style: italic; font-weight: bold;">name</span>: Nome do serviço. Será utilizado para identificar o serviço no catálogo de serviços do Portal (<a href="gerenciadorservicos.htm">Gerenciador de Serviços)</a>;</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 16px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>Atributo<span style="font-weight: bold;"> </span><span style="font-style: italic; font-weight: bold;">type</span>:<span style="font-weight: bold;"> </span>Deve-se atribuir o tipo de serviço. O tipo de serviço padrão é <span style="font-style: italic;">lum_service</span> que já possui implementação da classe necessária. Caso contrário, deve-se informar a classe que implementa o tipo de serviço;</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 16px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>Elemento <span style="font-style: italic; font-weight: bold;">description</span>: Breve descrição do objetivo do serviço;</p>
+<p style="text-indent: -14px; margin: 8px 0px 0px 16px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp;  </span>Elemento<span style="font-size: 7pt; font-family: 'Times New Roman';">  </span><span style="font-style: italic; font-weight: bold;">image</span>: Caminho onde se encontra o ícone do serviço. Deve ser relativo ao diretório <span style="font-style: italic;">www</span> da instalação do portal.</p>
+<p style="margin: 8px 0px 0px 0px;">Após o elemento <span style="font-style: italic;">service</span>, o <span style="font-style: italic;">XML</span> deve conter o elemento <span style="font-style: italic;">&lt;interfaces&gt;</span> e para cada interface do serviço um elemento <span style="font-style: italic;">&lt;interface&gt;.</span> Este pode conter os seguintes atributos:</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>Atributo <span style="font-style: italic; font-weight: bold;">id</span>:Identificador único da interface;</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>Atributo <span style="font-style: italic; font-weight: bold;">name</span>: Nome da interface exibido no cabeçalho da mesma e no navegador durante a edição de uma página;</p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>Atributo<span style="font-weight: bold;"> </span><span style="font-style: italic; font-weight: bold;">className</span>: Nome da classe <span style="font-style: italic;">Java</span> que implementa a interface. Para serviços do portal (do tipo padrão <span style="font-style: italic;">lum_service</span>) existe o tipo de interface padrão <span style="font-style: italic;">lum_serviceInterface</span>, porém este tipo renderiza uma interface em branco, havendo necessidade portanto, de implementar uma classe ao invés de utilizar este tipo em um atributo <span style="font-style: italic;">type;</span></p>
+<p style="text-indent: -1px; margin: 8px 0px 0px 4px;"><span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&#8226;</span><span style="font-size: 7pt; font-family: 'Times New Roman';">  </span>Atributo<span style="font-weight: bold;"> </span><span style="font-style: italic; font-weight: bold;">scriptPath</span>: Caminho do arquivo de script que define a classe <span style="font-style: italic;">Java</span> que implementa a interface.<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="466" style="width:466px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>Qualquer arquivo <span style="font-style: italic;">XML</span> que utiliza caracteres estendidos (fora do padrão <span style="font-style: italic;">ASCII</span>) precisa estar codificado igual ao <span style="font-style: italic;">encoding</span> especificado no <span style="font-style: italic;">XML</span>. Por padrão é recomendado utilizar <span style="font-style: italic;">UTF-8</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

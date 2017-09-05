@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851330</id>
+  <name>Barra de Navegação</name>
+  <description>Permite gerenciar a navegação no portal.</description>
+  <service-id>lumis.service.navigation</service-id>
+  <dependencies>
+    <dependency type="media_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851328</service-instance-id>
+    </dependency>
+  </dependencies>
+</service-instance>

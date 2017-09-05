@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14996 $ $Date: 2012-11-23 09:52:18 -0200 (Fri, 23 Nov 2012) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui" xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service>
+		<sources>
+			<source id="default" type="table">
+				<table>lum_User</table>
+				<fields>
+					<field id="userId" display="false" name="STR_ID" dataType="string" isPrimaryKey="true"/>
+					<field id="login" name="STR_LOGIN" dataType="string" required="true"/>
+					<field id="email" name="STR_EMAIL" dataType="string" required="true"/>
+					<field id="password" name="STR_PASSWORD" dataType="string"/>
+				</fields>
+			</source>
+			
+			<source id="beneficiario" >
+				<table>QC_BENEFICIARIO</table>
+				<fields>
+					<field id="id" 						name="id" 					dataType="guid" 	isPrimaryKey="true" display="false"/>
+					<field id="user_id" 				name="STR_USER_ID" 			dataType="guid" required="false"/>
+					<field id="cpf" 					name="STR_CPF" 				dataType="string"/>
+					<field id="rg" 						name="STR_RG" 				dataType="string"/>
+					<field id="orgao_emissor" 			name="STR_ORGAO_EMISSOR" 	dataType="string"/>
+					<field id="nome_mae" 				name="STR_NOME_MAE" 		dataType="string" />
+					<field id="data_nascimento"			name="STR_DATA_NASCIMENTO"	dataType="date" />
+					<field id="telefone"	 			name="STR_TELEFONE"			dataType="string" required="false"/>
+					<field id="numero_carteira"			name="STR_NUMERO_CARTEIRA"	dataType="string"/>
+				</fields>
+			</source>
+		</sources>
+	</service>
+	<restInterfaces>
+		<restInterface id="lista" >
+			<sources>
+				<source id="beneficiario" >
+					<fields>
+						<field id="id" name="id" dataType="guid" isPrimaryKey="true"/>
+						<field id="user_id" dataType="guid" />
+						<field id="nome" externalData="true"/>
+						<field id="numero_carteira" dataType="string"/>
+						<field id="cpf" dataType="string"/>
+						<field id="estipulante" externalData="true"/>
+					</fields>
+					<filters concatenationType="or">
+						<filter id="cpf" operator="like"  />
+					</filters>
+					<orderBy>
+						<field direction="ascending" id="nome"/>
+						<field direction="ascending" id="numero_carteira"/>
+					</orderBy>
+					<postLoadProcessors>
+						<postLoadProcessor className="br.com.qualicorp.redenarede.service.login.postload.LoginRestPostload" />
+					</postLoadProcessors>
+				</source>
+			</sources>
+		</restInterface>
+	</restInterfaces>
+	<interfaces> 
+		<interface id="login">
+			<sources>
+				<source id="default" readData="never">
+					<fields>
+						<field id="login" required="false"/>
+						<field id="password"/>
+						<field id="cpf" externalData="true" />
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form >
+					<control:lum_div>
+						<control:lum_autoLayoutFields>
+							<field id="login">
+							</field>
+							<field id="password">
+								<value>
+									<control:lum_password id="password"/>
+								</value>
+							</field>
+							<field id="cpf"/>
+						</control:lum_autoLayoutFields>
+						<control:lum_button id="submitLogin" text="STR_SUBMIT">
+							<onClick type="processAction" processActionId="submitLogin"/>
+						</control:lum_button>
+					</control:lum_div>
+				</control:lum_form>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="ancora_login_hibrido"/>
+				</control:lum_link>
+				<control:lum_link id="link_esqueci_senha_beneficiario">
+					<hyperLink interfaceId="esqueciSenhaBeneficiario"/>
+				</control:lum_link>
+				<control:lum_link id="link_esqueci_senha_prestador">
+					<hyperLink interfaceId="esqueciSenhaPrestador"/>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="submitLogin" actionType="lum_actionLogin" className="br.com.qualicorp.redenarede.service.login.processaction.LoginProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		<interface id="logout">
+			<controls>
+				<control:lum_form>
+						<control:lum_button id="submitLogout" text="STR_LOGOUT_ACTION">
+							<onClick type="processAction" processActionId="submitLogout"/>
+						</control:lum_button>
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="submitLogout" actionType="lum_actionLogout" className="br.com.qualicorp.redenarede.service.login.processaction.LoginProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		<interface id="esqueciSenhaBeneficiario">
+			<sources>
+				<source id="default" readData="never">
+					<fields>
+						<field id="login" required="true"/>
+					 	<field id="cpf" externalData="true"/>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_inputHidden id="successHidden" sourceId="none" requestParameterName="success"/>
+				<control:lum_inputHidden id="gamaMsgHidden" sourceId="none" requestParameterName="gamaMsg"/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="esqueciSenhaBeneficiario"/>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" actionType="esqueciSenhaBeneficiario" className="br.com.qualicorp.redenarede.service.login.processaction.EsqueciSenhaProcessActionHandler" >
+					<response type="doui_message" />
+				</processAction>
+				
+			</processActions>
+		</interface>
+		
+		<interface id="esqueciSenhaPrestador">
+			<sources>
+				<source id="default" readData="never">
+					<fields>
+					 	<field id="cpf_cnpj" externalData="true" required="true"/>
+						<field id="email"  required="true"/>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_inputHidden id="successHidden" sourceId="none" requestParameterName="success"/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="esqueciSenhaPrestador"/>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" actionType="esqueciSenhaPrestador" className="br.com.qualicorp.redenarede.service.login.processaction.EsqueciSenhaProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		
+		<interface id="alterarSenhaBeneficiario">
+			<sources>
+				<source id="default" readData="never">
+					<fields>
+					 	<field id="login"  				required="true"/>
+						<field id="password"  			required="true"/>
+						<field id="newPassword"  		required="true" 	externalData="true"/>
+						<field id="confirmNewPassword"  required="true" 	externalData="true"/>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_inputHidden id="successHidden" sourceId="none" requestParameterName="success"/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="alterarSenhaBeneficiario"/>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" actionType="alterarSenhaBeneficiario" className="br.com.qualicorp.redenarede.service.login.processaction.AlterarSenhaProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		<interface id="alterarSenhaPrestador">
+			<sources>
+				<source id="default" readData="never">
+					<fields>
+					 	<field id="email"  				required="true"/>
+						<field id="password"  			required="true"/>
+						<field id="newPassword"  		required="true" 	externalData="true"/>
+						<field id="confirmNewPassword"  required="true" 	externalData="true"/>
+						<field id="cpf_cnpj"  required="true" 	externalData="true"/>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_inputHidden id="successHidden" sourceId="none" requestParameterName="success"/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="alterarSenhaPrestador"/>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" actionType="alterarSenhaPrestador" className="br.com.qualicorp.redenarede.service.login.processaction.AlterarSenhaProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		
+		<interface id="beneficiario">
+			<sources/>
+			<controls>
+				<control:lum_link>
+					<hyperLink  interfaceId="homeBeneficiario"/>
+				</control:lum_link>
+			</controls>
+		</interface>
+		
+		<interface id="prestador">
+			<sources/>
+			<controls>
+				<control:lum_link>
+					<hyperLink  interfaceId="homeCredenciado"/>
+				</control:lum_link>
+			</controls>
+		</interface>
+		
+		<interface id="ancora_login_hibrido">
+			<controls></controls>
+		</interface>
+	</interfaces>
+</doui:douiDefinition>

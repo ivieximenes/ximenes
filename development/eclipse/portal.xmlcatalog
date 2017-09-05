@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<system systemId="http://www.lumis.com.br/lumisportal/xsd/douidefinition.xsd" uri="platform:/resource/lumisportal/development/xsd/douidefinition.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/doui" uri="platform:/resource/lumisportal/development/xsd/douidefinition.xsd"/>
+	<system systemId="http://www.lumis.com.br/lumisportal/xsd/workflowdefinition.xsd" uri="platform:/resource/lumisportal/development/xsd/workflowdefinition.xsd"/>
+	<system systemId="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd" uri="platform:/resource/lumisportal/development/xsd/servicedefinition.xsd"/>
+	<system systemId="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd" uri="platform:/resource/lumisportal/development/xsd/databasedefinition.xsd"/>
+	<uri name="http://www.lumis.com.br/context" uri="platform:/resource/lumisportal/development/xsd/contextdefinition.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/theme" uri="platform:/resource/lumisportal/development/xsd/themedefinition.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/component-upgrade-script" uri="platform:/resource/lumisportal/development/xsd/lumis-component-upgrade-script.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/component-uninstall-script" uri="platform:/resource/lumisportal/development/xsd/lumis-component-uninstall-script.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/component-install-script" uri="platform:/resource/lumisportal/development/xsd/lumis-component-install-script.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/component" uri="platform:/resource/lumisportal/development/xsd/lumis-component.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/package-install-script" uri="platform:/resource/lumisportal/development/xsd/lumis-package.xsd"/>
+	<uri name="http://www.lumis.com.br/lumisportal/xsd/module" uri="platform:/resource/lumisportal/development/xsd/lumis-module.xsd"/>
+</catalog>

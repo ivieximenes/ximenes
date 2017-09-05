@@ -1,0 +1,23 @@
+/* $Revision: 15424 $ $Date: 2013-06-05 12:21:13 -0300 (Wed, 05 Jun 2013) $ */
+.lumis-service-socialnetworkservices-socialprofile-viewPublicProfile .lum-content,
+.lumis-service-socialnetworkservices-socialprofile-viewCompleteProfile .lum-content {
+	position:relative;
+}
+.lumis-service-socialnetworkservices-socialprofile-viewPublicProfile .lum-content-body,
+.lumis-service-socialnetworkservices-socialprofile-viewCompleteProfile .lum-content-body {
+	padding-left:120px;
+}
+.lumis-service-socialnetworkservices-socialprofile-viewPublicProfile .lum-content-detail-media,
+.lumis-service-socialnetworkservices-socialprofile-viewCompleteProfile .lum-content-detail-media {
+	position:absolute;
+	left:0;
+	margin:.3em 0;
+}
+.lumis-service-socialnetworkservices-socialprofile-viewPublicProfile .lum-content-detail-media img,
+.lumis-service-socialnetworkservices-socialprofile-viewCompleteProfile .lum-content-detail-media img {
+	width:110px;
+}
+.lumis-service-socialnetworkservices-socialprofile-viewPublicProfile .lum-field-id-resume .lum-field-label,
+.lumis-service-socialnetworkservices-socialprofile-viewCompleteProfile .lum-field-id-resume .lum-field-label {
+	display:none;
+}

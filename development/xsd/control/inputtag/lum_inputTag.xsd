@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 13258 $ $Date: 2011-07-19 15:14:31 -0300 (Tue, 19 Jul 2011) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_inputTag"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_inputTag">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:attribute name="readonly" type="xsd:boolean" default="false"/>
+				<xsd:attribute name="onChange" type="xsd:string" />
+				<xsd:attribute name="rows" type="xsd:integer" use="required"/>
+				<xsd:attribute name="cols" type="xsd:integer" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

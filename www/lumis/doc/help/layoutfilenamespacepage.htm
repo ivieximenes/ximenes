@@ -1,0 +1,200 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Namespace page</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?layoutfilenamespacepage.htm"; }
+  else { parent.quicksync('a8.8.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Namespace page</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="layoutfile.htm">Previous</a>&nbsp;
+     <a href="layoutfilenamespaceel.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Como padrão, todo <span style="font-style: italic;">Layout File</span> possui este <span style="font-style: italic;">namespace</span> declarado permitindo o uso de suas <span style="font-style: italic;">tags</span> e atributos no <span style="font-style: italic;">HTML</span>. A customização dessa configuração pode ser feita configurando o <span style="font-style: italic;">namespace xmlns:el="http://www.lumis.com.br/lumisportal/xsd/layoutfile/page" </span>no primeiro elemento do arquivo.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Atributos</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="146" style="width:146px; border: solid 1px #000000;"><p><span style="font-style: italic;">page:html</span></p>
+</td>
+<td valign="top" width="740" style="width:740px; border: solid 1px #000000;"><p style="margin: 0px 18px 0px 0px;">Utilizado para identificar a <span style="font-style: italic;">tag</span> &lt;<span style="font-style: italic;">html&gt;</span> do <span style="font-style: italic;">Layout File.</span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+<p style="margin: 0px 18px 0px 0px;">Quando seu valor é "<span style="font-style: italic;">true</span>", os atributos <span style="font-style: italic;">lang e xml:lang </span>da <span style="font-style: italic;">tag</span> são adicionados ou atualizados de acordo com o idioma em que a página está sendo gerada. </p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="146" style="width:146px; border: solid 1px #000000;"><p><span style="font-style: italic;">page:title</span></p>
+</td>
+<td valign="top" width="740" style="width:740px; border: solid 1px #000000;"><p style="margin: 0px 18px 0px 0px;">Utilizado para identificar a <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;title&gt; do Layout File. </span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+<p style="margin: 0px 18px 0px 0px;">Quando seu valor é "<span style="font-style: italic;">true</span>", o conteúdo da <span style="font-style: italic;">tag</span> é atualizado de acordo com o título gerado dinamicamente pela página.</p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="146" style="width:146px; border: solid 1px #000000;"><p><span style="font-style: italic;">page:auto</span></p>
+</td>
+<td valign="top" width="740" style="width:740px; border: solid 1px #000000;"><p style="margin: 0px 18px 0px 0px;">Utilizado para injeção automática de código simplificando o <span style="font-style: italic;">HTML</span> do <span style="font-style: italic;">Layout File. </span>Seu funcionamento depende da <span style="font-style: italic;">tag</span> em que está sendo aplicado. Seu valor é herdado do elemento pai e o valor padrão é "<span style="font-style: italic;">true</span>"<span style="font-style: italic;">.</span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 18px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">tag &lt;html&gt;</span></td></tr></table></div><p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">Se aplicado nessa tag &nbsp;é injetado o atributo page:html="true".</span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 18px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">tag &lt;head&gt;</span></td></tr></table></div><p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">Se aplicado nessa tag &nbsp;são injetados os códigos &lt;page:headScript&gt;, &lt;page:metas&gt;, &lt;page:links&gt; </span></p>
+<p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">e &lt;title page:title="true"&gt; caso não estejam presentes. Caso já exista a tag &lt;title&gt; no head, </span></p>
+<p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">esta é reaproveitada adicionando o atributo page:title="true".</span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 18px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-style: italic;">tag &lt;body&gt;</span></td></tr></table></div><p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">Se aplicado nessa tag são injetadas as tags &lt;page:bodyHeader&gt; e &lt;page:bogyFooter&gt; no início </span></p>
+<p style="margin: 0px 18px 0px 0px;"><span style="font-style: italic;">e fim da tag &lt;body&gt;, respectivamente. </span></p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="146" style="width:146px; border: solid 1px #000000;"><p><span style="font-style: italic;">page:holder</span></p>
+</td>
+<td valign="top" width="740" style="width:740px; border: solid 1px #000000;"><p style="margin: 0px 18px 0px 0px;">Utilizado para definir as áreas em que se pode arrastar as instâncias de interface na página. Quando existe mais de uma instância de interface no holder, é adicionado uma <span style="font-style: italic;">tag &lt;div&gt; </span>envolvendo cada instância de interface. Quando não existe nenhuma instância de interface, o <span style="font-style: italic;">Portal Studio </span>exibe o <span style="font-style: italic;">HTML</span> de exemplo.</p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="146" style="width:146px; border: solid 1px #000000;"><p><span style="font-style: italic;">page:interface</span></p>
+</td>
+<td valign="top" width="740" style="width:740px; border: solid 1px #000000;"><p style="margin: 0px 18px 0px 0px;">Utilizado dentro da <span style="font-style: italic;">tag </span>que possui o atributo <span style="font-style: italic;">page:holder </span>quando se deseja detalhar o html entre as instâncias de interfaces e o elemento utilizado para envolvê-las. </p>
+<p style="margin: 0px 18px 0px 0px;">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="width:48px">&nbsp;</span></p>
+<p><span style="font-weight: bold;">Tags</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:headScript&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar blocos de códigos<span style="font-style: italic;"> </span>internos do <span style="font-style: italic;">Lumis Portal</span> na <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;head&gt;</span>.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:metas&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar as configurações de metas-tags das páginas</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:links&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar as configurações de estilos das páginas.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:bodyHeader&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar blocos de códigos<span style="font-style: italic;"> </span>internos do <span style="font-style: italic;">Lumis Portal</span> no início da <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;body&gt;</span>.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:bodyFooter&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar blocos de códigos<span style="font-style: italic;"> </span>internos do <span style="font-style: italic;">Lumis Portal</span> no final da <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;body&gt;</span>.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="147" style="width:147px; border: solid 1px #000000;"><p><span style="font-style: italic;">&lt;page:dummy&gt;</span></p>
+</td>
+<td valign="top" width="739" style="width:739px; border: solid 1px #000000;"><p>Utilizado para adicionar um conteúdo dinâmico sem a renderização de sua própria tag. </p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Strict//EN"&nbsp;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;html&nbsp;xmlns="http://www.w3.org/1999/xhtml"&nbsp;xml:lang="pt-br"&nbsp;lang="pt-br"&nbsp;page:html="true"&nbsp;page:auto="false"&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;head&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;page:headScripts/&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;title&gt;Fixed&nbsp;Title&nbsp;Part&nbsp;&lt;page:dummy&nbsp;page:title="true"&gt;Dynamic&nbsp;Title&nbsp;Part&lt;/page:dummy&gt;&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;page:metas&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;meta&nbsp;name="description"&nbsp;content="example&nbsp;meta"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;/page:metas&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;page:links&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;link&nbsp;type="text/css"&nbsp;rel="stylesheet"&nbsp;href="example.css"/&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;/page:links&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;/head&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;body&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;page:bodyHeader/&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;div&nbsp;page:holder="holderId"&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">[before&nbsp;interface]</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;div&nbsp;page:interface="true"&gt;example&nbsp;interface&nbsp;HTML&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">[after&nbsp;interface]</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;page:bodyFooter/&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;/body&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/html&gt;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

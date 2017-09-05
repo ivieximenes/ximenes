@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17431 $ $Date: 2015-06-22 13:48:03 -0300 (Mon, 22 Jun 2015) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.lumis.com.br/lumisportal/xsd/doui" 
+		xmlns="http://www.lumis.com.br/lumisportal/xsd/doui"
+		xmlns:control="http://www.lumis.com.br/douicontrols" 
+		elementFormDefault="unqualified" 
+		attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="control/douicontrolsdefinition.xsd" />
+
+	<xsd:simpleType name="sourceType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="table" />
+			<xsd:enumeration value="view" />
+			<xsd:enumeration value="contentTable" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="dataType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="string" />
+			<xsd:enumeration value="number" />
+			<xsd:enumeration value="email">
+				<xsd:annotation>
+					<xsd:documentation>This data type accepts e-mail as its value. Example: myname@myhost.com</xsd:documentation>	
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="integer" />
+			<xsd:enumeration value="long">
+				<xsd:annotation>
+					<xsd:documentation>Identifier for long integer data type. This data type accepts integer values from -2^63 to 2^63-1.</xsd:documentation>	
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="double" />
+			<xsd:enumeration value="date" />
+			<xsd:enumeration value="dateTime" />
+			<xsd:enumeration value="time" />
+			<xsd:enumeration value="guid" />
+			<xsd:enumeration value="html" />
+			<xsd:enumeration value="text" />
+			<xsd:enumeration value="boolean" />
+			<xsd:enumeration value="file" />
+			<xsd:enumeration value="files" />
+			<xsd:enumeration value="media" />
+			<xsd:enumeration value="document" />
+			<xsd:enumeration value="lumisContentParentContent">
+				<xsd:annotation>
+					<xsd:documentation>Maps relation based on lumis content identifier.</xsd:documentation>	
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lumisParentContent">
+				<xsd:annotation>
+					<xsd:documentation>Maps relation based on main table primary key identifier.</xsd:documentation>	
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lumisChannel" />
+			<xsd:enumeration value="lumisPage" />
+			<xsd:enumeration value="lumisPageTemplate" />
+			<xsd:enumeration value="lumisPageOrPageTemplate" />
+			<xsd:enumeration value="lumisPrincipal" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="readTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="never">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the source by default must not be loaded.  Certain controls like a list control may programatically force a source to be read independent of its readType attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="always">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the source must always be loaded.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="filterShowItemsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="all">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the drop down list must display all possible options including those that may return no rows.  This is the forced behaviour when the options are explicitly specified in the filter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="referenced">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the drop down list must display only options that have been used and will always return rows in the source.  This is not applicable when the options are explicitly specified in the filter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="sources">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="source" type="servicesource"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="servicesource">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="1" minOccurs="0">
+				<xsd:element name="dataProviderClassName" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Class name of the dataprovider for the source.  If not specified a default data provider used based on the source type definitions registered.  The framework by default has the following sourcetypes registered.
+							&lt;pre&gt;
+								&lt;source&gt;
+									&lt;type&gt;table&lt;/type&gt;
+									&lt;className&gt;lumis.doui.table.TableSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.doui.table.TableDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							
+								&lt;source&gt;
+									&lt;type&gt;contentTable&lt;/type&gt;
+									&lt;className&gt;lumis.content.table.ContentTableSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.content.table.ContentTableDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							
+								&lt;source&gt;
+									&lt;type&gt;search&lt;/type&gt;
+									&lt;className&gt;lumis.doui.search.SearchSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.doui.search.SearchDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							&lt;/pre&gt;
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="dataProviderScriptPath" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Path of a script defining the java class of the dataprovider for the source.  If not specified a default data provider used based on the source type definitions registered.  The framework by default has the following sourcetypes registered.
+							&lt;pre&gt;
+								&lt;source&gt;
+									&lt;type&gt;table&lt;/type&gt;
+									&lt;className&gt;lumis.doui.table.TableSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.doui.table.TableDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							
+								&lt;source&gt;
+									&lt;type&gt;contentTable&lt;/type&gt;
+									&lt;className&gt;lumis.content.table.ContentTableSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.content.table.ContentTableDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							
+								&lt;source&gt;
+									&lt;type&gt;search&lt;/type&gt;
+									&lt;className&gt;lumis.doui.search.SearchSource&lt;/className&gt;
+									&lt;dataProviderClassName&gt;lumis.doui.search.SearchDataProvider&lt;/dataProviderClassName&gt;
+								&lt;/source&gt;
+							&lt;/pre&gt;</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="table" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Name of the table of the source. used by the TableDataProvider and ContentTableDataProvider classes</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="view" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Name of the view of the source. used by the TableDataProvider and ContentTableDataProvider classes</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="dependencyType" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>This is used exclusively by the ServiceInstanceDependencyDataProvider.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="connectionId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Source may require data from another data base other than the primary data base used by the portal.  This connectionId identifies the connection of another database.  This identifier must be the filename (e.g. conn2.xml) of the hibernate configuration file in the directory \lumisdata\config\connection</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fields" type="sourceFields">
+				<xsd:annotation>
+					<xsd:documentation>collection of fields</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="metaData" type="metaData" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+					If the source type is contentTable, within this node the required metaData that must be associated with the content must be specified.  When the service is registered these metadata fields are converted into fields of the given source.  Independent of the metadata fields specified here the following fields are always added to contentTable sources. <b>createdDate</b>, <b>lastModifiedDate</b>,<b>createdBy</b> and <b>lastModifiedBy</b>.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bigData" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specifies custom big data configurations.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="enabled" type="xsd:boolean" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>Used to enable or disable persisting the source to the big data. 
+							By default, it is enabled only if the source has a field with isSearchable="true" or 
+							the source has the bigData element present.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="persisterClassName" type="xsd:string" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>The full class name of a lumis.doui.bigdata.ISourceBigDataPersister implementation 
+							to be used for this source. If the source is of type contentTable then the class must implement the
+							lumis.content.bigdata.IContentTableSourceBigDataPersister interface. 
+							If not specified, the default depends on the source implementation class.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="relations" type="relations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>if the source is related to another source, the relation details must be specified here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="administrationInterfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Each source may specify its administration interface.  If not specified this interface is calculated by the first interface that has the isAdministration attribute set to true in the servicedefinition.xml file.  This administration interface is used for example during workflow to send a link to the administration interface in an email.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="addInterfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Each source may specify its add interface.  If not specified this interface is calculated by the first interface that is an instance of the 
+					class lumis.doui.service.DouiAdministrationAddPropertyPageServiceInterface or the class lumis.content.service.ContentAdministrationAddPropertyPageServiceInterface and has the current source defined as its first source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="editInterfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Each source may specify its edit interface.  If not specified this interface is calculated by the first interface that is an instance of the 
+					class lumis.doui.service.DouiAdministrationEditPropertyPageServiceInterface or the class lumis.content.service.ContentAdministrationEditPropertyPageServiceInterface and has the current source defined as its first source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="detailsInterfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Each source may specify its details interface.  If not specified this interface is calculated by the first interface that has the isDetails attribute set and has the current source defined as its first source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of the source.  Must be unique among all sources within the service.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="sourceType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specifies one of the registered source types.  The framework automatically registers source types "table" and "contentTable".</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="className" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Instead of specifying a source type one may specify a class name that extends Source class.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining a java class that extends Source class. When specified the java class defined by this script takes precedence over the class associated with the source type.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="metaDataSourceId" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If you have two content sources that are related, each of them must be joined with the metadata table independently.  To do this the metadataId must be different for each of the sources.  If not specified a default value is assumed for the source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="publishAllAccessibleContents" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>Indicates if contents that are not published to the current service instance, but are accessible by the current user, should also be published. Affects the query generated for the source in publication interfaces.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="distinct" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>If set to true, the DISTINCT keyword is used in the generated SQL for retrieving the data for this source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isDetails" type="xsd:boolean" use="optional" default="true">
+			<xsd:annotation>
+				<xsd:documentation>If set to false the source even in a details interface is not treated as a details source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+				
+	<xsd:complexType name="sourceFields">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="field" type="sourceField" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the details of the fields returned by the data provider.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="metaData">
+		<xsd:all>
+			<xsd:element name="publishToServiceInstances" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="publishToPrincipals" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="publishToSocialNetwork" minOccurs="0" type="metaDataProperty">
+				<xsd:annotation>
+					<xsd:documentation>Specifies that the content may be published to social networks.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="publishStartDate" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="publishEndDate" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="highlight" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="highlightEndDate" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="comments" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="versioning" minOccurs="0" type="versioningMetaDataProperty" />
+			<xsd:element name="multiLanguage" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="workflow" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="association" minOccurs="0" type="metaDataProperty" />
+			<xsd:element name="lock" minOccurs="0" type="metaDataProperty">
+				<xsd:annotation>
+					<xsd:documentation>Specifies that the content will make use of locking to avoid simultaneous editing.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceInstanceIsolation" minOccurs="0" type="metaDataProperty">
+				<xsd:annotation>
+					<xsd:documentation>specifies that the content must be isolated between service instances.  If a content is added in one service instance, it must not be visible in the list of contents of another instance of the same service.  This property is implied if publishToServiceInstances property is specified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="versioningMetaDataProperty">
+		<xsd:complexContent>
+			<xsd:extension base="metaDataProperty">
+				<xsd:attribute name="maxVersions" type="xsd:integer" use="optional">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							Sets the number of content versions to keep. The latest changed versions will be kept. The cleaning process never removes neither the active version nor the published version (if it exists). 
+						]]></xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="metaDataProperty">
+		<xsd:attribute name="id" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>if specified the field that this metadata property is converted to inheirts this identifier.  The following are the default field Ids if not specified: createdDate, lastModifiedDate, createdBy, lastModifiedBy, publishStartDate, publishEndDate, highlight, highlightEndDate, serviceInstanceId, comments, publishToServiceInstances, publishToPrincipals, language, languageContentId, versionActive, versionNumber, versionContentId, workflowState, workflowAssignedTo, association</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="sourceField">
+		<xsd:sequence maxOccurs="1">
+			<xsd:element name="defaultValue" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[
+						The default value for this field. The attribute defaultValue has priority over this element value. 
+						The way to specify the value depends on its dataType. Below are some example for common dataTypes present in the Lumis Portal:
+						<ul>
+							<li>For dateTime, date and time use XML Schema 1.1 format. Examples: "2000-01-05T13:05:32", "2000-01-05", "13:05:32".</li>
+							<li>For integer and long: do not use grouping separator.</li>
+							<li>For double: do not use grouping separator, and use '.' as decimal separator if necessary.</li>
+						</ul>
+					]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="options" type="sourceFieldOptions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Possible values of the field may be explicitly specified here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="defaultInputControl" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Overrides the default input control to be used for this field. Inside this node insert the control's definition node.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:group ref="control:lum_anyControl"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="bigData" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Allows configuration about how the field is stored in portal big data repostory.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="enabled" type="xsd:boolean" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>Attributes defines whether this field will be included in the big data for this source.
+							Default value is true if the field does not have externalData="true" or getData="false".</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier for the field. This must be unique among all fields of this source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="dataType" type="dataType" use="optional" default="string">
+			<xsd:annotation>
+				<xsd:documentation>Data type of the field. If not specified, the data type is assumed to be string.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="name" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Display name of the field. This attribute will be used for the field label in forms as well as for the column name in tabular lists.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPrimaryKey" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Identifies this row uniquely among all rows of the source. Only one field may have this attribute set to true.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isIntroduction" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the field represents an introduction to the current row data. This is generally used in lists and search results to show an introduction to the details of the content.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isKeywords" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the field represents keywords to the current row data.  This is used to set meta-tags of the page rendering the content.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isIntroductionImage" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the field is of type image and the field represents an image of the introduction to the current row data.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isSearchable" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>Set to true if the value of the field is to be indexed as part of the big data that is searched when using a simple search (search without specifying on which fields).</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPrimaryName" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the field represents a name of the current row data. This is generally used in lists and search results to show the name of the content.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPublishStartDate" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the field represents the start of the publish period of the data. This is generally used in lists and search results to show the publish date-time of the data. A content publishStartDate metadata field automatically has this property set.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isParentId" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Set to true when the content is hierarchical. This field represents the identifier of the parent row of the current row.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isDetail" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					Identifies this field as a detail field. A source can have only one detail field. The detail field is displayed in a custom way in a standard detail interface using the standard style.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isDetailMedia" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					Identifies this field as a detail media field. A source can have only one detail media field. The detail media field is displayed in a custom way in a standard detail interface using the standard style.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="display" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If set to true, this field will be displayed either in a column in list views or in the form when adding or editing data.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="lookupRelationId" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<![CDATA[Represents the identifier of the relation that this field has.  The relations to a source are specified within a sibling <b>relations</b> node to the <b>fields</b> node.]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="lookupFieldId" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<![CDATA[Represents the identifier of the field in the foreign source that should be returned as the value of the current field when doing a lookup.]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="doLookup" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<![CDATA[Applicable when <b>lookupRelationId</b> and <b>lookupFieldId</b> are specified.  This attribute must be set to true for the lookup to take place.]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="doOptionLookup" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<![CDATA[Applicable when options are specified withing the field.  The value that is set for the field is the option display string that corresponds to the actual field value.]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="required" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used primarily in forms for adding or updating row data. This attribute is generally read by the control rendering data and automatically places a required validator on the control value.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="minLength" type="xsd:integer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used generally for data types of type string, text or html. Forces a minimum length for the field value. Controls automatically add minLength validators for client side validation.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxLength" type="xsd:integer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used generally for data types of type string, text or html. Forces a maximum length for the field value. Controls automatically add maxLength validators for client side validation.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="minSize" type="xsd:integer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used for file data types. Defines the minimum size accepted for uploaded files.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxSize" type="xsd:integer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used for file data types. Defines the maximum size accepted for uploaded files.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="localize" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used for string, text and html data types. If set to true the framework will try and localize the field value to the user's locale.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="localizeResourceColumn" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>When localizing the default resource that the framework uses is the resource specified in the service definition. However, if the default resource to localize data is specified as a column that column is used as the resource for localizing.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isSortable" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>This attribute is used when rendering fields in tabular data. The column that represents the field allows the end user to sort the data by default . If there are some fields that you do not want the end user to be able to sort, set this attribute to false. The framework automatically detects data types like html e text and does not allow end users to sort by their columns.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPriority" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If this attribute is set to true, and no options are specified in the field, options of 1-5 are automatically set on the field upon registering the service.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="groupBy" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>If this attribute is set to true, the field will be included on the group by SQL clause.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>		
+		<xsd:attribute name="includeAlways" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If this attribute is set to true, all interfaces will always have this field available independent of what fields were placed in their source definition.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="defaultValue" type="control:controlDefaultValueType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+					The default value for this field. 
+					The way to specify the value depends on its dataType. Below are some example for common dataTypes present in the Lumis Portal:
+					<ul>
+						<li>For dateTime, date and time use XML Schema 1.1 format. Examples: "2000-01-05T13:05:32", "2000-01-05", "13:05:32".</li>
+						<li>For integer and long: do not use grouping separator.</li>
+						<li>For double: do not use grouping separator, and use '.' as decimal separator if necessary.</li>
+					</ul>
+					The following special default values are converted during execution to the value they represent:
+					lum_currentChannel, lum_currentPage, lum_currentServiceInstanceId, lum_currentServiceInstanceChannelId, lum_currentUser, lum_currentUserLocale, lum_currentUserName, lum_callerInterfaceInstanceId, lum_callerInterfaceId, lum_currentDateTime, lum_currentMonth, lum_currentYear, lum_newGuid.</xsd:documentation>
+				]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="requiredWhenVisible" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Setting this attribute to true automatically places a required when visible validator when rendering forms for add or update of the content.  The validator detects if the control is visible to the end user and performs required value validation only if visible.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="columnName" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If the identifier of the field is not the same as the column name of the table that it represents, this attribute must be filled with the correct column name.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="externalData" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>If the field does not represent data from the source table, this attribute must be set to true.  Usually a post load processor fills in the field value after the source is loaded.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="getData" type="xsd:boolean" use="optional" default="true">
+			<xsd:annotation>
+				<xsd:documentation>If you do not want to display the field, you may set the display attribute to false.  However this causes that the xml data not contain the field value.  If you want the value of the field in the xml, set this attribute to true.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isRowNumber" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>This attribute is used when returning data that represents multiple rows.  The field that represents the row number has this attribute set to true.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="pattern" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>If specified this attribute will cause the input control for the field place a Pattern Validator on the field.  The pattern to be applied must be specified as the attribute value.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="minimumValue" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The minimum value for this field. Refer to field defaultValue attribute for more information about specifying values.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maximumValue" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The maximum value for this field. Refer to field defaultValue attribute for more information about specifying values.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="readOnly" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>Indicates if the field is read-only and should not be rendered editable. The default is false. If this attribute is set to true the add and edit process actions should ignore this field.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="className" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Indicates the ISourceField implementation to be used for this field. Must be a full qualified class name.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining a java class that implements ISourceField to be used for this field.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isMetaInformation" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>Indicates that his field contains some kind of meta information about the content. This attribute has no functional effect, being only a hint for generic visual implementations. The standard Lumis Portal visual implementation uses this hint to render such fields in a specific style.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="sourceFieldOptions">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="option">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="value" type="xsd:string" use="required">
+								<xsd:annotation>
+									<xsd:documentation>value of the option. Must be compatible with the field data type.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="selected" type="xsd:string" fixed="1" use="optional">
+								<xsd:annotation>
+									<xsd:documentation>Specifies if the option by default must be selected when adding data.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="insertLocation" type="optionInsertLocation" use="optional">
+								<xsd:annotation>
+									<xsd:documentation>
+										Specified to choose where static options should be included. It can be before or after the dynamic options. This information has it relevance in the control.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="optionInsertLocation">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="before"/>
+			<xsd:enumeration value="after"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="interfaceFields">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="field" type="sourceField" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>properties of the field specified here will override the properties specified in the global source definition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute type="inheritFieldsType" name="inherit" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[If not specified, none of the fields are inherited from the source.
+				<p>
+				If "all" is specified, all fields from the global source definition are copied during runtime to the scope of the interface definition.
+				<p>
+				If "default" is specified, the same fields that would be copied if no "fields" element were present, will be copied. This varies according to the interface type.]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="inheritFieldsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="all">
+				<xsd:annotation>
+					<xsd:documentation>Selecting 'all' will make that all the fields from the global source definition to be copied here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="default">
+				<xsd:annotation>
+					<xsd:documentation>Selecting 'default' will cause some fields to be automatically added, according to the interface type. It follows the same rules as when the &lt;fields&gt; element is not specified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="relations">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="relation" type="relation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>specifies a relation between the current source and another source in the doui definition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="joinType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="inner" />
+			<xsd:enumeration value="outer" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="relation">
+		<xsd:sequence>
+			<xsd:element name="relationField">
+				<xsd:annotation>
+					<xsd:documentation>specifies the fields between the curent source and the foreign source that are related.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute type="xsd:string" name="fieldId">
+						<xsd:annotation>
+							<xsd:documentation>identifier of the field in the current source.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute type="xsd:string" name="foreignFieldId">
+						<xsd:annotation>
+							<xsd:documentation>identifier of the field in the foreign source that the relation specifies</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>identifier of the relation.  This is the relation id that is referenced in the source field definition.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="foreignSourceId" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>identifier of the foreign source that this relation maps to.  If the foreign source Id is not specified, a foreign source id equal to the relation id is assumed.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="foreignSourceJoinType" type="joinType" use="optional" default="outer">
+			<xsd:annotation>
+				<xsd:documentation>By default the foreign sources are joined by an outer join.  However this may be modified via this attribute to be either an inner or outer join.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="cascadeOnDelete" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>Specifies if the deletion should be cascaded through this relation and cause a deletion on the foreign source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="processActions">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="processAction" type="processAction" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="processAction">
+		<xsd:sequence minOccurs="0">
+			<xsd:any maxOccurs="unbounded" processContents="skip" />
+			<xsd:element name="response" type="response" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of the process action.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="actionId" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Action identifier of the process action.  If not specified the id attribute is assumed. This is the value that is used by controls like buttons to indicate the process action handlers to execute.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="processActionType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+				This may be one of the standard processActionTypes provided by the framework.
+				<ul>
+					<li>generic: does not perform any action.  May be used to simply execute a specific response.</li>
+					<li>contentTableDeleteData: Deletes one or more contents</li>
+					<li>contentTableAddData: Adds a single content</li>
+					<li>contentTableUpdateData: Updates a single content</li>
+					<li>contentTableAddFileMultiRowData: Adds multiple contents</li>
+					<li>tableDeleteData: Deletes one or more data rows from a table</li>
+					<li>tableAddData: Adds a data row to a table</li>
+					<li>tableUpdateData: Updates a data row in a table</li>
+					<li>tableAddMultiRowData: Adds multiple data rows in a table.  Used by a data grid control for instance.</li>
+					<li>tableAddFileMultiRowData: Adds multiple files data rows in a table. Used by MultiFileUpload control</li>
+					<li>tableUpdateMultiRowData: Updates and or deletes multiple data rows in a table. Used by a data grid control for instance.</li>
+					<li>commitAndPreview: Executes the <i>commit</i> process actions and opens a preview of the content in a popup window. The identifier of the process actions to be executed may be configured by specifying it in a <i>commitProcessActionId</i> element inside <i>processAction</i>.</li>
+				</ul>
+				]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="className" type="xsd:string" use="optional" >
+			<xsd:annotation>
+				<xsd:documentation>Indicates the IProcessActionHandler implementation to execute this action.
+						This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining a java class that implements IProcessActionHandler to execute this action.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:anyAttribute processContents="skip" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="processActionType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="generic" />
+			<xsd:enumeration value="contentTableDeleteData" />
+			<xsd:enumeration value="contentTableAddData" />
+			<xsd:enumeration value="contentTableUpdateData" />
+			<xsd:enumeration value="contentTableAddFileMultiRowData" />
+			<xsd:enumeration value="tableDeleteData" />
+			<xsd:enumeration value="tableAddData" />
+			<xsd:enumeration value="tableAddMultiRowData" />
+			<xsd:enumeration value="tableUpdateData" />
+			<xsd:enumeration value="tableAddFileMultiRowData" />
+			<xsd:enumeration value="tableUpdateMultiRowData" />
+			<xsd:enumeration value="commitAndPreview" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="response">
+		<xsd:sequence maxOccurs="1" minOccurs="0">
+			<xsd:element name="script" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Must be specified if the type of the response is doui_runJavascript.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="interfaceId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the response type is doui_hyperLink.  Identifies the interface id (id may be relative to the current service) of the destination interface that the user must be taken to.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="destPageId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the response type is doui_popupInterface.  Identifies the pageId that the popup will be opened in.  If specified this value usually is LumisBlankPage.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="url" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used when the response type is doui_hyperLink.  Specifies the url that the user must be redirected to.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameters" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+						<xsd:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>
+									<![CDATA[Used when the response type is <b>doui_setResponseParameters</b> or <b>doui_hyperLink</b>. Each parameter node represents a response parameter name/value pair. If no value node is specified, the text value of this node is used as the parameter value.]]>
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="value">
+										<xsd:annotation>
+											<xsd:documentation>value of the parameter. If not specified the text value of the parameter node is used.</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:attribute name="type">
+												<xsd:annotation>
+													<xsd:documentation>
+														<![CDATA[
+													If not specified, the value is considered the text value of the value node.
+													<br/>
+													If specified, the possible values are
+													<br/><br/>
+													<b>parameterValue</b>: the value is taken from the request parameters passed to the process action. The text value of the value node represents the parameter name.
+													<br/><br/>
+													<b>attributeValue</b>: the value is taken from the current request attributes. The text value of the value node represents the attribute name.
+													]]>
+													</xsd:documentation>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="xsd:string">
+														<xsd:enumeration value="parameterValue" />
+														<xsd:enumeration value="attributeValue" />
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:attribute>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+								<xsd:attribute name="name" type="xsd:string" use="required">
+									<xsd:annotation>
+										<xsd:documentation>name of the parameter</xsd:documentation>
+									</xsd:annotation>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="type" type="responseType" use="required">
+			<xsd:annotation>
+				<xsd:documentation>
+					<![CDATA[
+					Possible response types.
+					<br/><br/>
+					<b>doui_closeWindow</b>: Closes the current window.
+					<br/><br/>
+					<b>doui_hyperLink</b>: Used to redirect the browser to another page / url after the process action.  In addition parameters may be passed to the destination page.
+					<br/><br/>
+					<b>doui_message</b>: Displays a message to the end user.  This type requires a <b>message</b> attribute to be specified. This message will be translated to the users current language.
+					<br/><br/>
+					<b>doui_popupInterface</b>: Used to popup an interface after the process action.  In addition parameters may be passed to the popped up interface.
+					<br/><br/>
+					<b>doui_preview</b>: Displays another window with the preview of the data being edited.
+					<br/><br/>
+					<b>doui_refreshParent</b>: Refreshes the parent window.
+					<br/><br/>
+					<b>doui_runJavascript</b>: Runs the javascript specified in the <b>script</b> node within the reponse.
+					<br/><br/>
+					<b>doui_setRequestAttributes</b>: Used primarily to share data between different process actions. Sets parameter values in the request attributes. These attributes may be read by subsequent process actions with the same id.
+					<br/><br/>
+					<b>doui_setRequestParameters</b>: Sets all the current parameters values to the following render request to the current interface.
+					<br/><br/>
+					<b>doui_setResponseParameters</b>: Sets the specified parameters to the following render request to the current interface.
+					<br/><br/>
+					<b>doui_standardCommit</b>: Used in standard add and edit administration interfaces. This response detects whether the current interface is a popup or an embedded interface. If popup, this response is equivalent to a doui_refreshParent response followed by a doui_closeWindow response.  If embedded, this response detects where the administration list interface is located and redirects the portal to the page that contains that interface.
+					<br/><br/>
+					<b>doui_standardEmbedded</b>: Used in interfaces that are embedded within portal pages.  This is equivalent to a doui_setRequestParameters response.
+					<br/><br/>
+					<b>doui_standardPopup</b>: Used interfaces that are within popup windows.  This internally is converted to two responses. One doui_refreshParent response followed by one doui_closeWindow response.
+					<br/><br/>
+				]]>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="message" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="responseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="doui_closeWindow" />
+			<xsd:enumeration value="doui_hyperLink" />
+			<xsd:enumeration value="doui_message" />
+			<xsd:enumeration value="doui_popupInterface" />
+			<xsd:enumeration value="doui_preview" />			
+			<xsd:enumeration value="doui_refreshParent" />
+			<xsd:enumeration value="doui_runJavascript" />
+			<xsd:enumeration value="doui_setRequestAttributes" />
+			<xsd:enumeration value="doui_setRequestParameters" />
+			<xsd:enumeration value="doui_setResponseParameters" />
+			<xsd:enumeration value="doui_standardCommit" />
+			<xsd:enumeration value="doui_standardEmbedded" />
+			<xsd:enumeration value="doui_standardPopup" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="renderActions">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="renderAction">
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0">
+						<xsd:any maxOccurs="unbounded" processContents="skip" />
+					</xsd:sequence>
+					<xsd:anyAttribute processContents="skip" />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="interfaceSources">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="source" type="interfaceSource"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="interfaceSource">
+		<xsd:sequence minOccurs="0">
+			<xsd:element name="fields" type="interfaceFields" minOccurs="0" />
+			<xsd:element name="filters" type="filters" minOccurs="0" />
+			<xsd:element name="orderBy" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+						<xsd:element name="field">
+							<xsd:complexType>
+								<xsd:attribute name="id" type="xsd:string" use="required" />
+								<xsd:attribute name="direction" type="orderByDirection" use="required" />
+								<xsd:attribute name="applyAlways" use="optional">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:enumeration value="before" />
+											<xsd:enumeration value="after" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="enabled" type="xsd:boolean" use="optional" />
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="maxRows" minOccurs="0" />
+			<xsd:element name="postLoadProcessors" type="postLoadProcessors" minOccurs="0" />
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required" />
+		<xsd:attribute name="readData" type="readTypes" use="optional" />
+		<xsd:attribute name="distinct" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>If set to true, the DISTINCT keyword is used in the generated SQL for retrieving the data for this source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isDetails" type="xsd:boolean" use="optional" default="true">
+			<xsd:annotation>
+				<xsd:documentation>If set to false the source even in a details interface is not treated as a details source.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="interfaceSourcesRest">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="source" type="interfaceSourceRest"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="interfaceSourceRest">
+		<xsd:complexContent>
+			<xsd:extension base="interfaceSource">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="maxNumberOfRowsAllowed" minOccurs="0" >
+						<xsd:annotation>
+							<xsd:documentation>Define the maximum number of records that will be returned for a REST request.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="postLoadProcessors">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="postLoadProcessor" type="postLoadProcessor" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="postLoadProcessor">
+		<xsd:sequence>
+			<xsd:any maxOccurs="unbounded" processContents="skip" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="className" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>class name of the postLoadProcessor.  This class must implement the IPostLoadProcessor interface.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining the postLoadProcessor java class that implements the IPostLoadProcessor interface.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="orderByDirection">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ascending" />
+			<xsd:enumeration value="descending" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="filters">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="filter" type="filter" minOccurs="0" />
+			<xsd:element name="filters" type="filters" minOccurs="0" />
+		</xsd:choice>
+		<xsd:attribute name="className" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The full class name of the class that will be used for this filter. Depending on the source type, the class must implement a specific interface that extends ISourceFilter. For example, TableSource requires that its filters implement lumis.doui.source.table.filter.ITableSourceFilter.
+						This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining the postLoadProcessor java class that implements the IPostLoadProcessor interface.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="concatenationType" type="filtersConcatenationType" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="filtersConcatenationType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="and" />
+			<xsd:enumeration value="or" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="filter">
+		<xsd:sequence>
+			<xsd:element name="operators" type="filterOperators" minOccurs="0" />
+			<xsd:element name="maxRows" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maxRows element contains the maximum number of elements that may be inserted into the filter. This is aplicable only when the filter has the showItems attribute specified. If not specified, the default value is 999.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="inputControlClientEvents" minOccurs="0" >
+				<xsd:annotation>
+					<xsd:documentation>Any client side events may be placed here.  They will be passed on to the input contorl for the filter.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0">
+						<xsd:any maxOccurs="unbounded" processContents="skip" />
+					</xsd:sequence>
+					<!-- xsd:sequence>
+						<xsd:element name="onClick" minOccurs="0" type="onClientEvent"/>
+						<xsd:element name="onChange" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+						<xsd:element name="onKeyUp" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+						<xsd:element name="onKeyDown" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+					</xsd:sequence -->
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="selectFields" minOccurs="0" >
+				<xsd:annotation>
+					<xsd:documentation>If the selectField attribute is set to true, this element must contain the list of fields to be included in the drop down list.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence minOccurs="0">
+						<xsd:element name="field" minOccurs="1" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:attribute name="id" type="xsd:string" use="required" />
+								<xsd:attribute name="name" type="xsd:string" use="optional" />
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required" />
+		<xsd:attribute name="className" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The full class name of the class that will be used for this filter. Depending on the source type, the class must implement a specific interface that extends ISourceFilter. For example, TableSource requires that its filters implement lumis.doui.source.table.filter.ITableSourceFilter.
+				This attribute cannot be defined if the "scriptPath" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Path of a script defining the java class that will be used for this filter. Depending on the source type, the class must implement a specific interface that extends ISourceFilter. For example, TableSource requires that its filters implement lumis.doui.source.table.filter.ITableSourceFilter.
+						This attribute cannot be defined if the "className" attribute is defined.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="hidden" type="xsd:boolean" use="optional" fixed="true" />
+		<xsd:attribute name="required" type="xsd:boolean" use="optional" fixed="true" />
+		<xsd:attribute name="fieldId" type="xsd:string" use="optional" />
+		<xsd:attribute name="value" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Refer to field defaultValue attribute for more information about specifying values.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="type" type="xsd:string" use="optional" />
+		<xsd:attribute name="defaultValue" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Refer to field defaultValue attribute for more information about specifying values.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="operator" type="filterOperatorValues" use="optional" />
+		<xsd:attribute name="name" type="xsd:string" use="optional" />
+		<xsd:attribute name="requestParameterName" type="xsd:string" use="optional" />
+		<xsd:attribute name="showItems" type="filterShowItemsType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Indicates that the possible filter values 
+					should be shown for the user to select the filter value
+					from this list. 
+					The 'referenced' value will not work for fields with a
+					fixed explicit options list; use 'all' instead in this case.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="dependentOnFilter" type="xsd:string" use="optional" />
+		<xsd:attribute name="nullIfNotSpecified" type="xsd:boolean" use="optional" fixed="true" />
+		<xsd:attribute name="valueInLookup" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="orNull" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="renderBlankOption" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="doLookup" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="inputControlType" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used to override the default input contro type calculated for the filter</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="selectField" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Used to allow the end user to select one of many fields to filter within a drop down list</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="filterOperators">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="operator">
+				<xsd:complexType>
+					<xsd:attribute name="name" type="xsd:string" use="required" />
+					<xsd:attribute name="value" type="filterOperatorValues" use="required">
+						<xsd:annotation>
+							<xsd:documentation>Specifies the operator type. The 'like' operator by default sets UPPER on the data before performing the sql LIKE operation.  the 'likeCaseSensitive' operator however, does not set the data to UPPER before performing the sql LIKE operation.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="isDefault" type="xsd:boolean" use="optional" />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="filterOperatorValues">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="equal" />
+			<xsd:enumeration value="notEqual" />
+			<xsd:enumeration value="greaterThan" />
+			<xsd:enumeration value="greaterThanOrEqual" />
+			<xsd:enumeration value="lessThan" />
+			<xsd:enumeration value="lessThanOrEqual" />
+			<xsd:enumeration value="like" />
+			<xsd:enumeration value="likeCaseSensitive" />
+			<xsd:enumeration value="in" />
+			<xsd:enumeration value="isNull" />
+			<xsd:enumeration value="isNotNull" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="interface">
+		<xsd:sequence>
+			<xsd:element name="sources" type="interfaceSources" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>specifies one or more sources that must be used in the interface.  If a source has a relation that is being used in this interface, the source implied by the relation must be included in the list of interface sources as well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="hyperLinks" type="hyperLinks" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>specifies one or more hyperlinks that may be used in the interface.  Hyperlinks are used to redirect users to other pages in the portal passing parameters via a query string.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="controls" minOccurs="0" type="control:lum_controls">
+				<xsd:annotation>
+					<xsd:documentation>The layout of an interface is determined by a collection of controls specified here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="processActions" minOccurs="0" type="processActions">
+				<xsd:annotation>
+					<xsd:documentation>When the user interacts with an interface to make changes to the state of the application/service, one or more process actions are called that must be specified here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="renderActions" minOccurs="0" type="renderActions">
+				<xsd:annotation>
+					<xsd:documentation>When the user interacts with an interface that do not make permanent changes to the application/service state render actions may be called.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of the interface.  This must be a registered identifier specified in the servicedefinition.xml file.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="interfaces">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="interface" type="interface" >
+				<xsd:annotation>
+					<xsd:documentation>Details of an interface are specified here.  This includes sources, hyperLinks, controls, processActions and renderActions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="restInterface">
+		<xsd:sequence>
+			<xsd:element name="sources" type="interfaceSourcesRest" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>specifies one or more sources that must be used in the rest interface.  If a source has a relation that is being used in this rest interface, the source implied by the relation must be included in the list of interface sources as well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of the Rest interface.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="restInterfaces">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="restInterface" type="restInterface" >
+				<xsd:annotation>
+					<xsd:documentation>Details of an rest interface are specified here.  This includes only sources.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="hyperLinks">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="hyperLink" type="hyperLink">
+				<xsd:annotation>
+					<xsd:documentation>Requests the portal for a url to another page of the portal.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="hyperLink">
+		<xsd:annotation>
+			<xsd:documentation>Requests the portal for a url to another page of the portal.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="target" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the target for the hyperlink parameters. Only interfaces corresponding to this target definition will receive the parameters.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="type" use="required">
+						<xsd:annotation>
+							<xsd:documentation><![CDATA[Specifies the type of theh target for the hyperlink parameters. Possible options are:
+							<ul>
+								<li>interface: only interface instances of the specified interface.</li>
+								<li>interfaceInstance: only the specified interface instance.</li>
+								<li>serviceInstance: only interfaces of the specified service instance.</li>
+								<li>service: only interfaces of the specified service.</li>
+								<li>page: all interfaces on the destination page.</li>
+							</ul>]]></xsd:documentation>
+						</xsd:annotation>
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="interface" />
+								<xsd:enumeration value="interfaceInstance" />
+								<xsd:enumeration value="serviceInstance" />
+								<xsd:enumeration value="service" />
+								<xsd:enumeration value="page" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="id" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>Depending on the type attribute, this value is either an interfaceId, interfaceInstanceId, serviceInstanceId or serviceId. If not specified, this value may be calculated automatically based on the current interface instance.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="parameters" type="hyperLinkParameters" minOccurs="0" />
+			<xsd:element name="onClick" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="setControlValues">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="value">
+										<xsd:complexType>
+											<xsd:attribute name="type" type="xsd:string" default="fieldValue" />
+											<xsd:attribute name="fieldId" type="xsd:string" />
+											<xsd:attribute name="controlId" type="xsd:string" />
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="type" type="xsd:string" default="renderAction" />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="interfaceId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Interface Id may be relative (without a dot) or absolute (serviceId.interfaceId). This id is used to calculate the destination page of the hyperlink</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="sourceId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of the source where this hyperlink applies. If not specified, the default source is used.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="target" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specifies the window target identifier for this hyperlink. The html link will use this target value as its target. If not specified, the target will be the current window, except if popup attribute is true.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="popup" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Specifies if the hyperlink destination should be opened in another window.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="id" type="xsd:string" use="optional" />
+		<xsd:attribute name="fieldId" type="xsd:string" use="optional" />
+	</xsd:complexType>
+
+
+	<xsd:complexType name="hyperLinkParameters">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="parameter" type="hyperLinkParameter" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="hyperLinkParameter">
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="dataId" type="xsd:string" use="optional" />
+	</xsd:complexType>
+
+	<xsd:element name="douiDefinition">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="service" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="sources" minOccurs="0" type="sources" />
+						</xsd:sequence>
+						<xsd:attribute name="id" type="xsd:string"/>
+						<xsd:attribute name="usesPublicFileStorage" type="xsd:boolean" use="optional" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="restInterfaces" type="restInterfaces" minOccurs="0" />
+				<xsd:element name="interfaces" type="interfaces" minOccurs="0" />
+			</xsd:sequence>
+			<xsd:attribute name="isElIgnored" type="xsd:boolean" use="optional" default="false">
+				<xsd:annotation>
+					<xsd:documentation>If this attribute is set to true, EL expressions in this douidefinition will not be evaluated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

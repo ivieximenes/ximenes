@@ -1,0 +1,75 @@
+/* $Revision: 15813 $ $Date: 2013-08-26 17:00:23 -0300 (Mon, 26 Aug 2013) $ */
+
+.lum-locale-picker {
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	display:inline-block;
+	position:relative;
+}
+.lum-locale-picker a {
+	display:block;
+	padding:8px 12px;
+	background:#fff;
+}
+.lum-locale-picker a:hover {
+	text-decoration:none;
+}
+.lum-locale-picker > a {
+	cursor:default;
+	padding-right:22px;
+	position:relative;
+}
+.lum-locale-picker > a:after {
+	content:"";
+	border:4px solid transparent;
+	border-top-color:#ba2a2a;
+	position:absolute;
+	z-index:2;
+	right:6px;
+	top:1.2em;
+}
+.lum-locale-picker a > img {
+	width:16px;
+	height:11px;
+	margin:1px 5px 0 0;
+	vertical-align:top;
+}
+.lum-locale-picker ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	display:none;
+	position:absolute;
+	z-index:9;
+	left:-1px;
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	min-width:100%;
+	white-space:normal;
+}
+.lum-locale-picker:hover ul {
+	display:block;
+}
+.lum-locale-picker ul li {
+	border-bottom:1px solid #dbdbdb;
+}
+.lum-locale-picker ul li.lum-last {
+	border:0;
+}
+.lum-locale-picker ul li:last-child {
+	border:0;
+}
+.lum-locale-picker ul a:hover {
+	background:#f9f9f9;
+}
+.lum-locale-picker ul li.lum-first a {
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+.lum-locale-picker ul li.lum-selected a {
+	cursor:default;
+	color:#444;
+	background:#f9f9f9;
+}

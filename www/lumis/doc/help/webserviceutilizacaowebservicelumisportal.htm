@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Utilização do Web Service do Lumis Portal</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?webserviceutilizacaowebservicelumisportal.htm"; }
+  else { parent.quicksync('a8.6.7.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Utilização do Web Service do Lumis Portal</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="webserviceacessolumiswebservice.htm">Previous</a>&nbsp;
+     <a href="acessibilidade.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Pode-se utilizar os <span style="font-style: italic;">Web Services</span> do Lumis Portal a partir de qualquer plataforma de desenvolvimento que possua suporte a <span style="font-style: italic;">Web Services</span>, o que inclui praticamente todas as plataformas modernas. Abaixo temos exemplos de duas destas: .Net e Java.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Aplicações .Net</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+<p style="margin: 14px 0px 0px 0px;">No <span style="font-style: italic;">Visual Studio.Net (2003 e 2005)</span>, utiliza-se a ferramenta <span style="font-style: italic;">Add Web Reference</span> para localizar o <span style="font-style: italic;">Web Service</span> que se deseja utilizar e criar a respectiva classe <span style="font-style: italic;">proxy</span> local. Para isso, clique com o botão direito no projeto e selecione o comando <span style="font-style: italic;">Add Web Reference...</span></p>
+<p style="margin: 14px 0px 0px 0px;"><img src="webservice2.gif" width="324" height="275" border="0" alt="webservice2" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Especifique na <span style="font-style: italic;">URL,</span> o endereço do arquivo <span style="font-style: italic;">WSDL</span> e clique no botão <span style="font-style: italic;">Go</span>. O <span style="font-style: italic;">Visual Studio.Net</span> interpretará o arquivo e exibirá a lista de métodos encontrados e seus respectivos argumentos:</p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;"><img src="webservice3.gif" width="747" height="492" border="0" alt="webservice3" style="margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Na caixa <span style="font-style: italic;">Web</span> <span style="font-style: italic;">reference name</span> , especifique o nome da referência local (que será utilizada como <span style="font-style: italic;">namespace</span> da classe <span style="font-style: italic;">proxy</span>) e clique no botão <span style="font-style: italic;">Add Reference.</span> O <span style="font-style: italic;">Visual Studio.Net</span> irá gerar uma classe <span style="font-style: italic;">proxy</span>, com nome igual ao nome do <span style="font-style: italic;">web service</span> acessado (no caso, "<span style="font-style: italic;">AuthenticationService"</span> ) e a incluirá no projeto.</p>
+<p style="margin: 14px 0px 0px 0px;">Para utilizar os métodos do <span style="font-style: italic;">Web Service</span> , basta chamar os métodos correspondentes na classe <span style="font-style: italic;">proxy</span>. Por exemplo, se o nome da referência local especificada acima foi <span style="font-style: italic;">LumisAuthenticationWebService</span>, o seguinte código em <span style="font-style: italic;">Visual Basic .Net</span> executa o método <span style="font-style: italic;">loginUser</span>:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="499" cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Courier New'; font-style: italic;">Dim WS As New LumisAuthenticationWebService.AuthenticationService</span></p>
+<p style="text-align: left;"><span style="font-family: 'Courier New'; font-style: italic;">Dim UserSessionId As String = WS.loginUser("Login", "Senha")</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Aplicações </span><span style="font-style: italic; font-weight: bold;">Java</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+<p style="margin: 14px 0px 0px 0px;">Em aplicações Java, de maneira geral deve-se escolher um <span style="font-style: italic;">framework</span> de <span style="font-style: italic;">Web Services</span> e utilizar sua ferramenta de geração de classes <span style="font-style: italic;">proxy</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplos de <span style="font-style: italic;">frameworks</span> Java, temos o Apache Axis (<a href="http://ws.apache.org/axis/" target="_blank" class="weblink">http://ws.apache.org/axis/</a>) e Apache Axis2 (<a href="http://ws.apache.org/axis2/" target="_blank" class="weblink">http://ws.apache.org/axis2/</a>), este segundo sendo uma versão mais recente mas com arquitetura mais extensível que o primeiro. Ambos possuem como ferramenta de geração de classes <span style="font-style: italic;">proxy</span> uma classe chamada <span style="font-style: italic;">WSDL2Java</span>. O Axis2 possui, ainda, um script para invocar convenientemente a classe <span style="font-style: italic;">WSDL2Java</span> (por exemplo, <span style="font-style: italic;">wsdl2java.bat</span> para plataforma <span style="font-style: italic;">Windows</span>).</p>
+<p style="margin: 14px 0px 0px 0px;">Uma vez que o Axis2 esteja corretamente instalado e configurado, basta abrir um <span style="font-style: italic;">prompt</span> de comando e executar o <span style="font-style: italic;">script WSDL2Java ou WSDL2Code</span>. Por exemplo, na plataforma <span style="font-style: italic;">Windows</span>, pode-se executar o seguinte comando:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Courier New';"> wsdl2java -uri </span><span style="font-family: 'Courier New'; font-style: italic;">&lt;endereço_do_wsdl&gt;</span><span style="font-family: 'Courier New';"> </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">onde <span style="font-style: italic;">&lt;endereço_do_wsdl&gt;</span> deve ser substituído pelo endereço do <span style="font-style: italic;">WSDL</span> do portal.</p>
+<p style="margin: 14px 0px 0px 0px;">Por exemplo, para gerar as classes <span style="font-style: italic;">proxy</span> de acesso ao <span style="font-style: italic;">Web Service</span> de autenticação de um portal cuja URL é <span style="font-style: italic;">http://localhost:8080/portal</span>, o comando seria:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Courier New';"> wsdl2java -uri http://localhost:8080/portal/webservice/AuthenticationService?wsdl </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Dessa forma a ferramenta gera automaticamente um <span style="font-style: italic;">package</span> contendo diversas classes e interfaces:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="webservice4.gif" width="270" height="466" border="0" alt="webservice4" style="margin:0 auto;margin:20px;"></p>
+<p>Diferentemente da plataforma <span style="font-style: italic;">.Net</span> , onde apenas uma classe <span style="font-style: italic;">proxy</span> é gerada, a <span style="font-style: italic;">WSDL2Java</span> gera uma classe <span style="font-style: italic;">proxy</span> (cujo nome termina por "Stub") e várias classes e interfaces auxiliares. Por exemplo, num portal cuja <span style="font-style: italic;">URL</span> é <span style="font-style: italic;">http://localhost:8080/</span>portal, o seguinte código executa o método <span style="font-style: italic;">loginUser</span>:<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="454" cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">AuthenticationServiceStub&nbsp;authenticationService&nbsp;=&nbsp;new&nbsp;AuthenticationServiceStub(null,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">"localhost:8080/portal/webservice/AuthenticationService");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">AuthenticationServiceStub.LoginUser&nbsp;loginUserParam&nbsp;=&nbsp;new&nbsp;AuthenticationServiceStub.LoginUser();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">loginUserParam.setLogin("Login");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">loginUserParam.setPassword("Senha");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">String&nbsp;userSessionId&nbsp;=&nbsp;authenticationService.loginUser(loginUserParam).get_return();</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

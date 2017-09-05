@@ -1,0 +1,300 @@
+/* $Revision: 16201 $ $Date: 2014-03-18 10:33:50 -0300 (Tue, 18 Mar 2014) $ */
+.cLumMediaAlbum {
+	padding:0 0 15px 0;
+}
+.cLumMediaAlbum .clear {
+	clear:both;
+}
+.cLumMediaAlbum .album-tit {
+	padding:10px 0 15px 0;
+}
+.cLumMediaAlbum .album-tit p {
+	margin:0 0 2px 0;
+}
+.cLumMediaAlbum .box-max-width {
+	max-width:800px;
+}
+.cLumMediaAlbum .album-imgbox {
+	border:1px solid #cdcdcd;
+	background:#e9e9e9;
+	overflow-x:auto;
+	text-align:center;
+}
+.cLumMediaAlbum .album-imgbox img.album-img {
+	display:block;
+	margin:0 auto;
+	border:0;
+	max-width:798px;
+	max-height:798px;
+}
+.cLumMediaAlbum .album-imgbox .album-imgdesc {
+	border-top:1px solid #cdcdcd;
+	text-align:left;
+	padding:12px 12px 8px 12px;
+	background:#f9f9f9;
+}
+.cLumMediaAlbum .album-imgbox .album-imgdesc p {
+	margin:0 0 5px 0;
+}
+.cLumMediaAlbum .album-imgbox .htmlfield {}
+.cLumMediaAlbum .album-imgbox .html5tag-msg {
+	padding:20px;
+}
+.cLumMediaAlbum .album-imgbox audio {
+	padding:100px 20px;
+}
+/*thumnails*/
+.cLumMediaAlbum .album-thumbs {
+	text-align:center;
+	padding:12px 2px 0 2px;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li {
+	display:inline;
+	margin-right:8px;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li.last {
+	margin:0;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li a {
+	outline:none;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li a.selected {
+	cursor:default;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li img.album-tn {
+	width:40px;
+	height:40px;
+	border:2px solid #cdcdcd;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+.cLumMediaAlbum .album-thumbs ul.thumbs li .selected img.album-tn {
+	border-color:#ffb500;
+}
+/*pagination*/
+.cLumMediaAlbum .album-pagination {
+	margin:10px 0;
+	padding:8px 2px;
+	border-top:1px solid #ebebeb;
+	border-bottom:1px solid #ebebeb;
+}
+.cLumMediaAlbum .album-pagination ul.buttons {
+	list-style:none;
+	padding:0;
+	margin:0;
+	float:right;
+}
+.cLumMediaAlbum .album-pagination ul.buttons li {
+	float:left;
+	margin-right:4px;
+}
+.cLumMediaAlbum .album-pagination ul.buttons li a {
+	display:block;
+	float:left;
+	height:26px;
+	line-height:26px;
+	font-size:1.1em;
+	font-weight:bold;
+	padding:0 12px;
+	color:#333;
+	border:1px solid #ebebeb;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background:#f7f7f7;
+	outline:none;
+}
+.cLumMediaAlbum .album-pagination ul.buttons li a:hover, 
+.cLumMediaAlbum .album-pagination ul.buttons li a.selected {
+	text-decoration:none;
+	background:#fff;
+	border-color:#dfdfdf;
+	box-shadow:0 0 3px #dfdfdf;
+	-moz-box-shadow:0 0 3px #dfdfdf;
+	-webkit-box-shadow:0 0 3px #dfdfdf;
+}
+.cLumMediaAlbum .album-pagination ul.buttons li a.selected {
+	cursor:default;
+}
+.cLumMediaAlbum .album-pagination ul.buttons li a .arrow {
+	font-size:1.2em;
+	line-height:0.9em;
+	font-weight:bold;
+}
+
+.cLumMusicAlbum {
+	padding:0 0 15px 0;
+}
+.cLumMusicAlbum .clear {
+	clear:both;
+}
+.cLumMusicAlbum .album-tit {
+	padding:10px 0 18px 0;
+}
+.cLumMusicAlbum .album-tit p {
+	margin:0 0 2px 0;
+}
+.cLumMusicAlbum .album-tit img.album-cover {
+	display:block;
+	float:left;
+	width:120px;
+	height:120px;
+	padding:1px;
+	border:1px solid #cdcdcd;
+	margin:0 20px 0 0;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+.cLumMusicAlbum .album-tit .audiobox {
+	margin:15px 0;
+}
+.cLumMusicAlbum .album-tit .audiobox .html5tag-msg {
+	background:#f9f9f9;
+	padding:8px;
+	width:300px;
+}
+/*track list menu*/
+.cLumMusicAlbum .album-tracks {
+	border:1px solid #cbcbcb;
+	height:144px;
+	overflow:auto;
+}
+.cLumMusicAlbum .album-tracks .tracklist {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.cLumMusicAlbum .album-tracks .tracklist li a {
+	display:block;
+	height:28px;
+	line-height:28px;
+	padding:0 8px;
+	border-bottom:1px solid #e9e9e9;
+}
+.cLumMusicAlbum .album-tracks .tracklist li a em {
+	font-style:normal;
+	color:#999;
+}
+.cLumMusicAlbum .album-tracks .tracklist li a:hover,
+.cLumMusicAlbum .album-tracks .tracklist li a.selected {
+	text-decoration:none;
+	background:#f9f9f9;
+	color:#000;
+}
+.cLumMusicAlbum .album-tracks .tracklist li a:hover em,
+.cLumMusicAlbum .album-tracks .tracklist li a.selected em {
+	color:#000;
+}
+.cLumMusicAlbum .album-tracks .tracklist li a.selected {
+	cursor:default;
+}
+
+/* jPagination */
+.cLumMediaAlbumPagination {list-style:none; margin:0px; padding:0px;}
+.cLumMediaAlbumPagination li{float:left; margin:3px;}
+.cLumMediaAlbumPagination li a{   display:block; padding:3px 5px; color:#fff; background-color:#FF9704; text-decoration:none;}
+.cLumMediaAlbumPagination li a.active {border:1px solid #ffb500; color:#000; background-color:#fff;}
+.cLumMediaAlbumPagination li a.inactive {background-color:#eee; color:#777; border:1px solid #ccc;}
+
+.album-navarrow-prev {
+	left:10px;
+	background:url(../image/ico_albumnav_prev.png) no-repeat 0 0;
+	text-indent:-9999px;
+	display:block;
+	width:24px;
+	height:24px;
+	position:absolute;
+	z-index:99;
+	display: none;
+}
+.album-navarrow-next {
+	background:url(../image/ico_albumnav_next.png) no-repeat 0 0;
+	text-indent:-9999px;
+	display:block;
+	width:24px;
+	height:24px;
+	position:absolute;
+	z-index:99;
+	display: none;
+}
+.album-content-left {
+	position:absolute;
+}
+.album-column-right {
+	margin:0px;	
+	max-width:800px;
+}
+.album-content-right {
+	right:5px;
+	float: right;
+	padding-right:35px;
+}
+
+.lum-mediaalbum-data-list .lum-mediaalbum-item {
+	margin:10px 20px 15px 0;
+	overflow-y:hidden;
+	vertical-align: top;
+	display: inline-block;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-imgwrap {
+	width:108px;
+	height:108px;
+	border:2px solid #cdcdcd;
+	border-radius:3px;
+	position:relative;
+	overflow:hidden;
+	background:#e9e9e9;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item.lum-row-selected {
+	background: inherit;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item.lum-row-selected .lum-mediaalbum-imgwrap {
+	border-color:#b92b2a;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-imgwrap input[type='checkbox'] {
+	position:absolute;
+	top:4px;
+	left:4px;
+	z-index:9;
+	outline:none;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-imgwrap .lum-mediaalbum-hover-menu-selectable {
+	padding-top:8px;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-imgwrap ul.lum-row-actions {
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:7;
+	background:url(../../../portal/client/images/fader_white.png) repeat 0 0;
+	list-style:none;
+	padding:40px 0;
+	text-align: center;
+	margin:0;
+	font-weight:bold;
+	text-transform:lowercase;
+}
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-imginfo {
+	width:112px;
+	overflow-x:hidden;
+	padding:4px 0 0 0;
+}
+
+.lum-mediaalbum-data-list .lum-mediaalbum-item .lum-mediaalbum-img {
+	display:block;
+	width:108px;
+	height:108px;
+	border:0;
+}
+
+.lum-mediaalbum-img-unapproved{
+	background: url("../image/ico_unapproved.png") no-repeat scroll 2px 3px transparent;
+	padding-left: 20px !important;
+}

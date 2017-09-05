@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>0000000050C9BD630150CD5E03C9745A</id>
+  <name>Prestador</name>
+  <position>3</position>
+  <access-control-list>
+    <entries>
+      <entry principal-id="8A489E1F50A956990150A976982115B8">
+        <allow-permissions>65792</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</channel>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>8A489E1F50AE95AA0150B8AD856D33BD</id>
+  <name>FAQ</name>
+  <parent-template-id>8A489E1F50AE95AA0150B9CE9BDA71E5</parent-template-id>
+  <hidden>true</hidden>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>logado-internas-2-colunas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="logo">
+        <interface id="8A489E1F50AE95AA0150B9DB7D8B219B"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="8A489E1F50AE95AA0150B9DB7D92219D"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="8A489E1F50AE95AA0150B9DB7D98219F"></interface>
+    </holder>
+    <holder id="logout">
+        <interface id="8A489E1F50AE95AA0150B9DB7DA121A1"></interface>
+    </holder>
+    <holder id="menu-vertical">
+        <interface id="40286D2C51B5C4870151B65D2190665D" isNew="1"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="8A489E1F50AE95AA0150B9E093772F26"></interface>
+        <interface id="8A489E1F50AE95AA0150B9DB7DAD21A4"></interface>
+    </holder>
+    <holder id="outras_noticias">
+        <interface id="0000000050C9BD630150CAE1FC9917D0"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CAE1FC9917D0</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CAE1CF091759</parent-interface-instance-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>40286D2C51B5C4870151B65D2190665D</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentChildren</interface-id>
+      <parent-interface-instance-id>40286D2C51B5C4870151B65CC463635D</parent-interface-instance-id>
+      <applied-interface-style-id>40286D2C51B5C4870151B5D46D25047B</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9DB7D8B219B</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.beneficiario</interface-id>
+      <parent-interface-instance-id>8A489E1F50AE95AA0150B9D7A01F1679</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9DB7D92219D</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>8A489E1F50AE95AA0150B9D7FA381694</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9DB7D98219F</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>8A489E1F50AE95AA0150B9D8399D16AF</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9DB7DA121A1</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>8A489E1F50AE95AA0150B9D854DA16B3</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9DB7DAD21A4</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>8A489E1F50AE95AA0150B9CE9BED71EB</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B9E093772F26</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33BC</service-instance-id>
+      <interface-id>lumis.service.faq.list</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150B9ED77173054</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

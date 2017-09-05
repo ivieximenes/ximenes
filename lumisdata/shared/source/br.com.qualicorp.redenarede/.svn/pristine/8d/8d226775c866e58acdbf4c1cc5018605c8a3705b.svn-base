@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC6861343</id>
+  <name>Internas 2 Colunas - Área Pública</name>
+  <template>true</template>
+  <position>2</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas-2-colunas.html</layout-file>
+  <layout><![CDATA[<layout><holder id="menu"><interface id="0000000050A1A02C0150A1C73C0A3521"/></holder><holder id="busca"><interface id="0000000050A1A02C0150A1C75B1D352A"/></holder><holder id="login"><interface id="0000000050A1A02C0150A1C87F5C3A15"/></holder><holder id="menu-secundario"><interface id="0000000050A1A02C0150A1C7E492353F"/></holder><holder id="conteudo"><interface id="0000000050A1A02C0150A1C7D5883539"/></holder></layout>]]></layout>
+  <ssi-enabled>false</ssi-enabled>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C73C0A3521</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C75B1D352A</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C7D5883539</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C7E492353F</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>3</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C87F5C3A15</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

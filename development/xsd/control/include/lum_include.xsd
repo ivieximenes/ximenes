@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14633 $ $Date: 2012-08-20 13:57:58 -0300 (Mon, 20 Aug 2012) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_include"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_include"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_include">
+		<xsd:attribute name="page" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>Specifies a file present in the web application to be included.
+					The value must be the path of the file to be included, relative to the web application root.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="mode" type="mode">
+			<xsd:annotation>
+				<xsd:documentation>Specifies the render mode.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="mode">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="outputHtml">
+				<xsd:annotation>
+					<xsd:documentation>Specifies if the file included should be directly included in the final HTML.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="renderData">
+				<xsd:annotation>
+					<xsd:documentation>Specifies if the file included should be added to
+						the interface render data XML. The default XSL for this control will
+						not use this data. It is intended for use by a customized XSL.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

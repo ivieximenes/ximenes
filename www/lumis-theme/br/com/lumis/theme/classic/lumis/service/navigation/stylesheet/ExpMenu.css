@@ -1,0 +1,66 @@
+/* $Revision: 15350 $ $Date: 2013-05-20 12:55:31 -0300 (Mon, 20 May 2013) $ */
+
+
+/* classes for Expanding Menu interface */
+
+#LumExpMenu 
+{
+	width:auto;
+	padding:8px;
+	margin:0 0 14px 0;
+	background:#EFEFD0;
+	color:inherit;
+}
+#LumExpMenu ul 
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#LumExpMenu a 
+{
+	display:block;
+	width:auto;
+	height:1%; /*IE6-only*/
+	padding:6px 12px;
+	color:#343434;
+	background:inherit;
+	text-decoration:none;
+	border-bottom:1px solid #D3D3C2;
+	outline:none;
+}
+html>body #LumExpMenu a 
+{
+	height:auto; /*fix for modern browsers*/
+}
+#LumExpMenu a:hover 
+{
+	background:white;
+	color:inherit;
+}
+#LumExpMenu a img
+{
+	margin:0 8px 0 0;
+	width:6px;
+	height:7px;
+}
+#LumExpMenu a img.dot
+{
+	margin:0 6px 2px 0;
+	width:2px;
+	height:2px;
+}
+
+#LumExpMenu ul.son 
+{
+	margin-left:7px;
+}
+#LumExpMenu ul.son a
+{
+	background:white;
+	color:inherit;
+}
+#LumExpMenu ul.son a:hover
+{
+	font-weight:bold;
+}

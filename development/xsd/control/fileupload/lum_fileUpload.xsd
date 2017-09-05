@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 10443 $ $Date: 2009-06-01 18:11:08 -0300 (Mon, 01 Jun 2009) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_fileUpload"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_fileUpload"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_fileUpload">
+		<xsd:complexContent>
+			<xsd:restriction base="lum_dataBoundControl">
+				<xsd:attribute name="name" type="xsd:string" use="prohibited" />
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

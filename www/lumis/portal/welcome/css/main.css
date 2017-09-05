@@ -1,0 +1,191 @@
+/* $Revision: 17644 $ $Date: 2015-08-07 17:27:34 -0300 (Fri, 07 Aug 2015) $ */
+/* *********************************************************************************************************************
+ * Estilos globais
+ */
+
+p{
+	font-family:Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	font-size:15px;
+	color:#808080;
+	margin:0;
+	padding:0;	
+}
+
+a{
+	color:#ff9600;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+h1,h2,h3{
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-family:Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color:#808080;
+}
+
+.container:before,
+.container:after {
+    content:"";
+    display:table;
+}
+.container{
+	height:auto;
+	position:relative;
+}
+
+.container:after {
+    clear:both;
+}
+
+/* *********************************************************************************************************************
+ * Header
+ */
+
+#header{
+	border-top:5px solid #fab500;
+	padding-top:45px;
+}
+
+#header h1{
+	width:199px;
+	height:33px;
+	background:url(../images/logo.png) no-repeat;
+	text-indent:-9999px;
+}
+
+#header p.version{
+	font-size:14px !important;
+	margin:5px 45px 0 35px;
+}
+
+#header p.version span{
+	background: #808080 none repeat scroll 0 0;
+	border-radius: 2px;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+	padding: 0.2em 0.5em;
+	position: relative;
+	text-transform: uppercase;
+	top: -1px;
+}
+
+#header p.installed{
+	display:block;
+	font-size:16px;
+	margin-top:10px;
+	height:28px;
+	margin-bottom:20px;
+}
+
+#header p.installed:before{
+	content:url(../images/check.png) no-repeat;
+	padding-right:10px;
+	position:relative;
+	left:0;
+	top:6px;
+	
+}
+
+/* *********************************************************************************************************************
+ * Main
+ */
+
+#main{
+	margin-top:45px;
+	border-top:1px solid #d1d1d1;
+}
+
+#main h2{
+	font-size:20px;
+	margin-bottom:15px;
+}
+ 
+#working{
+	margin-top:35px;
+	padding:20px 0 0 0;
+} 
+
+#help{
+	border-radius:3px;
+	background-color:#fff4e5;
+	margin-top:35px;
+	padding:20px 20px 35px 20px;
+}
+
+#working h2{
+	background:url(../images/f2.png) no-repeat;
+	background-position:left top 5px;
+	padding-left:30px;
+}
+
+#working span{
+	font-weight:bold;
+	color:#464646;
+}
+
+#working h3{
+	font-size:17px;
+	margin-top:10px;
+}
+
+p.description{
+	padding-left:15px;
+	font-size:14px !important;
+} 
+
+a.bullet{
+	display:block;
+	margin-top:5px;
+	margin-left:15px;
+	font-weight:bold;
+}
+
+a.bullet:before{
+	content:url(../images/bullet.png);
+	position:absolute;
+	margin-top:6px;
+	margin-left:-15px;
+}
+
+
+/* *********************************************************************************************************************
+ * Main
+ */
+ 
+#footer{
+	margin-top:55px;
+	padding-top:20px;
+	border-top:1px solid #d1d1d1;
+}
+
+#footer p{
+	font-size:14px;
+}
+
+
+
+.poweredby{
+	margin-top:5px;
+	color:#909090;
+	font-size:11px !important;
+}
+
+.lumisportal{
+	font-size:11px !important;
+	display:inline-block;
+	position:relative;
+	top:1px;
+	width:78px;
+	height:13px;
+	overflow:hidden;
+	margin-left:2px;
+	background:url(../images/poweredby.png);
+	text-indent:999px;
+}

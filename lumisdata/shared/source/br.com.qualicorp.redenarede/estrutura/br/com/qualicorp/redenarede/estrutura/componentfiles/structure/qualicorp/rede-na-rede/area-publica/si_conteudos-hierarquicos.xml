@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1AF436118B2</id>
+  <name>Conteúdos Hierárquicos</name>
+  <description>Permite gerenciar conteúdos hierárquicos no portal.</description>
+  <service-id>lumis.service.hierarchicalcontent</service-id>
+  <access-control-list>
+    <entries>
+      <entry principal-id="0000000050C9BD630150CD6AE2AC0505">
+        <allow-permissions>4</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <workflow>lumis.standardworkflow</workflow>
+  <workflow-permissions>
+    <workflow-permission principal-id="0000000050C9BD630150CD6AE2AC0505">
+      <role type="allow">chiefEditor</role>
+    </workflow-permission>
+  </workflow-permissions>
+  <custom-properties>
+    <service-instance-custom-property name="doui_disableSearchInServiceInstance"><![CDATA[true]]></service-instance-custom-property>
+  </custom-properties>
+  <dependencies>
+    <dependency type="document_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851327</service-instance-id>
+    </dependency>
+    <dependency type="media_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851328</service-instance-id>
+    </dependency>
+  </dependencies>
+  <property-bag>
+    <property name="lumis.doui.control.htmleditor.htmlsnippet#templates">
+      <private>true</private>
+      <default-values>
+        <value>{&quot;id&quot;:&quot;2C96A66853B531AE01552CCBC5BF0C3E&quot;,&quot;sourceId&quot;:&quot;default&quot;,&quot;fieldId&quot;:&quot;linkContent&quot;,&quot;title&quot;:&quot;iframe&quot;,&quot;htmlContent&quot;:&quot;&lt;iframe frameborder=\&quot;no\&quot; height=\&quot;400\&quot; name=\&quot;content\&quot; scrolling=\&quot;auto\&quot; src=\&quot;http://meugamasaudegsp.com.br/Plano.html\&quot; width=\&quot;100%\&quot;&gt;&lt;/iframe&gt;&quot;}</value>
+      </default-values>
+    </property>
+  </property-bag>
+</service-instance>

@@ -1,0 +1,3 @@
+<%@page import="lumis.service.htmlevaluation.URLAccessibilityEvaluationControllerHtml"%><%@ page import="lumis.portal.file.*" errorPage="/error.jsp"%><%// $Revision: 13303 $ $Date: 2011-08-03 13:43:26 -0300 (Wed, 03 Aug 2011) $
+URLAccessibilityEvaluationControllerHtml urlAcessabilityEvaluationControllerHtml = new URLAccessibilityEvaluationControllerHtml(request, response);
+urlAcessabilityEvaluationControllerHtml.handleRequest();%>

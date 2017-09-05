@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050C9BD630150CD5E03C9745C</id>
+  <name>Home</name>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>home-logado.html</layout-file>
+  <layout><![CDATA[<layout><holder id="busca"><interface id="0000000050C9BD630150CD5E05227485"/></holder><holder id="login"><interface id="2C96A2CE5AC7FD01015AC97B24866962"/><interface id="2C96A2CE5AC7FD01015AC97B36116964"/></holder><holder id="menu"><interface id="0000000050C9BD630150CD5E05057482"/></holder><holder id="banner"><interface id="8A488AE75162DD04015163D328843DEA"/><interface id="2C96A2CE5AC7FD01015AC97C39A16981"/></holder><holder id="servicos"><interface id="0000000050C9BD630150CD5E0541748A"/></holder><holder id="noticias"><interface id="0000000050C9BD630150CD5E053F7489"/></holder><holder id="menurodape"><interface id="2C96A2CE5AC7FD01015AC97BCCE2696A"/></holder></layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E05057482</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C97462</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E05227485</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E053F7489</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C9745E</service-instance-id>
+      <interface-id>lumis.service.news.quicklist</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B9642F25EB</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_maxRows"><![CDATA[4]]></custom-property>
+        <custom-property name="default.doui_orderBy"><![CDATA[<orderBy><field id="publishStartDate" direction="descending" /></orderBy>]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E0541748A</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C9746A</service-instance-id>
+      <interface-id>lumis.service.link.quicklist</interface-id>
+      <applied-interface-style-id>2C96A66853B531AE015459818E421E2B</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_filters"><![CDATA[<filters><filter filterType="basic" id="isHighlight" fieldId="highlight" operator="equal" defaultValue="true"/></filters>]]></custom-property>
+        <custom-property name="default.doui_maxRows"><![CDATA[3]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC97B24866962</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC97B36116964</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaPrestador</interface-id>
+      <applied-interface-style-id>alterarSenhaPrestadorsmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC97BCCE2696A</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C97462</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AC97C39A16981</id>
+      <service-instance-id>2C96A2CE5AC7FD01015AC97C1DBA6973</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.banner.banner</interface-id>
+      <custom-properties>
+        <custom-property name="paramBannerLogClick"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerLogView"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerRandomize"><![CDATA[0]]></custom-property>
+        <custom-property name="paramBannerTotalItems"><![CDATA[99]]></custom-property>
+        <custom-property name="paramTimeout"><![CDATA[0]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>8A488AE75162DD04015163D328843DEA</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.homeCredenciado</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

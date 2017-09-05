@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service name="STR_SERVICE_NAME" type="lum_doui">
+		<description>STR_SERVICE_DESCRIPTION</description>
+			
+	</service>
+
+	<interfaces>
+		
+		<!-- administration interfaces -->
+		<interface id="administration" name="STR_ADMINISTRATION" type="lum_douiAdministrationList">
+		</interface>
+
+		<interface id="add" name="STR_ADD" type="lum_douiAdministrationAddPropertyPage">
+			<styles>
+				<style name="add-Layout" path="br/com/qualicorp/redenarede/service/administracaodelayout/style/addEditLayout.xsl" id="add-Layout"></style>
+			</styles>
+		</interface>
+		
+		<interface id="edit" name="STR_EDIT" type="lum_douiAdministrationEditPropertyPage">
+			<styles>
+				<style name="edit-Layout" path="br/com/qualicorp/redenarede/service/administracaodelayout/style/addEditLayout.xsl" id="edit-Layout"></style>
+			</styles>
+		</interface>
+		
+		<interface id="layout" name="Layout" type="lum_doui">
+			<styles>
+				<style name="layout" path="br/com/qualicorp/redenarede/service/administracaodelayout/style/layout.xsl" id="layout"></style>
+			</styles>
+		</interface>
+				
+	</interfaces>
+
+</serviceDefinition>

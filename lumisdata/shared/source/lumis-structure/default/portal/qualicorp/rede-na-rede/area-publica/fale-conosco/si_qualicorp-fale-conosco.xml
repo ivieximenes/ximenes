@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>8A489E1F50AE95AA0150B3B55DB82FFF</id>
+  <name>Qualicorp - Fale Conosco</name>
+  <description>Serviço de Fale Conosco da Qualicorp</description>
+  <service-id>br.com.qualicorp.redenarede.service.businesscontact</service-id>
+  <access-control-list>
+    <entries>
+      <entry principal-id="00000000C00000000000000000000001">
+        <allow-permissions>4</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <custom-properties>
+    <service-instance-custom-property name="mailTo"><![CDATA[lramos@gamasaude.com.br]]></service-instance-custom-property>
+  </custom-properties>
+</service-instance>

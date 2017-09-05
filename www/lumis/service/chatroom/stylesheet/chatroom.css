@@ -1,0 +1,15 @@
+/* $Revision: 15550 $ $Date: 2013-07-04 15:01:11 -0300 (Thu, 04 Jul 2013) $ */
+
+.lumis-service-chatroom-chatRoomParticipate {
+	margin-top:25px;
+}
+
+/*moderated chatroom only*/
+.lumis-service-chatroom-moderatorChatRoom .lum-collaboration-chat-msg-list {
+	display:inline-block;
+	width:65%;
+}
+.lumis-service-chatroom-moderatorChatRoom .lum-collaboration-chat-msg-list-to-moderate {
+	width:34%;
+	float:right;
+}

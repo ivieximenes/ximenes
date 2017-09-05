@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.autenticacao.ws.tempoassist.com.br" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:common="http://ws.common.tempoassist.com.br/schema" xmlns:xsd="http://service.autenticacao.ws.tempoassist.com.br" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:beneficiario="http://ws.beneficiario.tempoassist.com.br/schema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.autenticacao.ws.tempoassist.com.br">
+            <xs:import namespace="http://ws.common.tempoassist.com.br/schema" schemaLocation="Common.xsd"/>
+            <xs:import namespace="http://ws.beneficiario.tempoassist.com.br/schema" schemaLocation="Beneficiario.xsd"/>
+            <xs:element name="autenticar">
+               <xs:complexType>
+	               <xs:sequence>
+	               		<xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+	               		<xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+	               </xs:sequence>          
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="autenticarResponse">
+                <xs:complexType>
+                	<xs:complexContent>
+                   	     <xs:extension base="common:ServiceResponse">
+		           			<xs:sequence>
+		                   		<xs:element minOccurs="0" name="beneficiario" type="beneficiario:Beneficiario"/>
+		               		</xs:sequence>
+               			</xs:extension>
+               		</xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="criarSenha">
+               <xs:complexType>
+	               <xs:sequence>
+	               		<xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+	               		<xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+	               </xs:sequence>          
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="criarSenhaResponse">
+                <xs:complexType>
+                	<xs:complexContent>
+                   	     <xs:extension base="common:ServiceResponse"/>
+               		</xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="recuperarSenha">
+               <xs:complexType>
+	               <xs:sequence>
+	               		<xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+	               		<xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+	               </xs:sequence>          
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="recuperarSenhaResponse">
+                <xs:complexType>
+                	<xs:complexContent>
+                   	     <xs:extension base="common:ServiceResponse"/>
+               		</xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trocarSenha">
+               <xs:complexType>
+	               <xs:sequence>
+	               		<xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+	               		<xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+	               </xs:sequence>          
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trocarSenhaResponse">
+                <xs:complexType>
+                	<xs:complexContent>
+                   	     <xs:extension base="common:ServiceResponse"/>
+               		</xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AutenticacaoBeneficiarioService" type="xs:string"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="autenticarRequest">
+    <wsdl:part name="parameters" element="xsd:autenticar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trocarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:trocarSenha">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trocarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:trocarSenhaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarResponse">
+    <wsdl:part name="parameters" element="xsd:autenticarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:criarSenha">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recuperarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:recuperarSenha">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:criarSenhaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AutenticacaoBeneficiarioService">
+    <wsdl:part name="AutenticacaoBeneficiarioService" element="xsd:AutenticacaoBeneficiarioService">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recuperarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:recuperarSenhaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AutenticacaoBeneficiarioServicePortType">
+    <wsdl:operation name="autenticar">
+      <wsdl:input message="xsd:autenticarRequest" wsaw:Action="urn:autenticarRequest">
+    </wsdl:input>
+      <wsdl:output message="xsd:autenticarResponse" wsaw:Action="urn:autenticarResponse">
+    </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenha">
+      <wsdl:input message="xsd:criarSenhaRequest" wsaw:Action="urn:criarSenhaRequest">
+    </wsdl:input>
+      <wsdl:output message="xsd:criarSenhaResponse" wsaw:Action="urn:criarSenhaResponse">
+    </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSenha">
+      <wsdl:input message="xsd:recuperarSenhaRequest" wsaw:Action="urn:recuperarSenhaRequest">
+    </wsdl:input>
+      <wsdl:output message="xsd:recuperarSenhaResponse" wsaw:Action="urn:recuperarSenhaResponse">
+    </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trocarSenha">
+      <wsdl:input message="xsd:trocarSenhaRequest" wsaw:Action="urn:trocarSenhaRequest">
+    </wsdl:input>
+      <wsdl:output message="xsd:trocarSenhaResponse" wsaw:Action="urn:trocarSenhaResponse">
+    </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AutenticacaoBeneficiarioServiceBinding" type="xsd:AutenticacaoBeneficiarioServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="autenticar">
+      <soap:operation soapAction="urn:autenticar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenha">
+      <soap:operation soapAction="urn:criarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSenha">
+      <soap:operation soapAction="urn:recuperarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trocarSenha">
+      <soap:operation soapAction="urn:trocarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AutenticacaoBeneficiarioService">
+    <wsdl:port name="AutenticacaoBeneficiarioServiceHttpSoapEndpoint" binding="xsd:AutenticacaoBeneficiarioServiceBinding">
+      <soap:address location="https://wwwt.connectmed.com.br/saudewebHomologacao/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

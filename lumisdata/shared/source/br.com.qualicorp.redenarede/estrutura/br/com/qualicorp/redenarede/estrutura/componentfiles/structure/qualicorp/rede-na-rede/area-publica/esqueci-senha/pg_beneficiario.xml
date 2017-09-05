@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851331</id>
+  <name>Beneficiário</name>
+  <parent-template-id>2C96A2CE5AC7FD01015AC947925E6159</parent-template-id>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>template.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="busca">
+        <interface id="2C96A2CE5AC7FD01015AD28481C40D84"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="2C96A2CE5AC7FD01015AD28481E10D85"></interface>
+        <interface id="2C96A2CE5AC7FD01015AD28481E80D86"></interface>
+        <interface id="2C96A2CE5AC7FD01015AD28481EF0D87"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="2C96A2CE5AC7FD01015AD28481F60D88"></interface>
+        <interface id="2C96A2CE5AC7FD01015AD28482010D89"></interface>
+    </holder>
+    <holder id="interfaces">
+        <interface id="8A489E1F50AE95AA0150B4F0B9F8553C"></interface>
+        <interface id="2C96A2CE5AC7FD01015AD28482070D8A"></interface>
+    </holder>
+    <holder id="menurodape">
+        <interface id="2C96A2CE5AC7FD01015AD28482260D8D"></interface>
+    </holder>
+    <holder id="cadastro_cliente">
+        <interface id="2C96A2CE5AC7FD01015AD284822C0D8E"></interface>
+    </holder>
+    <holder id="cadastro_prestador">
+        <interface id="2C96A2CE5AC7FD01015AD28482460D8F"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28481C40D84</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC9484A4A6185</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28481E10D85</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC94866C66187</parent-interface-instance-id>
+      <applied-interface-style-id>loginSmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28481E80D86</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaBeneficiario</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC949114F618C</parent-interface-instance-id>
+      <applied-interface-style-id>alterarSenhaBeneficiarioSmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28481EF0D87</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC948EF7B6189</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28481F60D88</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC94924FC6190</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28482010D89</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC949BC546197</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D1373C57A3</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28482070D8A</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC947928F615F</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28482260D8D</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC94A893061A2</parent-interface-instance-id>
+      <applied-interface-style-id>2C96A2CE5AC7FD01015AC8D39CA457AC</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD284822C0D8E</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.addbeneficiario</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC94AB97961A6</parent-interface-instance-id>
+      <applied-interface-style-id>addbeneficiariosmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A2CE5AC7FD01015AD28482460D8F</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.addprestador</interface-id>
+      <parent-interface-instance-id>2C96A2CE5AC7FD01015AC94AA2B761A4</parent-interface-instance-id>
+      <applied-interface-style-id>addprestadorsmart</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B4F0B9F8553C</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.esqueciSenhaBeneficiario</interface-id>
+      <applied-interface-style-id>esqueciSenhaBeneficiarioSmart</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

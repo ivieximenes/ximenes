@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851327</id>
+  <name>Documentos</name>
+  <description>Permite gerenciar repositório de documentos.</description>
+  <service-id>lumis.service.document</service-id>
+  <uses-public-file-storage>true</uses-public-file-storage>
+  <access-control-list>
+    <entries>
+      <entry principal-id="8A489E1F50A956990150A976625D15AA">
+        <allow-permissions>8</allow-permissions>
+      </entry>
+      <entry principal-id="8A489E1F50A956990150A976982115B8">
+        <allow-permissions>8</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</service-instance>

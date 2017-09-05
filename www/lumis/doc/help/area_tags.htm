@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Area Tags</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?area_tags.htm"; }
+  else { parent.quicksync('a5.7.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Area Tags</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="propertybag.htm">Previous</a>&nbsp;
+     <a href="editor_de_estrutura.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span>Area Tags é uma funcionalidade capaz de definir marcações de áreas em uma instalação do Lumis Portal. Essas marcações podem ser definidas em canais, template de canais ou instância de serviços. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; font-weight: bold;">Canais ou Template de Canais</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-family: 'Arial';">Area Tags podem ser aplicadas em canais ou template de canais. Para exemplificar vamos assumir um cenário como o apresentada na figura abaixo. Neste cenário temos 5 Area Tags aplicadas no portal, “Portal” (cor azul), “Internet” (cor laranja), ”Vendas” (cor lilás), “Marketing” (cor verde) e “Desenvolvimento” (cor azul claro). Pode-se observar que os canais filhos de Internet, Vendas, Marketing e Desenvolvimento herdam as Area Tags dos seus respectivos canais pai. Entretanto, os canais Internet, Vendas, Marketing e Desenvolvimento não herdam a Area Tag “Portal”. Isso é possível uma vez que seja desabilitada a opção de herdar Area Tags. Caso não fosse desabilitada a opção de herdar Area Tags os canais que definiram Area Tags localmente, iriam ter também a Area Tag Portal.</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center;"><img src="areatags0001.zoom22.png" width="361" height="633" border="0" alt="areaTags0001" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; font-weight: bold;">Instância de Serviços</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span>As Area Tags também podem ser aplicadas sobre instâncias de serviço. Da mesma forma que um canal pode herdar Area Tags dos canais superiores, uma instância de serviço poderá herdar, ou não, as Area Tags do canal a qual pertence. A figura abaixo apresenta um cenário onde as instâncias de serviços “Notícia” possuem a mesma Area Tag “Notícia” e não herdam as Area Tags dos seus respectivos canais. Entretanto as instâncias de serviços “Avisos” possuem Area Tags diferentes pois elas herdam as Area Tags dos canais a qual pertencem.</p>
+<p style="text-align: left; line-height: 1.15; margin: 0px 0px 13px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.15; margin: 0px 0px 13px 0px;"><img src="areatags0002.zoom77.png" width="344" height="437" border="0" alt="areaTags0002" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: left;">As marcações de áreas influenciam no comportamento de controle padrões tais como seleção de canal (channelPicker) e seleção de paginas (pagePicker). As marcações também interfeirem na visibilidade de publicação de conteúdos para outras instâncias, publicação para usuários e grupos e associações de conteúdos. Apenas instâncias que possuem Area Tags em comum conseguirão publicar conteúdos em outras instâncias, publicar conteúdos para usuários e grupos e associar conteúdos de outras instâncias.</p>
+<p style="text-align: center;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

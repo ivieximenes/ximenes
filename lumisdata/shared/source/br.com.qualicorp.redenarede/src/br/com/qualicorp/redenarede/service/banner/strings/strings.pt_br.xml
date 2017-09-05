@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Revision: 13992 $ $Date: 2012-01-31 15:06:47 -0200 (Tue, 31 Jan 2012) $ -->
+<!-- $Revision: 13992 $ $Date: 2012-01-31 15:06:47 -0200 (Tue, 31 Jan 2012) $ -->
+<strings>
+	<string id="STR_SERVICE_NAME">Qualicorp Banners</string>
+	<string id="STR_SERVICE_DESCRIPTION">Permite gerenciar e disponbilizar banners.</string>
+	<string id="STR_ADD_CATEGORY">Adicionar Categoria</string>
+	<string id="STR_ADMINISTRATION">Administração</string>
+	<string id="STR_ADMINISTRATION_CATEGORY">Administração de Categorias</string>
+	<string id="STR_BANNER">Banner</string>
+	<string id="STR_BANNER_PROPERTIES">Propriedades do Banner</string>
+	<string id="STR_BASIC_INFORMATION">Informações Básicas</string>
+	<string id="STR_CATEGORY">Categoria</string>
+	<string id="STR_DESCRIPTION">Descrição</string>
+	<string id="STR_EDIT_CATEGORY">Editar Categoria</string>
+	<string id="STR_ENABLED">Habilitado</string>
+	<string id="STR_FLASH_PROPERTIES">Propriedades do Flash</string>
+	<string id="STR_HEIGHT">Altura</string>
+	<string id="STR_HTML">Html</string>
+	<string id="STR_HTML_PROPERTIES">Propriedades do Html</string>
+	<string id="STR_IMAGE_PATH">Imagem</string>
+	<string id="STR_IMAGE_PROPERTIES">Propriedades da Imagem</string>
+	<string id="STR_INTERNAL_PAGE">Página Interna</string>
+	<string id="STR_IS_POPUP">Abrir em popup</string>
+	<string id="STR_LINK_TYPE">Tipo do Link</string>
+	<string id="STR_LOG">Log</string>
+	<string id="STR_LOG_CLICKS">Registrar Clicks</string>
+	<string id="STR_LOG_VIEWS">Registrar Visualizações</string>
+	<string id="STR_NAME">Nome</string>
+	<string id="STR_BTN_CONTENT">Conteúdo do Botão</string>
+	<string id="STR_PAGE">Página</string>
+	<string id="STR_POINT_WEIGHT">Peso</string>
+	<string id="STR_RANDOMIZE">Randomizar</string>
+	<string id="STR_DYNAMIC">Dinâmico</string>
+	<string id="STR_TIMEOUT">Intervalo</string>
+	<string id="STR_STYLE">Estilo</string>
+	<string id="STR_TOTAL_ITEMS">Total de Itens</string>
+	<string id="STR_TYPE">Tipo</string>
+	<string id="STR_TYPE_FLASH">Flash</string>
+	<string id="STR_TYPE_HTML">Html</string>
+	<string id="STR_TYPE_IMAGE">Imagem</string>
+	<string id="STR_URL">Url</string>
+	<string id="STR_WIDTH">Largura</string>
+	<string id="STR_XSL_FILE">Arquivo Xsl</string>
+	<string id="STR_NO_BANNER_CATEGORY_SELECTED">Nenhuma categoria foi selecionada para o banner.</string>
+	<string id="STR_NO_LINK">Sem Link</string>
+	<string id="STR_CLICK_POPUP_PROPERTIES">Propriedades da popup</string>
+	<string id="STR_BANNER_IMAGE_NOT_DEFINED">Imagem do Banner "%1" não definida</string>
+	<string id="STR_CATEGORY_IS_BEING_USED">Categoria "%1" está sendo usada</string>
+	<string id="STR_INVALID_URL">A URL é inválida.</string>
+	<string id="STR_INVALID_FLASH_FILE">O arquivo flash é inválido.  Ele deve ter a extensão .swf.</string>
+	<!-- Montor Strings -->
+	<string id="STR_BANNER_CATEGORY_NAME_DESCRIPTION">Nome da Categoria do Banner</string>
+	<string id="STR_BANNER_CATEGORY_NAME_NAME">Nome da Categoria do Banner</string>
+	<string id="STR_BANNER_CLICK_DESCRIPTION">Clique no Banner</string>
+	<string id="STR_BANNER_CLICK_NAME">Clique no Banner</string>
+	<string id="STR_BANNER_NAME_DESCRIPTION">Nome do Banner</string>
+	<string id="STR_BANNER_NAME_NAME">Nome do Banner</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_DESCRIPTION">Caminho Amigável da Instância de Serviço do Banner</string>
+	<string id="STR_BANNER_SI_FRIENDLY_PATH_NAME">Caminho Amigável da Instância de Serviço do Banner</string>
+	<string id="STR_BANNER_SI_PATH_DESCRIPTION">Caminho da Instância de Serviço do Banner</string>
+	<string id="STR_BANNER_SI_PATH_NAME">Caminho da Instância de Serviço do Banner</string>
+	<string id="STR_BANNER_VIEW_DESCRIPTION">Visualização do Banner</string>
+	<string id="STR_BANNER_VIEW_NAME">Visualização do Banner</string>
+</strings>

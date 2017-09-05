@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Exportação em Sistema de Arquivos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?exportacao_fs.htm"; }
+  else { parent.quicksync('a5.6.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Exportação em Sistema de Arquivos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="importacao_lec.htm">Previous</a>&nbsp;
+     <a href="importacao_fs.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Esta opção permite que estruturas de canais (com páginas; instâncias de serviços; grupos locais; e controle de acesso) sejam exportadas em um sistema de arquivos do servidor de aplicação. Os elementos estruturais ficam organizados em arquivos e pastas de acordo com a hierarquia de canais.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table width="564" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="114" style="width:114px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="469" style="width:469px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="583" style="width:583px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>A exportação/importação deve ser realizada entre ambientes com a mesma versão;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>O processo de exportação em sistema de arquivos não pode ser cancelado;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Caso seja selecionado um canal para ser exportado em sistema de arquivos, seus canais pais na hierarquia de canais que não tenham sido exportados em sistema de arquivos anteriormente serão incluídos na exportação.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Para mais observações, veja <a href="expimp_observacoes_gerais.htm">Observações Gerais</a>.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 36px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 1px;">Por padrão, a exportação em sistema de arquivos armazena os dados em <span style="font-style: italic;">lumisdata/structure/default</span>. Este caminho pode ser alterado com a propriedade de sistema <span class="f_CodeExample">lumis.portal.structure.sync.default.path</span>. Se a propriedade referenciar um diretório fora de <span style="font-style: italic;">lumisdata/structure</span>, os arquivos exportados não serão replicados para outros servidores em ambiente multi-server. Esta propriedade deve ser utilizada apenas em ambientes de desenvolvimento, para por exemplo, permitir a exportação/importação diretamente em uma área com controle de versão.</p>
+<p style="margin: 14px 0px 0px 0px;">São exportados: canais, páginas, instâncias de serviço (sem conteúdo), instâncias de interface, ACLs, property bags, grupos locais e seus membros que sejam grupos (apenas a referência ao grupo como membro daquele grupo local), estilos de instâncias de interface que foram cadastrados na montagem, tipos de transformações.</p>
+<p style="margin: 14px 0px 0px 0px;">No caso de estilos, apenas os cadastros de estilos são exportados, os arquivos XSL não são levados. São exportados todos os estilos públicos e compartilhados; e os estilos isolados a alguma instância de interface que também esteja sendo exportada.</p>
+<p style="margin: 14px 0px 0px 0px;">Não são exportados: grupos ou usuários globais, usuários locais, membros de grupos locais que sejam usuários, os arquivos referenciados (e.g.: XSL, CSS, etc.), conteúdos dos serviços, cadastros globais efetuados nas áreas de <a href="configuracao.htm">Configuração</a> da administração do portal.</p>
+<p style="margin: 14px 0px 0px 0px;">Nem todos os elementos têm seus identificadores exportados. Identificadores de elementos importantes (canais, páginas, instâncias de serviço, instâncias de interface, grupos, estilos) são exportados. Outros identificadores não são exportados e serão gerados novos durante a importação.</p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplo, considere a exportação do canal "Agenda de eventos", como mostra-se a seguir:</p>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><img src="portalstudio280.jpg" width="219" height="165" border="0" alt="portalStudio280" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Com o <span style="font-style: italic;">right-click</span> no canal “Agenda de Eventos”, selecione a opção <span style="font-style: italic;">Exportar. </span>Em seguida, irá ser exibida a tela de seleção do tipo de exportação. Nela selecione a opção "Estrutura", como a seguir:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio281.jpeg" width="900" height="605" border="0" alt="portalStudio281" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">Uma tela com o progresso da exportação será apresentada, como abaixo:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio285.jpg" width="910" height="611" border="0" alt="portalStudio285" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Depois da exportação, observando no sistema de arquivos, podemos ver a seguinte estrutura (dentro da pasta <span style="font-family: 'Arial'; font-style: italic;">lumisdata</span>):</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio286.jpg" width="201" height="150" border="0" alt="portalStudio286" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Nesse caso, podemos ver que os canais "Portal", "Agenda de Eventos" e "Administração" geraram uma pasta para cada na exportação com o seu identificador amigável como nome. Abrindo a pasta "agenda-de-eventos", podemos ver:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portalstudio287.jpg" width="425" height="191" border="0" alt="portalStudio287" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Nessa pasta, encontram-se os arquivos referentes ao canal "Agenda de Eventos", às páginas "Detalhes", "Lista" e "Lista Rápida" e à instância de serviço "Agenda de Eventos".</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

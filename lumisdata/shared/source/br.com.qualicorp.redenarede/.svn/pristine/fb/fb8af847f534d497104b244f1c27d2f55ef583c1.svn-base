@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"  xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service>
+		<sources>
+			<source id="beneficiario" >
+				<table>QC_BENEFICIARIO</table>
+				<fields>
+					<field id="id" 						name="id" 					dataType="guid" isPrimaryKey="true" display="false"/>
+					<field id="user_id" 				name="STR_USER_ID" 			dataType="guid" required="false"/>
+					<field id="cpf" 					name="STR_CPF" 				dataType="string"/>
+					<field id="rg" 						name="STR_RG" 				dataType="string"/>
+					<field id="orgao_emissor" 			name="STR_ORGAO_EMISSOR" 	dataType="string"/>
+					<field id="nome_mae" 				name="STR_NOME_MAE" 		dataType="string" />
+					<field id="data_nascimento"			name="STR_DATA_NASCIMENTO"	dataType="date" />
+					<field id="telefone"	 			name="STR_TELEFONE"			dataType="string" required="false"/>
+					<field id="numero_carteira"			name="STR_NUMERO_CARTEIRA"	dataType="string"/>
+				</fields>
+				
+				<relations>
+					<relation id="lumisuser">
+						<relationField fieldId="user_id" foreignFieldId="userId"/>
+					</relation>
+				</relations>
+			</source>
+			<source id="prestador" >
+				<table>QC_PRESTADOR</table>
+				<fields>
+					<field id="id" 						name="id" 									dataType="guid" 	isPrimaryKey="true" display="false"/>
+					<field id="user_id" 				name="STR_USER_ID" 							dataType="guid" required="false"/>
+					<field id="cpf_cnpj" 				name="STR_CPF_CNPJ" 						dataType="guid"/>
+					<field id="razao_social" 			name="STR_RAZAO_SOCIAL" 					dataType="string" required="false"/>
+					<field id="telefone"	 			name="STR_TELEFONE"							dataType="string" required="false"/>
+				</fields>
+				
+				<relations>
+					<relation id="lumisuser">
+						<relationField fieldId="user_id" foreignFieldId="userId"/>
+					</relation>
+				</relations>
+			</source>
+
+			<source id="lumisuser" type="table">
+				<table>lum_User</table>
+				<fields>
+					<field id="userId" dataType="guid" isPrimaryKey="true" />
+					<field id="firstName" dataType="string" isPrimaryName="true" />
+					<field id="email" dataType="string" />
+				</fields>
+			</source>
+			
+		</sources>
+	</service>
+	
+	<interfaces>
+		<interface id="addbeneficiario">
+			<sources>
+				<source id="beneficiario">
+					<fields inherit="all">
+						<field id="nome" 			dataType="string" 		externalData="true"/>
+						<field id="email" 			dataType="string"		externalData="true"/>
+						<field id="data_nascimento_str"	dataType="string"		externalData="true"/>
+						<field id="password" 		dataType="string" 		externalData="true" />
+						<field id="confirmpassword" dataType="string" 		externalData="true" />
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="ancora"/>
+				</control:lum_link>
+				<control:lum_link id="link_esqueci_senha_beneficiario">
+					<hyperLink	interfaceId="br.com.qualicorp.redenarede.service.login.esqueciSenhaBeneficiario">
+						<target type="interface"/>
+					</hyperLink>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.useraccount.processaction.InitAddBeneficiarioProcessActionHandler"/>
+			</processActions>
+		</interface>
+
+		<interface id="addprestador">
+			<sources>
+				<source id="prestador">
+					<fields  inherit="all">
+						<field id="nome" 				dataType="string" 	externalData="true"/>
+						<field id="email" 				dataType="string"  externalData="true"/>
+						<field id="password" 			dataType="string" 	externalData="true" />
+						<field id="confirmpassword" 	dataType="string" 	externalData="true" />
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form/>
+				<control:lum_link id="link">
+					<hyperLink interfaceId="ancora_prestador"/>
+				</control:lum_link>
+				<control:lum_link id="link_esqueci_senha_prestador">
+					<hyperLink	interfaceId="br.com.qualicorp.redenarede.service.login.esqueciSenhaPrestador">
+						<target type="interface"/>
+					</hyperLink>
+				</control:lum_link>
+			</controls>
+			<processActions>
+				<processAction id="commit" perfil="qc.prestador" className="br.com.qualicorp.redenarede.service.useraccount.processaction.AddPrestadorProcessActionHandler"/>
+			</processActions>
+		</interface>
+		
+		<interface id="ancora">
+			<controls></controls>
+		</interface>
+		
+		<interface id="ancora_prestador">
+			<controls></controls>
+		</interface>
+		
+		<interface id="rotina">
+			<controls>
+				<control:lum_form>
+					<control:lum_button id="rodar" text="rodar">
+						<onClick type="processAction" processActionId="rodar">
+						</onClick>
+					</control:lum_button>
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="rodar" className="br.com.qualicorp.redenarede.service.useraccount.processaction.RodarScriptProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+	</interfaces>
+	
+</doui:douiDefinition>

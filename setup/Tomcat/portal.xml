@@ -1,0 +1,2 @@
+<!-- $Revision: 9776 $ $Date: 2008-09-11 16:57:55 -0300 (Thu, 11 Sep 2008) $ -->
+<Context path="/portal" docBase="LUMIS_CONTEXT_ROOT" crossContext="true"/>

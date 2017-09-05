@@ -1,0 +1,426 @@
+Starting setup...
+
+
+Default Locales added
+
+User added: admin
+
+User added: guest
+
+User added: lumisframeworkclockuser
+
+User added: lumispagecacheuser
+
+User added: lumissystemuser
+
+Created Audit Categories and Types
+
+Portal ACL created
+
+Group added: todos
+
+Group added: cadastrados
+
+Group added: admins
+
+Group added: developers
+
+Users set as members of group admins
+
+admin group set as members of group developers and publishers
+
+Admin page added: STR_SERVICES_NAME
+
+Admin page added: STR_PAGES_NAME
+
+Admin page added: STR_SUBCHANNELS_NAME
+
+Admin page added: STR_PAGE_TEMPLATES_NAME
+
+Admin page added: STR_CHANNEL_TEMPLATES_NAME
+
+Admin page added: STR_LOCAL_GROUPS_NAME
+
+Admin page added: STR_LOCAL_USERS_NAME
+
+Admin page added: STR_BLANK_PAGE
+
+Channel added: Portal
+
+Channel added: Lumis
+
+Controls registered
+
+Sources registered
+
+ProcessActions registered
+
+Service types registered
+
+Menu item types registered
+
+Menu group types registered
+
+Observers registered
+
+Service registered: lumis/portal/cluster/multiserver
+
+Service registered: lumis/portal/monitor/impl
+
+Service registered: lumis/service/activitystream
+
+Service registered: lumis/service/album
+
+Service registered: lumis/service/announcement
+
+Service registered: lumis/service/association
+
+Service registered: lumis/service/autoadministration
+
+Service registered: lumis/service/banner
+
+Service registered: lumis/service/blog
+
+Service registered: lumis/service/callcenteronline
+
+Service registered: lumis/service/categorization
+
+Service registered: lumis/collaboration/chat
+
+Service registered: lumis/service/chatroom
+
+Service registered: lumis/service/comment
+
+Service registered: lumis/service/community
+
+Service registered: lumis/service/contact
+
+Service registered: lumis/service/contactus
+
+Service registered: lumis/service/content/comments
+
+Service registered: lumis/service/content/preview
+
+Service registered: lumis/service/content/language
+
+Service registered: lumis/service/content/publishtoprincipals
+
+Service registered: lumis/service/content/publishtoserviceinstances
+
+Service registered: lumis/service/content/publishtosocialnetworks
+
+Service registered: lumis/service/content/version
+
+Service registered: lumis/service/content/wizard
+
+Service registered: lumis/service/event
+
+Service registered: lumis/service/document
+
+Service registered: lumis/service/doui/datepicker
+
+Service registered: lumis/service/doui/dynamiclist
+
+Service registered: lumis/service/doui/fields
+
+Service registered: lumis/service/doui/filelist
+
+Service registered: lumis/service/doui/filters
+
+Service registered: lumis/service/doui/htmleditor
+
+Service registered: lumis/service/doui/htmlsnippet
+
+Service registered: lumis/service/doui/maxrows
+
+Service registered: lumis/service/doui/uploadtempfiles
+
+Service registered: lumis/service/doui/orderby
+
+Service registered: lumis/service/doui/parentcontent
+
+Service registered: lumis/service/doui/principalpicker
+
+Service registered: lumis/service/faq
+
+Service registered: lumis/service/forum
+
+Service registered: lumis/service/group
+
+Service registered: lumis/service/hierarchicalcontent
+
+Service registered: lumis/service/html
+
+Service registered: lumis/service/htmlcontent
+
+Service registered: lumis/service/htmlevaluation
+
+Service registered: lumis/service/locale
+
+Service registered: lumis/service/link
+
+Service registered: lumis/service/login
+
+Service registered: lumis/service/mailmarketing
+
+Service registered: lumis/service/media
+
+Service registered: lumis/service/mediaalbum
+
+Service registered: lumis/service/doui/fileupload/editimage
+
+Service registered: lumis/service/navigation
+
+Service registered: lumis/service/news
+
+Service registered: lumis/service/newsletter
+
+Service registered: lumis/service/pagepersonalization
+
+Service registered: lumis/service/portalmanagement/audit
+
+Service registered: lumis/service/portalmanagement/authentication
+
+Service registered: lumis/service/portalmanagement/businesscontext
+
+Service registered: lumis/service/portalmanagement/cache
+
+Service registered: lumis/service/portalmanagement/channel
+
+Service registered: lumis/service/portalmanagement/channelacl
+
+Service registered: lumis/service/portalmanagement/channeltemplate
+
+Service registered: lumis/service/portalmanagement/clock
+
+Service registered: lumis/service/portalmanagement/controlregistry
+
+Service registered: lumis/service/portalmanagement/css
+
+Service registered: lumis/service/portalmanagement/cluster
+
+Service registered: lumis/service/portalmanagement/deployment
+
+Service registered: lumis/service/portalmanagement/deployment/portlet
+
+Service registered: lumis/service/portalmanagement/file
+
+Service registered: lumis/service/portalmanagement/filemacrotypemapping
+
+Service registered: lumis/service/portalmanagement/filemimetype
+
+Service registered: lumis/service/portalmanagement/filesystem
+
+Service registered: lumis/service/portalmanagement/genericacl
+
+Service registered: lumis/service/portalmanagement/group
+
+Service registered: lumis/service/portalmanagement/grouptype
+
+Service registered: lumis/service/portalmanagement/groupacl
+
+Service registered: lumis/service/portalmanagement/importexport
+
+Service registered: lumis/service/portalmanagement/importprincipal
+
+Service registered: lumis/service/portalmanagement/interactiveprocess
+
+Service registered: lumis/service/portalmanagement/localgroup
+
+Service registered: lumis/service/portalmanagement/localuser
+
+Service registered: lumis/service/portalmanagement/lock
+
+Service registered: lumis/service/portalmanagement/monitor
+
+Service registered: lumis/service/portalmanagement/monitoring
+
+Service registered: lumis/service/portalmanagement/observer
+
+Service registered: lumis/service/portalmanagement/page
+
+Service registered: lumis/service/portalmanagement/pageacl
+
+Service registered: lumis/service/portalmanagement/pagecache
+
+Service registered: lumis/service/portalmanagement/pagelink
+
+Service registered: lumis/service/portalmanagement/pagetemplate
+
+Service registered: lumis/service/portalmanagement/pagetemplateacl
+
+Service registered: lumis/service/portalmanagement/portalacl
+
+Service registered: lumis/service/portalmanagement/processqueue/config
+
+Service registered: lumis/service/portalmanagement/processqueue/manage
+
+Service registered: lumis/service/portalmanagement/project
+
+Service registered: lumis/service/portalmanagement/reporttype
+
+Service registered: lumis/service/portalmanagement/sendmail
+
+Service registered: lumis/service/portalmanagement/serialization
+
+Service registered: lumis/service/portalmanagement/server
+
+Service registered: lumis/service/portalmanagement/service
+
+Service registered: lumis/service/portalmanagement/serviceacl
+
+Service registered: lumis/service/portalmanagement/serviceinstance
+
+Service registered: lumis/service/portalmanagement/serviceinstanceacl
+
+Service registered: lumis/service/portalmanagement/serviceinterfaceinstance
+
+Service registered: lumis/service/portalmanagement/servicemenutype
+
+Service registered: lumis/service/portalmanagement/servicetype
+
+Service registered: lumis/service/portalmanagement/servicesearchindex
+
+Service registered: lumis/service/portalmanagement/socialnetwork
+
+Service registered: lumis/service/portalmanagement/socialnetworkintegration
+
+Service registered: lumis/service/portalmanagement/structureeditor
+
+Service registered: lumis/service/portalmanagement/structure/doui/control/layoutfile
+
+Service registered: lumis/service/portalmanagement/systeminfo
+
+Service registered: lumis/service/portalmanagement/theme
+
+Service registered: lumis/service/portalmanagement/user
+
+Service registered: lumis/service/portalmanagement/webfilereplication
+
+Service registered: lumis/service/portalmanagement/webresource
+
+Service registered: lumis/service/portalmanagement/website
+
+Service registered: lumis/service/portalmanagement/xslcache
+
+Service registered: lumis/service/portalmanagement/xsleditor
+
+Service registered: lumis/service/print
+
+Service registered: lumis/service/questionnaire
+
+Service registered: lumis/service/report
+
+Service registered: lumis/service/resourcescheduler
+
+Service registered: lumis/service/rss
+
+Service registered: lumis/service/search
+
+Service registered: lumis/service/sendtofriend
+
+Service registered: lumis/service/seo/robotstxt
+
+Service registered: lumis/service/seo/sitemap
+
+Service registered: lumis/service/simplecontent
+
+Service registered: lumis/service/socialnetworkintegration
+
+Service registered: lumis/service/likeit
+
+Service registered: lumis/service/commentit
+
+Service registered: lumis/service/socialnetworkservices/microblog
+
+Service registered: lumis/service/socialnetworkservices/socialprofile
+
+Service registered: lumis/service/user
+
+Service registered: lumis/service/uframe
+
+Service registered: lumis/service/urlshortener
+
+Service registered: lumis/service/vote
+
+Service registered: lumis/service/webpage
+
+Service registered: lumis/service/webserviceviewer
+
+Service registered: lumis/service/workflow
+
+Service registered: lumis/service/wiki
+
+Service registered: lumis/service/wsrp/consumer
+
+Service registered: lumis/service/wsrp/producer
+
+Report types registered
+
+Activity stream actions registered
+
+Service Interface Instance added on page LumisServices
+
+Service interface instances added: portalmanagement/serviceinstance
+
+Service Interface Instance added on page LumisPages
+
+Service interface instances added: portalmanagement/page
+
+Service Interface Instance added on page LumisSubChannels
+
+Service interface instances added: portalmanagement/channel
+
+Service Interface Instance added on page LumisChannelTemplates
+
+Service interface instances added: portalmanagement/channeltemplate
+
+Service Interface Instance added on page LumisPageTemplates
+
+Service interface instances added: portalmanagement/pagetemplate
+
+Service Interface Instance added on page LumisLocalUsers
+
+Service interface instances added: portalmanagement/localuser
+
+Service Interface Instance added on page LumisLocalGroups
+
+Service interface instances added: portalmanagement/localgroup
+
+Page added: STR_WELCOME
+
+Service Instance added: CSS Management
+
+CSS added: Portal
+
+CSS associated with channel Portal
+
+Instantiating permission disabled for service: lumis.service.portalmanagement.channel
+
+Instantiating permission disabled for service: lumis.service.portalmanagement.page
+
+Instantiating permission disabled for service: lumis.service.portalmanagement.pagetemplate
+
+Instantiating permission disabled for service: lumis.service.portalmanagement.serviceinstance
+
+Created Lumis Portal Administration Channels
+
+Default Mime Types added
+
+Default web replication types added
+
+Default transformation builders added
+
+Default social networks added
+
+Default context added
+
+Auto administration information added
+
+Classic theme registered
+
+7.0 theme registered
+
+Admin theme registered
+
+Setup finished successfully.

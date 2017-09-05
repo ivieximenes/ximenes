@@ -1,0 +1,605 @@
+
+/* Admin CSS  $Revision: 14952 $ $Date: 2012-11-12 10:35:24 -0200 (Mon, 12 Nov 2012) $ */
+
+/* begin global */
+.cLumBody
+{
+	background:white;
+}
+
+.cLumBody, pre
+{
+	margin:0;
+	font-family:verdana,arial,sans-serif;
+	font-size:11px;
+	color:#656565;
+}
+.cLumPage
+{
+	background:white;
+}
+table, span, div, input, select, textarea, td, a
+{
+	font-family:verdana,arial,sans-serif;
+	font-size:11px;
+	color:#656565;	
+}
+
+a
+{
+	text-decoration:none;
+	cursor:hand;cursor:pointer;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+textarea
+{
+	overflow:auto;
+}
+/* end global */
+
+/* begin admin only */
+.cLumAdminTreeChannel
+{
+	background:url(../../../portal/client/images/Channel.gif) no-repeat 2px;
+	padding: 0 0 0 20px;
+	cursor:hand;
+}
+.cLumAdminTreeChannelTemplate
+{
+	background:url(../../../portal/client/images/ChannelTemplate.gif) no-repeat 2px;
+	padding: 0 0 1px 20px;
+	cursor:hand;
+}
+.cLumAdminTreePage
+{
+	background:url(../../../portal/client/images/Page.gif) no-repeat 2px;
+	padding: 0 0 1px 20px;
+	cursor:hand;
+}
+.cLumAdminTreePageTemplate
+{
+	background:url(../../../portal/client/images/PageTemplate.gif) no-repeat 2px;
+	padding: 0 0 1px 20px;
+	cursor:hand;
+}
+/* end admin only */
+
+/* begin specific */
+.cLumInputText, .cLumTextArea, .cLumInputNumber
+{
+	border:1px solid #C0C0C0;
+	width:386px;
+	margin:3px;
+	margin-right:5px;
+}
+
+.cLumInputNumber
+{
+	width:40px;
+	text-align:right;
+}
+
+input.cLumInputText
+{
+	height:18px;
+}
+
+.cLumValidatorText
+{
+	padding-left:1px;
+	color:red;
+}
+
+.cLumDisabledInputText
+{
+	border: 1px solid #DDDDDA;
+	width:386px;
+	height:18px;
+}
+
+.cLumFilters 
+{
+	padding:10px 16px;
+	background:white;
+	border-left:1px solid #C8C7C7;
+	border-right:1px solid #C8C7C7;
+	border-top:0;
+}
+
+.cLumFiltersIndependent
+{
+	background:white;
+}
+
+.cLumPropertyPage
+{
+	width:auto !important;
+	background:none !important;
+	padding:5px 0 !important;
+}
+
+.cLumLabel
+{
+	padding:0 10px 0 0;
+	width:120px;
+	font-weight:normal;
+}
+
+.cLumRequiredValuesDescriptor
+{
+	padding-top:10px;
+}
+
+.cLumTableAdmin
+{
+	border:1px solid #C8C7C7;
+	border-top:1px solid #EEEEEB;
+}
+.cLumTableAdmin a
+{
+	color:#696969;
+}
+.cLumTableAdmin th, .cLumTableAdmin td
+{
+	border-bottom:0;
+}
+
+.cLumEvenRow
+{
+	background:#F9F9F2;
+}
+.cLumTableAdminHeader
+{
+	white-space: nowrap;
+}
+.cLumTableAdminHeaderRow
+{
+	font-weight:bold;
+	padding:8px;
+	background:#F9F9F2;
+	height:26px;
+}
+
+a.cLumTableAdminHeaderSelected
+{
+	color:#8C0C06;
+}
+
+img.cLumTableAdminHeaderOrder
+{
+	vertical-align:middle;
+	border:0;
+	margin:0 0 0 8px;
+}
+
+img.cLumAdminRowImg
+{
+	vertical-align:top;
+	border:0;
+	margin:3px 8px;
+}
+
+.cLumTableAdminCell
+{
+	padding:2px 0px 2px 7px;
+}
+
+.cLumInterfaceButtons a
+{
+	color:#AAAAAA;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.cLumControlGroup
+{
+	width:100%;
+	padding:5px !important;
+	background:none repeat scroll 0 0 #FAFAF5 !important;
+	border:1px solid #EEEEE7 !important;
+}
+.cLumControlGroupHeader
+{
+	padding:10px 10px 5px 10px;
+	font-weight:bold;
+}
+.cLumControlBlock
+{
+	margin:8px 0 0 0;
+	padding:5px;
+	background:#F9F8F8;
+	border:1px solid #D2D1D1;
+}
+
+.cLumAdminPropertyDialogLabelCell
+{
+	white-space: nowrap;
+}
+
+.cLumAdminPropertyDialogTextBoxCell
+{
+	width:100%;
+}
+
+.cInterfaceButtons
+{
+	padding-top:10px;
+}
+
+span.cLumSpacer
+{
+	font-size:0;
+}
+/* end specific */
+
+/* begin buttons */
+#LumButton1 ul 
+{
+	margin:0;
+	padding:0;
+	float:left;
+	width:auto;
+	list-style-type:none;
+}
+#LumButton1 ul li 
+{ 
+	display:inline;
+}
+#LumButton1 a 
+{
+	float:left;
+	display:block;
+	white-space:nowrap;
+	_height:25px;/*IE only*/
+	padding:6px 5px;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#4E4E4E;
+	text-decoration:none;
+	background:#E0E0CC url(../../../portal/client/images/Button1_bg.gif) top left repeat-x;
+}
+#LumButton1 .brdleft, #LumButton1 .brdright 
+{
+	float:left;
+	width:5px;
+	height:25px;	
+}
+#LumButton1 ul li .spacer 
+{
+	float:left;
+	width:9px;
+	height:25px;
+}
+#LumButton1 .brdleft 
+{
+	background:#E0E0CC url(../../../portal/client/images/Button1_brdleft.gif) top left no-repeat;
+}
+#LumButton1 .brdright {
+	background:#E0E0CC url(../../../portal/client/images/Button1_brdright.gif) top left no-repeat;
+}
+#LumButton1 img
+{
+	vertical-align:top;
+	margin:0 6px 0 0;
+	border:0;
+}
+#LumButton2
+{
+	width:auto;
+	padding:7px 11px 7px 21px;
+	background:#EFEFDE;
+	border-left:1px solid #C8C7C7;
+	border-right:1px solid #C8C7C7;
+}
+#LumButton2 ul
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#LumButton2 ul li
+{
+    display:inline;
+}
+#LumButton2 a
+{
+    display:block;
+    float:left;
+    height:16px;
+    line-height:16px;
+    white-space:nowrap;
+    margin:0 15px 0 0;
+    padding:0;
+    font-weight:bold;
+    color:#696969;
+}
+#LumButton2 img
+{
+    vertical-align:middle;
+    margin:0 6px 0 0;
+    border:0;
+}
+
+/* admin do not use LumButton3 */
+
+/* end buttons */
+
+
+/* begin tabs */
+#LumTabs ul 
+{
+	width:100%;
+	margin:0;
+	padding:0;
+	background:white url(../../../portal/client/images/Tab_bg.gif) top left repeat-x;
+	float:left;
+}
+#LumTabs ul li 
+{ 
+	display:inline; 
+}
+#LumTabs ul li a 
+{
+	_height:22px;/*IE only*/
+	padding:0 12px 0 12px;
+	line-height:22px;
+	font-size:12px;
+	font-weight:bold;
+	color:#4E4E4E;
+	text-decoration:none;
+	background:white;
+	border-top:1px solid #B2B2A5;
+	border-bottom:1px solid #B2B2A5;
+	float:left;
+}
+#LumTabs ul li a.selected 
+{
+	background:#FFFFFF;
+	color:#8C0C06;
+	border-bottom:1px solid #FFFFFF;
+}
+#LumTabs ul li .tab_first_left_on, 
+#LumTabs ul li .tab_first_left_off, 
+#LumTabs ul li .tab_middle_left_on, 
+#LumTabs ul li .tab_middle_left_off, 
+#LumTabs ul li .tab_middle_right_on, 
+#LumTabs ul li .tab_middle_right_off, 
+#LumTabs ul li .tab_middle_right_off2, 
+#LumTabs ul li .tab_last_right_on, 
+#LumTabs ul li .tab_last_right_off
+{
+	width:4px;
+	height:24px;
+	float:left;	
+}
+#LumTabs ul li .tab_first_left_on 
+{
+	background:url(../../../portal/client/images/Tab_first_left_on.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_first_left_off 
+{
+	background:url(../../../portal/client/images/Tab_first_left_off.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_middle_left_on 
+{
+	background:url(../../../portal/client/images/Tab_middle_left_on.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_middle_left_off 
+{
+	background:url(../../../portal/client/images/Tab_middle_left_off.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_middle_right_on 
+{
+	background:url(../../../portal/client/images/Tab_middle_right_on.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_middle_right_off 
+{
+	background:url(../../../portal/client/images/Tab_middle_right_off.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_middle_right_off2 
+{
+	background:url(../../../portal/client/images/Tab_middle_right_off2.gif) top left no-repeat;
+}
+#LumTabs ul li .tab_last_right_on 
+{
+	background:url(../../../portal/client/images/Tab_last_right_on.gif) top left no-repeat;
+	width:8px;
+}
+#LumTabs ul li .tab_last_right_off 
+{
+	background:url(../../../portal/client/images/Tab_last_right_off.gif) top left no-repeat;
+	width:8px;
+}
+.cLumTabBox
+{
+	background:#FFFFFF;
+	border:1px solid #B2B2A5;
+	border-top:0px;
+	padding:10px 10px 25px 10px;
+}
+/* end tabs */
+
+
+/* begin areas */
+.cLumisInterface
+{
+	padding:5px;
+}
+
+#LumInterfaceHeader_top 
+{
+	display:block;
+	height:4px;
+	background:#FFE3B1 url(../../../portal/client/images/InterfaceHeader_brd_topmid.gif) top left repeat-x;
+}
+#LumInterfaceHeader_top .cLumBrdLeft
+{
+	display:block;
+	width:4px;
+	height:4px;
+	background:white url(../../../portal/client/images/InterfaceHeader_brd_topleft.gif) top left no-repeat;
+	float:left;
+}
+#LumInterfaceHeader_top .cLumBrdRight 
+{
+	display:block;
+	width:4px;
+	height:4px;
+	background:white url(../../../portal/client/images/InterfaceHeader_brd_topright.gif) top right no-repeat;
+	float:right;
+}
+
+#LumInterfaceHeader 
+{
+	width:auto;
+	padding:5px 10px;
+	background:#FFE3B1;
+	border:1px solid #FFC763;
+	border-top:0;
+}
+#LumInterfaceHeader .tit 
+{
+	color:#656565;
+	font-weight:bold;
+	text-transform:none;
+	letter-spacing:0;
+	font-size:11px;
+	float:left;
+}
+#LumInterfaceHeader a.bt_filter 
+{
+	display:block;
+	float:right;
+	width:15px;
+	height:14px;
+	background:url(../../../portal/client/images/FilterButton.gif) top left no-repeat;
+}
+
+#LumPropertyPageHeader
+{
+	width:auto;
+}
+#LumPropertyPageHeader .headerTitle
+{
+	background:#FFE3B1;
+	border:1px solid #FFC763;
+	border-right:0;
+	border-left:0;
+	padding-left:5px;
+	font-size:11px;
+	font-weight:bold;
+	color:#656565;
+}
+
+#LumPropertyPageBody
+{
+	background:white;
+	border:1px solid #C8C7C7;
+	border-bottom:0;
+	border-top:0;
+	padding:15px 12px 0 12px;
+	_width:100%;
+}
+
+#LumPropertyPageFooter 
+{
+	display:block;
+	width:auto;
+	height:9px;
+}
+#LumPropertyPageFooter .mid 
+{
+	font-size:1px;
+	background:white;
+	border-bottom:1px solid #C8C7C7;
+}
+
+#Navigation
+{
+	width:auto;
+	background:white;
+	border-top:1px solid #D3D3C3;
+	border-bottom:1px solid #D3D3C3;
+	padding:2px 0;
+	margin:15px 0 6px 0; 
+}
+#Navigation .pad1
+{
+	padding:0 0 0 12px;
+}
+#Navigation .pad2
+{
+	padding:0 12px 0 0;
+}
+
+#LumisCalendar
+{	
+	width:203px;
+	background:#FFF7E7;
+	height:100%;
+	padding:8px;
+}
+.cLumCalendarbody
+{
+	border-left:1px solid #C8C7C7;
+	border-right:1px solid #C8C7C7;	
+	background:#FFFFFF;
+	padding:10px 9px 0 9px ;
+	text-align:center;	
+}
+.cLumCalendarBody a
+{
+	color:#666;
+
+}
+.cLumCalendarbody th.cLumCalendarTitle
+{
+	margin:0 3px;		
+	padding:3px 6px;
+	text-align:center;
+	font-weight:bold;
+	background:#DDDDDD;
+}
+.cLumCalendarbody td
+{
+	text-align:center;
+}
+#LumisCalendarBottom
+{
+	height:8px;		
+	background:url(../../../portal/client/images/PropertyPageFooter_brdmid.gif) #FFF bottom left repeat-x;
+}
+#LumisCalendarBottom .cLumBrdLeft
+{
+	background:url(../../../portal/client/images/PropertyPageFooter_brdleft.gif) #FFF7E7 bottom left   no-repeat;	
+	height:9px;
+	width:9px;
+	float:left;
+}
+#LumisCalendarBottom .cLumBrdRight
+{
+	background:url(../../../portal/client/images/PropertyPageFooter_brdright.gif) #FFF7E7 bottom right   no-repeat;
+	float:right;
+	height:9px;
+	width:9px;	
+}
+.cLumCalendarNow
+{
+	border:1px solid #FFC763;
+	background:#FFF1D8;
+}
+
+#lumPublishingArea tr td
+{
+	padding:4px;
+	background:white;
+}
+/* end areas */
+
+
+

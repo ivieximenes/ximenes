@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 8914 $ $Date: 2008-02-25 13:58:12 -0300 (Mon, 25 Feb 2008) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_genericValidator"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_genericValidator"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_genericValidator">
+		<xsd:complexContent>
+			<xsd:extension base="lum_validatorControl"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_dateCompareValidator">
+		<xsd:complexContent>
+			<xsd:extension base="lum_validatorControl">
+				<xsd:attribute name="compareToControlId" type="xsd:string"/>
+				<xsd:attribute name="operator" type="xsd:string"/>
+				<xsd:attribute name="dateFormat" type="xsd:string" default="STR_DEFAULT_DATE_FORMAT"/>
+				<xsd:attribute name="timeFormat" type="xsd:string" default="STR_DEFAULT_TIME_FORMAT"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_integerDataTypeValidator">
+		<xsd:complexContent>
+			<xsd:extension base="lum_validatorControl">
+				<xsd:attribute name="minimumValue" type="xsd:integer"/>
+				<xsd:attribute name="maximumValue" type="xsd:integer"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="compareValidatorOperator">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="equal" />
+			<xsd:enumeration value="lessThan" />
+			<xsd:enumeration value="lessThanOrEqual" />
+			<xsd:enumeration value="greaterThan" />
+			<xsd:enumeration value="greaterThanOrEqual" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="lum_regularExpressionValidator">
+		<xsd:complexContent>
+			<xsd:extension base="lum_validatorControl">
+				<xsd:attribute name="expression" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_lengthValidator">
+		<xsd:complexContent>
+			<xsd:extension base="lum_validatorControl">
+				<xsd:attribute name="maxLength" type="xsd:integer">
+					<xsd:annotation>
+						<xsd:documentation>Optional attribute to specify the maximum length of the string allowed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="minLength" type="xsd:integer">
+					<xsd:annotation>
+						<xsd:documentation>Optional attribute to specify the minimum length of the string allowed.</xsd:documentation>
+					</xsd:annotation>					
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

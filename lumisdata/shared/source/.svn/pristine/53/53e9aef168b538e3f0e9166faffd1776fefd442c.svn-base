@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851325</id>
+  <name>Rede na Rede - Login</name>
+  <description>Permite autenticar usuários e atualizar seus dados.</description>
+  <service-id>br.com.qualicorp.redenarede.service.login</service-id>
+  <access-control-list>
+    <entries>
+      <entry principal-id="00000000C00000000000000000000001">
+        <allow-permissions>8</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</service-instance>

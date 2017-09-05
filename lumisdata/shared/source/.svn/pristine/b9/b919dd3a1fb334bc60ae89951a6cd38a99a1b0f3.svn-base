@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC685132B</id>
+  <name>Home</name>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-home.html</layout-file>
+  <layout><![CDATA[<layout><holder id="menu"><interface id="0000000050A1A02C0150A1B0EDA5197A"/></holder><holder id="busca"><interface id="0000000050A1A02C0150A1B117DE19A2"/></holder><holder id="login"><interface id="0000000050A1A02C0150A1B9BF0C284D"/></holder><holder id="banner"><interface id="8A489E1F50AE95AA0150B8A5FFB93011"/></holder><holder id="servicos"><interface id="0000000050A1A02C0150A1B091CE1941"/></holder><holder id="noticias"><interface id="0000000050A1A02C0150A1B0BD5B1964"/></holder></layout>]]></layout>
+  <property-bag>
+    <property name="lumis.portal.url.forceFirstPageLinkToChannelLink">
+      <default-values>
+        <value>false</value>
+      </default-values>
+    </property>
+  </property-bag>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1B091CE1941</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC685132D</service-instance-id>
+      <interface-id>lumis.service.link.quicklist</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B89F052373</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1B0BD5B1964</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC686133C</service-instance-id>
+      <interface-id>lumis.service.news.quicklist</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B9642F25EB</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_filters"><![CDATA[<filters><filter filterType="basic" id="isHighlight" fieldId="highlight" operator="equal" showItems="all" defaultValue="true" hidden="true"/></filters>]]></custom-property>
+        <custom-property name="default.doui_maxRows"><![CDATA[4]]></custom-property>
+        <custom-property name="default.doui_orderBy"><![CDATA[<orderBy><field id="publishStartDate" direction="descending" /></orderBy>]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1B0EDA5197A</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1B117DE19A2</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <render-as>INLINE</render-as>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1B9BF0C284D</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <render-as>INLINE</render-as>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8A5FFB93011</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC685132A</service-instance-id>
+      <interface-id>lumis.service.banner.banner</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150B8A758D73061</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="paramBannerLogClick"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerLogView"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerRandomize"><![CDATA[0]]></custom-property>
+        <custom-property name="paramBannerTotalItems"><![CDATA[1000]]></custom-property>
+        <custom-property name="paramTimeout"><![CDATA[0]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+  </interface-instances>
+</page>

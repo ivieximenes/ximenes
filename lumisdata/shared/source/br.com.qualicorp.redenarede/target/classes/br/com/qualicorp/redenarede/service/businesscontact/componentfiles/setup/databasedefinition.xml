@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- $Revision: 16445 $ $Date: 2014-09-18 18:21:12 -0300 (Thu, 18 Sep 2014) $ -->
+<databaseDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/databasedefinition.xsd">
+	
+	<table name="qc_businesscontact">
+		<fields>
+			<field name="id" type="guid" isNotNull="true" />
+			<field name="nome" type="string" isNotNull="true" />
+			<field name="email" type="string" isNotNull="true" />
+			<field name="telefone" type="string" isNotNull="true" />
+			<field name="cpf" type="string" size="20" />
+			<field name="perfil" type="string" />
+			<field name="motivo_contato" type="string" />
+			<field name="mensagem" type="text" isNotNull="true" />
+		</fields>
+		<constraints>
+			<constraint name="businesscontact_PK" type="primaryKey">
+				<fields>
+					<field name="id"/>
+				</fields>
+			</constraint>
+		</constraints>
+	</table>
+	
+</databaseDefinition>

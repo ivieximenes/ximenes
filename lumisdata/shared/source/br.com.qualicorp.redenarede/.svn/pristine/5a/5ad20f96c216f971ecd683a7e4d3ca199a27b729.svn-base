@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output omit-xml-declaration="yes" method="html" />
+	<xsl:import href="/lumis/doui/style/DouiControls.xsl" />
+	
+	<xsl:template match="/">
+	
+	<input id="smart-header-logged" class="visuallyhidden smt-toggler" type="checkbox"/>
+    <label for="smart-header-logged" class="smt-toggler-logged smt-icon-toggler">Menu Logado</label>
+    <nav class="smt-drop-menu">
+        <ul>
+            <li>
+                <input id="smart-header-change-password" data-modal="hide" class="visuallyhidden smt-toggler smt-modal-toggler" type="checkbox"/>
+                <label for="smart-header-change-password" class="smt-toggler-change-password smt-icon-toggler">Alterar senha</label>
+                <div class="smt-modal-change-password smt-modal">
+                    <div class="smt-modal-backdrop">
+                        <div class="smt-modal-wrapper">
+                            <a class="smt-modal-close" href="#">Fechar modal</a>
+                            <article class="smt-modal-popup">
+                                <header class="smt-modal-header">
+                                    <h3 class="smt-modal-title">Alterar Senha</h3>
+                                </header>
+                                <div class="smt-warning success">
+                                    <p>Senha alterada com sucesso!</p>
+                                </div>
+                                <div class="smt-warning error">
+                                    <p>Ocorreu um erro ao processar sua solicitação.</p>
+                                </div>
+                                <div class="smt-modal-body">
+                                    <div class="smt-modal-content">
+                                        <form class="smt-change-password" action="{//control[@type='lum_form']/data/action-commit}" method="post" id="registerform" accept-charset="UTF-8">
+                                            <div class="smt-input-holder">
+                                                <label for="smart-carteirinha-cliente" class="smt-form-label visuallyhidden">N° da carteirinha</label>
+                                                <input class="smt-input" id="login" type="tel" placeholder="N° da carteirinha" name="login" value="{/renderData/douiContext/userLogin}" maxlength="20" readonly="true"/>
+                                            </div>
+                                            <div class="smt-input-holder">
+                                                <label for="smart-password" class="smt-form-label visuallyhidden">Senha atual</label>
+                                                <input class="smt-input" id="password" type="password" placeholder="Senha atual" name="password" maxlength="11"/>
+                                                <label for="smart-password" class="smt-label-warn"></label>
+                                            </div>
+                                            <div class="smt-input-holder">
+                                                <label for="smart-password" class="smt-form-label visuallyhidden">Nova senha</label>
+                                                <input class="smt-input" id="newPassword" type="password" placeholder="Nova senha" name="newPassword" maxlength="11"/>
+                                                <label for="smart-password" class="smt-label-warn">Atenção: sua senha deve possuir entre 8 e 11 caracteres e conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula e 1 caractere especial (Ex.: #, @, &amp; ou _).</label>
+                                            </div>
+                                            <div class="smt-input-holder">
+                                                <label for="smart-password" class="smt-form-label visuallyhidden">Confirme a nova senha</label>
+                                                <input class="smt-input"  id="confirmNewPassword" type="password" placeholder="Confirme a nova senha" name="confirmNewPassword" maxlength="11"/>
+                                            </div>
+                                            <div class="smt-input-holder smt-input-actions">
+                                                <button type="submit" class="smt-main-button" onclick="ga('send', 'event', 'botao', 'clique', 'alterar_senha-enviar');">Enviar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </li>
+             <li>
+                <a target="_blank" href="/gamaoauth/gama" class="smt-logged-item">Carteirinha</a>
+            </li>
+            <li>
+                <a target="_blank" href="/gamaoauth/gama" class="smt-logged-item">Dados pessoais</a>
+            </li>
+            <li>
+                <a href="#" id="buttonform" class="smt-logged-logout">Sair</a>
+            </li>
+        </ul>
+    </nav>
+			
+<script type="text/javascript">
+	<xsl:text disable-output-escaping="yes">
+		<![CDATA[
+	$.validator.addMethod("passwordValidator",
+	    function(value, element) {
+	        return this.optional(element) || /((?=.*\d)(?=.*[a-z])(?=.*?[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,15})$/.test(value);
+   						}, "Formato de Senha Inválido"
+	);
+	
+	$(document).ready(function(){
+		$('.matricula-mask').mask("99999.9.999999.99.9");
+		
+		var curForm = $("#registerform");
+
+		curForm.validate({
+			rules: {
+				login: {required: true},
+				password: {required: true},
+				newPassword: {required: true, minlength: 8, maxlength: 11, passwordValidator: true},
+			    confirmNewPassword: {equalTo: "#newPassword"}
+			},
+			errorClass: 'error smt-message-error',
+			errorElement: "span",
+			messages: {
+				login: "Favor preencher o número da carteirinha",
+				password: "Favor informe a senha atual.",
+				newPassword: {
+					required: "Favor preencher a nova senha.",
+					minlength: "A senha deve ter um mínimo de 8 carateres",
+					maxlength: "A senha deve ter um máximo de 11 carateres",
+					passwordValidator: "Formato de Senha Inválido."
+				},
+				confirmNewPassword: {
+					required: "Favor confirmar a nova  senha",
+					equalTo: "As duas senhas não são iguais."
+				}
+			}, 
+			submitHandler: function(form){
+				$(".smt-main-button").addClass("loading");
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: curForm.attr("action"),
+					data: curForm.serialize(),
+					success: function(data){
+						// success handling here
+						
+						curForm.validate().resetForm(); 
+						curForm[0].reset();
+						
+						$(".smt-main-button").removeClass("loading");
+						$(".smt-warning.error").removeClass('open');
+						$('.smt-warning.success').addClass('open');
+						
+						curForm.closest('.smt-modal-wrapper').find('.smt-modal-close').focus();						
+						
+						return false;
+					}
+
+				}).fail(function(data){
+					// fail handling here
+					if(data.status === 403 || (data.status === 200 && data.getResponseHeader('Content-Type').indexOf('text/html') === 0)) {
+						window.location = curForm.attr("action");
+						return;
+					}
+					try{
+					var dataObj = $.parseJSON(data.responseText)
+					var errorMessage = dataObj.responseParameters.doui_error;
+					if(errorMessage == null)
+						errorMessage = dataObj.responseParameters.error.message;
+						
+					if(errorMessage != null)
+						$(".smt-warning.error").text(errorMessage);
+						
+						console.log(errorMessage);
+					}catch(e){console.log(e);$(".smt-main-button").removeClass("loading");}
+						
+					$(".smt-warning.error").addClass('open');
+					$(".smt-main-button").removeClass("loading");
+				});
+				return false;
+			}
+		});
+	});
+	
+	]]>
+</xsl:text>
+</script>	
+
+</xsl:template>
+	
+</xsl:stylesheet>

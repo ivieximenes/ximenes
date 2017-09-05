@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 6396 $ $Date: 2007-04-11 15:46:46 -0300 (Wed, 11 Apr 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_propertyPage"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_propertyPage"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_propertyPage">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:attribute name="title" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Defines the title of the property page.  If not specified the title will be the title of the interface with the service instance name withing parenthesis.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="setWindowTitle" type="xsd:boolean" use="optional" default="true">
+					<xsd:annotation>
+						<xsd:documentation>Defines whether the property page will set the title of the window that it is rendered in.  If true, a javascript is rendered on the client that sets the browser window title to the title of the property page.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="titleMaxSize" type="xsd:integer" use="optional" default="50">
+					<xsd:annotation>
+						<xsd:documentation>Limits the maximum size of the title of the property page. By default this value is 50 characters.  If the title exceeds this value, the title is truncated and 3 dots are placed at the end of the title.  A value of -1 signifies that the title length has no limit.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="icon" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If specified the icon will be placed in the header of the property page</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="renderRequiredValuesDescriptor" type="xsd:boolean" use="optional" fixed="false">
+					<xsd:annotation>
+						<xsd:documentation>If this property page has inputs that have required values, by default the property page includes a visible message indicating that the specified fields are required.  If you do not want this message added, set this attribute to false.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="renderButtonsType" type="renderButtonsType" use="optional" default="standard">
+					<xsd:annotation>
+						<xsd:documentation>Defines the buttons that will be added to the bottom of the property page</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="renderButtonsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none">
+				<xsd:annotation>
+					<xsd:documentation>Do not render buttons</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standard">
+				<xsd:annotation>
+					<xsd:documentation>Detect if within a popup or embedded within a page and render appropriate buttons.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standardPopup">
+				<xsd:annotation>
+					<xsd:documentation>Render the OK and CANCEL buttons where the cancel button will close the window and ok will refresh the parent window</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standardEmbedded">
+				<xsd:annotation>
+					<xsd:documentation>Render the OK and CANCEL buttons such that they do not close the current window.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

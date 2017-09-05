@@ -1,0 +1,83 @@
+/* $Revision: 15668 $ $Date: 2013-07-31 15:19:34 -0300 (Wed, 31 Jul 2013) $ */
+
+/*send message*/
+.lumis-service-socialnetworkservices-microblog-addPost .lum-actions {
+	padding-bottom:20px;
+	border-bottom:1px solid #ebebeb;
+	margin-bottom:25px;
+}
+.lumis-service-socialnetworkservices-microblog-addPost textarea {
+	height:40px;
+}
+
+/*wall*/
+.lumis-service-socialnetworkservices-microblog-userWall .lum-content-header .lum-content-introduction-image img,
+.lumis-service-socialnetworkservices-microblog-userWall .lum-content-introduction-image img {
+	width:40px;
+}
+.lumis-service-socialnetworkservices-microblog-userWall .lum-list-item > .lum-content {
+	position:relative;
+	padding-left:50px;
+}
+.lumis-service-socialnetworkservices-microblog-userWall .lum-content-header .lum-content-introduction-image,
+.lumis-service-socialnetworkservices-microblog-userWall .lum-content-introduction-image {
+	position:absolute;
+	left:0;
+	margin-top:1px;
+	width:40px;
+}
+.lumis-service-socialnetworkservices-microblog-userWall .lum-content-body, .lumis-service-socialnetworkservices-microblog-userWall .lum-content-detail {
+	margin:5px 0;
+}
+.lumis-service-socialnetworkservices-microblog-userWall .lum-field-id-attachments {
+	margin:15px 0;
+	
+}
+.lumis-service-socialnetworkservices-microblog-userWall .lum-field-id-attachments .lum-field-label {
+	display:none;
+}
+
+/*wall comments*/
+.lum-microblog-comments .lum-list {
+	font-size:10px;
+}
+.lum-microblog-comments .lum-content-detail {
+	font-size:11px;
+}
+.lum-microblog-comments .lum-list-item:after {
+	border:none;
+	margin-top:5px;
+}
+.lum-microblog-comments .lum-list-item {
+	margin:10px 0;
+}
+.lum-microblog-commentInput > a {
+	display:block;
+	margin:15px 0;
+}
+.lum-microblog-commentInput.lum-expanded > a {
+	display:none;
+}
+.lum-microblog-commentInput.lum-collapsed > .lum-microblog-addComment {
+	display:none;
+}
+.lum-microblog-addComment {
+	position:relative;
+	padding-left:50px;
+	padding-right:60px;
+}
+.lum-microblog-addComment textarea {
+	height:40px;
+}
+.lum-microblog-addComment .lum-actions {
+	position:absolute;
+	right:0;
+	top:1px;
+}
+
+/*search interfaces*/
+.lumis-service-socialnetworkservices-microblog-searchPostsNetwork input[type="text"] {
+	width:80%;
+	display:inline-block;
+	margin-right:4px;
+}

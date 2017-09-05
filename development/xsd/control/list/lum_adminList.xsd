@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 6396 $ $Date: 2007-04-11 15:46:46 -0300 (Wed, 11 Apr 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_adminList"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_adminList"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_adminList">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="allowSelectRow" minOccurs="0">
+						<xsd:complexType>
+							<xsd:attribute name="type" type="allowSelectRowType" default="multiSelect">
+								<xsd:annotation>
+									<xsd:documentation>
+									Sets a fixed height for the administration control.  If more elements exist than what this height can display, a scroll bar will be displayed.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="listHeight" type="xsd:integer" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						Sets a fixed height for the administration contorl.  If more elements exist than what this height can display, a scroll bar will be displayed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="allowSelectRowType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none" />
+			<xsd:enumeration value="singleSelect" />
+			<xsd:enumeration value="multiSelect" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,17 @@
+/* $Revision: 15603 $ $Date: 2013-07-18 15:14:20 -0300 (Thu, 18 Jul 2013) $ */
+
+.lumis-service-faq-list .lum-list-item .lum-content-title > a:before {
+	content:url(../image/ico_plus.png);
+	vertical-align:middle;
+	margin-right:5px;
+}
+.lumis-service-faq-list .lum-list-item.lum-faq-expanded .lum-content-title > a:before {
+	content:url(../image/ico_minus.png);
+}
+
+.lumis-service-faq-list .lum-list-item .lum-content-body {
+	margin-left:15px;
+}
+.lumis-service-faq-list .lum-list-item.lum-faq-collapsed .lum-content-body {
+	display:none;
+}

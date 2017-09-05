@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Nginx</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?nginx.htm"; }
+  else { parent.quicksync('a3.6.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Nginx</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="apacheweblogic.htm">Previous</a>&nbsp;
+     <a href="autenticacao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Os passos abaixo mostram como configurar o Nginx como servidor <span style="font-style: italic;">web</span>. Assume-se que o servidor de aplicação está com a aplicação portal acessível por uma porta HTTP.</p>
+<p>&nbsp;</p>
+<p>As configurações apresentadas são as necessárias para ocorrer o repasse apropriado de requisições para a aplicação do portal no servidor de aplicação. Outras configurações avançadas para fins de otimização também são recomendadas para ambientes de produção, mas não será abordado neste tópico como realizar tais otimizações.</p>
+<p>&nbsp;</p>
+<p>Para mais informações sobre o Nginx, consulte sua <a href="http://nginx.org/en/docs/" target="_blank" class="weblink">documentação</a>.</p>
+<p>&nbsp;</p>
+<p>Segue o passo a passo necessário para realizar a configuração:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>As configurações abaixo são apenas exemplos, sendo necessário adequá-las conforme as particularidades do ambiente. Por exemplo, pode ser necessário adequar o caminho do <span style="font-style: italic;">WEB_ROOT_PATH</span>, número das portas utilizadas, ou outros detalhes específicos do ambiente de instalação.</p>
+<p>&nbsp;</p>
+<p>As configurações no servidor web devem ser consistentes com as configurações dos websites do portal (ver <a href="gerenciador_de_websites.htm">Gerenciador de Websites</a>). Cada URL de um website deve corresponder ao seu diretório estático correspondente, além de aplicar as regras de encaminhamento ao servidor de aplicação apresentadas. Para isso, pode por exemplo, repetir o passo 1 abaixo para cada website no portal.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>1. Configurar no arquivo de configuração do Nginx (por padrão em <span style="font-style: italic;">NGINX_HOME/conf/nginx.conf</span>) um <span style="font-style: italic;">location</span> correspondente ao <span style="font-style: italic;">Website</span> do <span style="font-style: italic;">Lumis Portal</span>. Observe que outras configurações do <span style="font-style: italic;">server</span> onde o <span style="font-style: italic;">location</span> será colocado, tal como <span style="font-style: italic;">server_name</span> e <span style="font-style: italic;">listen</span>, devem estar compatíveis com o endereço do <span style="font-style: italic;">Website</span> correspondente.</p>
+<p>&nbsp;</p>
+<p>No exemplo abaixo o contexto a aplicação do portal é raiz e o caminho do <span style="font-style: italic;">Website</span> cadastrado também é raiz. O servidor de aplicação está acessível em <span style="font-style: italic;">localhost</span> na porta 8080:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">location&nbsp;/&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;the&nbsp;static&nbsp;directory&nbsp;for&nbsp;this&nbsp;website</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">alias&nbsp;WEB_ROOT_PATH;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;try&nbsp;local&nbsp;files,&nbsp;or&nbsp;use&nbsp;portal&nbsp;if&nbsp;not&nbsp;present.&nbsp;Adjust&nbsp;the&nbsp;index&nbsp;filenames&nbsp;accordingly&nbsp;to&nbsp;the&nbsp;solution.</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">try_files&nbsp;$uri&nbsp;$uri/index.htm&nbsp;$uri/index.shtml&nbsp;@portal;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;allow&nbsp;POST&nbsp;to&nbsp;static&nbsp;files</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">error_page&nbsp;405&nbsp;=&nbsp;$uri;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;include&nbsp;browser&nbsp;compatibility&nbsp;header&nbsp;for&nbsp;static&nbsp;directory&nbsp;files</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">add_header&nbsp;X-UA-Compatible&nbsp;"IE=edge";</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">location&nbsp;@portal&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;set&nbsp;standard&nbsp;proxy&nbsp;headers</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;X-Real-IP&nbsp;$remote_addr;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;X-Forwarded-For&nbsp;$proxy_add_x_forwarded_for;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;Host&nbsp;$http_host;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;call&nbsp;application&nbsp;server</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_pass&nbsp;http://localhost:8080;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>No exemplo abaixo o contexto a aplicação do portal é <span style="font-style: italic;">/portal </span>e o caminho do <span style="font-style: italic;">Website</span> cadastrado é <span style="font-style: italic;">/portal/website1</span>. O servidor de aplicação está acessível em <span style="font-style: italic;">localhost</span> na porta 8080:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">location&nbsp;=&nbsp;/portal/website1&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;redirect&nbsp;to&nbsp;website&nbsp;root,&nbsp;including&nbsp;trailing&nbsp;slash</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">return&nbsp;301&nbsp;/portal/website1/;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">location&nbsp;/portal/website1&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;the&nbsp;static&nbsp;directory&nbsp;for&nbsp;this&nbsp;website</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">alias&nbsp;WEB_ROOT_PATH;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;try&nbsp;local&nbsp;files,&nbsp;or&nbsp;use&nbsp;portal&nbsp;if&nbsp;not&nbsp;present.&nbsp;Adjust&nbsp;the&nbsp;index&nbsp;filenames&nbsp;accordingly&nbsp;to&nbsp;the&nbsp;solution.</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">try_files&nbsp;$uri&nbsp;$uri/index.htm&nbsp;$uri/index.shtml&nbsp;@portal;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;allow&nbsp;POST&nbsp;to&nbsp;static&nbsp;files</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">error_page&nbsp;405&nbsp;=&nbsp;$uri;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;include&nbsp;browser&nbsp;compatibility&nbsp;header&nbsp;for&nbsp;static&nbsp;directory&nbsp;files</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">add_header&nbsp;X-UA-Compatible&nbsp;"IE=edge";</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">location&nbsp;@portal&nbsp;{</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;set&nbsp;standard&nbsp;proxy&nbsp;headers</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;X-Real-IP&nbsp;$remote_addr;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;X-Forwarded-For&nbsp;$proxy_add_x_forwarded_for;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_set_header&nbsp;Host&nbsp;$http_host;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">#&nbsp;call&nbsp;application&nbsp;server</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span style="width:45px">&nbsp;</span><span class="f_CodeExample">proxy_pass&nbsp;http://localhost:8080;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 3px;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="576" style="width:576px; border: solid 1px #000000;"><p>O Nginx por padrão impõe um limite de 1 MB para upload de arquivos. Para aumentar este limite, utilize a diretriz <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size" target="_blank" class="weblink">client_max_body_size</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

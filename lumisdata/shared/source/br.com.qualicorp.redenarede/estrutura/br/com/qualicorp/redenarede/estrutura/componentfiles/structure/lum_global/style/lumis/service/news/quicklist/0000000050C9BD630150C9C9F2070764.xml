@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050C9BD630150C9C9F2070764</id>
+  <interface-id>lumis.service.news.quicklist</interface-id>
+  <name>Rede na Rede - Outras notícias</name>
+  <file-path>lumis/service/news/style/outras-noticias.xsl</file-path>
+</interface-style>

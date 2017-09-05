@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17315 $ $Date: 2015-05-25 14:16:49 -0300 (Mon, 25 May 2015) $ -->
+<xsd:schema targetNamespace="http://www.lumis.com.br/context" 
+			xmlns="http://www.lumis.com.br/context" 
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified"
+			elementFormDefault="qualified">
+
+	<xsd:complexType name="propertyType">
+		<xsd:choice minOccurs="1" maxOccurs="1">
+			<xsd:element name="expression" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						Expression Language based approach to
+						calculate/retrieve the value of the item in
+						the context.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fixed" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						Indicates that the value of the item will be
+						fixed. The contextGenerationType attribute will
+						be ignored by context items that have a fixed
+						value.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="custom" type="customType">
+				<xsd:annotation>
+					<xsd:documentation><![CDATA[
+						Indicates a custom class to be used as value provider.
+						The given class <em>must</em> implement 
+						<i>lumis.portal.businesscontext.IBusinessContextValueProvider</i>.
+					]]></xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>
+					Represents how a context item should be referenced.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="name" type="xsd:string" use="required">
+			<xsd:annotation>
+					<xsd:documentation>The property name.
+					</xsd:documentation>
+				</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="customType">
+		<xsd:sequence>
+			<xsd:element name="parameters" maxOccurs="1" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						Defines the (optional) parameters that will be passed to the value provider in its initialization.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="parameter">
+							<xsd:annotation>
+								<xsd:documentation>
+									Defines a parameter that will be passed to the value provider in its initialization.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:simpleContent>
+									<xsd:extension base="xsd:string">
+										<xsd:attribute name="name" use="required" type="xsd:string">
+											<xsd:annotation>
+												<xsd:documentation>
+													The parameter name. Must be unique.
+												</xsd:documentation>
+											</xsd:annotation>
+										</xsd:attribute>
+									</xsd:extension>
+								</xsd:simpleContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:unique name="parameterNameUnique">
+					<xsd:selector xpath="parameter" />
+					<xsd:field xpath="@name" />
+				</xsd:unique>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="className" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+					The value provider implementation class. Must implement <i>lumis.portal.businesscontext.IBusinessContextValueProvider</i>.
+						This attribute cannot be defined if the "scriptPath" attribute is defined.
+						<em>Either this attribute or 'scriptPath' must be defined.</em>
+				]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="scriptPath" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[
+						Absolute or relative path of a script defining the value provider implementation java class. The java class defined by this script must implement <i>lumis.portal.businesscontext.IBusinessContextValueProvider</i>.
+						This attribute cannot be defined if the "className" attribute is defined.
+						<em>Either this attribute or 'className' must be defined.</em>
+				]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="contextType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Type of the root element. Should contain at least one
+				item to be stored in memory.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element type="propertiesType" name="properties">
+				<xsd:annotation>
+					<xsd:documentation>
+						A single business context item.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+    	<xsd:attribute name="name" type="xsd:string" use="required" >
+    		<xsd:annotation>
+					<xsd:documentation>The context name.
+					</xsd:documentation>
+				</xsd:annotation>
+    	</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:element name="context" type="contextType">
+        <xsd:annotation>
+        	<xsd:documentation>Root element that defines a business context.</xsd:documentation></xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="propertiesType">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="property" type="propertyType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+ </xsd:schema>
+

@@ -1,0 +1,379 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Exemplo de criação de temas</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?exemplos_de_criacao_de_temas.htm"; }
+  else { parent.quicksync('a8.9.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Exemplo de criação de temas</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="temaslayoutfile.htm">Previous</a>&nbsp;
+     <a href="contexto_de_negocio.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Como exemplo de criação de temas, suponha um portal com uma área de notícias. Essa área possui uma área de notícias esportivas. A área de notícias esportivas se subdivide em duas outras áreas: futebol e basquete.</p>
+<p>Analogamente, suponha que as listas de notícias estão dispostas como a figura abaixo:</p>
+<p style="text-align: center;"><img src="temas02.jpg" width="190" height="163" border="0" alt="temas02" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Supondo que a apresentação das listas de notícias de esportes, futebol e basquetes devem ser diferentes, foi decidido criar três temas distintos para esse portal: esportes, basquete e futebol.</p>
+<p style="text-align: center;"><img src="temas01.jpg" width="900" height="319" border="0" alt="temas01" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Os temas <span style="font-style: italic;">br.com.lumis.theme.esporte</span>,<span style="font-style: italic;"> br.com.lumis.theme.futebol </span>e<span style="font-style: italic;"> br.com.lumis.theme.basquete</span> foram aplicados nos canais <span style="font-style: italic;">Esportes</span>, <span style="font-style: italic;">Futebol</span> e<span style="font-style: italic;"> Basquete</span>, respectivamente. Os canais <span style="font-style: italic;">Futebol</span> e <span style="font-style: italic;">Basquete</span>, além de aplicar seus respectivos temas, ainda aplicam o tema <span style="font-style: italic;">br.com.lumis.theme.esporte</span>, após os seus respectivos temas.</p>
+<p>&nbsp;</p>
+<p>A aparência desejada para cada lista é:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>Esportes</p>
+</td>
+<td valign="top"><p><img src="temas03.jpg" width="242" height="228" border="0" alt="temas03"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>Futebol</p>
+</td>
+<td valign="top"><p><img src="temas05.jpg" width="755" height="104" border="0" alt="temas05"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p>Basquete</p>
+</td>
+<td valign="top"><p><img src="temas04.jpg" width="238" height="139" border="0" alt="temas04"></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>O tema <span style="font-style: italic;">esporte</span> possui, além do arquivo de definição:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 32px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">def</span>/lumis/service/news/style/List.xsl</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 32px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/css/style.css</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 32px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/img/icone.jpg</td></tr></table></div><p>&nbsp;</p>
+<p>O tema <span style="font-style: italic;">futebol</span> possui, além do arquivo de definição:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 33px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">def</span>/lumis/service/news/style/List.xsl</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 33px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/css/style.css</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 33px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/img/icone.jpg</td></tr></table></div><p>&nbsp;</p>
+<p>O tema <span style="font-style: italic;">basquete</span> possui, além do arquivo de definição:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 33px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/css/style.css</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 33px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="text-decoration: underline;">www</span>/img/icone.jpg</td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-weight: bold;">XSLs</span></p>
+<p>O XSL do tema <span style="font-style: italic;">esporte</span> é a base para toda a área de esporte.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px;"><span style="font-weight: bold; text-decoration: underline;">def</span><span style="font-weight: bold;">/lumis/service/news/style/List.xsl do tema </span><span style="font-style: italic; font-weight: bold;">esporte</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lum="http://www.lumis.com.br/doui" exclude-result-prefixes="lum" version="1.0"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:import href="lum_basetheme/List.xsl" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:output omit-xml-declaration = "yes" method="xml" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;xsl:template name="listItem"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;b&gt;&lt;lum:field id="title" /&gt;&lt;/b&gt; (&lt;lum:field id="publishStartDate/value" /&gt;)&lt;br /&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:field id="introductionImage" isImage="true" class="imgleft" /&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:field id="introduction" isHtml="false" /&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/xsl:template&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;lum:form&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="renderStyleLink" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="cLumList"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="renderTopTitle" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:control type="lum_filters"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:loop&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;table cellpadding="0" cellspacing="0"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td class="row"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:choose&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:when test="@href"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a href="{@href}"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="listItem"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/a&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:when&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:otherwise&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="listItem"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:otherwise&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:choose&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/td&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/tr&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/table&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/lum:loop&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:control type="lum_pagination"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="cLumHorDotline"&gt;&lt;img src="lumis/portal/client/images/Pix.gif" alt=" " title="" /&gt;&lt;/div&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/lum:form&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;xsl:template name="renderTopTitle"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;table class="cLumTopTitle"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td class="cLumTopTitleImg"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;img src="img/icone.jpg" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/td&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td class="cLumTopTitleHeader"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:interfaceHeader/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/td&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/tr&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/table&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/xsl:template&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;xsl:template match="control[@type='lum_interfaceHeader']" name="lum_interfaceHeader"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:value-of select="data/title" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/xsl:template&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;xsl:template name="renderStyleLink"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;link href="css/style.css" type="text/css" rel="stylesheet" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/xsl:template&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;/xsl:stylesheet&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Nesse XSL é possível verificar que ele importa o XSL "lum_basetheme/List.xsl". O prefixo "lum_basetheme" indica ao portal que o XSL a ser importado pertence ao tema base (aquele aplicado anteriormente, ou nenhum tema caso o tema atual seja o primeiro). O arquivo é relativo ao arquivo que está realizando o import (no caso, lumis/service/news/style/List.xsl). Então o arquivo a ser importado neste exemplo será o lumis/service/news/style/List.xsl original do serviço de notícias.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px;"><span style="font-weight: bold; text-decoration: underline;">def</span><span style="font-weight: bold;">/lumis/service/news/style/List.xsl do tema </span><span style="font-style: italic; font-weight: bold;">futebol</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lum="http://www.lumis.com.br/doui" exclude-result-prefixes="lum" version="1.0"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:import href="lum_basetheme/List.xsl" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;xsl:output omit-xml-declaration = "yes" method="xml" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;lum:form&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="renderStyleLink" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="cLumList"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="renderTopTitle" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:control type="lum_filters"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:loop&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:choose&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:when test="@href"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a href="{@href}"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="listItem"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/a&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:when&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:otherwise&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;xsl:call-template name="listItem"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:otherwise&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/xsl:choose&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/lum:loop&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:control type="lum_pagination"/&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="cLumHorDotline"&gt;&lt;img src="lumis/portal/client/images/Pix.gif" alt=" " title="" /&gt;&lt;/div&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/lum:form&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;xsl:template name="listItem"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="cLumListItem_Fut{((position() - 1) mod 2) + 1}"&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;b&gt;&lt;lum:field id="title" /&gt;&lt;/b&gt; (&lt;lum:field id="publishStartDate/value" /&gt;)&lt;br /&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:field id="introductionImage" isImage="true" class="imgleft" /&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;lum:field id="introduction" isHtml="false" /&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt; </p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span>&lt;/xsl:template&gt;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;"><span style="width:48px">&nbsp;</span></p>
+<p style="border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-bottom: none;">&lt;/xsl:stylesheet&gt;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Este XSL redefine o template de formulário para alterar a sua renderização e redefine o template listItem para alterar sua renderização.</p>
+<p>Esse tema também importa "lum_basetheme/List.xsl".</p>
+<p>&nbsp;</p>
+<p>No caso da lista de futebol, o XSL utilizado será o XSL do tema <span style="font-style: italic;">futebol</span>. Esse XSL importará o XSL do tema <span style="font-style: italic;">esporte</span>. Por fim, o XSL do tema <span style="font-style: italic;">esporte </span>importará o XSL original do serviço de Notícias.</p>
+<p>&nbsp;</p>
+<p>Ou seja, no caso da lista de futebol, os templates de formulário e <span style="font-style: italic;">listItem </span>serão utilizados do XSL do tema <span style="font-style: italic;">futebol</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">CSSs</span></p>
+<p>O template <span style="font-style: italic;">renderStyleLink</span>, definido no XSL do tema <span style="font-style: italic;">esporte</span>, renderiza um link referenciando o arquivo "css/style.css". O arquivo final a ser referenciado dependerá de qual(is) tema(s) está(ão) sendo utilizado(s) na página acessada.</p>
+<p>&nbsp;</p>
+<p>Na página de lista de esportes, o CSS referenciado será o do tema <span style="font-style: italic;">esportes</span>. Na página de futebol o CSS utilizado será o de futebol e na página de lista de basquete será o do tema <span style="font-style: italic;">basquete</span>.</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px;"><span style="font-weight: bold;">www/css/style.css do tema </span><span style="font-style: italic; font-weight: bold;">esporte</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitle{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border: #888 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>vertical-align: middle;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding: 0px 0px 0px 0px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>margin-bottom: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleImg{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>width: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>float: left;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border-right: #888 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleHeader{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-size: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #888;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-weight: bold;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding-left: 10px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumList{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #888;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px;"><span style="font-weight: bold;">www/css/style.css do tema </span><span style="font-style: italic; font-weight: bold;">futebol</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitle{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border: #008040 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>vertical-align: middle;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding: 0px 0px 0px 0px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>margin-bottom: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleImg{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>width: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>float: left;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border-right: #008040 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleHeader{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-size: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #008040;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-weight: bold;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding-left: 10px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumList{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #008040;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumListItem_Fut1{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #008040;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumListItem_Fut2{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #fff;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>background-color: #008040;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumListItem_Fut1, .cLumListItem_Fut2{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding: 1px 2px 1px 2px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>margin-right: 10px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>float: left;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#e8e8e8" border="0" style="background-color: #e8e8e8; border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px;"><span style="font-weight: bold;">www/css/style.css do tema </span><span style="font-style: italic; font-weight: bold;">basquete</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top"><p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitle{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border: #c17400 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>vertical-align: middle;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>margin-bottom: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleImg{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>width: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>float: left;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>border-right: #c17400 solid 1px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumTopTitleHeader{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-size: 20px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #c17400;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>font-weight: bold;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>padding-left: 10px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>height: 50px;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">&nbsp;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">.cLumList{</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;"><span style="width:48px">&nbsp;</span>color: #c17400;</p>
+<p style="border-color: #000000; border-style: solid; border-width: 0px; border-top: none; border-bottom: none; border-left: none;">}</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>No CSS do tema futebol é possível ver duas classes que são definidas em seu XSL: <span style="font-style: italic;">cLumListItem_Fut1</span> e <span style="font-style: italic;">cLumListItem_Fut2</span>.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Imagens</span></p>
+<p>Assim como os CSSs, as imagens referenciadas pelo código HTML poderão ser substituídas dependendo de qual(is) tema(s) está(ão) sendo aplicado(s) na página em visualização.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Download dos exemplos</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="Downloads/tema/tema_futebol.jar" target="_blank" class="weblink">tema_futebol.jar</a></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="Downloads/tema/tema_esporte.jar" target="_blank" class="weblink">tema_esporte.jar</a></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="Downloads/tema/tema_basquete.jar" target="_blank" class="weblink">tema_basquete.jar</a></td></tr></table></div>
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

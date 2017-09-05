@@ -1,0 +1,304 @@
+/* $Revision: 15675 $ $Date: 2013-08-01 17:56:45 -0300 (Thu, 01 Aug 2013) $ */
+/*lumbar main css*/
+body
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	min-width: 0 !important;
+	max-width: none !important;
+}
+#lumbar {
+	font-family:arial,sans-serif !important;
+	font-size:11px !important;
+	color:#d1d1d1 !important;
+	min-width:780px !important;
+	min-height:28px !important;
+}
+#lumbar a {
+	color:#d1d1d1 !important;
+	text-decoration:none !important;
+	outline:none !important;
+}
+#lumbar a img {
+	border:0 !important;
+}
+#lumbar .sep {
+	width:2px !important;
+	height:28px !important;
+	background:url(../images/bg_sep.png) repeat-y top left;
+	float:left !important;
+}
+#lumbar .leftarea {
+	float:left !important;
+}
+#lumbar .rightarea {
+	float:right !important;
+}
+#lumbar .clear {
+	clear:both !important;
+}
+
+/*sub-bars*/
+
+#lumSubBarOuter {
+	font-family:arial,sans-serif !important;
+	font-size:0.7em !important;
+	color:#d1d1d1 !important;
+	min-width:550px !important;
+}
+#lumSubBarOuter a {
+	color:#d1d1d1 !important;
+	text-decoration:none !important;
+	outline:none !important;
+}
+#lumSubBarOuter .sub {
+	display:none;
+	background:#242424;
+	height:28px !important;
+	line-height:28px !important;
+	padding:0 0 0 250px !important;
+}
+#lumSubBarOuter .sub .tit {
+	display:block !important;
+	float:left !important;
+	height:28px !important;
+	padding-left:8px !important;
+	background:url(../images/ico_arrow.gif) no-repeat 0 center;
+}
+
+#lumSubBarOuter ul.menu_bts {
+	float:left !important;
+	padding:0 !important;
+	margin:5px 0 0 15px !important;
+}
+#lumSubBarOuter ul.menu_bts li {
+	float:left !important;
+	margin:0 10px 0 0 !important;
+	display:block !important;
+}
+#lumSubBarOuter ul.menu_bts li a {
+	display:block !important;
+	float:left !important;
+	height:16px !important;
+	line-height:16px !important;
+	padding:0 8px !important;
+	color:#454545 !important;
+	background:#ebebeb url(../images/bg_bt1.jpg) repeat-x bottom left;
+	border:1px solid #828282 !important;
+	border-radius:3px !important;
+	-moz-border-radius:3px !important;
+	-webkit-border-radius:3px !important;
+}
+#lumSubBarOuter label, #lumSubBarOuter input {
+	display:block !important;
+	float:left !important;
+}
+#lumSubBarOuter label {
+	height:28px !important;
+	padding:0 5px 0 15px !important;
+	color:#fff !important;
+}
+#lumSubBarOuter input {
+	background:#fff url(../images/bg_input1.jpg) repeat-x bottom left;
+	border:1px solid #828282 !important;
+	padding:1px !important;
+	height:15px !important;
+	margin:4px 0 0 0 !important;
+	outline:none !important;
+}
+#lumSubBarOuter input:focus {
+	border-color:#d0962b !important;
+	box-shadow:0 0 6px #d0962b !important;
+	-moz-box-shadow:0 0 5px #d0962b !important;
+	-webkit-box-shadow:0 0 6px #d0962b !important;
+}
+#lumSubBarOuter input.date {
+	width:80px !important;
+}
+#lumSubBarOuter input.hour {
+	width:46px !important;
+}
+#lumSubBarOuter .sub img.ico {
+	display:block !important;
+	width:16px !important;
+	height:16px !important;
+	float:left !important;
+	margin:4px 0 0 3px !important;
+}
+
+/*menus*/
+#lumbar ul {
+	list-style:none !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+#lumbar ul.menu_modeoptions {
+	float:left !important;
+	margin-left:20px !important;
+}
+#lumbar ul.menu_modeoptions li {
+	display:inline !important;
+}
+#lumbar ul.menu_modeoptions li a {
+	display:block !important;
+	line-height:28px !important;
+	white-space:nowrap !important;
+	float:left !important;
+	padding:0 10px !important;
+}
+#lumbar ul.menu_modeoptions li a:hover, #lumbar ul.menu_modeoptions li a.selected {
+	color:#fff !important;
+	background:url(../images/bg_selected.png) repeat top left;
+}
+#lumbar ul.menu_modeoptions li a img {
+	width:21px !important;
+	height:21px !important;
+	margin:0 3px 0 0 !important;
+	vertical-align:middle !important;
+}
+
+#lumbar ul.menu_icos {
+	float:left !important;
+	padding:5px 10px 0 0 !important;
+}
+#lumbar ul.menu_icos li {
+	display:inline !important;
+}
+#lumbar ul.menu_icos li a img {
+	width:16px !important;
+	height:16px !important;
+	display:block !important;
+	float:left !important;
+	margin:0 4px !important;
+}
+
+#lumbar ul.menu_dd, #lumbar ul.menu_modeswap {
+	float:left !important;
+	position:relative !important;
+}
+#lumbar ul.menu_dd li a, #lumbar ul.menu_modeswap li a {
+	display:block !important;
+	line-height:28px !important;
+	white-space:nowrap !important;
+	padding:0 15px 0 40px !important;
+	background:url(../images/ico_user_off.png) no-repeat top left;
+}
+#lumbar ul.menu_modeswap li a {
+	background:none;
+	padding:0 12px !important;
+}
+#lumbar ul.menu_dd li a img.ddarrow, #lumbar ul.menu_modeswap li a img.ddarrow {
+	width:11px !important;
+	height:9px !important;
+	margin-left:3px !important;
+}
+#lumbar ul.menu_dd li:hover a, #lumbar ul.menu_dd li a:hover, #lumbar ul.menu_dd li a.selected {
+	color:#fff !important;
+	background:url(../images/ico_user_on.png) no-repeat top left;
+}
+#lumbar ul.menu_modeswap li:hover a, #lumbar ul.menu_modeswap li a:hover, #lumbar ul.menu_modeswap li a.selected {
+	color:#fff !important;
+	background:url(../images/bg_selected.png) repeat top left;
+}
+#lumbar ul.menu_dd li ul.dd, #lumbar ul.menu_modeswap li ul.dd {
+	display:none; /*this CANT be important*/
+	float:none !important;
+	position:absolute !important;
+	top:28px !important;
+	right:4px !important;
+	z-index:999999 !important;
+	padding-bottom:2px !important;
+	border-bottom-left-radius:3px !important;
+	-moz-border-radius-bottomleft:3px !important;
+	-webkit-border-bottom-left-radius:3px !important;
+	border-bottom-right-radius:3px !important;
+	-moz-border-radius-bottomright:3px !important;
+	-webkit-border-bottom-right-radius:3px !important;
+	box-shadow:0 0 2px #000 !important;
+ 	-moz-box-shadow:0 0 2px #000 !important;
+	-webkit-box-shadow:0 0 2px #000 !important;
+	background:url(../images/bg_dd.png) repeat top left;
+}
+#lumbar ul.menu_modeswap li ul.dd {
+	right:auto !important;
+	left:0 !important;
+}
+#lumbar ul.menu_dd li ul.dd li {
+	float:none !important;
+	width:130px !important;
+}
+
+#lumbar ul.menu_modeswap li ul.dd li {
+	float:none !important;
+	width:140px !important;
+}
+
+#lumbar ul.menu_dd li ul.dd li a, #lumbar ul.menu_modeswap li ul.dd li a {
+    display:block !important;
+	font-weight:normal !important;
+	float:none !important;
+	line-height:1em !important;
+	padding:7px 5px 7px 12px !important;
+	background:none;
+}
+#lumbar ul.menu_dd li ul.dd li a:hover, #lumbar ul.menu_modeswap li ul.dd li a:hover {
+	background:#3c3c3c !important;
+	color:#fff !important;
+}
+
+#lumbar ul.menu_bts {
+	float:left !important;
+	padding:0 !important;
+	margin:5px 0 0 15px !important;
+}
+#lumbar ul.menu_bts li {
+	float:left !important;
+	margin:0 10px 0 0 !important;
+}
+#lumbar ul.menu_bts li a {
+	display:block !important;
+	float:left !important;
+	height:16px !important;
+	line-height:16px !important;
+	padding:0 8px !important;
+	color:#454545 !important;
+	background:#ebebeb url(../images/bg_bt1.jpg) repeat-x bottom left;
+	border:1px solid #828282 !important;
+	border-radius:3px !important;
+	-moz-border-radius:3px !important;
+	-webkit-border-radius:3px !important;
+}
+#lumbar ul.menu_bts li a:hover {
+	border-color:#dfdfdf !important;
+	box-shadow:0 0 4px #dfdfdf !important;
+	-moz-box-shadow:0 0 3px #dfdfdf !important;
+	-webkit-box-shadow:0 0 4px #dfdfdf !important;
+}
+
+/*color swaps*/
+.lumbar-portalstudio{
+	background:#353535 url(../images/bg_pub.jpg) repeat-x top left !important;
+}
+
+/*begin in context edit*/
+.cLumICEOverlayII, .cLumICEOverlayC
+{
+	width:10px;
+	height:10px;
+	cursor:hand;
+}
+
+.cLumICEOverlayII
+{
+	background-color: orange;
+	border:2px dashed red;
+}
+
+.cLumICEOverlayC
+{
+	background-color: yellow;
+	border:2px dashed orange;
+}
+/*end in context edit*/

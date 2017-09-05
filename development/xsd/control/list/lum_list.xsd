@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 15099 $ $Date: 2013-01-31 15:04:28 -0200 (Thu, 31 Jan 2013) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_list"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_list"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_list">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:attribute name="includePagination" type="xsd:boolean" use="optional" default="true">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the list control should include a pagination control. If the pagination control is already included as a child control of the list control, this flag does nothing.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

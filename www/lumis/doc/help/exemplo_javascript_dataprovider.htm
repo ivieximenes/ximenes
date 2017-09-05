@@ -1,0 +1,165 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Criação de um data provider</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?exemplo_javascript_dataprovider.htm"; }
+  else { parent.quicksync('a8.12.1.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Criação de um data provider</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="javascript_exemplos.htm">Previous</a>&nbsp;
+     <a href="exemplo_javascript_servicedefinition.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Implementação de um <span style="font-style: italic;">data provider</span> definido em <span style="font-style: italic;">JavaScript</span> para que o source seja populado através de uma fonte externa.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">//Com&nbsp;esta&nbsp;variável&nbsp;é&nbsp;possível&nbsp;acessar&nbsp;os&nbsp;pacotes&nbsp;e&nbsp;as&nbsp;classes&nbsp;do&nbsp;pacote&nbsp;Java</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;java&nbsp;=&nbsp;Packages.java;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//Com&nbsp;esta&nbsp;variável&nbsp;é&nbsp;possível&nbsp;acessar&nbsp;os&nbsp;pacotes&nbsp;e&nbsp;as&nbsp;classes&nbsp;do&nbsp;pacote&nbsp;lumis</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;lumis&nbsp;=&nbsp;Packages.lumis;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;serviceNameFieldId&nbsp;=&nbsp;"serviceName";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;serviceDescriptionFieldId&nbsp;=&nbsp;"serviceDescription";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;userLoginFieldId&nbsp;=&nbsp;"userLogin";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;userFirstNameFieldId&nbsp;=&nbsp;"userFirstName";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;userEmailFieldId&nbsp;=&nbsp;"userEmail";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;userLastLoginFieldId&nbsp;=&nbsp;"userLastLogin";</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;userGroupsFieldId&nbsp;=&nbsp;"userGroups";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">var&nbsp;extraFieldFieldId&nbsp;=&nbsp;"extraField";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;Java.extend(&lt;Classe&nbsp;a&nbsp;ser&nbsp;estendida&gt;,&nbsp;{&lt;Código&nbsp;que&nbsp;sobrescreve&nbsp;o&nbsp;código&nbsp;da&nbsp;classe&nbsp;estendida&gt;});</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;Assim&nbsp;é&nbsp;possível&nbsp;utilizar&nbsp;as&nbsp;interfaces&nbsp;de&nbsp;customização&nbsp;do&nbsp;lumis&nbsp;para&nbsp;customizá-las&nbsp;utilizando&nbsp;Javascript.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Java.extend(lumis.doui.source.IDataProvider,&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;Os&nbsp;métodos&nbsp;da&nbsp;classe&nbsp;estendida&nbsp;podem&nbsp;ser&nbsp;sobrescritos&nbsp;com&nbsp;a&nbsp;utilização&nbsp;de&nbsp;um&nbsp;elemento&nbsp;com&nbsp;o&nbsp;mesmo&nbsp;nome&nbsp;do&nbsp;método,&nbsp;que&nbsp;seja&nbsp;definido&nbsp;por&nbsp;uma&nbsp;função&nbsp;com&nbsp;a&nbsp;mesma&nbsp;quantidade&nbsp;de&nbsp;argumentos&nbsp;do&nbsp;método&nbsp;a&nbsp;ser&nbsp;sobrescrito.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;loadData:&nbsp;function(sessionConfig,&nbsp;source,&nbsp;transaction)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Guarda&nbsp;as&nbsp;configurações&nbsp;da&nbsp;instancia&nbsp;de&nbsp;serviço&nbsp;envolvida&nbsp;no&nbsp;processo</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;serviceInstanceConfig&nbsp;=&nbsp;source.getDouiContext().getRequest().getServiceInstanceConfig();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Acessando&nbsp;a&nbsp;classe&nbsp;ManagerFactory&nbsp;a&nbsp;partir&nbsp;da&nbsp;variável&nbsp;lumis&nbsp;definida&nbsp;no&nbsp;início&nbsp;do&nbsp;arquivo.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;ManagerFactory&nbsp;=&nbsp;lumis.portal.manager.ManagerFactory;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Guarda&nbsp;as&nbsp;configurações&nbsp;do&nbsp;usuário&nbsp;que&nbsp;solicitou&nbsp;a&nbsp;instancia&nbsp;de&nbsp;serviço</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;userConfig&nbsp;=&nbsp;ManagerFactory.getUserManager().get(sessionConfig,&nbsp;sessionConfig.getUserId(),&nbsp;transaction);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Guarda&nbsp;em&nbsp;um&nbsp;vetor&nbsp;de&nbsp;strings&nbsp;a&nbsp;lista&nbsp;de&nbsp;grupos&nbsp;que&nbsp;o&nbsp;usuário&nbsp;pertence.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;userGroupsArray&nbsp;=&nbsp;ManagerFactory.getGroupManager().getMemberGroups(sessionConfig,&nbsp;userConfig.getId(),&nbsp;false,&nbsp;transaction).toArray();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;userGroups&nbsp;=&nbsp;"";</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(userGroupsArray.length&nbsp;&gt;&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userGroups&nbsp;+=&nbsp;userGroupsArray[0];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;&nbsp;userGroupsArray.length;&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userGroups&nbsp;+=&nbsp;",&nbsp;"&nbsp;+&nbsp;userGroupsArray[i];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Pega&nbsp;os&nbsp;dados&nbsp;existentes&nbsp;no&nbsp;source&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sourceData&nbsp;=&nbsp;source.getData();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Pega&nbsp;os&nbsp;campos&nbsp;existentes&nbsp;no&nbsp;source</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;fields&nbsp;=&nbsp;source.getFields();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;fields.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;field&nbsp;=&nbsp;fields.get(i);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(field.getId()&nbsp;==&nbsp;"id")</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put("id",&nbsp;i);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(field.getId()&nbsp;==&nbsp;serviceNameFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(serviceNameFieldId,&nbsp;serviceInstanceConfig.getName());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;serviceDescriptionFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(serviceDescriptionFieldId,&nbsp;serviceInstanceConfig.getDescription());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;userLoginFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(userLoginFieldId,&nbsp;userConfig.getLogin());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;userFirstNameFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(userFirstNameFieldId,&nbsp;userConfig.getFirstName());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;userEmailFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(userEmailFieldId,&nbsp;userConfig.getEmail());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;userLastLoginFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(userLastLoginFieldId,&nbsp;userConfig.getLastLogin());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;userGroupsFieldId&nbsp;&amp;&amp;&nbsp;userGroups.length&nbsp;&gt;&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(userGroupsFieldId,&nbsp;userGroups);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if(field.getId()&nbsp;==&nbsp;extraFieldFieldId)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourceData.put(extraFieldFieldId,&nbsp;"Extra&nbsp;Field&nbsp;Value");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}).class;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="661" style="width:661px; border: solid 1px #000000;"><p class="p_ImageCaption" style="text-align: left;"><span class="f_ImageCaption">Observações</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="661" style="width:661px; border: solid 1px #000000;"><p>Para que o Lumis Portal possa utilizar a classe definida, a última linha de código do arquivo em Javascript deve conter a própria classe definida, pois este será o resultado da compilação do arquivo.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

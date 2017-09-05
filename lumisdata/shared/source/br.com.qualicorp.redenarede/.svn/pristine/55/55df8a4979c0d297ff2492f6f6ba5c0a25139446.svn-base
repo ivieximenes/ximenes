@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+	<xsl:output omit-xml-declaration="yes" method="html" />
+	<xsl:import href="/lumis/doui/style/DouiControls.xsl" />
+	
+	<xsl:template match="/">
+	
+	<header class="header-blue white"> 
+   		<h1>Alterar Senha - Beneficiário</h1> 
+	</header> 
+	<div id="signUpModal"> 
+    <form class="form form-signup" action="{//control[@type='lum_form']/data/action-commit}" method="post" id="registerform" accept-charset="UTF-8"> 
+            <p class="all-full  success" style="display:none;">Senha alterada com sucesso!</p>
+            <p class="all-full global-error error" style="display:none;">Ocorreu um erro ao processar sua solicitação.</p>
+       		<xsl:apply-templates select="/renderData/controls/control[@id='successHidden']" />
+			<div class="half"> 
+                <label for="signUp-beneficiario-login">Nº da Carteirinha</label> 
+                <input type="text" id="login" name="login" value="{/renderData/douiContext/userLogin}" maxlength="20" class="required matricula-mask" readonly="true"/> 
+            </div> 
+            <div class="half"> 
+                <label class="req" for="signUp-beneficiario-password">Senha Atual</label> 
+                <input type="password" id="password" name="password" value="" maxlength="18" class="required" /> 
+            </div> 
+            
+            <div>
+	            <div class="half"> 
+	                <label class="req" for="signUp-beneficiario-newPassword">Nova Senha</label> 
+	                <input type="password" id="newPassword" name="newPassword" value="" maxlength="15" class="required" /> 
+	            </div> 
+	            <div class="half last"> 
+	                <label class="req" for="signUp-beneficiario-confirmNewPassword">Confirme a nova senha</label> 
+	                <input type="password" id="confirmNewPassword" name="confirmNewPassword" value="" maxlength="15" class="required" /> 
+	            </div>
+            	<div class="inf-senha">
+            		<spam>Atenção: sua senha deve possuir ao menos 8 caracteres e conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula e 1 caractere especial.</spam>
+            	</div>
+            </div> 
+            <span class="error">* Campos obrigatórios.</span>
+	        <div id="divButton">
+				<input type="submit" id="buttonform" name="op" value="Enviar" class="button" onclick="ga('send', 'event', 'botao', 'clique', 'alterar_senha-enviar');"/> 
+			</div>
+	        <div id="divLoading" style="display:none;" align="center">
+				<img src="lumis/portal/client/images/Loading.gif" style="vertical-align: middle;" alt="Carregando"/> Carregando
+			</div>
+    </form> 
+    <form id="formSuccess" action="{/renderData/controls/control[@id='link']/data/href}" method="POST">
+    	<input type="hidden" id="success" name="success"/> 
+   </form>
+</div>
+
+${lum_beforeWrite('<xsl:text disable-output-escaping="yes">&lt;script type="text/javascript" src="lumis/tool/jquery/jquery.js"&gt;&lt;/script&gt;</xsl:text>', 'jquery.js')}
+<script type="text/javascript" src="js/validate/jquery.maskedinput.min.js"></script>
+			
+<script type="text/javascript">
+	<xsl:text disable-output-escaping="yes">
+		<![CDATA[
+	$.validator.addMethod("passwordValidator",
+	    function(value, element) {
+	        return this.optional(element) || /((?=.*\d)(?=.*[a-z])(?=.*?[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,15})$/.test(value);
+   						}, "Formato de Senha Inválido"
+	);
+	
+	if($('#successHidden').val()==1)
+	{
+		$(".success").show();
+	}
+	
+	$(document).ready(function(){
+		$('.matricula-mask').mask("99999.9.999999.99.9");
+		
+		var curForm = $("#registerform");
+
+		curForm.validate({
+			rules: {
+				login: {required: true},
+				password: {required: true},
+				newPassword: {required: true, minlength: 8, maxlength: 11, passwordValidator: true},
+			    confirmNewPassword: {equalTo: "#newPassword"}
+			},
+			errorElement: "p",
+			messages: {
+				login: "Favor preencher o número da carteirinha",
+				password: "Favor informe a senha atual.",
+				newPassword: {
+					required: "Favor preencher a nova senha.",
+					minlength: "A senha deve ter um mínimo de 8 carateres",
+					maxlength: "A senha deve ter um máximo de 11 carateres",
+					passwordValidator: "Formato de Senha Inválido."
+				},
+				confirmNewPassword: {
+					required: "Favor confirmar a nova  senha",
+					equalTo: "As duas senhas não são iguais."
+				}
+			}, 
+			submitHandler: function(form){
+				$(".success").hide();
+				$(".error").hide();
+				$("#divButton").toggle();
+				$("#divLoading").toggle();
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: curForm.attr("action"),
+					data: curForm.serialize(),
+					success: function(data){
+						// success handling here
+						$("#divButton").toggle();
+						$("#divLoading").toggle();
+						curForm.validate().resetForm(); 
+						curForm[0].reset();
+						$('.matricula-mask').mask("99999.9.999999.99.9");
+						$('#success').val("1");
+						$("#formSuccess").submit();
+					}
+
+				}).fail(function(data){
+					// fail handling here
+					if(data.status === 403 || (data.status === 200 && data.getResponseHeader('Content-Type').indexOf('text/html') === 0)) {
+						window.location = curForm.attr("action");
+						return;
+					}
+					try{
+					var dataObj = $.parseJSON(data.responseText)
+					var errorMessage = dataObj.responseParameters.doui_error;
+					if(errorMessage == null)
+						errorMessage = dataObj.responseParameters.error.message;
+						
+					if(errorMessage != null)
+						$(".global-error").text(errorMessage);
+						
+						console.log(errorMessage);
+					}catch(e){console.log(e);}
+						
+					$(".global-error").show();
+					$("#divButton").toggle();
+					$("#divLoading").toggle();
+				});
+				return false;
+			}
+		});
+	});
+	
+	]]>
+</xsl:text>
+</script>	
+
+</xsl:template>
+	
+</xsl:stylesheet>

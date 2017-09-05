@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Interface do Serviço</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalinterfaceservico.htm"; }
+  else { parent.quicksync('a8.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Interface do Serviço</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="portal.htm">Previous</a>&nbsp;
+     <a href="diagramassequenciainterfaceservico.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Cada interface de serviço também deve implementar um conjunto mínimo de métodos. &nbsp;Esses métodos são definidos numa interface <span style="font-style: italic;">Java</span> chamada  <span style="font-style: italic;"><a href="../api/lumis/portal/serviceinterface/IServiceInterface.html" target="_blank" class="weblink">IServiceInterface</a></span>. </p>
+<p style="margin: 8px 0px 0px 0px;">Através de tais métodos, a interface do serviço será chamada para renderizar uma apresentação ou para processar uma ação do usuário.</p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal Server</span> já vem com uma implementação da <span style="font-style: italic;">IServiceInterface</span>: a classe <span style="font-style: italic;"><a href="../api/lumis/portal/serviceinterface/GenericServiceInterface.html" target="_blank" class="weblink">GenericServiceInterface</a></span>. Ela pode ser estendida para customizar as funcionalidades da interface do serviço, ou usada diretamente. Se na definição da interface não tiver uma classe que a implementa, a <span style="font-style: italic;">GenericServiceInterface </span> será utilizada.</p>
+<p style="margin: 8px 0px 0px 0px;">A interface <span style="font-style: italic;">Java</span> <span style="font-style: italic;">IServiceInterface</span> tem dois métodos para tratamento de requisições:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Um método chamado para renderizar uma interface<br>
+&nbsp;</td></tr></table></div><p style="white-space: nowrap; margin: 0px 0px 0px 6px;"><span style="font-family: 'Courier New';">public&nbsp;void&nbsp;render(IServiceInterfaceRenderRequest&nbsp;request,&nbsp;IServiceInterfaceRenderResponse&nbsp;response)</span><br>
+<span style="font-family: 'Courier New';">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Um método chamado antes de qualquer render: rotina responsável por executar solicitações do usuário, podendo alterar o estado do sistema e/ou afetar o render subseqüente<br>
+&nbsp;</td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">public&nbsp;void&nbsp;processAction(IServiceInterfaceActionRequest&nbsp;request,&nbsp;IServiceInterfaceActionResponse&nbsp;response)</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p>O exemplo &nbsp;abaixo implementa uma classe (<span style="font-style: italic;">Message</span>) que estende a classe <span style="font-style: italic;">GenericServiceInterface</span> do <span style="font-style: italic;">Lumis,</span> para que uma interface seja renderizada (através do método <span style="font-style: italic;">render</span>) exibindo a expressão “Hello World”.<br>
+&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;Public&nbsp;class&nbsp;Message&nbsp;extends&nbsp;GenericServiceInterface</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;public&nbsp;void&nbsp;render(IServiceInterfaceRenderRequest&nbsp;request,&nbsp;IServiceInterfaceRenderResponse&nbsp;response)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;response.getWriter().print("Hello&nbsp;World!");</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">}</span></p>
+<p><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

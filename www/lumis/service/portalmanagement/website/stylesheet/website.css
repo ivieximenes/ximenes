@@ -1,0 +1,38 @@
+/* $Revision: 15715 $ $Date: 2013-08-06 00:24:12 -0300 (Tue, 06 Aug 2013) $ */
+.lum-website-div-baseUrls 
+{
+	margin-top: 5px;
+}
+
+.lum-website-div-baseUrls span 
+{
+	width: 40px; 
+	float:left;
+}
+
+.lum-website-div-baseUrls input 
+{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.lum-website-domain-inputText
+{
+	width: 180px;
+}
+
+.lum-website-port-inputNumber
+{
+	width: 40px !important;
+}
+
+.lum-website-path-inputText
+{
+	width: 140px;
+}
+
+td
+{
+	white-space: nowrap;
+	padding-right: 10px; 
+}

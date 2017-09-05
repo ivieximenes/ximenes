@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<!-- $Revision: 17553 $ $Date: 2015-07-12 18:27:04 -0300 (Sun, 12 Jul 2015) $ -->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" metadata-complete="true">
+
+	<distributable/>
+		
+	<context-param>
+		<param-name>lumisDataPath</param-name>
+		<param-value>C:\lumis\lumisPortalProjects\solutions\Qualicorp\work\lumisportal\lumisdata</param-value>
+	</context-param>
+
+	<!-- 
+		An empty <absolute-ordering> and the metadata-complete="true" on the <web-app> element speeds up application 
+		boot as some scanning part of Servlet specification cease to be necessary. 
+		If scanning in the web application is desired, adjust it accordingly.
+	-->	
+	<absolute-ordering>
+	</absolute-ordering>
+	
+	<listener>
+		<listener-class>lumis.portal.PortalConfiguration</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.sun.portal.container.service.ServiceManagerContextListenerImpl</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>lumis.portlet.container.pluto.PlutoPortletContainer</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>lumis.report.ReportServletContextListener</listener-class>
+	</listener>
+	
+	<listener>
+		<description>WSRP Context Listener</description>
+		<listener-class>lumis.service.wsrp.producer.WSRPContextListener</listener-class>
+	</listener>
+
+	<listener>
+		<description>JAX-WS Context Listener</description>
+		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+	</listener>
+	
+	<listener>
+		<description>Asynch Queue Process Initializer</description>
+		<listener-class>lumis.portal.processqueue.ProcessQueueInitializer</listener-class>
+	</listener>
+	
+	<listener>
+		<description>Post Upgrade Tasks Executor</description>
+		<listener-class>lumis.upgrade.postupgrade.PostUpgradeTaskContextListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>WebsiteDiscoverFilter</filter-name>
+		<filter-class>lumis.portal.website.WebsiteDiscoveryFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>WebsiteDiscoverFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>WebServerIntegrationInitFilter</filter-name>
+		<filter-class>lumis.portal.webserver.WebServerIntegrationInitFilter</filter-class>
+		<init-param>
+			<param-name>extension</param-name>
+			<param-value>.lumis</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>WebServerIntegrationInitFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>EncodingUTF8Filter</filter-name>
+		<filter-class>lumis.portal.filter.EncodingUTF8Filter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>EncodingUTF8Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+		
+	<filter>
+		<filter-name>PortalRequestContextFilter</filter-name>
+		<filter-class>lumis.portal.PortalRequestContextFilter</filter-class>
+		<!-- Uncomment to customize the regexp pattern of request.getServletPath() 
+		that will not be processed by this filter. The requests for these 
+		resources will just continue through directly without the authentication process. 
+		<init-param>
+			<param-name>ignorePattern</param-name>
+			<param-value>(?i)(^/data/|\.(css|js|gif|jpe?g|png|pdf|wsdl)$</param-value>
+		</init-param>
+		-->
+	</filter>
+
+	<filter-mapping>
+		<filter-name>PortalRequestContextFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>WidgetHolderPreferences</filter-name>
+		<filter-class>lumis.service.pagepersonalization.widgetmanipulationaction.WidgetHolderPreferencesFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>WidgetHolderPreferences</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>PageCacheSSIFilter</filter-name>
+		<filter-class>lumis.portal.page.cache.PageCacheSSIFilter</filter-class>
+		<!-- Uncomment to customize the regexp pattern of request.getServletPath() 
+		that will not be processed by this filter. The requests for these 
+		resources will just continue through directly without the SSI filter. 
+		<init-param>
+			<param-name>ignorePattern</param-name>
+			<param-value>(?i)(^/data/|\.(css|js|gif|jpe?g|png|pdf|wsdl)$|^/lumis/service/wsrp/producer/wsdl)</param-value>
+		</init-param>
+		-->
+	</filter>
+
+	<filter-mapping>
+		<filter-name>PageCacheSSIFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>TransactionCleanupFilter</filter-name>
+		<filter-class>lumis.portal.transaction.TransactionCleanupFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>TransactionCleanupFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>MonitorContextFilter</filter-name>
+		<filter-class>lumis.portal.monitor.impl.MonitorContextFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MonitorContextFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<!--
+		The below example is the NTLM filter required to use the 
+		NtlmAuthenticator. To enable the NTLM filter uncomment it 
+		and set the jcifs properties as this filter's parameters. 
+		See http://jcifs.samba.org/src/docs/ntlmhttpauth.html#props 
+		for detailed documentation for jcifs properties (basic 
+		authentication is not supported).
+	<filter>
+		<filter-name>NtlmFilter</filter-name>
+		<filter-class>lumis.portal.authentication.http.NtlmFilter</filter-class>
+		<init-param>
+			<param-name>jcifs.http.domainController</param-name>
+			<param-value>10.200.10.2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jcifs.smb.client.domain</param-name>
+			<param-value>DOMAIN_NAME</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jcifs.smb.client.username</param-name>
+			<param-value>A_LOGIN_FOR_THE_SPECIFIED_DOMAIN</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jcifs.smb.client.password</param-name>
+			<param-value>THE_PASSWORD_FOR_THE_LOGIN</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jcifs.util.loglevel</param-name>
+			<param-value>1</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>NtlmFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	-->
+
+	<filter>
+		<filter-name>AuthenticationFilter</filter-name>
+		<filter-class>lumis.portal.authentication.AuthenticationFilter</filter-class>
+		<!-- Uncomment to customize the regexp pattern of request.getServletPath() 
+		that will not be processed by this filter. The requests for these 
+		resources will just continue through directly without the authentication process. 
+		<init-param>
+			<param-name>ignorePattern</param-name>
+			<param-value>(?i)(^/data/|\.(css|js|gif|jpe?g|png|pdf|wsdl)$|^/lumis/service/wsrp/producer/wsdl)</param-value>
+		</init-param>
+		-->
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+    <listener>
+        <listener-class>net.bull.javamelody.SessionListener</listener-class>
+    </listener>
+	<filter>
+        <filter-name>monitoring</filter-name>
+        <filter-class>lumis.service.portalmanagement.monitoring.JavaMelodyCustomMonitoringFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>monitoring</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+ 	<filter>
+		<filter-name>DocumentationFilter</filter-name>
+		<filter-class>lumis.portal.filter.DocumentationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>DocumentationFilter</filter-name>
+		<url-pattern>/lumis/doc/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>LayoutFileFilter</filter-name>
+		<filter-class>lumis.portal.presentation.core.LayoutFileFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LayoutFileFilter</filter-name>
+		<url-pattern>/lumis/portal/presentation/layoutfile/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	 
+	<filter>
+		<filter-name>PortalModeDiscoveryFilter</filter-name>
+		<filter-class>lumis.portal.presentation.PortalModeDiscoveryFilter</filter-class>
+		<!-- Uncomment to customize the regexp pattern of request.getServletPath() 
+		that will not be processed by this filter. The requests for these 
+		resources will just continue through directly. 
+		<init-param>
+			<param-name>ignorePattern</param-name>
+			<param-value>(?i)(^/data/|\.(css|js|gif|jpe?g|png|pdf|wsdl)$|^/lumis/service/wsrp/producer/wsdl)</param-value>
+		</init-param>
+		-->
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>PortalModeDiscoveryFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>WebResourceDiscoveryFilter</filter-name>
+		<filter-class>lumis.portal.url.WebResourceDiscoveryFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>WebResourceDiscoveryFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<!-- 
+		Most custom filters should be included here, since in this position
+		portal objects for the current request have been generated, and after
+		this point filters may not be processed for all page requests.
+	-->
+
+	<filter>
+		<filter-name>WebResourceForwardFilter</filter-name>
+		<filter-class>lumis.portal.url.WebResourceForwardFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>WebResourceForwardFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<description>Filter used for processing requests to the WSRP Producer</description> 
+		<filter-name>ProducerFilter</filter-name> 
+		<filter-class>lumis.service.wsrp.producer.ProducerFilter</filter-class> 
+	</filter>
+	 
+	<filter-mapping>
+		<filter-name>ProducerFilter</filter-name> 
+		<url-pattern>/lumis/service/wsrp/producer/*</url-pattern> 
+	</filter-mapping> 
+	
+	<filter>
+		<filter-name>WebServerIntegrationForwardFilter</filter-name>
+		<filter-class>lumis.portal.webserver.WebServerIntegrationForwardFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>WebServerIntegrationForwardFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>REST Root Filter</filter-name>
+		<filter-class>lumis.portal.rest.RestRootFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>REST Root Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+	
+	<servlet>
+	     <servlet-name>FrameworkClock</servlet-name>
+	     <servlet-class>lumis.portal.clock.ClockStarter</servlet-class>
+	     <load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+	     <servlet-name>PageCacheGenerator</servlet-name>
+	     <servlet-class>lumis.portal.page.cache.PageCacheGeneratorStarter</servlet-class>
+	     <load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet>
+	     <servlet-name>ServicesServlet</servlet-name>
+	     <servlet-class>lumis.portal.servicecontainer.ServicesServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServicesServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReportImageServlet</servlet-name>
+		<servlet-class>net.sf.jasperreports.j2ee.servlets.ImageServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>RobotsTxtServlet</servlet-name>
+		<servlet-class>lumis.service.seo.robotstxt.RobotsTxtServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RobotsTxtServlet</servlet-name>
+		<url-pattern>/robots.txt</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SitemapServlet</servlet-name>
+		<servlet-class>lumis.service.seo.sitemap.SitemapServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SitemapServlet</servlet-name>
+		<url-pattern>/sitemap/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReportImageServlet</servlet-name>
+		<url-pattern>/lumis/service/report/img</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResourceProxyServlet</servlet-name>
+		<servlet-class>lumis.service.wsrp.consumer.ResourceProxyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResourceProxyServlet</servlet-name>
+		<url-pattern>/lumis/service/wsrp/consumer/resource</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LumisPortalWebServices</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LumisPortalWebServices</servlet-name>
+		<url-pattern>/webservice/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- WSRP v1 service -->
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v1_PortletManagement_Service</description>
+		<servlet-name>WSRP_v1_PortletManagement_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v1_PortletManagement_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v1/portletmanagement/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v1_Registration_Service</description>
+		<servlet-name>WSRP_v1_Registration_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v1_Registration_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v1/registration/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v1_Markup_Service</description>
+		<servlet-name>WSRP_v1_Markup_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v1_Markup_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v1/markup/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v1_ServiceDescription_Service</description>
+		<servlet-name>WSRP_v1_ServiceDescription_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v1_ServiceDescription_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v1/servicedescription/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- WSRP v2 service -->
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v2_PortletManagement_Service</description>
+		<servlet-name>WSRP_v2_PortletManagement_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v2_PortletManagement_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v2/portletmanagement/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v2_Registration_Service</description>
+		<servlet-name>WSRP_v2_Registration_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v2_Registration_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v2/registration/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v2_Markup_Service</description>
+		<servlet-name>WSRP_v2_Markup_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v2_Markup_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v2/markup/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>JAX-WS endpoint - WSRP_v2_ServiceDescription_Service</description>
+		<servlet-name>WSRP_v2_ServiceDescription_PortType</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WSRP_v2_ServiceDescription_PortType</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/service/v2/servicedescription/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- WSRP WSDL & Router Servlet -->
+	<servlet>
+		<description>WSRP WSDL Servlet</description>
+		<servlet-name>ProducerWSDLServlet</servlet-name>
+		<servlet-class>lumis.service.wsrp.producer.ProducerWSDLServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProducerWSDLServlet</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/wsdl/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Servlet used for routing requests to the WSRP producer endpoints</description>
+		<servlet-name>ProducerRouterServlet</servlet-name>
+		<servlet-class>lumis.service.wsrp.producer.ProducerRouterServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProducerRouterServlet</servlet-name>
+		<url-pattern>/lumis/service/wsrp/producer/router/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- API REST -->
+	<servlet>
+      <servlet-name>REST Application</servlet-name>
+      <servlet-class>lumis.portal.rest.RestServletApplication</servlet-class>
+      <init-param>
+          <param-name>javax.ws.rs.Application</param-name>
+          <param-value>lumis.portal.rest.RestApplication</param-value>
+      </init-param>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>REST Application</servlet-name>
+      <url-pattern>/lumis/api/rest/*</url-pattern>
+    </servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.shtml</welcome-file>
+	</welcome-file-list>
+
+	<session-config>
+		<cookie-config>
+			<path>/</path>
+		</cookie-config>
+	</session-config>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/lumis/portal/error/404error.jsp</location>
+	</error-page>
+</web-app>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>0000000050C9BD630150CD5E03C97465</id>
+  <name>FAQ</name>
+  <description>Permite gerenciar perguntas e respostas mais freqüentes.</description>
+  <service-id>lumis.service.faq</service-id>
+  <dependencies>
+    <dependency type="document_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851327</service-instance-id>
+    </dependency>
+    <dependency type="media_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851328</service-instance-id>
+    </dependency>
+  </dependencies>
+</service-instance>

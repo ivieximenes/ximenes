@@ -1,0 +1,195 @@
+/* $Revision: 15349 $ $Date: 2013-05-20 12:54:36 -0300 (Mon, 20 May 2013) $ */
+/* Classes para MenuBar Hierárquica 2.0 */
+
+/* Horizontal */
+div.menuBar 
+{
+  background-color:white;
+  text-align:left;
+  border-left:1px solid #aaa;
+  margin:8px 0;
+  _margin:0;
+  padding:6px 0;
+  _padding:0;
+}
+
+div.menuBar a.menuButton 
+{
+  font-family:Verdana, arial, sans-serif;
+  font-size:10px;
+  font-style:normal;
+  font-weight:bold;
+  color:#626563;
+  text-decoration:none;
+  position:relative;
+  left:0;
+  top:0;
+  z-index:100;
+  padding:6px 8px;
+  border:1px solid #aaa;
+  border-left:0;
+}
+
+div.menuBar a.menuButton:hover 
+{
+  background-color:#eef2f7;
+}
+
+div.menuBar a.menuButtonActive,
+div.menuBar a.menuButtonActive:hover 
+{
+  background-color:#eef2f7;
+}
+
+div.menuBar a.menuButtonSelected,
+div.menuBar a.menuButtonSelected:hover
+{
+  background-color:#eef2f7;
+}
+
+
+/* Vertical */
+div.menu,
+div.menu a.menuItem,
+div.menuBarVert,
+div.menuVert,
+div.menuBarVert a.menuItem,
+div.menuVert a.menuItem,
+{
+  font-family:Verdana, arial, sans-serif;
+  font-size:10px;
+  font-style:normal;
+  font-weight:bold;
+  color:#626563;
+}
+
+div.menu,
+div.menuBarVert,
+div.menuVert
+{
+  background-color:white;
+  padding:0;
+  position:absolute;
+  left:0;
+  top:0;
+  visibility:hidden;
+  z-index:101;
+}
+div.menu,
+div.menuVert
+{
+  border:1px solid #aaa;
+  border-bottom:0;
+}
+div.menuBarVert
+{
+  border-top:1px solid #aaa; 
+}
+div.menu
+{
+  margin-top:-2px;
+}
+
+div.menu a.menuItem,
+div.menuBarVert a.menuItem,
+div.menuVert a.menuItem
+{
+  color:#626563;
+  display:block;
+  padding:4px 6px 4px 14px;
+  text-decoration:none;
+  white-space:nowrap;
+  border-bottom:1px solid #aaa;
+}
+div.menuBarVert a.menuItem
+{
+  border:1px solid #aaa;
+  border-top:0;
+}
+
+div.menu a.menuItem:hover,
+div.menuBarVert a.menuItem:hover,
+div.menuVert a.menuItem:hover,
+div.menu a.menuItemHighlight,
+div.menuBarVert a.menuItemHighlight
+div.menuVert a.menuItemHighlight
+{
+  padding:4px 6px 4px 9px;
+  border-left:5px solid #5a81ad;
+  background-color:#eef2f7;
+  color:#626563;
+}
+div.menuBarVert a.menuItem:hover,
+div.menuBarVert a.menuItemHighlight
+{
+  padding:4px 6px 4px 10px;
+}
+
+div.menu a.menuItem span.menuItemText,
+div.menuBarVert a.menuItem span.menuItemText,
+div.menuVert a.menuItem span.menuItemText
+{}
+
+div.menu a.menuItem span.menuItemArrow,
+div.menuBarVert a.menuItem span.menuItemArrow,
+div.menuVert a.menuItem span.menuItemArrow
+{
+  margin-right:-.75em;
+}
+
+div.menu div.menuItemSep,
+div.menuBarVert div.menuItemSep,
+div.menuVert div.menuItemSep
+{
+  border:1px solid #aaa;
+  margin:4px 2px;
+}
+
+div.menuBarVert a.menuButtonSelected,
+div.menuBarVert a.menuButtonSelected:hover
+{
+  background-color:#eef2f7;
+}
+
+
+
+/* MenuBar Vertical Expansível */ 
+
+.cEZTExpMenu1,
+.cEZTExpMenu1 a  
+{
+	font-family:Verdana;
+	font-size:10px;
+}                               
+.cEZTExpMenu1 
+{
+	width:100%;
+	color:#636563;
+	background:#AAA;
+	border-top:1px solid #AAA;
+}
+.cEZTExpMenu1 a 
+{
+	display:block;
+	width:100%;
+	font-weight:bold;
+	text-decoration:none;
+	color:#636563;
+	background:white;
+	border:1px solid #AAA;
+	border-top:0;
+	padding:5px;
+}
+.cEZTExpMenu1 a:hover 
+{
+	text-decoration:none;
+	background:#EEF2F7;
+}
+.cEZTExpMenuItem 
+{
+	background:white;
+}
+.cEZTExpMenuItemSelected 
+{
+	background:#EEF2F7; 
+}

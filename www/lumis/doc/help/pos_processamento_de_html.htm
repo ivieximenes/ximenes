@@ -1,0 +1,249 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Pós Processamento de HTML</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?pos_processamento_de_html.htm"; }
+  else { parent.quicksync('a8.6.6.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Pós Processamento de HTML</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="api_javascript.htm">Previous</a>&nbsp;
+     <a href="webservice.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">LumisPortal </span>dispõe de uma API <span style="font-style: italic;">client-side </span>para centralizar o pós processamento do HTML.</p>
+<p>O uso básico dessa API é:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Uma função <span style="font-style: italic;">JavaScript</span> <span style="font-weight: bold;">fn</span><span style="font-size: 7pt; vertical-align: super;">(1)</span><span style="font-weight: bold;"> </span>é registrada na API através de uma chamada <span style="font-style: italic; font-weight: bold;">LumisPortal.HtmlProcessor.register(</span><span style="font-weight: bold;">fn</span><span style="font-style: italic; font-weight: bold;">)</span><span style="font-style: italic;">;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Um componente que altere o HTML da página notifica a API através de <span style="font-style: italic; font-weight: bold;">LumisPortal.HtmlProcessor.process(element)</span><span style="font-size: 7pt; vertical-align: super;">(2)</span><span style="font-style: italic;">;</span></td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>A API invoca cada função registrada, na ordem que foram registradas, passando o parâmetro <span style="font-style: italic;">element</span>, ou seja, no caso da função <span style="font-weight: bold;">fn</span>, invocaria <span style="font-style: italic;">fn(element);</span></td></tr></table></div><p style="margin: 0px 0px 0px 21px;">&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>(1) A assinatura da função deve ser: <span style="font-weight: bold;">function(element)</span>, onde element é o elemento HTML alterado.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 7px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>(2) Sempre que um componente invocar <span style="font-weight: bold;">LumisPortal.HtmlProcessor.process(element)</span> ele é responsável por passar o nó alterado como parâmetro. Caso o elemento não seja passado, ele será considerado como sendo o <span style="font-style: italic;">document.documentElement</span>.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 7px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>O <span style="font-style: italic;">LumisPortal </span>automaticamente invoca <span style="font-weight: bold;">LumisPortal.HtmlProcessor.process(element)</span> em renderizações de instâncias de interface configuradas com renderização <span style="font-style: italic;">client-side script</span>.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 7px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Para utilizar a API de pós processamento de HTML, é necessário que o script do <span style="font-style: italic;">LumisPortal</span> <span style="font-weight: bold;">lumis/portal/client/script/LumisPortal.js</span> esteja incluído na página, ou seja, que o mesmo não tenha sido removido via <span style="font-style: italic;">layoutfile</span>.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.50;"><span style="font-weight: bold;">Motivação e exemplo</span></p>
+<p>Imagine que temos uma situação onde uma interface de um serviço necessite alterar um trecho do HTML gerado, injetando, por exemplo, um botão (representado pela imagem <span style="font-weight: bold;">lumis/portal/client/images/Edit.gif</span>).</p>
+<p>&nbsp;</p>
+<p>Uma solução poderia ser fazer, no XSL da interface, um javascript que injetasse o HTML desejado no ready do document, como no exemplo abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="1" style="border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#ebebeb" style="background-color:#ebebeb; border: none"><p><span style="color: #7f7f7f;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;xsl:template match="/"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">${lum_beforeWrite('&lt;xsl:text disable-output-escaping="yes"&gt;&amp;lt;script type="text/javascript" src="lumis/tool/jquery/jquery.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/xsl:text&gt;', 'jquery.js')}</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;script type="text/javascript"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;xsl:text disable-output-escaping="yes"&gt;&lt;![CDATA[</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(document).ready(function(){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(".lum-content-title").each(function(){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(this).append($("&lt;img src=\"lumis/portal/client/images/Edit.gif\" /&gt;"));</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">]]&gt;&lt;/xsl:text&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;/script&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;/xsl:template&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Essa solução funciona, como nas imagens abaixo:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-1.png" width="396" height="178" border="0" alt="htmlprocessorapi-1" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Navegando para a segunda página, teríamos:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-2.png" width="396" height="172" border="0" alt="htmlprocessorapi-2" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>O funcionamento aparentemente está correto. Agora, habilitaremos a renderização client-side da instância de interface, como abaixo:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-3.png" width="893" height="408" border="0" alt="htmlprocessorapi-3" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Após isso, ao renderizar a página novamente, teríamos:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-4.png" width="396" height="166" border="0" alt="htmlprocessorapi-4" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Repare que o ícone sumiu. Isso ocorre pois a interface não é injetada durante a renderização da página e quando o script que injeta o ícone roda o HTML da interface ainda não está pronta.</p>
+<p>Para resolver esse problema poderíamos alterar o XSL para injetar o ícone através da API de pós processamento de HTML, como abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="1" style="border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#ebebeb" style="background-color:#ebebeb; border: none"><p><span style="color: #7f7f7f;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;xsl:template match="/"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">${lum_beforeWrite('&lt;xsl:text disable-output-escaping="yes"&gt;&amp;lt;script type="text/javascript" src="lumis/tool/jquery/jquery.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/xsl:text&gt;', 'jquery.js')}</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;script type="text/javascript"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;xsl:text disable-output-escaping="yes"&gt;&lt;![CDATA[</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">LumisPortal.HtmlProcessor.register(</span>function(element){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(element).find(".lum-content-title").each(function(){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(this).append($("&lt;img src=\"lumis/portal/client/images/Edit.gif\" /&gt;"));</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<span style="font-weight: bold;">);</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">]]&gt;&lt;/xsl:text&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;/script&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;/xsl:template&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Renderizando a página novamente, vemos:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-5.png" width="390" height="165" border="0" alt="htmlprocessorapi-5" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>O problema foi corrigido, uma vez que o <span style="font-style: italic;">LumisPortal </span>invoca automaticamente a API de pós processamento de HTML ao renderizar uma instância de serviço.</p>
+<p>&nbsp;</p>
+<p>Agora suponha, por exemplo, que a interface de lista atualiza suas informações (adicionando um novo elemento, por exemplo) através de uma chamada AJAx. Para exemplificar esse cenário, alteraremos o XSL para incluir um botão que adiciona um novo elemento no HTML, como abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="1" style="border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#ebebeb" style="background-color:#ebebeb; border: none"><p><span style="color: #7f7f7f;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;xsl:template match="/"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">${lum_beforeWrite('&lt;xsl:text disable-output-escaping="yes"&gt;&amp;lt;script type="text/javascript" src="lumis/tool/jquery/jquery.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/xsl:text&gt;', 'jquery.js')}</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;script type="text/javascript"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;xsl:text disable-output-escaping="yes"&gt;&lt;![CDATA[</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">LumisPortal.HtmlProcessor.register(function(element){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(element).find(".lum-content-title").each(function(){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(this).append($("&lt;img src=\"lumis/portal/client/images/Edit.gif\" /&gt;"));</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(document).ready(function(){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$("#addItem").click(function(){</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(".lum-list-item").removeClass("lum-first").removeClass("lum-last");</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(".lum-list-item:first").parent().append("&lt;li class=\"lum-list-item\"&gt;&lt;article class=\"lum-content\" data-lum-entityid=\"FF808081490B1AD601490B22DE1E00E9\" data-lum-title=\"N2\" data-lum-url=\"\" data-lum-serviceinstanceid=\"FF808081490B1AD601490B2235F40088\"&gt;&lt;header class=\"lum-content-header\"&gt;&lt;h1 class=\"lum-content-title\"&gt;N2&lt;/h1&gt;&lt;ul class=\"lum-content-meta-information\"&gt;&lt;li class=\"lum-first lum-last\"&gt; em &lt;time datetime=\"2014-10-13T17:11:00\"&gt;13/10/14 17:11&lt;/time&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/header&gt;&lt;/article&gt;&lt;/li&gt;");</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(".lum-list-item:first").addClass("lum-first");</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(".lum-list-item:last").addClass("lum-last");</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">]]&gt;&lt;/xsl:text&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;/script&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div id="addItem"&gt;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Adicionar item</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;/xsl:template&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Ao renderizar novamente a página e clicar no botão, teríamos o seguinte efeito:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-6.png" width="437" height="258" border="0" alt="htmlprocessorapi-6" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Note que o ícone não foi introduzido no item adicionado pelo <span style="font-style: italic;">javascript</span>. Nessa situação, o código responsável pela adição do novo elemento deve ser responsável pela invocação da API, como demonstrado abaixo:</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="80%" cellspacing="0" cellpadding="0" border="1" style="border: solid 1px #000000; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" bgcolor="#ebebeb" style="background-color:#ebebeb; border: none"><p><span style="color: #7f7f7f;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;xsl:template match="/"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">${lum_beforeWrite('&lt;xsl:text disable-output-escaping="yes"&gt;&amp;lt;script type="text/javascript" src="lumis/tool/jquery/jquery.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/xsl:text&gt;', 'jquery.js')}</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;script type="text/javascript"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;xsl:text disable-output-escaping="yes"&gt;&lt;![CDATA[</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">LumisPortal.HtmlProcessor.register(function(element){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(element).find(".lum-content-title").each(function(){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(this).append($("&lt;img src=\"lumis/portal/client/images/Edit.gif\" /&gt;"));</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(document).ready(function(){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$("#addItem").click(function(){</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(".lum-list-item").removeClass("lum-first").removeClass("lum-last");</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(".lum-list-item:first").parent().append("&lt;li class=\"lum-list-item\"&gt;&lt;article class=\"lum-content\" data-lum-entityid=\"FF808081490B1AD601490B22DE1E00E9\" data-lum-title=\"N2\" data-lum-url=\"\" data-lum-serviceinstanceid=\"FF808081490B1AD601490B2235F40088\"&gt;&lt;header class=\"lum-content-header\"&gt;&lt;h1 class=\"lum-content-title\"&gt;N2&lt;/h1&gt;&lt;ul class=\"lum-content-meta-information\"&gt;&lt;li class=\"lum-first lum-last\"&gt; em &lt;time datetime=\"2014-10-13T17:11:00\"&gt;13/10/14 17:11&lt;/time&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/header&gt;&lt;/article&gt;&lt;/li&gt;");</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(".lum-list-item:first").addClass("lum-first");</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">$(".lum-list-item:last").addClass("lum-last");</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;">LumisPortal.HtmlProcessor.process(</span>$(".lum-list-item:last")<span style="font-weight: bold;">);</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">});</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">]]&gt;&lt;/xsl:text&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;/script&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;div id="addItem"&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">Adicionar item</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #7f7f7f;">&lt;/div&gt;</span></p>
+<p><span style="width:48px">&nbsp;</span><span style="color: #7f7f7f;">&lt;/xsl:template&gt;</span></p>
+<p><span style="color: #7f7f7f;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Repare que agora o clique do botão faz, após a injeção do HTML, uma invocação <span style="font-weight: bold;">LumisPortal.HtmlProcessor.process(</span><span style="font-style: italic;">elemento</span><span style="font-weight: bold;">);</span>. Dessa forma, ao renderizar novamente a página e clicar no botão, teríamos o seguinte efeito:</p>
+<p style="text-align: center;"><img src="htmlprocessorapi-7.png" width="435" height="266" border="0" alt="htmlprocessorapi-7" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Repare que agora o novo elemento foi processado corretamente e teve seu ícone injetado.</p>
+<p>&nbsp;</p>
+<p>De forma geral, todo o código <span style="font-style: italic;">javascript </span>que altera o <span style="font-style: italic;">DOM </span>e deseja ser compatível com funcionalidades que utilizam este pós processamento de HTML, deveria invocar <span style="font-weight: bold;">LumisPortal.HtmlProcessor.process(elemento);</span> passando o elemento incluído/alterado.</p>
+<p>De forma semelhante, todo o código <span style="font-style: italic;">javascript </span>que altere o <span style="font-style: italic;">DOM </span>genericamente (como a inclusão do ícone, por exemplo), para ser compatível com a renderização client-side ou outras modificações de HTML que usam esta API, deveria fazê-lo registrando uma função na API de pós processamento de HTML, chamando <span style="font-weight: bold;">LumisPortal.HtmlProcessor.register(function(element){ /* código da função */ });</span>.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

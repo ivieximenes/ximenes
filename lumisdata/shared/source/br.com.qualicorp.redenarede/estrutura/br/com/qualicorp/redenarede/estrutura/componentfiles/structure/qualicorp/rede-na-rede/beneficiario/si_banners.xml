@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>8A489E1F50AE95AA0150B8BE66FB44EF</id>
+  <name>Banners</name>
+  <description>Permite gerenciar e disponbilizar banners.</description>
+  <service-id>lumis.service.banner</service-id>
+  <access-control-list>
+    <entries>
+      <entry principal-id="0000000050C9BD630150CD6AE2AC0505">
+        <allow-permissions>4</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+  <dependencies>
+    <dependency type="document_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851327</service-instance-id>
+    </dependency>
+    <dependency type="media_repository">
+      <service-instance-id>0000000050A1A02C0150A1ACC6851328</service-instance-id>
+    </dependency>
+  </dependencies>
+</service-instance>

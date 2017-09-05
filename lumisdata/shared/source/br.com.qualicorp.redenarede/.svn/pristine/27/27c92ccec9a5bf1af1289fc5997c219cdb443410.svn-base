@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050A1A02C0150A1ACC6861340</id>
+  <name>Busca</name>
+  <parent-template-id>0000000050A1A02C0150A1ACC6861342</parent-template-id>
+  <hidden>true</hidden>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="menu">
+        <interface id="0000000050A1A02C0150A1C0CD8D28F2"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="0000000050A1A02C0150A1C0CD9428F3"></interface>
+    </holder>
+    <holder id="login">
+        <interface id="0000000050A1A02C0150A1C0CD9B28F4"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="8A489E1F50AE95AA0150AFA81A8C397A"></interface>
+        <interface id="0000000050A1A02C0150A1C0CDA028F5"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C0CD8D28F2</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AF938818E2</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C0CD9428F3</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AFB58618EB</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C0CD9B28F4</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1BA4918288A</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050A1A02C0150A1C0CDA028F5</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>0000000050A1A02C0150A1AF6EA518D7</parent-interface-instance-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150AFA81A8C397A</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.searchResults</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150AFAB02AA39FF</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

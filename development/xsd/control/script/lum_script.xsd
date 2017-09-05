@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17027 $ $Date: 2015-02-26 17:15:02 -0300 (Thu, 26 Feb 2015) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_script"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_script"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_script">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence>
+					<xsd:element name="script">
+						<xsd:annotation>
+							<xsd:documentation>
+								<![CDATA[
+								Used to define a client-side script.
+								If the attribute <b>src</b> is set, the content within the <b>script</b> tag will be ignored.
+							]]>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:attribute name="src" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Specifies the URL of an external script file.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="type" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Specifies the MIME type of the script. If not set, the default value is "text/javascript".</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="charset" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Specifies the character encoding used in an external script file. If not set, the default value is "UTF-8".</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+							<xsd:attribute name="key" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Specifies a unique key to certify that this section to be used once, at the beginning of the interface. If not set, this section works at its deafult behaviour.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="yesno">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="yes"/>
+			<xsd:enumeration value="no"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

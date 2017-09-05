@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>processActions</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?doui_processactions2.htm"; }
+  else { parent.quicksync('a8.3.5.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">processActions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douitabelacontroles.htm">Previous</a>&nbsp;
+     <a href="douiresponse.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Cada elemento <span style="font-style: italic;">&lt;<a href="../xsd/doui/schemas/douidefinition_xsd/complexTypes/processAction.html" target="_blank" class="weblink">processAction</a>&gt;</span> define um <span style="font-style: italic;">process action handler</span>, que pode ser definido como um dos <span style="font-style: italic;">handlers</span> padrão do produtom através do atributo type, ou pode ser customizado atraves dos atributos <span style="font-style: italic;">className</span> que indica a classe <span style="font-style: italic;">Java</span> do <span style="font-style: italic;">handler,</span> ou <span style="font-style: italic;">scriptPath</span> que indica o caminho do arquivo de <span style="font-style: italic;">script</span> que define a classe <span style="font-style: italic;">Java</span> do <span style="font-style: italic;">handler</span>. Caso um <span style="font-style: italic;">process action</span> deva executar mais de um <span style="font-style: italic;">handler</span>, haverá mais de um elemento <span style="font-style: italic;">&lt;processAction&gt;</span> com o mesmo valor para o atributo “id”. &nbsp;Neste caso, quando um <span style="font-style: italic;">process action</span> com esse identificador é desencadeado, todos os  <span style="font-style: italic;">process actions</span> com esse identificador são executados, na ordem em que estão definidos dentro do elemento <span style="font-style: italic;">&lt;<a href="../xsd/doui/schemas/douidefinition_xsd/complexTypes/processActions.html" target="_blank" class="weblink">processActions</a>&gt;</span> .</p>
+<p style="margin: 14px 0px 0px 0px;">Exemplo de definição de um  <span style="font-style: italic;">process action  </span>para uma determinada interface:<br>
+&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table width="600" cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="547" style="width:547px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;processActions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;processAction&nbsp;id="delete"&nbsp;type="tableDeleteData"&nbsp;sourceId="default"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;response&nbsp;type="doui_setRequestParameters"/&gt;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/processAction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/processActions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Outro exemplo: O controle de botão <span style="font-style: italic;">Ok</span> (<span style="font-style: italic;">lum_okButton</span>), ao ser clicado, dispara o <span style="font-style: italic;">process action</span> com identificador “commit”. O &nbsp; <span style="font-style: italic;">type</span> com o valor <span style="font-style: italic;">tableAddData</span> indica que a classe de <span style="font-style: italic;">process action handler</span> será <span style="font-style: italic;">TableAddDataProcessActionHandler</span>, responsável por adicionar dados de um formulário em uma tabela de banco de dados.</p>
+<p style="margin: 14px 0px 0px 0px;">Na definição do <span style="font-style: italic;">process action</span> , há dois tipos de resposta: o <span style="font-style: italic;">doui_refreshParent</span>, que instrui a renderização a dar um <span style="font-style: italic;">refresh</span> na página pai da janela <span style="font-style: italic;">pop-up</span> da interface, e o <span style="font-style: italic;">doui_closeWindow</span>, que instrui a renderização a fechar a janela <span style="font-style: italic;">pop-up</span> da interface.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type=“lum_label”&nbsp;sourceId=“default”&nbsp;dataId=“name”/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type=“lum_text”&nbsp;id=“name”&nbsp;sourceId=“default”/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;control&nbsp;type=“lum_okButton”&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;onClick&nbsp;type="processAction"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;processActionId&gt;commit&lt;/processActionId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/onClick&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/control&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/controls&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;processActions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;processAction&nbsp;id=“commit”&nbsp;type=“tableAddData“&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_refreshParent"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_closeWindow"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/processAction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/processActions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 14px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

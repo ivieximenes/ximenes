@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+       <service id="br.com.qualicorp.redenarede.service.autodeploy" name="Auto Deploy - clock" isInstantiable="false" type="lum_service">
+             <description>Auto deploy - Clock</description>
+             <clocks>
+                    <clock className="br.com.qualicorp.redenarede.service.autodeploy.clock.AutoDeployClock" id="AutoDeployClock">
+                           <tickInterval type="hours">2</tickInterval>
+                           <startTime>18:00:00</startTime>
+                    </clock>
+             </clocks>
+       </service>
+</serviceDefinition>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel version="7.0">
+  <id>0000000050A1A02C0150A1ACC6851329</id>
+  <name>Área Pública</name>
+  <hidden>true</hidden>
+  <position>1</position>
+  <friendly-url-specific-pattern-enabled>true</friendly-url-specific-pattern-enabled>
+  <access-control-list>
+    <entries>
+      <entry principal-id="00000000C00000000000000000000001">
+        <allow-permissions>65792</allow-permissions>
+      </entry>
+    </entries>
+  </access-control-list>
+</channel>

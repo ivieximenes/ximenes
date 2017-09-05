@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 8381 $ $Date: 2007-10-11 11:20:27 -0300 (Thu, 11 Oct 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_tabularData"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_tabularData"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_tabularData">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="noRowMessage" minOccurs="0" type="xsd:string"/>
+				</xsd:sequence>
+				<xsd:attribute name="listHeight" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>height of the tabular data</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_advancedTabularData">
+		<xsd:complexContent>
+			<xsd:extension base="lum_tabularData">
+				<xsd:sequence>
+					<xsd:element name="allowSelectRow" minOccurs="0">
+						<xsd:complexType>
+							<xsd:attribute name="type" type="allowSelectRowType" default="none"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_selectItemTabularData">
+		<xsd:complexContent>
+			<xsd:extension base="lum_tabularData">
+				<xsd:sequence>
+					<xsd:element type="xsd:string" name="callbackFunctionRequestParameterName" minOccurs="0" default="callbackFunction">
+						<xsd:annotation>
+							<xsd:documentation>name of the request parameter that represents the callback function name.  This function will be called in the window opener the two parameters 'identifier' and 'friendly name'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element type="xsd:string" name="primaryKeyFieldId" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of the field that represents the primary key of the item being selected.  If not specified, the field with isPrimaryKey=true is used.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element type="xsd:string" name="primaryNameFieldId" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of the field that represents the primary name of the item being selected.  If not specified, the field with isPrimaryName=true is used.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="allowSelectRowType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="singleSelect"/>
+			<xsd:enumeration value="multiSelect"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

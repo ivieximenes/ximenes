@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14248 $ $Date: 2012-05-04 14:55:54 -0300 (Fri, 04 May 2012) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"  xmlns:control="http://www.lumis.com.br/douicontrols">
+
+	<service id="br.com.qualicorp.redenarede.service.auditoria">
+		<sources>
+			<source id="auditoria" type="table">
+				<table>qc_auditoria</table>
+				<fields>
+					<field id="id" name="Id" dataType="guid" isPrimaryKey="true" display="false" />
+					<field id="userId" name="Id Usuario Responsável" dataType="guid" />
+					<field id="userName" name="Responsável" dataType="string" />
+					<field id="login" name="Login" dataType="string" />
+					<field id="serviceId" name="Service Id" dataType="string" lookupRelationId="auditoriaLumService" lookupFieldId="serviceId" />
+					<field id="serviceName" name="Nome do Serviço" dataType="string" />
+					<field id="instanceId" name="Instance Id" dataType="guid" />
+					<field id="instanceName" name="Instância do Serviço" dataType="string" />
+					<field id="operation" name="Ação" dataType="integer">
+					<options>
+						<option value="0">Adicionar</option>
+						<option value="1">Editar</option>
+						<option value="2">Excluir</option>
+					</options>
+					</field>
+					<field id="dateProcess"          name="Data e Hora"    dataType="dateTime" pattern="dd/MM/yyyy HH:mm:ss" />
+					<field id="content"       name="Conteudo"       dataType="string"/>
+					<field id="customMessage" name="Mensagem"       dataType="string"/>
+					<field id="itemId"        name="ID"             dataType="guid"/>
+				</fields>
+				<relations>
+					<relation id="auditoriaLumService" foreignSourceId="lumService">
+						<relationField fieldId="serviceId" foreignFieldId="serviceId" />
+					</relation>
+				</relations>
+			</source>
+			
+			<source id="lumService" type="table">
+				<table>lum_service</table>
+				<fields>
+					<field id="serviceId" name="serviceId" dataType="guid" isPrimaryKey="true" display="false" />
+					<field id="userName" name="Nome" isPrimaryName="true" dataType="string" />
+				</fields>
+			</source>
+		</sources>
+	</service>
+	
+	<interfaces>	
+		<interface id="administracao">
+			<sources>
+				<source id="auditoria">
+					<fields>
+						<field id="id"/>
+						<field id="userName"/>
+						<field id="login"/>
+						<field id="dateProcess"/>
+						<field id="serviceName"/>
+						<field id="operation" doOptionLookup="true" />
+						<field id="itemId"/>
+						<field id="serviceId" display="false" />
+					</fields>
+					<filters>
+						<filter id="login" operator="like" />
+					    <filter id="de" name="Data e Hora De" fieldId="dateProcess" operator="greaterThanOrEqual"/>
+					    <filter id="ate" name="Data e Hora Até" fieldId="dateProcess" operator="lessThanOrEqual" />
+					    <filter id="serviceName" operator="like"/>
+						<filter id="operation" inputControlType="lum_dropDownList"  showItems="all" name="Ação" />
+						<filter id="itemId" className="br.com.qualicorp.redenarede.service.auditoria.filter.AuditFilter" />
+					    <filter id="serviceId"  operator="equal" showItems="referenced"  />
+					</filters>
+					<orderBy>
+						<field direction="descending" id="dateProcess"/>
+					</orderBy>
+				</source>
+				<source id="lumService" />
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_interfaceHeader/>
+					
+					<control:lum_interfaceHeaderButtons>
+						<control:lum_editButton interfaceId="details" id="details" text="Detalhes"/>
+					</control:lum_interfaceHeaderButtons>
+					
+					<control:lum_adminList id="adminList" sourceId="auditoria"/>
+				</control:lum_form>
+			</controls>
+		</interface>
+		
+		<interface id="details">
+			<sources>
+				<source id="auditoria">
+					<fields inherit="all">
+						<field id="operation" doOptionLookup="true"/>
+						<field id="labelId" name="labelId" dataType="string" externalData="true" />
+					</fields>
+					<postLoadProcessors>
+						<postLoadProcessor className="br.com.qualicorp.redenarede.service.auditoria.postload.AuditPostLoadProcessor"/>
+					</postLoadProcessors>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_interfaceHeader/>
+				<control:lum_autoLayoutDetails/>
+			</controls>
+		</interface>
+	</interfaces>
+	
+</doui:douiDefinition>

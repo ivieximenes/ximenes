@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>2C96A6685559738501555ABEBF7D1625</id>
+  <name>Administração</name>
+  <hidden>true</hidden>
+  <layout><![CDATA[<layout><area><column><row><cell>2C96A6685559738501555AC0ABB7167A</cell></row></column><column width="100%"><row></row><row><cell>2C96A6685559738501555AC09DBB1677</cell></row></column></area></layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A6685559738501555AC09DBB1677</id>
+      <service-instance-id>8A488A39382EAF6301382EAF63AC0000</service-instance-id>
+      <interface-id>lumis.service.autoadministration.interfaceHolder</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A6685559738501555AC0ABB7167A</id>
+      <service-instance-id>8A488A39382EAF6301382EAF63AC0000</service-instance-id>
+      <interface-id>lumis.service.autoadministration.navigation</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

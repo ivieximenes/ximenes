@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>8A489E1F50AE95AA0150B8AD856D33B7</id>
+  <name>Home</name>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>logado-home.html</layout-file>
+  <layout><![CDATA[<layout><holder id="logo"><interface id="8A488AE7514911F20151492826F60796"/></holder><holder id="menu"><interface id="8A489E1F50AE95AA0150B8BB42E74402"/></holder><holder id="busca"><interface id="8A489E1F50AE95AA0150B8CE38FB6362"/></holder><holder id="logout"><interface id="8A489E1F50AE95AA0150B8BBB078441C"/></holder><holder id="menu_vertical"><interface id="8A489E1F50AE95AA0150B8BC0B564437"/></holder><holder id="banner"><interface id="8A488AE7514911F2015149289E0507CE"/><interface id="8A489E1F50AE95AA0150B8BE71994500"/></holder><holder id="servicos"><interface id="8A489E1F50AE95AA0150B8BE21ED44D2"/></holder><holder id="noticias"><interface id="8A489E1F50AE95AA0150B8BDA1EA44B6"/></holder></layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>8A488AE7514911F20151492826F60796</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.beneficiario</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A488AE7514911F2015149289E0507CE</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.homeBeneficiario</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BB42E74402</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BBB078441C</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BC0B564437</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33C1</service-instance-id>
+      <interface-id>lumis.service.link.list</interface-id>
+      <applied-interface-style-id>8A489E1F50AE95AA0150B8C171314AC5</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_orderBy"><![CDATA[<orderBy><field id="priority" direction="ascending" /></orderBy>]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BDA1EA44B6</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8BAE20143BD</service-instance-id>
+      <interface-id>lumis.service.news.quicklist</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B9642F25EB</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_maxRows"><![CDATA[2]]></custom-property>
+        <custom-property name="default.doui_orderBy"><![CDATA[<orderBy><field id="publishStartDate" direction="descending" /></orderBy>]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BE21ED44D2</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33C1</service-instance-id>
+      <interface-id>lumis.service.link.quicklist</interface-id>
+      <applied-interface-style-id>0000000050C9BD630150CAAC60035C1F</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="default.doui_filters"><![CDATA[<filters><filter filterType="basic" id="isHighlight" fieldId="highlight" operator="equal" defaultValue="true"/></filters>]]></custom-property>
+        <custom-property name="default.doui_maxRows"><![CDATA[4]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8BE71994500</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8BE66FB44EF</service-instance-id>
+      <interface-id>lumis.service.banner.banner</interface-id>
+      <applied-interface-style-id>0000000050C9BD630150CA2276D4352C</applied-interface-style-id>
+      <custom-properties>
+        <custom-property name="paramBannerLogClick"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerLogView"><![CDATA[1]]></custom-property>
+        <custom-property name="paramBannerRandomize"><![CDATA[0]]></custom-property>
+        <custom-property name="paramBannerTotalItems"><![CDATA[1000]]></custom-property>
+        <custom-property name="paramTimeout"><![CDATA[0]]></custom-property>
+      </custom-properties>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50AE95AA0150B8CE38FB6362</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

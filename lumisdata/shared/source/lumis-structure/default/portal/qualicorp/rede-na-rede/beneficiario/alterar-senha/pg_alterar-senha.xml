@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>8A489E1F50AE95AA0150B8AD856D33BF</id>
+  <name>Alterar Senha</name>
+  <parent-template-id>40286DB251816DDB015181736FDB01B1</parent-template-id>
+  <hidden>true</hidden>
+  <position>1</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>logado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="logo">
+        <interface id="40286DB251816DDB0151817413250223" isNew="1"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="40286DB251816DDB0151817413310224" isNew="1"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="40286DB251816DDB0151817413390225" isNew="1"></interface>
+    </holder>
+    <holder id="logout">
+        <interface id="40286DB251816DDB0151817413400226" isNew="1"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="0000000050C9BD630150CB0D3D062919"></interface>
+        <interface id="40286DB251816DDB0151817413470227" isNew="1"></interface>
+    </holder>
+    <holder id="outras_noticias">
+        <interface id="40286DB251816DDB01518174134F0228" isNew="1"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CB0D3D062919</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.alterarSenhaBeneficiario</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817413250223</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.beneficiario</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB0151817370DA01C0</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817413310224</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB0151817370E701C1</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817413390225</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB0151817370F501C2</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817413400226</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB0151817370FE01C3</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817413470227</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB01518173712501C6</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB01518174134F0228</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>40286DB251816DDB01518173713E01C8</parent-interface-instance-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+  </interface-instances>
+</page>

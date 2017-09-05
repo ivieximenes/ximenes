@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 8446 $ $Date: 2007-10-24 14:23:30 -0200 (Wed, 24 Oct 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_itemPicker"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_itemPicker"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_itemPicker">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="searchInterfaceId" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>identifier of the interface that is popped up to search and select an item.  If the interface does not contain a dot (.) in its name, the interface is assumed to belong to the current service.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="displayDataId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the field id that is used for the friendly name of the item being selected.  If not specified the dataId is used.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_multiItemPicker">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="searchInterfaceId" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>identifier of the interface that is popped up to search and select an item.  If the interface does not contain a dot (.) in its name, the interface is assumed to belong to the current service.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="primaryKeyFieldId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the field id that is used for the primary key of the item being selected.  If not specified, the field with the isPrimaryKey attribute set to true is used.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="itemKeyFieldId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the field id that is used for the identifier of the item being selected. </xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="itemNameFieldId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the field id that is used for the friendly name of the item being selected. </xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

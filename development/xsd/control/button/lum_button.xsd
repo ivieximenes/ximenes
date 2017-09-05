@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16758 $ $Date: 2014-12-30 15:32:08 -0200 (Tue, 30 Dec 2014) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_button"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_button"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+
+	<xsd:complexType name="lum_button">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="image" minOccurs="0" type="xsd:string"/>
+					<xsd:element name="rowAction" minOccurs="0" maxOccurs="1" type="lum_rowAction">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates that the button is going to be a row action. Row actions are those actions that performs some processing over the table items, such as delete and edit.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="onClick" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional" />
+				<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the button is a primary button. Primary buttons are emphasized over non-primary buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_rowAction">
+		<xsd:annotation>
+			<xsd:documentation>
+				Indicates that the button is going to be a row action. Row actions are those actions that performs some processing over the table items, such as delete and edit.
+			</xsd:documentation>
+		</xsd:annotation>
+		
+		<xsd:attribute name="bulkAction" type="xsd:boolean" default="false" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					Indicates whether the given row action is a bulk action either. Bulk actions are actions that may be performed over a single item as well as over multiple items. 
+					These actions are shown in each row and also in the administration list top part, within a select component. When these actions are performed from the select component,
+					multiple items may be selected in the table.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					Indicates whether the given row action is the primary one. If this attribute is set to true, then this row action will be emphasized.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_addButton">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="image" minOccurs="0" type="xsd:string" default="lumis/portal/client/images/Add.gif"/>
+					<xsd:element name="onClick" minOccurs="0" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional"  default="STR_ADD"/>
+				<xsd:attribute name="interfaceId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						By default the add interface opened when you press this button will use the following rules in precedence order:
+							1)Interface Id explicitly in as an attribute
+							2)Interface (if exists) with id = "add"+currentInterfaceId with first letter in upper case. e.g. if the current interface is administration, the interface calculated will be addAdministration
+							3)Interface (if exists) with id = "add"
+							
+							If none of these rules apply, the button control will remove itself from its parent.
+						If the destination interface has been placed within a page of the portal, this button will redirect to that page.
+						If the destination interface has not been placed in a page, the button will open a popup page with the given interface mounted run-time.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="keepParentActive" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							By default, a "keepParentActive" attribute with value "false" is used on the onClick event for opening the destination interface for this add button.
+							By specifying this attribute on the add button, it will be used when generating its onClick event.
+							<p>
+							For more information, see keepParentActive attribute on the onClick element.
+						]]></xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="openRuntimeInterfaceBehavior" type="openRuntimeInterfaceBehavior">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							By default no openRuntimeInterfaceBehavior on the onClick generated for the add button.
+							If a value is specified in this attribute, it will be used on the onClick event for opening the destination interface for this add button.
+							<p>
+							For more information, see openRuntimeInterfaceBehavior attribute on the onClick element.
+						]]></xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the button is a primary button. Primary buttons are emphasized over non-primary buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_lockButton">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="image" minOccurs="0" type="xsd:string" default="lumis/portal/client/images/Lock.gif">
+						<xsd:annotation>
+							<xsd:documentation>image of the button</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="rowAction" minOccurs="0" maxOccurs="1" type="lum_rowAction">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates that the button is going to be a row action. Row actions are those actions that performs some processing over the table items, such as delete and edit.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="onClick" minOccurs="0" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional"  default="STR_LOCK"/>
+				<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the button is a primary button. Primary buttons are emphasized over non-primary buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_editButton">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="image" minOccurs="0" type="xsd:string" default="lumis/portal/client/images/Edit.gif"/>
+					<xsd:element name="rowAction" minOccurs="0" maxOccurs="1" type="lum_rowAction">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates that the button is going to be a row action. Row actions are those actions that performs some processing over the table items, such as delete and edit.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="onClick" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional" default="STR_EDIT" />
+				<xsd:attribute name="interfaceId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						By default the edit interface opened when you press this button will use the following rules in precedence order:
+							1)Interface Id explicitly in as an attribute
+							2)Interface (if exists) with id = "edit"+currentInterfaceId with first letter in upper case. e.g. if the current interface is administration, the interface calculated will be editAdministration
+							3)Interface (if exists) with id = "edit"
+							
+							If none of these rules apply, the button control will remove itself from its parent.
+						If the destination interface has been placed within a page of the portal, this button will redirect to that page.
+						If the destination interface has not been placed in a page, the button will open a popup page with the given interface mounted run-time.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="keepParentActive" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							By default, a "keepParentActive" attribute with value "false" is used on the onClick event for opening the destination interface for this edit button.
+							By specifying this attribute on the edit button, it will be used when generating its onClick event.
+							<p>
+							For more information, see keepParentActive attribute on the onClick element.
+						]]></xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="openRuntimeInterfaceBehavior" type="openRuntimeInterfaceBehavior">
+					<xsd:annotation>
+						<xsd:documentation><![CDATA[
+							By default no openRuntimeInterfaceBehavior on the onClick generated for the edit button.
+							If a value is specified in this attribute, it will be used on the onClick event for opening the destination interface for this edit button.
+							<p>
+							For more information, see openRuntimeInterfaceBehavior attribute on the onClick element.
+						]]></xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listControlId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Identifier of the list control that this button is associated to.  If not specified the id of the first control of type lum_advancedTabularData, lum_details or lum_tabularData (in this order of preference) in the interface is used.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="parameterId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						By default the edit button passes the primary key value with a parameter name as the field id.  If you want to change the name of the parameter that is being passed to the edit property page, set this value to the desired name.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the button is a primary button. Primary buttons are emphasized over non-primary buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_deleteButton">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="image" minOccurs="0" type="xsd:string" default="lumis/portal/client/images/Delete.gif">
+						<xsd:annotation>
+							<xsd:documentation>image of the button</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="rowAction" minOccurs="0" maxOccurs="1" type="lum_rowAction">
+						<xsd:annotation>
+							<xsd:documentation>
+								Indicates that the button is going to be a row action. Row actions are those actions that performs some processing over the table items, such as delete and edit.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="onClick" minOccurs="0" type="onClientEvent" maxOccurs="unbounded" />
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional" default="STR_DELETE">
+					<xsd:annotation>
+						<xsd:documentation>text that will be displayed within the button.  Default value is STR_DELETE (translated to the current language)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="processActionId" type="xsd:string" use="optional" default="delete">
+					<xsd:annotation>
+						<xsd:documentation>identifier of the process action that should be called when this button is pressed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listControlId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>identifier of the list control that the delete process action should take its item to delete values from.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="isPrimary" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							Indicates whether the button is a primary button. Primary buttons are emphasized over non-primary buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_buttonList">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:attribute name="listClassId" type="xsd:string" default="LumButton1">
+					<xsd:annotation>
+						<xsd:documentation>
+						Class that will be placed in the HTML element that represents this button list.  This class is generally used to affect visualization via CSS.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="align" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Deprecated.
+						controls alignment of buttons.  One possible value is "right".
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="isVertical" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation>
+						Deprecated.
+						defines whether the controls within this list are vertially positioned.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="spacer" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>
+						Deprecated.
+						specifies whether there should be a spacer between the buttons.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+		
+	<xsd:simpleType name="additionalButtonsInsertPosition">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="before">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the additional buttons will be placed before the default buttons.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="after">
+				<xsd:annotation>
+					<xsd:documentation>Signifies that the additional buttons will be placed after the default buttons. This is the default value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="lum_autoAdminListButtons">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="additionalButtons" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								Include any additional button here that will be placed after all auto layout buttons.
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence minOccurs="1">
+								<xsd:any maxOccurs="unbounded" processContents="skip" />
+							</xsd:sequence>
+							<xsd:attribute name="insertPosition" type="additionalButtonsInsertPosition" use="optional" default="after"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="onClick" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="addInterfaceId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Interface that should be opened when the add button is pressed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="editInterfaceId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Interface that should be opened when the edit button is pressed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="deleteProcessActionId" type="xsd:string" default="delete">
+					<xsd:annotation>
+						<xsd:documentation>
+						Process action Id that should be called when the delete button is pressed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="lockProcessActionId" type="xsd:string" default="lock">
+					<xsd:annotation>
+						<xsd:documentation>
+						Process action Id that should be called when the (un)lock button is pressed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="configureInterfaceId" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						Interface that should be opened when the configure button is pressed.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

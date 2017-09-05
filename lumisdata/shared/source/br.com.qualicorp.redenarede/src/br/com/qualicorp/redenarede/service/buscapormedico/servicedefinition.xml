@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.lumis.com.br/lumisportal/xsd/servicedefinition.xsd">
+
+	<service  name="STR_SERVICE_NAME" type="lum_doui">
+		<description>STR_SERVICE_DESCRIPTION</description>
+	</service>
+	
+	<interfaces>
+		<interface id="buscaPorMedico" name="STR_BUSCA_POR_MEDICO" type="lum_doui" className="br.com.qualicorp.redenarede.service.buscapormedico.interfaces.BuscaPorMedicoInterface">
+			<menu>
+				<item name="STR_CONFIGURATION" type="lum_addInterface">
+					<interfaceId>br.com.qualicorp.redenarede.service.buscapormedico.configuration</interfaceId>
+				</item>
+			</menu>
+		</interface>
+		 <interface id="configuration" name="STR_CONFIGURATION" type="lum_douiAdministrationAddPropertyPage"/>
+		 
+		 
+		 <interface id="buscaDescredenciados" name="STR_BUSCA_DESCREDENCIADOS" type="lum_doui" className="br.com.qualicorp.redenarede.service.buscapormedico.interfaces.BuscaDescredenciadosInterface" />
+	</interfaces> 
+</serviceDefinition>

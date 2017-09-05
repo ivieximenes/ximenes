@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autenticacao>
+
+	<REDIRECT>https://wwwt.connectmed.com.br/saudeweb/p2/portalBeneficiario/loginToken.htm</REDIRECT>
+	
+</autenticacao>

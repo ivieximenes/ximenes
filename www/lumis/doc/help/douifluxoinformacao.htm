@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Fluxo de Informação</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douifluxoinformacao.htm"; }
+  else { parent.quicksync('a8.3.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Fluxo de Informação</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douiprocessactions.htm">Previous</a>&nbsp;
+     <a href="douiarquivodefinicao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Quando o usuário requisita uma página contendo interfaces DOUI, ocorre resumidamente a seguinte seqüência de operações:</p>
+<p>&nbsp;</p>
+<p>1. Usuário requisita a página ao <span style="font-style: italic;"><a href="portalserver.htm">Lumis Portal Server</a> (Front controller)</span>;</p>
+<p>&nbsp;</p>
+<p>2. O<span style="font-style: italic;"> Lumis Portal Server</span>, por tratar-se de uma requisição de página, delega o processamento ao <span style="font-style: italic;">PresentationController</span>, responsável pela renderização de páginas do portal;</p>
+<p>&nbsp;</p>
+<p>3. O <span style="font-style: italic;">PresentationController</span> determina quais interfaces e respectivos serviços compõem a página requisitada, e solicita ao <span style="font-style: italic;">ServiceContainer</span> a renderização de cada interface;</p>
+<p>&nbsp;</p>
+<p>4. O <span style="font-style: italic;">ServiceContainer</span> constata que trata-se de interfaces <span style="font-style: italic;">DOUI</span> e solicita a classe</p>
+<p><span style="font-style: italic;">DouiServiceInterface</span> que renderize a interface;</p>
+<p>&nbsp;</p>
+<p>5. A classe <span style="font-style: italic;">DouiServiceInterface </span>executa o ciclo de vida de uma interface <span style="font-style: italic;">DOUI</span>, a</p>
+<p>saber:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">No processo de </span><span style="font-style: italic; font-weight: bold;">process action</span><span style="font-weight: bold;">:</span></p>
+<p>&nbsp;</p>
+<p>a. Os <span style="font-style: italic;">sources</span>, controles e <span style="font-style: italic;">process actions</span> são instanciados;</p>
+<p>&nbsp;</p>
+<p>b. Os controles restauram seu estado, lendo do <span style="font-style: italic;">Request</span> ou populados pelos <span style="font-style: italic;">sources</span>. Controles podem injetar parâmetros nos sources, para, por exemplo, servirem de filtros;</p>
+<p>&nbsp;</p>
+<p>c. Os controles injetam seus valores como parâmetros nos <span style="font-style: italic;">process actions</span>;</p>
+<p>&nbsp;</p>
+<p>d. Os <span style="font-style: italic;">process actions</span> e seus respectivos <span style="font-style: italic;">process action handlers</span> são executados, retornando opcionalmente parâmetros de renderização.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">No processo de render (renderização):</span></p>
+<p>&nbsp;</p>
+<p>e. Os <span style="font-style: italic;">sources</span> e controles são instanciados;</p>
+<p>&nbsp;</p>
+<p>f. Os controles restauram seu estado, lendo do <span style="font-style: italic;">Request</span> ou populados pelos <span style="font-style: italic;">sources.</span> Controles podem injetar parâmetros nos <span style="font-style: italic;">sources</span>, para, por exemplo, servirem de filtros;</p>
+<p>&nbsp;</p>
+<p>g. Os controles atualizam o <span style="font-style: italic;">XML</span> da interface com seus valores;</p>
+<p>&nbsp;</p>
+<p>6. O <span style="font-style: italic;">PresentationController</span> utiliza o <span style="font-style: italic;">XSL</span> da interface para transformar o <span style="font-style: italic;">XML</span> em <span style="font-style: italic;">HTML</span>;</p>
+<p>&nbsp;</p>
+<p>7. O <span style="font-style: italic;">PresentationController</span> retorna o <span style="font-style: italic;">HTML</span> para o <span style="font-style: italic;">browser</span> do usuário.</p>
+<p>&nbsp;</p>
+<p>A figura abaixo resume o fluxo da informação do <span style="font-style: italic;">DOUI framework</span>:</p>
+<p style="text-align: center;"><img src="doui049.jpg" width="400" height="226" border="0" alt="doui049" style="margin:0 auto;margin:20px;"></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

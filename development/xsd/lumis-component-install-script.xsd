@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16603 $ $Date: 2014-11-11 19:36:27 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/lumisportal/xsd/component-install-script" 
+	xmlns="http://www.lumis.com.br/lumisportal/xsd/component-install-script" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="qualified">
+	<xsd:include 
+		schemaLocation="deployment/lumis-component-script.xsd"/>
+	
+	<xsd:element name="component-install">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="run-sql" type="lum_runSqlStep">
+					<xsd:annotation>
+						<xsd:documentation>
+							Executes an SQL command.
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:unique name="un_dbType">
+						<xsd:selector xpath="*" />
+						<xsd:field xpath="@database-type" />
+					</xsd:unique>
+				</xsd:element>
+				<xsd:element name="run-class" type="lum_runJavaClass">
+					<xsd:annotation>
+						<xsd:documentation>
+							Executes a Java class.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="display-message" type="lum_displayMessage">
+					<xsd:annotation>
+						<xsd:documentation>
+							This kind of step does nothing. Only displays a message.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="execute-database-file" type="lum_executeDatabaseDefinition">
+					<xsd:annotation>
+						<xsd:documentation>
+							This kind of step receives a XML input file of a database definition and executes the result commands.
+							The XML file is a descriptive database file that will be transformed in SQL commands to be executed in the database. This file must be developed accordingly to the schema [portal install]/lumisdata/def/lumis/database/databasedefinition.xsd, included in Lumis Portal.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="remove-global-non-referenced-entries" type="lum_removeGlobalNonReferencedEntries">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							This kind of step makes the portal remove global non-referenced entries.
+							The following kind of entries will be removed:<br />
+								<ul>
+									<li>Global XSL definition (the shared or public XSL file entries)</li>
+									<li>File transformation parameter types</li>
+									<li>CSSs</li>
+								</ul>
+							]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+	<xsd:complexType name="lum_executeDatabaseDefinition">
+		<xsd:complexContent>
+			<xsd:extension base="lum_scriptStep">
+				<xsd:sequence>
+					<xsd:element name="file" type="xsd:string" nillable="false">
+						<xsd:annotation>
+							<xsd:documentation>
+								The XML database file.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="genericStep" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

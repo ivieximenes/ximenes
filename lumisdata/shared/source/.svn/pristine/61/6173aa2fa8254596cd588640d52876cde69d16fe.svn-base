@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<strings>
+	<string id="STR_SERVICE_NAME">Rede na Rede - Cadastro de Usuários</string>
+	<string id="STR_SERVICE_DESCRIPTION">Serviço que gerencia o cadastro de usuários</string>
+	<string id="STR_FORM">Formulário</string>
+	<string id="STR_PRINCIPAL_ID_ALREADY_EXISTS_USER">Nº da Carteirinha '%1' inválido: um usuário foi criado anteriormente com esse número.</string>
+	
+</strings>

@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 17297 $ $Date: 2015-05-19 12:57:49 -0300 (Tue, 19 May 2015) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.lumis.com.br/douicontrols" xmlns="http://www.lumis.com.br/douicontrols" xmlns:lum_genericControl="http://www.lumis.com.br/douicontrols/lum_genericControl" xmlns:lum_inputText="http://www.lumis.com.br/douicontrols/lum_inputText" xmlns:lum_text="http://www.lumis.com.br/douicontrols/lum_text" xmlns:lum_form="http://www.lumis.com.br/douicontrols/lum_form" xmlns:lum_script="http://www.lumis.com.br/douicontrols/lum_script" xmlns:lum_include="http://www.lumis.com.br/douicontrols/lum_include"
+	xmlns:lum_button="http://www.lumis.com.br/douicontrols/lum_button" xmlns:lum_adminList="http://www.lumis.com.br/douicontrols/lum_adminList" xmlns:lum_list="http://www.lumis.com.br/douicontrols/lum_list" xmlns:lum_propertyPage="http://www.lumis.com.br/douicontrols/lum_propertyPage" xmlns:lum_interfaceHeader="http://www.lumis.com.br/douicontrols/lum_interfaceHeader" xmlns:lum_filters="http://www.lumis.com.br/douicontrols/lum_filters" xmlns:lum_genericValidator="http://www.lumis.com.br/douicontrols/lum_genericValidator" xmlns:lum_controlGroup="http://www.lumis.com.br/douicontrols/lum_controlGroup"
+	xmlns:lum_table="http://www.lumis.com.br/douicontrols/lum_table" xmlns:lum_label="http://www.lumis.com.br/douicontrols/lum_label" xmlns:lum_pane="http://www.lumis.com.br/douicontrols/lum_pane" xmlns:lum_tabs="http://www.lumis.com.br/douicontrols/lum_tabs" xmlns:lum_dropDownList="http://www.lumis.com.br/douicontrols/lum_dropDownList" xmlns:lum_inputHtmlEditor="http://www.lumis.com.br/douicontrols/lum_inputHtmlEditor" xmlns:lum_password="http://www.lumis.com.br/douicontrols/lum_password" xmlns:lum_checkBox="http://www.lumis.com.br/douicontrols/lum_checkbox"
+	xmlns:lum_checkBoxList="http://www.lumis.com.br/douicontrols/lum_checkBoxList" xmlns:lum_link="http://www.lumis.com.br/douicontrols/lum_link" xmlns:lum_autoRefresh="http://www.lumis.com.br/douicontrols/lum_autorefresh" xmlns:lum_tabularData="http://www.lumis.com.br/douicontrols/lum_tabularData" xmlns:lum_dateTimePicker="http://www.lumis.com.br/douicontrols/lum_dateTimePicker" xmlns:lum_div="http://www.lumis.com.br/douicontrols/lum_div"
+	xmlns:lum_multiFileUpload="http://www.lumis.com.br/douicontrols/lum_multiFileUpload" xmlns:lum_fileUpload="http://www.lumis.com.br/douicontrols/lum_fileUpload" xmlns:lum_dataGrid="http://www.lumis.com.br/douicontrols/lum_dataGrid" xmlns:lum_principalPicker="http://www.lumis.com.br/douicontrols/lum_principalPicker" xmlns:lum_itemPicker="http://www.lumis.com.br/douicontrols/lum_itemPicker" xmlns:lum_conditionalRender="http://www.lumis.com.br/douicontrols/lum_conditionalRender" xmlns:lum_pagination="http://www.lumis.com.br/douicontrols/lum_pagination" elementFormDefault="qualified">
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_genericControl" schemaLocation="lum_genericControl.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_button" schemaLocation="button/lum_button.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_adminList" schemaLocation="list/lum_adminList.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_list" schemaLocation="list/lum_list.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_dropDownList" schemaLocation="dropDownList/lum_dropDownList.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_inputText" schemaLocation="inputtext/lum_inputText.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_text" schemaLocation="text/lum_text.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_conditionalRender" schemaLocation="conditionalRender/lum_conditionalRender.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_form" schemaLocation="form/lum_form.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_propertyPage" schemaLocation="propertypage/lum_propertyPage.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_interfaceHeader" schemaLocation="interfaceheader/lum_interfaceHeader.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_filters" schemaLocation="filter/lum_filters.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_genericValidator" schemaLocation="validator/lum_genericValidator.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_controlGroup" schemaLocation="group/lum_controlGroup.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_table" schemaLocation="group/lum_table.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_label" schemaLocation="label/lum_label.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_pane" schemaLocation="pane/lum_pane.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_tabs" schemaLocation="tab/lum_tabs.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_inputHtmlEditor" schemaLocation="htmleditor/lum_inputHtmlEditor.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_script" schemaLocation="script/lum_script.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_password" schemaLocation="password/lum_password.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_checkbox" schemaLocation="checkbox/lum_checkbox.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_checkBoxList" schemaLocation="checkbox/lum_checkBoxList.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_link" schemaLocation="link/lum_link.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_autorefresh" schemaLocation="autorefresh/lum_autorefresh.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_tabularData" schemaLocation="tabulardata/lum_tabularData.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_dateTimePicker" schemaLocation="datepicker/lum_dateTimePicker.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_principalPicker" schemaLocation="principalpicker/lum_principalPicker.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_itemPicker" schemaLocation="itempicker/lum_itemPicker.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_div" schemaLocation="div/lum_div.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_dataGrid" schemaLocation="datagrid/lum_dataGrid.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_fileUpload" schemaLocation="fileupload/lum_fileUpload.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_multiFileUpload" schemaLocation="multifileupload/lum_multiFileUpload.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_pagination" schemaLocation="pagination/lum_pagination.xsd" />
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols/lum_include" schemaLocation="include/lum_include.xsd" />
+	<xsd:complexType name="lum_controlBase" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Defines a base control. This is the root definition of all controls.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:group ref="lum_anyControl" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:complexType>
+	<xsd:group name="lum_anyControl">
+		<xsd:annotation>
+			<xsd:documentation>Defines a base control. This is the root definition of all controls.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="control" type="lum_genericControl:lum_genericControl" form="unqualified" />
+				<xsd:element name="lum_form" type="lum_form:lum_form">
+					<xsd:annotation>
+						<xsd:documentation>Defines a form control. Use this control when you want to render a form that posts user input to the server.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_inputText" type="lum_inputText:lum_inputText">
+					<xsd:annotation>
+						<xsd:documentation>Defines an input text control that allows the user to enter any text value. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_inputEmail" type="lum_inputText:lum_inputText">
+					<xsd:annotation>
+						<xsd:documentation>Defines an input e-mail control that allows the user to enter any e-mail value. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_email" type="lum_genericControl:lum_dataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>Renders an e-mail address for visualization.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_inputNumber" type="lum_inputText:lum_inputText">
+					<xsd:annotation>
+						<xsd:documentation>Defines an input number control. This is a data bound control that allows only numeric values to be entered.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_inputHidden" type="lum_inputText:lum_inputText">
+					<xsd:annotation>
+						<xsd:documentation>Defines an input hidden control, used to render hidden information. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_inputTextArea" type="lum_inputText:lum_inputTextArea">
+					<xsd:annotation>
+						<xsd:documentation>Defines an input text control. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_text" type="lum_text:lum_text">
+					<xsd:annotation>
+						<xsd:documentation>Renders read only data as text.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_html" type="lum_text:lum_text">
+					<xsd:annotation>
+						<xsd:documentation>Renders read only data as HTML content.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_button" type="lum_button:lum_button">
+					<xsd:annotation>
+						<xsd:documentation>Defines a standard button control with text, image and onClick definition.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_okButton" type="lum_button:lum_button">
+					<xsd:annotation>
+						<xsd:documentation>Defines an ok button control. The ok button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_cancelButton" type="lum_button:lum_button">
+					<xsd:annotation>
+						<xsd:documentation>Defines a cancel button control. The cancel button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_previewButton" type="lum_button:lum_button">
+					<xsd:annotation>
+						<xsd:documentation>Defines a preview button control. The preview button inherits all the button control properties and has default values for certain properties.  This button detects 
+						if the service that the button is rendered in contains any interfaces that have the isPreview attribute set to true.  If none exists, this button automatically removes itself from its parent control.
+						Once the button is pressed, it pops the preview interface.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_configureButton" type="lum_button:lum_button">
+					<xsd:annotation>
+						<xsd:documentation>Defines a configure button control. The configure button inherits all the button control properties and has default values for certain properties. This button
+						detects whether there exists an interface with an id of "configuration" or with a prefix of "configuration" followed by the id of the current interface.  If no such interface
+						exists, this button removes itself from its parent list.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_addButton" type="lum_button:lum_addButton">
+					<xsd:annotation>
+						<xsd:documentation>Defines an add button control. The add button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_editButton" type="lum_button:lum_editButton">
+					<xsd:annotation>
+						<xsd:documentation>Defines an edit button control. The edit button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_deleteButton" type="lum_button:lum_deleteButton">
+					<xsd:annotation>
+						<xsd:documentation>Defines an delete button control. The delete button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_lockButton" type="lum_button:lum_lockButton">
+					<xsd:annotation>
+						<xsd:documentation>Defines a lock/unlock button control. The (un)lock button inherits all the button control properties and has default values for certain properties.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_autoAdminListButtons" type="lum_button:lum_autoAdminListButtons">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Detects and automatically adds the following controls: lum_interfaceHeaderButtons, lum_addButton, lum_editButton, lum_deleteButton, lum_versionsButton, lum_configureButton.
+							<br/><br/>							
+							If all buttons are detected the following subcontrols are created:
+							<br/>
+							<pre>
+&lt;control type="lum_interfaceHeaderButtons" id="lumInterfaceHeaderButtons"&gt;
+	&lt;control type="lum_addButton" id="addButton" /&gt;
+	&lt;control type="lum_editButton" id="editButton" /&gt;
+	&lt;control type="lum_deleteButton" id="deleteButton" /&gt;
+	&lt;control type="lum_versionsButton" id="versionsButton" /&gt;
+	&lt;control type="lum_configureButton" id="configureButton" /&gt;
+&lt;/control&gt;
+							</pre>
+							]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+								
+				<xsd:element name="lum_autoContentAdminListButtons" type="lum_button:lum_autoAdminListButtons">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Detects and automatically adds the following controls: lum_interfaceHeaderButtons, lum_addButton, lum_editButton, lum_deleteButton, lum_versionsButton, lum_previewButton, lum_configureButton.  
+							This control is suitable for use with content sources.
+							<br/><br/>							
+							If all buttons are detected the following subcontrols are created:
+							<br/>
+							<pre>
+&lt;control type="lum_interfaceHeaderButtons" id="lumInterfaceHeaderButtons"&gt;
+	&lt;control type="lum_addButton" id="addButton" /&gt;
+	&lt;control type="lum_editButton" id="editButton" /&gt;
+	&lt;control type="lum_deleteButton" id="deleteButton" /&gt;
+	&lt;control type="lum_versionsButton" id="versionsButton" /&gt;
+	&lt;control type="lum_previewButton" id="previewButton" /&gt;
+	&lt;control type="lum_configureButton" id="configureButton" /&gt;
+&lt;/control&gt;
+							</pre>
+							]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_adminList" type="lum_adminList:lum_adminList">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Renders a list of data with filters, tabular data and pagination information.
+							This control renders the following subcontrols:
+							<br/>
+							<pre>
+&lt;control type="lum_filters" id="adminListId.filters" /&gt;
+&lt;control type="lum_advancedTabularData" id="adminListId.tabularData"&gt;
+	&lt;allowSelectRow type="multiSelect" /&gt;
+&lt;/control&gt;
+&lt;control type="lum_pagination" id="adminListId.pagination" /&gt;
+							</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lum_propertyPage" type="lum_propertyPage:lum_propertyPage">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a property page with an interface header control on top and possible [OK] [CANCEL] button controls at the bottom.  Any controls placed within this control will be rendered between the header and the [OK], [CANCEL] buttons.
+						<br/>
+						<br/>
+						Generally this control generates the following sub controls
+						<br/>
+<pre>
+<control type="lum_interfaceHeader" id="propertyPageId_header" titleMaxSize="50" setWindowTitle="true" title="Property Page"/>
+	<!-- controls within the property page -->
+	<control type="lum_footer">
+		<control type="lum_requiredValuesDescriptor" />
+		<control type="lum_autoInterfaceStandardButtons" />
+	</control>
+</control>
+</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_interfaceHeader" type="lum_interfaceHeader:lum_interfaceHeader">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders an interface header.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_footer" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders an interface footer.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_filters" type="lum_filters:lum_filters">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders all the filters associated to the control's source.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_interfaceHeaderButtons" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generic control that simply renders each control within it as a horizontal list of buttons.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_requiredValueValidator" type="lum_genericValidator:lum_genericValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that verifies that a control has a value that is not null.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_integerDataTypeValidator" type="lum_genericValidator:lum_integerDataTypeValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that verifies that a control value if provided is a valid integer.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_regularExpressionValidator" type="lum_genericValidator:lum_regularExpressionValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that verifies that a control value if provided matches the regular expression specified in the <b>expression</b> attribute of the validator.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+	
+				<xsd:element name="lum_lengthValidator" type="lum_genericValidator:lum_lengthValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that verifies the length of a string.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>				
+
+				<xsd:element name="lum_emailValidator" type="lum_genericValidator:lum_genericValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that verifies that a control value if provided is formatted as a valid email address.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_controlGroup" type="lum_controlGroup:lum_controlGroup">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to organize front end forms where grouping controls within a box with an optional title helps usability.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_table" type="lum_table:lum_table">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to layout controls within a form.  This control generates an HTML table with tr and td tags to layout controls.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_label" type="lum_label:lum_label">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a label within a form.  If the label text is not explicitly specified in the control, the label text is read from the associated field definition.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_multiFileUpload" type="lum_multiFileUpload:lum_multiFileUpload">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Allows multiple to upload files.  Once files are uploaded this control allows users to remove or overwrite a previously uploaded file with a new one.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_fileUpload" type="lum_fileUpload:lum_fileUpload">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Allows one to upload files.  Once files are uploaded this control allows users to remove or overwrite a previously uploaded file with a new one.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_list" type="lum_list:lum_list">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders lists for the end user.  This control internally generates a filters control, tabular data control and pagination control.
+						<br/>
+						<br/>
+						This control generally creates the following sub controls
+						<pre>
+&lt;control type="lum_filters" id="listId.filters" /&gt;
+&lt;control type="lum_tabularData" id="listId.tabularData" dataId="XXX"/&gt;
+&lt;control type="lum_pagination" id="listId.pagination" /&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_lockedMessage" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders message for the end user.  This control creates a div with a message informing that the content is locked by another user, if it is the case.
+						Two buttons are also generated on the div: a button to steal the lock and another to just view the details of the content.
+						<br/>
+						<br/>
+						This control generally creates the following sub controls
+						<pre>
+						&lt;control type="lum_button" id="stealLock" text="STR_STEAL_LOCK" /&gt;
+						&lt;control type="lum_button" id="viewContent" text="STR_VIEW_CONTENT" /&gt;
+						&lt;strings&gt;
+							&lt;string id="STR_CONTENT_LOCKED_MESSAGE" /&gt;
+						&lt;/strings&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_pane" type="lum_pane:lum_pane">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render one of the (n) specified panes when rendering an interface.  This control by default renders the first pane.  However as a result of a process action or a render action the pane that is displayed may be changed.  This pane control is associated with an id and the control listens for this id in the request parameters in order to determine what pane to display.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_tabs" type="lum_tabs:lum_tabs">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Use to render a tabbed control to the client.  All tabs are rendered client side, but the contents of only one of them will be visible to the user.  Tabs remember their selection between process actions or render actions.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_div" type="lum_div:lum_div">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render an HTML div.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_span" type="lum_div:lum_div">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render an HTML span.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_interfaceButtons" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render buttons within a property page control.  The button controls within this control are generally right-aligned.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_dropDownList" type="lum_dropDownList:lum_dropDownList">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a drop down combo box control to allow the user to choose one of a given set of options.  This control generally has two sources specified.  One that returns/sets the value of the control and another that returns a list of options. The options may be optionally be explicitly provided within the control.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_workflowStateFilter" type="lum_genericControl:lum_dataControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a filter control in administration list to filter workflow state field.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_workflowAssignedToFilter" type="lum_genericControl:lum_dataControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a filter control in administration list to filter workflow assignedTo field.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_inputHtmlEditor" type="lum_inputHtmlEditor:lum_inputHtmlEditor">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render an HTML editor control.  The control is rendered with a default html toolbar which by be customized creating your own toolbar and specifying its identifier in the <b>toolbarSet</b> attribute.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_script" type="lum_script:lum_script">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders client side script.  The script value is specified within a <b>script</b> node and may contain custom tags like &lt;lum_formName/&gt; to be replaced runtime with the current form name, and &lt;lum_translate&gt;STR_XXXX&lt;lum_translate/&gt; to be localized to the users locale.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_include" type="lum_include:lum_include">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Includes a file present in the web application in the interface output.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_password" type="lum_password:lum_password">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders an input password control.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_buttonList" type="lum_button:lum_buttonList">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						A simple control that renders a list of buttons.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_checkBox" type="lum_checkBox:lum_checkBox">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a checkbox control.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_checkBoxList" type="lum_checkBoxList:lum_checkBoxList">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a list of check boxes to allow the user to choose one or more of a given set of options.  This control generally has two sources specified.  One that returns/sets the value of the control and another that returns a list of options. The options may be optionally be explicitly provided within the control.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_link" type="lum_link:lum_link">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a link to an explicit url or to dynamically calculate and render a link to another interface in another page in the portal.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_conditionalRender" type="lum_conditionalRender:lum_conditionalRender">
+					<xsd:annotation>
+						<xsd:documentation>Used to render a control only if a provided condition is met.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoRefresh" type="lum_autoRefresh:lum_autoRefresh">
+					<xsd:annotation>
+						<xsd:documentation>Used to refresh the page at the given interval period.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_tabularData" type="lum_tabularData:lum_tabularData">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render data from a tabular data source.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_advancedTabularData" type="lum_tabularData:lum_advancedTabularData">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render data from a tabular data source.  This control is an extension of the lum_tabularData control.  In addition to the rendering tabular data, the control includes information for ordering and including multi-select/single-select using checkboxes/radio buttons for each row of the result set.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_selectItemTabularData" type="lum_tabularData:lum_selectItemTabularData">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render data for selection from a tabular data source.  This control is an extension of the lum_tabularData control.  In addition to the rendering tabular data, the control includes for each row a link that calls a callback function in the opener window with the id and name of the item selected.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_details" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render read only data from a tabular data source.  This control is an extension of the lum_tabularData control.  It should be used to render one row of a result set.  The data it renders by default are layed out as label: value pairs for each field (with the display attribute set to true) one below the other.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_requiredValuesDescriptor" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Simply used to render a text indicating the fields marked with a * are required.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_dateTimePicker" type="lum_dateTimePicker:lum_dateTimePicker">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Renders two input text boxes for date and time.  The date control is rendered with a picker button that opens a calendar to graphically select the date. The value of this control is the calculated adding the time and the date values.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_datepicker" type="lum_dateTimePicker:lum_datePicker">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Renders one input text box for the date.  The date control is rendered with a picker button that opens a calendar to graphically select the date.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_timePicker" type="lum_dateTimePicker:lum_timePicker">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Renders one input text box for the time.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_calendar" type="lum_dateTimePicker:lum_calendar">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							This calendar control is used to select a date graphically, navigating years and months with mouse clicks.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_dateCompareValidator" type="lum_genericValidator:lum_dateCompareValidator">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Generates client side and server side validation that compares date values of two controls.  The comparison may be either equal, lessThan, lessThanOrEqual, greaterThan or greaterThanOrEqual.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_serviceInstancePrincipalPicker" type="lum_principalPicker:lum_serviceInstancePrincipalPicker">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select a principal that has access to the given service instance.  The list of principals may be limited to a specific permission and/or users only.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_itemPicker" type="lum_itemPicker:lum_itemPicker">
+					<xsd:annotation>
+						<xsd:documentation>Defines a control that allows the end user to pick an item from a large list selected in a popup interface. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_multiItemPicker" type="lum_itemPicker:lum_multiItemPicker">
+					<xsd:annotation>
+						<xsd:documentation>Defines a control that allows the end user to pick one or more items from a large list selected in a popup interface. This is a data bound control.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutMetaDataInformation" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders metadata input controls based on the metadata specified in the source.
+						<br/>
+						<br/>
+						If all metadata tags are specified this control renders the following sub controls.
+						<pre>
+&lt;control id="metaDataTabs" type="lum_tabs" height="110" tabType="2"&gt;
+	&lt;tab name="STR_WORKFLOW"&gt;
+		&lt;control type="lum_autoLayoutWorkflowInformation" /&gt;
+	&lt;/tab&gt;
+	&lt;tab name="STR_PUBLISHING"&gt;
+		&lt;control type="lum_autoLayoutPublishingInformation" /&gt;
+	&lt;/tab&gt;
+	&lt;tab name="STR_LANGUAGE"&gt;
+		&lt;control type="lum_autoLayoutLanguageInformation" /&gt;
+	&lt;/tab&gt;
+	&lt;tab name="STR_ASSOCIATIONS"&gt;
+		&lt;control type="lum_autoLayoutAssociationInformation" /&gt;
+	&lt;/tab&gt;
+&lt;/control&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutPropertyPage" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a property page control with the visible source fields as label: input control pairs.
+						<br/>
+						<br/>
+						This control generates sub-controls in the following layout
+						<pre>
+&lt;control type="lum_form"&gt;
+	&lt;control type="lum_propertyPage"&gt;
+		&lt;control type="lum_filters" id="" + getId() + ".lumFilters" /&gt;
+		&lt;control type="lum_controlGroup" title="" + localize("STR_BASIC_INFORMATION") + ""&gt;
+			&lt;control type="lum_autoLayoutFields" id="" + getId() + "_Fields" /&gt;
+		&lt;/control&gt;
+	&lt;/control&gt;
+&lt;/control&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutContentPropertyPage" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a property page control with the visible source fields as label: input control pairs.  In addition the metadata information is rendered below the source fields.
+						<br/>
+						<br/>
+						This control generates sub-controls in the following layout
+						<pre>
+&lt;control type="lum_form"&gt;
+	&lt;control type="lum_propertyPage"&gt;
+		&lt;control type="lum_filters" id="" + getId() + ".lumFilters" /&gt;
+		&lt;control type="lum_controlGroup" title="" + localize("STR_BASIC_INFORMATION") + ""&gt;
+			&lt;control type="lum_autoLayoutContentFields" id="" + getId() + "_Fields" /&gt;
+		&lt;/control&gt;
+		&lt;control type="lum_autoLayoutMetaDataInformation" /&gt;
+	&lt;/control&gt;
+&lt;/control&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutFields">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a label control and a value control of each visible field in the source. The type of control to render the field value may be an input control or a read only control depending on the 
+						readOnly attribute of the corresponding field. Also, the pair label-value groups may be fully customized and not read from source fields.
+						<br/>
+						<br/>
+						This control generates sub-controls in the following layout
+						<pre>
+&lt;!-- for each field --&gt;
+&lt;field&gt;
+	&lt;label&gt;
+		&lt;control type="lum_label" dataId="fieldId" /&gt;
+	&lt;/label&gt;
+	&lt;value&gt;
+		&lt;!-- field control --&gt;
+	&lt;/value&gt;
+&lt;/field&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:extension base="lum_genericControl:lum_simpleDataBoundControl">
+								<xsd:sequence>
+									<xsd:element name="field" maxOccurs="unbounded" minOccurs="0" form="unqualified">
+										<xsd:annotation>
+											<xsd:documentation>
+												Represents a field to be rendered. If some field is provided, the source fields will be ignored. In no field is provided, the source fields will be used.
+											</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="label" minOccurs="0" form="unqualified">
+													<xsd:annotation>
+														<xsd:documentation>
+															The label control for the field.
+														</xsd:documentation>
+													</xsd:annotation>
+													<xsd:complexType>
+														<xsd:group ref="lum_anyControl" maxOccurs="unbounded" minOccurs="0"/>
+													</xsd:complexType>
+												</xsd:element>
+												<xsd:element name="value" minOccurs="0" form="unqualified">
+													<xsd:annotation>
+														<xsd:documentation>
+															The value control for the field.
+														</xsd:documentation>
+													</xsd:annotation>
+													<xsd:complexType>
+														<xsd:group ref="lum_anyControl" maxOccurs="unbounded" minOccurs="0"/>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+											<xsd:attribute name="id" use="required" type="xsd:string">
+												<xsd:annotation>
+													<xsd:documentation>
+														The field identifier.
+													</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:extension>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutContentFields" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a table control with the visible source content fields as label input control pairs.  All metadata fields are ignored.  The default input control for a field is calculated runtime based on the field definition.
+						<br/>
+						<br/>
+						This control generates sub-controls in the following layout:
+						<pre>
+&lt;control type="lum_table"&gt;
+	&lt;!-- for each field --&gt;
+	&lt;tr&gt;
+		&lt;td class="cLumLabelTd"&gt;
+			&lt;control type="lum_label" dataId="fieldId" /&gt;"
+		&lt;/td&gt;
+		&lt;td&gt;
+			&lt;!-- field control --&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/control&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutDetails" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render read details information of a single data tabular data row.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutContentDetails" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Used to render read details information of a single content. This control is suitable for use with content sources.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutContentAdministrationList" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							This control renders interface header, administration buttons, and an administration list control.
+							This control is suitable for use with content sources.
+							<br/>
+							<br/>
+							By default this control renders the following sub controls.
+							<pre>
+&lt;control type="lum_form"&gt;
+&lt;control type="lum_interfaceHeader" /&gt;
+&lt;control type="lum_autoAdminListButtons"/&gt;
+&lt;control type="lum_adminList" id="adminList" dataId="primaryKeyFieldId" /&gt;
+							</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutAdministrationList" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							This control renders interface header, administration buttons, and an administration list control.
+							<br/>
+							<br/>
+							By default this control renders the following sub controls.
+							<pre>
+&lt;control type="lum_form"&gt;
+&lt;control type="lum_interfaceHeader" /&gt;
+&lt;control type="lum_autoAdminListButtons"/&gt;
+&lt;control type="lum_adminList" id="adminList" dataId="primaryKeyFieldId" /&gt;
+							</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autolayoutworkflowinformation" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders workflow input controls based on the workflow information.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutPublishingInformation" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Performs autolayout of publishing information.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutLanguageInformation" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Performs autolayout of language information.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutContentQuickList" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Control that renders a quick list with a link to a complete list. This control is suitable for use with content sources.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutContentList" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Autolayout control that creates a form, interface header and list associated with the interface's default source. This control is suitable for use with content sources.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoLayoutList" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Autolayout control that creates a form, interface header and list associated with the interface's default source.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutContentEmbeddedPropertyPage" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used for embedded pages. Renders a property page control with the visible source fields as label: input control pairs. In addition the metadata information is rendered below the source fields. This control is suitable for use with content sources.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutAssociationInformation" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Control that associates a content to other contents.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_autoLayoutQuickList" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Control that renders a quick list with a link to a complete list.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_language" type="lum_genericControl:lum_simpleDataBoundControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Control for selecting language.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				
+				<xsd:element name="lum_selectParentContent" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select another content within the same service instance that represents the parent of the current content.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_selectContentParentContent" type="lum_genericControl:lum_simpleControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select another content within the same service instance that represents the parent content of the current content.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_generic" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						A generic control in itself does not render anything, however it calls all its sub controls to render themselves.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_mediaPicker" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to input a media.  The actual selection is done behind a button that opens a graphical interface to select the media.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_documentPicker" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to input a document.  The actual selection is done behind a button that opens a graphical interface to select documents.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_pagination" type="lum_pagination:lum_pagination">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders the current selected page and possible pages that the user can navigate to.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_selectPage" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select a page of the Lumis Portal.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_selectPageTemplate" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select a page template of the Lumis Portal.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_selectPageOrPageTemplate" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a control that allows the end user to select a page or page template of the Lumis Portal.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_strings" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders javascript on the client side that makes available in an array a list of translated strings.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_dataGrid" type="lum_dataGrid:lum_dataGrid">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Used to render a data grid that allows the end user to manipulate multiple fields and rows of a given source. This control by default reads the primary key and displayed fields of all the rows of the source, rendering a grid where each row corresponds to a source row and each cell represents a field of the source. The input control used for a field value is determined by the field definition. To persist the changes made while using this control, an appropriate process action handler must be set. The process action handlers TableUpdateMultiRowDataProcessActionHandler and TableAddMultiRowDataProcessActionHandler may be used to do such persistence. The TableUpdateMultiRowDataProcessActionHandler is able to add new rows, update changed rows and delete removed rows, and is suitable for use in edit interfaces. The TableAddMultiRowDataProcessActionHandler adds all rows (it assumes all rows are new), and is suitable for use in add interfaces.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_autoEmbeddedInterfaceStandardButtons" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders the standard buttons for a property page embedded within a Lumis Portal page.  This control detects whether exists a "<b>commit</b>" process action handler and renders the [OK] button appropriately.
+						<br/>
+						<br/>
+						Generally this control renders the following sub-controls:
+						<br/>
+						<pre>
+&lt;control type="lum_interfaceButtons" id="interfaceButtons.autoembedded"&gt;
+	&lt;control type="lum_okButton" id="buttonOk" /&gt;
+&lt;/control&gt;
+						</pre>
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="lum_radioButton" type="lum_genericControl:lum_genericControl">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+						Renders a radio button control.
+						]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+
+	<xsd:complexType name="lum_controls">
+		<xsd:complexContent>
+			<xsd:extension base="lum_controlBase">
+				<xsd:attribute name="appendPortalAdminStyle" type="xsd:boolean" default="false">
+					<xsd:annotation>
+						<xsd:documentation>Interfaces that are accessed exclusively via F12 administration should set this attribute to true. For example right-click number of items pop-up should have an administration look and feel and not use the style used in the portal for the end user.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="controlDefaultValueType">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string"/>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="" />
+					<xsd:enumeration value="lum_currentChannel" />
+					<xsd:enumeration value="lum_currentPage" />
+					<xsd:enumeration value="lum_currentServiceInstanceId" />
+					<xsd:enumeration value="lum_currentServiceInstanceChannelId" />
+					<xsd:enumeration value="lum_currentUser" />
+					<xsd:enumeration value="lum_currentUserLocale" />
+					<xsd:enumeration value="lum_currentUserName" />
+					<xsd:enumeration value="lum_callerInterfaceInstanceId" />
+					<xsd:enumeration value="lum_callerInterfaceId" />
+					<xsd:enumeration value="lum_currentDateTime" />
+					<xsd:enumeration value="lum_currentMonth" />
+					<xsd:enumeration value="lum_currentYear" />
+					<xsd:enumeration value="lum_newGuid" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	
+</xsd:schema>

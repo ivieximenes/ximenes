@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Utilização das Tags XSL Específicas do Lumis</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?xslutilizacaotagsxslespecificaslumis.htm"; }
+  else { parent.quicksync('a8.5.3.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Utilização das Tags XSL Específicas do Lumis</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="xslutilizacaocontrolesdainterfacelista.htm">Previous</a>&nbsp;
+     <a href="xslutilizacaocontrolelum_details.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Para facilitar a edição de <span style="font-style: italic;">XSL</span>, o <span style="font-style: italic;">Lumis Portal </span>contém algumas <span style="font-style: italic;">tags</span> específicas que substituem muitas vezes um código <span style="font-style: italic;">XSL</span> padrão mais extenso e complicado.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 20px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="638" style="width:638px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;">Para as <span style="font-style: italic;">tags</span> específicas do <span style="font-style: italic;">Lumis</span> funcionarem corretamente em seu <span style="font-style: italic;">XSL</span>, deve-se adicionar a seguinte linha nos atributos da <span style="font-style: italic;">tag</span> &lt;xsl:stylesheet /&gt;:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">xmlns:lum=”http://www.lumis.com.br/doui”</span>, ficando portanto:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" </span></p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">xmlns:lum="http://www.lumis.com.br/doui" version="1.0"&gt;</span></p>
+<p style="margin: 8px 0px 8px 0px;">Isso indicará ao <span style="font-style: italic;">XSL</span> <span style="font-style: italic;">tags</span> do tipo <span style="font-family: 'Courier New';">&lt;lum:</span><span style="font-family: 'Courier New'; font-style: italic;">XXXX</span><span style="font-family: 'Courier New';"> /&gt;</span> podem ser utilizadas, onde <span style="font-style: italic;">XXXX</span> determina o tipo de informação que a <span style="font-style: italic;">tag</span> trará no <span style="font-style: italic;">layout</span> final.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Algumas das <span style="font-style: italic;">tags</span> que podem ser utilizadas na edição de arquivos <span style="font-style: italic;">XSL</span>, apenas dentro do produto <span style="font-style: italic;">Lumis</span>:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:form /&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">É o mesmo que usar:</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:template match="control[@type='lum_form']"&gt; &lt;/xsl:template&gt; (no lugar de &lt;xsl:template match="/"&gt; &lt;/xsl:template&gt;) </span>para o template principal do <span style="font-style: italic;">XSL</span>.</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"> É utilizado para <span style="font-style: italic;">XSLs</span> de <span style="font-style: italic;">Lista</span> para funcionamento da paginação. Isso porque para que a paginação funcione, é necessário que o formulário seja montado.</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:interfaceHeader /&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Chama as informações do cabeçalho de uma interface, é o mesmo que usar:</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:apply-templates select=" //control[@type='lum_interfaceHeader']" /&gt; &nbsp;ou</span></p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:value-ofselect="//control[@type='lum_interfaceHeader']/ " /&gt;. </span>Esta última forma insere automaticamente uma classe do portal.css para o texto do cabeçalho<span style="font-family: 'Courier New';">.</span><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span></p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:loop&gt; &lt;/lum:loop&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Chama as informações cadastradas em uma interface administrativa, é o mesmo que usar:</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:for-eachselect="//control[@type='lum_tabularData']/data/row"&gt; &lt;/xsl:for-each&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:details&gt; &lt;/lum:details&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Chama as informações que chegam no <span style="font-style: italic;">XML</span> de uma interface <span style="font-style: italic;">Detalhes</span>, é o mesmo que usar:</p>
+<p style="text-align: left; margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:for-eachselect="//control[@type='lum_details']/data/row"&gt; &lt;/xsl:for-each&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:control type=</span><span style="font-family: 'Courier New';">"</span><span style="font-family: 'Courier New'; font-weight: bold;">controle_especifico</span><span style="font-family: 'Courier New';">" /</span><span style="font-family: 'Courier New'; font-weight: bold;">&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Chama as informações de um controle específico do <span style="font-style: italic;">XML</span> da interface, os mais usados são:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;lum:control type="lum_filters" /&gt; e &lt;lum:control type="lum_pagination" /&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Seria o mesmo que usar:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:apply-templatesselect="//control[@type='lum_filters']" /&gt; e</span></p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;xsl:apply-templatesselect="//control[@type='lum_pagination']" /&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New'; font-weight: bold;">&lt;lum:field id=</span><span style="font-family: 'Courier New';">"</span><span style="font-family: 'Courier New'; font-weight: bold;">campo_especifico</span><span style="font-family: 'Courier New';">"</span><span style="font-family: 'Courier New'; font-weight: bold;"> /&gt;</span></p>
+<p style="margin: 8px 0px 0px 0px;">Chama as informações de um campo específico do <span style="font-style: italic;">XML</span> da interface, alguns exemplos são:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;lum:field id="title" /&gt;, &lt;lum:field id="introduction" /&gt;, &lt;lum:field id="publishStartDate" /&gt;</span>, etc…</p>
+<p style="margin: 8px 0px 0px 0px;">Seria o mesmo que usar, no caso do campo "<span style="font-style: italic;">title</span>":</p>
+<p style="margin: 8px 0px 0px 0px;">&lt;xsl:value-of select="title" /&gt;<br>
+&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="600" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" style="border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="600" style="width:600px; border: solid 1px #000000;"><p style="text-indent: -19px; margin: 8px 0px 0px 19px;">1. Quando o campo específico for um campo que aceita cadastro HTML, deve ser utilizado o atributo <span style="font-style: italic;">isHtml="true"</span>:</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-family: 'Courier New';">&lt;lum:field id="content" isHtml="true" /&gt;. </span>Desta forma, o atributo necessário para tais campos (disable-output-escaping="yes") será automaticamente inserido;</p>
+<p style="text-indent: -19px; margin: 8px 0px 0px 19px;">2.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>Da mesma forma, quando o campo específico for uma imagem, deve ser utilizado o atributo <span style="font-style: italic;">isImage="true"</span>:</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-family: 'Courier New';">&lt;lum:field id="introductionImage" isImage="true" /&gt;. </span>Desta forma o código que monta a imagem será automaticamente inserido.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Usando as <span style="font-style: italic;">tags</span> específicas do <span style="font-style: italic;">Lumis</span> no código <span style="font-style: italic;">XSL</span> apresentado no exemplo de Lista, temos o seguinte resultado (em negrito as alterações):</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#eeeeee" border="0" style="background-color: #eeeeee; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:stylesheet&nbsp;xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">xmlns:lum="http://www.lumis.com.br/doui</span><span class="f_CodeExample" style="font-size: 10pt;">"&nbsp;version="1.0"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:import&nbsp;href="../../../../lumis/doui/style/DouiControls.xsl"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:output&nbsp;omit-xml-declaration&nbsp;=&nbsp;"yes"&nbsp;method="xml"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;strong&gt;</span><span class="f_CodeExample" style="font-size: 10pt;">&lt;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">lum:interfaceHeader&nbsp;/&gt;</span><span class="f_CodeExample" style="font-size: 10pt;">&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:loop&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="{@href}"&gt;&lt;strong&gt;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:field&nbsp;id="title"</span><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">/</span><span class="f_CodeExample" style="font-size: 10pt;">&gt;&lt;/strong&gt;&lt;/a&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:field&nbsp;id="publishStartDate/value"&nbsp;/&gt;</span><span class="f_CodeExample" style="font-size: 10pt;">)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:field&nbsp;id="introductionImage"&nbsp;isImage="true"&nbsp;style="float:left;margin:0&nbsp;6px&nbsp;6px&nbsp;0;"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;lum:field&nbsp;id="introduction"&nbsp;isHtml="true"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/lum:loop&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt; font-weight: bold;">&lt;/lum:form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:stylesheet&gt;&nbsp;&nbsp;&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">É evidente a redução de código <span style="font-style: italic;">XSL</span> ao utilizar as <span style="font-style: italic;">tags</span> <span style="font-style: italic;">Lumis</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">No entanto, muitos desenvolvedores preferem não utilizar essas <span style="font-style: italic;">tags</span>, principalmente quando já conhecem bastante de <span style="font-style: italic;">XSL</span> e não querem ter de aprender mais <span style="font-style: italic;">tags</span> específicas.</p>
+<p style="margin: 8px 0px 8px 0px;">Essas <span style="font-style: italic;">tags</span> são opcionais. São indicadas para quem está ainda aprendendo <span style="font-style: italic;">XSL</span> e não estão habituadas as <span style="font-style: italic;">tags</span> comuns.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

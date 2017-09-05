@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+		
+		<script type="text/javascript" src="../../../tool/jquery/jquery.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="stylesheet/buildInformation.css" charset="UTF-8"/>
+	</head>
+	<body>
+		<div id="lum-credit-wrapper">
+			<span class="lum-logo-lumisportal"></span>
+			<h2 id="lum-version-message" class="margintop"></h2>
+			<p class="lum-institucional"><a class="lum-link" href="mailto:contato@lumis.com.br">contato@lumis.com.br</a> | <a class="lum-link" href="http://www.lumis.com.br">www.lumis.com.br</a></p>
+			<p class="lum-copyinfo"></p>
+			<ul class="lum-options">
+				<li><a class="lum-link" id="lum-credits" href="../../../doc/help/creditos.htm" target="_blank"></a></li>
+			</ul>
+			<a class="lum-button" id="lum-exit" href="javascript:window.close();">Fechar</a>
+		</div>
+		<script type="text/javascript">
+			$.ajax("../../../api/rest/lum-internal/portaladministration/buildinformation/getInfo",{
+				type: 'post',
+				dataType: 'json',
+				success: function(json){
+					document.title = json["strings"]["STR_BUILD_INFORMATION"];
+					$("#lum-version-message").html("Lumis Portal " + json["build"]);
+					if (json.extraBuildInfo)
+						$('<p id="lum-version-info">' + json.extraBuildInfo + '</p>').insertAfter($("#lum-version-message"));
+					$(".lum-copyinfo").html("&#169; " + json["strings"]["STR_LUMIS_SINCE"] + " " + json["strings"]["STR_LUMIS_LTDA"]);
+					$("#lum-credits").html(json["strings"]["STR_CREDITS"]);
+					$("#lum-exit").html(json["strings"]["STR_CLOSE_WINDOW"]);
+				}
+			});
+		</script>
+	</body>
+</html>

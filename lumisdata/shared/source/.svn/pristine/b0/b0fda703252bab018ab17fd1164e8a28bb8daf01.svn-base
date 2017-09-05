@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>0000000050C9BD630150CD5E03C97460</id>
+  <name>Detalhes</name>
+  <parent-template-id>0000000050C9BD630150CD5FF7FE7642</parent-template-id>
+  <hidden>true</hidden>
+  <position>2</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>logado-internas-2-colunas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="logo">
+        <interface id="0000000050C9BD630150CD612FCD77CD"></interface>
+    </holder>
+    <holder id="menu">
+        <interface id="0000000050C9BD630150CD6915C1037A"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="0000000050C9BD630150CD612FDB77D1"></interface>
+    </holder>
+    <holder id="logout">
+        <interface id="0000000050C9BD630150CD612FE077D3"></interface>
+    </holder>
+    <holder id="menu-vertical">
+        <interface id="40286D2C51B5C4870151B6695E467B2D" isNew="1"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="0000000050C9BD630150CD5E068374B1"></interface>
+        <interface id="0000000050C9BD630150CD612FEC77D6"></interface>
+    </holder>
+    <holder id="outras_noticias">
+        <interface id="0000000050C9BD630150CD5E069974B3"></interface>
+        <interface id="0000000050C9BD630150CD612FF077D8"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E068374B1</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C9745E</service-instance-id>
+      <interface-id>lumis.service.news.details</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1C5E654325A</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD5E069974B3</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C9745E</service-instance-id>
+      <interface-id>lumis.service.news.quicklist</interface-id>
+      <applied-interface-style-id>0000000050C9BD630150C9C9F2070764</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD612FCD77CD</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.prestador</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD6055EF767F</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD612FDB77D1</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD5FF842764D</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD612FE077D3</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD5FF847764E</parent-interface-instance-id>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD612FEC77D6</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD5FF8507650</parent-interface-instance-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD612FF077D8</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD5FF85F7652</parent-interface-instance-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>0000000050C9BD630150CD6915C1037A</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C97462</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <parent-interface-instance-id>0000000050C9BD630150CD6816C07D94</parent-interface-instance-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286D2C51B5C4870151B6695E467B2D</id>
+      <service-instance-id>0000000050C9BD630150CD5E03C97462</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentChildren</interface-id>
+      <parent-interface-instance-id>40286D2C51B5C4870151B65D6BAD671A</parent-interface-instance-id>
+      <applied-interface-style-id>40286D2C51B5C4870151B5D46D25047B</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

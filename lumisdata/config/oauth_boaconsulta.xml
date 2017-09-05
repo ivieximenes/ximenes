@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oauth>
+	<!-- Parametrização da Autenticação do Beneficiário -->
+	<BENEFICIARIO_URL>http://gamasaudegsp-staging.boaconsulta.com</BENEFICIARIO_URL>
+	
+	
+	<!-- Parametrização da Autenticação do Prestador -->
+	<!--CLIENT_ID>e987c695a5116f12152f336cff6383e338f4d2f95c1e9308512b6c8602f741fd</CLIENT_ID-->
+    <!--CLIENT_SECRET>36f3c7bd3685366e4f520e25c50861ece7f1fd155338cc04b3fd8ce46d1c2f2e</CLIENT_SECRET-->
+	<!--PRESTADOR_URL>http://staging.boaconsulta.com</PRESTADOR_URL-->
+	<CLIENT_ID>1869e83fb5f8e6d561f9dd80602f3d8bab17a33e49a9fbd0099c8a7d9e756bab</CLIENT_ID>
+    <CLIENT_SECRET>a1d44536b3412fa356073863f19e714ecd60063641c26e2b803aaf03fbec7396</CLIENT_SECRET>
+	<PRESTADOR_URL>http://boaconsulta.com</PRESTADOR_URL>
+	<REDIRECT_URI>http://localhost:8081/boaconsulta/prestador</REDIRECT_URI>
+</oauth>

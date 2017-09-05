@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-instance version="7.0">
+  <id>2C96A668530A50E0015384C7242C1407</id>
+  <name>Rede na Rede - Busca por Médicos</name>
+  <description>Permite aos usuários realizarem a busca de prestadores.</description>
+  <service-id>br.com.qualicorp.redenarede.service.buscapormedico</service-id>
+</service-instance>

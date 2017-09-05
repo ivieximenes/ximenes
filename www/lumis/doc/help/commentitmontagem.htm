@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Montagem</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?commentitmontagem.htm"; }
+  else { parent.quicksync('a6.17.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Montagem</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="commentitvisualizacaoservico.htm">Previous</a>&nbsp;
+     <a href="comunidades.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Esta seção refere-se à montagem do serviço pelo administrador do portal, para o usuário final da solução. Não há uma montagem do ambiente administrativo de conteúdo para o editor de conteúdo.</p>
+<p style="margin: 16px 0px 0px 0px;">Para utilizar o serviço CommentIt, basta instanciá-lo em um canal e arrastar sua única interface para a página que contém os conteúdos que se deseja permitir a postagem de comentários pelos usuários.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">CommentIt Scripts</span>: Esta interface é responsável por chamar o plugin jquery que renderiza e controla o serviço, e selecionar elementos da página para aplicá-lo.</td></tr></table></div><p style="margin: 14px 0px 0px 0px;">Por padrão, o plugin jquery renderiza uma estrutura HTML ao final de todos os elementos selecionados pela query no template <span style="font-style: italic;">enableComments </span>do xsl da interface Comment Scripts.</p>
+<p>Esta query, por padrão, seleciona todos os elementos HTML que são um <span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">article</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span> com a classe "<span style="font-family: 'Courier New';">lum-content</span>", que possuam o atributo "<span style="font-family: 'Courier New';">data-lum-entityid</span>" e não possuam o atributo "<span style="font-family: 'Courier New';">data-lum-social-sopport</span>" ou possuam este atributo igual a "<span style="font-family: 'Courier New';">true</span>".</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 228px;"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">xsl</span><span class="f_CodeExample" style="font-weight: bold;">:template</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">name=</span><span class="f_CodeExample" style="color: #0080ff;">"enableComments"</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #8000ff;">script</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">type=</span><span class="f_CodeExample" style="color: #0080ff;">"text/javascript"</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(function(){</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("article.lum-content[data-lum-entityid][data-lum-social-support!=false]").commentIt();</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</span><br>
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #8000ff;">/script</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/xsl</span><span class="f_CodeExample" style="font-weight: bold;">:template&gt;</span></p>
+<p style="text-align: left; line-height: 2.0;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p>Uma forma mais ágil de impedir que algum sub-grupo desses elementos selecionados não receba a renderização do serviço de CommentIt, é adicionar a esses elementos o atributo "<span style="font-family: 'Courier New';">data-lum-social-support</span>" igual a "<span style="font-family: 'Courier New';">false</span>". Para as interfaces padrão dos serviços Lumis, uma forma de se fazer isto é customizando o seu xsl, adicionando o seguinte template:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 229px;"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">xsl</span><span class="f_CodeExample" style="font-weight: bold;">:template</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">match=</span><span class="f_CodeExample" style="color: #0080ff;">"*"</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">mode=</span><span class="f_CodeExample" style="color: #0080ff;">"lum_renderRowArticleAttributes"</span><span class="f_CodeExample" style="font-weight: bold;">&gt;</span><br>
+<span style="width:11px">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">xsl</span><span class="f_CodeExample" style="font-weight: bold;">:attribute</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">name=</span><span class="f_CodeExample" style="color: #0080ff;">"data-lum-social-support"</span><span class="f_CodeExample" style="font-weight: bold;">&gt;false&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/xsl</span><span class="f_CodeExample" style="font-weight: bold;">:attribute&gt;</span><br>
+<span style="width:11px">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">xsl</span><span class="f_CodeExample" style="font-weight: bold;">:apply-imports</span><span class="f_CodeExample">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">/&gt;</span></p>
+<p class="p_CodeExample" style="margin: 0px 0px 0px 229px;"><span class="f_CodeExample" style="font-weight: bold;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">/xsl</span><span class="f_CodeExample" style="font-weight: bold;">:template&gt;</span></p>
+<p style="text-align: left; white-space: nowrap;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;">Para realizar seleções mais complexas de quais elementos da página devem receber a renderização do serviço de CommentIt, deve-se customizar o xsl da interface CommentIt Scripts alterando no template <span style="font-style: italic;">enableComments,</span> a query que seleciona estes elementos<span style="font-style: italic;">.</span></p>
+<p style="margin: 14px 0px 0px 0px;">Através de alterações no template <span style="font-style: italic;">enableComments</span> também é possível alterar a estrutura de HTML renderizada pelo plugin jquery. Para isso, deve-se escrever os novos métodos de renderização e enviá-los como um parâmetro na chamada da função principal do plugin.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

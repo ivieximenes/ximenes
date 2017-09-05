@@ -1,0 +1,138 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Bea Weblogic</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?deploybeaweblogic.htm"; }
+  else { parent.quicksync('a7.1.1.1.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Bea Weblogic</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="deployapachetomcat.htm">Previous</a>&nbsp;
+     <a href="deployoutrosservidoresaplicacao.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Esta opção permite o <span style="font-style: italic;">deployment</span> de <span style="font-style: italic;">portlet</span> no padrão <span style="font-style: italic;">JSR-168,</span> para que possa ser utilizado como um serviço do portal.</p>
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">deployment</span> é uma instalação de um arquivo.war que pode conter um ou vários <span style="font-style: italic;">portlets</span>. O <span style="font-style: italic;">deployment</span> de um arquivo.war corresponde ao registro de apenas um serviço no portal, que poderá ter tantas interfaces quantas forem os <span style="font-style: italic;">portlets</span> contidos no arquivo.war. O serviço registrado estará localizado em um diretório em “<span style="font-style: italic;">lumisdata/def</span>” e estará pronto para ser instanciável.</p>
+<p style="margin: 14px 0px 0px 0px;">As seguintes etapas devem ser seguidas ao acionar “Deploy”:</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 1px;">1.Tipo de <span style="font-style: italic;">Deployment</span>: Neste campo pode-se especificar se será um “Novo serviço” ou &nbsp;“Atualizar serviço existente”.</p>
+<p style="text-indent: 1px; margin: 14px 0px 0px 1px;">a)" Novo serviço" deve ser escolhido quando será realizado o <span style="font-style: italic;">deployment</span> de um <span style="font-style: italic;">portlet</span> pela primeira vez;</p>
+<p style="text-indent: -2px; margin: 14px 0px 0px 5px;">b)" Atualizar serviço existente" é utilizado quando o <span style="font-style: italic;">portlet </span>ou <span style="font-style: italic;">portlets</span> são alterados necessitando realizar um novo <span style="font-style: italic;">deployment</span> do arquivo.war.</p>
+<p style="text-indent: -2px; margin: 14px 0px 0px 5px;">No exemplo foi escolhida a opção “Novo serviço”;</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 1px;">2.Arquivo de <span style="font-style: italic;">deployment</span>: Neste campo especifica-se o arquivo do serviço de <span style="font-style: italic;">portlet</span>. Ex: <span style="font-style: italic;">calcportlet.war</span>;</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm102.jpg" width="900" height="218" border="0" alt="portalAdm102" style="margin:0 auto;margin:20px;"></p>
+<p style="margin: 14px 0px 0px 0px;">As próximas etapas são:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm104.jpg" width="900" height="234" border="0" alt="portalAdm104" style="margin:0 auto;margin:20px;"></p>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;">3.<span style="font-style: italic;">Context path</span>: deve-se especificar qual é o <span style="font-style: italic;">context path</span> do servidor de aplicação onde o <span style="font-style: italic;">portlet</span> será instalado. Ex: <span style="font-style: italic;">“/calcportlet</span>”;</p>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;">4.Identificador do serviço: deve-se especificar o identificador do serviço, que deve seguir um padrão de hierarquia de diretórios, separado por (.). Neste exemplo, o a hierarquia será: “portlet.lumis.calc”;</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 3px;">5.Exportar: exporta um arquivo <span style="font-style: italic;">zip</span> do arquivo de <span style="font-style: italic;">deployment</span> para “<span style="font-style: italic;">/lumisdata/deployment</span>”. <br>
+&nbsp;<br>
+Caso este diretório não exista, será criado na primeira exportação de <span style="font-style: italic;">portlet</span> .</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 3px;">O arquivo <span style="font-style: italic;">zip</span> contém o arquivo <span style="font-style: italic;">war</span> modificado pelo <span style="font-style: italic;">Lumis</span> e o <span style="font-style: italic;">servidefinition.xml</span> para que o <span style="font-style: italic;">portlet</span> seja resgistrado como um serviço.</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 3px;">Portanto, após a exportação, &nbsp;o arquivo <span style="font-style: italic;">zip</span> deve ser descompactado &nbsp;e o <span style="font-style: italic;">portlet</span> deve ser registrado manualmente no portal, através do seu <span style="font-style: italic;">servicedefinition.xml,</span> localizado em "lumisdata/deployment/lumisdata/def/portlet/lumis”. Para registrar, consultar a seção <a href="gerenciadorservicos.htm">Gerenciador de Serviços</a>.</p>
+<p style="text-indent: -1px; margin: 14px 0px 0px 3px;">Ainda, o arquivo <span style="font-style: italic;">war </span>descompactado deve ser efetivamente <span style="font-style: italic;">deployment </span>no servidor de aplicação. Esse arquivo <span style="font-style: italic;">war</span> descompactado é diferente daquele informado no campo <span style="font-style: italic;">Arquivo de deployment</span>, e na sua execução, é necessário compartilhar as <span style="font-style: italic;">shared lib</span> do portal.</p>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;"> &nbsp;  </p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="110" style="width:110px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="478" style="width:478px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="588" style="width:588px; border: solid 1px #000000;"><p>O nome do contexto no <span style="font-style: italic;">deploy</span> no servidor de aplicação deve ser igual ao cadastrado no Lumis Portal, no passo 3.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;">Como exemplo, considere o servidor de aplicação <span style="font-style: italic;">Websphere</span>: toda aplicação que é <span style="font-style: italic;">deployment </span>(arquivo <span style="font-style: italic;">war</span>) é inserida em um arquivo <span style="font-style: italic;">ear</span>, e ela deve referenciar o <span style="font-style: italic;">shared lib</span>:<br>
+&nbsp;</p>
+<p style="text-indent: -24px; margin: 0px 0px 0px 59px;"> &nbsp; &nbsp; &nbsp; <img src="portaladm173.jpg" width="500" height="452" border="0" alt="portalAdm173"></p>
+<p style="margin: 14px 0px 0px 0px;">As figuras a seguir exibem respectivamente a instância de serviço “Calculadora”, que é o resultado de um <span style="font-style: italic;">deployment</span> do <span style="font-style: italic;">portlet calcportlet;</span> e uma página com a interface renderizada. O nome do serviço e sua descrição foram alterados no “<span style="font-style: italic;">lumidata/def/portlet/lumis/calc/servicedefinition.xml"</span> .</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm106.jpg" width="900" height="274" border="0" alt="portalAdm106" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">&nbsp;</span></p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="portaladm108.jpg" width="691" height="302" border="0" alt="portalAdm108" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;"> </span>A barra de título da interface que está acima da calculadora pode ser configurada para ser exibida ou não. Esta configuração é realizada através da opção “Exibir Barra de Título”, das propriedades da interface, acessadas a partir do <span style="font-style: italic;">right-click</span> da mesma. Por <span style="font-style: italic;">default</span> essa propriedade possui valor “não”.</p>
+<p style="margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="172" style="width:172px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span>:</p>
+</td>
+<td valign="top" width="847" style="width:847px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="767" style="width:767px; border: solid 1px #000000;"><p>1 - Pode ocorrer erro inesperado no <span style="font-style: italic;">deploy</span> de <span style="font-style: italic;">portlets </span>no servidor de aplicação <span style="font-style: italic;">BEA Weblogic</span>, devido a problemas de configuração do servidor.</p>
+<p style="margin: 14px 0px 0px 0px;">Quando o <span style="font-style: italic;">BEA</span> não tem acesso à internet, pode ocorrer, em algumas situações ,o erro abaixo:</p>
+<p style="white-space: nowrap; margin: 14px 0px 0px 0px;"><span style="font-family: 'Courier New';">Caused&nbsp;by:&nbsp;java.net.UnknownHostException:&nbsp;java.sun.com</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;java.net.InetAddress.getAllByName0(InetAddress.java:1133)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;java.net.InetAddress.getAllByName0(InetAddress.java:1098)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;java.net.InetAddress.getAllByName(InetAddress.java:1061)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.HttpClient.openServer(HttpClient.java:303)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.HttpClient.openServer(HttpClient.java:375)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.HttpClient.&lt;init&gt;(HttpClient.java:149)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.HttpURLConnection.getHttpClient(HttpURLConnection.java:175)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.HttpURLConnection.getInputStream(HttpURLConnection.java:395)</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">at&nbsp;weblogic.net.http.SOAPHttpURLConnection.getInputStream(SOAPHttpURLConnection.java</span>:31)</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p>Isso é causado pela tentativa de obter o <span style="font-style: italic;">DTD</span> da fonte externa. Para resolver o problema, fazer o devido mapeamento conforme descrito na ajuda do console de administração do <span style="font-style: italic;">Weblogic Server</span> em "<span style="font-style: italic;">How Do I...&gt;Configure services&gt;Configure XML Resources&gt;XML Registries&gt;Configure external entity resolution</span>".</p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p>O <span style="font-style: italic;">DOCTYPE</span> geralmente utilizado por <span style="font-style: italic;">portlets</span> é:</p>
+<p style="white-space: nowrap; margin: 14px 0px 0px 0px;">PUBLIC&nbsp;"-//Sun&nbsp;Microsystems,&nbsp;Inc.//DTD&nbsp;Web&nbsp;Application&nbsp;2.3//EN"&nbsp;"<a href="http://java.sun.com/dtd/web-app_2_3.dtd" target="_blank" class="weblink">http://java.sun.com/dtd/web-app_2_3.dtd</a>"</p>
+<p style="margin: 14px 0px 0px 0px;">2- O <span style="font-style: italic;">BEA Weblogic 10</span> não utiliza o <span style="font-style: italic;">tld</span> definido em <span style="font-style: italic;">jar</span> localizado no <span style="font-style: italic;">classloader</span> compartilhado (diretório <span style="font-style: italic;">lib</span> do servidor). Dessa forma, o <span style="font-style: italic;">taglib</span> padrão de <span style="font-style: italic;">portlet</span>, implementado em <span style="font-style: italic;">pluto-taglib-1.1.0-beta1.jar</span>, que durante a instalação foi colocado no diretório lib, não funciona, ocorrendo um erro como o exemplo abaixo:</p>
+<p style="white-space: nowrap; margin: 14px 0px 0px 0px;">No&nbsp;tag&nbsp;library&nbsp;could&nbsp;be&nbsp;found&nbsp;with&nbsp;this&nbsp;URI.&nbsp;Possible&nbsp;causes&nbsp;could&nbsp;be&nbsp;that&nbsp;the&nbsp;URI&nbsp;is&nbsp;incorrect,&nbsp;or&nbsp;that&nbsp;there&nbsp;were&nbsp;errors&nbsp;during&nbsp;parsing&nbsp;of&nbsp;the&nbsp;.tld&nbsp;file.</p>
+<p style="white-space: nowrap;">&lt;%@&nbsp;taglib&nbsp;uri="http://java.sun.com/portlet"&nbsp;prefix="portlet"%&gt;</p>
+<p style="margin: 14px 0px 0px 0px;">Portanto, &nbsp;é necessário adicionar dentro do <span style="font-style: italic;">WAR</span> do portlet, mais especificamente no diretório <span style="font-style: italic;">WEB-INF/lib,</span> o arquivo <span style="font-style: italic;">pluto-taglib-1.1.0-beta1.jar</span> (distribuído com o produto, e que durante a instalação do produto foi copiado para o diretório <span style="font-style: italic;">lib</span> do servidor). Com este <span style="font-style: italic;">jar</span> dentro do <span style="font-style: italic;">WAR</span> do <span style="font-style: italic;">portlet</span>, o <span style="font-style: italic;">BEA Weblogic 10</span> consegue identificar corretamente a <span style="font-style: italic;">uri</span> de <span style="font-style: italic;">taglib</span> padrão de <span style="font-style: italic;">portlet</span>, e assim não ocorre o erro citado acima.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

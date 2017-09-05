@@ -1,0 +1,48 @@
+/* $Revision: 16757 $ $Date: 2014-12-30 15:24:15 -0200 (Tue, 30 Dec 2014) $ */
+.lumis-service-community .lum-content-meta-information .lum-field-id-privacy .lum-field-label {
+	display: none;
+}
+.lumis-service-community .lum-content-meta-information .lum-field-id-role .lum-field-label {
+	display: none;
+}
+
+.lumis-service-community-membershipRequests .lum-list-item, .lumis-service-community-members .lum-list-item {
+	display:inline-block;
+	margin:5px 15px;
+	vertical-align:top;
+	min-height:80px;
+}
+.lumis-service-community-membershipRequests .lum-list-item:after, .lumis-service-community-members .lum-list-item:after {
+	content: none;
+}
+
+.lumis-service-community-membershipRequests .lum-list-item .lum-content-header, .lumis-service-community-members .lum-list-item .lum-content-header {
+	padding-left: 70px;
+	position: relative;
+}
+.lumis-service-community-membershipRequests .lum-list-item .lum-content-header .lum-content-introduction-image, .lumis-service-community-members .lum-list-item .lum-content-header .lum-content-introduction-image {
+	position:absolute;
+	left:0;
+}
+
+.lumis-service-community-membershipRequests .lum-list-item .lum-content-meta-information, .lumis-service-community-members .lum-list-item .lum-content-meta-information {
+	display: block;
+	text-transform: none;
+	margin: 10px 0;
+}
+
+.lumis-service-community-membershipRequests .lum-list-item .lum-actions, .lumis-service-community-members .lum-list-item .lum-actions {
+	display: block;
+	margin: 10px 0;
+	visibility: hidden;
+}
+.lumis-service-community-membershipRequests .lum-list-item:hover .lum-actions, .lumis-service-community-members .lum-list-item:hover .lum-actions {
+	visibility: inherit;
+}
+.lumis-service-community-membershipRequests .lum-list-item .lum-content-meta-information + ul.lum-actions > li.lum-first:before, .lumis-service-community-members .lum-list-item .lum-content-meta-information + ul.lum-actions > li.lum-first:before {
+	content: none;
+}
+.lumis-service-community-membershipRequests .lum-list-item .lum-actions a, .lumis-service-community-members .lum-list-item .lum-actions a {
+	text-transform: none;
+	font-weight: normal;
+}

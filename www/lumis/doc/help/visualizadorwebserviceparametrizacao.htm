@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Parametrização</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?visualizadorwebserviceparametrizacao.htm"; }
+  else { parent.quicksync('a6.56.2.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Parametrização</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="visualizadorwebservicemontagem.htm">Previous</a>&nbsp;
+     <a href="wiki.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">Através do <span style="font-style: italic;">right-click</span> na interface Visualizador e selecionando a opção <span style="font-style: italic;">Administração</span> é possível configurar alguns parâmetros necessários para a customização da funcionalidade do serviço.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice02.jpg" width="500" height="344" border="0" alt="visWebService02" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">• <span style="font-style: italic;">URL</span>: Especificação do endereço de acesso do webservice, o qual deseja-se consultar informações;</p>
+<p>&nbsp;</p>
+<p>• <span style="font-style: italic;">XSL</span> de <span style="font-style: italic;">Request</span>: Neste campo deve ser especificado o caminho do arquivo <span style="font-style: italic;">XSL</span> que deve ser aplicado quando os tipos de parâmetros forem complexos e necessitarem de formatação especial.</p>
+<p>O <span style="font-style: italic;">XSL</span> padrão <span style="font-style: italic;">RequestDefault.xsl</span> , que é utilizado quando o valor desse campo for omitido, está localizado em “<span style="font-style: italic;">lumis/service/webserviceviewer/style</span>”. Ele manipula apenas parâmetros primitivos (<span style="font-style: italic;">strings, integer,</span>etc.):</p>
+<p style="margin: 14px 0px 0px 0px;">• <span style="font-style: italic;">Namespace</span>: <span style="font-style: italic;">Namespace</span> do <span style="font-style: italic;">WebService</span> a ser consultado;</p>
+<p>&nbsp;</p>
+<p>• Método do <span style="font-style: italic;">WebService</span>: Determina a forma com que os parâmetros serão enviados para o <span style="font-style: italic;">webservice</span>. Os valores possíveis são: <span style="font-style: italic;">GET</span> (<span style="font-style: italic;">GET HTTP</span>, passando parâmetros pela <span style="font-style: italic;">URL</span>), <span style="font-style: italic;">POST</span> (<span style="font-style: italic;">POST HTTP</span>, passando pelo corpo da requisição), ou <span style="font-style: italic;">SOAP</span> (<span style="font-style: italic;">POST HTTP</span>, passando parâmetros em <span style="font-style: italic;">XML</span> no protocolo <span style="font-style: italic;">SOAP</span>);</p>
+<p>&nbsp;</p>
+<p>• Lista de parâmetros: Os parâmetros da consulta, informando nome e valor. Uma outra forma de passar o valor para o parâmetro, é através de uma variável, cujos valores podem ser obtidos pelo <span style="font-style: italic;">request</span> de uma página. No contexto acima, pode ser utilizado por exemplo, a variável <span style="font-style: italic;">${param.cityName[0]} </span>no campo <span style="font-style: italic;">valor</span>, onde <span style="font-style: italic;">cityName</span> é o nome do parâmetro. Portanto, caso o <span style="font-style: italic;">Webservice</span> esteja definido desta última forma, e a página que estiver instanciada esse serviço for <span style="font-style: italic;">http://localhost:8080/portal/main.jsp?lumPageId=8A488AED1DF86447011DF865112F013A</span>, para validar a configuração, basta passar o parâmetro com o seu valor pela <span style="font-style: italic;">URL(&amp;CityName=Houston)</span>, como em: <span style="font-style: italic;">http://localhost:8080/portal/main.jsp?lumPageId=8A488AED1DF86447011DF865112F013A&amp;CityName=Houston.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>A resposta da consulta ao <span style="font-style: italic;">WebService</span> é um <span style="font-style: italic;">XML</span> que para tratá-lo deve-se aplicar um <span style="font-style: italic;">XSL</span> de exibição no estilo da interface. Abaixo, é exibido apenas um trecho do resultado da consulta em <span style="font-style: italic;">XML</span>, sem tratamento de interface:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice03.jpg" width="503" height="386" border="0" alt="visWebService03" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Para tratar o resultado, portanto, clicar com o botão direito na interface, e selecionar a opção <span style="font-style: italic;">Estilo. </span>Pode-se adicionar um novo arquivo <span style="font-style: italic;">XSL</span> para customizar a interface com o resultado da consulta.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice04.jpg" width="500" height="228" border="0" alt="visWebService04" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">No editor de <span style="font-style: italic;">XSL</span>, escolher a opção Adicionar:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice05.jpg" width="600" height="466" border="0" alt="visWebService05" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 14px 0px 0px 0px;">Preencher as informações sobre o arquivo <span style="font-style: italic;">XSL</span> de customização da interface.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice06.jpg" width="594" height="190" border="0" alt="visWebService06" style="margin:0 auto;margin:0px;"><br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p> Não criar o novo estilo no diretório “<span style="font-style: italic;">style</span>” do serviço, pois a cada <span style="font-style: italic;">upgrade</span> do produto, arquivos customizados são perdidos. Indicar outro caminho para arquivos customizados relativos ao diretório lumisdata/def.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Após criar e editar o arquivo <span style="font-style: italic;">XSL</span>, escolher no campo “Nome” do editor, o novo estilo criado para que a interface seja renderizada com a nova customização. A figura abaixo exibe a nova formatação conforme especificado no estilo “<span style="font-style: italic;">weather</span>”:</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="viswebservice01.jpg" width="370" height="195" border="0" alt="visWebService01" style="margin:0 auto;margin:0px;"><br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 25px;"><table width="590" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p>Para informações sobre criar estilos, consultar a seção <a href="xslcustomizacao.htm">Customização do XSL</a> .</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 14px 0px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

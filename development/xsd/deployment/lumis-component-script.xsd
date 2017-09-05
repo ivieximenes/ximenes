@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16974 $ $Date: 2015-02-20 11:16:28 -0200 (Fri, 20 Feb 2015) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	elementFormDefault="qualified">
+	
+	<xsd:complexType name="lum_scriptStep">
+	
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_runSqlStep">
+		<xsd:complexContent>
+			<xsd:extension base="lum_scriptStep">
+				<xsd:sequence>
+					<xsd:element name="sql" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>
+								Provides an SQL command to be ran. Although more than one "sql" element can be added, only one will be ran. The possibility of adding more than one "sql" element is to make it possible to have different versions of the same SQL to be executed in different database engines.
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:simpleContent>
+								<xsd:extension base="xsd:string">
+									<xsd:attribute name="database-type">
+										<xsd:annotation>
+											<xsd:documentation>
+												<![CDATA[
+												Restricts this SQL execution to the given database.<br />
+												<ul>
+													<li>oracle: for Oracle database.</li>
+													<li>sqlserver: for Microsoft SQL Server database.</li>
+													<li>mysql: for MySQL database.</li>
+												</ul>
+												]]>
+											</xsd:documentation>
+										</xsd:annotation>
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="oracle" />
+												<xsd:enumeration value="sqlserver" />
+												<xsd:enumeration value="mysql" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:extension>
+							</xsd:simpleContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:group ref="genericStep" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_runJavaClass">
+		<xsd:complexContent>
+			<xsd:extension base="lum_scriptStep">
+				<xsd:sequence>
+					<xsd:element name="class" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>
+								<![CDATA[The class that will be executed in this step. The given class <em>must</em> implement lumis.portal.deployment.script.IStepExecutable.]]> 
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="parameters" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								Defines the parameters that will be passed to the executable. These parameters will be condensed into a map (java.util.Map). For that reason, two parameters with the very same name are not expected to coexist.
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence maxOccurs="unbounded">
+								<xsd:element name="parameter">
+									<xsd:annotation>
+										<xsd:documentation>
+											A parameter that will be passed to the executable. This node content will be the value of the parameter. The parameter name is defined through the attribute "name".
+										</xsd:documentation>
+									</xsd:annotation>
+									<xsd:complexType>
+										<xsd:simpleContent>
+											<xsd:extension base="xsd:string">
+												<xsd:attribute name="name" use="required">
+													<xsd:annotation>
+														<xsd:documentation>
+															The parameter name.
+														</xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:extension>
+										</xsd:simpleContent>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:group ref="genericStep" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_displayMessage">
+		<xsd:complexContent>
+			<xsd:extension base="lum_scriptStep">
+				<xsd:sequence>
+					<xsd:element name="message" type="xsd:string">
+						<xsd:annotation>
+							<xsd:documentation>
+								The message that will be displayed when this step is displayed.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="genericStep" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="lum_removeGlobalNonReferencedEntries">
+		<xsd:complexContent>
+			<xsd:extension base="lum_scriptStep">
+				<xsd:group ref="genericStep" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:group name="genericStep">
+		<xsd:sequence>
+			<xsd:element name="environments" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						Defines which environments should run this step. If at least one of the defined environments match the current environment then this step will be executed. Otherwise it will be automatically ignored.
+						If this node is suppressed, then this step will be run in all environments. 
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="environment" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>
+									Define an environment that this step will run into. At least one of "tag" or "type" parameters are required. It will match the current environment if the provided tag (if any) is present in the current environment and if the given environment type (if any) is equal to the current environment's one.
+								</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute name="tag" use="optional">
+									<xsd:annotation>
+										<xsd:documentation>
+											The required environment tag.
+										</xsd:documentation>
+									</xsd:annotation>
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:minLength value="1" />
+											<xsd:maxLength value="255" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:attribute>
+								<xsd:attribute name="type" use="optional">
+									<xsd:annotation>
+										<xsd:documentation>
+											The required environment type.
+										</xsd:documentation>
+									</xsd:annotation>
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:enumeration value="development" />
+											<xsd:enumeration value="structure building" />
+											<xsd:enumeration value="user acceptance" />
+											<xsd:enumeration value="production" />
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="message" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						The message that will be displayed when this step is displayed.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	
+	
+</xsd:schema>

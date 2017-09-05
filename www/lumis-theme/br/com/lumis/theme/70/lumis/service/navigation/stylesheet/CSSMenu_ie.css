@@ -1,0 +1,41 @@
+/* $Revision: 15349 $ $Date: 2013-05-20 12:54:36 -0300 (Mon, 20 May 2013) $ */
+
+/* 
+	- Styles for CSS-only menu, can be used for menus with only ONE SubMenu-level.
+   	- CSS-only menus load much faster because they barely use any JavaScript.
+   	- Beware though, take care when editing this styles as custom styles for
+   	your portal, some changes can alter the functionality of the CSS-only menu.
+*/
+
+/* styles applied only to IE */
+
+/* Vertical CSS Menu */
+
+#LumMenuCSS ul li a 
+{
+	height:1%; /*21px*/
+}
+/* Fix IE. Hide from IE Mac \*/
+* html #LumMenuCSS ul li { float:left;height:1%; }
+* html #LumMenuCSS ul li a { height:1%; }
+/* End */
+
+
+/* Horizontal CSS Menu */
+
+#LumMenuHorCSS
+{
+	height:1%;
+}
+#LumMenuHorCSS ul li 
+{
+	width:1%;
+}
+#LumMenuHorCSS li.over
+{
+	z-index:99; /* fix 2+ lines menu on IE */
+}
+/* Fix IE. Hide from IE Mac \*/
+* html #LumMenuHorCSS ul li { float:left;height:1%; }
+* html #LumMenuHorCSS ul li a { height:1%; }
+/* End */

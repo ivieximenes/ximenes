@@ -1,0 +1,62 @@
+/* $Revision: 15325 $ $Date: 2013-05-14 15:36:25 -0300 (Tue, 14 May 2013) $ */
+.lum-filemacrotypemapping-order-item 
+{
+	border: #CCC solid 1px;
+	padding: 2px 2px 2px 2px;
+	margin: 5px 0px 5px 0px;
+	background-color: #F8F8F8;
+	cursor: move;
+}
+
+.lum-filemacrotypemapping-order-item:hover 
+{
+	background-color: #FEFEFE;
+}
+
+.lum-filemacrotypemapping-order-list 
+{
+	list-style-type: none;
+	padding: 0px 5px 5px 5px;
+}
+
+.lum-filemacrotypemapping-order-list div 
+{
+	width: 100%;
+}
+
+.lum-filemacrotypemapping-order-list div span.lum-filemacrotypemapping-order-list-type
+{
+	width: 150px; 
+	display: block; 
+	border-right: 1px solid #CCC; 
+	float: left; 
+	margin-right: 5px;
+}
+
+.lum-filemacrotypemapping-order-list div span.lum-filemacrotypemapping-order-list-expression
+{
+	width: 100%; 
+	display: block;
+}
+
+
+.lum-filemacrotypemapping-order-list-div 
+{
+	height: 340px; 
+	overflow: auto; 
+	border: #CCC solid 1px;
+}
+
+.lum-filemacrotypemapping-order-help 
+{
+	background-color: #FBFCA2;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+.lum-filemacrotypemapping-item-placeholder 
+{
+	background-color: white;
+	border: #CCC 2px dashed;
+	height: 1.5em;
+}

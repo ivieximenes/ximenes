@@ -1,0 +1,962 @@
+/* $Revision: 17574 $ $Date: 2015-07-15 15:01:04 -0300 (Wed, 15 Jul 2015) $ */
+a{
+	text-decoration: none;	
+}
+.lum-admin-header{
+	background:#F7F7F7;
+	height:38px;
+	z-index: 100;
+}
+.lum-admin-top-bar {
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px !important;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 38px;
+	background-color: #626262;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(80%,#626262), color-stop(100%,#444444));
+	z-index:9999;
+	line-height: normal;
+}
+.lum-admin-top-bar .lum-admin-logo{
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: 10px 8px;
+	width:134px;
+	height:37px;
+	position:absolute;
+}
+.lum-mode-select {
+	cursor: pointer;
+	display: inline-block;
+	width: 180px;
+	margin-left: 164px;
+	margin-top: 4px;
+	color: #fff;
+	padding: 5px 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%);
+	border: solid #474747 1px;
+	box-shadow: 0 1px 2px #838383, 0 -1px 1px #474747, inset 0 -1px 1px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,1);
+	-moz-box-shadow: 0 1px 1px #838383, 0 -1px 1px #474747, inset 0 -1px 1px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,1);
+	-webkit-box-shadow: 0 1px 1px #838383, 0 -1px 1px #474747, inset 0 -1px 1px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.3);
+	text-shadow: 0 -1px 2px #000;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e6e6e), color-stop(100%,#565656));
+	background-image: url(../images/ico_ddarrow.png);
+	background-repeat: no-repeat;
+	background-position: 180px;
+	box-sizing: content-box;
+}
+.lum-mode-menu {
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+	list-style-type: none;
+	margin-left: 164px;
+	background-color: #474747;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	width: 201px;
+	border: 1px solid #747474;
+	border-top:0px;
+	display:none;
+}
+.lum-mode-menu li {
+	padding: 8px;
+	color: #FFF;
+	border-bottom: 1px solid #2c2c2c;
+	border-top: 1px solid #606060;
+	text-shadow: 0 -1px 2px #000;
+}
+.lum-mode-menu li:hover{
+	padding:8px;
+	color:#FAB500;
+	cursor:pointer;
+}
+
+.lum-admin-developer-license{
+    display:inline-block;
+    margin:8px 10px 0;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:10px;
+    font-weight:bold;
+    background-color:#303030;
+    border-radius:3px;
+    padding:4px 8px;
+}
+.lum-admin-bar-user {
+    display:inline-block;
+	color: #FFF;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+	background-position:  10px  10px;
+	padding: 10px 0 10px 30px;
+    border-left: 1px solid #7e7e7e;    
+    border-right: 1px solid #7e7e7e;
+    text-shadow: 0 -1px 2px #000;
+    cursor:pointer;
+}
+.lum-admin-bar-user:after{
+    content:"\25BE";
+    text-shadow: 0 -1px 2px #000;
+    padding:0 10px 0 5px;
+}
+.lum-admin-bar-user:hover{
+    background-color:#303030;
+}
+.lum-admin-bar-language {
+	color: #FFF;
+    background-image: url(../images/globo.png);
+    background-repeat: no-repeat;
+	background-position:  11px  12px;
+	padding: 10px 10px 10px 10px;
+    border-right: 1px solid #7e7e7e;    
+    text-shadow: 0 -1px 2px #000;
+    cursor:pointer;
+}
+.lum-admin-bar-language:after{
+    content:"";
+    text-shadow: 0 -1px 2px #000;
+    padding:0 10px 0 5px;
+}
+.lum-admin-bar-language:hover{
+    background-color:#303030;
+}
+.lum-admin-bar-info{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.lum-admin-bar-settings-menu, .lum-admin-bar-settings-menu-language {
+	position: absolute;
+	right: 36px;
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+	list-style-type: none;
+	background-color: #FFF;
+	border-radius: 3px;
+	max-width:200px;
+	border: 1px solid #dfdfdf;
+	top: 38px;
+	display:none;
+}
+.lum-admin-bar-settings-menu li, .lum-admin-bar-settings-menu-language li {
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.lum-admin-bar-settings-menu li:hover, .lum-admin-bar-settings-menu-language li:hover {
+	background-color: #f4f4f4;
+}
+
+.lum-admin-bar-settings-menu-language li {
+	padding: 10px 15px 10px 30px;
+	cursor: pointer;
+}
+
+.lum-admin-bar-settings-menu-language li.locale-checked {
+    background-image: url(../images/check.png);
+    background-repeat: no-repeat;
+	background-position:  10px  14px;
+}
+
+.lum-admin-bar-settings-menu-language {
+	right:0px;
+}
+
+.lum-admin-bar-user.lum-admin-bar-selected{
+	background-color:#474747;
+}
+.lum-admin-navigation-pane{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px !important;
+	background:#F7F7F7;
+	line-height: normal;
+}
+.lum-admin-toggle-splitter{
+	background: url(../images/toggler-close.png) no-repeat center 8px;
+	height:30px;
+	display:inline;
+	padding:0 7px;
+	position:absolute;
+	right:5px;
+	cursor:pointer;
+}
+.lum-admin-navigation-header{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:18px !important;
+	color:#999;
+	padding:10px 5px 15px 30px;
+	border-bottom:1px solid #E0E0E0;
+}
+.lum-admin-portal-studio-header{
+	background:url(../images/portal-studio-ico.png) no-repeat;
+	background-position: 10px center;
+}
+.lum-admin-portal-settings-header{
+	background:url(../images/portal-settings-ico.png) no-repeat;
+	background-position: 10px center;
+}
+.lum-admin-settings-menu{
+	background-color: #F7F7F7;
+	overflow: auto;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	top: 51px;
+	padding-bottom: 80px;
+}
+.lum-admin-setting-category{
+    background-color:#fff;
+    font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size:12px;
+    border: 1px solid #e6e6e6;
+    padding: 10px 0px 12px 0px;
+    border-radius:6px;
+    margin: 10px 10px 15px 10px;
+}
+.lum-admin-setting-category-header{
+	padding:0px;
+	padding-left:0px;
+	cursor:pointer;
+}
+.lum-admin-setting-category-header.lum-admin-open{
+	background:url(../images/minus.png) no-repeat;
+	background-position: 95% 6px;
+	border-bottom: 1px solid #cecece;
+    padding-bottom:12px;
+}
+.lum-admin-setting-category-header.lum-admin-closed{
+	background:url(../images/plus.png) no-repeat;
+	background-position: 95% 6px;
+	font-size:15px;
+    display:block;
+    padding-bottom:0px;
+}
+.lum-admin-setting-category-header-text{
+    color: #464646;
+	font-family:Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:15px;
+    padding-left:20px;
+    display:block;     
+    padding-right:25px;
+}
+.lum-admin-setting-category-header-text:hover {
+	color: #909090;
+}
+.lum-admin-setting-category-header img{
+	padding-top:3px;
+	position:absolute;
+}
+.lum-admin-setting-category-body.lum-admin-open{
+	display:block;
+	border-top: 4px solid #ebebeb;
+	padding-top:15px;
+}
+.lum-admin-setting-category-body.lum-admin-closed{
+	display:none;
+}
+.lum-admin-setting-item, .lum-admin-setting-item-parent, .lum-admin-setting-item a {
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	color: #464646;
+	font-weight:bold;
+	font-size:12px;
+	padding:3px;
+	padding-right:10px;
+}
+.lum-admin-setting-item.lum-admin-last-child{
+	margin-bottom:12px !important;
+}
+.lum-admin-setting-selected, .lum-admin-setting-selected a{
+	background-color:#fcf1df;
+	color:#ff9600;
+	font-weight:bold !important;
+}
+.lum-admin-setting-selected a:after{
+	content:url(../../../portalstudio/client/images/tree/arrow-selected.png);
+	padding-left: 10px;
+	padding-bottom: 4px;
+	position:absolute;
+}
+.lum-admin-setting-item:before {
+	padding-right:5px;
+	position:absolute;
+	margin-left:-10px;
+}
+.lum-admin-setting-item-parent {
+	padding-left: 30px;
+	color: #909090;
+	margin-bottom: 5px !important;
+}
+.lum-admin-setting-item-parent:before {
+	padding-right:5px;
+	position:absolute;
+	margin-left:-14px;
+}
+.lum-admin-setting-level-1{
+	padding-left:30px;
+	margin-bottom: 12px;
+}
+.lum-admin-setting-level-1:before {
+    position:absolute;
+    left:40px;
+    font-family:"Arial";
+    font-size:12px;
+    content:"\25CF";
+    color: #ff9600;
+}
+.lum-admin-setting-level-2{
+	padding-left:45px;
+	margin-bottom: 5px !important;
+}
+.lum-admin-setting-level-2 a{
+	font-weight:normal;
+}
+.lum-admin-setting-level-2:before {
+    position:absolute;
+    left:60px;
+    font-family:"Arial";
+    font-size:12px;
+    content:"\2022";
+    color: #ff9600;
+}
+.lum-admin-setting-item-parent{
+	padding-left:33px;
+}
+.lum-admin-setting-item-parent:before {
+    position:absolute;
+    left:44px;
+    font-family:"Arial";
+    font-size:12px;
+    content:"\25CF";
+    color: #909090;
+}
+.lum-admin-setting-item-parent:after {
+	content:"\00A0 \00A0 \25BE";
+}
+.lum-admin-service-interface-list-header{
+}
+.lum-admin-service-interface-list-header a{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px !important;
+	color:#909090 !important;
+	font-weight:bold !important;
+}
+.lum-admin-interface-header-text{
+	padding:5px 5px 10px 25px;
+	margin-left:7px;
+}
+.lum-admin-interface-header-change-channel{
+	background: url(../images/tree/channel.png) no-repeat 8px 8px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.lum-admin-interface-header-add-service{
+	padding-top: 10px;
+	background: url(../images/service-add.png) no-repeat 8px;
+}
+.lum-admin-service-interface-list-header div{
+}
+.lum-admin-interface-list-parent-item{
+	font-weight:bold;
+	color:#9b9b9b;
+	padding:5px;
+	padding-left:32px;
+	white-space:nowrap;
+	background: url(../images/service-ico.png) no-repeat 15px;
+}
+.lum-admin-inteface-list-interface-item{
+	background: url(../images/interface-ico.png) no-repeat;
+	background-position: 5px 6px;
+	cursor: pointer;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+	height: 18px;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	padding: 3px 5px 0px 20px !important;
+	color: #ff9600;
+	white-space: nowrap;
+	display: table;
+	width: auto;
+}
+.lum-admin-inteface-list-interface-item.lum-draggable{
+	margin:0px;
+	width:auto;
+	background-color:#fff;
+	border-radius: 3px;
+	border: 1px solid #909090;
+	-webkit-box-shadow:0px 0px 5px 1px #c0c0c0;
+	box-shadow:0px 0px 5px 1px #c0c0c0;
+	cursor:move;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+}
+.lum-admin-inteface-list-interface-item:active {
+	cursor: move;
+}
+.lum-admin-is-holder{
+	margin-left:12px;
+	margin-top:5px;
+}
+.lum-admin-navigation-menu, .lum-admin-channel-tree, .lum-admin-service-interface-list{
+	bottom:0px;
+	top:62px;
+	width:100%;
+	position:absolute;
+	overflow:auto;
+	padding-bottom:80px;
+}
+.lum-admin-service-interface-list{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px !important;
+	top:180px;
+	background-color:#fff;
+	border: 1px solid #e0e0e0;
+	padding-top: 10px;
+}
+.lum-admin-work-pane{
+	border:1px solid #CCC;
+	border-left:0px;
+	border-bottom:0px;
+}
+.lum-admin-work-pane-header{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	font-size:18px !important;
+	padding:12px;
+	border-bottom:1px solid #AAA;
+	box-shadow:0 0 5px #AAA !important;
+	line-height: normal;
+}
+.lum-admin-work-pane-header span{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	font-size:18px !important;
+}
+.lum-admin-work-pane-header-actions{
+	font-size:10px;
+	display:inline;
+	list-style:none;
+	right: 0px;
+	position: absolute;
+	margin: 0;
+	padding: 5px 80px 5px 10px;
+}
+.lum-admin-work-pane-header-actions li{
+	display:inline;
+	padding-left:15px;
+	padding:10px 0px 10x 15px;
+}
+.lum-admin-work-pane-header-actions li a{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	color:#909090;
+}
+.lum-admin-action-primary a{
+	font-weight:bold !important;
+}
+.lum-admin-work-pane-header.lum-admin-editing{
+	background-color: #626262;
+}
+.lum-admin-work-pane-splitter {
+	background: url(../images/barra.png) repeat-y;
+	background-position:right top;
+	background-color:#F7F7F7;
+}
+
+.lum-admin-work-pane-toggler{
+	background: url(../images/toggler-open.png) no-repeat;
+	background-position: 2px 18px;
+}
+.lum-admin-work-pane-header-page-label, .lum-admin-work-pane-header-channel-label{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	background: url(../images/page-title.png) no-repeat left;
+	color:#909090 !important;
+	padding-left:20px;
+}
+.lum-admin-work-pane-header-settings-label{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	color:#909090 !important;
+}
+.lum-admin-work-pane-header-channel-label{
+	background: url(../images/channel-title.png) no-repeat left;
+}
+.lum-admin-work-pane-header-title, .lum-admin-work-pane-header-settings-title{
+	color:#303030 !important;
+	padding-left: 5px;
+}
+.lum-admin-editing .lum-admin-work-pane-header-page-label{
+	background: url(../images/page-title-edit.png) no-repeat left;
+	color:#fff !important;
+}
+.lum-admin-editing .lum-admin-work-pane-header-title{
+	color:#FFF !important;
+}
+.lum-admin-editing .lum-admin-work-pane-header-actions li a {
+	color:#FFF;
+}
+.lum-admin-tree-expand-contract-button{
+	cursor:pointer;
+	position:absolute;
+	padding-top:2px;
+}
+.lum-admin-tree-item{
+	padding:4px 0px 4px 20px;
+}
+.lum-admin-tree-item-selected{
+	background-color:#fcf1df;
+	color:#ff9600;
+}
+.lum-admin-tree-text{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	font-size: 12px !important;
+	color:#909090 !important;
+	padding-left:30px;
+	padding-right:25px;
+	cursor:pointer;
+	display:inline-block;
+	border: 0px !important;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-text{
+	font-weight:bold !important;
+	color:#ff9600 !important;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-text:after{
+	content: '';
+	background-image: url(../../../portalstudio/client/images/tree/arrow-selected.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 10px 4px;
+	height: 11px;
+	width: 16px;
+}
+.lum-admin-tree-website{
+	font-weight:bold !important;
+	background:url(../../../portalstudio/client/images/tree/website.png) no-repeat 13px 2px;
+	margin-left:2px;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-website{
+	background:url(../../../portalstudio/client/images/tree/website_selected.png) no-repeat 13px 2px;
+}
+.lum-admin-tree-page{
+	background:url(../../../portalstudio/client/images/tree/page.png) no-repeat 13px 2px;
+	margin-left:2px;
+	font-weight:normal;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-page{
+	background:url(../../../portalstudio/client/images/tree/page_selected.png) no-repeat 13px 2px;
+}
+.lum-admin-tree-page-template{
+	background:url(../../../portalstudio/client/images/tree/page-template.png) no-repeat 13px top;
+	margin-left:0px;
+	font-weight: normal;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-page-template{
+	background:url(../../../portalstudio/client/images/tree/page-template-selected.png) no-repeat 13px top;
+}
+.lum-admin-tree-channel{
+	font-weight:bold !important;
+	background:url(../../../portalstudio/client/images/tree/channel.png) no-repeat 13px 2px;
+	margin-left:2px;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-channel{
+	background:url(../../../portalstudio/client/images/tree/channel_selected.png) no-repeat 13px 2px;
+}
+.lum-admin-tree-channel-template{
+	font-weight:bold !important;
+	background:url(../../../portalstudio/client/images/tree/channel-template.png) no-repeat 13px top;
+}
+.lum-admin-tree-item-selected .lum-admin-tree-channel-template{
+	background:url(../../../portalstudio/client/images/tree/channel-template-selected.png) no-repeat 13px top;
+}
+
+.lum-admin-page-view-menu {
+	position: absolute;
+	right: 6px;
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+	list-style-type: none;
+	background-color: #FFF;
+	border-radius: 3px;
+	max-width:260px;
+	border: 1px solid #dfdfdf;
+	top: 89px;
+	z-index:2;
+	display:none;
+}
+.lum-admin-page-view-menu li {
+	font-size: 12px;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	cursor: pointer;
+}
+
+.lum-admin-page-view-menu li:hover {
+	background-color: #f4f4f4;
+}
+.lum-admin-page-view-menu li a{
+	color:#909090;
+	font-weight:normal;
+	padding: 10px 12px;
+	padding-left:35px;
+	display:block;
+}
+.lum-admin-page-view-menu li a:hover{
+	color:#909090;
+	text-decoration: none;
+}
+.lum-admin-switch-page-view{
+	border:1px solid #fff;
+	position:absolute;
+	right:5px;
+	padding: 0px 22px 0px 5px;
+	cursor: pointer;
+	height:25px;
+}
+.lum-admin-editing .lum-admin-switch-page-view{
+	border-color: #626262;
+}
+.lum-admin-switch-page-view:hover {
+border-color: #dfdfdf;
+}
+.lum-admin-editing .lum-admin-switch-page-view:hover{
+	border-color: #fff;
+}
+.lum-admin-switch-page-view:after {
+	content: '';
+	height: 25px;
+	display: inline-block;
+	background: url(../../../portalstudio/client/images/item-arrow-down.png) no-repeat center;
+	position: relative;
+	padding-right: 10px;
+}
+.lum-admin-editing .lum-admin-switch-page-view:after {
+	content: '';
+	background: url(../../../portalstudio/client/images/item-arrow-down-edit.png) no-repeat center;
+	position: relative;
+	padding-right: 10px;
+}
+.lum-admin-page-layout-view{
+	background:url(../../../portalstudio/client/images/layout-visualization-ico.png) no-repeat 18px center;
+}
+.lum-admin-page-grid-view{
+	background:url(../../../portalstudio/client/images/grid-visualization-ico.png) no-repeat 18px center;
+}
+.lum-admin-page-structure-view{
+	background:url(../../../portalstudio/client/images/structure-visualization-ico.png) no-repeat 18px center;
+}
+.lum-admin-editing .lum-admin-page-layout-view{
+	background:url(../../../portalstudio/client/images/layout-visualization-editing-ico.png) no-repeat 18px center;
+}
+.lum-admin-editing .lum-admin-page-grid-view{
+	background:url(../../../portalstudio/client/images/grid-visualization-editing-ico.png) no-repeat 18px center;
+}
+.lum-admin-editing .lum-admin-page-structure-view{
+	background:url(../../../portalstudio/client/images/structure-visualization-editing-ico.png) no-repeat 18px center;
+}
+.lum-admin-switch-page-view.lum-admin-selected{
+	border-color:#dfdfdf;
+}
+.lum-admin-switch-page-view img{
+	padding-left:32px !important;
+}
+.lum-admin-preview-layout{
+	background:url(../../../portalstudio/client/images/layout-visualization-ico.png) no-repeat 10px center;
+	padding:10px 0 10px 23px;
+}
+.lum-admin-grid-layout{
+	background:url(../../../portalstudio/client/images/grid-visualization-ico.png) no-repeat 10px center;
+	padding:10px 0 10px 23px;
+}
+.lum-admin-structure-layout{
+	background:url(../../../portalstudio/client/images/structure-visualization-ico.png) no-repeat 10px center;
+	padding:10px 0 10px 23px;
+}
+.lum-admin-switch-channel-admin{
+	border:1px solid #fff;
+	position:absolute;
+	color: #909090;
+	font-weight: bold;
+	right:5px;
+	padding:5px 20px 5px 7px;
+	cursor: pointer;
+}
+span.lum-admin-switch-channel-admin{
+	font-size:12px !important;
+}
+.lum-admin-switch-channel-admin:hover, .lum-admin-switch-channel-admin.lum-admin-selected {
+	border-color: #dfdfdf;
+}
+.lum-admin-switch-channel-admin:after {
+	content:url(../../../portalstudio/client/images/item-arrow-down.png);
+	position: absolute;
+	padding-left:4px;
+}
+.lum-admin-channel-admin-menu {
+	position: absolute;
+	right: 6px;
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+	list-style-type: none;
+	background-color: #FFF;
+	border-radius: 3px;
+	max-width:260px;
+	border: 1px solid #dfdfdf;
+	top: 89px;
+	z-index:2;
+	display:none;
+}
+.lum-admin-channel-admin-menu li {
+	font-size: 12px;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+.lum-admin-channel-admin-menu li:hover {
+	background-color: #f4f4f4;
+}
+.lum-admin-channel-admin-menu li a{
+	font-size: 12px !important;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	color:#909090;
+	font-weight:normal;
+	padding: 10px 12px;
+	display:block;
+}
+.lum-admin--channel-admin-menu li a:hover{
+	color:#909090;
+	text-decoration: none;
+}
+#LumisAdminWorkPaneBody, #LumisAdminWorkPaneFooter {
+overflow: auto !important;
+border: 3px solid #e3e3e3;
+}
+.lum-admin-interface-header-current-channel{
+	background-color:#626262;
+	color:#fff;
+	padding:7px;
+	margin: 10px;
+	margin-bottom:5px;
+	border-radius: 3px;
+}
+.lum-admin-channel-name-and-path{
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+.lum-admin-interface-header-current-channel .lum-admin-channel-name{
+	font-weight:bold;
+	white-space:nowrap;
+}
+.lum-admin-interface-header-current-channel .lum-admin-channel-path{
+	white-space:nowrap;
+}
+.lum-admin-page-holder-highlight{
+	border: 1px dashed #ff9600;
+	z-index: 1000;
+	position: absolute;
+	overflow: hidden;
+}
+.lum-admin-page-holder-highlight.lum-admin-page-has-parent-template,.lum-admin-page-holder-highlight-content.lum-admin-page-has-parent-template{
+	opacity:0;
+}
+.lum-admin-page-holder-highlight-content{
+	background-color:#fff0cc;
+	opacity: 0.5;
+	z-index:1000;
+}
+.lum-page-layout-holder{
+	border: 1px dashed #ff9600;
+	margin:-1px;
+	background-color:#fff0cc;
+	opacity: 0.5;
+}
+.lum-admin-drag-drop-highlight{
+	z-Index:10007;
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	height:20px;
+}
+.lum-admin-drop-interface-above{
+	border:3px dashed #ff9600;
+	background:url(../images/drop-above.png) no-repeat center center;
+	background-color:#fef1d1;
+	margin:2px;
+}
+.lum-admin-drop-interface-below{
+	border:3px dashed #ff9600;
+	background:url(../images/drop-below.png) no-repeat center center;
+	background-color:#fef1d1;
+	margin:2px;
+}
+.lum-admin-drop-interface-right{
+	border:3px dashed #ff9600;
+	background:url(../images/drop-right.png) no-repeat center center;
+	background-color:#fef1d1;
+	margin:2px;
+}
+.lum-admin-drop-interface-left{
+	border:3px dashed #ff9600;
+	background:url(../images/drop-left.png) no-repeat center center;
+	background-color:#fef1d1;
+	margin:2px;
+}
+.lum-admin-interface-highlight-title{
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	font-size: 12px !important;
+	font-weight:bold;
+	position:absolute;
+	color:#fff;
+	height:14px;
+	padding: 5px 0px 5px 5px;
+	overflow:hidden;
+	background-color:#ffa019;
+	z-Index:10002;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	box-sizing: content-box;
+}
+.lum-admin-interface-highlight-title.lum-admin-interface-from-template{
+	background-color:#9c9c9c;
+}
+.lum-admin-interface-highlight-title.lum-admin-interface-from-template.lum-admin-interface-holder{
+	display:none;
+}
+.lum-admin-interface-delete-button{
+    cursor:pointer;
+	margin:2px 10px;
+	padding-left:5px;
+	border-left:1px solid #fff;
+	float:right;
+}
+.lum-admin-interface-highlight-content{
+	z-Index:10002;
+	background-color:#fdf0d0;
+	opacity:0.25;
+}
+.lumis-admin-no-interfaces-message{
+	margin: 10px;
+	display:none;
+}
+.lum-admin-interface-highlight-selected{
+	border:3px dashed #ff9600;
+	margin:-5px;
+	padding:1px;
+}
+.lum-admin-context-menu{
+	margin: 0px;
+	width: auto;
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0px 0px 5px 1px #ccc;
+	box-shadow: 0px 0px 5px 1px #ccc;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+	font-size: 12px !important;
+	min-width: 200px;
+	white-space: nowrap;
+}
+.lum-admin-context-menu-title {
+	background: url(../images/service-context-menu.png) no-repeat 15px;
+	background-color: #464646;
+	color: #FFF;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 8px 15px 9px;
+	text-indent: 20px;
+	font-size: 14px !important;
+}
+
+.lum-admin-context-menu-service-title {
+	background-image: url(../images/service-context-menu.png);
+}
+.lum-admin-context-menu-page-title {
+	background-image: url(../images/page-context-menu.png);
+}
+.lum-admin-context-menu-channel-title {
+	background-image: url(../images/channel-context-menu.png);
+}
+.lum-admin-context-menu-page-template-title {
+	background-image: url(../images/page-template-context-menu.png);
+}
+.lum-admin-context-menu-channel-template-title {
+	background-image: url(../images/channel-template-context-menu.png);
+}
+.lum-admin-context-menu-item{
+	cursor: pointer;
+	color: #6f6f6f !important;
+	padding: 8px 15px;
+	/*border-bottom: 1px solid #e4e4e4;*/
+}
+.lum-admin-context-menu-item-disabled{
+	color:#DDD;
+}
+.lum-admin-context-menu-item:hover{
+	background-color:#f4f4f4;
+}
+.lum-admin-context-menu-separator{
+	border-bottom:1px solid #e4e4e4;
+}
+.lum-admin-interface-title {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 20px 0px 15px 5px;
+	color: #464646;
+	letter-spacing: 0;
+}
+.lum-admin-interface-title-breadcrumb{
+	color:#9e2e2e;
+	font-size:11px;
+	letter-spacing:normal;
+	line-height:normal;
+	font-weight:normal;
+	display:block;
+}
+.lum-admin-interface-title-breadcrumb:after{
+	content:' \00BB ';
+	vertical-align: top;
+}
+.fancybox-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	display: none;
+	z-index: 1001;
+}
+#fancybox-overlay {
+	z-index: 50000 !important;
+	background-color: #fff !important;
+	opacity: 0.8 !important;
+}
+#fancybox-wrap {
+	z-index: 50001 !important;
+	border-radius: 6px;
+	padding: 0px;
+}
+#fancybox-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	border: 0px solid #fff;
+	border-radius: 6px;
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.3);
+}
+.lum-administration-activate-block{
+	background-color:#CCC !important;
+	opacity:0.5 !important;
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 204, 83, 0.75);
+	-moz-box-shadow:    inset 0px 0px 0px 3px rgba(255, 204, 83, 0.75);
+	box-shadow:         inset 0px 0px 0px 3px rgba(255, 204, 83, 0.75);
+}

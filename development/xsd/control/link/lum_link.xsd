@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 15102 $ $Date: 2013-01-31 15:07:50 -0200 (Thu, 31 Jan 2013) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_link"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_link"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_link">
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:sequence>
+					<xsd:element name="hyperLink" type="hyperLink" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Used when the link is to an interface in the portal.  Requests the portal for a url given an interfaceId.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="addParameters" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence maxOccurs="unbounded">
+								<xsd:element name="parameter">
+									<xsd:complexType>
+										<xsd:attribute name="name" type="xsd:string" />
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						The text value that will be displayed to the end user.  This value may be set either as an attribute or a node.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="href" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						The link for this control may be explicitly placed in this attribute.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="anchor" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+						If specified, this anchor will be placed after the calculated link with a # before it. i.e. link#anchor
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="subtype" use="optional" default="">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Indicates the subtype of this link. Must be one of:
+							<ul>
+								<li>(none): if no subtype is provided, it will be considered as a normal link.</li>
+								<li>forward-link: it is considered a forward link.</li>
+								<li>back-link: it is considered a back link.</li>
+							</ul>
+							]]>
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="">
+								<xsd:annotation>
+									<xsd:documentation>
+										This is a normal link.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:enumeration>
+							<xsd:enumeration value="forward-link">
+								<xsd:annotation>
+									<xsd:documentation>
+										This is a forward link.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:enumeration>
+							<xsd:enumeration value="back-link">
+								<xsd:annotation>
+									<xsd:documentation>
+										This is a back link.
+									</xsd:documentation>
+								</xsd:annotation>
+							</xsd:enumeration>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="addLinkParameters">
+	</xsd:complexType>
+
+</xsd:schema>

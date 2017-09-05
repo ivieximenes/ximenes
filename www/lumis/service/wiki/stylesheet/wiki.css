@@ -1,0 +1,10 @@
+/* $Revision: 15557 $ $Date: 2013-07-05 18:39:29 -0300 (Fri, 05 Jul 2013) $ */
+
+.lumis-service-wiki-viewArticle .lum-header {
+	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 10px;
+}
+
+.lumis-service-wiki-linkArticle .lum-property-page-content > .lum-actions {
+	margin-top: 5px;
+}

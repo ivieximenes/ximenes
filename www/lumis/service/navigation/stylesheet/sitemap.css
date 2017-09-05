@@ -1,0 +1,35 @@
+/* $Revision: 15370 $ $Date: 2013-05-22 15:55:57 -0300 (Wed, 22 May 2013) $ */
+
+.lum-navigation-sitemap ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.lum-navigation-sitemap .lum-content-body > ul > li {
+	width:170px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;   
+	box-sizing:border-box; 
+	padding:12px 14px;
+	display:inline-block;
+	vertical-align:top;
+}
+.lum-navigation-sitemap ul ul {
+	display:block;
+	padding-left:12px;
+}
+.lum-navigation-sitemap ul a,
+.lum-navigation-sitemap ul span {
+	display:block;
+	padding:4px 0;
+	font-weight:bold;
+}
+.lum-navigation-sitemap ul span {
+	color:#919191;
+	cursor:default;
+}
+.lum-navigation-sitemap ul ul a,
+.lum-navigation-sitemap ul ul span {
+	padding:3px 0;
+	font-weight:normal;
+}

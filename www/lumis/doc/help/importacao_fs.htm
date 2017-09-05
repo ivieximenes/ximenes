@@ -1,0 +1,148 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Importação de Sistema de Arquivos</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?importacao_fs.htm"; }
+  else { parent.quicksync('a5.6.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Importação de Sistema de Arquivos</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="exportacao_fs.htm">Previous</a>&nbsp;
+     <a href="expimp_observacoes_gerais.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Esta opção permite que estruturas de canais (com páginas; instâncias de serviços; grupos locais; e controle de acesso) sejam importados de um sistema de arquivos do servidor de aplicação.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table width="564" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="114" style="width:114px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="469" style="width:469px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>A exportação/importação deve ser realizada entre ambientes com a mesma versão;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Esta operação utiliza o identificador amigável de canais, páginas e instâncias de serviço para identificá-los no sistema de arquivos. O canal que sofreu right-click para ser importado e seus ancestrais precisam estar com os mesmos identificadores amigáveis que os respectivos elementos no sistema de arquivos. Caso contrário a importação não poderá ser efetuada;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Para mais observações, veja <a href="expimp_observacoes_gerais.htm">Observações Gerais</a>.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Por padrão, a importação de sistema de arquivos lê arquivos armazenados em <span style="font-style: italic;">lumisdata/structure/default</span>. Este caminho pode ser alterado com a propriedade de sistema <span class="f_CodeExample">lumis.portal.structure.sync.default.path</span>. Esta propriedade também impacta a escrita dos arquivos na <a href="exportacao_fs.htm">Exportação em sistema de arquivos</a>.</p>
+<p>&nbsp;</p>
+<p>A importação tenta igualar a estrutura destino de acordo com o que foi gerado pela <a href="exportacao_fs.htm">exportação em sistema de arquivos</a>, adicionando, atualizando e removendo elementos no processo. A importação sempre mantém os identificadores conhecidos. Nem todos os elementos têm seus identificadores exportados. Identificadores de elementos importantes (canais, páginas, instâncias de serviço, instâncias de interface, grupos, estilos) são exportados. Outros identificadores não são exportados e são gerados novos identificadores durante a importação.</p>
+<p>&nbsp;</p>
+<p>O preenchimento de quais os membros dos grupos locais sendo importados é tratado de forma diferenciada, conforme as regras abaixo:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se o grupo local está sendo adicionado pela importação:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>Os membros originais que sejam grupos locais serão incluídos como membros do grupo local sendo adicionado. Se o grupo correspondente a tal membro não existir no destino, ocorrerá erro na importação.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>Os membros originais que sejam grupos globais serão incluídos como membros do grupo local sendo adicionado, caso o membro exista no destino. Se o grupo correspondente a tal membro não existir no destino, ele será ignorado e a importação continuará normalmente.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Se o grupo local está sendo atualizado pela importação:</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>Membros que sejam grupos locais serão igualados com a origem. Ou seja, membros que sejam grupos locais não presentes como membro na origem deixarão de ser membros, e membros que sejam grupos locais na origem que não são membros no destino passarão a ser membros (se o grupo local correspondente ao membro não exisitir, ocorrerá erro na importação).</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>Membros que não sejam grupos locais não serão afetados. Ou seja, não será removido nenhum membro que seja grupo global, usuário local ou usuário global; e também não será adicionado nenhum membro que seja grupo global usuário local ou usuário global.</td></tr></table></div><p>&nbsp;</p>
+<p>Este processo de importação não gera todos os eventos que uma operação normal de alteração de estrutura geraria. Caso a solução possua alguma customização que dependa de tais eventos, pode ser necessário avaliar se há necessidade de ajustes manuais após a importação.</p>
+<p style="margin: 14px 0px 0px 0px;">Em continuação ao cenário anterior (na seção <a href="exportacao_fs.htm">Exportação em sistema de arquivos</a>), deseja-se importar &nbsp;a estrutura “Agenda de Eventos”, abaixo do canal "Portal". Para isso, com <span style="font-style: italic;">right-click</span> no canal destino (“Portal”), seleciona-se a opção <span style="font-style: italic;">Importar</span>. Em seguida, será apresentada uma tela de seleção da origem da importação. Nela, selecione a opção "Estrutura" e clique em "OK".</p>
+<p style="text-align: center; margin: 0px 0px 0px 1px;"><img src="portalstudio282.jpeg" width="900" height="605" border="0" alt="portalStudio282" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após essa etapa, será apresentada uma nova tela de seleção de elementos a serem importados, como a seguir:</p>
+<p style="text-align: center;"><img src="portalstudio283.jpg" width="911" height="609" border="0" alt="portalStudio283" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Nessa tela, na árvore de elementos, os seguintes ícones podem aparecer:</p>
+<p><span style="width:48px">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" width="60%" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="50" style="width:50px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><span style="font-weight: bold;">Ícone</span></p>
+</td>
+<td valign="top" width="599" style="width:599px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><span style="font-weight: bold;">Descrição</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="50" style="width:50px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><img src="portalstudio290.zoom130.png" width="22" height="23" border="0" alt="portalStudio290" style="margin:0 auto;margin:0px;"></p>
+</td>
+<td valign="middle" width="599" style="width:599px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;">Canal</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="50" style="width:50px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><img src="portalstudio291.zoom170.png" width="19" height="19" border="0" alt="portalStudio291" style="margin:0 auto;margin:0px;"></p>
+</td>
+<td valign="middle" width="599" style="width:599px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;">Propriedades do canal</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="50" style="width:50px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><img src="portalstudio292.zoom200.png" width="20" height="20" border="0" alt="portalStudio292" style="margin:0 auto;margin:0px;"></p>
+</td>
+<td valign="middle" width="599" style="width:599px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;">Instância de serviço</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="50" style="width:50px;"><p style="text-align: center; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;"><img src="portalstudio293.zoom120.png" width="20" height="22" border="0" alt="portalStudio293" style="margin:0 auto;margin:0px;"></p>
+</td>
+<td valign="middle" width="599" style="width:599px;"><p style="text-align: left; border-color: #000000; border-style: solid; border-width: 1px; padding: 6px 6px 6px 6px; margin: -6px -6px -6px -6px;">Página</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"><table align="center" width="564" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="114" style="width:114px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="469" style="width:469px; border: solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" style="border: solid 1px #000000;"><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="35"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>Nessa árvore os elementos são representados pelos seus identificadores amigáveis.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="35"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>Um canal pode ser importado sem suas propriedades. Por exemplo, é possível importar uma página de um canal sem importar as propriedades desse canal.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="35"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>Todos os elementos filhos de um canal sendo importado que não existam na estrutura no sistema de arquivos sendo importada serão removidos.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="35"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Elementos globais (estilos públicos e compartilhados, tipos de transformações) sempre serão sincronizados (removendo os não mais existentes e adicionando ou atualizando os demais), não havendo opção para não importá-los.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Permite selecionar quais elementos serão importados. Após selecionados os elementos que serão importados e clicado em "OK", será apresentada uma tela de progresso da operação:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portalstudio288.jpg" width="910" height="609" border="0" alt="portalStudio288" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+<p>Após o término, será apresentada uma tela de confirmação:</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portalstudio289.jpg" width="911" height="610" border="0" alt="portalStudio289" style="margin:0 auto;margin:0px;"></p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

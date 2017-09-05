@@ -1,0 +1,82 @@
+/* $Revision: 15907 $ $Date: 2013-10-07 17:41:01 -0300 (Mon, 07 Oct 2013) $ */
+
+/*chatroom and moderated chatroom - messages area*/
+.lum-collaboration-chat-msg-list.lum-msg-list {
+	height:280px;
+	overflow:auto;
+	padding:0 15px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box; 
+	border:1px solid #a8a8a8;
+	border-radius:3px;
+	background:#f7f7f7;
+	font-size:12px;
+}
+.lum-collaboration-chat-msg-list .lum-msg-info {
+	display:block;
+	margin:0;
+}
+.lum-collaboration-chat-msg-list .lum-msg-user {
+	font-weight:bold;
+	display:inline;
+}
+.lum-collaboration-chat-msg-list .lum-msg-user:after {
+	content:":";
+}
+.lum-collaboration-chat-msg-list .lum-msg-text {
+	display:inline;
+	line-height:1.5em;
+	margin-left:4px;
+}
+.lum-collaboration-chat-msg-list .lum-msg-system .lum-msg-text {
+	font-style:italic;
+}
+.lum-collaboration-chat-msg-list .lum-msg-private .lum-msg-user {
+	color: #FFFFFF;
+	border-radius: 2px;
+	background-color: #494949;
+}
+.lum-collaboration-chat-msg-list .lum-list-item.lum-last:after {
+	margin-bottom:40px;
+}
+
+/*moderation actions*/
+.lum-collaboration-chat-msg-list .lum-list-item .lum-actions {
+	font-weight:normal;
+	display:block;
+	text-transform:lowercase;
+}
+.lum-collaboration-chat-msg-list .lum-list-item .lum-actions a {
+	font-weight:normal;
+}
+.lum-collaboration-chat-msg-list .lum-list-item .lum-actions li:after {
+	content:"|";
+	padding-left:5px;
+}
+.lum-collaboration-chat-msg-list .lum-list-item .lum-actions li.lum-last:after {
+	content:none;
+}
+
+/*chat message form*/
+.lum-collaboration-chat-form .lum-form-field-id-sayTo,
+.lum-collaboration-chat-form .lum-form-field-id-sayTo .lum-form-field-value,
+.lum-collaboration-chat-form .lum-form-field-id-sayPrivately,
+.lum-collaboration-chat-form .lum-form-field-id-sayPrivately .lum-form-field-value {
+	display:inline;
+}
+.lum-collaboration-chat-form .lum-form-field-id-sayPrivately {
+	margin-left:10px;
+}
+.lum-collaboration-chat-form .lum-actions {
+	float:right;
+}
+/*chat message form - for moderated chatroom*/
+.lum-collaboration-chat-form {
+	position:relative;
+}
+.lum-collaboration-chat-form .lum-form-field-id-automaticApproval {
+	position:absolute;
+	right:0;
+	margin:0;
+}

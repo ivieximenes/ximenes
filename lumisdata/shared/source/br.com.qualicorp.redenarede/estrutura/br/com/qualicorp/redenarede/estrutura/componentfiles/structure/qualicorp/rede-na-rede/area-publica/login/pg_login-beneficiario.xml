@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>2C96A66853B531AE0154B9BB93B47C33</id>
+  <name>Login Beneficiário</name>
+  <hidden>true</hidden>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout><holder id="menu"><interface id="2C96A66853B531AE0154B9BB94777C4F"/><interface id="2C96A66853B531AE0154B9BB948C7C50"/></holder><holder id="busca"><interface id="2C96A66853B531AE0154B9BB948F7C51"/></holder><holder id="conteudo"><interface id="2C96A66853B531AE0154B9BB94927C52"/><interface id="2C96A66853B531AE0154B9BF63CC7DFD"/></holder></layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BB94777C4F</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BB948C7C50</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BB948F7C51</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BB94927C52</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <applied-interface-style-id>loginBeneficiario</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9BF63CC7DFD</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851334</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.useraccount.ancora</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

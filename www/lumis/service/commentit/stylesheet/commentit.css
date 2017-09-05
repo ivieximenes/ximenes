@@ -1,0 +1,82 @@
+/* $Revision: 16954 $ $Date: 2015-02-13 16:43:26 -0200 (Fri, 13 Feb 2015) $ */
+.lum-commentit-header{
+	
+}
+.lum-commentit-comments-counter{
+	text-align: center;
+	color: #999;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.lum-commentit-block{
+	background-color: #EEE;
+	margin-top: 10px;
+}
+.lum-commentit-comments-block{
+	
+}
+.lum-commentit-show-more-comments{
+	padding: 10px;
+	display: block;
+	border-bottom: 1px solid #f5f5f5;
+}
+.lum-commentit-users-comments-block{
+	
+}
+.lum-commentit-comment{
+	padding: 10px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.lum-commentit-comment-header{
+	position:relative;
+	padding-bottom:15px;
+	height: 15px;
+	display: block;
+}
+.lum-commentit-user-image {
+	padding-right: 5px;
+}
+.lum-commentit-user-image img {
+	border-radius:3px;
+	width:20px;
+	border:1px solid #AAA;
+}
+.lum-commentit-comment-information{
+	color: #999;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	height: 15px;
+}
+.lum-commentit-comment-delete{
+	color: #ba2a2a;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: none;
+	height: 15px;
+	position:relative;
+}
+.lum-commentit-comment-delete:before{
+	content:"|";
+	color: #999;
+	font-size: 12px;
+	text-decoration: none;
+	margin: 0 10px;
+	display: inline-block;
+	height: 15px;
+	position:relative;
+	bottom: 1px;
+}
+.lum-commentit-comment:hover .lum-commentit-comment-delete {
+	display: inline-block;
+}
+.lum-commentit-comment-input-wrapper{
+	padding: 10px;
+}
+.lum-commentit-comment-input{
+	height:25px;
+	width:100%;
+	resize: none;
+	margin-top:5px;
+	overflow: hidden;
+}

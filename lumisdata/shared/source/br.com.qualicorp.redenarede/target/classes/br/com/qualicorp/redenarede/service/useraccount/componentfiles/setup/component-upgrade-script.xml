@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16582 $ $Date: 2014-11-07 11:18:31 -0200 (Fri, 07 Nov 2014) $ -->
+<component-upgrade xmlns="http://www.lumis.com.br/lumisportal/xsd/component-upgrade-script" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<run-sql step="1">
+		<sql>ALTER TABLE QC_BENEFICIARIO  ADD estipulante varchar2(250)</sql>
+	</run-sql>
+	
+	<run-sql step="2">
+		<sql>ALTER TABLE QC_BENEFICIARIO  ADD plano varchar2(250)</sql>
+	</run-sql>
+	
+	<run-sql step="3">
+		<sql>ALTER TABLE QC_BENEFICIARIO  MODIFY (RG NULL)</sql>
+	</run-sql>
+	
+	<run-sql step="4">
+		<sql>ALTER TABLE QC_BENEFICIARIO  MODIFY (ORGAO_EMISSOR NULL)</sql>
+	</run-sql>
+	
+	<run-sql step="5">
+		<sql>ALTER TABLE QC_BENEFICIARIO ADD CONSTRAINT QC_BENEFICIARIO_USERID_UNIQ UNIQUE ( USER_ID )</sql>
+	</run-sql>
+	
+	<run-sql step="6">
+		<sql>ALTER TABLE QC_BENEFICIARIO ADD CONSTRAINT QC_BENEFICIARIO_CARTEIRA_UNIQ UNIQUE ( NUMERO_CARTEIRA )</sql>
+	</run-sql>
+	
+	<run-sql step="7">
+		<sql>ALTER TABLE QC_BENEFICIARIO  ADD plano varchar2(250)</sql>
+	</run-sql>
+	
+	<run-sql step="8">
+		<sql>ALTER TABLE QC_BENEFICIARIO  MODIFY (cpf NULL)</sql>
+	</run-sql>
+	
+	<run-sql step="9">
+		<message>Hack ok!</message>
+	</run-sql>
+	
+	<run-sql step="10">
+		<message>Hack ok!</message>
+	</run-sql>
+	
+	<run-sql step="11">
+		<sql>ALTER TABLE QC_BENEFICIARIO ADD data_alteracao DATE</sql>
+	</run-sql>
+</component-upgrade>

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Customização do XSL</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?xslcustomizacao.htm"; }
+  else { parent.quicksync('a8.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Customização do XSL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="contentconfiguracaotrasicaoestados.htm">Previous</a>&nbsp;
+     <a href="xslcontroles.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal</span> utiliza o <span style="font-style: italic;">XSL</span> para transformar <span style="font-style: italic;">XML</span> no <span style="font-style: italic;">HTML</span> que deverá ser exibido pelo <span style="font-style: italic;">browser.</span></p>
+<p style="margin: 8px 0px 0px 0px;">Enquanto o <span style="font-style: italic;">XML</span> tem como principal preocupação a representação semântica do conteúdo, é necessário ainda definir o formato que este conteúdo é exibido. Então o <span style="font-style: italic;">XSL</span> foi definido com a finalidade de transformar documentos <span style="font-style: italic;">XML</span> em outro documento. Por exemplo, um documento <span style="font-style: italic;">XSL</span> pode ser utilizado para transformar um <span style="font-style: italic;">XML</span> em um <span style="font-style: italic;">HTML</span> permitindo a exibição do conteúdo em qualquer interpretador de <span style="font-style: italic;">HTML</span>. No exemplo, veja o exemplo abaixo:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 141px;"><table width="300" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-family: 'Courier New';">&lt;turma&gt;Treinamento Lumis&lt;/turma&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Courier New';">&lt;instrutor&gt;Marcelo&lt;/instrutor&gt;</span></p>
+<p style="text-align: left;"><span style="font-family: 'Courier New';">&lt;data&gt;01/08/2007 às 08:00 hs&lt;/data&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 8px 245px;"> &nbsp; +</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 106px;"><table width="360" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h1&gt;&lt;xsl:value-of&nbsp;select="turma"&nbsp;/&gt;&lt;/h1&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h2&gt;&lt;xsl:value-of&nbsp;select="instrutor"&nbsp;/&gt;&lt;/h2&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h3&gt;&lt;xsl:value-of&nbsp;select="data"&nbsp;/&gt;&lt;/h3&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 8px 245px;"> &nbsp; =</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 141px;"><table width="271" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h1&gt;Treinamento&nbsp;Lumis&lt;/h1&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h2&gt;Marcelo&lt;/h2&gt;</span></p>
+<p style="white-space: nowrap;"><span style="font-family: 'Courier New';">&lt;h3&gt;01/08/2007&nbsp;às&nbsp;08:00&nbsp;hs&lt;/h3&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">Com base nas informações acima, esta seção tem o objetivo de informar como customizar interfaces através de código <span style="font-style: italic;">XSL</span>. Isso significa que é possível que as interfaces não adotem o <span style="font-style: italic;">XSL</span> padrão e sim os customizados. A atribuição de arquivos <span style="font-style: italic;">XSL</span> pode ser visto na seção sobre <a href="customizacaoinstanciainterfaceservico.htm">Customização de Instância de Interface</a> .</p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">Lumis Portal </span>permite a customização do estilo das interfaces através da implementação de novos arquivos <span style="font-style: italic;">XSL</span>. Customizar arquivos XSl seria tratar de forma diferentes os dados que vêm do <span style="font-style: italic;">XML.</span></p>
+<p style="margin: 8px 0px 0px 0px;">Os arquivos <span style="font-style: italic;">XSL</span> padrão do produto localizam-se no diretório <span style="font-style: italic;">lumisdata/def/lumis/service/xxxx/style</span>, onde <span style="font-style: italic;">XXXX </span>é o diretório do serviço.</p>
+<p style="margin: 8px 0px 0px 0px;">Tais arquivos podem ser acessados em um editor <span style="font-style: italic;">XSL</span>, através da opção “Estilo” no <span style="font-style: italic;">right-click</span> sobre a interface, mas não devem ser nunca editados porque são arquivos <span style="font-style: italic;">XSL </span>padrão do produto e a cada <span style="font-style: italic;">upgrade</span>, eles são sobrescritos.</p>
+<p style="margin: 8px 0px 0px 0px;">Para criar outros arquivos <span style="font-style: italic;">XSL</span> e customizar inteiramente a camada de apresentação da interface do serviço em questão (estrutura e <span style="font-style: italic;">layout</span>), adicione novos estilos e salve os arquivos <span style="font-style: italic;">XSL</span> nos diretórios <span style="font-style: italic;">lumisdata/def/yyyy/services/xxxx/style,</span> onde <span style="font-style: italic;">YYYY </span>é o diretório do projeto e <span style="font-style: italic;">XXXX </span>é o diretório do serviço.</p>
+<p style="margin: 8px 0px 0px 0px;">Ao adicionar novos arquivos <span style="font-style: italic;">XSL</span> a uma interface de serviço tem-se a opção de criar um arquivo <span style="font-style: italic;">XSL</span> em branco ou copiar do código de um arquivo padrão. Caso copie de um arquivo padrão deve-se ter o cuidado com o caminho dos <span style="font-style: italic;">&lt;xsl:import /&gt;</span> do arquivo, já que eles serão modificados.</p>
+<p style="margin: 8px 0px 0px 0px;">Quando é criado um <span style="font-style: italic;">XSL</span> em branco o produto já traz a estrutura básica montada. A partir dessa estrutura, o <span style="font-style: italic;">XSL</span> será customizado ou será montado podendo-se aproveitá-la para customizar o <span style="font-style: italic;">XSL</span> posteriormente.</p>
+<p style="margin: 8px 0px 0px 0px;">O exemplo abaixo exibe a adição de um novo arquivo <span style="font-style: italic;">XSL</span> de estilo para a interface <span style="font-style: italic;">Menu</span> do Serviço <span style="font-style: italic;">Barra de Navegação</span> com objetivo de customização da mesma.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 8px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" style="border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"&nbsp;?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;xsl:stylesheet&nbsp;xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&nbsp;version="1.0"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;xsl:template&nbsp;match="/"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;Aqui&nbsp;entra&nbsp;o&nbsp;código&nbsp;do&nbsp;estilo</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/xsl:template&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/xsl:stylesheet&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 8px 0px 0px 0px;">Foi escolhido como nome do arquivo, Vertical.xsl e o código será implementado no trecho de código <span style="font-style: italic;">XSL</span> acima, onde está “Aqui entra o código do estilo”.</p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;"><img src="xsl003.jpg" width="698" height="582" border="0" alt="xsl003" style="margin:0 auto;margin:0px;"></p>
+<p style="margin: 8px 0px 0px 0px;">No <span style="font-style: italic;">Lumis Portal</span> as informações do <span style="font-style: italic;">XML</span> são organizadas em controles. O <span style="font-style: italic;">XSL</span> utiliza as informações destes controles e uma vez customizado exibe as informações destes controles de diversas maneiras.</p>
+<p style="margin: 8px 0px 0px 0px;">Customizar interfaces do <span style="font-style: italic;">Lumis</span>, implica customizar os controles <span style="font-style: italic;">Lumis</span> que são utilizados na renderização das mesmas.</p>
+<p style="margin: 8px 0px 8px 0px;">&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Utilização</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?utilizacao.htm"; }
+  else { parent.quicksync('a6.1.16.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Utilização</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="configuracao3.htm">Previous</a>&nbsp;
+     <a href="bloqueio_de_conteudo.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O suporte REST criado oferece um conjunto de funcionalidades:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Autenticação</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Login. </span></p>
+<p style="text-align: left; margin: 7px 0px 7px 10px;">Para permitir que o usuário se autentique no portal por uma aplicação externa, foi provida uma chamada de autenticação REST conforme o formato a seguir. </p>
+<p style="text-align: left; margin: 7px 0px 7px 10px;">{protocolo}://{domínio}[:porta]/lumis/api/rest/lumlogin?username={user-name}[&amp;password=password][&amp;locale=locale]</p>
+<p style="text-align: left; text-indent: -24px; margin: 7px 0px 7px 34px;">Os exemplos a seguir são chamadas válidas para autenticação no Lumis Portal: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 34px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>http://www.lumis.com.br/lumis/api/rest/lumlogin?username=admin</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 34px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>http://www.lumis.com.br/lumis/api/rest/lumlogin?username=admin&amp;password=12345</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 34px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>http://www.lumis.com.br/lumis/api/rest/lumlogin?username=admin&amp;password=12345&amp;locale=pt_BR</td></tr></table></div><p><span style="font-weight: bold;">Logout. </span></p>
+<p style="text-align: left; margin: 7px 0px 7px 10px;">Esta chamada deve encerrar a sessão do usuário no portal. </p>
+<p style="text-align: left; margin: 7px 0px 7px 10px;">{protocolo}://{domínio}[:porta]/lumis/api/rest/logout</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><span style="font-weight: bold;">Usuário Atual.</span></p>
+<p style="text-align: left;"> &nbsp;Afim de obter os dados do usuário atualmente logado no sistema, pode ser feita a seguinte chamada Rest:</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">  {protocolo}://{domínio}[:porta]/lumis/api/rest/lumis/authentication/users/current</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"> &nbsp;Esta, por sua vez, retorna um JSON contendo os dados públicos do usuário. Como exemplo, o usuário logado será o "admin" : </p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;">{</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp; "id":"00000000D00000000000000000000001",</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp; "login":"admin",</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp; "firstName":"Administrator",</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp; "disabled":"false",</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp; "lastLogin":{</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"iso":"2014-10-29T15:28:16.000-2:00",</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"timeInMillis":1414603696000,</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"formatted":"29/10/14 15:28"</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;"> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
+<p style="text-align: left;"><span style="font-style: italic;">   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "profileImageHref":"lumis/api/rest/lum-internal/users/00000000D00000000000000000000001/profileimage"</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span><span style="font-style: italic;">}</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Mudança de Locale</span></p>
+<p>&nbsp;</p>
+<p style="text-align: left; margin: 7px 0px 7px 0px;">Foi criada uma chamada capaz de alterar o idioma da sessão atual (guest ou autenticada). O formato básico é mostrado a seguir. </p>
+<p style="text-align: left; margin: 7px 0px 7px 0px;">{protocolo}://{domínio}[:porta]/lumis/api/rest/lumsetlocale/[locale]</p>
+<p style="text-align: left; margin: 7px 0px 7px 0px;">Exemplos: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>http://www.lumis.com.br/lumis/api/rest/lumsetlocale/pt_BR</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">o</span></td><td>http://www.lumis.com.br/lumis/api/rest/lumsetlocale/en_US</td></tr></table></div><p style="text-align: left; margin: 7px 0px 7px 0px;">Caso o ‘locale’ mencionado não seja suportado pelo portal, o idioma atual será mantido. </p>
+<p style="text-align: left;">Se o parâmetro não for especificado, o portal será retornado para o ‘locale’ padrão.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Leitura de Interface REST</span></p>
+<p>&nbsp;</p>
+<p style="text-align: left; margin: 7px 0px 7px 0px;">Foi criada uma chamada capaz de consultar as informações contidas nos sources definidos nas <span style="font-weight: bold;">interfaces REST</span>. O formato básico é mostrado a seguir. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;">{protocolo}://{domínio}[:porta]/lumis/api/rest/{nome-rest}/lumgetdata/{restinterface-name}[.returnType][parameters]</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Protocol <span style="font-family: 'Wingdings';">à</span> são aceitas conexões via http e https. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Domínio/porta <span style="font-family: 'Wingdings';">à</span> domínio e porta de conexão do website. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>nome-rest <span style="font-family: 'Wingdings';">à</span> nome REST da instância de serviço. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>restinterface-name <span style="font-family: 'Wingdings';">à</span> GUID da instância de serviço. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>restinterface-name  <span style="font-family: 'Wingdings';">à</span> nome da interface REST do serviço utilizado. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Return type <span style="font-family: 'Wingdings';">à</span> pode receber os valores ‘json’ ou ‘xml’, informando como será o retorno das informações (JSON ou XML, respectivamente – default ‘json’). </td></tr></table></div><p style="text-align: left; margin: 7px 0px 7px 47px;">Exemplos: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="http://www.lumis.com.br/api/rest/noticias/lumgetdata/lista" target="_blank" class="weblink" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista
+</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><a href="http://www.lumis.com.br/api/rest/noticias/lumgetdata/lista" target="_blank" class="weblink" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json
+</a></td></tr></table></div><p style="text-align: left; text-indent: -24px; margin: 7px 0px 7px 95px;">Os parâmetros podem ser:<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Número máximo de itens (lumMaxRows)</span></td></tr></table></div><p>&nbsp;</p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">Esse parâmetro é opcional e é utilizado como no exemplo a seguir, que traz as cinco primeiras notícias publicadas na instância de serviço chamada ‘noticias’. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="acessibilidade.htm" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json?lumMaxRows=5
+</a></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Primeiro item da lista (lumStartAt)</span></td></tr></table></div><p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">Esse parâmetro é opcional e é utilizado como no exemplo a seguir, que traz a segunda página de notícias publicadas na instância de serviço chamada ‘noticias’, considerando cinco notícias por página. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="acessibilidade.htm" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json?lumMaxRows=5&amp;lumStartAt=6
+</a></p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Ordenação (lumOrderBy)</span></td></tr></table></div><p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">Esse parâmetro é opcional e é utilizado para definir uma ordenação por um determinado campo em ordem crescente ou decrescente (ASC ou DESC respectivamente). </p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">O exemplo a seguir ordena as notícias adquiridas pelo seu titulo, de forma ascendente. </p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="acessibilidade.htm" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json?lumMaxRows=5&amp;lumStartAt=6&amp;lumOrderBy=Title</a> ASC</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 71px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="24"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Campos retornados (lumReturnFields)</span></td></tr></table></div><p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left;"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;Este parâmetro define quais campos deverão ser retornados. Por padrão, quando este parâmetro não for informado serão retornados todos os campos definidos explicitamente no source da interface REST juntamente com os campos "Chave primária do source" e o "Identificador de Conteúdo" (caso seja um serviço de conteúdo). Quando este parâmetro for informado os campos que serão retornados serão os definidos na lista de campos que devem ser separados por vírgula (","). Caso seja desejado o retorno de todos os campos basta informar "*" como valor do parâmetro <span style="font-weight: bold;">lumReturnFields.</span> </p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">O exemplo a seguir retorna os campos chave, identificador do conteúdo juntamente com os campos explícitos da interface REST.</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.lumis.com.br/api/rest/noticias/lumgetdata/lista.json?lumReturnFields=custom&lumFieldList=createdBy&lumFieldList=description" target="_blank" class="weblink" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json</a></p>
+<p><span style="width:48px">&nbsp;</span></p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">O exemplo a seguir retorna os campos descrição e quem criou o conteúdo.</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.lumis.com.br/api/rest/noticias/lumgetdata/lista.json?lumReturnFields=custom&lumFieldList=createdBy&lumFieldList=description" target="_blank" class="weblink" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json?lumReturnFields=createdBy,description</a></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="text-align: left; margin: 7px 0px 7px 72px;">O exemplo a seguir retorna todos campos do source.</p>
+<p style="text-align: left;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.lumis.com.br/api/rest/noticias/lumgetdata/lista.json?lumReturnFields=custom&lumFieldList=createdBy&lumFieldList=description" target="_blank" class="weblink" style="font-size: 10pt; font-family: 'Verdana'; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;">http://www.lumis.com.br/lumis/api/rest/noticias/lumgetdata/lista.json?lumReturnFields=*</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="654" bgcolor="#ffffff" style="width:654px; background-color:#ffffff; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="654" bgcolor="#ffffff" style="width:654px; background-color:#ffffff; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 10px;">As funcionalidade de Login, Logout e Locale só podem ser acessados via POST através dos protocolos HTTP ou HTTPS. </p>
+<p style="text-align: left; margin: 7px 0px 7px 10px;">A funcionalidade de Leitura de Interface REST pode ser acessada via GET ou POST através dos protocolos HTTP ou HTTPS.  </p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

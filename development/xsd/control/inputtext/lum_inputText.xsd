@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14864 $ $Date: 2012-10-25 17:15:42 -0200 (Thu, 25 Oct 2012) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_inputText"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_inputText"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_inputText">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="onChange" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+					<xsd:element name="onKeyUp" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+					<xsd:element name="onKeyDown" minOccurs="0" maxOccurs="unbounded" type="onClientEvent"/>
+				</xsd:sequence>
+				<xsd:attribute name="readonly" type="xsd:boolean" default="false"/>
+				<xsd:attribute name="onChange" type="xsd:string" />
+				<xsd:attribute name="isPrimaryInput" type="xsd:boolean" default="false" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<![CDATA[
+							Indicates whether the input is a primary input or not. By default, if the control's source field is a primary name field, this attribute receives the value <em>true</em>. Otherwise,
+							it receives the value <em>false</em>.
+							]]>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="lum_inputTextArea">
+		<xsd:complexContent>
+			<xsd:extension base="lum_inputText">
+				<xsd:attribute name="rows" type="xsd:integer" use="optional" default="2"/>
+				<xsd:attribute name="cols" type="xsd:integer" use="optional" default="40"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

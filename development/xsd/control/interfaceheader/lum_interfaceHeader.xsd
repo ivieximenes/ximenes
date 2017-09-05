@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 9384 $ $Date: 2008-06-04 20:53:05 -0300 (Wed, 04 Jun 2008) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_interfaceHeader"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_interfaceHeader"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_interfaceHeader">
+		<xsd:annotation>
+			<xsd:documentation>Defines an interface header control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lum_control">
+				<xsd:attribute name="title" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Defines the title of the interface header.  If not specified the title will be the title of the interface with the service instance name within parenthesis.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="icon" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If specified the icon will be placed in the header</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="setWindowText" type="xsd:boolean" use="optional" default="false">
+					<xsd:annotation>
+						<xsd:documentation>Defines whether the title set should be applied to the browser window as well.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,2359 @@
+2017-08-01 15:08:11,640 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_SERVICES_NAME' - Description: 'Added page:
+  id: LumisServices
+  name: STR_SERVICES_NAME
+  description: STR_SERVICES_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,655 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_PAGES_NAME' - Description: 'Added page:
+  id: LumisPages
+  name: STR_PAGES_NAME
+  description: STR_PAGES_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,681 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_SUBCHANNELS_NAME' - Description: 'Added page:
+  id: LumisSubChannels
+  name: STR_SUBCHANNELS_NAME
+  description: STR_SUBCHANNELS_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,695 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_PAGE_TEMPLATES_NAME' - Description: 'Added page:
+  id: LumisPageTemplates
+  name: STR_PAGE_TEMPLATES_NAME
+  description: STR_PAGE_TEMPLATES_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,712 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_CHANNEL_TEMPLATES_NAME' - Description: 'Added page:
+  id: LumisChannelTemplates
+  name: STR_CHANNEL_TEMPLATES_NAME
+  description: STR_CHANNEL_TEMPLATES_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,725 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LOCAL_GROUPS_NAME' - Description: 'Added page:
+  id: LumisLocalGroups
+  name: STR_LOCAL_GROUPS_NAME
+  description: STR_LOCAL_GROUPS_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,737 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LOCAL_USERS_NAME' - Description: 'Added page:
+  id: LumisLocalUsers
+  name: STR_LOCAL_USERS_NAME
+  description: STR_LOCAL_USERS_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,749 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_BLANK_PAGE' - Description: 'Added page:
+  id: LumisBlankPage
+  name: STR_BLANK_PAGE
+  description: STR_BLANK_PAGE_DESCRIPTION
+  channel id: null'
+2017-08-01 15:08:11,829 [] Category: Website - Type: Add Website - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added website: default' - Description: 'Added website: 
+  id: 8A488AE75D9EFBC9015D9EFBDA2B00C5
+  Name: default'
+2017-08-01 15:08:11,835 [] Category: Website - Type: Add Website Main URL - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added website main URL: localhost:8080/portal' - Description: 'Added website main URL: 
+  id: 8A488AE75D9EFBC9015D9EFBDA2D00C6
+  URL: localhost:8080/portal
+  Website: default(8A488AE75D9EFBC9015D9EFBDA2B00C5)'
+2017-08-01 15:08:11,837 [] Category: Website - Type: Add Website Main URL - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added website main URL: localhost:8443/portal' - Description: 'Added website main URL: 
+  id: 8A488AE75D9EFBC9015D9EFBDA2D00C7
+  URL: localhost:8443/portal
+  Website: default(8A488AE75D9EFBC9015D9EFBDA2B00C5)'
+2017-08-01 15:08:11,849 [] Category: Website - Type: Update Website - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated website: default' - Description: 'Updated website: 
+  id: 8A488AE75D9EFBC9015D9EFBDA2B00C5
+  Name: default'
+2017-08-01 15:09:58,820 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MANAGE_SERVICE_INSTANCES' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000000
+  interface id: lumis.service.portalmanagement.serviceinstance.administration
+  display name: STR_MANAGE_SERVICE_INSTANCES
+  page id: LumisServices
+  page name: STR_SERVICES_NAME
+  service instance id: null'
+2017-08-01 15:09:58,834 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MANAGE_PAGES' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000001
+  interface id: lumis.service.portalmanagement.page.administration
+  display name: STR_MANAGE_PAGES
+  page id: LumisPages
+  page name: STR_PAGES_NAME
+  service instance id: null'
+2017-08-01 15:09:58,847 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MANAGE_SUBCHANNELS' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000003
+  interface id: lumis.service.portalmanagement.channel.administration
+  display name: STR_MANAGE_SUBCHANNELS
+  page id: LumisSubChannels
+  page name: STR_SUBCHANNELS_NAME
+  service instance id: null'
+2017-08-01 15:09:58,862 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MANAGE_CHANNEL_TEMPLATES' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000008
+  interface id: lumis.service.portalmanagement.channeltemplate.administration
+  display name: STR_MANAGE_CHANNEL_TEMPLATES
+  page id: LumisChannelTemplates
+  page name: STR_CHANNEL_TEMPLATES_NAME
+  service instance id: null'
+2017-08-01 15:09:58,876 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MANAGE_PAGE_TEMPLATES' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000004
+  interface id: lumis.service.portalmanagement.pagetemplate.administration
+  display name: STR_MANAGE_PAGE_TEMPLATES
+  page id: LumisPageTemplates
+  page name: STR_PAGE_TEMPLATES_NAME
+  service instance id: null'
+2017-08-01 15:09:58,891 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_USER_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000006
+  interface id: lumis.service.portalmanagement.localuser.administration
+  display name: STR_USER_ADMINISTRATION
+  page id: LumisLocalUsers
+  page name: STR_LOCAL_USERS_NAME
+  service instance id: null'
+2017-08-01 15:09:58,905 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_GROUP_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 00000000000000000000000000000007
+  interface id: lumis.service.portalmanagement.localgroup.administration
+  display name: STR_GROUP_ADMINISTRATION
+  page id: LumisLocalGroups
+  page name: STR_LOCAL_GROUPS_NAME
+  service instance id: null'
+2017-08-01 15:09:59,671 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_WELCOME' - Description: 'Added page:
+  id: 1D6530765D5644709741AEAA3622D3BC
+  name: STR_WELCOME
+  description: STR_WELCOME
+  channel id: 00000000F00000000000000000000001
+  channel name: Portal'
+2017-08-01 15:10:00,464 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C6
+  name: STR_LADM
+  description: null'
+2017-08-01 15:10:00,753 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: HTML' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605C7
+  name: HTML
+  description: Permite inserir conteúdo HTML.
+  service id: lumis.service.html
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C6
+  channel name: STR_LADM'
+2017-08-01 15:10:00,950 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C6
+  name: STR_LADM
+  description: null'
+2017-08-01 15:10:01,138 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SRVCMGR_SRVS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C8
+  name: STR_LADM_SRVCMGR_SRVS
+  description: null'
+2017-08-01 15:10:01,314 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SRVCMGR_SRVS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C8
+  name: STR_LADM_SRVCMGR_SRVS
+  description: null'
+2017-08-01 15:10:01,496 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SRVCMGR' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C9
+  name: STR_LADM_SRVCMGR
+  description: null'
+2017-08-01 15:10:01,687 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: Portlet Deployment' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605CA
+  name: Portlet Deployment
+  description: Permite o deployment de portlets no portal.
+  service id: lumis.service.portalmanagement.deployment.portlet
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C9
+  channel name: STR_LADM_SRVCMGR'
+2017-08-01 15:10:01,886 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CONTENT_WIZARD' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605CB
+  name: STR_LADM_SI_CONTENT_WIZARD
+  description: Wizard de Gestão de Conteúdo.
+  service id: lumis.service.content.wizard
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C9
+  channel name: STR_LADM_SRVCMGR'
+2017-08-01 15:10:02,069 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SRVCMGR' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605CC
+  name: STR_LADM_SI_SRVCMGR
+  description: Gerenciador de Serviços
+  service id: lumis.service.portalmanagement.service
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C9
+  channel name: STR_LADM_SRVCMGR'
+2017-08-01 15:10:02,811 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SRVCMGR' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605CD
+  name: STR_LADM_SRVCMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C9
+  channel name: STR_LADM_SRVCMGR'
+2017-08-01 15:10:02,820 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFD8BC00679
+  interface id: lumis.service.portalmanagement.service.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605CD
+  page name: STR_LADM_SRVCMGR
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605CC'
+2017-08-01 15:10:03,004 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SRVCMGR' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605C9
+  name: STR_LADM_SRVCMGR
+  description: null'
+2017-08-01 15:10:03,194 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_FILEMANAGER' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605CE
+  name: STR_LADM_FILEMANAGER
+  description: null'
+2017-08-01 15:10:03,385 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_FILEMANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605CF
+  name: STR_LADM_SI_FILEMANAGER
+  description: Permite o gerenciamento sobre os arquivos armazenados no portal
+  service id: lumis.service.portalmanagement.file
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:03,581 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_FILE_MACROTYPE_MAPPING' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605D0
+  name: STR_LADM_SI_FILE_MACROTYPE_MAPPING
+  description: Permite gerenciar mapeamento de macrotipos de arquivos.
+  service id: lumis.service.portalmanagement.filemacrotypemapping
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:03,767 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_MIMETYPES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605D1
+  name: STR_LADM_SI_MIMETYPES_MANAGER
+  description: Permite acrescentar, editar e remover MIME Type de arquivos
+  service id: lumis.service.portalmanagement.filemimetype
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:04,505 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_FILEMANAGER_FILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D2
+  name: STR_LADM_FILEMANAGER_FILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:04,509 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_EXTRACT_METADATA' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFD925B0685
+  interface id: lumis.service.portalmanagement.file.popupUpdate
+  display name: STR_INTERFACE_EXTRACT_METADATA
+  page id: 8A488AE75D9EFBC9015D9EFD810605D2
+  page name: STR_LADM_FILEMANAGER_FILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605CF'
+2017-08-01 15:10:05,235 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_MIMETYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D3
+  name: STR_LADM_MIMETYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:05,239 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFD95350689
+  interface id: lumis.service.portalmanagement.filemimetype.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605D3
+  page name: STR_LADM_MIMETYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605D1'
+2017-08-01 15:10:06,008 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_FILE_MACROTYPE_MAPPING' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D4
+  name: STR_LADM_FILE_MACROTYPE_MAPPING
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:10:06,012 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFD983A068D
+  interface id: lumis.service.portalmanagement.filemacrotypemapping.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605D4
+  page name: STR_LADM_FILE_MACROTYPE_MAPPING
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605D0'
+2017-08-01 15:10:06,185 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_FILEMANAGER' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605CE
+  name: STR_LADM_FILEMANAGER
+  description: null'
+2017-08-01 15:10:06,367 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CONTEXT_MENU' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605D5
+  name: STR_LADM_CONTEXT_MENU
+  description: null'
+2017-08-01 15:10:06,560 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CONTEXT_MENU_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605D6
+  name: STR_LADM_SI_CONTEXT_MENU_MANAGER
+  description: Permitir registrar, atualizar e remover tipos de itens e grupos de itens de menu de serviço.
+  service id: lumis.service.portalmanagement.servicemenutype
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D5
+  channel name: STR_LADM_CONTEXT_MENU'
+2017-08-01 15:10:07,303 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_MENU_TYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D7
+  name: STR_LADM_MENU_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D5
+  channel name: STR_LADM_CONTEXT_MENU'
+2017-08-01 15:10:07,307 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMIN_ITEM_TYPES' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFD9D490695
+  interface id: lumis.service.portalmanagement.servicemenutype.administration
+  display name: STR_ADMIN_ITEM_TYPES
+  page id: 8A488AE75D9EFBC9015D9EFD810605D7
+  page name: STR_LADM_MENU_TYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605D6'
+2017-08-01 15:10:08,047 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_MENU_GROUP_TYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D8
+  name: STR_LADM_MENU_GROUP_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D5
+  channel name: STR_LADM_CONTEXT_MENU'
+2017-08-01 15:10:08,051 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMIN_GROUP_TYPES' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDA0310699
+  interface id: lumis.service.portalmanagement.servicemenutype.adminGroupTypes
+  display name: STR_ADMIN_GROUP_TYPES
+  page id: 8A488AE75D9EFBC9015D9EFD810605D8
+  page name: STR_LADM_MENU_GROUP_TYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605D6'
+2017-08-01 15:10:08,226 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CONTEXT_MENU' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605D5
+  name: STR_LADM_CONTEXT_MENU
+  description: null'
+2017-08-01 15:10:08,418 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SRVCMGR_SRVCTYPES' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605D9
+  name: STR_LADM_SRVCMGR_SRVCTYPES
+  description: null'
+2017-08-01 15:10:08,612 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SRVCMGR_SRVCTYPES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605DA
+  name: STR_LADM_SI_SRVCMGR_SRVCTYPES_MANAGER
+  description: Permitir registrar, atualizar e remover tipos de serviço.
+  service id: lumis.service.portalmanagement.servicetype
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D9
+  channel name: STR_LADM_SRVCMGR_SRVCTYPES'
+2017-08-01 15:10:09,345 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_INTERFACE_TYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DB
+  name: STR_LADM_INTERFACE_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D9
+  channel name: STR_LADM_SRVCMGR_SRVCTYPES'
+2017-08-01 15:10:09,349 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMIN_INTERFACE_TYPES' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDA54306A1
+  interface id: lumis.service.portalmanagement.servicetype.adminInterfaceTypes
+  display name: STR_ADMIN_INTERFACE_TYPES
+  page id: 8A488AE75D9EFBC9015D9EFD810605DB
+  page name: STR_LADM_INTERFACE_TYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605DA'
+2017-08-01 15:10:10,097 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SRVCMGR_SRVCTYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DC
+  name: STR_LADM_SRVCMGR_SRVCTYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D9
+  channel name: STR_LADM_SRVCMGR_SRVCTYPES'
+2017-08-01 15:10:10,102 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDA83306A5
+  interface id: lumis.service.portalmanagement.servicetype.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605DC
+  page name: STR_LADM_SRVCMGR_SRVCTYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605DA'
+2017-08-01 15:10:10,285 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SRVCMGR_SRVCTYPES' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605D9
+  name: STR_LADM_SRVCMGR_SRVCTYPES
+  description: null'
+2017-08-01 15:10:10,483 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CM_WMANAGER' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605DD
+  name: STR_LADM_CM_WMANAGER
+  description: null'
+2017-08-01 15:10:10,671 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CM_WMANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605DE
+  name: STR_LADM_SI_CM_WMANAGER
+  description: Exibe Workflows cadastrados no portal
+  service id: lumis.service.workflow
+  channel id: 8A488AE75D9EFBC9015D9EFD810605DD
+  channel name: STR_LADM_CM_WMANAGER'
+2017-08-01 15:10:11,416 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CM_WMANAGER' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DF
+  name: STR_LADM_CM_WMANAGER
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605DD
+  channel name: STR_LADM_CM_WMANAGER'
+2017-08-01 15:10:11,421 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDAD5A06AD
+  interface id: lumis.service.workflow.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605DF
+  page name: STR_LADM_CM_WMANAGER
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605DE'
+2017-08-01 15:10:11,600 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CM_WMANAGER' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605DD
+  name: STR_LADM_CM_WMANAGER
+  description: null'
+2017-08-01 15:10:11,791 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_LAYOUT_AND_STRUCTURE' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E0
+  name: STR_LADM_LAYOUT_AND_STRUCTURE
+  description: null'
+2017-08-01 15:10:11,976 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_LAYOUT_AND_STRUCTURE' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E0
+  name: STR_LADM_LAYOUT_AND_STRUCTURE
+  description: null'
+2017-08-01 15:10:12,161 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CSSMGR' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E1
+  name: STR_LADM_CSSMGR
+  description: null'
+2017-08-01 15:10:12,347 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CSSMGR' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605E2
+  name: STR_LADM_SI_CSSMGR
+  description: Permite o gerenciamento de arquivos CSS usados pelo portal.
+  service id: lumis.service.portalmanagement.css
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E1
+  channel name: STR_LADM_CSSMGR'
+2017-08-01 15:10:13,090 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CSSMGR' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605E3
+  name: STR_LADM_CSSMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E1
+  channel name: STR_LADM_CSSMGR'
+2017-08-01 15:10:13,094 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDB3E406B7
+  interface id: lumis.service.portalmanagement.css.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605E3
+  page name: STR_LADM_CSSMGR
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E2'
+2017-08-01 15:10:13,267 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CSSMGR' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E1
+  name: STR_LADM_CSSMGR
+  description: null'
+2017-08-01 15:10:13,460 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_EXPORTEDDATA' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E4
+  name: STR_LADM_EXPORTEDDATA
+  description: null'
+2017-08-01 15:10:13,652 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: Gerenciador de Import e Export do Portal' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605E5
+  name: Gerenciador de Import e Export do Portal
+  description: Permite Import e Export.
+  service id: lumis.service.portalmanagement.importexport
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E4
+  channel name: STR_LADM_EXPORTEDDATA'
+2017-08-01 15:10:13,832 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_EXPORTEDDATA_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605E6
+  name: STR_LADM_SI_EXPORTEDDATA_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E4
+  channel name: STR_LADM_EXPORTEDDATA'
+2017-08-01 15:10:14,581 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_EXPORTEDDATA' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605E7
+  name: STR_LADM_EXPORTEDDATA
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E4
+  channel name: STR_LADM_EXPORTEDDATA'
+2017-08-01 15:10:14,585 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDB9B706C4
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605E7
+  page name: STR_LADM_EXPORTEDDATA
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E6'
+2017-08-01 15:10:14,769 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_EXPORTEDDATA' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E4
+  name: STR_LADM_EXPORTEDDATA
+  description: null'
+2017-08-01 15:10:14,957 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_STDPAGES' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E8
+  name: STR_LADM_STDPAGES
+  description: null'
+2017-08-01 15:10:15,149 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_STDPAGES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605E9
+  name: STR_LADM_SI_STDPAGES_MANAGER
+  description: Permite adicionar, editar e remover páginas padrão.
+  service id: lumis.service.portalmanagement.pagelink
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E8
+  channel name: STR_LADM_STDPAGES'
+2017-08-01 15:10:15,869 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_STDPAGES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605EA
+  name: STR_LADM_STDPAGES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E8
+  channel name: STR_LADM_STDPAGES'
+2017-08-01 15:10:15,873 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDBEBE06CC
+  interface id: lumis.service.portalmanagement.pagelink.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605EA
+  page name: STR_LADM_STDPAGES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E9'
+2017-08-01 15:10:16,050 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_STDPAGES' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605E8
+  name: STR_LADM_STDPAGES
+  description: null'
+2017-08-01 15:10:16,235 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_WEB_RESOURCE_MANAGER' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605EB
+  name: STR_LADM_WEB_RESOURCE_MANAGER
+  description: null'
+2017-08-01 15:10:16,427 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_WEB_RESOURCE_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605EC
+  name: STR_LADM_SI_WEB_RESOURCE_MANAGER
+  description: Permite o gerenciamento Web Resources.
+  service id: lumis.service.portalmanagement.webresource
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EB
+  channel name: STR_LADM_WEB_RESOURCE_MANAGER'
+2017-08-01 15:10:17,176 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_WEB_RESOURCE' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605ED
+  name: STR_LADM_WEB_RESOURCE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EB
+  channel name: STR_LADM_WEB_RESOURCE_MANAGER'
+2017-08-01 15:10:17,180 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDC3DA06D4
+  interface id: lumis.service.portalmanagement.webresource.webResourceAdmin
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605ED
+  page name: STR_LADM_WEB_RESOURCE
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605EC'
+2017-08-01 15:10:17,358 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_WEB_RESOURCE_MANAGER' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605EB
+  name: STR_LADM_WEB_RESOURCE_MANAGER
+  description: null'
+2017-08-01 15:10:17,548 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_WEBSITES' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605EE
+  name: STR_LADM_WEBSITES
+  description: null'
+2017-08-01 15:10:17,738 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_WEBSITES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605EF
+  name: STR_LADM_SI_WEBSITES_MANAGER
+  description: Allows to manage the existent websites in portal
+  service id: lumis.service.portalmanagement.website
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EE
+  channel name: STR_LADM_WEBSITES'
+2017-08-01 15:10:18,481 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_WEBSITES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F0
+  name: STR_LADM_WEBSITES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EE
+  channel name: STR_LADM_WEBSITES'
+2017-08-01 15:10:18,485 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDC8F306DC
+  interface id: lumis.service.portalmanagement.website.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605F0
+  page name: STR_LADM_WEBSITES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605EF'
+2017-08-01 15:10:18,673 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_WEBSITES' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605EE
+  name: STR_LADM_WEBSITES
+  description: null'
+2017-08-01 15:10:18,858 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_THEMES' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F1
+  name: STR_LADM_THEMES
+  description: null'
+2017-08-01 15:10:19,044 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_THEMES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605F2
+  name: STR_LADM_SI_THEMES_MANAGER
+  description: Administração de temas do portal
+  service id: lumis.service.portalmanagement.theme
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F1
+  channel name: STR_LADM_THEMES'
+2017-08-01 15:10:19,772 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_THEMES_ADMIN' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F3
+  name: STR_LADM_THEMES_ADMIN
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F1
+  channel name: STR_LADM_THEMES'
+2017-08-01 15:10:19,776 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDCDFE06E4
+  interface id: lumis.service.portalmanagement.theme.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605F3
+  page name: STR_LADM_THEMES_ADMIN
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605F2'
+2017-08-01 15:10:19,963 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_THEMES' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F1
+  name: STR_LADM_THEMES
+  description: null'
+2017-08-01 15:10:20,157 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CONTEXT' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F4
+  name: STR_LADM_CONTEXT
+  description: null'
+2017-08-01 15:10:20,358 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CONTEXT_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605F5
+  name: STR_LADM_SI_CONTEXT_MANAGER
+  description: Gerenciador de Contextos de Negócio
+  service id: lumis.service.portalmanagement.businesscontext
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F4
+  channel name: STR_LADM_CONTEXT'
+2017-08-01 15:10:21,085 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CONTEXT' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F6
+  name: STR_LADM_CONTEXT
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F4
+  channel name: STR_LADM_CONTEXT'
+2017-08-01 15:10:21,090 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDD31F06EC
+  interface id: lumis.service.portalmanagement.businesscontext.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605F6
+  page name: STR_LADM_CONTEXT
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605F5'
+2017-08-01 15:10:21,261 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CONTEXT' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F4
+  name: STR_LADM_CONTEXT
+  description: null'
+2017-08-01 15:10:21,457 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SECMGR' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F7
+  name: STR_LADM_SECMGR
+  description: null'
+2017-08-01 15:10:21,643 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SECMGR' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F7
+  name: STR_LADM_SECMGR
+  description: null'
+2017-08-01 15:10:21,838 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SECMGR' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F8
+  name: STR_LADM_SECMGR
+  description: null'
+2017-08-01 15:10:22,014 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SECMGR_GROUPS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605F9
+  name: STR_LADM_SI_SECMGR_GROUPS_MANAGER
+  description: Permite adicionar, editar e remover grupos.
+  service id: lumis.service.portalmanagement.group
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:22,206 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SECMGR_GROUP_TYPES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605FA
+  name: STR_LADM_SI_SECMGR_GROUP_TYPES_MANAGER
+  description: Permite adicionar, editar e remover tipos de grupos.
+  service id: lumis.service.portalmanagement.grouptype
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:22,398 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SECMGR_USERS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD810605FB
+  name: STR_LADM_SI_SECMGR_USERS_MANAGER
+  description: Permite adicionar, editar e remover usuários.
+  service id: lumis.service.portalmanagement.user
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:23,150 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SECMGR_USERS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FC
+  name: STR_LADM_SECMGR_USERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:23,154 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDDB2F06FA
+  interface id: lumis.service.portalmanagement.user.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605FC
+  page name: STR_LADM_SECMGR_USERS
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605FB'
+2017-08-01 15:10:23,902 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SECMGR_GROUPS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FD
+  name: STR_LADM_SECMGR_GROUPS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:23,905 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDDE1F06FE
+  interface id: lumis.service.portalmanagement.group.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605FD
+  page name: STR_LADM_SECMGR_GROUPS
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605F9'
+2017-08-01 15:10:24,620 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SECMGR_GROUP_TYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FE
+  name: STR_LADM_SECMGR_GROUP_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:10:24,623 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDE0EE0702
+  interface id: lumis.service.portalmanagement.grouptype.groupTypeAdministration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD810605FE
+  page name: STR_LADM_SECMGR_GROUP_TYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605FA'
+2017-08-01 15:10:24,803 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SECMGR' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605F8
+  name: STR_LADM_SECMGR
+  description: null'
+2017-08-01 15:10:24,999 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_IMPORTPRINCIPAL' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605FF
+  name: STR_LADM_IMPORTPRINCIPAL
+  description: null'
+2017-08-01 15:10:25,185 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_READERS' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060600
+  name: STR_LADM_READERS
+  description: Permite importar usuários e grupos de outros repositórios para o Lumis Portal.
+  service id: lumis.service.portalmanagement.importprincipal
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:25,371 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CONFIGFILES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060601
+  name: STR_LADM_SI_CONFIGFILES_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:25,558 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_XMLFILES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060602
+  name: STR_LADM_SI_XMLFILES_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:25,747 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_WRITERS' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060603
+  name: STR_LADM_WRITERS
+  description: Permite importar usuários e grupos de outros repositórios para o Lumis Portal.
+  service id: lumis.service.portalmanagement.importprincipal
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:26,475 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CONFIGFILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060604
+  name: STR_LADM_CONFIGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:26,479 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDE82D0715
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060604
+  page name: STR_LADM_CONFIGFILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060601'
+2017-08-01 15:10:27,221 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_READERS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060605
+  name: STR_LADM_READERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:27,224 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_READERS_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDEB160719
+  interface id: lumis.service.portalmanagement.importprincipal.readersAdmin
+  display name: STR_READERS_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060605
+  page name: STR_LADM_READERS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060600'
+2017-08-01 15:10:27,976 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_WRITERS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060606
+  name: STR_LADM_WRITERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:27,979 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_WRITERS_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDEE0A071D
+  interface id: lumis.service.portalmanagement.importprincipal.writersAdmin
+  display name: STR_WRITERS_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060606
+  page name: STR_LADM_WRITERS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060603'
+2017-08-01 15:10:28,716 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_XMLFILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060607
+  name: STR_LADM_XMLFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:10:28,723 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDF0EF0721
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060607
+  page name: STR_LADM_XMLFILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060602'
+2017-08-01 15:10:28,905 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_IMPORTPRINCIPAL' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD810605FF
+  name: STR_LADM_IMPORTPRINCIPAL
+  description: null'
+2017-08-01 15:10:29,087 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SOCIALNETWORKS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060608
+  name: STR_LADM_SOCIALNETWORKS
+  description: null'
+2017-08-01 15:10:29,278 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SOCIALNETWORKS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060609
+  name: STR_LADM_SI_SOCIALNETWORKS_MANAGER
+  description: Permite gerenciar a integração com redes sociais públicas.
+  service id: lumis.service.portalmanagement.socialnetworkintegration
+  channel id: 8A488AE75D9EFBC9015D9EFD81060608
+  channel name: STR_LADM_SOCIALNETWORKS'
+2017-08-01 15:10:30,013 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SNAPPLICATIONMGR' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106060A
+  name: STR_LADM_SNAPPLICATIONMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060608
+  channel name: STR_LADM_SOCIALNETWORKS'
+2017-08-01 15:10:30,017 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMIN_APPLICATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDF5FF0729
+  interface id: lumis.service.portalmanagement.socialnetworkintegration.adminApplication
+  display name: STR_ADMIN_APPLICATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106060A
+  page name: STR_LADM_SNAPPLICATIONMGR
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060609'
+2017-08-01 15:10:30,198 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SOCIALNETWORKS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060608
+  name: STR_LADM_SOCIALNETWORKS
+  description: null'
+2017-08-01 15:10:30,386 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_PRIVATE_SOCIAL_NETOWRKS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060B
+  name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS
+  description: null'
+2017-08-01 15:10:30,565 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_PRIVATE_SOCIAL_NETOWRKS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106060C
+  name: STR_LADM_SI_PRIVATE_SOCIAL_NETOWRKS_MANAGER
+  description: Gerenciador de Redes Sociais Privadas
+  service id: lumis.service.portalmanagement.socialnetwork
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060B
+  channel name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS'
+2017-08-01 15:10:31,304 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_PRIVATE_SOCIAL_NETOWRKS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106060D
+  name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060B
+  channel name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS'
+2017-08-01 15:10:31,308 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFDFB0A0731
+  interface id: lumis.service.portalmanagement.socialnetwork.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106060D
+  page name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106060C'
+2017-08-01 15:10:31,498 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_PRIVATE_SOCIAL_NETOWRKS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060B
+  name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS
+  description: null'
+2017-08-01 15:10:31,678 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_FRAMEWORKS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060E
+  name: STR_LADM_FRAMEWORKS
+  description: null'
+2017-08-01 15:10:31,868 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_FRAMEWORKS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060E
+  name: STR_LADM_FRAMEWORKS
+  description: null'
+2017-08-01 15:10:32,048 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SEARCH' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060F
+  name: STR_LADM_SEARCH
+  description: null'
+2017-08-01 15:10:32,232 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SERVICES_SEARCH_INDEXES' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060610
+  name: STR_LADM_SI_SERVICES_SEARCH_INDEXES
+  description: Permite manutenção dos índices de busca dos serviços
+  service id: lumis.service.portalmanagement.servicesearchindex
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060F
+  channel name: STR_LADM_SEARCH'
+2017-08-01 15:10:32,968 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SEARCH_INDEX' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060611
+  name: STR_LADM_SEARCH_INDEX
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060F
+  channel name: STR_LADM_SEARCH'
+2017-08-01 15:10:32,971 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE0189073B
+  interface id: lumis.service.portalmanagement.servicesearchindex.services
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060611
+  page name: STR_LADM_SEARCH_INDEX
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060610'
+2017-08-01 15:10:33,156 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SEARCH' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106060F
+  name: STR_LADM_SEARCH
+  description: null'
+2017-08-01 15:10:33,342 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_DOUI' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060612
+  name: STR_LADM_DOUI
+  description: null'
+2017-08-01 15:10:33,523 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_DOUI_CTRLTYPES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060613
+  name: STR_LADM_SI_DOUI_CTRLTYPES_MANAGER
+  description: Permitir registrar, atualizar e remover registro dos controles.
+  service id: lumis.service.portalmanagement.controlregistry
+  channel id: 8A488AE75D9EFBC9015D9EFD81060612
+  channel name: STR_LADM_DOUI'
+2017-08-01 15:10:34,260 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_DOUI_CTRLTYPES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060614
+  name: STR_LADM_DOUI_CTRLTYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060612
+  channel name: STR_LADM_DOUI'
+2017-08-01 15:10:34,264 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE06960743
+  interface id: lumis.service.portalmanagement.controlregistry.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060614
+  page name: STR_LADM_DOUI_CTRLTYPES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060613'
+2017-08-01 15:10:34,450 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_DOUI' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060612
+  name: STR_LADM_DOUI
+  description: null'
+2017-08-01 15:10:34,635 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_MAILMANAGER' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060615
+  name: STR_LADM_MAILMANAGER
+  description: null'
+2017-08-01 15:10:34,816 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_MAIL_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060616
+  name: STR_LADM_SI_MAIL_MANAGER
+  description: Gerencia as filas de envio de e-mail.
+  service id: lumis.service.portalmanagement.sendmail
+  channel id: 8A488AE75D9EFBC9015D9EFD81060615
+  channel name: STR_LADM_MAILMANAGER'
+2017-08-01 15:10:35,547 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_OPTIONS_MAILSRV' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060617
+  name: STR_LADM_OPTIONS_MAILSRV
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060615
+  channel name: STR_LADM_MAILMANAGER'
+2017-08-01 15:10:35,551 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE0B9D074B
+  interface id: lumis.service.portalmanagement.sendmail.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060617
+  page name: STR_LADM_OPTIONS_MAILSRV
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060616'
+2017-08-01 15:10:35,732 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_MAILMANAGER' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060615
+  name: STR_LADM_MAILMANAGER
+  description: null'
+2017-08-01 15:10:35,922 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_PORTALEVENTS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060618
+  name: STR_LADM_PORTALEVENTS
+  description: null'
+2017-08-01 15:10:36,108 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_EVENTOBSERVERS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060619
+  name: STR_LADM_SI_EVENTOBSERVERS_MANAGER
+  description: Permite a configuração de observadores.
+  service id: lumis.service.portalmanagement.observer
+  channel id: 8A488AE75D9EFBC9015D9EFD81060618
+  channel name: STR_LADM_PORTALEVENTS'
+2017-08-01 15:10:36,868 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_EVENTOBSERVERS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106061A
+  name: STR_LADM_EVENTOBSERVERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060618
+  channel name: STR_LADM_PORTALEVENTS'
+2017-08-01 15:10:36,871 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE10C50753
+  interface id: lumis.service.portalmanagement.observer.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106061A
+  page name: STR_LADM_EVENTOBSERVERS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060619'
+2017-08-01 15:10:37,044 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_PORTALEVENTS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060618
+  name: STR_LADM_PORTALEVENTS
+  description: null'
+2017-08-01 15:10:37,230 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SCHEDULED_TASKS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106061B
+  name: STR_LADM_SCHEDULED_TASKS
+  description: null'
+2017-08-01 15:10:37,422 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SCHEDULED_TASKS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106061C
+  name: STR_LADM_SI_SCHEDULED_TASKS_MANAGER
+  description: Permite gerenciar agendamento de tarefas regulares
+  service id: lumis.service.portalmanagement.clock
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061B
+  channel name: STR_LADM_SCHEDULED_TASKS'
+2017-08-01 15:10:38,177 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CLOCK_MANAGER' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106061D
+  name: STR_LADM_CLOCK_MANAGER
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061B
+  channel name: STR_LADM_SCHEDULED_TASKS'
+2017-08-01 15:10:38,181 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_CLOCKS_ADMIN' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE15E3075B
+  interface id: lumis.service.portalmanagement.clock.adminClock
+  display name: STR_CLOCKS_ADMIN
+  page id: 8A488AE75D9EFBC9015D9EFD8106061D
+  page name: STR_LADM_CLOCK_MANAGER
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106061C'
+2017-08-01 15:10:38,354 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SCHEDULED_TASKS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106061B
+  name: STR_LADM_SCHEDULED_TASKS
+  description: null'
+2017-08-01 15:10:38,546 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_QUEUES' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106061E
+  name: STR_LADM_QUEUES
+  description: null'
+2017-08-01 15:10:38,721 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_QUEUES_CONFIGURATOR' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106061F
+  name: STR_LADM_SI_QUEUES_CONFIGURATOR
+  description: Permite configurar a fila de execuções assíncronas dos servidores.
+  service id: lumis.service.portalmanagement.processqueue.config
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:10:38,914 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_QUEUES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060620
+  name: STR_LADM_SI_QUEUES_MANAGER
+  description: Permite gerenciar a fila de execussões assíncronas.
+  service id: lumis.service.portalmanagement.processqueue.manage
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:10:39,656 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_QUEUES_CONFIG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060621
+  name: STR_LADM_QUEUES_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:10:39,660 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_VIEW_SERVER_CONFIG' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE1BA90765
+  interface id: lumis.service.portalmanagement.processqueue.config.administration
+  display name: STR_VIEW_SERVER_CONFIG
+  page id: 8A488AE75D9EFBC9015D9EFD81060621
+  page name: STR_LADM_QUEUES_CONFIG
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106061F'
+2017-08-01 15:10:40,389 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_QUEUES_MANAGE' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060622
+  name: STR_LADM_QUEUES_MANAGE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:10:40,393 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_VIEW_QUEUE' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE1E870769
+  interface id: lumis.service.portalmanagement.processqueue.manage.administration
+  display name: STR_VIEW_QUEUE
+  page id: 8A488AE75D9EFBC9015D9EFD81060622
+  page name: STR_LADM_QUEUES_MANAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060620'
+2017-08-01 15:10:40,576 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_QUEUES' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106061E
+  name: STR_LADM_QUEUES
+  description: null'
+2017-08-01 15:10:40,764 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_LOCKS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060623
+  name: STR_LADM_LOCKS
+  description: null'
+2017-08-01 15:10:40,958 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_LOCKS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060624
+  name: STR_LADM_SI_LOCKS_MANAGER
+  description: Provê serviços de suporte aos bloqueios do portal.
+  service id: lumis.service.portalmanagement.lock
+  channel id: 8A488AE75D9EFBC9015D9EFD81060623
+  channel name: STR_LADM_LOCKS'
+2017-08-01 15:10:41,692 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_LOCKS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060625
+  name: STR_LADM_LOCKS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060623
+  channel name: STR_LADM_LOCKS'
+2017-08-01 15:10:41,695 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE239D0771
+  interface id: lumis.service.portalmanagement.lock.lockAdministration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060625
+  page name: STR_LADM_LOCKS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060624'
+2017-08-01 15:10:41,871 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_LOCKS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060623
+  name: STR_LADM_LOCKS
+  description: null'
+2017-08-01 15:10:42,053 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_DEPLOYMENT_AND_PERFORMANCE_TUNING' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060626
+  name: STR_LADM_DEPLOYMENT_AND_PERFORMANCE_TUNING
+  description: null'
+2017-08-01 15:10:42,250 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_DEPLOYMENT_AND_PERFORMANCE_TUNING' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060626
+  name: STR_LADM_DEPLOYMENT_AND_PERFORMANCE_TUNING
+  description: null'
+2017-08-01 15:10:42,440 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_INTERACTIVE_PROCESS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060627
+  name: STR_LADM_INTERACTIVE_PROCESS
+  description: null'
+2017-08-01 15:10:42,636 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_INTERACTIVE_PROCESS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060628
+  name: STR_LADM_SI_INTERACTIVE_PROCESS_MANAGER
+  description: Permite gerenciar os processos interativos cadastrados no Lumis Portal.
+  service id: lumis.service.portalmanagement.interactiveprocess
+  channel id: 8A488AE75D9EFBC9015D9EFD81060627
+  channel name: STR_LADM_INTERACTIVE_PROCESS'
+2017-08-01 15:10:43,379 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_INTERACTIVE_PROCESS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060629
+  name: STR_LADM_INTERACTIVE_PROCESS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060627
+  channel name: STR_LADM_INTERACTIVE_PROCESS'
+2017-08-01 15:10:43,383 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE2A35077B
+  interface id: lumis.service.portalmanagement.interactiveprocess.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060629
+  page name: STR_LADM_INTERACTIVE_PROCESS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060628'
+2017-08-01 15:10:43,557 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_INTERACTIVE_PROCESS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060627
+  name: STR_LADM_INTERACTIVE_PROCESS
+  description: null'
+2017-08-01 15:10:43,741 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CACHE' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106062A
+  name: STR_LADM_CACHE
+  description: null'
+2017-08-01 15:10:43,937 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CACHE_XSL_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106062B
+  name: STR_LADM_SI_CACHE_XSL_MANAGER
+  description: Permite gerenciar arquivos XSL cacheados.
+  service id: lumis.service.portalmanagement.xslcache
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:10:44,136 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_PORTALCACHE_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106062C
+  name: STR_LADM_SI_PORTALCACHE_MANAGER
+  description: Permite visualizar e configurar os caches do Portal.
+  service id: lumis.service.portalmanagement.cache
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:10:44,860 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CACHE_XSL' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106062D
+  name: STR_LADM_CACHE_XSL
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:10:44,864 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE2FFE0785
+  interface id: lumis.service.portalmanagement.xslcache.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106062D
+  page name: STR_LADM_CACHE_XSL
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106062B'
+2017-08-01 15:10:45,596 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_PORTALCACHE' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106062E
+  name: STR_LADM_PORTALCACHE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:10:45,599 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE32DD0789
+  interface id: lumis.service.portalmanagement.cache.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106062E
+  page name: STR_LADM_PORTALCACHE
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106062C'
+2017-08-01 15:10:45,787 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CACHE' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106062A
+  name: STR_LADM_CACHE
+  description: null'
+2017-08-01 15:10:45,975 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_REPLICATION' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106062F
+  name: STR_LADM_REPLICATION
+  description: null'
+2017-08-01 15:10:46,158 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_REPLICATION_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060630
+  name: STR_LADM_SI_REPLICATION_MANAGER
+  description: Permite replicar arquivos públicos.
+  service id: lumis.service.portalmanagement.webfilereplication
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062F
+  channel name: STR_LADM_REPLICATION'
+2017-08-01 15:10:46,892 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_REPLICATION' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060631
+  name: STR_LADM_REPLICATION
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062F
+  channel name: STR_LADM_REPLICATION'
+2017-08-01 15:10:46,896 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE37EE0791
+  interface id: lumis.service.portalmanagement.webfilereplication.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060631
+  page name: STR_LADM_REPLICATION
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060630'
+2017-08-01 15:10:47,080 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_REPLICATION' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106062F
+  name: STR_LADM_REPLICATION
+  description: null'
+2017-08-01 15:10:47,268 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_HTML_CACHE' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060632
+  name: STR_LADM_HTML_CACHE
+  description: null'
+2017-08-01 15:10:47,443 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_HTML_CACHE_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060633
+  name: STR_LADM_SI_HTML_CACHE_MANAGER
+  description: Permite administrar as pÃ¡ginas em cache
+  service id: lumis.service.portalmanagement.pagecache
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:10:48,194 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CACHE_PAGE' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060634
+  name: STR_LADM_CACHE_PAGE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:10:48,198 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_PAGE_CACHE_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE3D040799
+  interface id: lumis.service.portalmanagement.pagecache.administration
+  display name: STR_PAGE_CACHE_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060634
+  page name: STR_LADM_CACHE_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060633'
+2017-08-01 15:10:48,931 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CACHE_QUEUES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060635
+  name: STR_LADM_CACHE_QUEUES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:10:48,935 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_QUEUE_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE3FE5079D
+  interface id: lumis.service.portalmanagement.pagecache.queueAdmin
+  display name: STR_QUEUE_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060635
+  page name: STR_LADM_CACHE_QUEUES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060633'
+2017-08-01 15:10:49,691 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_GENERATOR_PROFILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060636
+  name: STR_LADM_GENERATOR_PROFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:10:49,695 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_GENERATOR_PROFILE_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE42DD07A1
+  interface id: lumis.service.portalmanagement.pagecache.generatorProfileAdmin
+  display name: STR_GENERATOR_PROFILE_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060636
+  page name: STR_LADM_GENERATOR_PROFILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060633'
+2017-08-01 15:10:50,422 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CACHE_GENERATORS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060637
+  name: STR_LADM_CACHE_GENERATORS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:10:50,426 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_GENERATOR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE45B807A5
+  interface id: lumis.service.portalmanagement.pagecache.generatorConfigAdmin
+  display name: STR_GENERATOR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060637
+  page name: STR_LADM_CACHE_GENERATORS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060633'
+2017-08-01 15:10:50,608 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_HTML_CACHE' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060632
+  name: STR_LADM_HTML_CACHE
+  description: null'
+2017-08-01 15:10:50,806 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_CLUSTER' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060638
+  name: STR_LADM_CLUSTER
+  description: null'
+2017-08-01 15:10:50,994 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CLUSTER_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060639
+  name: STR_LADM_SI_CLUSTER_MANAGER
+  description: Permite gerenciar a configuração multi-server do portal.
+  service id: lumis.service.portalmanagement.cluster
+  channel id: 8A488AE75D9EFBC9015D9EFD81060638
+  channel name: STR_LADM_CLUSTER'
+2017-08-01 15:10:51,742 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CLUSTER_MEMBERS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106063A
+  name: STR_LADM_CLUSTER_MEMBERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060638
+  channel name: STR_LADM_CLUSTER'
+2017-08-01 15:10:51,745 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MEMBERS' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE4AE007AD
+  interface id: lumis.service.portalmanagement.cluster.members
+  display name: STR_MEMBERS
+  page id: 8A488AE75D9EFBC9015D9EFD8106063A
+  page name: STR_LADM_CLUSTER_MEMBERS
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060639'
+2017-08-01 15:10:51,935 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_CLUSTER' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060638
+  name: STR_LADM_CLUSTER
+  description: null'
+2017-08-01 15:10:52,131 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_DEPLOY' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106063B
+  name: STR_LADM_DEPLOY
+  description: null'
+2017-08-01 15:10:52,315 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_COMPONENTS_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106063C
+  name: STR_LADM_SI_COMPONENTS_MANAGER
+  description: Permite o gerenciamento de instalações de módulos e componentes no portal.
+  service id: lumis.service.portalmanagement.deployment
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:52,512 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_MODULES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106063D
+  name: STR_LADM_SI_MODULES_MANAGER
+  description: Permite o gerenciamento da implantação de módulos no portal.
+  service id: lumis.service.portalmanagement.deployment
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:52,704 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_PACKAGES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106063E
+  name: STR_LADM_SI_PACKAGES_MANAGER
+  description: Permite o gerenciamento de instalações de módulos e componentes no portal.
+  service id: lumis.service.portalmanagement.deployment
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:53,459 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_COMPONENTS' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106063F
+  name: STR_LADM_COMPONENTS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:53,462 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_DEPLOYED_COMPONENTS' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE519407B9
+  interface id: lumis.service.portalmanagement.deployment.deployedComponents
+  display name: STR_DEPLOYED_COMPONENTS
+  page id: 8A488AE75D9EFBC9015D9EFD8106063F
+  page name: STR_LADM_COMPONENTS
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063C'
+2017-08-01 15:10:54,206 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_MODULES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060640
+  name: STR_LADM_MODULES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:54,209 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_DEPLOYED_MODULES' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE547F07BD
+  interface id: lumis.service.portalmanagement.deployment.deployedModules
+  display name: STR_DEPLOYED_MODULES
+  page id: 8A488AE75D9EFBC9015D9EFD81060640
+  page name: STR_LADM_MODULES
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063D'
+2017-08-01 15:10:54,937 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_PACKAGES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060641
+  name: STR_LADM_PACKAGES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:10:54,940 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_PACKAGE_HISTORY' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE575A07C1
+  interface id: lumis.service.portalmanagement.deployment.packageHistory
+  display name: STR_PACKAGE_HISTORY
+  page id: 8A488AE75D9EFBC9015D9EFD81060641
+  page name: STR_LADM_PACKAGES
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063E'
+2017-08-01 15:10:55,117 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_DEPLOY' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106063B
+  name: STR_LADM_DEPLOY
+  description: null'
+2017-08-01 15:10:55,295 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_INFORMATION' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060642
+  name: STR_LADM_INFORMATION
+  description: null'
+2017-08-01 15:10:55,480 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_INFORMATION' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060642
+  name: STR_LADM_INFORMATION
+  description: null'
+2017-08-01 15:10:55,665 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_MONITOR' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060643
+  name: STR_LADM_MONITOR
+  description: null'
+2017-08-01 15:10:55,855 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_JAVAMELODY_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060644
+  name: STR_LADM_SI_JAVAMELODY_MANAGER
+  description: Permite gerenciar a página de monitoração do JavaMelody.
+  service id: lumis.service.portalmanagement.monitoring
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:10:56,049 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_MONITOR_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060645
+  name: STR_LADM_SI_MONITOR_MANAGER
+  description: Permite gerenciar os eventos de monitoração do portal.
+  service id: lumis.service.portalmanagement.monitor
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:10:56,786 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_EVENTS_ADMIN' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060646
+  name: STR_LADM_EVENTS_ADMIN
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:10:56,789 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_EVENTS_ADMIN' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE5E9307CD
+  interface id: lumis.service.portalmanagement.monitor.adminEvent
+  display name: STR_EVENTS_ADMIN
+  page id: 8A488AE75D9EFBC9015D9EFD81060646
+  page name: STR_LADM_EVENTS_ADMIN
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060645'
+2017-08-01 15:10:57,524 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_JAVAMELODY' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060647
+  name: STR_LADM_JAVAMELODY
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:10:57,527 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_MONITORING_ADMIN' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE617507D1
+  interface id: lumis.service.portalmanagement.monitoring.monitoring
+  display name: STR_MONITORING_ADMIN
+  page id: 8A488AE75D9EFBC9015D9EFD81060647
+  page name: STR_LADM_JAVAMELODY
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060644'
+2017-08-01 15:10:57,707 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_MONITOR' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060643
+  name: STR_LADM_MONITOR
+  description: null'
+2017-08-01 15:10:57,895 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_PORTALLOGS' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060648
+  name: STR_LADM_PORTALLOGS
+  description: null'
+2017-08-01 15:10:58,082 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_BANNERLOG_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060649
+  name: STR_LADM_SI_BANNERLOG_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:58,274 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_IMPEXPLOG_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106064A
+  name: STR_LADM_SI_IMPEXPLOG_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:58,470 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_LOGFILES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106064B
+  name: STR_LADM_SI_LOGFILES_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:58,660 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_MAILLOG_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106064C
+  name: STR_LADM_SI_MAILLOG_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:58,838 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_NAVIGLOG_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106064D
+  name: STR_LADM_SI_NAVIGLOG_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:59,587 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_BANNERLOG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106064E
+  name: STR_LADM_BANNERLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:10:59,590 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE698407EB
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106064E
+  page name: STR_LADM_BANNERLOG
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060649'
+2017-08-01 15:11:00,460 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_IMPEXPLOG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106064F
+  name: STR_LADM_IMPEXPLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:00,464 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE6CEE07EF
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD8106064F
+  page name: STR_LADM_IMPEXPLOG
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106064A'
+2017-08-01 15:11:01,254 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_LOGFILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060650
+  name: STR_LADM_LOGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:01,258 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE700807F3
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060650
+  page name: STR_LADM_LOGFILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106064B'
+2017-08-01 15:11:01,988 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_MAILLOG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060651
+  name: STR_LADM_MAILLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:01,992 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE72E607F7
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060651
+  page name: STR_LADM_MAILLOG
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106064C'
+2017-08-01 15:11:02,728 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_NAVIGLOG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060652
+  name: STR_LADM_NAVIGLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:02,732 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE75CA07FB
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060652
+  page name: STR_LADM_NAVIGLOG
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106064D'
+2017-08-01 15:11:02,918 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_PORTALLOGS' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060648
+  name: STR_LADM_PORTALLOGS
+  description: null'
+2017-08-01 15:11:03,110 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_REPORT' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060653
+  name: STR_LADM_REPORT
+  description: null'
+2017-08-01 15:11:03,304 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_REPORTTYPE_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060654
+  name: STR_LADM_SI_REPORTTYPE_MANAGER
+  description: Gerencia os tipos de relatórios.
+  service id: lumis.service.portalmanagement.reporttype
+  channel id: 8A488AE75D9EFBC9015D9EFD81060653
+  channel name: STR_LADM_REPORT'
+2017-08-01 15:11:04,064 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_REPORTTYPE' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060655
+  name: STR_LADM_REPORTTYPE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060653
+  channel name: STR_LADM_REPORT'
+2017-08-01 15:11:04,068 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE7B020803
+  interface id: lumis.service.portalmanagement.reporttype.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060655
+  page name: STR_LADM_REPORTTYPE
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060654'
+2017-08-01 15:11:04,249 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_REPORT' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060653
+  name: STR_LADM_REPORT
+  description: null'
+2017-08-01 15:11:04,438 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_PORTALCONFIG' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060656
+  name: STR_LADM_PORTALCONFIG
+  description: null'
+2017-08-01 15:11:04,622 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_CONFIGFILES_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060657
+  name: STR_LADM_SI_CONFIGFILES_MANAGER
+  description: Permite gerenciar o sistema de arquivos do servidor
+  service id: lumis.service.portalmanagement.filesystem
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:04,800 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_ENVIRONMENT_CONFIG_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060658
+  name: STR_LADM_SI_ENVIRONMENT_CONFIG_MANAGER
+  description: Permite gerenciar as configurações do servidor.
+  service id: lumis.service.portalmanagement.server
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:05,524 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_CONFIGFILES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060659
+  name: STR_LADM_CONFIGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:05,527 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_ADMINISTRATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE80B5080F
+  interface id: lumis.service.portalmanagement.filesystem.administration
+  display name: STR_ADMINISTRATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060659
+  page name: STR_LADM_CONFIGFILES
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060657'
+2017-08-01 15:11:06,238 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_ENVIRONMENT_CONFIG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065A
+  name: STR_LADM_ENVIRONMENT_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:06,242 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_CONFIGURATION_SERVER' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE83800813
+  interface id: lumis.service.portalmanagement.server.admininistration
+  display name: STR_CONFIGURATION_SERVER
+  page id: 8A488AE75D9EFBC9015D9EFD8106065A
+  page name: STR_LADM_ENVIRONMENT_CONFIG
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060658'
+2017-08-01 15:11:06,423 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_PORTALCONFIG' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD81060656
+  name: STR_LADM_PORTALCONFIG
+  description: null'
+2017-08-01 15:11:06,612 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_AUDIT' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106065B
+  name: STR_LADM_AUDIT
+  description: null'
+2017-08-01 15:11:06,784 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_AUDIT_MANAGER' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD8106065C
+  name: STR_LADM_SI_AUDIT_MANAGER
+  description: Exibe informações de auditoria do Portal
+  service id: lumis.service.portalmanagement.audit
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065B
+  channel name: STR_LADM_AUDIT'
+2017-08-01 15:11:07,539 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_AUDIT_ENTRIES' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065D
+  name: STR_LADM_AUDIT_ENTRIES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065B
+  channel name: STR_LADM_AUDIT'
+2017-08-01 15:11:07,543 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_AUDIT_LIST' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE8895081B
+  interface id: lumis.service.portalmanagement.audit.auditEntryList
+  display name: STR_INTERFACE_AUDIT_LIST
+  page id: 8A488AE75D9EFBC9015D9EFD8106065D
+  page name: STR_LADM_AUDIT_ENTRIES
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106065C'
+2017-08-01 15:11:08,247 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_AUDIT_CONFIG' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065E
+  name: STR_LADM_AUDIT_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065B
+  channel name: STR_LADM_AUDIT'
+2017-08-01 15:11:08,251 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_TYPE_CONFIG' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE8B59081F
+  interface id: lumis.service.portalmanagement.audit.auditTypeAdmin
+  display name: STR_INTERFACE_TYPE_CONFIG
+  page id: 8A488AE75D9EFBC9015D9EFD8106065E
+  page name: STR_LADM_AUDIT_CONFIG
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106065C'
+2017-08-01 15:11:08,439 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_AUDIT' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106065B
+  name: STR_LADM_AUDIT
+  description: null'
+2017-08-01 15:11:08,624 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: STR_LADM_SYSTEMINFO' - Description: 'Added channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106065F
+  name: STR_LADM_SYSTEMINFO
+  description: null'
+2017-08-01 15:11:08,816 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: STR_LADM_SI_SYSTEMINFO' - Description: 'Added service instance:
+  id: 8A488AE75D9EFBC9015D9EFD81060660
+  name: STR_LADM_SI_SYSTEMINFO
+  description: Exibe informações do Portal
+  service id: lumis.service.portalmanagement.systeminfo
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065F
+  channel name: STR_LADM_SYSTEMINFO'
+2017-08-01 15:11:09,555 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: STR_LADM_SYSTEMINFO' - Description: 'Added page:
+  id: 8A488AE75D9EFBC9015D9EFD81060661
+  name: STR_LADM_SYSTEMINFO
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065F
+  channel name: STR_LADM_SYSTEMINFO'
+2017-08-01 15:11:09,559 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_SYSTEM_INFORMATION' - Description: 'Added service interface instance
+  id: 8A488AE75D9EFBC9015D9EFE90750827
+  interface id: lumis.service.portalmanagement.systeminfo.systeminfo
+  display name: STR_INTERFACE_SYSTEM_INFORMATION
+  page id: 8A488AE75D9EFBC9015D9EFD81060661
+  page name: STR_LADM_SYSTEMINFO
+  service instance id: 8A488AE75D9EFBC9015D9EFD81060660'
+2017-08-01 15:11:09,744 [] Category: Structure - Type: Update Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated channel: STR_LADM_SYSTEMINFO' - Description: 'Updated channel:
+  id: 8A488AE75D9EFBC9015D9EFD8106065F
+  name: STR_LADM_SYSTEMINFO
+  description: null'
+2017-08-01 15:11:10,123 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_EVENTS_ADMIN' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060646
+  name: STR_LADM_EVENTS_ADMIN
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:11:10,492 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_AUDIT_CONFIG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065E
+  name: STR_LADM_AUDIT_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065B
+  channel name: STR_LADM_AUDIT'
+2017-08-01 15:11:10,860 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SRVCMGR' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605CD
+  name: STR_LADM_SRVCMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605C9
+  channel name: STR_LADM_SRVCMGR'
+2017-08-01 15:11:11,246 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CACHE_PAGE' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060634
+  name: STR_LADM_CACHE_PAGE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:11:11,618 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_PRIVATE_SOCIAL_NETOWRKS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106060D
+  name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060B
+  channel name: STR_LADM_PRIVATE_SOCIAL_NETOWRKS'
+2017-08-01 15:11:11,995 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_GENERATOR_PROFILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060636
+  name: STR_LADM_GENERATOR_PROFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:11:12,379 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_STDPAGES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605EA
+  name: STR_LADM_STDPAGES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E8
+  channel name: STR_LADM_STDPAGES'
+2017-08-01 15:11:12,745 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_DOUI_CTRLTYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060614
+  name: STR_LADM_DOUI_CTRLTYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060612
+  channel name: STR_LADM_DOUI'
+2017-08-01 15:11:13,130 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CSSMGR' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605E3
+  name: STR_LADM_CSSMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E1
+  channel name: STR_LADM_CSSMGR'
+2017-08-01 15:11:13,500 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SECMGR_USERS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FC
+  name: STR_LADM_SECMGR_USERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:11:13,860 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CM_WMANAGER' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DF
+  name: STR_LADM_CM_WMANAGER
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605DD
+  channel name: STR_LADM_CM_WMANAGER'
+2017-08-01 15:11:14,240 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CLUSTER_MEMBERS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106063A
+  name: STR_LADM_CLUSTER_MEMBERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060638
+  channel name: STR_LADM_CLUSTER'
+2017-08-01 15:11:14,613 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SRVCMGR_SRVCTYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DC
+  name: STR_LADM_SRVCMGR_SRVCTYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D9
+  channel name: STR_LADM_SRVCMGR_SRVCTYPES'
+2017-08-01 15:11:14,982 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_WEB_RESOURCE' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605ED
+  name: STR_LADM_WEB_RESOURCE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EB
+  channel name: STR_LADM_WEB_RESOURCE_MANAGER'
+2017-08-01 15:11:15,352 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_IMPEXPLOG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106064F
+  name: STR_LADM_IMPEXPLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:15,734 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SYSTEMINFO' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060661
+  name: STR_LADM_SYSTEMINFO
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065F
+  channel name: STR_LADM_SYSTEMINFO'
+2017-08-01 15:11:16,102 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SEARCH_INDEX' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060611
+  name: STR_LADM_SEARCH_INDEX
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106060F
+  channel name: STR_LADM_SEARCH'
+2017-08-01 15:11:16,457 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CACHE_QUEUES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060635
+  name: STR_LADM_CACHE_QUEUES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:11:16,828 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_LOGFILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060650
+  name: STR_LADM_LOGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:17,204 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_COMPONENTS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106063F
+  name: STR_LADM_COMPONENTS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:11:17,568 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_FILE_MACROTYPE_MAPPING' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D4
+  name: STR_LADM_FILE_MACROTYPE_MAPPING
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:11:17,940 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_FILEMANAGER_FILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D2
+  name: STR_LADM_FILEMANAGER_FILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:11:18,310 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_LOCKS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060625
+  name: STR_LADM_LOCKS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060623
+  channel name: STR_LADM_LOCKS'
+2017-08-01 15:11:18,668 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_QUEUES_CONFIG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060621
+  name: STR_LADM_QUEUES_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:11:19,042 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_EVENTOBSERVERS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106061A
+  name: STR_LADM_EVENTOBSERVERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060618
+  channel name: STR_LADM_PORTALEVENTS'
+2017-08-01 15:11:19,401 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_AUDIT_ENTRIES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065D
+  name: STR_LADM_AUDIT_ENTRIES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106065B
+  channel name: STR_LADM_AUDIT'
+2017-08-01 15:11:19,770 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SECMGR_GROUPS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FD
+  name: STR_LADM_SECMGR_GROUPS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:11:20,129 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_INTERACTIVE_PROCESS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060629
+  name: STR_LADM_INTERACTIVE_PROCESS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060627
+  channel name: STR_LADM_INTERACTIVE_PROCESS'
+2017-08-01 15:11:20,487 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CACHE_GENERATORS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060637
+  name: STR_LADM_CACHE_GENERATORS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060632
+  channel name: STR_LADM_HTML_CACHE'
+2017-08-01 15:11:20,858 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_PORTALCACHE' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106062E
+  name: STR_LADM_PORTALCACHE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:11:21,235 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_WRITERS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060606
+  name: STR_LADM_WRITERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:11:21,608 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CONTEXT' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F6
+  name: STR_LADM_CONTEXT
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F4
+  channel name: STR_LADM_CONTEXT'
+2017-08-01 15:11:21,981 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SECMGR_GROUP_TYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605FE
+  name: STR_LADM_SECMGR_GROUP_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F8
+  channel name: STR_LADM_SECMGR'
+2017-08-01 15:11:22,337 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_MODULES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060640
+  name: STR_LADM_MODULES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:11:22,700 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_EXPORTEDDATA' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605E7
+  name: STR_LADM_EXPORTEDDATA
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605E4
+  channel name: STR_LADM_EXPORTEDDATA'
+2017-08-01 15:11:23,059 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_BANNERLOG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106064E
+  name: STR_LADM_BANNERLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:23,427 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_MENU_TYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D7
+  name: STR_LADM_MENU_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D5
+  channel name: STR_LADM_CONTEXT_MENU'
+2017-08-01 15:11:23,811 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_MENU_GROUP_TYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D8
+  name: STR_LADM_MENU_GROUP_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D5
+  channel name: STR_LADM_CONTEXT_MENU'
+2017-08-01 15:11:24,178 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_THEMES_ADMIN' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F3
+  name: STR_LADM_THEMES_ADMIN
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605F1
+  channel name: STR_LADM_THEMES'
+2017-08-01 15:11:24,545 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_ENVIRONMENT_CONFIG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106065A
+  name: STR_LADM_ENVIRONMENT_CONFIG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:24,924 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CONFIGFILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060604
+  name: STR_LADM_CONFIGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:11:25,283 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_READERS' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060605
+  name: STR_LADM_READERS
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:11:25,645 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CLOCK_MANAGER' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106061D
+  name: STR_LADM_CLOCK_MANAGER
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061B
+  channel name: STR_LADM_SCHEDULED_TASKS'
+2017-08-01 15:11:25,998 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_JAVAMELODY' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060647
+  name: STR_LADM_JAVAMELODY
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060643
+  channel name: STR_LADM_MONITOR'
+2017-08-01 15:11:26,360 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_SNAPPLICATIONMGR' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106060A
+  name: STR_LADM_SNAPPLICATIONMGR
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060608
+  channel name: STR_LADM_SOCIALNETWORKS'
+2017-08-01 15:11:26,727 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_MIMETYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605D3
+  name: STR_LADM_MIMETYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605CE
+  channel name: STR_LADM_FILEMANAGER'
+2017-08-01 15:11:27,099 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_MAILLOG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060651
+  name: STR_LADM_MAILLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:27,443 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CONFIGFILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060659
+  name: STR_LADM_CONFIGFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060656
+  channel name: STR_LADM_PORTALCONFIG'
+2017-08-01 15:11:27,812 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_REPLICATION' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060631
+  name: STR_LADM_REPLICATION
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062F
+  channel name: STR_LADM_REPLICATION'
+2017-08-01 15:11:28,189 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_QUEUES_MANAGE' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060622
+  name: STR_LADM_QUEUES_MANAGE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106061E
+  channel name: STR_LADM_QUEUES'
+2017-08-01 15:11:28,550 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_WEBSITES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605F0
+  name: STR_LADM_WEBSITES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605EE
+  channel name: STR_LADM_WEBSITES'
+2017-08-01 15:11:28,915 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_OPTIONS_MAILSRV' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060617
+  name: STR_LADM_OPTIONS_MAILSRV
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060615
+  channel name: STR_LADM_MAILMANAGER'
+2017-08-01 15:11:29,274 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_PACKAGES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060641
+  name: STR_LADM_PACKAGES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106063B
+  channel name: STR_LADM_DEPLOY'
+2017-08-01 15:11:29,645 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_XMLFILES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060607
+  name: STR_LADM_XMLFILES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605FF
+  channel name: STR_LADM_IMPORTPRINCIPAL'
+2017-08-01 15:11:29,999 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_REPORTTYPE' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060655
+  name: STR_LADM_REPORTTYPE
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060653
+  channel name: STR_LADM_REPORT'
+2017-08-01 15:11:30,356 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_CACHE_XSL' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD8106062D
+  name: STR_LADM_CACHE_XSL
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD8106062A
+  channel name: STR_LADM_CACHE'
+2017-08-01 15:11:30,736 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_NAVIGLOG' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD81060652
+  name: STR_LADM_NAVIGLOG
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD81060648
+  channel name: STR_LADM_PORTALLOGS'
+2017-08-01 15:11:31,082 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: STR_LADM_INTERFACE_TYPES' - Description: 'Updated page:
+  id: 8A488AE75D9EFBC9015D9EFD810605DB
+  name: STR_LADM_INTERFACE_TYPES
+  description: null
+  channel id: 8A488AE75D9EFBC9015D9EFD810605D9
+  channel name: STR_LADM_SRVCMGR_SRVCTYPES'
+2017-08-01 15:11:31,321 [] Category: Structure - Type: Add Channel - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added channel: Auto Administration Channel' - Description: 'Added channel:
+  id: 00000000F00000000000000000000002
+  name: Auto Administration Channel
+  description: Channel that contains the Auto Administration Default page.'
+2017-08-01 15:11:31,520 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: Auto Administration' - Description: 'Added service instance:
+  id: 00000000E00000000000000000000002
+  name: Auto Administration
+  description: Hidden Auto Administration Service Instance
+  service id: lumis.service.autoadministration
+  channel id: 00000000F00000000000000000000002
+  channel name: Auto Administration Channel'
+2017-08-01 15:11:32,264 [] Category: Structure - Type: Add Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added page: Dashboard' - Description: 'Added page:
+  id: 00000000E00000000000000000000001
+  name: Dashboard
+  description: Dashboard
+  channel id: 00000000F00000000000000000000002
+  channel name: Auto Administration Channel'
+2017-08-01 15:11:32,266 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_HOLDER_NAME' - Description: 'Added service interface instance
+  id: 00000000E00000000000000000000003
+  interface id: lumis.service.autoadministration.interfaceHolder
+  display name: STR_INTERFACE_HOLDER_NAME
+  page id: 00000000E00000000000000000000001
+  page name: Dashboard
+  service instance id: 00000000E00000000000000000000002'
+2017-08-01 15:11:32,267 [] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service interface instance: STR_INTERFACE_NAVIGATION_NAME' - Description: 'Added service interface instance
+  id: 00000000E00000000000000000000004
+  interface id: lumis.service.autoadministration.navigation
+  display name: STR_INTERFACE_NAVIGATION_NAME
+  page id: 00000000E00000000000000000000001
+  page name: Dashboard
+  service instance id: 00000000E00000000000000000000002'
+2017-08-01 15:11:32,629 [] Category: Structure - Type: Update Page - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Updated page: Dashboard' - Description: 'Updated page:
+  id: 00000000E00000000000000000000001
+  name: Dashboard
+  description: Dashboard
+  channel id: 00000000F00000000000000000000002
+  channel name: Auto Administration Channel'
+2017-08-01 15:11:32,808 [] Category: Structure - Type: Add Service Instance - User: 00000000D00000000000000000000005 lumissystemuser - Title: 'Added service instance: Default Administration' - Description: 'Added service instance:
+  id: 8A488A39382EAF6301382EAF63AC0000
+  name: Default Administration
+  description: Default Administration Service Instance
+  service id: lumis.service.autoadministration
+  channel id: 00000000F00000000000000000000001
+  channel name: Portal'
+2017-08-01 15:18:37,010 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_DEPLOY_MODULE' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0564440063
+  interface id: lumis.service.portalmanagement.deployment.deployModule
+  display name: STR_DEPLOY_MODULE
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063D'
+2017-08-01 15:18:37,203 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_EDIT_IMAGE' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0565110065
+  interface id: lumis.service.doui.fileupload.editimage.editimage
+  display name: STR_EDIT_IMAGE
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: null'
+2017-08-01 15:19:27,883 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_DEPLOYMENT_SUMMARY' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F062B080073
+  interface id: lumis.service.portalmanagement.deployment.deploymentSummary
+  display name: STR_DEPLOYMENT_SUMMARY
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063D'
+2017-08-01 15:19:30,228 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Module - User: 00000000D00000000000000000000001 admin - Title: 'Added module: Qualicorp RedeNaRede Estrutura' - Description: 'Added module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:19:30,365 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_DETAILS' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0634B601FB
+  interface id: lumis.service.portalmanagement.interactiveprocess.details
+  display name: STR_DETAILS
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: null'
+2017-08-01 15:19:32,990 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:19:33,620 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:19:56,174 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Module - User: 00000000D00000000000000000000001 admin - Title: 'Added module: Qualicorp RedeNaRede' - Description: 'Added module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 15:19:56,201 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,202 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,203 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,205 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,206 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,257 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.login' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,258 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,260 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:19:56,262 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,466 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,522 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 15:20:01,523 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,524 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,526 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,527 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,531 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,532 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,533 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,535 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:01,688 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 15:20:05,035 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:06,533 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:06,965 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:07,781 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:08,607 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:09,234 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:09,797 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:10,940 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:11,561 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,534 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 15:20:13,537 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,538 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,539 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,540 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,541 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,543 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,545 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,546 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:20:13,548 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 15:26:23,316 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_UPLOAD_FILE' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0C81D20F74
+  interface id: lumis.service.portalmanagement.filesystem.uploadFile
+  display name: STR_UPLOAD_FILE
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E6'
+2017-08-01 15:27:57,338 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_IMPORT' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0DF1150FA6
+  interface id: lumis.service.portalmanagement.importexport.import
+  display name: STR_IMPORT
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: null'
+2017-08-01 15:28:00,715 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_IMPORT' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0DFE4A0FAD
+  interface id: lumis.service.portalmanagement.serialization.import
+  display name: STR_IMPORT
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: null'
+2017-08-01 15:28:28,739 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_IMPORT_PROGRESS' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0E6BC20FB7
+  interface id: lumis.service.portalmanagement.serialization.importProgress
+  display name: STR_IMPORT_PROGRESS
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: null'
+2017-08-01 15:30:00,268 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_DEPLOYED_MODULES_DETAILS' - Description: 'Added service interface instance
+  id: 8A488AE75D9F03A5015D9F0FD1490FD9
+  interface id: lumis.service.portalmanagement.deployment.moduleDetails
+  display name: STR_DEPLOYED_MODULES_DETAILS
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063D'
+2017-08-01 15:31:13,557 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:31:17,289 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:31:17,557 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:31:56,545 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:31:58,063 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:31:58,267 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:32:30,589 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:32:32,199 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:32:32,488 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:38:16,070 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.estrutura' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede Estrutura(br.com.qualicorp.redenarede.estrutura)'
+2017-08-01 15:38:16,071 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:38:17,353 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:38:17,391 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.estrutura' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede Estrutura(br.com.qualicorp.redenarede.estrutura)'
+2017-08-01 15:38:24,157 [0:0:0:0:0:0:0:1] Category: Content - Type: Add Content Version - User: 00000000D00000000000000000000001 admin - Title: 'Added content version: 
+Cadastro' - Description: 'Added content version: 
+  id: 8A488AE75D9F03A5015D9F1781832410
+  primaryName: Cadastro
+  versionNumber: 1'
+2017-08-01 15:38:24,208 [0:0:0:0:0:0:0:1] Category: Content - Type: Add Content Version - User: 00000000D00000000000000000000001 admin - Title: 'Added content version: 
+Esqueci Senha' - Description: 'Added content version: 
+  id: 8A488AE75D9F03A5015D9F1781AE2424
+  primaryName: Esqueci Senha
+  versionNumber: 1'
+2017-08-01 15:38:25,449 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.estrutura' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede Estrutura(br.com.qualicorp.redenarede.estrutura)'
+2017-08-01 15:38:26,006 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede Estrutura' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Name: Qualicorp RedeNaRede Estrutura'
+2017-08-01 15:38:26,008 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.estrutura' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.estrutura
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede Estrutura(br.com.qualicorp.redenarede.estrutura)'
+2017-08-01 17:21:30,421 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_ADD_PAGE_LINK' - Description: 'Added service interface instance
+  id: 8A488AE75D9F7528015D9F75E6A60052
+  interface id: lumis.service.portalmanagement.pagelink.add
+  display name: STR_ADD_PAGE_LINK
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E9'
+2017-08-01 17:22:13,148 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_REGISTER_NEW_SERVICE' - Description: 'Added service interface instance
+  id: 8A488AE75D9F7528015D9F768D990071
+  interface id: lumis.service.portalmanagement.service.registerNewService
+  display name: STR_REGISTER_NEW_SERVICE
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605CC'
+2017-08-01 17:41:49,378 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 17:41:49,402 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 17:41:52,398 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 17:41:52,493 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 17:41:53,051 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 17:41:54,673 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 17:41:54,675 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:02:01,418 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:02:01,422 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:02:04,266 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:02:04,365 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:02:04,534 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:02:05,380 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:02:05,382 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:05:26,998 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:05:27,000 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:05:44,176 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:05:44,257 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:05:44,409 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-01 18:05:45,561 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-01 18:05:45,563 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'

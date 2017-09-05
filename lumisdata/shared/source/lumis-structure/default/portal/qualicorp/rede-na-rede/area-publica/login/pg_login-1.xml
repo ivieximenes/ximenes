@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>2C96A66853B531AE0154B9B595907A40</id>
+  <name>Login</name>
+  <hidden>true</hidden>
+  <position>5</position>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout>
+    <holder id="menu">
+        <interface id="2C96A66853B531AE0154B9B597937A5C"></interface>
+        <interface id="2C96A66853B531AE0154B9B597987A5D"></interface>
+    </holder>
+    <holder id="busca">
+        <interface id="2C96A66853B531AE0154B9B5979A7A5E"></interface>
+    </holder>
+    <holder id="conteudo">
+        <interface id="2C96A66853B531AE0154B9B671647AFB"></interface>
+        <interface id="2C96A66853B531AE0154B9B5979D7A5F"></interface>
+    </holder>
+</layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9B597937A5C</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.uservalidation</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9B597987A5D</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9B5979A7A5E</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9B5979D7A5F</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <applied-interface-style-id>loginHibrido</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>2C96A66853B531AE0154B9B671647AFB</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.ancora_login_hibrido</interface-id>
+    </interface-instance>
+  </interface-instances>
+</page>

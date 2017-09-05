@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 14514 $ $Date: 2012-07-20 16:51:45 -0300 (Fri, 20 Jul 2012) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_tabs"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_tabs"
+	xmlns:control="http://www.lumis.com.br/douicontrols"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:import namespace="http://www.lumis.com.br/douicontrols" schemaLocation="../douicontrolsdefinition.xsd"/>
+
+	<xsd:complexType name="lum_tabs">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:sequence>
+					<xsd:element name="tab" type="tab" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>
+								Used to represent a tab
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="height" type="xsd:integer">
+					<xsd:annotation>
+						<xsd:documentation>Used to specify the height of the tabbed control.  When the different tabs are of different heights, this value forces all child tabs to be of the given height.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="tab">
+		<xsd:complexContent>
+			<xsd:extension base="control:lum_controls">
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+				<xsd:attribute name="height" type="xsd:string" use="optional"/>
+				<xsd:attribute name="onClick" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Specify a script that may be executed when the tab is clicked</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oauth>
+	<!-- DESENVOLVIMENTO -->
+	<!--CLIENT_ID>qualicorp</CLIENT_ID-->
+	<!--CLIENT_SECRET>oauthHomologQC</CLIENT_SECRET-->
+	<!--OAUTH_URL>https://homolog.prontmed.com</OAUTH_URL-->
+	<!-- HOMOLOGAÇÃO -->
+	<CLIENT_ID>gsp</CLIENT_ID>
+	<CLIENT_SECRET>oauthHomologGSP</CLIENT_SECRET>
+	<OAUTH_URL>https://gamasaudegsp.prontmed.com</OAUTH_URL>
+	<REDIRECT_URI>http://localhost:8081/prontmed/login</REDIRECT_URI>
+	<!-- PRODUÇÃO -->
+    <!--CLIENT_ID>gsp</CLIENT_ID-->
+	<!--CLIENT_SECRET>oauthGSP</CLIENT_SECRET-->
+	<!--OAUTH_URL>https://gamasaudegsp.prontmed.com</OAUTH_URL-->
+</oauth>

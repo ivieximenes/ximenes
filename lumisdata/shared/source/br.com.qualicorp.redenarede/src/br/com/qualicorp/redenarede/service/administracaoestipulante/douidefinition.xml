@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"  xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service>
+		<sources>
+			<source id="qc_estipulante" type="table">
+				<table>qc_estipulante</table>
+				<fields>
+					<field id="idestipulante"  name="idEstipulante" dataType="guid" required="true" isPrimaryKey="true" display="false" />
+					<field id="codigo" name="Código do Estipulante na Operadora" dataType="number" minimumValue="0" isSearchable="true" />
+					<field id="subestipulante" name="Código do Subestipulante na Operadora" dataType="integer" minimumValue="0" isSearchable="true" /> 
+					<field id="nome" name="Nome do Subestipulante" dataType="string" required="true" isPrimaryName="true" isSearchable="true" />
+				</fields>
+			</source>
+		</sources>
+	</service>
+	<interfaces>
+		<interface id="administration">
+			<sources>
+				<source id="qc_estipulante" readData="always">
+					<fields>
+						<field id="codigo"/>
+						<field id="subestipulante" />	
+						<field id="nome"/>
+					</fields>
+					<filters>
+						<filter id="codigo"/>
+						<filter id="nome" operator="like"/>
+					</filters>
+					<orderBy>
+						<field direction="ascending" id="codigo"/>
+					</orderBy>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_inputHidden id="serviceIdLogAuditFilter" sourceId="none" />
+				
+					<control:lum_interfaceHeader/>
+					<control:lum_interfaceHeaderButtons>
+						<control:lum_addButton interfaceId="add" isPrimary="true"/>
+						<control:lum_button id="associarBeneficiarios" text="Associar beneficiários">
+							<onClick type="popupRunTimeInterface" keepParentActive="true">
+								<interfaceId>importAssociacao</interfaceId>
+							</onClick>
+						</control:lum_button>
+						<control:lum_editButton interfaceId="edit"/>
+						<control:lum_deleteButton />
+
+						<control:lum_button id="btLogAuditGeral" text="Log de Auditoria">
+							<onClick type="popupRunTimeInterface" openRuntimeInterfaceBehavior="replace">
+								<interfaceId>br.com.qualicorp.redenarede.service.auditoria.administracao</interfaceId>
+								<addParameters>
+		                        	<parameter name="adminList.filters.serviceId.value">
+		                        		<value controlId="serviceIdLogAuditFilter" type="getValue" />
+		                        	</parameter>
+								</addParameters>
+							</onClick>
+						</control:lum_button>
+						<control:lum_button id="btLogAudit" text="Log de Auditoria">
+							<rowAction />
+							<onClick type="popupRunTimeInterface" openRuntimeInterfaceBehavior="replace">
+								<interfaceId>br.com.qualicorp.redenarede.service.auditoria.administracao</interfaceId>
+								<addParameters>
+									<parameter name="adminList.filters.itemId.value">
+										<value controlId="lum_adminList.tabulardata" type="firstSelected" />
+									</parameter>
+		                        	<parameter name="adminList.filters.serviceId.value">
+		                        		<value controlId="serviceIdLogAuditFilter" type="getValue" />
+		                        	</parameter>
+								</addParameters>
+							</onClick>
+						</control:lum_button>
+					</control:lum_interfaceHeaderButtons>
+					<control:lum_adminList />
+					<control:lum_script>
+						<script>
+							$( document ).ready(function() {
+								$(".lum-header-checkbox").next().css("width", "260px");
+								
+								$("input[id*='filters.codigo']").attr("maxlength", 8);
+								$("input[id*='filters.codigo']").attr("style", "width:80px");
+								
+								$("input[id*='filters.nome']").attr("maxlength", 100); 
+								
+								$("input[id*='filters.codigo']").keydown(function() {
+										<![CDATA[
+									  if (event.keyCode == '189' || event.keyCode == '190' || event.keyCode == '110') {
+									     event.preventDefault();
+									     return false;
+									   }
+									   
+									    // Allow: backspace, delete, tab, escape, enter and .
+								        if ($.inArray(event.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+								             // Allow: Ctrl+A, Command+A
+								            (event.keyCode == 65 && ( event.ctrlKey === true || event.metaKey === true ) ) || 
+								             // Allow: home, end, left, right, down, up
+								            (event.keyCode >= 35 && event.keyCode <= 40)) {
+								                 // let it happen, don't do anything
+								                 return;
+								        }
+								        // Ensure that it is a number and stop the keypress
+								        if ((event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) && (event.keyCode < 96 || event.keyCode > 105)) {
+								            event.preventDefault();
+								        }
+					        			]]>
+				        			});
+							});
+						</script>
+					</control:lum_script>	
+				</control:lum_form>	
+			</controls>
+			<processActions>
+				<processAction id="delete" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler" />
+				<processAction id="delete" className="br.com.qualicorp.redenarede.service.administracaoestipulante.processaction.DeleteEstipulanteProcessActionHandler"/>
+				<processAction id="delete" type="tableDeleteData" >
+					<response type="doui_refreshParent"/>
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="add">
+			<sources>
+				<source id="qc_estipulante">
+					<fields>
+						<field id="codigo" maxLength="8" maxSize="8" minimumValue="1" />
+						<field id="subestipulante" />
+						<field id="nome"/>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_propertyPage>
+						<control:lum_controlGroup title="STR_BASIC_INFORMATION" visualAid="true">
+							<control:lum_autoLayoutFields/>	
+						</control:lum_controlGroup>	
+					</control:lum_propertyPage>
+					<control:lum_script>
+						<script>
+							$( document ).ready(function() {
+								$("#codigo").attr("maxlength", 8);
+								$("#nome").attr("maxlength", 100);
+								
+								
+								
+								$("#codigo, #subestipulante")
+								.css("width", "80px")
+								.keydown(function() {
+										<![CDATA[
+									  if (event.keyCode == '189' || event.keyCode == '190' || event.keyCode == '110') {
+									     event.preventDefault();
+									     return false;
+									   }
+									   
+									    // Allow: backspace, delete, tab, escape, enter and .
+								        if ($.inArray(event.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+								             // Allow: Ctrl+A, Command+A
+								            (event.keyCode == 65 && ( event.ctrlKey === true || event.metaKey === true ) ) || 
+								             // Allow: home, end, left, right, down, up
+								            (event.keyCode >= 35 && event.keyCode <= 40)) {
+								                 // let it happen, don't do anything
+								                 return;
+								        }
+								        // Ensure that it is a number and stop the keypress
+								        if ((event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) && (event.keyCode < 96 || event.keyCode > 105)) {
+								            event.preventDefault();
+								        }
+					        			]]>
+				        			});
+								
+							});
+							
+						</script>
+					</control:lum_script>	
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.administracaoestipulante.processaction.AddEstipulanteProcessActionHandler"/>
+				<processAction id="commit" type="tableAddData" >
+					<response type="doui_standardCommit"/>
+				</processAction>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler" />
+			</processActions>
+		</interface>
+		
+		<interface id="edit">
+			<sources>
+				<source id="qc_estipulante" readData="always">
+					<fields inherit="all">
+						<field id="codigo">
+							<defaultInputControl>
+								<control:lum_inputNumber readonly="true" style="width:80px" />
+							</defaultInputControl>
+						</field>
+						<field id="subestipulante">
+							<defaultInputControl>
+								<control:lum_inputNumber readonly="true" style="width:80px" />
+							</defaultInputControl>
+						</field>
+						<field id="nome" />
+					</fields>
+					<filters>
+						<filter id="idestipulante" required="true" hidden="true"/>
+					</filters>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_filters id="filters"/>
+					<control:lum_propertyPage>
+						<control:lum_controlGroup title="STR_BASIC_INFORMATION" visualAid="true">
+							<control:lum_autoLayoutFields/>	
+						</control:lum_controlGroup>	
+					</control:lum_propertyPage>
+					<control:lum_script>
+						<script>
+							$( document ).ready(function() {
+								$("#codigo").attr("maxlength", 8);
+								$("#subestipulante").attr("maxlength", 8);
+								$("#nome").attr("maxlength", 100);
+							});
+							
+						</script>
+					</control:lum_script>	
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.administracaoestipulante.processaction.EditEstipulanteProcessActionHandler"/>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler" />
+				<processAction id="commit" type="tableUpdateData" >
+					<response type="doui_standardCommit"/>
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="importAssociacao">
+			<sources>
+				<source id="qc_estipulante">
+					<fields>
+						<field id="useHeader" name="O arquivo utiliza header? (igonorar a primeira linha)" dataType="boolean" />
+						<field id="charset" name="Charset" dataType="string" required="true" defaultValue="ISO-8859-1">
+							<options>
+								<option value="ISO-8859-1">ISO-8859-1</option>
+								<option value="UTF-8">UTF-8</option>
+							</options>
+						</field>
+						<field id="arquivo" name="Arquivo CSV" dataType="string" required="true">
+							<defaultInputControl>
+								<control:lum_fileUpload />
+							</defaultInputControl>
+						</field>
+					</fields>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form id="importAssociacao">
+					<control:lum_propertyPage renderButtonsType="none" renderRequiredValuesDescriptor="false">
+						<control:lum_controlGroup>
+							<control:lum_autoLayoutFields />
+						</control:lum_controlGroup>
+						
+						<control:lum_footer>
+							<control:lum_requiredValuesDescriptor />
+								<control:lum_interfaceButtons>
+									<control:lum_okButton id="okBT">
+										<onClick type="validate" />
+										<onClick type="script">
+											<script>window.importBtOkHandler();</script>
+										</onClick>
+									</control:lum_okButton>
+									<control:lum_cancelButton />
+								</control:lum_interfaceButtons>
+						</control:lum_footer>
+					</control:lum_propertyPage>
+				</control:lum_form>
+			</controls>
+		</interface>
+	</interfaces>
+</doui:douiDefinition>

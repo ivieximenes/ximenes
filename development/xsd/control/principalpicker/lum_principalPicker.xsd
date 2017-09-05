@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 8381 $ $Date: 2007-10-11 11:20:27 -0300 (Thu, 11 Oct 2007) $ -->
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.lumis.com.br/douicontrols/lum_principalPicker"
+	xmlns="http://www.lumis.com.br/douicontrols/lum_principalPicker"
+	elementFormDefault="unqualified">
+	
+	<xsd:include schemaLocation="../douibasecontrol.xsd" />
+	
+	<xsd:complexType name="lum_principalPicker">
+		<xsd:complexContent>
+			<xsd:extension base="lum_dataBoundControl">
+				<xsd:attribute name="showType" type="showType" use="optional" default="all">
+					<xsd:annotation>
+						<xsd:documentation>Used to specify the type of principals to be shown.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="showType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="all">
+				<xsd:annotation>
+					<xsd:documentation>Used to show all principals.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="groups">
+				<xsd:annotation>
+					<xsd:documentation>Used to show only group principals.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="users">
+				<xsd:annotation>
+					<xsd:documentation>Used to show only user principals.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="lum_serviceInstancePrincipalPicker">
+		<xsd:complexContent>
+			<xsd:extension base="lum_principalPicker">
+				<xsd:attribute name="limitToPermissionId" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If specified only principals that have the given permission will be available for selection</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

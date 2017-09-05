@@ -1,0 +1,130 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Layout File</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?layoutfile.htm"; }
+  else { parent.quicksync('a8.8'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Layout File</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="acessibilidadedicas.htm">Previous</a>&nbsp;
+     <a href="layoutfilenamespacepage.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>O <span style="font-style: italic;">Layout File</span> é um arquivo <span style="font-style: italic;">HTML</span> que define a apresentação de uma página. Ao adicionar ou editar as propriedades de uma página é possível configurar como seu conteúdo final será montado conforme os tópicos "<a href="paginagerais.htm">Administração de Páginas</a>" e "<a href="canalpaginas.htm">Administração de Canais</a>". Se a opção escolhida for "<span style="font-style: italic;">Arquivo de Layout</span>" a página irá utilizar o <span style="font-style: italic;">HTML</span> informado transformando seu conteúdo estático em conteúdo dinâmico, conforme as configurações da página. O arquivo HTML deve ser colocado no <span style="font-style: italic;">classpath</span> (pode ser na aplicação web do portal ou em um <a href="deployment.htm">módulo instalado no portal</a>), em <span style="font-style: italic;">lumisdata/def</span> ou no diretório <span style="font-style: italic;">def</span> de um <a href="temas.htm">tema</a>.</p>
+<p>&nbsp;</p>
+<p>Qualquer arquivo <span style="font-style: italic;">HTML</span> pode ser um L<span style="font-style: italic;">ayout File</span>, sem a necessidade de ser um <span style="font-style: italic;">XHTML</span>, mas é preciso que seu conteúdo seja válido. Por exemplo, a <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;table&gt;</span> precisa ser fechada mas a <span style="font-style: italic;">tag</span> <span style="font-style: italic;">&lt;br&gt;</span> não precisa. </p>
+<p>&nbsp;</p>
+<p>Para realizar a transformação das informações estáticas em informações dinâmicas é necessário adicionar marcadores no <span style="font-style: italic;">HTML. </span>Os marcadores definem quais informações estáticas devem ser transformadas em informações dinâmicas e como a transformação deve ocorrer. A informação estática original é considerada um <span style="font-style: italic;">HTML</span> de exemplo, e deve ser mantida no <span style="font-style: italic;">Layout File</span> com objetivo de facilitar a prototipação das páginas. </p>
+<p>&nbsp;</p>
+<p>Os marcadores do <span style="font-style: italic;">Layout File</span> se distinguem das <span style="font-style: italic;">tags</span> e atributos do <span style="font-style: italic;">HTML</span> através de <span style="font-style: italic;">namespaces</span>. Existem dois <span style="font-style: italic;">namespaces</span> possíveis:</p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>http://www.lumis.com.br/lumisportal/xsd/layoutfile/page: Define <span style="font-style: italic;">tags</span> e atributos relacionados à página;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>http://www.lumis.com.br/lumisportal/xsd/layoutfile/el: Define <span style="font-style: italic;">tags</span> e atributos permitindo inclusão de <span style="font-style: italic;">Expression Language</span> na página.</td></tr></table></div><p>&nbsp;</p>
+<p>O principal marcador do <span style="font-style: italic;">Layout File</span> é a <span style="font-style: italic;">tag</span> "<span style="font-style: italic;">page:holder"</span>. Esta <span style="font-style: italic;">tag</span> é utilizada para definir qual elemento do <span style="font-style: italic;">HTML </span>será utilizado para definir uma área onde se pode arrastar as <span style="font-style: italic;">instâncias de interface</span> na página. </p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table align="center" width="523" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="488" style="width:488px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Exemplo</span> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="590" style="width:590px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;html&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;head&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;title&gt;Página&nbsp;de&nbsp;Exemplo&lt;/title&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;style&nbsp;type="text/css"&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">.box&nbsp;{&nbsp;margin:20px;&nbsp;width:&nbsp;450px;&nbsp;height:&nbsp;200px;&nbsp;border:&nbsp;1px&nbsp;dotted&nbsp;black;&nbsp;}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;/style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/head&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;body&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;h1&gt;Página&nbsp;de&nbsp;Exemplo&lt;/h1&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;div&nbsp;page:holder="area_1"&nbsp;class="box"&gt;Área&nbsp;1&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;div&nbsp;page:holder="area_2"&nbsp;class="box"&gt;Área&nbsp;2&lt;/div&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/body&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/html&gt;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table align="center" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102" style="width:102px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observações</span></p>
+</td>
+<td valign="top" width="330" style="width:330px; border: solid 1px #000000;"><p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p>É esperado que o arquivo <span style="font-style: italic;">HTML</span> utilizado como <span style="font-style: italic;">Layout File</span> esteja salvo com <span style="font-style: italic;">encoding</span> <span style="font-style: italic;">UTF-8</span>.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p>Caso o portal esteja configurado para rodar em ambiente de desenvolvimento as <span style="font-style: italic;">tags</span> e atributos do <span style="font-style: italic;">Layout File</span> não são omitidos no resultado do <span style="font-style: italic;">HTML</span> final.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" valign="top" width="432" style="width:432px; border: solid 1px #000000;"><p>&nbsp;</p>
+<p>Os arquivos utilizados como <span style="font-style: italic;">Layout File</span> são armazenados em <span style="font-style: italic;">cache.</span> O intervalo de verificação de alteração dos arquivos pode ser configurado no <a href="lumisportalconfig.htm#layoutfile">LumisPortalConfig</a>.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

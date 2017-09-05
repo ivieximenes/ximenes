@@ -1,0 +1,76 @@
+/* $Revision: 16544 $ $Date: 2014-10-27 11:16:49 -0200 (Mon, 27 Oct 2014) $ */
+
+.lum-hierarchicalcontent-vertical-simple {
+	background:#fff;
+	border:1px solid #e5e2da;
+	border-radius:3px;
+	padding:8px;
+}
+/*1st lvl*/
+.lum-hierarchicalcontent-vertical-simple ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.lum-hierarchicalcontent-vertical-simple ul li {
+	border-bottom:1px solid #dbdbdb;
+}
+.lum-hierarchicalcontent-vertical-simple ul li.lum-last {
+	border-bottom:0;
+}
+.lum-hierarchicalcontent-vertical-simple ul a {
+	display:block;
+	padding:8px 16px 8px 6px;
+	margin-right:-8px;
+	outline:none;
+	font-weight:bold;
+	cursor:pointer;
+	color:#ba2a2a;
+}
+.lum-hierarchicalcontent-vertical-simple ul li a:hover {
+	background-color:#fde9da;
+	text-decoration:none;
+}
+/*selected*/
+.lum-hierarchicalcontent-vertical-simple ul li.lum-menu-selected,
+.lum-hierarchicalcontent-vertical-simple ul li.lum-menu-breadcrumb {
+	position:relative;
+}
+.lum-hierarchicalcontent-vertical-simple > ul > li.lum-menu-selected > a,
+.lum-hierarchicalcontent-vertical-simple > ul > li.lum-menu-breadcrumb > a {
+	background:#b82a2a;
+	color:#fff;
+}
+/*rightarrow outside*/
+.lum-hierarchicalcontent-vertical-simple > ul > li.lum-menu-selected:after,
+.lum-hierarchicalcontent-vertical-simple > ul > li.lum-menu-breadcrumb:after {
+	content:"";
+	border:4px solid transparent;
+	border-left:7px solid #b82a2a;
+	position:absolute;
+	z-index:2;
+	left:100%;
+	top:1em;
+	margin-left:8px;
+}
+/*2nd lvl*/
+.lum-hierarchicalcontent-vertical-simple ul li ul {
+	background:#f9f9f9;
+	padding:4px 8px 4px 12px;
+	margin-right:-8px;
+}
+.lum-hierarchicalcontent-vertical-simple ul ul li {
+	border-bottom:0;
+}
+.lum-hierarchicalcontent-vertical-simple ul ul li a {
+	font-weight:normal;
+	padding:6px 0 6px 4px;
+}
+.lum-hierarchicalcontent-vertical-simple ul li.lum-menu-selected ul li a {
+	color:#ba2a2a;
+}
+/*3rd+ lvl*/
+.lum-hierarchicalcontent-vertical-simple ul li ul ul {
+	padding:4px 0;
+	margin:0 0 0 8px;
+}

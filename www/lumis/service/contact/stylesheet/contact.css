@@ -1,0 +1,26 @@
+/* $Revision: 15611 $ $Date: 2013-07-19 13:21:02 -0300 (Fri, 19 Jul 2013) $ */
+
+.lumis-service-contact-contactList .lum-interface-buttons .lum-button {
+	background:none;
+	border:0;
+	border-radius:0;
+	box-shadow:0 0 0 0;
+	color:#ba2a2a;
+	display:inline-block;
+	font-size:inherit;
+	font-weight:bold;
+	padding:4px 10px;
+	text-decoration:none;
+}
+.lumis-service-contact-contactList .lum-interface-buttons .lum-button:hover {
+	text-decoration:underline;
+	box-shadow:0 0 0 0;
+}
+.lumis-service-contact-contactList .lum-interface-buttons .lum-selected {
+	font-weight:bold;
+	padding: 4px 10px;
+	display: inline-block;
+}
+.lumis-service-contact-contactList .lum-interface-buttons {
+	text-align:left;
+}

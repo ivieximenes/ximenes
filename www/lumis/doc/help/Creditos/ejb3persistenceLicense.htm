@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>New Item</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+</head>
+
+<body><FONT size=2>
+<P><FONT face="Courier New">Specification: JSR-000220 Enterprise JavaBeans v.3.0 
+("Specification")</FONT></P>
+<P><FONT face="Courier New">Version: 3.0</FONT></P>
+<P><FONT face="Courier New">Status: Final Release</FONT></P>
+<P><FONT face="Courier New">Release: 8 May 2006</FONT></P>
+<P><FONT face="Courier New">Copyright 2006 SUN MICROSYSTEMS, INC.</FONT></P>
+<P><FONT face="Courier New">4150 Network Circle, Santa Clara, California 95054, 
+U.S.A</FONT></P>
+<P><FONT face="Courier New">All rights reserved.</FONT></P>
+<P><FONT face="Courier New">LIMITED LICENSE GRANTS</FONT></P>
+<P><FONT face="Courier New">1. _License for Evaluation Purposes_. Sun hereby 
+grants you a fully-paid, non-exclusive, non-transferable,</FONT></P>
+<P><FONT face="Courier New">worldwide, limited license (without the right to 
+sublicense), under Sun’s applicable intellectual</FONT></P>
+<P><FONT face="Courier New">property rights to view, download, use and reproduce 
+the Specification only for the purpose of internal</FONT></P>
+<P><FONT face="Courier New">evaluation. This includes (i) developing 
+applications intended to run on an implementation of the 
+Specification,</FONT></P>
+<P><FONT face="Courier New">provided that such applications do not themselves 
+implement any portion(s) of the Specification,</FONT></P>
+<P><FONT face="Courier New">and (ii) discussing the Specification with any third 
+party; and (iii) excerpting brief portions of the</FONT></P>
+<P><FONT face="Courier New">Specification in oral or written communications 
+which discuss the Specification provided that such excerpts</FONT></P>
+<P><FONT face="Courier New">do not in the aggregate constitute a significant 
+portion of the Specification.</FONT></P>
+<P><FONT face="Courier New">2. _License for the Distribution of Compliant 
+Implementations_. Sun also grants you a perpetual, nonexclusive,</FONT></P>
+<P><FONT face="Courier New">non-transferable, worldwide, fully paid-up, royalty 
+free, limited license (without the right to</FONT></P>
+<P><FONT face="Courier New">sublicense) under any applicable copyrights or, 
+subject to the provisions of subsection 4 below, patent</FONT></P>
+<P><FONT face="Courier New">rights it may have covering the Specification to 
+create and/or distribute an Independent Implementation</FONT></P>
+<P><FONT face="Courier New">of the Specification that: (a) fully implements the 
+Specification including all its required interfaces and</FONT></P>
+<P><FONT face="Courier New">functionality; (b) does not modify, subset, superset 
+or otherwise extend the Licensor Name Space, or include</FONT></P>
+<P><FONT face="Courier New">any public or protected packages, classes, Java 
+interfaces, fields or methods within the Licensor</FONT></P>
+<P><FONT face="Courier New">Name Space other than those required/authorized by 
+the Specification or Specifications being implemented;</FONT></P>
+<P><FONT face="Courier New">and (c) passes the Technology Compatibility Kit 
+(including satisfying the requirements of the</FONT></P>
+<P><FONT face="Courier New">applicable TCK Users Guide) for such Specification 
+("Compliant Implementation"). In addition, the</FONT></P>
+<P><FONT face="Courier New">foregoing license is expressly conditioned on your 
+not acting outside its scope. No license is granted</FONT></P>
+<P><FONT face="Courier New">hereunder for any other purpose (including, for 
+example, modifying the Specification, other than to the</FONT></P>
+<P><FONT face="Courier New">extent of your fair use rights, or distributing the 
+Specification to third parties). Also, no right, title, or</FONT></P>
+<P><FONT face="Courier New">interest in or to any trademarks, service marks, or 
+trade names of Sun or Sun’s licensors is granted hereunder.</FONT></P>
+<P><FONT face="Courier New">Java, and Java-related logos, marks and names are 
+trademarks or registered trademarks of Sun Microsystems,</FONT></P>
+<P><FONT face="Courier New">Inc. in the U.S. and other countries.</FONT></P>
+<P><FONT face="Courier New">3. _Pass-through Conditions_. You need not include 
+limitations (a)-(c) from the previous paragraph or</FONT></P>
+<P><FONT face="Courier New">any other particular "pass through" requirements in 
+any license You grant concerning the use of your Independent</FONT></P>
+<P><FONT face="Courier New">Implementation or products derived from it. However, 
+except with respect to Independent Implementations</FONT></P>
+<P><FONT face="Courier New">(and products derived from them) that satisfy 
+limitations (a)-(c) from the previous</FONT></P>
+<P><FONT face="Courier New">paragraph, You may neither: (a) grant or otherwise 
+pass through to your licensees any licenses under</FONT></P>
+<P><FONT face="Courier New">Sun’s applicable intellectual property rights; nor 
+(b) authorize your licensees to make any claims concerning</FONT></P>
+<P><FONT face="Courier New">their implementation’s compliance with the 
+Specification in question.</FONT></P>
+<P><FONT face="Courier New">4. _Reciprocity Concerning Patent 
+Licenses_.</FONT></P>
+<P><FONT face="Courier New">a. With respect to any patent claims covered by the 
+license granted under subparagraph 2 above that</FONT></P>
+<P><FONT face="Courier New">would be infringed by all technically feasible 
+implementations of the Specification, such license is conditioned</FONT></P>
+<P><FONT face="Courier New">upon your offering on fair, reasonable and 
+non-discriminatory terms, to any party seeking it</FONT></P>
+<P><FONT face="Courier New">from You, a perpetual, non-exclusive, 
+non-transferable, worldwide license under Your patent rights</FONT></P>
+<P><FONT face="Courier New">which are or would be infringed by all technically 
+feasible implementations of the Specification to develop,</FONT></P>
+<P><FONT face="Courier New">distribute and use a Compliant 
+Implementation.</FONT></P>
+<P><FONT face="Courier New">b With respect to any patent claims owned by Sun and 
+covered by the license granted under subparagraph</FONT></P>
+<P><FONT face="Courier New">2, whether or not their infringement can be avoided 
+in a technically feasible manner when implementing</FONT></P>
+<P><FONT face="Courier New">the Specification, such license shall terminate with 
+respect to such claims if You initiate a claim against</FONT></P>
+<P><FONT face="Courier New">Sun that it has, in the course of performing its 
+responsibilities as the Specification Lead, induced any other</FONT></P>
+<P><FONT face="Courier New">entity to infringe Your patent rights.</FONT></P>
+<P><FONT face="Courier New">c Also with respect to any patent claims owned by 
+Sun and covered by the license granted under subparagraph</FONT></P>
+<P><FONT face="Courier New">2 above, where the infringement of such claims can 
+be avoided in a technically feasible manner</FONT></P>
+<P><FONT face="Courier New">when implementing the Specification such license, 
+with respect to such claims, shall terminate if You</FONT></P>
+<P><FONT face="Courier New">initiate a claim against Sun that its making, having 
+made, using, offering to sell, selling or importing a</FONT></P>
+<P><FONT face="Courier New">Compliant Implementation infringes Your patent 
+rights.</FONT></P>
+<P><FONT face="Courier New">5. _Definitions_. For the purposes of this 
+Agreement: "Independent Implementation" shall mean an implementation</FONT></P>
+<P><FONT face="Courier New">of the Specification that neither derives from any 
+of Sun’s source code or binary code materials</FONT></P>
+<P><FONT face="Courier New">nor, except with an appropriate and separate license 
+from Sun, includes any of Sun’s source code</FONT></P>
+<P><FONT face="Courier New">or binary code materials; "Licensor Name Space" 
+shall mean the public class or interface declarations</FONT></P>
+<P><FONT face="Courier New">whose names begin with "java", "javax", "com.sun" or 
+their equivalents in any subsequent naming convention</FONT></P>
+<P><FONT face="Courier New">adopted by Sun through the Java Community Process, 
+or any recognized successors or replacements</FONT></P>
+<P><FONT face="Courier New">thereof; and "Technology Compatibility Kit" or "TCK" 
+shall mean the test suite and</FONT></P>
+<P><FONT face="Courier New">accompanying TCK User’s Guide provided by Sun which 
+corresponds to the Specification and that was</FONT></P>
+<P><FONT face="Courier New">available either (i) from Sun 120 days before the 
+first release of Your Independent Implementation that</FONT></P>
+<P><FONT face="Courier New">allows its use for commercial purposes, or (ii) more 
+recently than 120 days from such release but against</FONT></P>
+<P><FONT face="Courier New">which You elect to test Your implementation of the 
+Specification.</FONT></P>
+<P><FONT face="Courier New">This Agreement will terminate immediately without 
+notice from Sun if you breach the Agreement or act</FONT></P>
+<P><FONT face="Courier New">outside the scope of the licenses granted 
+above.</FONT></P>
+<P><FONT face="Courier New">DISCLAIMER OF WARRANTIES</FONT></P>
+<P><FONT face="Courier New">THE SPECIFICATION IS PROVIDED "AS IS". SUN MAKES NO 
+REPRESENTATIONS OR WARRANTIES,</FONT></P>
+<P><FONT face="Courier New">EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+TO, WARRANTIES</FONT></P>
+<P><FONT face="Courier New">OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+PURPOSE, NONINFRINGEMENT</FONT></P>
+<P><FONT face="Courier New">(INCLUDING AS A CONSEQUENCE OF ANY PRACTICE OR 
+IMPLEMENTATION</FONT></P>
+<P><FONT face="Courier New">OF THE SPECIFICATION), OR THAT THE CONTENTS OF THE 
+SPECIFICATION ARE</FONT></P>
+<P><FONT face="Courier New">SUITABLE FOR ANY PURPOSE. This document does not 
+represent any commitment to release or implement</FONT></P>
+<P><FONT face="Courier New">any portion of the Specification in any product. In 
+addition, the Specification could include technical</FONT></P>
+<P><FONT face="Courier New">inaccuracies or typographical errors.</FONT></P>
+<P><FONT face="Courier New">LIMITATION OF LIABILITY</FONT></P>
+<P><FONT face="Courier New">TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT 
+WILL SUN OR ITS LICENSORS</FONT></P>
+<P><FONT face="Courier New">BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT 
+LIMITATION, LOST REVENUE,</FONT></P>
+<P><FONT face="Courier New">PROFITS OR DATA, OR FOR SPECIAL, INDIRECT, 
+CONSEQUENTIAL, INCIDENTAL OR PUNITIVE</FONT></P>
+<P><FONT face="Courier New">DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY 
+OF LIABILITY,</FONT></P>
+<P><FONT face="Courier New">ARISING OUT OF OR RELATED IN ANY WAY TO YOUR HAVING, 
+IMPLEMENTING OR</FONT></P>
+<P><FONT face="Courier New">OTHERWISE USING THE SPECIFICATION, EVEN IF SUN 
+AND/OR ITS LICENSORS HAVE</FONT></P>
+<P><FONT face="Courier New">BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES.</FONT></P>
+<P><FONT face="Courier New">You will indemnify, hold harmless, and defend Sun 
+and its licensors from any claims arising or resulting</FONT></P>
+<P><FONT face="Courier New">from: (i) your use of the Specification; (ii) the 
+use or distribution of your Java application, applet and/or</FONT></P>
+<P><FONT face="Courier New">implementation; and/or (iii) any claims that later 
+versions or releases of any Specification furnished to</FONT></P>
+<P><FONT face="Courier New">you are incompatible with the Specification provided 
+to you under this license.</FONT></P>
+<P><FONT face="Courier New">RESTRICTED RIGHTS LEGEND</FONT></P>
+<P><FONT face="Courier New">U.S. Government: If this Specification is being 
+acquired by or on behalf of the U.S. Government or by a</FONT></P>
+<P><FONT face="Courier New">U.S. Government prime contractor or subcontractor 
+(at any tier), then the Government’s rights in the</FONT></P>
+<P><FONT face="Courier New">Software and accompanying documentation shall be 
+only as set forth in this license; this is in accordance</FONT></P>
+<P><FONT face="Courier New">with 48 C.F.R. 227.7201 through 227.7202-4 (for 
+Department of Defense (DoD) acquisitions) and with</FONT></P>
+<P><FONT face="Courier New">48 C.F.R. 2.101 and 12.212 (for non-DoD 
+acquisitions).</FONT></P>
+<P><FONT face="Courier New">REPORT</FONT></P>
+<P><FONT face="Courier New">If you provide Sun with any comments or suggestions 
+concerning the Specification ("Feedback"), you</FONT></P>
+<P><FONT face="Courier New">hereby: (i) agree that such Feedback is provided on 
+a non-proprietary and non-confidential basis, and (ii)</FONT></P>
+<P><FONT face="Courier New">grant Sun a perpetual, non-exclusive, worldwide, 
+fully paid-up, irrevocable license, with the right to sublicense</FONT></P>
+<P><FONT face="Courier New">through multiple levels of sublicensees, to 
+incorporate, disclose, and use without limitation the</FONT></P>
+<P><FONT face="Courier New">Feedback for any purpose.</FONT></P>
+<P><FONT face="Courier New">GENERAL TERMS</FONT></P>
+<P><FONT face="Courier New">Any action related to this Agreement will be 
+governed by California law and controlling U.S. federal law.</FONT></P>
+<P><FONT face="Courier New">The U.N. Convention for the International Sale of 
+Goods and the choice of law rules of any jurisdiction</FONT></P>
+<P><FONT face="Courier New">will not apply.</FONT></P>
+<P><FONT face="Courier New">The Specification is subject to U.S. export control 
+laws and may be subject to export or import regulations</FONT></P>
+<P><FONT face="Courier New">in other countries. Licensee agrees to comply 
+strictly with all such laws and regulations and acknowledges</FONT></P>
+<P><FONT face="Courier New">that it has the responsibility to obtain such 
+licenses to export, re-export or import as may be</FONT></P>
+<P><FONT face="Courier New">required after delivery to Licensee.</FONT></P>
+<P><FONT face="Courier New">This Agreement is the parties’ entire agreement 
+relating to its subject matter. It supersedes all prior or</FONT></P>
+<P><FONT face="Courier New">contemporaneous oral or written communications, 
+proposals, conditions, representations and warranties</FONT></P>
+<P><FONT face="Courier New">and prevails over any conflicting or additional 
+terms of any quote, order, acknowledgment, or other communication</FONT></P>
+<P><FONT face="Courier New">between the parties relating to its subject matter 
+during the term of this Agreement. No modification</FONT></P>
+<P><FONT face="Courier New">to this Agreement will be binding, unless in writing 
+and signed by an authorized representative</FONT></P>
+<P><FONT face="Courier New">of each party.</FONT></P>
+<P><FONT face="Courier New">Rev. April, 2006</FONT></P>
+<P><FONT face="Courier New">Sun/Final/Full</FONT></P></FONT></body>
+</html>

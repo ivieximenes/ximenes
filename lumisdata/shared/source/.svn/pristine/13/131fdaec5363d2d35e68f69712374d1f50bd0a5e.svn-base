@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050A1A02C0150A1C5043F2FAF</id>
+  <interface-id>lumis.service.news.list</interface-id>
+  <name>Rede na Rede - Notícias</name>
+  <file-path>lumis/service/news/style/noticias.xsl</file-path>
+</interface-style>

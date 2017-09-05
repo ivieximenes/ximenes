@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Tarefas Agendadas</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?tarefas_agendadas.htm"; }
+  else { parent.quicksync('a7.4.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Tarefas Agendadas</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="eventosportal.htm">Previous</a>&nbsp;
+     <a href="configuracoes_dos_servidores.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Através do <span style="font-style: italic;">Gerenciador de Tarefas Agendadas</span> é possível visualizar todos os <span style="font-style: italic;">clocks</span> do <span style="font-style: italic;">framework</span> do portal.</p>
+<p>&nbsp;</p>
+<p>Segue a figura abaixo:</p>
+<p style="text-align: left;"><img src="portaladm179.jpg" width="900" height="359" border="0" alt="portalAdm179"></p>
+<p>&nbsp;</p>
+<p>O <span style="font-style: italic;">clock</span> é a implementação de execução de determinada tarefa para determinado serviço. Por exemplo, o <span style="font-style: italic;">clock</span> do <span style="font-style: italic;">serviço E-mail Marketing</span>, dispara o <span style="font-style: italic;">mail</span> na data e hora pré-determinados. </p>
+<p>&nbsp;</p>
+<p>Os <span style="font-style: italic;">clocks</span> listados são aqueles pertencentes aos serviços registrados no portal. Uma vez removido o registro do serviço, o seu <span style="font-style: italic;">clock</span> ou <span style="font-style: italic;">clocks</span> correspondentes também serão removidos do <span style="font-style: italic;">Gerenciador de Tarefas </span>automaticamente.</p>
+<p>&nbsp;</p>
+<p>Serviços customizados podem utilizar <span style="font-style: italic;">clocks</span>. Para isso, devem implementar uma classe <span style="font-style: italic;">java</span> que estende <span style="font-style: italic;"><a href="../api/lumis/portal/service/GenericServiceClock.html" target="_blank" class="weblink">GenericServiceClock</a></span>. A classe da implementação do <span style="font-style: italic;">clock</span> deve ainda ser definida no <span style="font-style: italic;">servicedefinition.xml</span> do serviço customizado. Ao registrar o serviço, o <span style="font-style: italic;">clock</span> é listado no <span style="font-style: italic;">gerenciador de tarefas agendadas</span>.</p>
+<p>&nbsp;</p>
+<p>É possível também através do <span style="font-style: italic;">Gerenciador</span>, <span style="font-style: italic;">Habilitar</span>, <span style="font-style: italic;">Desabilitar</span> e <span style="font-style: italic;">Resetar</span> um <span style="font-style: italic;">clock</span>. Por <span style="font-style: italic;">default</span>, os <span style="font-style: italic;">clocks</span> já são habilitados e com intervalos pré-definidos em minutos para execução de determinadas tarefas. A partir daí, podem ser desabilitados para que não executem mais tais tarefas, até o momento de serem habilitados novamente. </p>
+<p>&nbsp;</p>
+<p>Através da coluna <span style="font-style: italic;">Executando</span> é possível verificar os <span style="font-style: italic;">clocks</span> que estão marcados no banco de dados como "em execução". É possível, que por algum erro, o processo não esteja mais executando, mas fique marcado no banco de dados como "em execução". Nesses casos o <span style="font-style: italic;">clock</span> fica preso até que ocorra <span style="font-style: italic;">timeout</span> de sua execução. Assim, a execução do <span style="font-style: italic;">clock</span> será liberada automaticamente. Caso o administrador já tenha certeza de que a <span style="font-style: italic;">thread</span> do <span style="font-style: italic;">clock</span> não esteja executando e não queira esperar pelo <span style="font-style: italic;">timeout</span> é possível executar o botão <span style="font-style: italic;">Resetar</span>, que faz com que o estado do <span style="font-style: italic;">clock</span> seja marcado no banco de dados como não executando.</p>
+<p>&nbsp;</p>
+<p>Na maioria dos casos, os <span style="font-style: italic;">clocks</span> executam suas tarefas rapidamente. Portanto, a informação "Sim" para <span style="font-style: italic;">Executando</span> é quase imperceptível quando a data e hora da <span style="font-style: italic;">Próxima Execução </span>é alcançada.</p>
+<p>&nbsp;</p>
+<p>Cada <span style="font-style: italic;">clock</span> tem uma <span style="font-style: italic;">duração máxima</span> de execução. Se por acaso, um <span style="font-style: italic;">clock</span> ficar no estado executando por muito tempo, quando o tempo de duração máxima é atingido, a <span style="font-style: italic;">thread</span> que o executa é reiniciado automaticamente (similar à função <span style="font-style: italic;">Reset</span>).</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

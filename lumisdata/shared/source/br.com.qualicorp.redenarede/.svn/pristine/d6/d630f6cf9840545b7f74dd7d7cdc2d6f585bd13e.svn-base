@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>40286DB251816DDB015181736FDB01B1</id>
+  <name>Internas 1 coluna - Beneficiário</name>
+  <template>true</template>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>logado-internas.html</layout-file>
+  <layout><![CDATA[<layout><holder id="logo"><interface id="40286DB251816DDB0151817370DA01C0"/></holder><holder id="menu"><interface id="40286DB251816DDB0151817370E701C1"/></holder><holder id="busca"><interface id="40286DB251816DDB0151817370F501C2"/></holder><holder id="logout"><interface id="40286DB251816DDB0151817370FE01C3"/></holder><holder id="conteudo"><interface id="40286DB251816DDB01518173712501C6"/></holder><holder id="outras_noticias"><interface id="40286DB251816DDB01518173713E01C8"/></holder></layout>]]></layout>
+  <ssi-enabled>false</ssi-enabled>
+  <interface-instances>
+    <interface-instance>
+      <id>40286DB251816DDB0151817370DA01C0</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.beneficiario</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817370E701C1</id>
+      <service-instance-id>8A489E1F50AE95AA0150B8AD856D33B9</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817370F501C2</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB0151817370FE01C3</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.logout</interface-id>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB01518173712501C6</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>1</holder-priority>
+    </interface-instance>
+    <interface-instance>
+      <id>40286DB251816DDB01518173713E01C8</id>
+      <interface-id>lumis.service.portalmanagement.serviceinterfaceinstance.interfaceHolder</interface-id>
+      <holder-priority>2</holder-priority>
+    </interface-instance>
+  </interface-instances>
+</page>

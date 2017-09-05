@@ -1,0 +1,417 @@
+/* $Revision: 16014 $ $Date: 2013-11-18 18:19:22 -0200 (Mon, 18 Nov 2013) $ */
+.lum-structure{
+	padding:0;
+	margin:0 0 0 15px;
+	list-style-type:none;
+	margin-top:10px;
+}
+
+.lum-structure ul{
+	padding:0;
+	margin:0 0 0 20px;
+	list-style-type:none;
+	margin-top:10px;
+}
+
+.lum-structure li{
+	position:relative;
+	margin-bottom:10px;
+}
+
+.root-item{
+	background-color:#f7f7f7 !important;
+}
+
+.channel > .structureitem{
+	background: url(../image/channel.png) no-repeat left 10px top 8px;
+}
+
+.channel-template > .structureitem{
+	background:url(../image/channel-template.png) no-repeat left 8px top 6px;
+}
+
+.page > .structureitem{
+	background:url(../image/page.png) no-repeat left 10px center;
+}
+
+.page-template > .structureitem{
+	background:url(../image/page-template.png) no-repeat left 8px top 6px;
+}
+
+.serviceinstance > .structureitem{
+	background:url(../image/service.png) no-repeat left 10px top 8px;
+}
+
+.structureitem{
+	display:inline-block;
+	border:1px solid #d1d1d1;
+	border-radius:3px;
+	width:190px;
+	font-size:12px;
+	font-weight:bold;
+	color:#909090;
+	padding:6px 10px 6px 30px;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.focus > .structureitem{
+	background-color:#f7f7f7 !important;
+	border:1px solid #626262;
+	color:#464646;
+}
+
+.focus.serviceinstance > .structureitem{
+	background:url(../image/service-focus.png) no-repeat left 10px top 8px;
+}
+
+.focus.page > .structureitem{
+	background:url(../image/page-focus.png) no-repeat left 10px top 8px;
+}
+
+.focus.page-template > .structureitem{
+	background:url(../image/page-template-focus.png) no-repeat left 8px top 6px;
+}
+
+.focus.channel > .structureitem{
+	background:url(../image/channel-focus.png) no-repeat left 10px top 8px;
+}
+
+.focus.channel-template > .structureitem{
+	background:url(../image/channel-template-focus.png) no-repeat left 8px top 6px;
+}
+
+.channel-closed > span.channel-toggle{
+	background:url(../image/open.png) no-repeat 0px 0px;
+	/*content:url(../image/open.png);*/
+}
+.channel-opened > span.channel-toggle{
+	background:url(../image/close.png) no-repeat 0px 0px;
+	/*content:url(../image/close.png);*/
+}
+.channel-closed > ul{
+	display: none;
+}
+.channel-toggle,.channel-spacer{
+	display: inline-block;
+	left: -15px;
+	position: absolute;
+	top: 9px;
+	width: 11px;
+	height: 11px;
+}
+.channel-toggle{
+	cursor: pointer;
+}
+
+.actions{
+	position: absolute;
+	top: 0px;
+	display: none;
+}
+
+span.actions > span{
+	display:inline-block;
+	text-indent:-9999px;
+	margin-left:7px;
+	height:24px;
+	width:26px;
+	cursor: pointer;
+}
+
+.focus > span.actions{
+	display: inline;
+}
+
+span.actions > span.move-left{
+	background: url(../image/left.png) no-repeat center center;
+}
+
+span.actions > span.move-up{
+	background: url(../image/up.png) no-repeat center center;
+}
+
+span.actions > span.move-down{
+	background: url(../image/down.png) no-repeat center center;
+}
+
+span.actions > span.move-right{
+	background: url(../image/right.png) no-repeat center center;
+}
+
+span.actions > span.move-left,
+span.actions > span.move-up,
+span.actions > span.move-down,
+span.actions > span.move-right{
+	width:12px;
+}
+
+span.actions > span.add{
+	background: url(../image/add-item.png) no-repeat center center;
+}
+
+span.actions > span.remove{
+	background: url(../image/del.png) no-repeat center center;
+	width:14px;
+}
+
+/* add new items */
+.add-entry-select-type > span.structureitem > ul{
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	margin-left: 0px;
+	border:1px solid #d1d1d1;
+	border-radius:3px;
+	font-size:12px;
+	color:#909090;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	background-color: #FFF;
+	z-index: 9999;
+}
+
+.add-entry-select-type > span.structureitem > ul > li{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	width: 190px;
+	padding: 8px 10px;
+}
+
+.add-entry-select-type > span.structureitem{
+	color: #ff9703;
+	border-color: #ff9703;
+	background:url(../image/add.png) no-repeat left 12px center;
+}
+
+.add-entry-select-type > span.actions{
+	display: inline;
+}
+
+.add-entry-select-type > span.structureitem > ul > li{
+	cursor: pointer;
+	height: 15px;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.currently-selected-option{
+	background-color: #FFF0CC;
+}
+
+.add-entry-select-type > span.structureitem > ul > li > span.icon,
+.add-entry-select-type > span.structureitem > ul > li > span.text{
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.add-entry-select-type > span.structureitem > ul > li > span.icon{
+	width: 20px;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.new-channel > span.icon{
+	background:url(../image/channel.png) no-repeat left 2px center;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.new-page > span.icon{
+	background:url(../image/page.png) no-repeat left 2px center;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.new-service-instance > span.icon{
+	background:url(../image/service.png) no-repeat left 2px center;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.new-channel-template > span.icon{
+	background:url(../image/channel-template.png) no-repeat left 0px center;
+}
+
+.add-entry-select-type > span.structureitem > ul > li.new-page-template > span.icon{
+	background:url(../image/page-template.png) no-repeat left 0px center;
+}
+
+.add-entry-select-type > span.actions > span.remove{
+	background: url(../image/del.png) no-repeat center center;
+	width:14px;
+	padding: 5px 0px 0px 0px;
+}
+
+.insert-title > span.structureitem,
+.select-service > span.structureitem,
+.change-title > span.structureitem{
+    height: 27px;
+    width: 31px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.insert-title > span.title-entry,
+.change-title > span.title-entry,
+.select-service > span.select-service-filter{
+    height: 27px;
+    width: 173px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+	border-radius:3px;
+	border-color: #ff9703;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0px 10px 0px 10px;
+}
+
+.insert-title > span.title-entry > input,
+.change-title > span.title-entry > input,
+.select-service > span.select-service-filter > input{
+    border: none;
+	outline: none;
+	height: 100%;
+	padding: 6px 0px 6px 0px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.insert-title > span.actions,
+.change-title > span.actions{
+	display: inline-block;
+}
+
+.insert-title > span.actions > span.ok,
+.change-title > span.actions > span.ok{
+	text-indent: 0px;
+	padding: 6px;
+	height: 100%;
+	background-color:#f7f7f7;
+	border:1px solid #d1d1d1;
+	border-radius: 3px;
+	width: auto;
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#909090;
+}
+
+.insert-title > span.actions > span.remove,
+.change-title > span.actions > span.remove{
+	vertical-align: middle;
+}
+
+
+.select-service > span.select-service-filter.no-service-found > ul{
+	display: none;
+}
+
+.select-service > span.select-service-filter.no-service-found span{
+	display: block;
+}
+
+.select-service > span.select-service-filter > span{
+	display: none;
+}
+
+.select-service > span.select-service-filter > ul,
+.select-service > span.select-service-filter > span {
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	border: 1px #d1d1d1 solid;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 3px;
+	margin: 3px 0px 0px 0px;
+	padding: 0px;
+	width: 315px;
+	max-height: 150px;
+	overflow: hidden;
+}
+
+.select-service > span.select-service-filter{
+	position: relative;
+}
+
+.select-service > span.select-service-filter > ul > li,
+.select-service > span.select-service-filter > span > span{
+	padding: 6px;
+	margin: 5px 0px 5px 0px;
+}
+
+.select-service > span.select-service-filter > ul > li:hover,
+.select-service > span.select-service-filter > ul > li.currently-selected-service{
+	background-color: #FFF0CC;
+	cursor: pointer;
+}
+
+
+.select-service > span.select-service-filter > ul > li > span.service-image{
+	vertical-align: top;
+	display: inline-block;
+	border: 1px #d1d1d1 solid;
+	border-radius: 3px;
+	margin-right: 5px;
+	width: 27px;
+	height: 27px;
+	padding: 2px;
+}
+
+.select-service > span.select-service-filter > ul > li > span.service-image > img{
+	width: 100%;
+	height: 100%;
+}
+
+.select-service > span.select-service-filter > ul > li > span.service-information{
+	vertical-align: top;
+	display: inline-block;
+	width: 245px;
+}
+
+.select-service > span.select-service-filter > ul > li > span.service-information > span.service-select-title{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	font-weight: bold;
+}
+
+.select-service > span.select-service-filter > ul > li > span.service-information > span.service-select-description{
+	display: block;
+}
+
+li.serviceinstance.insert-title > span.structureitem{
+	padding: 6px 10px 6px 30px;
+	font-size: 12px;
+	height: auto;
+	white-space: nowrap;
+	width: 190px;
+	text-overflow: ellipsis;
+}
+
+li.serviceinstance.select-service > span.actions{
+	display: inline;
+}
+
+div.help{
+	border: 1px solid #D2D2D2;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 90%;
+}
+
+div.help > div.header{
+	background-color: #F7F7F7;
+	font-weight: bold;
+}
+
+div.help > div{
+	border-bottom: 1px solid #D2D2D2;
+	padding: 8px;
+}
+
+div.help > div.lum-last{
+	border: none;
+}
+
+div.help > div > span{
+	display: block;
+}
+
+div.help > div > span.action-title{
+	font-weight: bold;
+	display: block;
+}

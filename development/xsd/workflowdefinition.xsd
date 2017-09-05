@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16605 $ $Date: 2014-11-11 19:43:51 -0200 (Tue, 11 Nov 2014) $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<xsd:complexType name="workflow">
+		<xsd:annotation>
+			<xsd:documentation> Defines a workflow. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="description" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation> The description of the workflow. May be a key for a
+						string to be translated by this workflow's string resources.
+						</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="roles">
+				<xsd:annotation>
+					<xsd:documentation> Lists the roles that exist for this workflow.
+						</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="1" maxOccurs="unbounded"
+							name="role">
+							<xsd:annotation>
+								<xsd:documentation> The definition of a role in this
+									workflow. </xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute name="id" type="xsd:string" use="required">
+									<xsd:annotation>
+										<xsd:documentation> The id of the role. Must be
+											unique between all roles in this workflow.
+											</xsd:documentation>
+									</xsd:annotation>
+								</xsd:attribute>
+								<xsd:attribute name="name" type="xsd:string" use="required">
+									<xsd:annotation>
+										<xsd:documentation> The display name of the
+											role. May be a key for a string to be
+											translated by this workflow's string
+											resources. </xsd:documentation>
+									</xsd:annotation>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="actionHandlers" type="actionHandlers" />
+			<xsd:element name="states" type="states">
+				<xsd:annotation>
+					<xsd:documentation> This element lists the states that exist in this
+						workflow. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation> The id of the workflow. Must be a unique id between all
+					workflows in the portal. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="name" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation> The display name of the workflow. May be a key for a
+					string to be translated by this workflow's string resources.
+					</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="states">
+		<xsd:annotation>
+			<xsd:documentation> Defines a list of workflow states. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="1" maxOccurs="unbounded" name="state"
+				type="state">
+				<xsd:annotation>
+					<xsd:documentation> This element defines a workflow state.
+						</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="actionHandlers">
+		<xsd:annotation>
+			<xsd:documentation>Defines a list of action handlers. These handlers will be called when either the state or assigned to field changes. If this tag is not specified a default action handler WorkflowSendMailActionHandler is used.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="actionHandler" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>This element must contain the class name of an action handler</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="state">
+		<xsd:annotation>
+			<xsd:documentation> A workflow state definition. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="description" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation> The description of the state. May be a key for a
+						string to be translated by this workflow's string resources.
+						</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="color">
+				<xsd:annotation>
+					<xsd:documentation> This element defines colors for this state.
+						</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="light" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation> This element defines strong color
+									for this state. Its value should be a HTML valid color
+									value. </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="strong" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation> This element defines the strong
+									color for this state. Its value should be a HTML valid
+									color value. </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="image">
+				<xsd:annotation>
+					<xsd:documentation> This element defines icon images for this state.
+						</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="small" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation> This element defines the small
+									icon image for this state. It should be a path
+									relative to the web application root.
+									</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="large" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation> This element defines the large
+									icon image for this state. It should be a path
+									relative to the web application root.
+									</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="permissions" type="statePermissions">
+				<xsd:annotation>
+					<xsd:documentation> This element defines the roles that have
+						permission to access the contents in this state.
+						</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transitions" type="transitions">
+				<xsd:annotation>
+					<xsd:documentation> This element defines the transitions available
+						for contents in this state. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation> The id of the state. Must be unique between all states
+					in this workflow. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="name" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation> The display name of the state. May be a key for a string
+					to be translated by this workflow's string resources.
+					</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isStart" type="xsd:boolean" default="false">
+			<xsd:annotation>
+				<xsd:documentation> Indicates if this state is the start state of the workflow.
+				The default value is false.
+					</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isArchived" type="xsd:boolean" default="false">
+			<xsd:annotation>
+				<xsd:documentation> Indicates if this state stored archived contents.
+				When a published content ends its publication period, its state is changed to the
+				workflow's isArchived state that is directly reachable from its current state. 
+				The default value is false.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isPublished" type="xsd:boolean" default="false">
+			<xsd:annotation>
+				<xsd:documentation> Indicates if this state represents a published state.
+					Contents that are not in a published state may not be published.
+					The default value is false.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="permissions">
+		<xsd:annotation>
+			<xsd:documentation> Specifies the permissions for a workflow resource.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="permission">
+				<xsd:annotation>
+					<xsd:documentation> A permission specification. It is composed of
+						and id and a scope. The id is a workflow role id. The scope defines if
+						users in that role has permission only if the content is assigned to
+						the user, one of his groups or noone; or if users in that role has
+						permission to access all contents regardless of their assigned
+						to. </xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="id" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The role id for this permission. Must be
+								equal to the id of a role defined for the workflow.
+								</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="scope" type="scopeTypes" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The scope for this permission.
+								</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+		<xsd:complexType name="statePermissions">
+		<xsd:annotation>
+			<xsd:documentation> Specifies the permissions for a workflow resource.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="permission">
+				<xsd:annotation>
+					<xsd:documentation>
+						A permission specification. It is composed of
+						id and a scope. The id is a workflow role id. 
+						The scope defines the users in that role a proper permission. There are four Scope types to be explained below.
+						 - assignedTo - . The scope defines if users in that role has permission only if the content is assigned to
+						the user, one of his groups or none; - all - . If users in that role has
+						permission to access all contents regardless of their assigned
+						to; - viewCreatedBy - . If users in that role has permission to view only his contents, but 
+						 without permission to edit them or create a new content; - viewAll - If users in that role has permission to view all contents but 
+						 without permission to edit them or create a new content.
+						</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="id" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The role id for this permission. Must be
+								equal to the id of a role defined for the workflow.
+								</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="scope" type="stateScopeTypes" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The scope for this permission.
+								</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="transitions">
+		<xsd:annotation>
+			<xsd:documentation> Specifies a list of transitions. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="transition">
+				<xsd:complexType>
+					<xsd:annotation>
+						<xsd:documentation> Specify a transition. </xsd:documentation>
+					</xsd:annotation>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="description" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation> The description of the transition. May be a key for a string to be translated by this workflow's string resources. </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="finalState">
+							<xsd:annotation>
+								<xsd:documentation> The final state for this transition. Must be equal to the id of a workflow state. </xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:attribute name="id" type="xsd:string" use="required">
+									<xsd:annotation>
+										<xsd:documentation> The id of the final state for this transition. Must be equal to the id of a workflow state. </xsd:documentation>
+									</xsd:annotation>
+									
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="permissions" type="permissions">
+							<xsd:annotation>
+								<xsd:documentation> This element defines the roles that have
+									permission to perform this transition. If this element 
+									is not present,	the same permissions defined in 
+									this transition's source state is applied, but only in case of assingnedTo or all. When the
+									state scope is defined as viewAll or viewCreatedBy, the transition permission must be present.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The id of the transition. Must be unique between all transitions in this workflow. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="name" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation> The display name of the transition. May be a key for a string to be translated by this workflow's string resources. </xsd:documentation>
+						</xsd:annotation>
+						
+					</xsd:attribute>
+					<xsd:attribute name="lockAction" type="lockActionTypes" use="optional" default="unlock">
+						<xsd:annotation>
+							<xsd:documentation>The action that should be taken when this transition in the workflow occurs.  Has unlock as default value.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="lockActionTypes">
+		<xsd:restriction base="xsd:string">
+	    	<xsd:enumeration value="unlock">
+				<xsd:annotation>
+					<xsd:documentation>Automatically unlocks from the content when executing the transition.</xsd:documentation>
+				</xsd:annotation>
+	    	</xsd:enumeration>
+			<xsd:enumeration value="keepCurrent">
+				<xsd:annotation>
+					<xsd:documentation>Will keep the current lock state on the content when moving from one state of the workflow 
+						to the next if the user that locked it has access to the content in the next state of the workflow.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+	    </xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="scopeTypes">
+		<xsd:annotation>
+			<xsd:documentation> The possible scopes of a
+				permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="assignedTo">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows are given
+						only when the content is assigned to the user, one of his groups, or
+						none.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="all">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows are given to
+						all contents, regardless of whom the content is assigned
+						to.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+<xsd:simpleType name="stateScopeTypes">
+		<xsd:annotation>
+			<xsd:documentation> The possible scopes of a
+				permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="assignedTo">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows are given
+						only when the content is assigned to the user, one of his groups, or
+						none.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="all">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows are given to
+						all contents, regardless of whom the content is assigned
+						to.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="viewAll">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows the user
+					to see all contents, however is not allowed to edit none of them or create a new one.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="viewCreatedBy">
+				<xsd:annotation>
+					<xsd:documentation> Permissions with this scope allows the user
+					to see only the contents it has created, however is not allowed 
+					to edit none of them or create a new one.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="workflowDefinition">
+		<xsd:annotation>
+			<xsd:documentation> The workflowDefinition element is the root element of a
+				workflow definition XML file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="workflow" type="workflow" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Element used to define a workflow.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

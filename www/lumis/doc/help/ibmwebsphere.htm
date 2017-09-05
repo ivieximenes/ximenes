@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>IBM Websphere Application Server 8.5</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?ibmwebsphere.htm"; }
+  else { parent.quicksync('a3.5.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Este tópico descreve como o <span style="font-style: italic;">Lumis Portal </span>deve ser instalado no servidor <span style="font-style: italic;">Websphere. </span>Este tópico é um complemento para <a href="passosinstalacao.htm">Passos para a instalação</a>, que deve ser lido primeiro.</p>
+<p style="margin: 8px 0px 0px 0px;">Pode ser necessário a atualização do servidor de aplicação <span style="font-style: italic;">Websphere</span> com seus devidos pacotes de correções para o funcionamento correto do ambiente.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração de memória do servidor</span></p>
+<p style="margin: 8px 0px 0px 0px;">A <span style="font-style: italic;">JVM</span> que irá executar o portal deve ser configurada com quantidade apropriada de memória. A configuração padrão utilizada pelo <span style="font-style: italic;">Websphere</span> pode não ser suficiente.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Bibliotecas globais</span></p>
+<p style="margin: 8px 0px 0px 0px;">Criar pasta <span style="font-style: italic;">&lt;WAS_HOME&gt;/profiles/&lt;profile-name&gt;/classes</span> e copiar para ela o arquivo <span style="font-style: italic;">&lt;LUMIS_HOME&gt;/www/WEB-INF/lib/webservices-rt-1.5.jar</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">&nbsp;</p>
+<p><span style="font-weight: bold;">Ajustes na aplicação web</span></p>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>No arquivo <span style="font-style: italic;">WEB-INF/web.xml</span>, a seguinte alteração precisa ser feita em relação à versão deste arquivo distribuído com o Lumis Portal: O elemento <span class="f_CodeExample">&lt;session-config&gt;</span>, exibido abaixo, deve ser removido:</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="10" bgcolor="#f3f3f3" border="0" style="background-color: #f3f3f3; border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="468" style="width:468px; border: solid 1px #000000;"><p style="margin: 8px 0px 0px 0px;"><span class="f_CodeExample">&lt;session-config&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;cookie-config&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&lt;path&gt;/&lt;/path&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;/cookie-config&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/session-config&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Adicionar o arquivo <span style="font-style: italic;">xalan.jar</span> (disponível em <span style="font-style: italic;">&lt;LUMIS_HOME&gt;/lib/websphere/xalan.jar</span>) no <span style="font-style: italic;">WEB-INF/lib</span> da aplicação.</td></tr></table></div><p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Instalação da aplicação web</span></p>
+<p style="margin: 8px 0px 0px 0px;">Gerar um arquivo de aplicação web ("WAR") a partir da pasta <span style="font-style: italic;">www</span>, e efetuar a instalação desta aplicação.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="509" style="width:509px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="619" style="width:619px; border: solid 1px #000000;"><p>Siga a seqüência de instalação corretamente. Não iniciar a aplicação antes da instalação do banco de dados, pois a aplicação não poderá ser iniciada corretamente.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 0px 0px 0px 1px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração do Módulo de Autenticação</span></p>
+<p style="margin: 14px 0px 0px 0px;">Cadastrar no <span style="font-style: italic;">Websphere</span> o módulo de autenticação do Lumis Portal com nome de <span style="font-style: italic;">LumisPortal</span>. </p>
+<p style="margin: 14px 0px 0px 0px;">Para isso:</p>
+<p style="margin: 14px 0px 0px 0px;">1) Ir para <span style="font-style: italic;">Segurança/Segurança Global</span> e clicar na opção "Java Authentication and Authorization Service/Logins do aplicativo";</p>
+<p style="margin: 14px 0px 0px 0px;">2) Clicar em <span style="font-style: italic;">Novo</span>, para incluir;</p>
+<p style="margin: 14px 0px 0px 0px;">3) Preencher o campo <span style="font-style: italic;">Alias </span>com o valor "LumisPortal";</p>
+<p style="margin: 14px 0px 0px 0px;">4) Clicar em <span style="font-style: italic;">Novo</span>;</p>
+<p style="margin: 14px 0px 0px 0px;">5) Preencher o campo <span style="font-style: italic;">Nome da Classe do Módulo</span> com o valor "lumis.portal.authentication.LumisLoginModule";</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="509" style="width:509px; border: solid 1px #000000;"><p><span style="font-weight: bold;">Observação</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="619" style="width:619px; border: solid 1px #000000;"><p>Caso sua solução utilize módulos de autenticação customizados, suas customizações também devem ser refletidas nestas configurações. Veja mais sobre módulos de autenticação em <a href="jaas.htm">JAAS</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<p>6) Clique em <span style="font-style: italic;">Ok</span> para salvar o módulo e <span style="font-style: italic;">OK</span> novamente para salvar todas as configurações.</p>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração de priorização de class loaders</span></p>
+<p>&nbsp;</p>
+<p>Em <span style="font-style: italic;">Enterprise Applications</span>, selecione a aplicação instalada e clique em <span style="font-style: italic;">Class loading and update detection</span>. No campo <span style="font-style: italic;">Class loader order</span> selecione a opção <span style="font-style: italic;">Classes loaded with application class loader first (parent last)</span> e no campo <span style="font-style: italic;">WAR class loader policy</span> selecione a opção <span style="font-style: italic;">Single class loader for application</span>.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Configuração das Bibliotecas Compartilhadas</span></p>
+<p>&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">Para configuração das bibliotecas compartilhadas para o Lumis Portal, siga os seguintes passos:</p>
+<p style="text-align: left; text-indent: -24px; margin: 0px 0px 0px 24px;">1.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; &nbsp;  </span>Acesse a opção “Ambiente\Bibliotecas Compartilhadas” no menu e crie uma nova entrada;<br>
+&nbsp;</p>
+<p style="text-align: left; text-indent: -24px; margin: 0px 0px 0px 24px;">2.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; &nbsp;  </span>Escolha o escopo desejado (ex.: Nó=<span style="font-style: italic;">appsrv1</span>, Servidor=<span style="font-style: italic;">server1</span>) e clique no botão “Novo”;<br>
+&nbsp;</p>
+<p style="text-align: left; text-indent: -24px; margin: 0px 0px 0px 24px;">3.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; &nbsp;  </span>Preencha o campo <span style="font-style: italic;">Nome</span> conforme desejado, por exemplo, “<span style="font-style: italic;">lumisportal” </span>e o campo <span style="font-style: italic;">Caminho da classe</span> com o caminho para todas as bibliotecas “.jar” que estão presentes no &nbsp;diretório <span style="font-style: italic;">%LUMIS_HOME%/lib/shared</span>.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="instalacao033.jpg" width="438" height="468" border="0" alt="instalacao033" style="margin:0 auto;margin:20px;"></p>
+<p style="text-indent: -72px; margin: 0px 0px 0px 72px;">4.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; &nbsp;  </span>Clique em <span style="font-style: italic;">Ok</span> para salvar as alterações;</p>
+<p>Agora basta associar a nova biblioteca compartilhada à aplicação:</p>
+<p style="text-indent: -24px; margin: 0px 0px 0px 24px;">5.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; &nbsp;  </span>Na opção “Aplicativos/Aplicativos Corporativos”, selecione a aplicação instalada acionando o nome;</p>
+<p style="text-indent: -24px; margin: 0px 0px 0px 24px;">6.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>Na tela de configuração da aplicação, escolha o <span style="font-style: italic;">link</span> “Referência de Bibliotecas Compartilhadas”. Selecione o item “Aplicativo” e clique no botão “Referenciar Bibliotecas Compartilhadas”;</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="instalacao034.jpg" width="466" height="276" border="0" alt="instalacao034" style="margin:0 auto;margin:20px;"></p>
+<p style="text-indent: -24px; margin: 14px 0px 0px 24px;">7.<span style="font-size: 7pt; font-family: 'Times New Roman';"> &nbsp; </span>Selecione o item criado acima, com as bibliotecas para o Lumis Portal, na lista do campo <span style="font-style: italic;">Disponíveis</span> e clique em “&gt;&gt;” para movê-lo para os <span style="font-style: italic;">Selecionados</span>. Clique em <span style="font-style: italic;">OK</span> para salvar as alterações;</p>
+<p style="text-align: center; text-indent: -24px; margin: 0px 0px 0px 24px;"><img src="instalacao035.jpg" width="470" height="328" border="0" alt="instalacao035" style="margin:0 auto;margin:20px;"></p>
+<p style="text-align: left; text-indent: -1px; margin: 0px 0px 0px 1px;">Na figura anterior, a biblioteca pública “<span style="font-style: italic;">lumisportal</span>” foi selecionada.</p>
+<p>&nbsp;</p>
+<p style="text-align: left; text-indent: -24px; margin: 14px 0px 0px 24px;"><span style="font-weight: bold;">Configuração do Servidor de Aplicativos</span></p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;">É necessário que o servidor de aplicativos esteja configurado com a propriedade personalizada <span style="font-style: italic;">com.ibm.ws.webcontainer.invokefilterscompatibility</span> com valor <span style="font-style: italic;">true</span>.</p>
+<p style="text-align: center; margin: 14px 0px 0px 0px;"><img src="instalacao55.jpg" width="651" height="253" border="0" alt="instalacao55" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;">Para isto navegue para <span style="font-style: italic;">Servidores</span>, <span style="font-style: italic;">Servidores de Aplicativos</span>, entre no servidor que executará o portal, <span style="font-style: italic;">Definições do Contêiner da Web</span>, <span style="font-style: italic;">Contêiner da Web</span>, <span style="font-style: italic;">Propriedades Personalizadas</span>. Deve-se incluir a propriedade <span style="font-style: italic;">com.ibm.ws.webcontainer.invokefilterscompatibility</span> com valor <span style="font-style: italic;">true</span>. Confirme e salve as modificações nas configurações master.</p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;">Será necessário reiniciar o servidor para esta configuração entrar em vigor.</p>
+<p style="text-align: left; margin: 14px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><a name="websphere7datasource"></a><span style="font-weight: bold;">Configuração do DataSource</span></p>
+<p>&nbsp;</p>
+<p>É possível configurar o <span style="font-style: italic;"><a href="datasource.htm">Data Source</a>,</span> para delegar ao servidor de aplicação, a gerência do <span style="font-style: italic;">pool</span> de conexões com o banco de dados.</p>
+<p>&nbsp;</p>
+<p>Acesse a opção Recursos<span style="font-style: italic;"> &gt; JDBC &gt; Origens de Dados:</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm266.zoom79.png" width="1008" height="406" border="0" alt="portalAdm266" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Selecione o escopo de utilização do seu DataSource e clique em "Novo":</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm267.jpg" width="755" height="387" border="0" alt="portalAdm267" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome da Origem de Dados</span>:vai ser o nome que o datasource.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome JNDI</span>: é o nome a ser referenciado no <span style="font-style: italic;"><a href="datasource.htm">lumishibernate.cfg.xml</a>.</span></td></tr></table></div><p>&nbsp;</p>
+<p><span style="font-style: italic;">E clique em "Avançar":</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="portaladm268.jpg" width="751" height="479" border="0" alt="portalAdm268" style="margin:0 auto;margin:0px;"></p>
+<p style="text-align: center;">&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Tipo de Bando de Dados</span>: tipo de banco de dados utilizados pelo datasource.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome da Classe de Implementação</span>: classe de conexão JDBC utilizada pelo datasource.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Nome</span>: vai ser o nome do provedor JDBC.</td></tr></table></div><p>&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Descrição</span>: texto livre para descrição do provedor JDBC.</td></tr></table></div><p>&nbsp;</p>
+<p>Clicando em "Avançar", você terá acesso a configurações que variam de acordo com a sua utilização do datasource, para maiores informações, consulte a documentação do seu servidor de aplicação.</p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

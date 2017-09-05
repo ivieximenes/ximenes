@@ -1,0 +1,43 @@
+/* $Revision: 15460 $ $Date: 2013-06-11 18:15:30 -0300 (Tue, 11 Jun 2013) $ */
+
+.lumis-service-association-associatedContents {
+	border-top:1px solid #CDCDCD;
+	margin-top:15px;
+}
+.lumis-service-association-associatedContents .lum-header {
+	margin:15px 0;
+}
+.lumis-service-association-associatedContents.lum-interface-type-standard .lum-interface-title {
+	font-size:13px;
+	text-transform:none;
+	font-weight:bold;
+}
+.lumis-service-association-associatedContents.lum-interface-type-standard .lum-interface-title:after {
+	content:":";
+	background-color:transparent;
+	display:inline;
+	margin:0;
+	position:static;
+	vertical-align:baseline;
+	height:auto;
+	width:auto;
+}
+.lumis-service-association-associatedContents .lum-list{
+	margin-left:13px;
+}
+.lumis-service-association-associatedContents .lum-list-item:after {
+	content:none;
+}
+.lumis-service-association-associatedContents .lum-list-item .lum-content-title:before {
+	content:"";
+	background:#ff9600;
+	display:inline-block;
+	border-radius:6px;
+	height:6px;
+	width:6px;
+	vertical-align:middle;
+	margin-right:10px;
+}
+.lumis-service-association-associatedContents .lum-list-item .lum-content-body {
+	margin-left:15px;
+}

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>response</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?douiresponse.htm"; }
+  else { parent.quicksync('a8.3.5.4.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">response</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="doui_processactions2.htm">Previous</a>&nbsp;
+     <a href="douiexpressionlanguageel.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O elemento <span style="font-style: italic;">&lt;<a href="../xsd/doui/schemas/douidefinition_xsd/complexTypes/response.html" target="_blank" class="weblink">response</a>&gt;</span> é utilizado pelo <span style="font-style: italic;">process action</span> como resposta ao navegador, após a sua execução.<br>
+&nbsp;</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table width="679" cellspacing="0" cellpadding="2" bgcolor="#f3f3f3" border="1" style="background-color: #f3f3f3; border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" style="border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;processActions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;processAction&nbsp;id="delete"&nbsp;sourceId="voteQuestion"&nbsp;type="contentTableDeleteData"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;processAction&nbsp;id="results"&nbsp;type="generic"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;response&nbsp;type="doui_hyperLink"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;interfaceId&gt;results&lt;/interfaceId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;parameters&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;parameter&nbsp;name="id"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/parameters&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/response&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/processAction&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/processActions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 14px 0px 0px 0px;">O seu atributo é o "<span style="font-style: italic;">type</span>" que pode conter os seguintes tipos de <span style="font-style: italic;">responses.</span><br>
+<span style="font-style: italic;">&nbsp;</span></p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 14px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_message</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Exibe uma mensagem, cadastrada no arquivo de strings para cada língua, que será traduzida na linguagem corrente.</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;processAction&nbsp;id="aaa"&nbsp;className="xxxxxProcessActionHandler"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_message"&nbsp;&nbsp;&nbsp;&nbsp;message="STR_GENERATION_COMPLETED_SUCCESSFULLY"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/processAction&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_refreshParent</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Executa um <span style="font-style: italic;">refresh</span> na interface pai, da interface corrente, após a execução de determinado <span style="font-style: italic;">process action</span> .</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;processAction&nbsp;id="bbbb"&nbsp;className="xxProcessActionHandler"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_refreshParent"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_closeWindow"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/processAction&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_closeWindow</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Fecha a janela corrente, após a execução de determinado <span style="font-style: italic;">process action</span> . </p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;processAction&nbsp;id="bbbb"&nbsp;className="xxProcessActionHandler"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_refreshParent"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;response&nbsp;type="doui_closeWindow"&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;/processAction&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_runJavascript</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Executa o <span style="font-style: italic;">javascript</span> especificado em um nó <span style="font-style: italic;">&lt;script/&gt;</span> dentro do <span style="font-style: italic;">response</span> . </p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;response&nbsp;type="doui_runJavascript"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;parameter&nbsp;name="id"&gt;&lt;/parameter&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;alert("test");&lt;/script&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;/response&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_setRequestParameters</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Atribui todos os valores dos parâmetros correntes para o próximo <span style="font-style: italic;">render request</span> da interface.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_standardPopup</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado em interfaces renderizadas em <span style="font-style: italic;">pop-ups. </span>Internamente, ainda é convertido em dois tipos de <span style="font-style: italic;">responses</span>: o <span style="font-style: italic;">doui_refreshParent </span>e <span style="font-style: italic;">doui_closeWindow</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_standardEmbedded</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado em interfaces embutidas em páginas (interfaces que a principio deveriam ser rederizadas em pop-ups mas são renderizadas em páginas). É equivalente ao response <span style="font-style: italic;">doui_setRequestParameters</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_standardCommit</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado em interfaces padrão de adicionar e editar. Este <span style="font-style: italic;">response</span> detecta se a interface corrente é um <span style="font-style: italic;">pop-up</span> ou uma interface embutida. Caso seja um <span style="font-style: italic;">pop-up, </span>este <span style="font-style: italic;">response</span> é equivalente ao <span style="font-style: italic;">doui_refreshParent </span>seguido do <span style="font-style: italic;">doui_closeWindow. </span>Caso seja uma interface embutida, o response irá detectar onde a interface de administração está localizada e redirecionará o portal para a página que contém esta interface. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_setResponseParameters</span> </p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Configura os parâmetros para os <span style="font-style: italic;">render request </span>da interface corrente.</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;response&nbsp;type="doui_setResponseParameters"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;parameter&nbsp;name="pane"&gt;thankYouMessage&lt;/parameter&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;/parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;/response&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_setRequestAttributes</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado primeiramente para compartilhar dados entre diferentes process actions. Configura os valores dos parâmetros nos atributos request. Estes atributos podem ser lidos por process actions subseqüentes que possuem o mesmo id.</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;response&nbsp;type="doui_setRequestAttributes"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;parameter&nbsp;name="xxx"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&lt;value&nbsp;type="attributeValue"&gt;yyy&lt;/value&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/parameter&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;/parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;/response&gt;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_hyperLink</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado para redirecionar o browser para outra página ou <span style="font-style: italic;">URL</span> , depois da execução do <span style="font-style: italic;">process action</span> em questão. Podem ser passados parâmetros no redirecionamento. </p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="font-size: 10pt;">&lt;response&nbsp;type="doui_hyperLink"&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&lt;interfaceId&gt;results&lt;/interfaceId&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;parameter&nbsp;name="id"&nbsp;/&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&nbsp;&nbsp;&lt;/parameters&gt;</span><br>
+<span class="f_CodeExample" style="font-size: 10pt;">&lt;/response&gt;</span></p>
+<p style="text-align: left; margin: 7px 0px 7px 0px;">O exemplo acima refere-se ao redirecionamento do browser para uma página, utilizando a <span style="font-style: italic;">tag</span> &lt;interfaceId/&gt;. Quando o destino for uma <span style="font-style: italic;">URL </span>externa, deve-se utilizar o elemento <span style="font-style: italic;">&lt;URL&gt;</span> . </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_popupInterface</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Utilizado para abrir uma interface em um <span style="font-style: italic;">popup</span> depois da execução de um <span style="font-style: italic;">process action</span>. Além disso, <br>
+parâmetros podem ser passados para tal interface.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="187" style="width:187px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-weight: bold;">doui_preview</span></p>
+</td>
+<td valign="middle" width="437" style="width:437px; border: solid 1px #000000;"><p style="text-align: left; margin: 7px 0px 7px 0px;">Exibe um <span style="font-style: italic;">pop</span> para a visualização do dado sendo editado.</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; margin: 7px 0px 7px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

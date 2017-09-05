@@ -1,0 +1,165 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Content</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?content.htm"; }
+  else { parent.quicksync('a8.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Content</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="douitutorial6douidefinition.htm">Previous</a>&nbsp;
+     <a href="contentsource.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 8px 0px 0px 0px;">Esta seção tem como objetivo explicar os conceitos envolvidos no desenvolvimento de serviços do tipo  <span style="font-style: italic;">Content,</span> auxiliando o desenvolvedor a criar serviços customizados utilizando as facilidades do <span style="font-style: italic;">Content Framework. </span>Informações mais técnicas sobre o <span style="font-style: italic;">Content</span> consultar a sua <span style="font-style: italic;"><a href="../api/lumis/content/core/package-summary.html" target="_blank" class="weblink">API</a></span>.</p>
+<p style="margin: 8px 0px 0px 0px;">O Content é um framework que estende o DOUI agregando funcionalidades de gestão de conteúdos.</p>
+<p style="margin: 8px 0px 0px 0px;">Serviços também podem ser criados através do Assistente de Criação de Serviços de Gestão de Conteúdo (<span style="font-style: italic;">Wizard</span>).</p>
+<p style="margin: 8px 0px 0px 0px;">A definição de um serviço <span style="font-style: italic;">content</span> é equivalente à definição de um serviço <span style="font-style: italic;">DOUI</span>, mas há configurações em <span style="font-style: italic;">servicedefinition.xml</span> e <span style="font-style: italic;">douidefinition.xml</span> que podem ser utilizadas apenas para serviços que utilizem o <span style="font-style: italic;">content framework</span>.</p>
+<p style="margin: 8px 0px 0px 0px;">Um serviço pode ser definido como um serviço <span style="font-style: italic;">content</span> colocando no nó <span style="font-style: italic;">service</span>, o atributo <span style="font-style: italic;">type</span> com valor “lum_content”. A implementação de um serviço <span style="font-style: italic;">content</span> é feita pela classe <span style="font-style: italic;">ContentService</span>. Portanto se for desejado implementar uma classe para um serviço <span style="font-style: italic;">content</span>, é necessário que ela estenda a classe <span style="font-style: italic;">ContentService</span>. O <span style="font-style: italic;">ContentService</span> estende o <span style="font-style: italic;">DouiService </span>acrescentando funcionalidades específicas de <span style="font-style: italic;">content</span>.</p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-weight: bold;">Content Service Interface</span></p>
+<p style="margin: 8px 0px 0px 0px;">Uma interface pode ser definida como uma interface de <span style="font-style: italic;">content</span> colocando no nó <span style="font-style: italic;">interface</span> o atributo <span style="font-style: italic;">type</span> com valor “lum_content”. A implementação de uma interface <span style="font-style: italic;">content</span> é feita pela classe <span style="font-style: italic;">ContentServiceInterface</span>. Portanto se for desejado implementar uma classe para a interface, é necessário que ela estenda a classe <span style="font-style: italic;">ContentServiceInterface</span>. O <span style="font-style: italic;">ContentServiceInterface</span> estende o <span style="font-style: italic;">DouiServiceInterface</span> acrescentando funcionalidades específicas de content.</p>
+<p style="margin: 8px 0px 0px 0px;">Para cada interface <span style="font-style: italic;">content </span>pode haver no arquivo <span style="font-style: italic;">douidefinition.xml</span> um bloco que define essa interface. Caso o bloco não esteja presente, uma estrutura <span style="font-style: italic;">default</span> é utilizada.</p>
+<p style="margin: 8px 0px 0px 0px;">O <span style="font-style: italic;">ContentServiceInterface</span> efetua as chamadas necessárias ao <span style="font-style: italic;">content framework</span>, para que a interface possa ser definida usando as facilidades que o <span style="font-style: italic;">framework</span> oferece.</p>
+<p>&nbsp;</p>
+<p style="margin: 8px 0px 0px 0px;"><span style="font-weight: bold;">Tipos de Interfaces Content</span></p>
+<p style="margin: 8px 0px 0px 0px;">De forma equivalente a <span style="font-style: italic;">DOUI</span>, além do tipo <span style="font-style: italic;">lum_content</span>, há outros tipos de interfaces <span style="font-style: italic;">content</span> que possuem uma maior especialização ou característica especial. Todas elas estendem a classe <span style="font-style: italic;">ContentServiceInterface.</span> A estrutura <span style="font-style: italic;">default</span> da interface (aquela usada se a interface não é definida no <span style="font-style: italic;">douidefinition.xml</span>) também varia conforme o tipo. Há um tipo de interface <span style="font-style: italic;">content</span> equivalente a cada tipo de interface <span style="font-style: italic;">doui</span>, conforme a tabela abaixo:</p>
+<p style="text-align: center; margin: 8px 0px 0px 0px;"><span style="font-size: 12pt; font-family: 'Times New Roman';">&nbsp;</span></p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 1px;"><table align="center" width="791" cellspacing="0" cellpadding="2" border="1" style="border-color : #c0c0c0 #000000 #000000 #c0c0c0; border-style: solid; border-width: 1px; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">DouiInterface</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">ContentInterface</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span><span style="font-weight: bold;">Informações</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"> <span style="font-size: 8pt;">lum_douiList</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;"> <span style="font-size: 8pt;">lum_contentList</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p>Interface que renderiza uma lista completa de conteúdo da instância de serviço.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiQuickList</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentQuickList</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p>Interface que renderiza uma lista com os primeiros conteúdos da instância de serviço. A quantidade <span style="font-style: italic;">default</span> é de cinco conteúdos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiDetails</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentDetails</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p>Interface que renderiza os detalhes do conteúdo, quando selecionado a partir da lista completa ou lista rápida. Quando a página de detalhes é acessada diretamente, por <span style="font-style: italic;">default</span>, o primeiro conteúdo cadastrado é exibido. Porém, quando um conteúdo é acessado na lista, porém ele já foi removido em outra sessão, a interface de detalhes não exibe conteúdos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiAdministrationList</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentAdministrationList</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p>Interface que renderiza uma lista administrativa dos conteúdos cadastrados.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiAdministrationPropertyPage</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentAdministrationPropertyPage</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p> Interface administrativa da lista de conteúdos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiAdministrationAddPropertyPage</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentAdministrationAddPropertyPage</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p> <span style="font-style: italic;">Pop</span> de adição de conteúdos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiAdministrationEditPropertyPage</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentAdministrationEditPropertyPage</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p> <span style="font-style: italic;">Pop</span> de edição de conteúdos.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="middle" width="308" style="width:308px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_douiAdministrationEmbeddedAddPropertyPage</span></p>
+</td>
+<td valign="middle" width="319" style="width:319px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p style="text-align: left;">&nbsp;</p>
+<p style="margin: 8px 0px 8px 0px;"><span style="font-size: 8pt;">lum_contentAdministrationEmbeddedAddPropertyPage</span></p>
+</td>
+<td valign="middle" width="162" style="width:162px; border-color : #000000 #c0c0c0 #c0c0c0 #000000; border-style: solid; border-width: 1px;"><p><span style="font-size: 12pt; font-family: 'Times New Roman';"> </span>Tela de adição cuja renderização é &nbsp;na página e não em um <span style="font-style: italic;">pop</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

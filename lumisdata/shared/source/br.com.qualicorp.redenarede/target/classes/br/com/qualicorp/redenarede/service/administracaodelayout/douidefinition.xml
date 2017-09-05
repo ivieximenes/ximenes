@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16176 $ $Date: 2014-03-11 23:09:21 -0300 (Tue, 11 Mar 2014) $ -->
+<doui:douiDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:doui="http://www.lumis.com.br/lumisportal/xsd/doui"  xmlns:control="http://www.lumis.com.br/douicontrols">
+	<service>
+		<sources>
+			<source id="qc_layout" type="table">
+				<table>QC_LAYOUT</table>
+				<fields>
+					<field id="idlayout" name="idlayout" dataType="guid" required="true" isPrimaryKey="true" display="false" />
+					<field id="nome_do_layout" name="Nome do layout" dataType="string" required="true" isPrimaryName="true" isSearchable="true" isIntroduction="true" />
+					<field id="cor_do_fundo" name="Cor do fundo" dataType="string" />
+					<field id="cor_das_letras" name="Cor das letras" dataType="string" required="true" />
+					<field id="fonte_das_letras" name="Fonte das letras" dataType="string" >
+						<options>
+							<option value="Antiqua">Antiqua</option>
+							<option value="Architect">Architect</option>
+							<option value="Arial">Arial</option>
+							<option value="Calibri">Calibri</option>
+							<option value="Comic Sans">Comic Sans</option>
+							<option value="Courier">Courier</option>
+							<option value="Fantasy">Fantasy</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Impact">Impact</option>
+							<option value="Modern">Modern</option>
+							<option value="Roman">Roman</option>
+							<option value="Sans-serif">Sans-serif</option>
+							<option value="Times">Times</option>
+							<option value="Times New Roman">Times New Roman</option>
+							<option value="Verdana">Verdana</option>
+						</options>
+					</field>
+				</fields>
+			</source>
+			
+			<source id="qc_estipulante" type="table">
+				<table>qc_estipulante</table>
+				<fields>
+					<field id="idestipulante"  name="idEstipulante" dataType="guid" required="true" isPrimaryKey="true" display="false" />
+					<field id="nome" name="Nome do Estipulante" dataType="string" required="true" isPrimaryName="true" isSearchable="true" />
+					<field id="codigo" name="Código do Estipulante na Operadora" dataType="number" minimumValue="0" isSearchable="true" />
+					<field id="subestipulante" name="Código do Sub Estipulante" dataType="integer" minimumValue="0" isSearchable="true" />
+				</fields>
+			</source>
+			
+			<source id="qc_layout_estipulante" type="table">
+				<table>QC_LAYOUTESTIPULANTE</table>
+				<fields>
+					<field id="idlayoutestipulante" name="idlayoutestipulante" dataType="guid" required="true" isPrimaryKey="true" display="false" />
+					<field id="idlayout" name="layoutid" dataType="guid" required="true" display="false" lookupRelationId="layout" lookupFieldId="nome_do_layout"/>
+					<field id="idestipulante" name="idestipulante" dataType="guid" required="true" display="false" lookupRelationId="estipulante" lookupFieldId="nome"/>
+				</fields>
+				<relations>
+					<relation id="layout" foreignSourceId="qc_layout" >
+						<relationField fieldId="idlayout" foreignFieldId="idlayout" />
+					</relation>
+					<relation id="estipulante" foreignSourceId="qc_estipulante" >
+						<relationField fieldId="idestipulante" foreignFieldId="idestipulante" />
+					</relation>
+				</relations>
+			</source>
+			
+			<source id="layoutUser">
+				<dataProviderClassName>br.com.qualicorp.redenarede.service.administracaodelayout.dataprovider.LayoutUserDataProvider</dataProviderClassName>
+				<fields>
+					<field id="idlayout" name="idlayout" dataType="guid" isPrimaryKey="true" display="false" />
+					<field id="nomeLayout" name="Nome do layout" dataType="string" isPrimaryName="true" isIntroduction="true" />
+					<field id="corDeFundo" name="Cor de fundo" dataType="string" />
+					<field id="corDaLetra" name="Cor das letras" dataType="string" />
+					<field id="fonteDaLetra" name="Fonte das letras" dataType="string" />
+				</fields>
+			</source>
+		</sources>
+	</service>
+	
+	<interfaces>
+		<interface id="administration">
+			<sources>
+				<source id="qc_layout" readData="always">
+					<fields inherit="all">
+					</fields>
+				</source>
+				<source id="qc_layout_estipulante" />
+				<source id="qc_estipulante" />
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_inputHidden id="serviceIdLogAuditFilter" sourceId="none" />
+					
+					<control:lum_interfaceHeader/>
+					<control:lum_interfaceHeaderButtons>
+						<control:lum_addButton interfaceId="add" isPrimary="true"/>
+						<control:lum_editButton interfaceId="edit"/>
+						<control:lum_deleteButton />
+
+						<control:lum_button id="btLogAuditGeral" text="Log de Auditoria">
+							<onClick type="popupRunTimeInterface" openRuntimeInterfaceBehavior="replace">
+								<interfaceId>br.com.qualicorp.redenarede.service.auditoria.administracao</interfaceId>
+								<addParameters>
+		                        	<parameter name="adminList.filters.serviceId.value">
+		                        		<value controlId="serviceIdLogAuditFilter" type="getValue" />
+		                        	</parameter>
+								</addParameters>
+							</onClick>
+						</control:lum_button>
+						<control:lum_button id="btLogAudit" text="Log de Auditoria">
+							<rowAction />
+							<onClick type="popupRunTimeInterface" openRuntimeInterfaceBehavior="replace">
+								<interfaceId>br.com.qualicorp.redenarede.service.auditoria.administracao</interfaceId>
+								<addParameters>
+									<parameter name="adminList.filters.itemId.value">
+										<value controlId="lum_adminList.tabulardata" type="firstSelected" />
+									</parameter>
+		                        	<parameter name="adminList.filters.serviceId.value">
+		                        		<value controlId="serviceIdLogAuditFilter" type="getValue" />
+		                        	</parameter>
+								</addParameters>
+							</onClick>
+						</control:lum_button>
+					</control:lum_interfaceHeaderButtons>
+					<control:lum_adminList />
+				</control:lum_form>	
+			</controls>
+			<processActions>
+				<processAction id="delete" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler">
+					<sources>
+						<source id="qc_layout">
+							<additionalSources>
+								<source id="qc_layout_estipulante" relationId="layout" title="Estipulante Associado">
+									<additionalSources>
+										<source id="qc_estipulante" relationId="estipulante" />
+									</additionalSources>
+								</source>
+							</additionalSources>
+						</source>
+					</sources>
+				</processAction>
+				<processAction id="delete" className="br.com.qualicorp.redenarede.service.administracaodelayout.processaction.LayoutEstipulanteDeleteProcessActionHandler"/>
+				<processAction id="delete" type="tableDeleteData" >
+					<response type="doui_refreshParent"/>
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="add">
+			<sources>
+				<source id="qc_layout">
+					<fields inherit="all"/>
+				</source>
+				<source id="qc_estipulante">
+					<fields inherit="all"/>
+					<filters>
+						<filter id="notUsed" className="br.com.qualicorp.redenarede.service.administracaodelayout.filter.EstipulantesNaoAssociadosALayoutFilter" hidden="true" />
+					</filters>
+					<orderBy>
+						<field direction="ascending" id="codigo" />
+						<field direction="ascending" id="subestipulante" />
+						<field direction="ascending" id="nome" />
+					</orderBy>
+					<postLoadProcessors>
+						<postLoadProcessor className="br.com.qualicorp.redenarede.service.administracaodelayout.postload.NomeEstipulandoCheckListPostload" />
+					</postLoadProcessors>
+				</source>
+				<source id="qc_layout_estipulante" />
+			</sources>
+			<controls>
+		    <control:lum_form>
+		     <control:lum_propertyPage>
+		       <control:lum_filters id="qc_estipulante.filters" />
+		       <control:lum_autoLayoutFields/>
+		      <control:lum_controlGroup title="Estipulantes">
+		       <control:lum_checkBoxList id="estipulantes" sourceId="none" dataId="idestipulante" optionsSourceId="qc_estipulante"/>
+		      </control:lum_controlGroup>
+		     </control:lum_propertyPage>
+	         <control:lum_script>
+	       		<script>
+					$( document ).ready(function() {
+						$("#cor_do_fundo").addClass("jscolor");
+						$("#cor_das_letras").addClass("jscolor");
+					});
+				</script>
+			</control:lum_script>		
+		    </control:lum_form>
+		   </controls>
+			<processActions>
+				<processAction id="commit" type="generic" className="br.com.qualicorp.redenarede.service.administracaodelayout.processaction.LayoutValidationProcessActionHandler" />
+				<processAction id="commit" type="tableAddData" />
+				<processAction id="commit" sourceId="mapa_facilidade" className="br.com.qualicorp.redenarede.service.administracaodelayout.processaction.LayoutEstipulanteAddEditProcessActionHandler">
+					<fieldValues>
+				    	<fieldValue id="idlayout" type="attribute">PAGE_PARAMETER_ITEMID</fieldValue>
+				    </fieldValues>
+				    <response type="doui_standardPopup"/>
+			    </processAction>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler">
+					<sources>
+						<source id="qc_layout">
+							<additionalSources>
+								<source id="qc_layout_estipulante" relationId="layout" title="Estipulante Associado">
+									<additionalSources>
+										<source id="qc_estipulante" relationId="estipulante" />
+									</additionalSources>
+								</source>
+							</additionalSources>
+						</source>
+					</sources>
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="edit">
+			<sources>
+				<source id="qc_layout">
+					<fields inherit="all"/>
+					<filters>
+						<filter id="idlayout" requestParameterName="idlayout" operator="equal" hidden="true"/>
+					</filters>
+				</source>
+				<source id="qc_estipulante">
+					<fields inherit="all"/>
+					<filters>
+						<filter id="notUsed" className="br.com.qualicorp.redenarede.service.administracaodelayout.filter.EstipulantesNaoAssociadosALayoutFilter" />
+					</filters>
+					<orderBy>
+						<field direction="ascending" id="codigo" />
+						<field direction="ascending" id="subestipulante" />
+						<field direction="ascending" id="nome" />
+					</orderBy>
+					<postLoadProcessors>
+						<postLoadProcessor className="br.com.qualicorp.redenarede.service.administracaodelayout.postload.NomeEstipulandoCheckListPostload" />
+					</postLoadProcessors>
+				</source>
+				<source id="qc_layout_estipulante" >
+					<fields inherit="all">
+						<field id="idlayoutestipulante" required="false" />
+						<field id="idestipulante" required="false" />
+					</fields>
+					<filters>
+						<filter id="idlayout"  fieldId="idlayout" requestParameterName="idlayout" operator="equal"/>
+					</filters>
+				</source>
+			</sources>
+			<controls>
+				<control:lum_form>
+					<control:lum_propertyPage>
+						<control:lum_inputHidden id="idlayout" dataId="idlayout" sourceId="qc_layout">
+							<setSourceParameter sourceId="qc_layout_estipulante" parameterName="idlayout"/>
+						</control:lum_inputHidden>
+						<control:lum_filters id="qc_layout.filters" />
+						<control:lum_filters id="qc_layout_estipulante.filters" />
+		       			<control:lum_filters id="qc_estipulante.filters" />
+						<control:lum_div class="lum-form-field">
+							<control:lum_div class="lum-form-field-label">
+									<control:lum_label id="label_nome" text="Nome do layout" />
+							</control:lum_div>
+							<control:lum_div class="lum-form-field-value">
+							 		<control:lum_inputText id="nome_do_layout" dataId="nome_do_layout"  />
+							</control:lum_div>
+						</control:lum_div>
+						
+						<control:lum_div class="lum-form-field">
+							<control:lum_div class="lum-form-field-label">
+									<control:lum_label id="label_cor_do_fundo" text="Cor do fundo" />
+							</control:lum_div>
+							<control:lum_div class="lum-form-field-value">
+							 		<control:lum_inputText id="cor_do_fundo" dataId="cor_do_fundo"  />
+							</control:lum_div>
+						</control:lum_div>
+						
+						<control:lum_div class="lum-form-field">
+							<control:lum_div class="lum-form-field-label">
+									<control:lum_label id="label_cor_das_letras" text="Cor das letras" />
+							</control:lum_div>
+							<control:lum_div class="lum-form-field-value">
+							 		<control:lum_inputText id="cor_das_letras" dataId="cor_das_letras"  />
+							</control:lum_div>
+						</control:lum_div>
+						
+						<control:lum_div class="lum-form-field">
+							<control:lum_div class="lum-form-field-label">
+									<control:lum_label id="label_fonte_das_letras" text="Fonte das letras" />
+							</control:lum_div>
+							<control:lum_div class="lum-form-field-value">
+							 		<control:lum_dropDownList id="fonte_das_letras" dataId="fonte_das_letras" />
+							</control:lum_div>
+						</control:lum_div>
+						
+						<control:lum_div class="lum-form-field">
+							<control:lum_div class="lum-form-field-label">
+								<control:lum_label id="label_estipulantes" text="Estipulantes" />
+							</control:lum_div>
+							<control:lum_div class="lum-form-field-value">
+						 		<control:lum_div class="lum-form-field-value">
+						 			<control:lum_checkBoxList id="estipulantes" sourceId="qc_layout_estipulante" dataId="idestipulante" optionsSourceId="qc_estipulante" >
+						 		</control:lum_checkBoxList>
+							</control:lum_div>
+							</control:lum_div>
+						</control:lum_div>
+						
+					</control:lum_propertyPage>
+					<control:lum_script>
+		       		<script >
+						$( document ).ready(function() {
+							$("#cor_do_fundo").addClass("jscolor");
+							$("#cor_das_letras").addClass("jscolor");
+						});
+					</script>
+				</control:lum_script>	 
+				</control:lum_form>
+			</controls>
+			<processActions>
+				<processAction id="commit" type="generic" className="br.com.qualicorp.redenarede.service.administracaodelayout.processaction.LayoutValidationProcessActionHandler" />
+				<processAction id="commit" type="tableUpdateData" />
+				<processAction id="commit" sourceId="mapa_facilidade" className="br.com.qualicorp.redenarede.service.administracaodelayout.processaction.LayoutEstipulanteAddEditProcessActionHandler">
+				    <response type="doui_standardPopup"/>
+			    </processAction>
+				<processAction id="commit" className="br.com.qualicorp.redenarede.service.auditoria.processaction.AuditProcessActionHandler">
+					<sources>
+						<source id="qc_layout">
+							<additionalSources>
+								<source id="qc_layout_estipulante" relationId="layout" title="Estipulante Associado">
+									<additionalSources>
+										<source id="qc_estipulante" relationId="estipulante" />
+									</additionalSources>
+								</source>
+							</additionalSources>
+						</source>
+					</sources>
+				</processAction>
+			</processActions>
+		</interface>
+		
+		<interface id="layout">
+			<sources>
+				<source id="layoutUser">
+					<fields inherit="all" />
+				</source>
+			</sources>
+			<controls>
+				<control:lum_list />
+			</controls>
+		</interface>
+	</interfaces>
+</doui:douiDefinition>

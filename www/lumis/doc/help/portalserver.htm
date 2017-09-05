@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Portal Server</title>
+   <meta name="Generator" content="Lumis Portal 8.1.1.150831 - Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados."/>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   	<style type="text/css" rel="stylesheet"> 
+	<!-- 
+	BODY {
+	scrollbar-face-color:#e9a349;
+	scrollbar-highlight-color:#DFDFDF;
+	scrollbar-3dlight-color:#e9a349;
+	scrollbar-darkshadow-color:#bb5a11;
+	scrollbar-shadow-color:#bb5a11;
+	scrollbar-arrow-color:#bb5a11;
+	scrollbar-track-color:#e9a349;
+	}
+	-->
+	</style>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.htm?portalserver.htm"; }
+  else { parent.quicksync('a2.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#FFFFFF">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Portal Server</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="visaogeral.htm">Top</a>&nbsp;
+     <a href="multi_server.htm">Previous</a>&nbsp;
+     <a href="douiframework.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Portal Server</span> consiste no <span style="font-style: italic;">runtime</span> de execução da solução de portal. Executa serviços criados sobre o <span style="font-style: italic;">portal framework</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">Ambiente de criação e administração de soluções com uma estrutura hierárquica de canais e páginas e com todo um aparato de controle de acesso, <span style="font-style: italic;">caching</span>, agregação de conteúdo, busca, <span style="font-style: italic;">single-sign on</span>, integração de aplicações, entre outras funcionalidades.</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Presentation Layer</span></p>
+<p style="margin: 14px 0px 0px 0px;">Todas as requisições feitas ao portal passam pela camada de apresentação (<span style="font-style: italic;">Presentation Layer</span>), que por sua vez são passadas ao <span style="font-style: italic;">Service Container</span>, cuja responsabilidade é chamar as interfaces dos serviços, repassando os objetos <span style="font-style: italic;"><a href="diagramassequenciainterfaceservico.htm">request e response</a></span>, para que a página seja renderizada.</p>
+<p>&nbsp;</p>
+<p style="margin: 14px 0px 0px 0px;"><span style="font-weight: bold;">Service Interface Container</span></p>
+<p style="margin: 14px 0px 0px 0px;">As páginas se comunicam com as interfaces de serviços através de um <span style="font-style: italic;">Service Interface Container</span>.</p>
+<p style="margin: 14px 0px 0px 0px;">O S<span style="font-style: italic;">ervice Interface Container</span> recebe requisições das páginas para executá-las nas interfaces dos serviços. &nbsp;Os resultados dessas requisições são devolvidos para a página.</p>
+<p style="margin: 14px 0px 0px 0px;">O <span style="font-style: italic;">Service Interface Container</span> não é responsável pela agregação dos conteúdos gerados pelas interfaces dos serviços e sim pela camada de apresentação (conjunto de páginas). </p>
+<p style="margin: 14px 0px 0px 0px;">&nbsp;</p>
+<p><span style="font-weight: bold;">Ciclo de Requisição ao Portal</span></p>
+<p style="margin: 14px 0px 0px 0px;">A seguir, tem-se uma típica seqüência de eventos quando um usuário acessa uma página do portal.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">1.</span></td><td>O cliente faz uma chamada <span style="font-style: italic;">HTTP</span> para o portal;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">2.</span></td><td>O Portal recebe essa chamada;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">3.</span></td><td>O Portal determina se há uma ação direcionada a uma interface de serviço. Se houver, ele passa essa requisição para o <span style="font-style: italic;">Service Interface Container</span> que, por sua vez, passa para a interface do serviço processar as requisições e devolve os resultados do processamento para uma página;</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">4.</span></td><td>Uma vez que a página a ser renderizada é determinada, a camada de apresentação lê as informações de <span style="font-style: italic;">layout</span> da página que determina quais interfaces de serviços precisam ser renderizadas. </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">5.</span></td><td>Subseqüentemente a camada de apresentação chama o <span style="font-style: italic;">Service Interface Container</span> para renderizar cada interface.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 22px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Verdana'; color: #000000;">6.</span></td><td>Os conteúdos são agregados baseados no <span style="font-style: italic;">layout</span> da página e o resultado <span style="font-style: italic;">HTML</span> é devolvido para o cliente que fez a chamada original.</td></tr></table></div><p style="text-align: center; margin: 14px 0px 14px 24px;"><img src="arquitetura004.jpg" width="400" height="221" border="0" alt="arquitetura004" style="margin:0 auto;margin:20px;"></p>
+
+</td></tr></table>
+<hr size="1" /><p style="font-size: 8pt"><b>Lumis Portal</b> 8.1.1.150831<br><i>Copyright © 2006–2015 Lumis EIP Tecnologia da Informação LTDA. Todos os direitos reservados.</i></p>
+</body>
+</html>

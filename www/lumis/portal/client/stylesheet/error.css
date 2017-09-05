@@ -1,0 +1,156 @@
+/* $Revision: 15923 $ $Date: 2013-10-11 14:48:05 -0300 (Fri, 11 Oct 2013) $ */
+
+body
+{
+	margin:0;
+	padding:0;
+	background-color:#f7f7f7;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	border-top:10px solid #fab500;
+	font-size:14px;
+	color:#464646;
+}
+
+p{
+	margin:0; 
+	padding:0;	
+}
+
+#erro-wrapper{
+	margin:auto;
+}
+
+#erro-component-wrapper{
+	margin-top:auto;
+	padding-left: 50px;
+	padding-right: 50px;	
+}
+
+#credito-wrapper{
+	margin:50px auto;
+	width:300px;
+}
+
+.logged-error{
+	width:1000px !important;
+	margin-top:60px !important;
+}
+
+.logo-lumisportal{
+	text-indent:-9999px;
+	display:block;
+	height:26px;
+	width:152px;
+	background:url(../images/logo-lumisportal-error.png) no-repeat center center;
+	margin-left:-26px;
+}
+
+
+#warning-error-title{
+	padding:0;
+	margin:0;
+	font-size:24px;
+	font-weight:normal;
+	margin-top:25px;
+	color:#ff9600;
+}
+
+#warning-error-message{
+	padding:0;
+	margin:0;
+	font-size:18px;
+	line-height:20px;
+	font-weight:normal;
+	margin-top:5px;
+	color:#909090;	
+}
+
+.error-possible-solutions{
+	list-style-type:none;
+	padding:0;
+	margin:20px 0 0 0;
+}
+
+.error-possible-solutions li{
+	margin-bottom:10px;
+	padding-left:15px;
+}
+
+.error-possible-solutions li:before{
+	content:url(error-bullet.png);
+	position:absolute;
+	margin-top:6px;
+	margin-left:-15px;
+}
+
+.margintop{
+	position:relative;
+	display:inline-block;
+	margin-top:20px !important;
+}
+
+.copyinfo{
+	margin-top:10px !important;
+	font-size:14px;
+	line-height:14px;
+}
+
+.institucional{
+	display:inline-block;
+	margin-top:5px !important;
+	font-size:12px !important;
+}
+
+.errorlink{
+	color:#ff9600;
+}
+
+.error-panels{
+display:none;
+}
+
+.error-panel-title{
+	padding:0;
+	margin:0;
+	font-size:16px;
+	font-weight:normal;
+	margin-top:30px;
+	color:#909090;	
+}
+
+.error-panel-textarea{
+	width:100%;
+	border:1px solid #d1d1d1;
+	border-radius:3px;
+	padding:10px;
+	margin-top:10px;
+	height:170px;
+}
+
+.error-file-path{
+	display:inline-block;
+	color:#909090;
+}
+
+.last-panel{
+	margin-bottom:100px;
+}
+
+.botao{
+	float:right;
+	display: inline-block;
+    font-family: "Segoe UI Semibold", Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+	border-radius: 3px;
+	text-align:center;
+    text-decoration:none;
+    border:none;
+	padding: 5px 10px 6px 10px;
+	background-color: #ff9600;
+    text-shadow: 0px -1px 0px rgba(195, 123, 41, 1);
+    color: #FFF !important;
+    -webkit-box-shadow: 0px 2px 0px rgba(211, 118, 0, 1);
+    -moz-box-shadow:    0px 2px 0px rgba(211, 118, 0, 1);
+    box-shadow:         0px 2px 0px rgba(211, 118, 0, 1);
+}
+

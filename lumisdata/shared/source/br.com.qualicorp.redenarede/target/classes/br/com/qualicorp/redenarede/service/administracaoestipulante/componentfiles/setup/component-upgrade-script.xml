@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Revision: 16582 $ $Date: 2014-11-07 11:18:31 -0200 (Fri, 07 Nov 2014) $ -->
+<component-upgrade xmlns="http://www.lumis.com.br/lumisportal/xsd/component-upgrade-script" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<display-message step="1">
+		<message>Ok</message>
+	</display-message>
+	
+	<display-message step="2">
+		<message>Ok</message>
+	</display-message>
+	
+	<run-sql step="3">
+		<sql>alter table qc_estipulante add subestipulante NUMBER(8,0) not null</sql>
+	</run-sql>
+	
+	<run-sql step="4">
+		<sql>ALTER TABLE QC_ESTIPULANTE ADD CONSTRAINT QC_ESTIPULANTE_UK1 UNIQUE (CODIGO , SUBESTIPULANTE)</sql>
+	</run-sql>
+</component-upgrade>

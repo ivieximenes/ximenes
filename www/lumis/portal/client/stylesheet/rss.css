@@ -1,0 +1,58 @@
+/* $Revision: 7608 $ $Date: 2007-06-29 20:21:13 -0300 (Fri, 29 Jun 2007) $ */
+
+rss
+{
+	display: block;
+	font-family: verdana, arial;
+	font-size:11px;
+}
+
+title
+{
+	display: block;
+	margin: 5px;
+	padding: 2px;
+	padding-top: 10px;
+	color: #739C29;
+	font-weight: bold;
+	border-bottom: 1px solid silver;
+}
+
+link
+{
+	display: block;
+	padding-left: 10px;
+	font-size:11px;
+	font-weight: bold;
+}
+
+item
+{
+	display: block;
+	padding: 2px 30px 2px 30px;
+}
+
+description
+{
+	display: block;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size:11px;
+}
+
+generator
+{
+	display: block;
+	background-color: #E6F2F9;
+	margin: 20px;
+	text-align: center;
+	padding: 5px;
+	color: #7f7f7f;
+	border: 1px solid silver;
+}
+
+/* all hidden elements */
+language, lastBuildDate, author, ttl, guid, category, docs, pubDate, image, copyright, localDataHora
+{
+	display: none;
+}

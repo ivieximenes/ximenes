@@ -1,0 +1,158 @@
+2017-08-04 11:17:53,871 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_EDIT_PAGE_LINK' - Description: 'Added service interface instance
+  id: 402881885DA882CA015DAD9C15860235
+  interface id: lumis.service.portalmanagement.pagelink.edit
+  display name: STR_EDIT_PAGE_LINK
+  page id: LumisBlankPage
+  page name: STR_BLANK_PAGE
+  service instance id: 8A488AE75D9EFBC9015D9EFD810605E9'
+2017-08-04 11:46:03,949 [0:0:0:0:0:0:0:1] Category: Structure - Type: Add Service Interface Instance - User: 00000000D00000000000000000000001 admin - Title: 'Added service interface instance: STR_ADD_MODULE' - Description: 'Added service interface instance
+  id: 402881865DADAE01015DADB5DF9E007A
+  interface id: lumis.service.portalmanagement.deployment.addModule
+  display name: STR_ADD_MODULE
+  page id: 8A488AE75D9EFBC9015D9EFD81060640
+  page name: STR_LADM_MODULES
+  service instance id: 8A488AE75D9EFBC9015D9EFD8106063D'
+2017-08-04 11:53:16,186 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Add Component - User: 00000000D00000000000000000000001 admin - Title: 'Added component: br.com.qualicorp.redenarede.service.banner' - Description: 'Added component: 
+  id: br.com.qualicorp.redenarede.service.banner
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,197 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-04 11:53:16,200 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,201 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,203 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,204 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,206 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,207 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,209 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,210 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,211 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:16,212 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:26,310 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-04 11:53:26,579 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-04 11:53:31,874 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:33,123 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:35,934 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:38,411 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:39,627 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:40,954 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.banner' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.banner
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:43,249 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:45,058 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:46,650 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:48,578 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:49,668 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,625 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Module - User: 00000000D00000000000000000000001 admin - Title: 'Updated module: Qualicorp RedeNaRede' - Description: 'Updated module: 
+  id: br.com.qualicorp.redenarede
+  Name: Qualicorp RedeNaRede'
+2017-08-04 11:53:59,627 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaodelayout' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaodelayout
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,628 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.oauth' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.oauth
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,629 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.questionariosaude' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.questionariosaude
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,630 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.administracaoestipulante' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.administracaoestipulante
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,631 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.businesscontact' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.businesscontact
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,632 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.login' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.login
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,633 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.useraccount' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.useraccount
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,634 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.buscapormedico' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.buscapormedico
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,635 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.auditoria' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.auditoria
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,636 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.autodeploy' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.autodeploy
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'
+2017-08-04 11:53:59,637 [0:0:0:0:0:0:0:1] Category: Deployment - Type: Update Component - User: 00000000D00000000000000000000001 admin - Title: 'Updated component: br.com.qualicorp.redenarede.service.banner' - Description: 'Updated component: 
+  id: br.com.qualicorp.redenarede.service.banner
+  Version: 1.0.0.0
+  Module: Qualicorp RedeNaRede(br.com.qualicorp.redenarede)'

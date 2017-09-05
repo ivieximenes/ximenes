@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="7.0">
+  <id>8A489E1F50D260F50150D8BE50AC22BC</id>
+  <name>Login</name>
+  <hidden>true</hidden>
+  <layout-type>LAYOUT_FILE</layout-type>
+  <layout-file>deslogado-internas.html</layout-file>
+  <layout><![CDATA[<layout><holder id="menu"><interface id="8A489E1F50D260F50150D8BE50CF22C2"/></holder><holder id="busca"><interface id="8A489E1F50D260F50150D8BE50E722C3"/></holder><holder id="conteudo"><interface id="8A489E1F50D260F50150D8BF6E702374"/></holder></layout>]]></layout>
+  <interface-instances>
+    <interface-instance>
+      <id>8A489E1F50D260F50150D8BE50CF22C2</id>
+      <service-instance-id>0000000050A1A02C0150A1AF436118B2</service-instance-id>
+      <interface-id>lumis.service.hierarchicalcontent.contentMenu</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B7B73322FA</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50D260F50150D8BE50E722C3</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851326</service-instance-id>
+      <interface-id>lumis.service.search.search</interface-id>
+      <applied-interface-style-id>0000000050A1A02C0150A1B5EC5F201C</applied-interface-style-id>
+    </interface-instance>
+    <interface-instance>
+      <id>8A489E1F50D260F50150D8BF6E702374</id>
+      <service-instance-id>0000000050A1A02C0150A1ACC6851325</service-instance-id>
+      <interface-id>br.com.qualicorp.redenarede.service.login.login</interface-id>
+      <applied-interface-style-id>loginInterno</applied-interface-style-id>
+    </interface-instance>
+  </interface-instances>
+</page>

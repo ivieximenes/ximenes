@@ -1,0 +1,294 @@
+/* $Revision: 15411 $ $Date: 2013-05-31 16:39:34 -0300 (Fri, 31 May 2013) $ */
+/*intranet main css*/
+
+/*begin global*/
+body.lum-intra, body.lum-intra td,
+body.lum-intra input, body.lum-intra select, body.lum-intra textarea {
+	font-family:arial,sans-serif;
+	color:#333;
+}
+body.lum-intra {
+	margin:0;
+	background:#fff;
+	font-size:0.75em;
+}
+body.lum-intra a {
+	color:#ea891e;
+	text-decoration:none;
+}
+body.lum-intra a:hover {
+	text-decoration:underline;
+}
+body.lum-intra p {
+	margin:0 0 1em 0;
+}
+form {
+	margin:0;
+}
+
+.cLumisInterface {
+	padding:0; /*global interface padding*/
+}
+a.defcolor {
+	color:#333 !important;
+}
+a img {
+	border:0;
+}
+img.block {
+	display:block;
+}
+.imgleft {
+	margin:0 10px 10px 0;
+	display:block;
+	float:left;
+}
+.imgright {
+	margin:0 0 10px 10px;
+	display:block;
+	float:right;
+}
+.imgdata {
+	border:1px solid #e9e9e9;
+	padding:2px;
+}
+a:hover .imgdata {
+	border-color:#ccc;
+	box-shadow:0 0 2px #ccc;
+	-moz-box-shadow:0 0 2px #ccc;
+	-webkit-box-shadow:0 0 2px #ccc;
+}
+.imgbig {
+	width:120px;
+	height:120px;
+}
+.imgmed {
+	width:90px;
+	height:90px;
+}
+.imgsmall {
+	width:60px;
+	height:60px;
+}
+.floatleft {
+	float:left;
+}
+.floatright {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+.clear-after:after {
+	content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden;
+}
+.bold {
+	font-weight:bold;
+}
+.spacer {
+	font-size:1%;
+}
+.center {
+	text-align:center;
+}
+.alignleft {
+	text-align:left;
+}
+.alignright {
+	text-align:right;
+}
+.big {
+	font-size:1.1em;
+}
+.small {
+	font-size:0.9em;
+}
+.nopadding {
+	padding:0 !important;
+}
+.nomargin {
+	margin:0 !important;
+}
+.noborder {
+	border:0 !impotant;
+}
+.hide {
+	display:none;
+}
+/*end global*/
+
+
+/*begin structure*/
+div.str-geral {
+	width:1000px;
+	margin:0 auto;
+}
+
+div.str-hdr {
+	background:#f9f9f9;
+}
+/*end structure*/
+
+
+/*begin menus*/
+
+/*end menus*/
+
+
+/*begin areas*/
+div.generic-list-1 {
+	padding:10px;
+	border-bottom:1px solid #e9e9e9;
+	margin:0 0 15px 0;
+}
+div.generic-list-noborder {
+	border:0;
+}
+div.generic-list-1 a {
+	color:#333;
+}
+div.generic-list-1 a:hover {
+	color:#ea891e;
+}
+div.generic-list-1 h3 {
+	font-family:georgia,serif;
+	font-size:2.8em;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 0.5em 0;
+	color:#999;
+}
+div.generic-list-1 h3.tit-small {
+	font-size:2.1em;
+}
+div.generic-list-1 .row {
+	clear:both;
+	padding:0 0 1em 0;
+}
+div.generic-list-1 .last {
+	padding:0;
+}
+div.generic-list-1 .row:after {
+    content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden;
+}
+div.generic-list-1 h4 {
+	font-size:1.2em;
+	font-weight:bold;
+	padding:0;
+	margin:0 0 0.5em 0;
+}
+div.generic-list-1 .date {
+	font-size:11px;
+	font-weight:normal;
+	color:#999;
+	background:#f9f9f9;
+	padding:0 4px;
+	margin:0 0 0 8px;
+	border:1px solid #f1f1f1;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	cursor:default;
+}
+
+div.generic-more-1 {
+	padding:10px 20px 5px 20px;
+}
+div.generic-more-1 a {
+	font-size:0.95em;
+	color:#333;
+	display:block;
+	height:15px;
+	line-height:15px;
+	background:url(../images/ico_arrow1_right.gif) no-repeat right bottom;
+	padding:0 20px 0 0;
+}
+div.generic-more-1 a:hover {
+	color:#ea891e;
+}
+
+div.generic-more-2 {
+	padding:5px;
+}
+div.generic-more-2 a {
+	display:block;
+	padding:0 16px;
+	height:34px;
+	line-height:34px;
+	border:1px solid #e9e9e9;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	
+}
+div.generic-more-2 a:hover {
+	text-decoration:none;
+	border-color:#ccc;
+	box-shadow:0 0 2px #ccc;
+	-moz-box-shadow:0 0 2px #ccc;
+	-webkit-box-shadow:0 0 2px #ccc;
+}
+div.generic-more-2 a span {
+	display:block;
+	float:left;
+	cursor:pointer;
+}
+div.generic-more-2 .arrow {
+	width:6px;
+	height:3px;
+	background:url(../images/ico_arrow2_down.gif) no-repeat 0 0;
+	margin:16px 0 0 6px;
+}
+
+div.generic-detail-1 {
+	padding:10px;
+	border-bottom:1px solid #e9e9e9;
+	margin:0 0 15px 0;
+}
+div.generic-detail-1 h3 {
+	font-family:georgia,serif;
+	font-size:2.8em;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 0.5em 0;
+	color:#666;
+}
+div.generic-detail-1 .description {
+	font-family:georgia,serif;
+	font-size:1.4em;
+	line-height:1.4em;
+	font-style:italic;
+	padding:0;
+	margin:0 0 1em 0;
+	color:#999;
+}
+div.generic-detail-1 .cont p {
+	font-size:1.05em;
+	line-height:1.4em;
+}
+
+div.generic-back-1 {
+	padding:10px 10px 5px 10px;
+}
+div.generic-back-1 a {
+	font-size:0.95em;
+	color:#333;
+	display:block;
+	height:15px;
+	line-height:15px;
+	background:url(../images/ico_arrow1_left.gif) no-repeat left bottom;
+	padding:0 0 0 20px;
+}
+div.generic-back-1 a:hover {
+	color:#ea891e;
+}
+
+/*end areas*/

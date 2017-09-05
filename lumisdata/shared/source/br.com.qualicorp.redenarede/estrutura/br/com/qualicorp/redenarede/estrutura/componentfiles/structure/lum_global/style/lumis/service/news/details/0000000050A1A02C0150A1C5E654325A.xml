@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-style version="7.0">
+  <id>0000000050A1A02C0150A1C5E654325A</id>
+  <interface-id>lumis.service.news.details</interface-id>
+  <name>Rede na Rede - Detalhes</name>
+  <file-path>lumis/service/news/style/detalhes-noticia.xsl</file-path>
+</interface-style>

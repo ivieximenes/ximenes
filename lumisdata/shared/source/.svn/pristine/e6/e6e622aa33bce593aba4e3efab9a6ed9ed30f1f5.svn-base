@@ -1,0 +1,15 @@
+<jaxws:bindings version="2.0"
+                xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"                 
+            xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+            wsdlLocation="AutenticacaoBeneficiarioService.wsdl">
+<jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+<jaxws:package name="br.com.qualicorp.redenarede.webservice.stub.beneficiario" />
+
+<jaxb:bindings node="//xsd:schema" targetNamespace="http://service.autenticacao.ws.tempoassist.com.br">
+    <jaxb:schemaBindings>
+        <jaxb:package name="br.com.qualicorp.redenarede.webservice.stub.beneficiario.autenticacao"/>
+    </jaxb:schemaBindings>
+</jaxb:bindings>
+</jaxws:bindings>

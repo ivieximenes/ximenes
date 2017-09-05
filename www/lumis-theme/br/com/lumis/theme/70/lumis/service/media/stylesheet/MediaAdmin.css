@@ -1,0 +1,54 @@
+/* $Revision: 15639 $ $Date: 2013-07-22 16:02:00 -0300 (Mon, 22 Jul 2013) $ */
+@import url('MediaFolder.css');
+
+.lumis-service-media.lum-interface-type-administration .lum-row-actions{
+	margin-top:5px;	
+	margin-left:57px;
+}
+
+.lumis-service-media.lum-interface-type-administration .lum-adv-tabular-data tr td{
+	padding-top:15px;
+	padding-bottom:15px;
+	vertical-align:top;
+}
+
+img.lum-mediadetails-image {
+	display:block;
+	width:148px;
+	height:148px;
+	border:1px solid #cdcdcd;
+	border-radius:2px;
+	float:left;
+	margin:0 18px 0 0;
+}
+.lum-media-summary {
+	float: left;
+}
+
+.lumis-service-media-editMedia .lum-form-field {
+	clear: both;
+}
+
+.lum-details-metadata {}
+.lum-details-metadata-toggle {
+	font-weight:bold;
+	display:block;
+	min-height:10px;
+	padding-left:12px;
+	background:url(../../../portal/client/images/arrowdown.gif) no-repeat -5px 4px; 
+	outline:none;
+}
+.lum-details-metadata-toggle-selected {
+	background:url(../../../portal/client/images/arrowup.gif) no-repeat -5px 4px; 
+}
+.lum-details-metadata-hidden {
+	display:none;
+}
+
+.lum-details-metadata-hidden p {
+	padding-left: 30px;
+	
+	/* Fix for animation problem */
+	margin: 0px;
+	padding-bottom: 10px;
+}
